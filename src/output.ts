@@ -27,6 +27,10 @@ function arrowLabel(n: MathMLNode) {
   return a.voffset === '-.2em' && a.height === '-.2em' && strut.depth === '.2em'
     || a.voffset === '.15em' && a.depth === '-.15em' && strut.height === '.75em';
 }
+function overline(n:MathMLNode):boolean {
+  const accent=n.children[1];
+  return (n.kind==='mover'||n.kind==='munder')&&accent?.kind==='mo'&&accent.text==='―'&&accent.attributes.accent==='true';
+}
 function nativeGlyph(n: MathMLNode): MathMLNode {
   const code = codeOf(n), text = glyph(code);
   const attributes = {...n.attributes};
@@ -65,6 +69,7 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     const n = pending.pop()!, code = codeOf(n), variant=n.attributes.mathvariant;
     if (glyph(code) || compound(code) || arrowLabel(n) || packageMark(n)==='prescript' || packageMark(n)==='bbox-padding'
       || n.kind==='menclose' || n.kind==='mlabeledtr' || isCenterOver(n)
+      || overline(n)
       || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame)
       || variant && (variant!=='normal' && (variant!=='italic' || n.kind!=='mi' || Array.from(n.text).length!==1) || n.kind==='mstyle')) {found = true; break;}
     for (const child of n.children) pending.push(child);
@@ -130,6 +135,11 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     else if(output.kind==='mtable'){
       const labeled=output.children.some(n=>n.kind==='mlabeledtr');
       nativeTable(output,defaultSide);hasLabels ||= labeled;
+    }
+    if(overline(output)){
+      const under=output.kind==='munder';
+      Object.assign(output,nativeEnclosure({...output,attributes:{...output.attributes,notation:under?'bottom':'top','data-padding':'.1em','data-thickness':'.04em'},children:[output.children[0]]}));
+      output.attributes['data-flashmath-accent']=under?'underline':'overline';
     }
   }
   if(hasLabels&&result.kind==='math'&&result.attributes.display==='block')addStyle(result,'width:100%;display:block;');

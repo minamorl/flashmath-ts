@@ -122,6 +122,16 @@ test('only the centernot construction becomes an overlay; ordinary mpadded survi
   assert.strictEqual(mathMLForOutput(ordinary),ordinary);
 });
 
+test('overline paints the complete base with CSS while a literal horizontal bar stays literal',()=>{
+  const tex=String.raw`\overline{x+y}`;
+  const native=toMathMLString(parseToMathMLAst(tex));
+  assert.match(native,/data-flashmath-accent="overline"/);
+  assert.match(native,/border-top:.04em solid currentColor/);
+  assert.match(toMathMLString(raw(tex),{output:'mathjax'}),/>―<\/mo>/);
+  assert.equal(nodes(parseToMathMLAst('―')).find(n=>n.kind==='mo').text,'―');
+  assert.equal(renderToStaticMarkup(parseToReact(tex)),native);
+});
+
 test('deep variant output uses an explicit stack and needs no browser',()=>{
   let ast=token('x',{mathvariant:'bold'});
   for(let i=0;i<5000;i++)ast=group('mrow',[ast]);

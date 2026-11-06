@@ -212,6 +212,22 @@ source and license live under `bench/native-render/reference-font`; production
 code does not import that extension. A reference without it produces invalid
 variant warnings and is unsuitable for visual comparison.
 
+### Stretching overlines
+
+MathJax output uses `<mover>…<mo accent="true">―</mo></mover>` with U+2015.
+Native output uses a positioned Core `mrow` containing the original base and an
+empty `aria-hidden` row with `border-top:.04em solid currentColor`, plus `.1em`
+clearance above the base. Under-accents use the bottom edge. Literal horizontal
+bar input stays unchanged.
+
+Core's operator dictionary includes U+203E as a horizontal stretching operator
+and does not include U+2015. Substituting U+203E, even with explicit `stretchy`
+and postfix form, still left a 9.59px accent over a 65.06px base in the tested
+Chromium/font combination. That rejected attempt is saved in
+`overline-rejected-substitution.json`; CSS drawing avoids that dependency. This
+additional defect was found by visually reviewing `core-8`; the geometry gate now
+requires the accent to span the complete base.
+
 ## Reproduction and evidence
 
 ```sh
@@ -248,7 +264,7 @@ reviewed separately; geometry alone is not evidence of matching glyph design.
 | variants | 24 | 48 | 0 |
 | physics | 8 | 16 | 0 |
 | chemistry | 10 | 20 | 0 |
-| core | 10 | 20 | 0 |
+| core | 10 | 22 | 0 |
 
 Browser: Chrome/153.0.8010.36. All 195 SSR/string pairs have identical measured geometry.
 
