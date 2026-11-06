@@ -1,7 +1,8 @@
 import {UnsupportedFeatureError} from '../ast.js';
 import type {Parser} from '../parser.js';
 import {raw,scan} from '../scanner.js';
-import {registeredPackages,resolvePackages} from './registry.js';
+import {resolveConfiguration} from '../configuration.js';
+import {registeredPackages} from './registry.js';
 import type {TexPackage} from './types.js';
 const loaded=new WeakMap<object,Set<string>>();
 export function loadPackage(p:Parser,name:string) {
@@ -13,7 +14,7 @@ export function loadPackage(p:Parser,name:string) {
   const pkg=registeredPackages.find(x=>x.name===name);
   if(!pkg)throw new UnsupportedFeatureError(`Extension "${name}" is not available in this build`);
   if(p.configuration.packages.some(x=>x.name===name))return;
-  p.configuration=resolvePackages([...p.configuration.entries,name]);
+  p.configuration=resolveConfiguration([...p.configuration.entries,name]);
   let names=loaded.get(p.session);if(!names)loaded.set(p.session,names=new Set());names.add(name);
   pkg.initialize?.(p);
 }

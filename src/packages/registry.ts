@@ -44,7 +44,7 @@ function build(entries:readonly PackageEntry[]):PackageConfiguration {
     for(const [name,value]of Object.entries(pkg.environments))environments.set(name,value);
     for(const name of pkg.options??[])options.add(name);
   }
-  return Object.freeze({entries:Object.freeze(selected.map(x=>[x.definition.name,x.priority] as const)),packages: Object.freeze(selected.map(x=>x.definition)),commands:Object.freeze(commands),extensions,environments,options});
+  return Object.freeze({commands:Object.freeze(commands),extensions,environments,options});
 }
 const defaults=build(['base','newcommand']);
 const baseOnly=build(['base']);

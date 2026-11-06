@@ -14,11 +14,10 @@ import type { Token, Macro } from "./scanner.js";
 import { preamble } from "./preamble.js";
 import type { Preamble } from "./preamble.js";
 import { C, definitions, ranges } from "./symbols.js";
-import { resolvePackages } from "./packages/registry.js";
-import { configure } from "./configuration.js";
+import { configure, resolveConfiguration } from "./configuration.js";
 import { sessionState } from "./session-state.js";
 import type { SessionState, Reference } from "./session-state.js";
-import type { PackageConfiguration } from "./packages/types.js";
+import type { ActivePackageConfiguration } from "./packages/types.js";
 import type { Definition } from "./symbols.js";
 import {
   relationChars,
@@ -103,7 +102,7 @@ export class Parser {
   constructor(
     readonly tex: string,
     readonly options: ParseOptions,
-    public configuration: PackageConfiguration = resolvePackages(
+    public configuration: ActivePackageConfiguration = resolveConfiguration(
       options.packages,
     ),
     readonly session: SessionState = sessionState(),
@@ -1532,7 +1531,7 @@ export class Parser {
 function parseOne(
   tex: string,
   options: ParseOptions,
-  configuration: PackageConfiguration,
+  configuration: ActivePackageConfiguration,
   state: SessionState,
 ): MathMLNode {
   if (typeof tex !== "string")

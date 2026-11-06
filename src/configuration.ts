@@ -2,13 +2,14 @@ import { UnsupportedFeatureError } from "./ast.js";
 import type { ParseOptions } from "./ast.js";
 import {
   resolvePackages,
+  registeredPackages,
   validateConfigurationModules,
 } from "./packages/registry.js";
-import type { PackageConfiguration } from "./packages/types.js";
+import type { ActivePackageConfiguration, PackageEntry } from "./packages/types.js";
 
 export function configure(input: ParseOptions): {
   options: ParseOptions;
-  configuration: PackageConfiguration;
+  configuration: ActivePackageConfiguration;
 } {
   if (input.mode !== undefined && input.mode !== "convert" && !(input.mode === "output" && input.packages?.some(p=>(typeof p === "string"?p:p[0]) === "bussproofs")))
     throw new UnsupportedFeatureError(
@@ -20,7 +21,7 @@ export function configure(input: ParseOptions): {
   )
     throw new TypeError("executionOrder must be a nonnegative integer");
   validateConfigurationModules(input.configurationModules);
-  const configuration = resolvePackages(input.packages);
+  const configuration = resolveConfiguration(input.packages);
   const texOptions = input.texOptions ?? {};
   for (const key of Object.keys(texOptions))
     if (!configuration.options.has(key))
@@ -100,4 +101,15 @@ export function configure(input: ParseOptions): {
     )
       throw new RangeError(`${name} must be a positive safe integer`);
   return { options, configuration };
+}
+
+/** Keep package lifecycle metadata outside the registry's registration-only boundary. */
+export function resolveConfiguration(entries:readonly PackageEntry[]=['base','newcommand']):ActivePackageConfiguration {
+  const configuration=resolvePackages(entries);
+  const selected=entries.map((entry,index)=>{
+    const [name,priority]=typeof entry==='string'?[entry,undefined]:entry;
+    const definition=registeredPackages.find(p=>p.name===name)!;
+    return {definition,priority:priority??definition.priority??5,index};
+  }).sort((a,b)=>b.priority-a.priority||a.index-b.index);
+  return {...configuration,entries:selected.map(x=>[x.definition.name,x.priority] as const),packages:selected.map(x=>x.definition)};
 }

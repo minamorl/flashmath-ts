@@ -3,8 +3,8 @@
 These are the pkg-misc lane's shared changes against d3daf90. Other lanes must retain their own package registration lines and shared changes when integrating.
 
 - `src/packages/types.ts`: add selected package entries, initialization, undefined-command fallback, and error-format hooks; packages can retain session state and customize diagnostics without hardcoded package switches in the parse loop.
-- `src/packages/registry.ts`: retain selected package definitions and original numeric priorities in resolved configurations; add only this lane's registration lines, including the synchronous harness `retry` shim.
-- `src/configuration.ts`: copy the top-level TeX options object before mutation, permit configmacros argument templates, and allow the harness's MathML `output` mode only with bussproofs for proof geometry; generic output/render remain rejected.
+- `src/packages/registry.ts`: add only this lane's registration lines, including the synchronous harness `retry` shim.
+- `src/configuration.ts`: retain selected package definitions and original numeric priorities for lifecycle hooks outside the registration-only registry; copy the top-level TeX options object before mutation, permit configmacros argument templates, and allow the harness's MathML `output` mode only with bussproofs for proof geometry; generic output/render remain rejected.
 - `src/parser.ts`: invoke package initialization, permit session-local configuration replacement for require/autoload, dispatch undefined-command/error-format hooks, and use a dynamically loaded error formatter on the current expression.
 - `src/parser.ts`: initialize configured macro templates through the configmacros token compiler and dispatch configured active characters before ordinary character handling.
 - `src/parser.ts`: retain current command names across multi-argument handlers, and diagnose missing/invalid argument, delimiter, script, bracket, and linebreak inputs with MathJax's messages; needed by noerrors while retaining normal error trees.

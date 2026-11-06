@@ -37,9 +37,11 @@ export interface RegisteredCommand {
   execute: CommandHandler;
   id: number;
 }
-export interface PackageConfiguration {
+export interface ActivePackageConfiguration extends PackageConfiguration {
   entries: readonly PackageEntry[];
   packages: readonly TexPackage[];
+}
+export interface PackageConfiguration {
   commands: readonly (RegisteredCommand | undefined)[];
   extensions: ReadonlyMap<string, RegisteredCommand>;
   environments: ReadonlyMap<string, TexEnvironment>;
