@@ -1,0 +1,26 @@
+✔ scripts, compound arguments and nested fences (13.929848ms)
+✔ fixed arity MathML children are never combined as adjacent relations (0.451502ms)
+✔ macro substitution respects control word boundaries and def templates (1.129201ms)
+✔ nested custom environments and array frames (1.429307ms)
+✔ definitions and parser state do not leak between parses (0.296038ms)
+✔ recursive macros, output size and nesting are bounded (1.324359ms)
+✔ deep input uses explicit stacks through serialization (6.15156ms)
+✔ malformed input returns an error tree or throws on request (1.887281ms)
+✔ text and attribute values are escaped as XML, never executed (3.657372ms)
+✔ React returns elements and SSR exactly equals the string renderer (16.227534ms)
+✔ error paths always serialize valid MathML and XML (0.9854ms)
+✔ adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros (71.101373ms)
+✔ parser sessions preserve document references and independent sessions isolate them (0.47163ms)
+✔ texclass presence and all explicit atom classes match MathJax (12.561636ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (7.813596ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (0.806312ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (33.881291ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (198.771371ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 380.832357

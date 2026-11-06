@@ -1,0 +1,46 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "node_modules/typescript/bin/tsc",
+      "-p",
+      "tsconfig.json"
+    ],
+    "exit": 0,
+    "expected": [
+      0
+    ]
+  },
+  {
+    "name": "test",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "--test",
+      "test/core.test.mjs",
+      "test/packages-references.test.mjs",
+      "test/ssr-fixtures.test.mjs"
+    ],
+    "exit": 0,
+    "expected": [
+      0
+    ]
+  },
+  {
+    "name": "conformance",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "conformance/runner.mjs",
+      "--subject",
+      "bench/flashmath/adapter.mjs",
+      "--output",
+      "bench/integration/01-ams.json",
+      "--fresh"
+    ],
+    "exit": 1,
+    "expected": [
+      0,
+      1
+    ]
+  }
+]

@@ -1,0 +1,523 @@
+{
+  "before": {
+    "action": {
+      "total": 3,
+      "matched": 0,
+      "mismatch": 3,
+      "unsupported": 0
+    },
+    "ams": {
+      "total": 158,
+      "matched": 6,
+      "mismatch": 152,
+      "unsupported": 0
+    },
+    "amscd": {
+      "total": 13,
+      "matched": 0,
+      "mismatch": 13,
+      "unsupported": 0
+    },
+    "autoload": {
+      "total": 2,
+      "matched": 0,
+      "mismatch": 0,
+      "unsupported": 2
+    },
+    "base": {
+      "total": 811,
+      "matched": 780,
+      "mismatch": 10,
+      "unsupported": 21
+    },
+    "bbm": {
+      "total": 9,
+      "matched": 0,
+      "mismatch": 9,
+      "unsupported": 0
+    },
+    "bboldx": {
+      "total": 28,
+      "matched": 0,
+      "mismatch": 28,
+      "unsupported": 0
+    },
+    "bbox": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "begingroup": {
+      "total": 19,
+      "matched": 0,
+      "mismatch": 19,
+      "unsupported": 0
+    },
+    "boldsymbol": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "braket": {
+      "total": 30,
+      "matched": 0,
+      "mismatch": 30,
+      "unsupported": 0
+    },
+    "bussproofs": {
+      "total": 26,
+      "matched": 0,
+      "mismatch": 26,
+      "unsupported": 0
+    },
+    "cancel": {
+      "total": 8,
+      "matched": 0,
+      "mismatch": 8,
+      "unsupported": 0
+    },
+    "cases": {
+      "total": 5,
+      "matched": 0,
+      "mismatch": 5,
+      "unsupported": 0
+    },
+    "centernot": {
+      "total": 2,
+      "matched": 0,
+      "mismatch": 2,
+      "unsupported": 0
+    },
+    "color": {
+      "total": 29,
+      "matched": 0,
+      "mismatch": 29,
+      "unsupported": 0
+    },
+    "colortbl": {
+      "total": 15,
+      "matched": 0,
+      "mismatch": 14,
+      "unsupported": 1
+    },
+    "colorv2": {
+      "total": 4,
+      "matched": 2,
+      "mismatch": 2,
+      "unsupported": 0
+    },
+    "configmacros": {
+      "total": 10,
+      "matched": 0,
+      "mismatch": 10,
+      "unsupported": 0
+    },
+    "dsfont": {
+      "total": 2,
+      "matched": 0,
+      "mismatch": 2,
+      "unsupported": 0
+    },
+    "empheq": {
+      "total": 44,
+      "matched": 0,
+      "mismatch": 44,
+      "unsupported": 0
+    },
+    "enclose": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "extpfeil": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "gensymb": {
+      "total": 5,
+      "matched": 0,
+      "mismatch": 5,
+      "unsupported": 0
+    },
+    "html": {
+      "total": 16,
+      "matched": 0,
+      "mismatch": 16,
+      "unsupported": 0
+    },
+    "mathtools": {
+      "total": 196,
+      "matched": 0,
+      "mismatch": 196,
+      "unsupported": 0
+    },
+    "mhchem": {
+      "total": 112,
+      "matched": 0,
+      "mismatch": 112,
+      "unsupported": 0
+    },
+    "newcommand": {
+      "total": 58,
+      "matched": 58,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "noerrors": {
+      "total": 56,
+      "matched": 0,
+      "mismatch": 56,
+      "unsupported": 0
+    },
+    "noundefined": {
+      "total": 2,
+      "matched": 0,
+      "mismatch": 2,
+      "unsupported": 0
+    },
+    "physics": {
+      "total": 628,
+      "matched": 0,
+      "mismatch": 628,
+      "unsupported": 0
+    },
+    "require": {
+      "total": 8,
+      "matched": 0,
+      "mismatch": 0,
+      "unsupported": 8
+    },
+    "setoptions": {
+      "total": 12,
+      "matched": 0,
+      "mismatch": 10,
+      "unsupported": 2
+    },
+    "tag": {
+      "total": 77,
+      "matched": 2,
+      "mismatch": 73,
+      "unsupported": 2
+    },
+    "tagformat": {
+      "total": 8,
+      "matched": 0,
+      "mismatch": 8,
+      "unsupported": 0
+    },
+    "tex": {
+      "total": 12,
+      "matched": 0,
+      "mismatch": 2,
+      "unsupported": 10
+    },
+    "texhtml": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "textcomp": {
+      "total": 118,
+      "matched": 0,
+      "mismatch": 118,
+      "unsupported": 0
+    },
+    "textmacros": {
+      "total": 50,
+      "matched": 0,
+      "mismatch": 48,
+      "unsupported": 2
+    },
+    "unicode": {
+      "total": 21,
+      "matched": 0,
+      "mismatch": 21,
+      "unsupported": 0
+    },
+    "units": {
+      "total": 10,
+      "matched": 0,
+      "mismatch": 10,
+      "unsupported": 0
+    },
+    "upgreek": {
+      "total": 41,
+      "matched": 0,
+      "mismatch": 41,
+      "unsupported": 0
+    },
+    "verb": {
+      "total": 5,
+      "matched": 0,
+      "mismatch": 5,
+      "unsupported": 0
+    }
+  },
+  "after": {
+    "action": {
+      "total": 3,
+      "matched": 0,
+      "mismatch": 3,
+      "unsupported": 0
+    },
+    "ams": {
+      "total": 158,
+      "matched": 158,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "amscd": {
+      "total": 13,
+      "matched": 13,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "autoload": {
+      "total": 2,
+      "matched": 0,
+      "mismatch": 0,
+      "unsupported": 2
+    },
+    "base": {
+      "total": 811,
+      "matched": 780,
+      "mismatch": 10,
+      "unsupported": 21
+    },
+    "bbm": {
+      "total": 9,
+      "matched": 0,
+      "mismatch": 9,
+      "unsupported": 0
+    },
+    "bboldx": {
+      "total": 28,
+      "matched": 0,
+      "mismatch": 28,
+      "unsupported": 0
+    },
+    "bbox": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "begingroup": {
+      "total": 19,
+      "matched": 0,
+      "mismatch": 19,
+      "unsupported": 0
+    },
+    "boldsymbol": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "braket": {
+      "total": 30,
+      "matched": 0,
+      "mismatch": 30,
+      "unsupported": 0
+    },
+    "bussproofs": {
+      "total": 26,
+      "matched": 0,
+      "mismatch": 26,
+      "unsupported": 0
+    },
+    "cancel": {
+      "total": 8,
+      "matched": 0,
+      "mismatch": 8,
+      "unsupported": 0
+    },
+    "cases": {
+      "total": 5,
+      "matched": 5,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "centernot": {
+      "total": 2,
+      "matched": 0,
+      "mismatch": 2,
+      "unsupported": 0
+    },
+    "color": {
+      "total": 29,
+      "matched": 0,
+      "mismatch": 29,
+      "unsupported": 0
+    },
+    "colortbl": {
+      "total": 15,
+      "matched": 0,
+      "mismatch": 14,
+      "unsupported": 1
+    },
+    "colorv2": {
+      "total": 4,
+      "matched": 2,
+      "mismatch": 2,
+      "unsupported": 0
+    },
+    "configmacros": {
+      "total": 10,
+      "matched": 0,
+      "mismatch": 10,
+      "unsupported": 0
+    },
+    "dsfont": {
+      "total": 2,
+      "matched": 0,
+      "mismatch": 2,
+      "unsupported": 0
+    },
+    "empheq": {
+      "total": 44,
+      "matched": 44,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "enclose": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "extpfeil": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "gensymb": {
+      "total": 5,
+      "matched": 0,
+      "mismatch": 5,
+      "unsupported": 0
+    },
+    "html": {
+      "total": 16,
+      "matched": 0,
+      "mismatch": 16,
+      "unsupported": 0
+    },
+    "mathtools": {
+      "total": 196,
+      "matched": 0,
+      "mismatch": 196,
+      "unsupported": 0
+    },
+    "mhchem": {
+      "total": 112,
+      "matched": 0,
+      "mismatch": 112,
+      "unsupported": 0
+    },
+    "newcommand": {
+      "total": 58,
+      "matched": 58,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "noerrors": {
+      "total": 56,
+      "matched": 0,
+      "mismatch": 56,
+      "unsupported": 0
+    },
+    "noundefined": {
+      "total": 2,
+      "matched": 0,
+      "mismatch": 2,
+      "unsupported": 0
+    },
+    "physics": {
+      "total": 628,
+      "matched": 0,
+      "mismatch": 628,
+      "unsupported": 0
+    },
+    "require": {
+      "total": 8,
+      "matched": 0,
+      "mismatch": 0,
+      "unsupported": 8
+    },
+    "setoptions": {
+      "total": 12,
+      "matched": 0,
+      "mismatch": 10,
+      "unsupported": 2
+    },
+    "tag": {
+      "total": 77,
+      "matched": 75,
+      "mismatch": 0,
+      "unsupported": 2
+    },
+    "tagformat": {
+      "total": 8,
+      "matched": 0,
+      "mismatch": 8,
+      "unsupported": 0
+    },
+    "tex": {
+      "total": 12,
+      "matched": 2,
+      "mismatch": 0,
+      "unsupported": 10
+    },
+    "texhtml": {
+      "total": 6,
+      "matched": 0,
+      "mismatch": 6,
+      "unsupported": 0
+    },
+    "textcomp": {
+      "total": 118,
+      "matched": 0,
+      "mismatch": 118,
+      "unsupported": 0
+    },
+    "textmacros": {
+      "total": 50,
+      "matched": 0,
+      "mismatch": 48,
+      "unsupported": 2
+    },
+    "unicode": {
+      "total": 21,
+      "matched": 0,
+      "mismatch": 21,
+      "unsupported": 0
+    },
+    "units": {
+      "total": 10,
+      "matched": 0,
+      "mismatch": 10,
+      "unsupported": 0
+    },
+    "upgreek": {
+      "total": 41,
+      "matched": 0,
+      "mismatch": 41,
+      "unsupported": 0
+    },
+    "verb": {
+      "total": 5,
+      "matched": 0,
+      "mismatch": 5,
+      "unsupported": 0
+    }
+  },
+  "regressions": []
+}

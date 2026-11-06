@@ -1,0 +1,1387 @@
+{
+  "version": "4.1.3",
+  "total": 220,
+  "matched": 220,
+  "rate": 1,
+  "groups": {
+    "ams": {
+      "total": 158,
+      "matched": 158,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "amscd": {
+      "total": 13,
+      "matched": 13,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "cases": {
+      "total": 5,
+      "matched": 5,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "empheq": {
+      "total": 44,
+      "matched": 44,
+      "mismatch": 0,
+      "unsupported": 0
+    }
+  },
+  "byPackage": {
+    "base": {
+      "total": 220,
+      "matched": 220,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "ams": {
+      "total": 207,
+      "matched": 207,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "amscd": {
+      "total": 13,
+      "matched": 13,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "cases": {
+      "total": 49,
+      "matched": 49,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "empheq": {
+      "total": 44,
+      "matched": 44,
+      "mismatch": 0,
+      "unsupported": 0
+    }
+  },
+  "classifications": {},
+  "rows": [
+    {
+      "id": "Ams.test.ts::Ams Symbol 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Operator 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Delimiter 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Delimiter-left-right 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Macro 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams AMS-math-mo 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams AMS-math-macro 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Normal Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Text Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Display Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Normal Sub Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Text Sub Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Display Sub Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Normal Binomial 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Text Binomial 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Display Binomial 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Normal Sub Binomial 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Text Sub Binomial 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Display Sub Binomial 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Center Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Left Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Right Fraction 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Above Left Arrow 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Above Below Left Arrow 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Above Left Arrow in Context 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Above Right Arrow 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Above Below Right Arrow 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Above Right Arrow in Context 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Genfrac 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Genfrac no delimiters 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams MultiInt 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams MultiInt in Context 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams MultiInt with Command 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams MultiInt with Limits 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams DeclareMathOp 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams DeclareMathOp star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Operatorname 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Operatorname Complex 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Operatorname Letters 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Operatorname Followed by CS 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Subarray 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Small Matrix 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Align 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Align Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Multline 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Multline Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Split 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Gather 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Gather Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Alignat 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Alignat Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Alignedat 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Aligned 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Gathered 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Equation 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Equation Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Eqnarray 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Eqnarray Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments flalign 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments xalignat 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments xxalignat 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments xalignat padding 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments xalign tagged 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments flalign small 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments matrix 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments pmatrix 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments bmatrix 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Bmatrix 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments Vmatrix 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Environments cases 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Subarray 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Small Matrix 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Align 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Align Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Multline 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Multline Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Split 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Gather 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Gather Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Alignat 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Alignat Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Alignedat 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Aligned 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Gathered 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Equation 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Equation Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Eqnarray 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Eqnarray Star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Align Notag 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments xalignet 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments xalignet star 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments flalign 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments xalignet star 2",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments aligned [b] 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments aligned [x] 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Left xalign tagged left 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Left multline tagged left 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Tagged Environments Left Gather Align 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::InternalMath Mbox Eqref 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Multirel Multirel Mathvariant 1 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Multirel Multirel Mathvariant 2 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Multirel Multirel Mathvariant 3 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Multirel Multirel Mathvariant 4 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Multirel Preset Lspace Rspace 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Multirel Preset Rspace Lspace 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove None 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove Left Top 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove Left Middle 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove Left Bottom 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove Right Top 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove Right Middle 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove Right Bottom 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove Right Left 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::MultlineShove Shove Left Right 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Complex The Lorenz Equations 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Complex Maxwell's Equations 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Complex Cubic Binomial 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams Complex A Cross Product Formula 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Empty 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Simple 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Simple Right 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Simple Left 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Simple Left Right 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Simple Sum 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Extra Post 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Pre No Base 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Pre with Post Sup 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams SideSet Sideset Pre with Post Sub 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols Delimiters 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols Spaces 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols Accents 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols Limits 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols boxed 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols substack 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols impliedby 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mi 1 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mi 2 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mi 3 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mi 4 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 1 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 2 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 3 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 4 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 5 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 6 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 7 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 8 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 9 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 10 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 11 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 12 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 13 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 14 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 15 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 16 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 17 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 18 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Ams.test.ts::Ams symbols math0mo 19 1",
+      "group": "ams",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-1 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-2 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-3 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-4 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-5 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-6 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-width 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-height 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD AmsCD-both 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD Spaces 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD Suspicious Return 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD Entry with prime (#3373) 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Amscd.test.ts::AmsCD Options Hide Horizontal Labels 1",
+      "group": "amscd",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Cases.test.ts::Cases Numcases 1",
+      "group": "cases",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Cases.test.ts::Cases subnumcases 1",
+      "group": "cases",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Cases.test.ts::Cases Numcases with macro 1",
+      "group": "cases",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Cases.test.ts::Cases entry not in numcases 1",
+      "group": "cases",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Cases.test.ts::Cases numcases with explicit tag 1",
+      "group": "cases",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Empheq Left 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Empheq Right 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Numcases with label 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Numcases empty right 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Numcases empty left 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Numcases  1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Numcases alignedat 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqlbrace 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqlbrace 2",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqrbrace 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqlbrack 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqrbrack 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqlangle 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqrangle 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqlparen 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqrparen 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqlvert 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqrvert 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters  empheqlVert 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqrVert 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqlfloor 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqrfloor 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqlceil 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqrceil 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbiglbrace 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigrbrace 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbiglbrack 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigrbrack 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbiglangle 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigrangle 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbiglparen 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigrparen 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbiglvert 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigrvert 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbiglVert 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigrVert 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbiglfloor 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigrfloor 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbiglceil 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigrceil 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheql 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqr 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigl 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Empheq.test.ts::Empheq Characters empheqbigr 1",
+      "group": "empheq",
+      "status": "matched",
+      "category": null
+    }
+  ]
+}

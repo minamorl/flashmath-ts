@@ -1,0 +1,20 @@
+{
+  "tex": "\\begin{empheq}[left=L]{equation}x=y\\end{empheq}",
+  "options": {
+    "packages": [
+      "base",
+      "ams",
+      "empheq"
+    ],
+    "texOptions": {},
+    "display": true
+  },
+  "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{empheq}[left=L]{equation}x=y\\end{empheq}\" display=\"block\">\n  <mi data-latex=\"x\">    <mtd>\n      <mpadded height=\"0\" depth=\"0\" voffset=\"height\">\n        <mpadded height=\"0\" depth=\"0\" voffset=\"-1height\">\n          <mi data-latex=\"L\">L</mi>\n          <mphantom>\n            <mpadded width=\"0\">\n              <mi data-latex=\"x\">x</mi>\n              <mo data-latex=\"=\">=</mo>\n              <mi data-latex=\"y\">y</mi>\n            </mpadded>\n          </mphantom>\n        </mpadded>\n        <mphantom>\n          <mpadded width=\"0\">\n            <mi data-latex=\"x\">x</mi>\n          </mpadded>\n        </mphantom>\n      </mpadded>\n    </mtd>x</mi>\n  <mo data-latex=\"=\">    <mtd></mtd>=</mo>\n  <mi data-latex=\"y\">    <mtd></mtd>y</mi>\n</math>",
+  "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi columnalign=\"right center\" columnspacing=\"0em .8em\">x<mtr><mtd><mpadded height=\"0\" depth=\"0\" voffset=\"height\"><mpadded height=\"0\" depth=\"0\" voffset=\"-1height\"><mo columnalign=\"right center\" columnspacing=\"0em .8em\">=<mtr><mtd><mpadded height=\"0\" depth=\"0\" voffset=\"height\"><mpadded height=\"0\" depth=\"0\" voffset=\"-1height\"><mi columnalign=\"right center\" columnspacing=\"0em .8em\">y<mtr><mtd><mpadded height=\"0\" depth=\"0\" voffset=\"height\"><mpadded height=\"0\" depth=\"0\" voffset=\"-1height\"><mi>L</mi><mphantom><mpadded width=\"0\"><mi>y</mi></mpadded></mphantom></mpadded><mphantom><mpadded width=\"0\"><mi align=\"baseline 1\">y</mi></mpadded></mphantom></mpadded></mtd></mtr></mi><mi>L</mi><mphantom><mpadded width=\"0\"><mo>=</mo></mpadded></mphantom></mpadded><mphantom><mpadded width=\"0\"><mo align=\"baseline 1\">=</mo></mpadded></mphantom></mpadded></mtd></mtr></mo><mi>L</mi><mphantom><mpadded width=\"0\"><mi>x</mi></mpadded></mphantom></mpadded><mphantom><mpadded width=\"0\"><mi align=\"baseline 1\">x</mi></mpadded></mphantom></mpadded></mtd></mtr></mi></math>",
+  "difference": {
+    "category": "structure",
+    "path": "/math",
+    "expected": 3,
+    "actual": 1
+  }
+}

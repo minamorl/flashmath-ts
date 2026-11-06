@@ -53,6 +53,7 @@ interface Table {
   align: string;
   spacing: string;
   rowspacing: string;
+  rowspacingBase?: number;
   display: boolean;
   lines: string[];
   rowlines: string[];
@@ -73,6 +74,7 @@ interface Table {
   numbered: boolean;
   taggable: boolean;
   tagCells: Map<number, Node>;
+  explicitTags?: Map<number, string>;
 }
 const NS = "http://www.w3.org/1998/Math/MathML";
 const isDigit = (c: number) => c >= 48 && c <= 57;
@@ -427,7 +429,7 @@ export class Parser {
       Object.assign(a, {
         fence: "true",
         symmetric: "true",
-        ...(["⏐", "⏪", "⎪", "/", "\\"].includes(text)
+        ...(["⏐", "⏪", "⎪", "/", "\\", "⌜", "⌝", "⌞", "⌟"].includes(text)
           ? { stretchy: "true" }
           : {}),
       });
@@ -750,7 +752,7 @@ export class Parser {
           this.parseTokens(p.tokens, (n) => {
             nodes.push(
               this.atom(
-                n.kind === K.mrow && !n.attributes["data-mjx-texclass"]
+                n.kind === K.mrow && !Object.keys(n.attributes).length
                   ? n.children
                   : [n],
               ),
@@ -928,8 +930,16 @@ export class Parser {
     )
       this.error(`Label '${label}' multiply defined`);
     this.localLabels.set(label, { tag: "???", id: "" });
-    if (table) table.labels[table.rows.length] = label;
-    else this.label = label;
+    if (table) {
+      table.labels[table.rows.length] = label;
+      const tag = table.explicitTags?.get(table.rows.length);
+      if (tag !== undefined) {
+        const id = "mjx-eqn:" + ((this.options.useLabelIds !== false ? label : "") || tag).replace(/\s/g, "_");
+        this.localLabels.set(label, { tag, id });
+        const cell = table.tagCells.get(table.rows.length);
+        if (cell) cell.attributes.id = id;
+      }
+    } else this.label = label;
   }
   reference(label: string) {
     const ref = this.session.labels.get(label) ??
@@ -943,7 +953,7 @@ export class Parser {
   }
   tagRow(table: Table) {
     const index = table.rows.length - 1;
-    if (table.numbered && !table.noNumbers.has(index))
+    if (table.numbered && !table.noNumbers.has(index) && !table.tagCells.has(index))
       table.tagCells.set(index, this.labelCell(table.labels[index] ?? ""));
   }
   labelCell(label: string) {
@@ -1028,7 +1038,7 @@ export class Parser {
     if (t.rowspaces.length)
       attrs.rowspacing = Array.from(
         { length: Math.max(t.rows.length, t.rowspaces.length) },
-        (_, i) => t.rowspaces[i] ?? "0.4em",
+        (_, i) => t.rowspaces[i] ?? (t.rowspacingBase === undefined ? "0.4em" : t.rowspacingBase + "em"),
       ).join(" ");
     const edge = t.plan.left,
       last = t.plan.right;
@@ -1338,7 +1348,9 @@ export class Parser {
       f.nodes = [];
       f.font = t.originalFont;
       if (spacing)
-        t.rowspaces[t.rows.length - 1] = em(dimensionEm(raw(spacing)) + 0.4);
+        t.rowspaces[t.rows.length - 1] = t.rowspacingBase === undefined
+          ? em(dimensionEm(raw(spacing)) + 0.4)
+          : (dimensionEm(raw(spacing)) + t.rowspacingBase) + "em";
       if (t.latex) this.startCell(t);
       return;
     }
