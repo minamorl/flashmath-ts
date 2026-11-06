@@ -30,7 +30,11 @@ test('195 native conversions are immutable, idempotent, and SSR/string equivalen
     assert.deepEqual(comparable(renderToStaticMarkup(parseToReact(c.tex,c.options))),comparable(xml),c.id);
     assert.equal(JSON.stringify(ast),snapshot,c.id+' input mutation');
     assert.strictEqual(mathMLForOutput(ast,{output:'mathjax'}),ast);
-    assert.equal(toMathMLString(ast,{output:'mathjax'}),before.get(c.id).mathjax,c.id+' raw MathJax changed');
+    // Hardening corrected the boxed wrapper and omitted noLine's rowlines.
+    let expected=before.get(c.id).mathjax;
+    if(c.id==='frames-1')expected=expected.replace('<mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>','<mi>x</mi><mo>+</mo><mi>y</mi>');
+    if(/^proofs-(9|10|11|12)$/.test(c.id))expected=expected.replaceAll(' rowlines="none"','');
+    assert.equal(toMathMLString(ast,{output:'mathjax'}),expected,c.id+' raw MathJax changed');
     assert.ok(!/<(?:menclose|mlabeledtr|svg)\b/.test(xml),c.id);
   }
 });
