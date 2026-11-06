@@ -1,7 +1,0 @@
-conformance/delivery.bundle is okay
-The bundle contains this ref:
-df0f3f9afb1ce7f72b5f83bd8b55b43bb4660007 refs/heads/lane/conformance-harness
-The bundle requires this ref:
-839244e25303f78a48b63340b08afca12bceca97
-The bundle uses this hash algorithm: sha1
-exit_code=0

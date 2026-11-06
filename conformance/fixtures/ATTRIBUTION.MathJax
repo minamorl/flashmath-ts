@@ -9,3 +9,7 @@ configuration, ordering, source hashes and coverage metadata. It is not an
 unmodified upstream distribution. No upstream NOTICE or NOTICE.txt was present
 at the root of the source revision used. This file is harness attribution,
 not an upstream NOTICE.
+
+The retry registration in conformance/mathjax.mjs is adapted from
+MathJax-src 4.1.3 testsuite/tests/input/tex/Begingroup.test.ts, lines 17-26,
+under Apache-2.0. It reproduces the upstream test-local CommandMap and Configuration.

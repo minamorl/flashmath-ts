@@ -1,0 +1,55 @@
+Earlier smoke check
+CHECK PASS: 72 real smoke workers; all three source sites, default errors, raised limits, output identity
+CHECK PASS: exact fixture lengths, nearest-rank quantiles, missing/error/drift rejection
+EXIT_CODE=0
+
+Full measurement: NODE_ENV=production node bench/mathjax/run.mjs
+SAVED 972: macro-n768-p4096/raised/mathjax/4
+SAVED 990: ordinary-1024/default/temml/4
+SAVED 1008: macro-n64-p32768/default/temml/4
+SAVED 1026: macro-n256-p4096/raised/mathjax-instrumented/4
+SAVED 1044: macro-n768-p4096/default/temml/4
+SAVED 1062: environment-probe/default/temml/4
+SAVED 1080: ordinary-64/raised/mathjax-instrumented/4
+ROUND 5/5: 1080 worker records written
+VALIDATED 1080 workers; cold n=5, warm n=25 per condition
+RESULTS /home/minamorl/repos/.worktrees/flashmath-ts/measure-mathjax/bench/mathjax/results
+EXIT_CODE=0
+
+Resume: NODE_ENV=production node bench/mathjax/run.mjs
+RESUME 1080 saved workers; flushed journal /home/minamorl/repos/.worktrees/flashmath-ts/measure-mathjax/bench/mathjax/results/runs.jsonl
+START 216 conditions x 5 fresh processes; serial
+ROUND 1/5: 1080 worker records written
+ROUND 2/5: 1080 worker records written
+ROUND 3/5: 1080 worker records written
+ROUND 4/5: 1080 worker records written
+ROUND 5/5: 1080 worker records written
+VALIDATED 1080 workers; cold n=5, warm n=25 per condition
+RESULTS /home/minamorl/repos/.worktrees/flashmath-ts/measure-mathjax/bench/mathjax/results
+EXIT_CODE=0
+
+$ NODE_ENV=production node bench/mathjax/check.mjs
+CHECK PASS: 72 real smoke workers; all three source sites, default errors, raised limits, output identity
+CHECK PASS: exact fixture lengths, nearest-rank quantiles, missing/error/drift rejection
+EXIT_CODE=0
+
+$ NODE_ENV=production node bench/mathjax/check-journal.mjs
+RECOVERED incomplete final journal line; saved interrupted-tail.bin
+JOURNAL PASS: resume, preserved metadata, duplicate/mismatch rejection, incomplete-tail recovery, interior corruption rejection
+EXIT_CODE=0
+
+$ NODE_ENV=production node bench/mathjax/summarize.mjs
+VALIDATED 1080 workers; 432 summary rows
+EXIT_CODE=0
+
+$ NODE_ENV=production node bench/mathjax/verify-results.mjs
+ARTIFACT PASS: full coverage, journal/raw identity, source/harness hashes, timestamps, recalculated summaries/tables
+REPORT PASS: ordinary/default/raised/cold table cells match raw-derived quantiles; artifact links and runtime versions exist
+EXIT_CODE=0
+
+$ git add -- bench/mathjax docs/measure-mathjax.md
+fatal: Unable to create '/home/minamorl/repos/flashmath-ts/.git/worktrees/measure-mathjax/index.lock': 読み込み専用ファイルシステムです
+EXIT_CODE=128
+Commit was not attempted after index preparation failed. The Git administration
+directory is outside the assigned writable scope. No permission bypass or
+external network operation was attempted.

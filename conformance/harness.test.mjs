@@ -10,7 +10,7 @@ test('attribute order, quotes, self-closing and numeric entities are serializati
     norm(wrap("<mo form='infix' stretchy='false'>≤</mo><mspace></mspace>")));
 });
 test('explicit tracking attributes and structural indentation are ignored',()=>{
-  assert.equal(norm(base),norm(wrap('\n <msup data-mjx-texclass="ORD">\n <mi data-latex="x" data-latex-item="x">x</mi>\n <mn>2</mn>\n </msup>\n','data-latex="x^2"')));
+  assert.equal(norm(base),norm(wrap('\n <msup>\n <mi data-latex="x" data-latex-item="x">x</mi>\n <mn>2</mn>\n </msup>\n','data-latex="x^2"')));
 });
 test('namespace prefixes resolve to the same expanded name',()=>{
   assert.equal(norm(wrap('<mi>x</mi>')),norm('<m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>x</m:mi></m:math>'));
@@ -131,4 +131,62 @@ test('reserved namespaces and inherited object keys cannot become valid namespac
   assert.throws(()=>norm(wrap('<mrow xmlns:p="http://www.w3.org/XML/1998/namespace"><mi>x</mi></mrow>')));
   assert.throws(()=>norm(wrap('<mrow xmlns:p="http://www.w3.org/2000/xmlns/"><mi>x</mi></mrow>')));
   assert.notEqual(norm(wrap('<__proto__:mi xmlns:__proto__="urn:foreign">x</__proto__:mi>')),norm(wrap('<mi>x</mi>')));
+});
+
+test('mi and mo remain distinct token types',()=>{
+  assert.notEqual(norm(wrap('<mi>x</mi>')),norm(wrap('<mo>x</mo>')));
+});
+test('mrow is neither flattened nor removed when empty',()=>{
+  assert.notEqual(norm(wrap('<mrow><mi>x</mi></mrow>')),norm(wrap('<mi>x</mi>')));
+  assert.notEqual(norm(wrap('<mrow></mrow><mi>x</mi>')),norm(wrap('<mi>x</mi>')));
+});
+test('texclass values and presence are semantic attributes',()=>{
+  const row=(value)=>wrap(`<mrow data-mjx-texclass="${value}"><mi>x</mi></mrow>`);
+  const forms=['ORD','OP','BIN','REL','OPEN','CLOSE','PUNCT','INNER','VCENTER','NONE'].map(value=>norm(row(value)));
+  assert.equal(new Set(forms).size,forms.length);
+  assert.notEqual(norm(row('ORD')),norm(wrap('<mrow><mi>x</mi></mrow>')));
+});
+test('all fixture texclass deletions and REL rewrites are detected',(t)=>{
+  const fixture=JSON.parse(fs.readFileSync(defaultFixture));
+  let removed=0,rewritten=0;
+  for(const record of fixture.records) {
+    if(!record.expected) continue;
+    const original=norm(record.expected);
+    const deleted=record.expected.replace(/ data-mjx-texclass="[^"]*"/g,'');
+    const rel=record.expected.replace(/data-mjx-texclass="[^"]*"/g,'data-mjx-texclass="REL"');
+    if(deleted!==record.expected) {removed++;assert.notEqual(norm(deleted),original,record.id);}
+    if(rel!==record.expected) {rewritten++;assert.notEqual(norm(rel),original,record.id);}
+  }
+  assert.ok(removed>0 && rewritten>0);
+  t.diagnostic(`texclass mutations detected: delete=${removed}, replace-with-REL=${rewritten}`);
+});
+test('real MathJax relation, binary, punctuation and inner classes differ from ORD',async()=>{
+  const subject=(await import('./mathjax.mjs')).default;
+  const options={packages:['base'],texOptions:{}};
+  const ord=norm(await subject('a\\mathord{x}b',options));
+  for(const macro of ['mathrel','mathbin','mathpunct','mathinner']) {
+    assert.notEqual(norm(await subject(`a\\${macro}{x}b`,options)),ord,macro);
+  }
+});
+test('runner executes every function-options fixture, including Begingroup retry registration',async(t)=>{
+  const fixture=JSON.parse(fs.readFileSync(defaultFixture));
+  const records=fixture.records.filter(r=>JSON.stringify(r.input).includes('"$function"'));
+  assert.equal(records.length,30);
+  assert.ok(records.every(r=>!r.unsupported));
+  assert.equal(records.filter(r=>r.group==='begingroup').length,19);
+  const subject=(await import('./mathjax.mjs')).default;
+  let calls=0;
+  const report=await run((tex,options)=>{calls++;return subject(tex,options);},{...fixture,records});
+  assert.equal(calls,30);
+  assert.equal(report.matched,30,JSON.stringify(report.rows.filter(r=>r.status!=='matched')));
+  t.diagnostic(`function-options subject calls=${calls}; matched=${report.matched}/${report.total}`);
+});
+test('runner restores function and RegExp options for any subject',async()=>{
+  const fixture={schemaVersion:1,records:[{id:'options',group:'base',input:{tex:'x',texOptions:{callback:{$function:'(x) => x + 1'},pattern:{$regexp:'^x$',flags:'i'}}},expected:base}]};
+  const report=await run((_tex,options)=>{
+    assert.equal(options.texOptions.callback(2),3);
+    assert.equal(options.texOptions.pattern.test('X'),true);
+    return base;
+  },fixture);
+  assert.equal(report.matched,1);
 });

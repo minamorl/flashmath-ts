@@ -100,7 +100,6 @@ for (const file of fs.readdirSync(testDir).filter(f => f.endsWith('.test.ts')).s
       source:{file:`testsuite/tests/input/tex/${file}`, test:name, snapshot:`testsuite/tests/input/tex/__snapshots__/${file}.snap`},
       input, expected:expected?.startsWith('<math') ? expected : null,
       unsupported: !input ? 'input-not-captured' : !expected?.startsWith('<math') ? 'non-single-MathML-snapshot'
-        : JSON.stringify(input).includes('"$function"') ? 'function-valued-options'
         : ['page','typeset'].includes(input.mode) ? `${input.mode}-component-pipeline`
         : null,
       ...(!expected?.startsWith('<math') ? {rawSnapshot:raw} : {})});
@@ -110,6 +109,8 @@ for (const file of fs.readdirSync(testDir).filter(f => f.endsWith('.test.ts')).s
 // (notably UnicodeCache). Retain source-file order and actual capture sequence.
 records.sort((a,b)=>a.source.file.localeCompare(b.source.file,'en') || (a.input?.executionOrder??Infinity)-(b.input?.executionOrder??Infinity));
 const builtinPackages=new Set(fs.readdirSync(path.join(installed,'mjs/input/tex'),{withFileTypes:true}).filter(e=>e.isDirectory()).map(e=>e.name));
+// This upstream test-local registration is explicitly reproduced by mathjax.mjs.
+builtinPackages.add('retry');
 for(const record of records) {
   const custom=record.input?.packages.filter(p=>!builtinPackages.has(Array.isArray(p)?p[0]:p)) || [];
   if(!record.unsupported && custom.length) record.unsupported='custom-package-registration';
