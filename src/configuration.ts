@@ -6,8 +6,25 @@ import {
   validateConfigurationModules,
 } from "./packages/registry.js";
 import type { ActivePackageConfiguration, PackageEntry } from "./packages/types.js";
+import { configurationKey, copyConfiguration, remember } from './configuration-cache.js';
+
+const optionCache = new Map<string, ReturnType<typeof configureUncached>>();
+const packageCache = new Map<string, ActivePackageConfiguration>();
 
 export function configure(input: ParseOptions): {
+  options: ParseOptions;
+  configuration: ActivePackageConfiguration;
+} {
+  const key = configurationKey(input);
+  let resolved = key === undefined ? undefined : optionCache.get(key);
+  if (!resolved) {
+    resolved = configureUncached(input);
+    if (key !== undefined) remember(optionCache, key, { ...resolved, options: copyConfiguration(resolved.options) });
+  }
+  return { configuration: resolved.configuration, options: key === undefined ? resolved.options : copyConfiguration(resolved.options) };
+}
+
+function configureUncached(input: ParseOptions): {
   options: ParseOptions;
   configuration: ActivePackageConfiguration;
 } {
@@ -117,11 +134,15 @@ export function configure(input: ParseOptions): {
 
 /** Keep package lifecycle metadata outside the registry's registration-only boundary. */
 export function resolveConfiguration(entries:readonly PackageEntry[]=['base','newcommand']):ActivePackageConfiguration {
+  const key = configurationKey(entries);
+  const cached = key === undefined ? undefined : packageCache.get(key);
+  if (cached) return cached;
   const configuration=resolvePackages(entries);
   const selected=entries.map((entry,index)=>{
     const [name,priority]=typeof entry==='string'?[entry,undefined]:entry;
     const definition=registeredPackages.find(p=>p.name===name)!;
     return {definition,priority:priority??definition.priority??5,index};
   }).sort((a,b)=>b.priority-a.priority||a.index-b.index);
-  return {...configuration,entries:selected.map(x=>[x.definition.name,x.priority] as const),packages:selected.map(x=>x.definition)};
+  const resolved = {...configuration,entries:selected.map(x=>[x.definition.name,x.priority] as const),packages:selected.map(x=>x.definition)};
+  return key === undefined ? resolved : remember(packageCache, key, resolved);
 }

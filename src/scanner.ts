@@ -17,7 +17,7 @@ export function scan(source:string,max=200000):Token[] {
   }
   return tokens;
 }
-export const spelling=(t:Token)=>t[3].slice(t[1],t[2]);
+export const spelling=(t:Token)=>t[0]>=0&&t[2]===t[1]+1?String.fromCharCode(t[0]):t[3].slice(t[1],t[2]);
 export const builtin=(t:Token|undefined)=>t&&t[0]===-1?command(t[3],t[1],t[2]):-1;
 export const raw=(tokens:readonly Token[])=>tokens.map(t=>(t[0]===-1?'\\':'')+spelling(t)).join('');
 export interface Macro {body:readonly Token[];count:number;optional:readonly Token[]|null;prefix:readonly Token[];delimiters:readonly (readonly Token[])[]}

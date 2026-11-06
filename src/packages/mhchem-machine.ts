@@ -3,9 +3,10 @@
 // handwritten matchers and direct TeX emission. No regexp lexer or runtime oracle.
 import {Pattern as P, Action as A, Machine as M, grammar} from './mhchem-grammar.js';
 import type {Option} from './mhchem-grammar.js';
-type Piece = {source:string;start:number;end:number};
+type SourceIndex = {braces?:Map<number,number>};
+type Piece = {source:string;start:number;end:number;index?:SourceIndex};
 type Text = readonly Piece[];
-const literal = (source:string):Text => source ? [{source,start:0,end:source.length}] : [];
+const literal = (source:string):Text => source ? [{source,start:0,end:source.length,index:{}}] : [];
 const alpha=(c:number)=>c>=65&&c<=90||c>=97&&c<=122;
 const lower=(c:number)=>c>=97&&c<=122;
 const digit=(c:number)=>c>=48&&c<=57;
@@ -28,13 +29,31 @@ export class View {
     for(let k=0;k<this.parts.length;k++){
       const p=this.parts[k],from=this.offsets[k],to=from+p.end-p.start;
       if(to<=a)continue;if(from>=b)break;
-      out.push({source:p.source,start:p.start+Math.max(0,a-from),end:p.start+Math.min(to,b)-from});
+      out.push({source:p.source,start:p.start+Math.max(0,a-from),end:p.start+Math.min(to,b)-from,index:p.index});
     }return out;
   }
   emit(a=0,b=this.length){let s='';for(let i=a;i<b;i++)s+=String.fromCharCode(this.c(i));return s;}
   skip(i:number){while(white(this.c(i)))i++;return i;}
   command(i:number){if(this.c(i)!==92)return -1;let j=i+1;if(alpha(this.c(j)))while(alpha(this.c(j)))j++;else if(j<this.length)j++;return j;}
-  group(i:number,open=123,close=125){if(this.c(i)!==open)return -1;let depth=1,braces=0;
+  group(i:number,open=123,close=125){if(this.c(i)!==open)return -1;
+    // Recursive chemistry views retain the source index instead of rescanning
+    // the rest of every enclosing group at each nesting level.
+    const p=this.parts.length===1?this.parts[0]:undefined;
+    if(open===123&&close===125&&p?.index){
+      if(!p.index.braces){
+        const ends=new Map<number,number>(),stack:number[]=[];
+        for(let j=0;j<p.source.length;j++){
+          const c=p.source.charCodeAt(j);
+          if(c===92){j++;if(alpha(p.source.charCodeAt(j))){while(alpha(p.source.charCodeAt(j+1)))j++;}continue;}
+          if(c===123)stack.push(j);
+          else if(c===125&&stack.length)ends.set(stack.pop()!,j+1);
+        }
+        p.index.braces=ends;
+      }
+      const end=p.index.braces.get(p.start+i);
+      return end!==undefined&&end<=p.end?end-p.start:-1;
+    }
+    let depth=1,braces=0;
     for(let j=i+1;j<this.length;j++){const c=this.c(j);if(c===92){j=this.command(j)-1;continue;}
       if(open!==123){if(c===123)braces++;if(c===125)braces--;if(braces)continue;}
       if(c===open&&open!==close)depth++;if(c===close&&--depth===0)return j+1;
@@ -337,9 +356,9 @@ export class MhchemMachine {
     }
   }
   toTex(source:string,unit=false){
-    const parts:Piece[]=[];let start=0;
-    for(let i=0;i<source.length;i++)if(source.charCodeAt(i)===0x2026){if(start<i)parts.push({source,start,end:i});parts.push(...literal('...'));start=i+1;}
-    if(start<source.length)parts.push({source,start,end:source.length});
+    const parts:Piece[]=[],index:SourceIndex={};let start=0;
+    for(let i=0;i<source.length;i++)if(source.charCodeAt(i)===0x2026){if(start<i)parts.push({source,start,end:i,index});parts.push(...literal('...'));start=i+1;}
+    if(start<source.length)parts.push({source,start,end:source.length,index});
     const result=this.run(parts,unit?M.Pu:M.Ce);const text=join(result),v=new View(literal(text));let tex='';
     for(let i=0;i<v.length;){
       if(v.c(i)!==92){tex+=String.fromCharCode(v.c(i++));continue;}
