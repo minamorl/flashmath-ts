@@ -1,0 +1,17 @@
+┌────────────────┬───────┬───────┬───────┬────────────┬───────┬────────────┐
+│ (index)        │ total │ novel │ match │ novelMatch │ valid │ validMatch │
+├────────────────┼───────┼───────┼───────┼────────────┼───────┼────────────┤
+│ physics        │ 285   │ 263   │ 284   │ 262        │ 232   │ 231        │
+│ braket         │ 33    │ 32    │ 33    │ 32         │ 31    │ 31         │
+│ cancel         │ 24    │ 21    │ 24    │ 21         │ 20    │ 20         │
+│ bbox           │ 33    │ 32    │ 33    │ 32         │ 27    │ 27         │
+│ enclose        │ 39    │ 39    │ 39    │ 39         │ 38    │ 38         │
+│ centernot      │ 22    │ 21    │ 21    │ 20         │ 18    │ 18         │
+│ mixed          │ 13    │ 13    │ 13    │ 13         │ 13    │ 13         │
+│ physics+braket │ 9     │ 9     │ 9     │ 9          │ 8     │ 8          │
+│ braket+physics │ 9     │ 9     │ 9     │ 9          │ 8     │ 8          │
+└────────────────┴───────┴───────┴───────┴────────────┴───────┴────────────┘
+{"total":467,"matched":465,"novel":439,"novelMatched":437,"valid":395,"validMatched":394,"ssrThrows":0,"ssrExact":466,"corpusSHA256":"c44ca0b973aa44f435472a02822e841e9ad36a529a2acae2e6da6d250b1f0360","groups":{"physics":{"total":285,"novel":263,"match":284,"novelMatch":262,"valid":232,"validMatch":231},"braket":{"total":33,"novel":32,"match":33,"novelMatch":32,"valid":31,"validMatch":31},"cancel":{"total":24,"novel":21,"match":24,"novelMatch":21,"valid":20,"validMatch":20},"bbox":{"total":33,"novel":32,"match":33,"novelMatch":32,"valid":27,"validMatch":27},"enclose":{"total":39,"novel":39,"match":39,"novelMatch":39,"valid":38,"validMatch":38},"centernot":{"total":22,"novel":21,"match":21,"novelMatch":20,"valid":18,"validMatch":18},"mixed":{"total":13,"novel":13,"match":13,"novelMatch":13,"valid":13,"validMatch":13},"physics+braket":{"total":9,"novel":9,"match":9,"novelMatch":9,"valid":8,"validMatch":8},"braket+physics":{"total":9,"novel":9,"match":9,"novelMatch":9,"valid":8,"validMatch":8}}}
+MISMATCH {"tex":"\\begin{array}{c}(a)\\\\ [b]\\end{array}","group":"physics","novel":true,"isError":false,"difference":{"category":"attributes","path":"/math/0","expected":[["{}columnspacing","1em"],["{}data-frame-styles",""],["{}framespacing",".5em .125em"],["{}rowspacing","4pt"]],"actual":[["{}columnspacing","1em"],["{}data-frame-styles",""],["{}framespacing",".5em .125em"],["{}rowspacing","NaNem"]]}}
+MISMATCH {"tex":"\\centernot{}","group":"centernot","novel":true,"isError":true,"oracleError":"TypeError: Cannot read properties of undefined (reading 'texClass')"}
+SSR {"tex":"\\bbox[yellow,5px,border: 1px solid]{x+y}","group":"bbox","exact":false,"actual":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle mathbackground=\"yellow\" style=\"border:1px solid\"><mpadded height=\"+5px\" depth=\"+5px\" lspace=\"5px\" width=\"+10px\"><mi>x</mi><mo>+</mo><mi>y</mi></mpadded></mstyle></math>","expected":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle mathbackground=\"yellow\" style=\"border: 1px solid\"><mpadded height=\"+5px\" depth=\"+5px\" lspace=\"5px\" width=\"+10px\"><mi>x</mi><mo>+</mo><mi>y</mi></mpadded></mstyle></math>"}

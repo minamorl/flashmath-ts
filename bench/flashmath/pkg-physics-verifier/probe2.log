@@ -1,0 +1,56 @@
+OK   \sqrt{\qty(x)}  [newcommand,physics]
+OK   \sqrt{\ket{a}}  [newcommand,physics]
+OK   \sqrt{\abs{x}+1}  [newcommand,physics]
+OK   \sqrt[3]{\abs{x}}  [newcommand,physics]
+OK   \sqrt{\norm{x}}  [newcommand,physics]
+OK   \sqrt{\bra{a}}  [newcommand,physics]
+OK   \sqrt{\braket{a}{b}}  [newcommand,physics]
+OK   \sqrt{\sin(x)}  [newcommand,physics]
+OK   \sqrt{\mqty(a)}  [newcommand,physics]
+OK   \sqrt{\dv{x}}  [newcommand,physics]
+OK   \sqrt{\comm{A}{B}}  [newcommand,physics]
+OK   \phantom{\abs{x}}  [newcommand,physics]
+OK   \mathbf{\abs{x}}  [newcommand,physics]
+OK   \boxed{\abs{x}}  [newcommand,physics]
+OK   \overline{\abs{x}}  [newcommand,physics]
+OK   {\abs{x}}  [newcommand,physics]
+DIFF \mathrm{\qty(x)}  [newcommand,physics]
+  MJ <math display="block"><mrow tc="ORD"><mrow><mo tc="OPEN">(</mo><mi mathvariant="normal">x</mi><mo tc="CLOSE">)</mo></mrow></mrow></math>
+  FM <math display="block"><mrow tc="ORD"><mo tc="OPEN">(</mo><mi mathvariant="normal">x</mi><mo tc="CLOSE">)</mo></mrow></math>
+OK   \sqrt{\left|x\right|}  [newcommand,physics]
+OK   \cancel{\abs{x}}  [newcommand,physics,cancel,bbox,enclose]
+OK   \cancel{\qty(x)}  [newcommand,physics,cancel,bbox,enclose]
+OK   \bbox[red]{\qty(x)}  [newcommand,physics,cancel,bbox,enclose]
+OK   \bbox[2pt]{\qty(x)}  [newcommand,physics,cancel,bbox,enclose]
+OK   \enclose{box}{\qty[x]}  [newcommand,physics,cancel,bbox,enclose]
+OK   \enclose{box}{\ket{a}}  [newcommand,physics,cancel,bbox,enclose]
+OK   \enclose{box}{\abs{x}}  [newcommand,physics,cancel,bbox,enclose]
+OK   \enclose{box}{\pqty{x}}  [newcommand,physics,cancel,bbox,enclose]
+OK   \xcancel{\sin(x)}  [newcommand,physics,cancel,bbox,enclose]
+OK   \cancelto{0}{x}_2  [cancel]
+OK   \cancelto{0}{x}^2_3  [cancel]
+OK   \cancel{x}^2_3  [cancel]
+OK   \enclose{box}[mathcolor='red']{x}  [enclose]
+OK   \cancel[mathcolor="red"]{x}  [cancel]
+OK   \enclose{longdiv,box}{x}  [enclose]
+OK   \enclose{longdiv}[mathcolor=red]{x}  [enclose]
+DIFF \begin{array}{c}a\\ [b]\end{array}  []
+  MJ <math display="block"><mtable columnspacing="1em" rowspacing="4pt" data-frame-styles="" framespacing=".5em .125em"><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mtd></mtr></mtable></math>
+  FM <math display="block"><mtable columnspacing="1em" rowspacing="NaNem" data-frame-styles="" framespacing=".5em .125em"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>
+DIFF \begin{array}{c}a\\[b]\end{array}  []
+  MJ <math display="block"><merror data-mjx-error="Bracket argument to \\ must be a dimension"><mtext>Bracket argument to \\ must be a dimension</mtext></merror></math>
+  FM <math display="block"><mtable columnspacing="1em" rowspacing="NaNem" data-frame-styles="" framespacing=".5em .125em"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>
+OK   \begin{array}{c}a\\[2pt]b\end{array}  []
+DIFF \begin{array}{c}a\\ [2pt]b\end{array}  []
+  MJ <math display="block"><mtable columnspacing="1em" rowspacing="4pt" data-frame-styles="" framespacing=".5em .125em"><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo stretchy="false">[</mo><mn>2</mn><mi>p</mi><mi>t</mi><mo stretchy="false">]</mo><mi>b</mi></mtd></mtr></mtable></math>
+  FM <math display="block"><mtable columnspacing="1em" rowspacing="0.6em 0.4em" data-frame-styles="" framespacing=".5em .125em"><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable></math>
+DIFF \matrix{a\\ [b]}  []
+  MJ <math display="block"><mtable rowspacing="4pt" columnspacing="1em" data-frame-styles="" framespacing=".2em .125em"><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mtd></mtr></mtable></math>
+  FM <math display="block"><mtable columnspacing="1em" rowspacing="NaNem" data-frame-styles="" framespacing=".2em .125em"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>
+OK   \qty|a|  [braket,physics]
+OK   \qty\big|a|  [braket,physics]
+OK   \eval{x}_0  [braket,physics]
+OK   \mqty|a|  [braket,physics]
+OK   \vmqty{a}  [braket,physics]
+matched 39/44
+calibration equal(mi,mo)= false equal(mi,mi bold)= false equal(same)= true

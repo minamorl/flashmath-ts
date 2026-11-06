@@ -17,7 +17,7 @@ import { resolvePackages } from "./packages/registry.js";
 import { configure } from "./configuration.js";
 import { sessionState } from "./session-state.js";
 import type { SessionState, Reference } from "./session-state.js";
-import type { PackageConfiguration } from "./packages/types.js";
+import type { PackageConfiguration, RegisteredCommand } from "./packages/types.js";
 import type { Definition } from "./symbols.js";
 import {
   relationChars,
@@ -35,6 +35,9 @@ import {
 
 type Attrs = Record<string, string>;
 interface Frame {
+  argumentScope?: boolean;
+  tokenTransform?: (node: Node) => void;
+  missingMessage?: string;
   nodes: Node[];
   stop: number;
   single: boolean;
@@ -82,6 +85,7 @@ const same = (a: Token | undefined, b: Token) =>
   !!a && a[0] === b[0] && spelling(a) === spelling(b);
 
 export class Parser {
+  readonly characters?: ReadonlyMap<number, readonly RegisteredCommand[]>;
   readonly stream: Stream;
   readonly macros: Map<string, Macro>;
   readonly environments: Map<string, { begin: Macro; end: Macro }>;
@@ -108,6 +112,21 @@ export class Parser {
     ),
     readonly session: SessionState = sessionState(),
   ) {
+    if (configuration.extensions.size) {
+      const characters = [...configuration.extensions.values()].filter(c => c.definition.type === 'character');
+      if (characters.length) {
+        const handlers = new Map<number, RegisteredCommand[]>();
+        // Resolution inserts lower precedence packages first. Keep every
+        // character handler so a higher priority handler can decline a token.
+        for (const command of characters) {
+          const key = command.definition.char!.charCodeAt(0);
+          const chain = handlers.get(key) ?? [];
+          chain.unshift(command);
+          handlers.set(key, chain);
+        }
+        this.characters = handlers;
+      }
+    }
     this.macros = session.macros;
     this.environments = session.environments;
     this.numbered = options.tags === "all" && !!options.display;
@@ -145,7 +164,7 @@ export class Parser {
   ): Node {
     if (++this.nodes > (this.options.maxNodes ?? 100000))
       this.error("Node limit exceeded");
-    return {
+    const result: Node = {
       kind,
       attributes,
       children,
@@ -157,9 +176,15 @@ export class Parser {
       fixed: false,
       rawAttrs: false,
     };
+    if (kind === K.mi || kind === K.mo || kind === K.mn || kind === K.mtext)
+      this.f?.tokenTransform?.(result);
+    return result;
   }
   row(nodes: Node[], force = false): Node {
-    return !force && nodes.length === 1 ? nodes[0] : this.node(K.mrow, nodes);
+    if (!force && nodes.length === 1) return nodes[0];
+    const row = this.node(K.mrow, nodes);
+    row.inferred = !force;
+    return row;
   }
   atom(nodes: Node[], texclass = "ORD"): Node {
     return this.node(K.mrow, nodes, "", { "data-mjx-texclass": texclass });
@@ -178,6 +203,7 @@ export class Parser {
       this.error("Nesting limit exceeded");
     const p = this.f;
     this.frames.push({
+      tokenTransform: p?.tokenTransform,
       nodes: [],
       stop,
       single,
@@ -255,18 +281,20 @@ export class Parser {
     this.frames.pop();
     f.done(nodes);
   }
-  argument(done: (n: Node) => void, keepGroup = false) {
+  argument(done: (n: Node) => void, keepGroup = false, name = "") {
     this.stream.skip();
     const t = this.stream.peek();
-    if (!t) this.error("Missing argument");
+    if (!t) this.error(name ? `Missing argument for ${name}` : "Missing argument");
+    if (name && t[0] === 125) this.error("Extra close brace or missing open brace");
     if (t[0] === 123) {
       this.stream.next();
       this.frame(125, false, (n) =>
         done(keepGroup ? this.atom(n) : this.row(n)),
       );
     } else this.frame(0, true, (n) => done(this.row(n)));
+    this.f.argumentScope = true;
   }
-  args(count: number, done: (nodes: Node[]) => void) {
+  args(count: number, done: (nodes: Node[]) => void, name = "") {
     const values: Node[] = [];
     const next = () => {
       if (values.length === count) done(values);
@@ -274,7 +302,7 @@ export class Parser {
         this.argument((n) => {
           values.push(n);
           next();
-        });
+        }, false, name);
     };
     next();
   }
@@ -282,6 +310,7 @@ export class Parser {
     this.stream.skip();
     const first = this.stream.next();
     if (!first) this.error(`Missing argument for ${name}`);
+    if (name && first[0] === 125) this.error("Extra close brace or missing open brace");
     if (first[0] !== 123) return [first];
     const result: Token[] = [];
     let depth = 1;
@@ -313,6 +342,7 @@ export class Parser {
     this.stream.push([[0, 0, 0, ""]]);
     this.stream.push(tokens);
     this.frame(-2, false, (n) => done(this.row(n)));
+    this.f.argumentScope = true;
   }
   substitute(m: Macro, args: readonly Token[][]): Token[] {
     const out: Token[] = [];
@@ -610,8 +640,8 @@ export class Parser {
         b.limits !== 0 &&
         (b.kind === K.munder || b.kind === K.mover || b.kind === K.munderover);
       if (
-        [K.msub, K.msup, K.msubsup].includes(b.kind) ||
-        (b.limits !== 0 && [K.munder, K.mover, K.munderover].includes(b.kind))
+        !b.scriptBoundary && ([K.msub, K.msup, K.msubsup].includes(b.kind) ||
+        (b.limits !== 0 && [K.munder, K.mover, K.munderover].includes(b.kind)))
       ) {
         if (b.kind === K.msub || b.kind === K.munder) sub = b.children[1];
         else if (b.kind === K.msup || b.kind === K.mover) top = b.children[1];
@@ -1189,7 +1219,7 @@ export class Parser {
       if (!t) {
         if (this.frames.length !== 1)
           this.error(
-            this.f.env ? `Missing \\end{${this.f.env}}` : "Missing close brace",
+            this.f.missingMessage ?? (this.f.env ? `Missing \\end{${this.f.env}}` : "Missing close brace"),
           );
         this.close();
         break;
@@ -1205,6 +1235,17 @@ export class Parser {
         continue;
       }
       if (space(c)) continue;
+      const characters = c > 0 ? this.characters?.get(c) : undefined;
+      if (characters) {
+        let handled = false;
+        for (const command of characters) {
+          if (command.execute(this, t, command.definition, command.id) !== false) {
+            handled = true;
+            break;
+          }
+        }
+        if (handled) continue;
+      }
       switch (c) {
         case 123:
           this.frame(125, false, (n) => this.append(this.atom(n)));
@@ -1445,6 +1486,19 @@ export class Parser {
     )
       delete a.mathvariant;
   }
+  functionArgument(node: Node): boolean {
+    if (node.kind === K.mspace) return false;
+    if (node.kind === K.mstyle && node.children[0]?.kind === K.mspace)
+      return false;
+    let core = node;
+    while ([K.msub, K.msup, K.msubsup, K.munder, K.mover, K.munderover].includes(core.kind))
+      core = core.children[0];
+    if (core.kind !== K.mo) return true;
+    const cls = core.attributes['data-mjx-texclass'];
+    const texclass = cls ? ['ORD', 'OP', 'BIN', 'REL', 'OPEN', 'CLOSE', 'PUNCT', 'INNER'].indexOf(cls)
+      : operator(core.text)?.[2] ?? 0;
+    return ![2, 3, 5, 6].includes(texclass);
+  }
   finish(nodes: Node[]) {
     const stack: { children: Node[]; sequence: boolean }[] = [
       { children: nodes, sequence: true },
@@ -1482,10 +1536,12 @@ export class Parser {
         ) {
           const next = children[i + 1];
           if (
-            next.kind === K.mi ||
-            next.kind === K.mn ||
-            next.kind === K.mrow ||
-            (next.kind === K.mo && "([{|".includes(next.text))
+            n.op === 2
+              ? this.functionArgument(next)
+              : next.kind === K.mi ||
+                next.kind === K.mn ||
+                next.kind === K.mrow ||
+                (next.kind === K.mo && "([{|".includes(next.text))
           ) {
             children.splice(
               ++i,

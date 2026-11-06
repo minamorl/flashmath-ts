@@ -133,6 +133,10 @@ export const enum K {
   none,
 }
 export interface Node {
+  /** Internal inferred sequences may flatten; explicit mrows must survive. */
+  inferred?: boolean;
+  /** Generated scripts remain an indivisible base for later TeX scripts. */
+  scriptBoundary?: boolean;
   kind: K;
   attributes: Record<string, string>;
   children: Node[];

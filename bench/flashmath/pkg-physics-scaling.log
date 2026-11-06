@@ -1,0 +1,14 @@
+✔ character handlers do not add a slice per literal token (200.242338ms)
+ℹ [{"input":"x","packages":["base"],"slices":5000},{"input":"x","packages":["base","physics"],"slices":5000},{"input":"x","packages":["base","braket"],"slices":5000},{"input":"(","packages":["base"],"slices":5000},{"input":"(","packages":["base","physics"],"slices":5000},{"input":"(","packages":["base","braket"],"slices":5000},{"input":"|","packages":["base"],"slices":5000},{"input":"|","packages":["base","physics"],"slices":5000},{"input":"|","packages":["base","braket"],"slices":5000}]
+✔ nested quantities at depth 400 scan once and preserve every fence (42.118125ms)
+ℹ [{"depth":100,"slices":201,"milliseconds":16.46339999999998},{"depth":200,"slices":401,"milliseconds":6.195932999999968},{"depth":400,"slices":801,"milliseconds":16.767633999999987}]
+✔ quantity, function and enclosure hot paths do not run regex, split, match or replace (6.381363ms)
+ℹ [{"name":"cancel","counts":{"exec":0,"test":0,"split":0,"match":0,"replace":0}},{"name":"bbox","counts":{"exec":0,"test":0,"split":0,"match":0,"replace":0}},{"name":"enclose","counts":{"exec":0,"test":0,"split":0,"match":0,"replace":0}},{"name":"physics","counts":{"exec":0,"test":0,"split":0,"match":0,"replace":0}}]
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 435.047594

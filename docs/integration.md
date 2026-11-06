@@ -34,3 +34,14 @@ the final gate independently. This worker starts no child agents.
   Numeric node kinds from both lanes coincide. Keep the temporary boldsymbol/bbox
   subsets until their full owning lanes arrive. Parser initializer, session data
   and literal colon handler additions merge alongside AMS tag metadata.
+
+- Physics: retain both registry lists and shared-change notes; replace mathtools's
+  temporary bbox registration with the full bbox implementation. Preserve both
+  character paths: mathtools literal-colon map and physics/braket numeric-code
+  handler chains with decline semantics. Keep initializer, inferred-row and
+  script-boundary metadata together. React now translates CSS text to props.
+
+  The newly broadened SSR test exposed CSS whitespace differences in mathtools.
+  SSR comparison now retains strict tree/text/attribute checks while canonicalizing
+  whitespace around CSS declaration separators only, preserving quoted/function
+  values. The conformance normalizer is unchanged and still compares literal CSS.
