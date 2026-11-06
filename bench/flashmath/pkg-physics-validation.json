@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "name": "build",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "tests",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "--test",
+        "test/*.test.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "conformance",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "conformance/runner.mjs",
+        "--subject",
+        "bench/flashmath/adapter.mjs",
+        "--output",
+        "bench/flashmath/pkg-physics-conformance.json",
+        "--fresh"
+      ],
+      "exitCode": 1
+    }
+  ],
+  "groups": {
+    "physics": {
+      "total": 628,
+      "matched": 628,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "braket": {
+      "total": 30,
+      "matched": 30,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "cancel": {
+      "total": 8,
+      "matched": 8,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "centernot": {
+      "total": 2,
+      "matched": 2,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "bbox": {
+      "total": 6,
+      "matched": 6,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "enclose": {
+      "total": 6,
+      "matched": 6,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "base": {
+      "total": 811,
+      "matched": 780,
+      "mismatch": 10,
+      "unsupported": 21
+    },
+    "newcommand": {
+      "total": 58,
+      "matched": 58,
+      "mismatch": 0,
+      "unsupported": 0
+    }
+  },
+  "fullConformance": {
+    "total": 2683,
+    "matched": 1528,
+    "classifications": {
+      "subject-error": 921,
+      "structure": 180,
+      "typeset-component-pipeline": 14,
+      "text": 1,
+      "attributes": 5,
+      "custom-package-registration": 26,
+      "non-single-MathML-snapshot": 7,
+      "input-not-captured": 1
+    }
+  },
+  "crossPackageRows": [
+    {
+      "id": "Mathtools.test.ts::Mathtools Boxed Equations MakeAboxedCommand star 1",
+      "group": "mathtools",
+      "status": "mismatch",
+      "category": "subject-error",
+      "error": "UnsupportedFeatureError: Unsupported configuration module: input/tex/mathtools/MathtoolsConfiguration.js"
+    }
+  ],
+  "sha256": {
+    "src/parser.ts": "15869f0ef4b92d474bb86140437e52f18e173a7a7f5daf80ee0d14030d3a5ea8",
+    "src/scanner.ts": "6daa0b8e1eb3e2af02ba7622658625cab462070f71f8ad5b6369e19ae9312eb2",
+    "src/ast.ts": "a7c12a97e923c316eb295ddbc7ab763ed172856d5666b475ce3f89090a9b62a6",
+    "src/serialize.ts": "3e2e6921cadca17b03d5e424301841bcf0ea62600f96d7ecbced0f277ad134dc",
+    "src/symbols.ts": "69a718dae90c294e451784d21811b66e06a4fa03235c80e9b18efe6154f6dd04",
+    "src/packages/base.ts": "6eff44c7fa416ef183562e8a810ad691980c06d5aef8f88ae7712bcac0b4391c",
+    "src/packages/newcommand.ts": "62b74597706891c81e9f39f18fb63470fdbbe44607d396b7155fd2ce48f3d884",
+    "src/packages/registry.ts": "373702e7478d9ee55703666b85c52145936e76c9a90c7bfb166dbbdaeeac203f",
+    "src/packages/types.ts": "73bdff4e15296a2e0f860c397e2b69d2b3cf226f77a92ff7d70a56af5295c184",
+    "src/packages/physics.ts": "abdc9ce5439f8f09a1399fa62ac9fa5a7e6abd83110571bddfeae34ec6de033c",
+    "src/packages/braket.ts": "25266dc68ce86fc381f613610bbc6b463e00a5ea7e757c88d2a5f8f03c6fbc9b",
+    "src/packages/cancel.ts": "60aca2f5bd086b6f69962a2aa4e476729c124f48327acef2add64c94eeb8a60a",
+    "src/packages/centernot.ts": "6eb2a2db46918859f448e446915847d91e59b893422d19afcddf0e248e789139",
+    "src/packages/bbox.ts": "434e6aec74dc03223226ee663caa57ba538673651c0a1445bdcaa4c0c3acba3d",
+    "src/packages/enclose.ts": "614f56a49a25ecc8b77947172125804889abb5aa14692e26aa25399d00a90819",
+    "conformance/fixtures/mathjax-4.1.3.json": "aa810fe8b99d427ef35cee54171ea19009c58415081f130e904d85fcdc2faf2e"
+  }
+}

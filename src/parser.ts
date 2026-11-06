@@ -110,9 +110,11 @@ export class Parser {
     ),
     readonly session: SessionState = sessionState(),
   ) {
-    const characters = [...configuration.extensions.values()].filter(c => c.definition.type === 'character');
-    if (characters.length)
-      this.characters = new Map(characters.map(c => [c.definition.char!, c]));
+    if (configuration.extensions.size) {
+      const characters = [...configuration.extensions.values()].filter(c => c.definition.type === 'character');
+      if (characters.length)
+        this.characters = new Map(characters.map(c => [c.definition.char!, c]));
+    }
     this.macros = session.macros;
     this.environments = session.environments;
     this.numbered = options.tags === "all" && !!options.display;
@@ -1494,11 +1496,12 @@ export class Parser {
         ) {
           const next = children[i + 1];
           if (
-            n.op === 2 ? this.functionArgument(next) : (
-            next.kind === K.mi ||
-            next.kind === K.mn ||
-            next.kind === K.mrow ||
-            (next.kind === K.mo && "([{|".includes(next.text)))
+            n.op === 2
+              ? this.functionArgument(next)
+              : next.kind === K.mi ||
+                next.kind === K.mn ||
+                next.kind === K.mrow ||
+                (next.kind === K.mo && "([{|".includes(next.text))
           ) {
             children.splice(
               ++i,

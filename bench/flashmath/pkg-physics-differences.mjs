@@ -4,7 +4,7 @@ const report=JSON.parse(fs.readFileSync(new URL('./pkg-physics-conformance.json'
 const args=process.argv.slice(2);
 const rows=report.rows.filter(r=>r.id.startsWith('Physics') && r.status!=='matched');
 for(const [name,count] of Object.entries(report.byPackage).filter(([name])=>['physics','braket','cancel','bbox','enclose','centernot'].includes(name)))console.log(name,JSON.stringify(count));
-console.log('BASE', report.groups.Base, 'NEWCOMMAND', report.groups.Newcommand);
+console.log('BASE', report.groups.base, 'NEWCOMMAND', report.groups.newcommand);
 for(const row of rows) {
  const f=fixture.records.find(r=>r.id===row.id);
  if(args[0] && !row.id.includes(args[0]))continue;

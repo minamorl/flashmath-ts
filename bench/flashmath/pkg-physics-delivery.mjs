@@ -30,7 +30,7 @@ try {
   local(['read-tree', parent]);
   const files = [
     ...['physics', 'braket', 'bbox', 'cancel', 'centernot', 'enclose'].map(n => `src/packages/${n}.ts`),
-    'src/parser.ts', 'src/packages/registry.ts', 'test/packages', 'docs/packages-shared-changes.md',
+    'src/parser.ts', 'src/packages/registry.ts', 'test/packages', 'test/packages-pkg-physics.test.mjs', 'docs/packages-shared-changes.md',
     'docs/packages-pkg-physics.md', 'bench/flashmath/pkg-physics-delivery.mjs',
     'bench/flashmath/pkg-physics-differences.mjs', 'bench/flashmath/pkg-physics-conformance.json',
     'bench/flashmath/pkg-physics-validation.json', 'bench/flashmath/pkg-physics-validation.mjs',

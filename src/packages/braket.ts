@@ -1,3 +1,6 @@
+/** Adapted from MathJax 4.1.3 BraketMappings/Methods/Items.ts.
+ * Copyright (c) 2009-2026 The MathJax Consortium.
+ * Licensed under Apache-2.0; see ../LICENSE.MathJax. */
 import {K} from '../ast.js';
 import type {Node} from '../ast.js';
 import type {Parser} from '../parser.js';

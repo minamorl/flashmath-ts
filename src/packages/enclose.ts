@@ -1,3 +1,6 @@
+/** Adapted from MathJax 4.1.3 EncloseConfiguration.ts.
+ * Copyright (c) 2018-2026 The MathJax Consortium.
+ * Licensed under Apache-2.0; see ../LICENSE.MathJax. */
 import {K} from '../ast.js';
 import {raw} from '../scanner.js';
 import type {TexPackage} from './types.js';

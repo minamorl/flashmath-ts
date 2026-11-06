@@ -1,4 +1,5 @@
 /** MathJax 4.1.3 physics syntax, executed on flashmath's token/frame stack.
+ * Copyright (c) 2018-2026 The MathJax Consortium.
  * Expansion rules adapted from PhysicsMethods/PhysicsMappings (Apache-2.0;
  * see src/LICENSE.MathJax and src/ATTRIBUTION.MathJax). */
 import {K} from '../ast.js';
@@ -200,7 +201,9 @@ define('ket', p => { const fixed = star(p), body = arg(p); parsed(p, fixed ? `\\
 define('bra', p => {
   const fixed = star(p), body = arg(p);
   let ket = false, ketStar = false, right = '';
-  if (peek(p) === '\\ket') {
+  const t = next(p), alias = t?.[0] === -1 ? p.macros.get(spelling(t)) : undefined;
+  const ketAlias = alias?.body.length === 1 && alias.body[0][0] === -3 && spelling(alias.body[0]) === 'ket';
+  if (peek(p) === '\\ket' || ketAlias) {
     p.stream.next(); ket = true;
     ketStar = star(p);
     if (peek(p) === '{') right = arg(p);
