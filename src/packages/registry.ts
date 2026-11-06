@@ -10,6 +10,7 @@ import newcommand from './newcommand.js'; registrations.push(newcommand);
 import ams from './ams.js'; registrations.push(ams);
 import colorv2 from './colorv2.js'; registrations.push(colorv2);
 import extpfeil from './extpfeil.js'; registrations.push(extpfeil);
+import mhchem from './mhchem.js'; registrations.push(mhchem);
 export const registeredPackages:readonly TexPackage[]=Object.freeze(registrations);
 const modules=new Set(registeredPackages.flatMap(p=>p.configurationModules??[]));
 modules.add('input/tex/Configuration.js');

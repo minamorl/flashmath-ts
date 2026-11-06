@@ -1,0 +1,14 @@
+✔ extpfeil: complete captured fixtures, including texclass and padding (35.340785ms)
+✔ extpfeil: independent above/below, empty, context and scripted labels (106.80316ms)
+✔ extpfeil: new arrows persist only within their parser session (3.128114ms)
+✔ mhchem: all captured chemistry and physical-unit fixtures (326.44038ms)
+✔ mhchem: independent formulas, reactions, isotopes, labels, units and errors (382.198667ms)
+✔ mhchem: activation and resource budgets use the host parser boundary (2.862382ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1182.773236

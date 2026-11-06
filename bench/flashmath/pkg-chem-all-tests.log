@@ -1,0 +1,32 @@
+✔ scripts, compound arguments and nested fences (25.061606ms)
+✔ fixed arity MathML children are never combined as adjacent relations (1.776703ms)
+✔ macro substitution respects control word boundaries and def templates (4.172584ms)
+✔ nested custom environments and array frames (8.574071ms)
+✔ definitions and parser state do not leak between parses (0.596015ms)
+✔ recursive macros, output size and nesting are bounded (8.181611ms)
+✔ deep input uses explicit stacks through serialization (22.844793ms)
+✔ malformed input returns an error tree or throws on request (5.96643ms)
+✔ text and attribute values are escaped as XML, never executed (10.075394ms)
+✔ React returns elements and SSR exactly equals the string renderer (35.467054ms)
+✔ error paths always serialize valid MathML and XML (1.619436ms)
+✔ adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros (136.671688ms)
+✔ parser sessions preserve document references and independent sessions isolate them (4.748031ms)
+✔ texclass presence and all explicit atom classes match MathJax (33.081903ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (21.77327ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (1.083314ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (138.333093ms)
+✔ extpfeil: complete captured fixtures, including texclass and padding (37.375946ms)
+✔ extpfeil: independent above/below, empty, context and scripted labels (96.027523ms)
+✔ extpfeil: new arrows persist only within their parser session (2.42176ms)
+✔ mhchem: all captured chemistry and physical-unit fixtures (231.255416ms)
+✔ mhchem: independent formulas, reactions, isotopes, labels, units and errors (327.982651ms)
+✔ mhchem: activation and resource budgets use the host parser boundary (3.187816ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (422.520373ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1100.375545
