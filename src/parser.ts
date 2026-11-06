@@ -17,7 +17,7 @@ import { resolvePackages } from "./packages/registry.js";
 import { configure } from "./configuration.js";
 import { sessionState } from "./session-state.js";
 import type { SessionState, Reference } from "./session-state.js";
-import type { PackageConfiguration } from "./packages/types.js";
+import type { PackageConfiguration, RegisteredCommand } from "./packages/types.js";
 import type { Definition } from "./symbols.js";
 import {
   relationChars,
@@ -35,6 +35,9 @@ import {
 
 type Attrs = Record<string, string>;
 interface Frame {
+  argumentScope?: boolean;
+  tokenTransform?: (node: Node) => void;
+  missingMessage?: string;
   nodes: Node[];
   stop: number;
   single: boolean;
@@ -80,6 +83,7 @@ const same = (a: Token | undefined, b: Token) =>
   !!a && a[0] === b[0] && spelling(a) === spelling(b);
 
 export class Parser {
+  readonly characters?: ReadonlyMap<string, RegisteredCommand>;
   readonly stream: Stream;
   readonly macros: Map<string, Macro>;
   readonly environments: Map<string, { begin: Macro; end: Macro }>;
@@ -106,6 +110,9 @@ export class Parser {
     ),
     readonly session: SessionState = sessionState(),
   ) {
+    const characters = [...configuration.extensions.values()].filter(c => c.definition.type === 'character');
+    if (characters.length)
+      this.characters = new Map(characters.map(c => [c.definition.char!, c]));
     this.macros = session.macros;
     this.environments = session.environments;
     this.numbered = options.tags === "all" && !!options.display;
@@ -142,7 +149,7 @@ export class Parser {
   ): Node {
     if (++this.nodes > (this.options.maxNodes ?? 100000))
       this.error("Node limit exceeded");
-    return {
+    const result: Node = {
       kind,
       attributes,
       children,
@@ -154,6 +161,9 @@ export class Parser {
       fixed: false,
       rawAttrs: false,
     };
+    if (kind === K.mi || kind === K.mo || kind === K.mn || kind === K.mtext)
+      this.f?.tokenTransform?.(result);
+    return result;
   }
   row(nodes: Node[], force = false): Node {
     return !force && nodes.length === 1 ? nodes[0] : this.node(K.mrow, nodes);
@@ -175,6 +185,7 @@ export class Parser {
       this.error("Nesting limit exceeded");
     const p = this.f;
     this.frames.push({
+      tokenTransform: p?.tokenTransform,
       nodes: [],
       stop,
       single,
@@ -262,6 +273,7 @@ export class Parser {
         done(keepGroup ? this.atom(n) : this.row(n)),
       );
     } else this.frame(0, true, (n) => done(this.row(n)));
+    this.f.argumentScope = true;
   }
   args(count: number, done: (nodes: Node[]) => void) {
     const values: Node[] = [];
@@ -310,6 +322,7 @@ export class Parser {
     this.stream.push([[0, 0, 0, ""]]);
     this.stream.push(tokens);
     this.frame(-2, false, (n) => done(this.row(n)));
+    this.f.argumentScope = true;
   }
   substitute(m: Macro, args: readonly Token[][]): Token[] {
     const out: Token[] = [];
@@ -1178,7 +1191,7 @@ export class Parser {
       if (!t) {
         if (this.frames.length !== 1)
           this.error(
-            this.f.env ? `Missing \\end{${this.f.env}}` : "Missing close brace",
+            this.f.missingMessage ?? (this.f.env ? `Missing \\end{${this.f.env}}` : "Missing close brace"),
           );
         this.close();
         break;
@@ -1194,6 +1207,11 @@ export class Parser {
         continue;
       }
       if (space(c)) continue;
+      const character = c > 0 ? this.characters?.get(spelling(t)) : undefined;
+      if (character) {
+        character.execute(this, t, character.definition, character.id);
+        continue;
+      }
       switch (c) {
         case 123:
           this.frame(125, false, (n) => this.append(this.atom(n)));
@@ -1426,6 +1444,19 @@ export class Parser {
     )
       delete a.mathvariant;
   }
+  functionArgument(node: Node): boolean {
+    if (node.kind === K.mspace) return false;
+    if (node.kind === K.mstyle && node.children[0]?.kind === K.mspace)
+      return false;
+    let core = node;
+    while ([K.msub, K.msup, K.msubsup, K.munder, K.mover, K.munderover].includes(core.kind))
+      core = core.children[0];
+    if (core.kind !== K.mo) return true;
+    const cls = core.attributes['data-mjx-texclass'];
+    const texclass = cls ? ['ORD', 'OP', 'BIN', 'REL', 'OPEN', 'CLOSE', 'PUNCT', 'INNER'].indexOf(cls)
+      : operator(core.text)?.[2] ?? 0;
+    return ![2, 3, 5, 6].includes(texclass);
+  }
   finish(nodes: Node[]) {
     const stack: { children: Node[]; sequence: boolean }[] = [
       { children: nodes, sequence: true },
@@ -1463,10 +1494,11 @@ export class Parser {
         ) {
           const next = children[i + 1];
           if (
+            n.op === 2 ? this.functionArgument(next) : (
             next.kind === K.mi ||
             next.kind === K.mn ||
             next.kind === K.mrow ||
-            (next.kind === K.mo && "([{|".includes(next.text))
+            (next.kind === K.mo && "([{|".includes(next.text)))
           ) {
             children.splice(
               ++i,
