@@ -1,0 +1,18 @@
+{
+  "sourceSha256": "e54867a1865c37474f66340573ad79a1ac9c287acc55f142957fedc15225ea31",
+  "selected": 1089,
+  "reports": {
+    "standalone": {
+      "matched": 966,
+      "mismatch": 88,
+      "unsupported": 35,
+      "total": 1089
+    },
+    "integration": {
+      "matched": 1054,
+      "mismatch": 0,
+      "unsupported": 35,
+      "total": 1089
+    }
+  }
+}

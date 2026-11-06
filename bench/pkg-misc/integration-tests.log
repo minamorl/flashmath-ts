@@ -1,0 +1,37 @@
+﹣ autoload: original conformance fixtures (2.480161ms) # No executable fixtures in this lane; retain unsupported/dependency rows in the conformance report
+ℹ 2/2 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ autoload registers command triggers and honors disabled triggers (21.356033ms)
+✔ autoload keeps remaining triggers after loading another package (6.250486ms)
+✔ begingroup: original conformance fixtures (57.415184ms)
+ℹ 19/19 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ global environments survive group exit (7.326587ms)
+✔ bussproofs: original conformance fixtures (131.624052ms)
+ℹ 26/26 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ configmacros: original conformance fixtures (12.042968ms)
+ℹ 10/10 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ noerrors: original conformance fixtures (37.019864ms)
+ℹ 56/56 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ noundefined: original conformance fixtures (2.194261ms)
+ℹ 2/2 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+﹣ require: original conformance fixtures (0.744074ms) # No executable fixtures in this lane; retain unsupported/dependency rows in the conformance report
+ℹ 8/8 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ require loads only local registered packages and persists within a session (3.440292ms)
+✔ dynamically loaded noerrors formats the current error (4.934993ms)
+✔ setoptions: original conformance fixtures (23.012339ms)
+ℹ 12/12 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ setOptions changes package values and invokes filters without leaking caller options (4.935535ms)
+✔ setOptions preserves top-level number options across session inputs (0.96495ms)
+✔ textmacros: original conformance fixtures (48.078323ms)
+ℹ 50/50 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ text-mode expansion preserves optional parameters and package activation (11.20732ms)
+✔ verb: original conformance fixtures (11.176202ms)
+ℹ 5/5 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ verb reads raw comment characters and delimiters within scanner spans (1.545667ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 2
+ℹ todo 0
+ℹ duration_ms 678.600118
