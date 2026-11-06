@@ -1,0 +1,1667 @@
+{
+  "sourceSha256": "df7e40c94c9ac4847ee241087bfcfc3c21c1facec3bf0d1566d1955ec151475e",
+  "createdAt": "2026-11-06T18:00:20.948Z",
+  "node": "v26.12.1",
+  "platform": "linux",
+  "arch": "x64",
+  "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+  "versions": {
+    "mathjax": "4.1.3",
+    "temml": "0.14.0",
+    "flashmath": "0.0.0"
+  },
+  "samples": 7,
+  "iterations": 100,
+  "corpus": [
+    "x+1",
+    "x^2+y^2=z^2",
+    "\\alpha+\\beta=\\gamma",
+    "\\frac{a+b}{c+d}",
+    "\\sqrt{x^2+1}",
+    "\\sqrt[3]{x+y}",
+    "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+    "\\sum_{i=1}^{n}i^2",
+    "\\left(\\frac{a}{b}\\right)^2",
+    "\\int_0^1 x^2 dx",
+    "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+    "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}"
+  ],
+  "method": {
+    "warmupCorpusPasses": 200,
+    "percentile": "nearest-rank",
+    "warm": "fresh process per sample, import/setup/warmup excluded; TeX to serialized MathML, no result cache",
+    "cold": "fresh process per sample, import/setup and first conversion reported separately; parent wall clock includes Node startup",
+    "display": true
+  },
+  "engines": {
+    "mathjax": {
+      "raw": [
+        {
+          "engine": "mathjax",
+          "importAndSetupMs": 109.661564,
+          "firstConversionMs": 7.076714999999979,
+          "coldStartToFirstStringMs": 116.73909999999998,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 1712.7020000000073,
+              "bytes": 174
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 3200.389000000001,
+              "bytes": 442
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 1219.852000000003,
+              "bytes": 278
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1903.2620000000122,
+              "bytes": 424
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 1572.6080000000024,
+              "bytes": 310
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 910.8990000000006,
+              "bytes": 314
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 2398.0549999999994,
+              "bytes": 829
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 2769.937000000027,
+              "bytes": 557
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 2344.2540000000063,
+              "bytes": 537
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 1581.8849999999998,
+              "bytes": 401
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 5217.466000000002,
+              "bytes": 639
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1913.4209999999996,
+              "bytes": 302
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 483.248556,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 1567481,
+          "parentWallMs": 2079.8577840000003
+        },
+        {
+          "engine": "mathjax",
+          "importAndSetupMs": 113.01875899999999,
+          "firstConversionMs": 6.556252999999998,
+          "coldStartToFirstStringMs": 119.57575299999999,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 1651.0760000000175,
+              "bytes": 174
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 3132.2910000000093,
+              "bytes": 442
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 1518.4549999999888,
+              "bytes": 278
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1688.0460000000141,
+              "bytes": 424
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 1479.822999999982,
+              "bytes": 310
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 800.5210000000034,
+              "bytes": 314
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 2153.864000000027,
+              "bytes": 829
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 2062.1319999999914,
+              "bytes": 557
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 1421.8429999999955,
+              "bytes": 537
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 1062.7149999999972,
+              "bytes": 401
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 3148.612000000014,
+              "bytes": 639
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1385.9759999999994,
+              "bytes": 302
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 406.25801,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 1567481,
+          "parentWallMs": 1934.665086
+        },
+        {
+          "engine": "mathjax",
+          "importAndSetupMs": 94.409028,
+          "firstConversionMs": 5.412154000000015,
+          "coldStartToFirstStringMs": 99.82217400000002,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 893.225000000001,
+              "bytes": 174
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 2612.1800000000235,
+              "bytes": 442
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 1430.3990000000226,
+              "bytes": 278
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1460.4759999999999,
+              "bytes": 424
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 1036.3350000000082,
+              "bytes": 310
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 772.6990000000171,
+              "bytes": 314
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 2002.5090000000034,
+              "bytes": 829
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 2000.706000000008,
+              "bytes": 557
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 1776.5229999999974,
+              "bytes": 537
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 1149.2190000000164,
+              "bytes": 401
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 3421.436999999997,
+              "bytes": 639
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1309.6419999999966,
+              "bytes": 302
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 483.64668699999993,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 1567481,
+          "parentWallMs": 1942.021901
+        },
+        {
+          "engine": "mathjax",
+          "importAndSetupMs": 110.23115800000001,
+          "firstConversionMs": 6.766088999999994,
+          "coldStartToFirstStringMs": 116.998059,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 1512.8449999999987,
+              "bytes": 174
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 3022.524000000004,
+              "bytes": 442
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 1446.1689999999976,
+              "bytes": 278
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1602.2729999999967,
+              "bytes": 424
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 1320.8130000000153,
+              "bytes": 310
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 847.7900000000034,
+              "bytes": 314
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 2124.268000000001,
+              "bytes": 829
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 2481.6129999999816,
+              "bytes": 557
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 2008.7910000000022,
+              "bytes": 537
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 1300.1239999999825,
+              "bytes": 401
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 3926.55000000002,
+              "bytes": 639
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1653.250000000014,
+              "bytes": 302
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 472.45183,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 1567481,
+          "parentWallMs": 1924.274296999999
+        },
+        {
+          "engine": "mathjax",
+          "importAndSetupMs": 104.10548700000001,
+          "firstConversionMs": 13.215549999999979,
+          "coldStartToFirstStringMs": 117.32185899999999,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 1457.4910000000045,
+              "bytes": 174
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 2965.746999999993,
+              "bytes": 442
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 1349.3469999999945,
+              "bytes": 278
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1617.7240000000097,
+              "bytes": 424
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 1317.5259999999867,
+              "bytes": 310
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 926.007999999996,
+              "bytes": 314
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 2236.681000000004,
+              "bytes": 829
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 2635.4929999999968,
+              "bytes": 557
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 2138.5360000000164,
+              "bytes": 537
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 1475.7350000000145,
+              "bytes": 401
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 4329.560000000015,
+              "bytes": 639
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1858.1860000000177,
+              "bytes": 302
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 512.8298219999999,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 1567481,
+          "parentWallMs": 1952.848652999999
+        },
+        {
+          "engine": "mathjax",
+          "importAndSetupMs": 111.74820100000001,
+          "firstConversionMs": 6.869133000000005,
+          "coldStartToFirstStringMs": 118.618837,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 1197.8799999999978,
+              "bytes": 174
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 2755.7910000000165,
+              "bytes": 442
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 1443.4640000000059,
+              "bytes": 278
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1526.379999999989,
+              "bytes": 424
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 1268.1439999999782,
+              "bytes": 310
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 919.2139999999824,
+              "bytes": 314
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 2132.173999999992,
+              "bytes": 829
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 2303.0060000000103,
+              "bytes": 557
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 2075.7980000000202,
+              "bytes": 537
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 1387.2080000000153,
+              "bytes": 401
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 4240.010999999981,
+              "bytes": 639
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1793.875000000014,
+              "bytes": 302
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 417.43082500000014,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 1567481,
+          "parentWallMs": 1989.2073390000005
+        },
+        {
+          "engine": "mathjax",
+          "importAndSetupMs": 98.30972,
+          "firstConversionMs": 6.427720999999991,
+          "coldStartToFirstStringMs": 104.73824199999999,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 1026.0670000000118,
+              "bytes": 174
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 2592.331999999999,
+              "bytes": 442
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 1255.2289999999857,
+              "bytes": 278
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1694.8089999999922,
+              "bytes": 424
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 1826.828000000006,
+              "bytes": 310
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 875.4619999999989,
+              "bytes": 314
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 3763.1319999999846,
+              "bytes": 829
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 2220.5510000000004,
+              "bytes": 557
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 1878.8360000000068,
+              "bytes": 537
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 1062.2840000000053,
+              "bytes": 401
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 4036.5869999999973,
+              "bytes": 639
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1603.445999999991,
+              "bytes": 302
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 447.4974259999999,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 1567481,
+          "parentWallMs": 1957.3184280000005
+        }
+      ]
+    },
+    "temml": {
+      "raw": [
+        {
+          "engine": "temml",
+          "importAndSetupMs": 33.713713999999996,
+          "firstConversionMs": 3.5035919999999976,
+          "coldStartToFirstStringMs": 37.218108,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 352.9259999999965,
+              "bytes": 163
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 1474.2930000000028,
+              "bytes": 312
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 192.20200000000887,
+              "bytes": 186
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1154.3279999999925,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 313.08099999999683,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 207.66199999999913,
+              "bytes": 188
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 350.65199999999663,
+              "bytes": 407
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 419.2110000000042,
+              "bytes": 291
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 1454.084000000009,
+              "bytes": 298
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 393.14199999999744,
+              "bytes": 279
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 2255.8480000000004,
+              "bytes": 439
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 671.9279999999941,
+              "bytes": 289
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 34.49383599999999,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 988045,
+          "parentWallMs": 276.137256
+        },
+        {
+          "engine": "temml",
+          "importAndSetupMs": 33.361239000000005,
+          "firstConversionMs": 3.275571999999997,
+          "coldStartToFirstStringMs": 36.637983,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 210.76699999998993,
+              "bytes": 163
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 833.8239999999928,
+              "bytes": 312
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 182.50399999999445,
+              "bytes": 186
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1022.3200000000077,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 317.63999999999726,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 249.4909999999919,
+              "bytes": 188
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 420.2730000000088,
+              "bytes": 407
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 462.85300000000973,
+              "bytes": 291
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 2081.6679999999933,
+              "bytes": 298
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 222.3199999999963,
+              "bytes": 279
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 2237.0519999999915,
+              "bytes": 439
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 605.2620000000104,
+              "bytes": 289
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 49.71544300000002,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 988045,
+          "parentWallMs": 304.1721429999998
+        },
+        {
+          "engine": "temml",
+          "importAndSetupMs": 32.757360000000006,
+          "firstConversionMs": 3.4035730000000086,
+          "coldStartToFirstStringMs": 36.16181400000001,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 195.57899999999506,
+              "bytes": 163
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 831.4999999999912,
+              "bytes": 312
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 218.3419999999927,
+              "bytes": 186
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 956.1640000000011,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 314.36300000000017,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 216.44899999999723,
+              "bytes": 188
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 348.34800000000143,
+              "bytes": 407
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 383.67499999999666,
+              "bytes": 291
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 679.1410000000013,
+              "bytes": 298
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 213.16199999999697,
+              "bytes": 279
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 2065.438,
+              "bytes": 439
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 598.7700000000018,
+              "bytes": 289
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 66.18251000000001,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 988045,
+          "parentWallMs": 302.29870799999935
+        },
+        {
+          "engine": "temml",
+          "importAndSetupMs": 30.434065000000004,
+          "firstConversionMs": 3.409745000000001,
+          "coldStartToFirstStringMs": 33.844842,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 204.83699999999772,
+              "bytes": 163
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 832.7910000000003,
+              "bytes": 312
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 211.1590000000092,
+              "bytes": 186
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 947.8689999999972,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 300.06699999999853,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 213.59300000000303,
+              "bytes": 188
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 333.1890000000044,
+              "bytes": 407
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 393.76299999999276,
+              "bytes": 291
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 637.473,
+              "bytes": 298
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 225.7759999999962,
+              "bytes": 279
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 2472.956999999994,
+              "bytes": 439
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 638.3249999999947,
+              "bytes": 289
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 39.88701400000002,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 988045,
+          "parentWallMs": 332.1311770000011
+        },
+        {
+          "engine": "temml",
+          "importAndSetupMs": 30.298599000000003,
+          "firstConversionMs": 3.378264999999992,
+          "coldStartToFirstStringMs": 33.677696,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 379.7359999999941,
+              "bytes": 163
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 841.3979999999981,
+              "bytes": 312
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 210.88799999999708,
+              "bytes": 186
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1116.638000000009,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 530.8310000000063,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 200.5189999999999,
+              "bytes": 188
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 519.2599999999885,
+              "bytes": 407
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 573.3019999999982,
+              "bytes": 291
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 997.2620000000063,
+              "bytes": 298
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 337.74700000000735,
+              "bytes": 279
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 2180.144999999996,
+              "bytes": 439
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 622.7449999999948,
+              "bytes": 289
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 40.663891000000035,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 988045,
+          "parentWallMs": 283.34091999999873
+        },
+        {
+          "engine": "temml",
+          "importAndSetupMs": 32.919295999999996,
+          "firstConversionMs": 3.4739959999999996,
+          "coldStartToFirstStringMs": 36.394404,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 418.39899999999375,
+              "bytes": 163
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 1250.150000000005,
+              "bytes": 312
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 196.42100000000084,
+              "bytes": 186
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1021.0459999999983,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 499.92399999999293,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 299.71499999999196,
+              "bytes": 188
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 459.9279999999908,
+              "bytes": 407
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 466.2800000000118,
+              "bytes": 291
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 705.672000000007,
+              "bytes": 298
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 401.457999999991,
+              "bytes": 279
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 2201.6749999999947,
+              "bytes": 439
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 818.9459999999968,
+              "bytes": 289
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 42.532297,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 988045,
+          "parentWallMs": 274.9822860000004
+        },
+        {
+          "engine": "temml",
+          "importAndSetupMs": 32.79251599999999,
+          "firstConversionMs": 2.8023880000000077,
+          "coldStartToFirstStringMs": 35.595556,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 211.0879999999895,
+              "bytes": 163
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 836.9500000000016,
+              "bytes": 312
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 218.9729999999912,
+              "bytes": 186
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1781.2619999999981,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 2365.223999999998,
+              "bytes": 221
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 352.6860000000056,
+              "bytes": 188
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 385.0060000000042,
+              "bytes": 407
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 518.849000000003,
+              "bytes": 291
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 1387.197999999998,
+              "bytes": 298
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 216.19800000000566,
+              "bytes": 279
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 2164.6460000000047,
+              "bytes": 439
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1015.3860000000066,
+              "bytes": 289
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 38.698781999999994,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 988045,
+          "parentWallMs": 296.7189180000023
+        }
+      ]
+    },
+    "flashmath": {
+      "raw": [
+        {
+          "engine": "flashmath",
+          "importAndSetupMs": 25.311518000000007,
+          "firstConversionMs": 2.346226999999999,
+          "coldStartToFirstStringMs": 27.658577,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 158.60900000000555,
+              "bytes": 102
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 1065.010000000001,
+              "bytes": 191
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 9984.502000000006,
+              "bytes": 125
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1558.7819999999938,
+              "bytes": 173
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 201.7009999999999,
+              "bytes": 140
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 183.65599999999915,
+              "bytes": 140
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 421.49499999999307,
+              "bytes": 276
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 169.84999999999673,
+              "bytes": 208
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 403.6119999999954,
+              "bytes": 163
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 159.06999999999982,
+              "bytes": 176
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 1760.2619999999974,
+              "bytes": 308
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 1008.6139999999943,
+              "bytes": 156
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 26.130273000000017,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 646048,
+          "parentWallMs": 231.09432100000004
+        },
+        {
+          "engine": "flashmath",
+          "importAndSetupMs": 26.304241999999995,
+          "firstConversionMs": 2.5544810000000027,
+          "coldStartToFirstStringMs": 28.859805,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 301.3789999999972,
+              "bytes": 102
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 1346.2610000000127,
+              "bytes": 191
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 10131.298999999999,
+              "bytes": 125
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1427.503999999999,
+              "bytes": 173
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 222.61000000000308,
+              "bytes": 140
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 173.21699999999396,
+              "bytes": 140
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 236.91699999999116,
+              "bytes": 276
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 165.5930000000012,
+              "bytes": 208
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 874.1990000000044,
+              "bytes": 163
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 133.03099999998835,
+              "bytes": 176
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 1852.677,
+              "bytes": 308
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 605.1319999999976,
+              "bytes": 156
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 26.12989300000004,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 646048,
+          "parentWallMs": 300.86940000000004
+        },
+        {
+          "engine": "flashmath",
+          "importAndSetupMs": 23.076991,
+          "firstConversionMs": 1.7636380000000003,
+          "coldStartToFirstStringMs": 24.84127,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 155.7640000000049,
+              "bytes": 102
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 734.0549999999979,
+              "bytes": 191
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 6763.815000000001,
+              "bytes": 125
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1233.1569999999986,
+              "bytes": 173
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 378.4039999999962,
+              "bytes": 140
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 165.5629999999988,
+              "bytes": 140
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 172.6460000000003,
+              "bytes": 276
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 120.95800000000168,
+              "bytes": 208
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 335.12299999999584,
+              "bytes": 163
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 137.83999999999708,
+              "bytes": 176
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 1528.8749999999993,
+              "bytes": 308
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 529.9499999999995,
+              "bytes": 156
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 24.315337999999997,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 646048,
+          "parentWallMs": 186.2850670000007
+        },
+        {
+          "engine": "flashmath",
+          "importAndSetupMs": 26.435970000000005,
+          "firstConversionMs": 2.2152699999999967,
+          "coldStartToFirstStringMs": 28.652022000000002,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 163.79899999999736,
+              "bytes": 102
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 731.1199999999972,
+              "bytes": 191
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 9147.782999999998,
+              "bytes": 125
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1656.1659999999988,
+              "bytes": 173
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 247.4160000000012,
+              "bytes": 140
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 199.32599999999923,
+              "bytes": 140
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 383.1729999999993,
+              "bytes": 276
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 163.1579999999957,
+              "bytes": 208
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 636.3410000000016,
+              "bytes": 163
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 139.59400000000244,
+              "bytes": 176
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 1824.6129999999994,
+              "bytes": 308
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 604.5210000000054,
+              "bytes": 156
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 27.716065000000015,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 646048,
+          "parentWallMs": 241.35490500000014
+        },
+        {
+          "engine": "flashmath",
+          "importAndSetupMs": 27.108038999999998,
+          "firstConversionMs": 2.190184000000002,
+          "coldStartToFirstStringMs": 29.299094000000004,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 164.7609999999986,
+              "bytes": 102
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 859.060999999997,
+              "bytes": 191
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 9302.846000000003,
+              "bytes": 125
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1612.0520000000056,
+              "bytes": 173
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 203.14399999999466,
+              "bytes": 140
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 188.5459999999881,
+              "bytes": 140
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 227.2789999999958,
+              "bytes": 276
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 152.39799999999093,
+              "bytes": 208
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 590.8550000000048,
+              "bytes": 163
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 127.1899999999988,
+              "bytes": 176
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 2110.722999999993,
+              "bytes": 308
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 4768.248999999997,
+              "bytes": 156
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 32.345462999999995,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 646048,
+          "parentWallMs": 251.65772800000013
+        },
+        {
+          "engine": "flashmath",
+          "importAndSetupMs": 45.97500399999999,
+          "firstConversionMs": 2.127986000000007,
+          "coldStartToFirstStringMs": 48.103742000000004,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 160.58300000000258,
+              "bytes": 102
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 683.9310000000012,
+              "bytes": 191
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 8490.132000000003,
+              "bytes": 125
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1396.2350000000042,
+              "bytes": 173
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 298.8640000000089,
+              "bytes": 140
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 235.05299999999352,
+              "bytes": 140
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 498.1300000000033,
+              "bytes": 276
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 331.0949999999906,
+              "bytes": 208
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 625.8109999999988,
+              "bytes": 163
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 119.26499999999862,
+              "bytes": 176
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 1634.7449999999953,
+              "bytes": 308
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 540.5800000000056,
+              "bytes": 156
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 33.76932000000002,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 646048,
+          "parentWallMs": 314.1588809999994
+        },
+        {
+          "engine": "flashmath",
+          "importAndSetupMs": 24.538159,
+          "firstConversionMs": 2.548730000000006,
+          "coldStartToFirstStringMs": 27.087630000000004,
+          "cold": [
+            {
+              "tex": "x+1",
+              "microseconds": 117.48200000000253,
+              "bytes": 102
+            },
+            {
+              "tex": "x^2+y^2=z^2",
+              "microseconds": 806.7819999999983,
+              "bytes": 191
+            },
+            {
+              "tex": "\\alpha+\\beta=\\gamma",
+              "microseconds": 8816.118000000002,
+              "bytes": 125
+            },
+            {
+              "tex": "\\frac{a+b}{c+d}",
+              "microseconds": 1328.9680000000033,
+              "bytes": 173
+            },
+            {
+              "tex": "\\sqrt{x^2+1}",
+              "microseconds": 151.35499999999524,
+              "bytes": 140
+            },
+            {
+              "tex": "\\sqrt[3]{x+y}",
+              "microseconds": 132.6310000000035,
+              "bytes": 140
+            },
+            {
+              "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+              "microseconds": 219.96499999998775,
+              "bytes": 276
+            },
+            {
+              "tex": "\\sum_{i=1}^{n}i^2",
+              "microseconds": 134.04300000000546,
+              "bytes": 208
+            },
+            {
+              "tex": "\\left(\\frac{a}{b}\\right)^2",
+              "microseconds": 332.6580000000092,
+              "bytes": 163
+            },
+            {
+              "tex": "\\int_0^1 x^2 dx",
+              "microseconds": 127.31099999999174,
+              "bytes": 176
+            },
+            {
+              "tex": "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+              "microseconds": 1356.3589999999976,
+              "bytes": 308
+            },
+            {
+              "tex": "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}",
+              "microseconds": 606.0429999999997,
+              "bytes": 156
+            }
+          ],
+          "samples": [
+            {
+              "sample": 0,
+              "elapsedMs": 33.832077999999996,
+              "conversions": 1200
+            }
+          ],
+          "checksum": 646048,
+          "parentWallMs": 202.03762500000084
+        }
+      ]
+    }
+  }
+}

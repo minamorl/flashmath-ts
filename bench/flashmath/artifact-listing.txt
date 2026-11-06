@@ -1,0 +1,51 @@
+-rw------- 1 minamorl minamorl 3179 11月  7 02:58 README.md
+-rw------- 1 minamorl minamorl 1117 11月  7 02:40 package.json
+-rw------- 1 minamorl minamorl  271 11月  7 02:40 tsconfig.json
+
+bench/flashmath/:
+total 2484
+-rw------- 1 minamorl minamorl     282 11月  7 02:58 adapter.mjs
+-rw------- 1 minamorl minamorl     876 11月  7 03:00 benchmark-run.log
+-rw------- 1 minamorl minamorl   63616 11月  7 03:00 benchmark.json
+-rw------- 1 minamorl minamorl   49654 11月  7 03:00 benchmark.raw.json
+-rw------- 1 minamorl minamorl       0 11月  7 02:58 build.log
+-rw------- 1 minamorl minamorl     743 11月  7 02:59 conformance-run.log
+-rw------- 1 minamorl minamorl  138057 11月  7 02:59 conformance.json
+-rw------- 1 minamorl minamorl     764 11月  7 02:44 conformance.mjs
+-rw------- 1 minamorl minamorl     494 11月  7 02:55 corpus.mjs
+-rw------- 1 minamorl minamorl    1155 11月  7 03:01 delivery-build.log
+-rw------- 1 minamorl minamorl    1589 11月  7 02:56 engines.mjs
+-rw------- 1 minamorl minamorl    4325 11月  7 02:59 full-conformance-run.log
+-rw------- 1 minamorl minamorl 1154404 11月  7 02:59 full-conformance.json
+-rw------- 1 minamorl minamorl  909841 11月  7 02:59 full-conformance.json.jsonl
+-rw------- 1 minamorl minamorl    3469 11月  7 02:48 generate-symbols.mjs
+-rw------- 1 minamorl minamorl     608 11月  7 03:01 lockfile-check.log
+-rw------- 1 minamorl minamorl   22110 11月  7 03:01 pnpm-help.log
+-rw------- 1 minamorl minamorl    4642 11月  7 03:01 preview.html
+-rw------- 1 minamorl minamorl    1975 11月  7 02:56 preview.mjs
+-rw------- 1 minamorl minamorl   96942 11月  7 03:01 preview.png
+-rw------- 1 minamorl minamorl    7902 11月  7 03:02 report.mjs
+-rw------- 1 minamorl minamorl    1448 11月  7 02:47 restore-react-offline.mjs
+-rw------- 1 minamorl minamorl    3506 11月  7 02:59 run.mjs
+-rw------- 1 minamorl minamorl    5148 11月  7 03:01 screen-run.html
+-rw------- 1 minamorl minamorl    1104 11月  7 03:01 screen-run.log
+-rw------- 1 minamorl minamorl    1033 11月  7 02:58 test.log
+-rw------- 1 minamorl minamorl    1333 11月  7 02:55 worker.mjs
+
+src/:
+total 304
+-rw------- 1 minamorl minamorl    488 11月  7 02:58 ATTRIBUTION.MathJax
+-rw------- 1 minamorl minamorl  11358 11月  7 02:40 LICENSE.MathJax
+-rw------- 1 minamorl minamorl   2044 11月  7 02:48 ast.ts
+-rw------- 1 minamorl minamorl    196 11月  7 02:44 index.ts
+-rw------- 1 minamorl minamorl  50077 11月  7 02:58 parser.ts
+-rw------- 1 minamorl minamorl   3039 11月  7 02:52 preamble.ts
+-rw------- 1 minamorl minamorl   1204 11月  7 02:58 react.ts
+-rw------- 1 minamorl minamorl   2730 11月  7 02:58 scanner.ts
+-rw------- 1 minamorl minamorl    772 11月  7 02:44 serialize.ts
+-rw------- 1 minamorl minamorl 216387 11月  7 02:48 symbols.ts
+
+test/:
+total 12
+-rw------- 1 minamorl minamorl 4823 11月  7 02:58 core.test.mjs
+-rw------- 1 minamorl minamorl  852 11月  7 02:58 ssr-fixtures.test.mjs

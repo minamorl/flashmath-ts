@@ -1,0 +1,24 @@
+round 1/7 mathjax
+round 1/7 temml
+round 1/7 flashmath
+round 2/7 temml
+round 2/7 flashmath
+round 2/7 mathjax
+round 3/7 flashmath
+round 3/7 mathjax
+round 3/7 temml
+round 4/7 mathjax
+round 4/7 temml
+round 4/7 flashmath
+round 5/7 temml
+round 5/7 flashmath
+round 5/7 mathjax
+round 6/7 flashmath
+round 6/7 mathjax
+round 6/7 temml
+round 7/7 mathjax
+round 7/7 temml
+round 7/7 flashmath
+mathjax {"warmMicrosecondsPerConversion":{"p50":393.7098583333333,"p95":427.35818499999993},"coldStartToFirstStringMs":{"p50":116.998059,"p95":119.57575299999999}}
+temml {"warmMicrosecondsPerConversion":{"p50":33.88657583333336,"p95":55.15209166666668},"coldStartToFirstStringMs":{"p50":36.16181400000001,"p95":37.218108}}
+flashmath {"warmMicrosecondsPerConversion":{"p50":23.096720833333343,"p95":28.193398333333327},"coldStartToFirstStringMs":{"p50":28.652022000000002,"p95":48.103742000000004}}

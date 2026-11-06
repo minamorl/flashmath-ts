@@ -1,0 +1,10 @@
+? Verifying lockfile against supply-chain policies (69 entries)...
+✓ Lockfile passes supply-chain policies (69 entries in 1s)
+[ERR_PNPM_OUTDATED_LOCKFILE] Cannot install with "frozen-lockfile" because pnpm-lock.yaml is not up to date with <ROOT>/package.json
+
+Note that in CI environments this setting is true by default. If you still need to run install in such cases, use "pnpm install --no-frozen-lockfile"
+
+  Failure reason:
+  specifiers in the lockfile don't match specifiers in package.json:
+* 4 dependencies were added: react@19.2.4, react-dom@19.2.4, @types/react@19.2.14, @types/react-dom@19.2.3
+

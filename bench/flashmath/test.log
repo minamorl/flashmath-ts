@@ -1,0 +1,20 @@
+✔ scripts, compound arguments and nested fences (16.444194ms)
+✔ fixed arity MathML children are never combined as adjacent relations (0.783478ms)
+✔ macro substitution respects control word boundaries and def templates (3.685034ms)
+✔ nested custom environments and array frames (4.040375ms)
+✔ definitions and parser state do not leak between parses (0.459357ms)
+✔ recursive macros, output size and nesting are bounded (3.0361ms)
+✔ deep input uses explicit stacks through serialization (10.96861ms)
+✔ malformed input returns an error tree or throws on request (0.804068ms)
+✔ text and attribute values are escaped as XML, never executed (2.232824ms)
+✔ React returns elements and SSR exactly equals the string renderer (23.394731ms)
+✔ error paths always serialize valid MathML and XML (1.173174ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (215.886491ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 391.056041

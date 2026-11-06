@@ -1,0 +1,131 @@
+checkpoint: 0/2683 completed
+progress: 100/2683
+progress: 200/2683
+progress: 300/2683
+progress: 400/2683
+progress: 500/2683
+progress: 600/2683
+progress: 700/2683
+progress: 800/2683
+progress: 900/2683
+progress: 1000/2683
+progress: 1100/2683
+progress: 1200/2683
+progress: 1300/2683
+progress: 1400/2683
+progress: 1500/2683
+progress: 1600/2683
+progress: 1700/2683
+progress: 1800/2683
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683
+group | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+action | 0 | 3 | 0 | 3 | 0.00%
+ams | 6 | 152 | 0 | 158 | 3.80%
+amscd | 0 | 13 | 0 | 13 | 0.00%
+autoload | 0 | 0 | 2 | 2 | 0.00%
+base | 776 | 14 | 21 | 811 | 95.68%
+bbm | 0 | 9 | 0 | 9 | 0.00%
+bboldx | 0 | 28 | 0 | 28 | 0.00%
+bbox | 0 | 6 | 0 | 6 | 0.00%
+begingroup | 0 | 0 | 19 | 19 | 0.00%
+boldsymbol | 0 | 6 | 0 | 6 | 0.00%
+braket | 0 | 30 | 0 | 30 | 0.00%
+bussproofs | 0 | 26 | 0 | 26 | 0.00%
+cancel | 0 | 8 | 0 | 8 | 0.00%
+cases | 1 | 4 | 0 | 5 | 20.00%
+centernot | 0 | 2 | 0 | 2 | 0.00%
+color | 1 | 28 | 0 | 29 | 3.45%
+colortbl | 0 | 14 | 1 | 15 | 0.00%
+colorv2 | 2 | 2 | 0 | 4 | 50.00%
+configmacros | 5 | 5 | 0 | 10 | 50.00%
+dsfont | 0 | 2 | 0 | 2 | 0.00%
+empheq | 0 | 44 | 0 | 44 | 0.00%
+enclose | 0 | 6 | 0 | 6 | 0.00%
+extpfeil | 0 | 6 | 0 | 6 | 0.00%
+gensymb | 0 | 5 | 0 | 5 | 0.00%
+html | 0 | 16 | 0 | 16 | 0.00%
+mathtools | 0 | 196 | 0 | 196 | 0.00%
+mhchem | 0 | 112 | 0 | 112 | 0.00%
+newcommand | 58 | 0 | 0 | 58 | 100.00%
+noerrors | 0 | 56 | 0 | 56 | 0.00%
+noundefined | 0 | 2 | 0 | 2 | 0.00%
+physics | 13 | 615 | 0 | 628 | 2.07%
+require | 0 | 0 | 8 | 8 | 0.00%
+setoptions | 0 | 7 | 5 | 12 | 0.00%
+tag | 2 | 73 | 2 | 77 | 2.60%
+tagformat | 0 | 0 | 8 | 8 | 0.00%
+tex | 0 | 2 | 10 | 12 | 0.00%
+texhtml | 2 | 4 | 0 | 6 | 33.33%
+textcomp | 0 | 118 | 0 | 118 | 0.00%
+textmacros | 6 | 42 | 2 | 50 | 12.00%
+unicode | 0 | 21 | 0 | 21 | 0.00%
+units | 0 | 10 | 0 | 10 | 0.00%
+upgreek | 0 | 41 | 0 | 41 | 0.00%
+verb | 0 | 5 | 0 | 5 | 0.00%
+ALL | 872 | 1733 | 78 | 2683 | 32.50%
+
+package membership (overlapping; each denominator includes failures and unsupported):
+package | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+base | 872 | 1733 | 77 | 2682 | 32.51%
+action | 0 | 3 | 0 | 3 | 0.00%
+ams | 15 | 519 | 13 | 547 | 2.74%
+amscd | 0 | 13 | 0 | 13 | 0.00%
+autoload | 0 | 0 | 3 | 3 | 0.00%
+userMacros | 0 | 0 | 5 | 5 | 0.00%
+userEnvs | 0 | 0 | 15 | 15 | 0.00%
+userFilters | 0 | 0 | 1 | 1 | 0.00%
+bbm | 0 | 9 | 0 | 9 | 0.00%
+bboldx | 0 | 28 | 0 | 28 | 0.00%
+textmacros | 6 | 72 | 2 | 80 | 7.50%
+bbox | 0 | 7 | 0 | 7 | 0.00%
+begingroup | 0 | 0 | 19 | 19 | 0.00%
+newcommand | 62 | 40 | 19 | 121 | 51.24%
+retry | 0 | 0 | 19 | 19 | 0.00%
+boldsymbol | 0 | 191 | 0 | 191 | 0.00%
+braket | 0 | 30 | 0 | 30 | 0.00%
+bussproofs | 0 | 26 | 0 | 26 | 0.00%
+cancel | 0 | 8 | 0 | 8 | 0.00%
+cases | 1 | 48 | 0 | 49 | 2.04%
+centernot | 0 | 2 | 0 | 2 | 0.00%
+color | 5 | 66 | 0 | 71 | 7.04%
+colortbl | 0 | 14 | 1 | 15 | 0.00%
+nopadding | 0 | 0 | 1 | 1 | 0.00%
+colorv2 | 8 | 2 | 0 | 10 | 80.00%
+configmacros | 5 | 5 | 0 | 10 | 50.00%
+dsfont | 0 | 2 | 0 | 2 | 0.00%
+empheq | 0 | 44 | 0 | 44 | 0.00%
+enclose | 0 | 6 | 0 | 6 | 0.00%
+extpfeil | 0 | 6 | 0 | 6 | 0.00%
+gensymb | 0 | 5 | 0 | 5 | 0.00%
+html | 2 | 45 | 0 | 47 | 4.26%
+mathtools | 0 | 196 | 0 | 196 | 0.00%
+mhchem | 0 | 112 | 0 | 112 | 0.00%
+noerrors | 0 | 56 | 0 | 56 | 0.00%
+noundefined | 0 | 2 | 0 | 2 | 0.00%
+physics | 13 | 615 | 0 | 628 | 2.07%
+require | 0 | 0 | 10 | 10 | 0.00%
+require-load | 0 | 0 | 1 | 1 | 0.00%
+units | 0 | 15 | 0 | 15 | 0.00%
+setoptions | 0 | 7 | 5 | 12 | 0.00%
+tagformat | 0 | 0 | 8 | 8 | 0.00%
+stackMacros | 0 | 0 | 2 | 2 | 0.00%
+matchBrackets | 0 | 0 | 1 | 1 | 0.00%
+mml | 0 | 0 | 1 | 1 | 0.00%
+(uncaptured) | 0 | 0 | 1 | 1 | 0.00%
+texhtml | 2 | 4 | 0 | 6 | 33.33%
+textcomp | 0 | 118 | 0 | 118 | 0.00%
+unicode | 2 | 50 | 0 | 52 | 3.85%
+no-autoload | 0 | 0 | 1 | 1 | 0.00%
+upgreek | 0 | 41 | 0 | 41 | 0.00%
+verb | 0 | 5 | 0 | 5 | 0.00%
+
+classifications: {"structure":1656,"typeset-component-pipeline":14,"text":8,"attributes":67,"custom-package-registration":26,"function-valued-options":30,"subject-error":2,"non-single-MathML-snapshot":7,"input-not-captured":1}

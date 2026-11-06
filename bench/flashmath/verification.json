@@ -1,0 +1,42 @@
+{
+  "commands": [
+    {
+      "command": "node_modules/.bin/tsc -p tsconfig.json",
+      "exitCode": 0,
+      "log": "build.log"
+    },
+    {
+      "command": "node --test test/*.test.mjs",
+      "exitCode": 0,
+      "log": "test.log"
+    },
+    {
+      "command": "node bench/flashmath/conformance.mjs",
+      "exitCode": 0,
+      "log": "conformance-run.log"
+    },
+    {
+      "command": "node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output bench/flashmath/full-conformance.json --fresh",
+      "exitCode": 1,
+      "log": "full-conformance-run.log",
+      "reason": "full MathJax package coverage exceeds this lane scope"
+    },
+    {
+      "command": "node bench/flashmath/run.mjs --samples 7 --iterations 100",
+      "exitCode": 0,
+      "log": "benchmark-run.log"
+    },
+    {
+      "command": "chromium --headless ... --dump-dom file://<cwd>/bench/flashmath/preview.html",
+      "exitCode": 0,
+      "log": "screen-run.html"
+    },
+    {
+      "command": "pnpm install --offline --frozen-lockfile --lockfile-only --ignore-scripts --store-dir \"$TMPDIR/flashmath-pnpm-store\" --cache-dir \"$TMPDIR/flashmath-pnpm-cache\"",
+      "exitCode": 1,
+      "log": "lockfile-check.log",
+      "reason": "lockfile synchronization is outside the assigned write scope"
+    }
+  ],
+  "sourceSha256": "df7e40c94c9ac4847ee241087bfcfc3c21c1facec3bf0d1566d1955ec151475e"
+}

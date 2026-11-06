@@ -1,0 +1,26 @@
+Cloning into bare repository '/home/minamorl/.cc/tmp/3sezjabu/tmp.rQZwgOx6TT'...
+done.
+[lane/core 223d230] feat: implement stack-based TeX to MathML parser and React API
+ 24 files changed, 9620 insertions(+), 2 deletions(-)
+ create mode 100644 bench/flashmath/adapter.mjs
+ create mode 100644 bench/flashmath/conformance.mjs
+ create mode 100644 bench/flashmath/corpus.mjs
+ create mode 100644 bench/flashmath/engines.mjs
+ create mode 100644 bench/flashmath/generate-symbols.mjs
+ create mode 100644 bench/flashmath/preview.mjs
+ create mode 100644 bench/flashmath/restore-react-offline.mjs
+ create mode 100644 bench/flashmath/run.mjs
+ create mode 100644 bench/flashmath/worker.mjs
+ create mode 100644 src/ATTRIBUTION.MathJax
+ create mode 100644 src/LICENSE.MathJax
+ create mode 100644 src/ast.ts
+ create mode 100644 src/index.ts
+ create mode 100644 src/parser.ts
+ create mode 100644 src/preamble.ts
+ create mode 100644 src/react.ts
+ create mode 100644 src/scanner.ts
+ create mode 100644 src/serialize.ts
+ create mode 100644 src/symbols.ts
+ create mode 100644 test/core.test.mjs
+ create mode 100644 test/ssr-fixtures.test.mjs
+ create mode 100644 tsconfig.json
