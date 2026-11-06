@@ -1,0 +1,7 @@
+[
+  {
+    "file": "Bbm.test.ts",
+    "test": "Bbm bbm with no output",
+    "error": "ReferenceError: MathJax is not defined"
+  }
+]
