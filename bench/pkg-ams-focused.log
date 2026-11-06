@@ -1,0 +1,18 @@
+group | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+ams | 158 | 0 | 0 | 158 | 100.00%
+amscd | 13 | 0 | 0 | 13 | 100.00%
+cases | 5 | 0 | 0 | 5 | 100.00%
+empheq | 44 | 0 | 0 | 44 | 100.00%
+ALL | 220 | 0 | 0 | 220 | 100.00%
+
+package membership (overlapping; each denominator includes failures and unsupported):
+package | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+base | 220 | 0 | 0 | 220 | 100.00%
+ams | 207 | 0 | 0 | 207 | 100.00%
+amscd | 13 | 0 | 0 | 13 | 100.00%
+cases | 49 | 0 | 0 | 49 | 100.00%
+empheq | 44 | 0 | 0 | 44 | 100.00%
+
+classifications: {}

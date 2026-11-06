@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {run, table} from '../conformance/runner.mjs';
+import subject from './flashmath/adapter.mjs';
+const fixture=JSON.parse(fs.readFileSync(new URL('../conformance/fixtures/mathjax-4.1.3.json',import.meta.url)));
+const groups=process.argv.slice(2);
+const selected={...fixture,records:fixture.records.filter(r=>(groups.length?groups:['ams','amscd','cases','empheq','base','newcommand']).includes(r.group))};
+const report=await run(subject,selected);
+fs.writeFileSync('bench/pkg-ams-focused.json',JSON.stringify(report,null,2)+'\n');
+console.log(table(report));
+for(const r of report.rows)if(r.status==='mismatch')console.log(r.id,r.error||JSON.stringify(r.difference));
+process.exitCode=report.matched===report.total?0:1;

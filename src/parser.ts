@@ -53,6 +53,7 @@ interface Table {
   align: string;
   spacing: string;
   rowspacing: string;
+  rowspacingBase?: number;
   display: boolean;
   lines: string[];
   rowlines: string[];
@@ -1028,7 +1029,7 @@ export class Parser {
     if (t.rowspaces.length)
       attrs.rowspacing = Array.from(
         { length: Math.max(t.rows.length, t.rowspaces.length) },
-        (_, i) => t.rowspaces[i] ?? "0.4em",
+        (_, i) => t.rowspaces[i] ?? (t.rowspacingBase === undefined ? "0.4em" : t.rowspacingBase + "em"),
       ).join(" ");
     const edge = t.plan.left,
       last = t.plan.right;
@@ -1338,7 +1339,9 @@ export class Parser {
       f.nodes = [];
       f.font = t.originalFont;
       if (spacing)
-        t.rowspaces[t.rows.length - 1] = em(dimensionEm(raw(spacing)) + 0.4);
+        t.rowspaces[t.rows.length - 1] = t.rowspacingBase === undefined
+          ? em(dimensionEm(raw(spacing)) + 0.4)
+          : (dimensionEm(raw(spacing)) + t.rowspacingBase) + "em";
       if (t.latex) this.startCell(t);
       return;
     }

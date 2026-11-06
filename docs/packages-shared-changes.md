@@ -5,3 +5,4 @@
 - `src/parser.ts`: preserve an explicit tag cell when automatic row numbering runs, so `\tag` does not consume an automatic number.
 - `src/parser.ts`: explicitly stretch corner delimiters in `\left`/`\right`, where the operator dictionary does not supply a stretchy default.
 - `src/parser.ts`: keep attributed mrows intact in internal text math, preserving reference links rather than flattening them away.
+- `src/parser.ts`: add optional `Table.rowspacingBase` for AMS row spacing and optional row breaks; omitted values retain the original base 0.4em behavior.
