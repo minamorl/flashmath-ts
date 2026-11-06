@@ -7,4 +7,3 @@ Note that in CI environments this setting is true by default. If you still need 
   Failure reason:
   specifiers in the lockfile don't match specifiers in package.json:
 * 4 dependencies were added: react@19.2.4, react-dom@19.2.4, @types/react@19.2.14, @types/react-dom@19.2.3
-
