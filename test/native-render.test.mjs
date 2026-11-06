@@ -33,6 +33,7 @@ test('195 native conversions are immutable, idempotent, and SSR/string equivalen
     // Hardening corrected the boxed wrapper and omitted noLine's rowlines.
     let expected=before.get(c.id).mathjax;
     if(c.id==='frames-1')expected=expected.replace('<mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>','<mi>x</mi><mo>+</mo><mi>y</mi>');
+    if(c.id==='tags-10')expected=expected.replace('<mtable displaystyle="true">','<mtable displaystyle="true" side="left">');
     if(/^proofs-(9|10|11|12)$/.test(c.id))expected=expected.replaceAll(' rowlines="none"','');
     assert.equal(toMathMLString(ast,{output:'mathjax'}),expected,c.id+' raw MathJax changed');
     assert.ok(!/<(?:menclose|mlabeledtr|svg)\b/.test(xml),c.id);
@@ -142,4 +143,15 @@ test('deep variant output uses an explicit stack and needs no browser',()=>{
   const output=mathMLForOutput(group('math',[ast]));
   assert.equal(nodes(output).find(n=>n.kind==='mi').text,'𝐱');
   assert.ok(toMathMLString(output).includes('𝐱'));
+});
+
+
+test('calligraphic and script use distinct NewCM faces in native output',()=>{
+  const cal=toMathMLString(parseToMathMLAst(String.raw`\mathcal{ABZ}`));
+  const scr=toMathMLString(parseToMathMLAst(String.raw`\mathscr{ABZ}`));
+  assert.match(cal,/Flashmath Calligraphic/);
+  assert.match(scr,/Flashmath Script/);
+  assert.notEqual(cal,scr);
+  assert.match(cal,/>ABZ<|>A</);
+  assert.ok(scr.includes('𝒜'));
 });

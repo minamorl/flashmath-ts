@@ -117,12 +117,18 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
       const name=variantName(variant);
       if(['mi','mn','mo','mtext'].includes(output.kind)){
         const mapped=output.kind==='mtext'?output.text:variantText(output.text,variant);
-        if(name!=='normal'&&mapped===output.text){
+        if(name!=='normal'&&mapped===output.text&&!['script','bold-script'].includes(name)){
           if(name.includes('bold'))addStyle(output,'font-weight:bold;');
           if(name.includes('italic')||name.includes('script'))addStyle(output,'font-style:italic;');
           if(name.includes('sans-serif'))addStyle(output,'font-family:sans-serif;');
           if(name==='monospace')addStyle(output,'font-family:monospace;');
         }
+        // Distinct upstream NewCM calligraphic/script faces; load fonts.css for
+        // deterministic glyphs. Other characters fall back to the math font.
+        if(variant==='-tex-calligraphic'||variant==='-tex-bold-calligraphic')
+          addStyle(output,`font-family:'Flashmath Calligraphic',math;font-style:normal;font-weight:${variant.includes('bold')?'bold':'normal'};`);
+        else if(name==='script'||name==='bold-script')
+          addStyle(output,`font-family:'Flashmath Script',math;font-style:normal;font-weight:${name.includes('bold')?'bold':'normal'};`);
         output.text=mapped;
         delete output.attributes['data-mjx-variant'];
         if(output.kind==='mi')output.attributes.mathvariant='normal';

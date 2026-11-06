@@ -30,7 +30,8 @@
     "./react": {
       "types": "./dist/react.d.ts",
       "import": "./dist/react.js"
-    }
+    },
+    "./fonts.css": "./dist/fonts.css"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -41,7 +42,8 @@
     "test": "node --test test/*.test.mjs test/packages/*.test.mjs",
     "conformance": "node bench/flashmath/conformance.mjs",
     "bench": "node bench/flashmath/run.mjs",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "verify:release": "node bench/release/verify.mjs"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

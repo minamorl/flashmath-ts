@@ -18,3 +18,8 @@ Source: https://github.com/mhchem/mhchemParser
 Changes: numeric state/pattern/action dispatch, handwritten matchers, indexed
 source-span buffers, and direct TeX emission. No runtime dependency on the
 upstream parser, MathJax, its renderers, or Temml is included.
+
+The four unmodified mjx-ncm-{c,cb,s,sb}.woff2 assets are distributed from
+@mathjax/mathjax-newcm-font 4.1.3 (Apache-2.0). Their provenance and SHA-256
+values are included in dist/fonts/provenance.json. The optional fonts.css
+selects the original NewCM calligraphic and script glyphs.

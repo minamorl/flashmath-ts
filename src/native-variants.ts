@@ -26,6 +26,8 @@ const fallback:Record<string,string>={script:'italic','bold-script':'bold-italic
 export function variantText(text:string, variant:string):string {
   return Array.from(text,c=>{
     const code=c.codePointAt(0)!;
+    // The optional bundled NewCM calligraphic face uses its original A-Z cmap.
+    if((variant==='-tex-calligraphic'||variant==='-tex-bold-calligraphic')&&code>=65&&code<=90)return c;
     let name=variantName(variant);
     if((variant==='-tex-calligraphic'||variant==='-tex-bold-calligraphic')&&!(code>=65&&code<=90))name=variant==='-tex-calligraphic'?'italic':'bold-italic';
     while(Object.hasOwn(latin,name)){

@@ -41,8 +41,14 @@ The font remains the consumer's choice. The comparison uses the locally installe
 paths on the reference side. These are different fonts. Passing the feature checks
 below means the requested structure and decorations render correctly; it does
 **not** mean identical pixels, font metrics, kerning, stroke rasterization, or
-identical calligraphic and script glyph designs. The Unicode script alphabet has
-one set of codepoints; the chosen native font supplies its glyphs.
+identical spacing or metrics. For distinct MathJax calligraphic/script glyphs,
+load `@minamorl/flashmath/fonts.css`. It supplies four unmodified NewCM 4.1.3
+WOFF2 faces (regular/bold calligraphic and script). The native output selects
+those families with inline CSS; without this optional stylesheet, font fallback
+is browser-dependent and the two styles may not remain distinct. The comparison
+page loads this stylesheet. Uppercase calligraphic uses the original font's A–Z
+cmap; script uses Unicode script codepoints. No MathJax JavaScript is loaded by
+the package. Other alphabets, digits and symbols still depend on native fallback.
 
 ## Lowering rules
 
@@ -189,14 +195,14 @@ MathJax output / native output examples:
 | `<mi mathvariant="bold">a</mi>` | `<mi mathvariant="normal">𝐚</mi>` | Core only implements normal/italic `mi` variant selection |
 | `<mi mathvariant="bold-italic">a</mi>` | `<mi mathvariant="normal">𝒂</mi>` | Explicit Unicode bold italic |
 | `<mi mathvariant="double-struck">C</mi>` | `<mi mathvariant="normal">ℂ</mi>` | Letterlike-symbol hole in the mathematical alphabet |
-| `<mi mathvariant="-tex-calligraphic">O</mi>` | `<mi mathvariant="normal">𝒪</mi>` | Physics `\order` uses the script capital O |
+| `<mi mathvariant="-tex-calligraphic">O</mi>` | `<mi mathvariant="normal" style="font-family:…">O</mi>` | NewCM calligraphic face, including physics `\order` |
 | `<mtext mathvariant="monospace">a%{b}</mtext>` | `<mtext style="font-family:monospace">a%{b}</mtext>` | Keep verbatim text codepoints and copying behavior |
 
 Latin, Greek, digits, the Letterlike Symbols holes, inherited styles and inner
 normal overrides are handled. Unsupported characters fall through MathJax's
 variant inheritance (e.g. script Greek to italic Greek). Internal TeX calligraphic
-uses script capitals and italic lowercase, while `\mathscr` uses the Unicode
-script alphabet. Digits/symbols with no applicable Unicode form use CSS font
+uses the NewCM calligraphic face for ASCII capitals and Unicode italic lowercase,
+while `\mathscr` uses the separate NewCM script face and Unicode script alphabet. Digits/symbols with no applicable Unicode form use CSS font
 weight/style as appropriate. `mi mathvariant="normal"` prevents a browser from
 applying a second automatic italic transform to an already styled codepoint.
 
@@ -231,7 +237,7 @@ requires the accent to span the complete base.
 ## Reproduction and evidence
 
 ```sh
-node node_modules/typescript/bin/tsc -p tsconfig.json
+node scripts/build.mjs
 node bench/native-render/compare.mjs
 node bench/native-render/screen.mjs
 node bench/native-render/verify-screen.mjs
@@ -271,6 +277,7 @@ Browser: Chrome/153.0.8010.36. All 195 SSR/string pairs have identical measured 
 <!-- /measured-results -->
 
 
+
 ### Visual review of the captured panels
 
 | Group | Observation |
@@ -281,7 +288,7 @@ Browser: Chrome/153.0.8010.36. All 195 SSR/string pairs have identical measured 
 | tags | Left/right tags share the intended row and occupy the outside edge; align columns and unnumbered rows remain aligned. |
 | proofs | Solid/dashed/noLine, upward/downward and nested proofs draw their rules with centered conclusions; labels remain attached. Vertical gaps differ. |
 | overlap | Slash, star and fraction overlays are centered over the original base; fractions preserve the shared math baseline. |
-| variants | Styled Unicode alphabets and digits render. Calligraphic/script glyph designs, sans/mono forms and Greek fallback appearance differ by font. |
+| variants | Styled Unicode alphabets and digits render. Calligraphic/script use distinct bundled NewCM faces; sans/mono forms, oldstyle digits and Greek fallback appearance remain font-dependent. |
 | physics | Bold/bold-italic vectors and script order/principal-value symbols are visible. Font shapes differ. |
 | chemistry | Unicode arrows, equilibrium compositions, labels, bonds and prescripts render without PUA boxes. Harpoon widths and dashed-bond vertical gaps differ. |
 | core | Ordinary arithmetic, fractions, radicals, sums, integrals, matrices, fences and scripts are visible. Overline core-8 now spans its whole base. Underbrace glyph shape and large-operator metrics differ. |
@@ -295,3 +302,16 @@ MathJax-mode disagreements on a few nonfixture proof/custom-frame combinations
 are recorded in `visual-checks.json`; native display work does not rewrite the
 conformance snapshots to hide them. Full fixture acceptance remains exactly
 2635 matched, 0 mismatched, 48 unsupported out of 2683 records.
+
+
+### Strict reference gate in the release
+
+`verify-screen.mjs` now rejects **any** normalized MathML difference between
+`referenceMathML` (actual MathJax 4.1.3) and flashmath's `output: 'mathjax'`.
+The former differences in frames-1 (boxed wrapper), tags-10 (left equation tag)
+and proofs-9–12 (omitted noLine rowlines) are corrected. The permitted-difference
+list is empty. Native pixels are still not asserted identical: this structural
+gate and the 724 feature/geometry checks measure different properties.
+The browser additionally verifies all four font faces loaded and compares
+calligraphic/script raster fingerprints so the glyph-collapse issue cannot pass
+on CSS names alone.

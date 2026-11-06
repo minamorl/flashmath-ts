@@ -1,4 +1,4 @@
-import {rmSync,mkdirSync,readFileSync} from 'node:fs';
+import {rmSync,mkdirSync,readFileSync,cpSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import {build} from 'esbuild';
 rmSync('dist',{recursive:true,force:true});mkdirSync('dist');
@@ -25,3 +25,6 @@ const lazyPackages={name:'lazy-package-tables',setup(b){
 }};
 await build({entryPoints:['src/index.ts','src/react.ts','src/output.ts','src/native-variants.ts','src/configuration.ts','src/configuration-cache.ts','src/packages/registry.ts'],outdir:'dist',outbase:'src',bundle:true,splitting:true,format:'esm',platform:'neutral',target:'es2022',minify:true,external:['react','react-dom'],legalComments:'eof',plugins:[lazyPackages]});
 console.error('Built shared ESM runtime and TypeScript declarations');
+
+cpSync('assets/fonts','dist/fonts',{recursive:true});
+cpSync('assets/fonts.css','dist/fonts.css');

@@ -54,6 +54,9 @@ const referenceDifferences=cases.flatMap(c=>{
   const difference=firstDifference(parseMathML(c.referenceMathML),parseMathML(c.mathjax));
   return difference?[{id:c.id,difference}]:[];
 });
+assert.deepEqual(referenceDifferences,[],'Unexpected strict MathJax MathML differences');
+assert.equal(screen.variantGlyphs.distinct,true);
+assert.ok(screen.variantGlyphs.faces.every(f=>f.status==='loaded'));
 const groups=[...new Set(cases.map(c=>c.group))].map(group=>{
   const ids=new Set(cases.filter(c=>c.group===group).map(c=>c.id));
   const selected=checks.filter(c=>ids.has(c.id));
