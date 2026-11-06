@@ -1,0 +1,28 @@
+$ node conformance/runner.mjs --subject bench/pkg-fonts/integration/adapter.mjs --output bench/pkg-fonts/integration-conformance.json --fresh 
+exit: 1
+unicode | 52 | 0 | 0 | 52 | 100.00%
+no-autoload | 0 | 0 | 1 | 1 | 0.00%
+upgreek | 41 | 0 | 0 | 41 | 100.00%
+verb | 0 | 5 | 0 | 5 | 0.00%
+
+classifications: {"attributes":18,"structure":10,"subject-error":992,"typeset-component-pipeline":14,"text":2,"custom-package-registration":26,"non-single-MathML-snapshot":7,"input-not-captured":1}
+package | matched | mismatch | unsupported | total
+color | 71 | 0 | 0 | 71
+colorv2 | 10 | 0 | 0 | 10
+colortbl | 14 | 0 | 1 | 15
+boldsymbol | 191 | 0 | 0 | 191
+bbm | 9 | 0 | 0 | 9
+bboldx | 28 | 0 | 0 | 28
+dsfont | 2 | 0 | 0 | 2
+upgreek | 41 | 0 | 0 | 41
+gensymb | 5 | 0 | 0 | 5
+textcomp | 118 | 0 | 0 | 118
+unicode | 52 | 0 | 0 | 52
+texhtml | 6 | 0 | 0 | 6
+html | 47 | 0 | 0 | 47
+action | 3 | 0 | 0 | 3
+tagformat | 8 | 0 | 0 | 8
+base {"total":811,"matched":780,"mismatch":10,"unsupported":21}
+newcommand {"total":58,"matched":58,"mismatch":0,"unsupported":0}
+text package activation boundary: PASS
+integration target fixture gate: PASS

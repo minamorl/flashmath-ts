@@ -25,7 +25,7 @@ function htmlTree(p:Parser,source:string):MathMLNode|null {
   p.nodes+=count;
   if(!root.children.length)return null;return root.children.length===1?root.children[0]:root;
 }
-export default {name:'texhtml',commands:{'<':{execute(p,t){
+export default {name:'texhtml',commands:{'<':{type:'character',execute(p,t){
   const source=t[3];const start=t[1];
   if(!p.options.texOptions?.allowTexHTML||!source.startsWith('<tex-html>',start)){p.append(p.character(t));return;}
   let depth=1,end=-1,close=-1;const tags=/<\/?tex-html\b[^>]*>/g;tags.lastIndex=start+10;

@@ -1,0 +1,227 @@
+{
+  "checks": [
+    {
+      "name": "build",
+      "command": [
+        "node_modules/.bin/tsc",
+        "-p",
+        "tsconfig.json"
+      ],
+      "exit": 0,
+      "logfile": "bench/pkg-fonts/final-build.log"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "test/core.test.mjs",
+        "test/packages-fonts.test.mjs",
+        "test/packages-references.test.mjs",
+        "test/ssr-fixtures.test.mjs"
+      ],
+      "exit": 0,
+      "logfile": "bench/pkg-fonts/final-tests.log"
+    },
+    {
+      "name": "conformance",
+      "command": [
+        "node",
+        "conformance/runner.mjs",
+        "--subject",
+        "bench/flashmath/adapter.mjs",
+        "--output",
+        "bench/pkg-fonts/final.json",
+        "--fresh"
+      ],
+      "exit": 1,
+      "logfile": "bench/pkg-fonts/final-conformance.log"
+    }
+  ],
+  "groups": {
+    "color": {
+      "total": 29,
+      "matched": 29,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "colorv2": {
+      "total": 4,
+      "matched": 4,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "colortbl": {
+      "total": 15,
+      "matched": 14,
+      "mismatch": 0,
+      "unsupported": 1
+    },
+    "boldsymbol": {
+      "total": 6,
+      "matched": 6,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "bbm": {
+      "total": 9,
+      "matched": 9,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "bboldx": {
+      "total": 28,
+      "matched": 11,
+      "mismatch": 17,
+      "unsupported": 0
+    },
+    "dsfont": {
+      "total": 2,
+      "matched": 2,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "upgreek": {
+      "total": 41,
+      "matched": 41,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "gensymb": {
+      "total": 5,
+      "matched": 5,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "textcomp": {
+      "total": 118,
+      "matched": 105,
+      "mismatch": 13,
+      "unsupported": 0
+    },
+    "unicode": {
+      "total": 21,
+      "matched": 21,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "texhtml": {
+      "total": 6,
+      "matched": 6,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "html": {
+      "total": 16,
+      "matched": 16,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "action": {
+      "total": 3,
+      "matched": 3,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "tagformat": {
+      "total": 8,
+      "matched": 5,
+      "mismatch": 3,
+      "unsupported": 0
+    }
+  },
+  "packages": {
+    "color": {
+      "total": 71,
+      "matched": 29,
+      "mismatch": 42,
+      "unsupported": 0
+    },
+    "colorv2": {
+      "total": 10,
+      "matched": 10,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "colortbl": {
+      "total": 15,
+      "matched": 14,
+      "mismatch": 0,
+      "unsupported": 1
+    },
+    "boldsymbol": {
+      "total": 191,
+      "matched": 6,
+      "mismatch": 185,
+      "unsupported": 0
+    },
+    "bbm": {
+      "total": 9,
+      "matched": 9,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "bboldx": {
+      "total": 28,
+      "matched": 11,
+      "mismatch": 17,
+      "unsupported": 0
+    },
+    "dsfont": {
+      "total": 2,
+      "matched": 2,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "upgreek": {
+      "total": 41,
+      "matched": 41,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "gensymb": {
+      "total": 5,
+      "matched": 5,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "textcomp": {
+      "total": 118,
+      "matched": 105,
+      "mismatch": 13,
+      "unsupported": 0
+    },
+    "unicode": {
+      "total": 52,
+      "matched": 21,
+      "mismatch": 31,
+      "unsupported": 0
+    },
+    "texhtml": {
+      "total": 6,
+      "matched": 6,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "html": {
+      "total": 47,
+      "matched": 16,
+      "mismatch": 31,
+      "unsupported": 0
+    },
+    "action": {
+      "total": 3,
+      "matched": 3,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "tagformat": {
+      "total": 8,
+      "matched": 5,
+      "mismatch": 3,
+      "unsupported": 0
+    }
+  },
+  "regression": "base and newcommand matched IDs preserved"
+}

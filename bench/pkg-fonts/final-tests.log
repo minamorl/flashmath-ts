@@ -1,0 +1,2131 @@
+TAP version 13
+# Subtest: scripts, compound arguments and nested fences
+ok 1 - scripts, compound arguments and nested fences
+  ---
+  duration_ms: 18.498451
+  type: 'test'
+  ...
+# Subtest: fixed arity MathML children are never combined as adjacent relations
+ok 2 - fixed arity MathML children are never combined as adjacent relations
+  ---
+  duration_ms: 0.734847
+  type: 'test'
+  ...
+# Subtest: macro substitution respects control word boundaries and def templates
+ok 3 - macro substitution respects control word boundaries and def templates
+  ---
+  duration_ms: 3.190862
+  type: 'test'
+  ...
+# Subtest: nested custom environments and array frames
+ok 4 - nested custom environments and array frames
+  ---
+  duration_ms: 4.317478
+  type: 'test'
+  ...
+# Subtest: definitions and parser state do not leak between parses
+ok 5 - definitions and parser state do not leak between parses
+  ---
+  duration_ms: 1.614547
+  type: 'test'
+  ...
+# Subtest: recursive macros, output size and nesting are bounded
+ok 6 - recursive macros, output size and nesting are bounded
+  ---
+  duration_ms: 3.987525
+  type: 'test'
+  ...
+# Subtest: deep input uses explicit stacks through serialization
+ok 7 - deep input uses explicit stacks through serialization
+  ---
+  duration_ms: 21.808026
+  type: 'test'
+  ...
+# Subtest: malformed input returns an error tree or throws on request
+ok 8 - malformed input returns an error tree or throws on request
+  ---
+  duration_ms: 3.932101
+  type: 'test'
+  ...
+# Subtest: text and attribute values are escaped as XML, never executed
+ok 9 - text and attribute values are escaped as XML, never executed
+  ---
+  duration_ms: 7.062518
+  type: 'test'
+  ...
+# Subtest: React returns elements and SSR exactly equals the string renderer
+ok 10 - React returns elements and SSR exactly equals the string renderer
+  ---
+  duration_ms: 21.115619
+  type: 'test'
+  ...
+# Subtest: error paths always serialize valid MathML and XML
+ok 11 - error paths always serialize valid MathML and XML
+  ---
+  duration_ms: 1.533204
+  type: 'test'
+  ...
+# Subtest: color: immutable upstream fixtures
+    # Subtest: Color.test.ts::Color named Color extent 1
+    ok 1 - Color.test.ts::Color named Color extent 1
+      ---
+      duration_ms: 16.552477
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color named Color limited 1
+    ok 2 - Color.test.ts::Color named Color limited 1
+      ---
+      duration_ms: 1.451109
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color named Color known 1
+    ok 3 - Color.test.ts::Color named Color known 1
+      ---
+      duration_ms: 1.813102
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color named Textcolor 1
+    ok 4 - Color.test.ts::Color named Textcolor 1
+      ---
+      duration_ms: 1.410732
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color named Textcolor nested 1
+    ok 5 - Color.test.ts::Color named Textcolor nested 1
+      ---
+      duration_ms: 4.660826
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color named Colorbox 1
+    ok 6 - Color.test.ts::Color named Colorbox 1
+      ---
+      duration_ms: 6.122695
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color named Fcolorbox 1
+    ok 7 - Color.test.ts::Color named Fcolorbox 1
+      ---
+      duration_ms: 1.321084
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color named Definecolor 1
+    ok 8 - Color.test.ts::Color named Definecolor 1
+      ---
+      duration_ms: 2.505718
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color rgb Color extent 1
+    ok 9 - Color.test.ts::Color rgb Color extent 1
+      ---
+      duration_ms: 2.676411
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color rgb Color limited 1
+    ok 10 - Color.test.ts::Color rgb Color limited 1
+      ---
+      duration_ms: 1.242415
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color rgb Textcolor 1
+    ok 11 - Color.test.ts::Color rgb Textcolor 1
+      ---
+      duration_ms: 1.577788
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color rgb Textcolor nested 1
+    ok 12 - Color.test.ts::Color rgb Textcolor nested 1
+      ---
+      duration_ms: 4.509611
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color rgb Colorbox 1
+    ok 13 - Color.test.ts::Color rgb Colorbox 1
+      ---
+      duration_ms: 1.16545
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color rgb Fcolorbox 1
+    ok 14 - Color.test.ts::Color rgb Fcolorbox 1
+      ---
+      duration_ms: 4.393101
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color rgb Definecolor 1
+    ok 15 - Color.test.ts::Color rgb Definecolor 1
+      ---
+      duration_ms: 1.784518
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color RGB Color extent 1
+    ok 16 - Color.test.ts::Color RGB Color extent 1
+      ---
+      duration_ms: 1.119482
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color RGB Color limited 1
+    ok 17 - Color.test.ts::Color RGB Color limited 1
+      ---
+      duration_ms: 6.804872
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color RGB Textcolor 1
+    ok 18 - Color.test.ts::Color RGB Textcolor 1
+      ---
+      duration_ms: 1.129021
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color RGB Textcolor nested 1
+    ok 19 - Color.test.ts::Color RGB Textcolor nested 1
+      ---
+      duration_ms: 1.105637
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color RGB Colorbox 1
+    ok 20 - Color.test.ts::Color RGB Colorbox 1
+      ---
+      duration_ms: 1.627532
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color RGB Fcolorbox 1
+    ok 21 - Color.test.ts::Color RGB Fcolorbox 1
+      ---
+      duration_ms: 6.257058
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color RGB Definecolor 1
+    ok 22 - Color.test.ts::Color RGB Definecolor 1
+      ---
+      duration_ms: 0.965362
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color gray Color extent 1
+    ok 23 - Color.test.ts::Color gray Color extent 1
+      ---
+      duration_ms: 1.936855
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color gray Color limited 1
+    ok 24 - Color.test.ts::Color gray Color limited 1
+      ---
+      duration_ms: 1.027529
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color gray Textcolor 1
+    ok 25 - Color.test.ts::Color gray Textcolor 1
+      ---
+      duration_ms: 0.925336
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color gray Textcolor nested 1
+    ok 26 - Color.test.ts::Color gray Textcolor nested 1
+      ---
+      duration_ms: 1.34067
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color gray Colorbox 1
+    ok 27 - Color.test.ts::Color gray Colorbox 1
+      ---
+      duration_ms: 0.887595
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color gray Fcolorbox 1
+    ok 28 - Color.test.ts::Color gray Fcolorbox 1
+      ---
+      duration_ms: 0.893456
+      type: 'test'
+      ...
+    # Subtest: Color.test.ts::Color gray Definecolor 1
+    ok 29 - Color.test.ts::Color gray Definecolor 1
+      ---
+      duration_ms: 0.913995
+      type: 'test'
+      ...
+    1..29
+ok 12 - color: immutable upstream fixtures
+  ---
+  duration_ms: 86.076333
+  type: 'test'
+  ...
+# Subtest: color: additional MathJax 4.1.3 behavior
+ok 13 - color: additional MathJax 4.1.3 behavior
+  ---
+  duration_ms: 43.390046
+  type: 'test'
+  ...
+# Subtest: color definitions persist within a session and isolate independent sessions
+ok 14 - color definitions persist within a session and isolate independent sessions
+  ---
+  duration_ms: 6.053514
+  type: 'test'
+  ...
+# Subtest: colorv2: immutable upstream fixtures
+    # Subtest: Colorv2.test.ts::ColorV2 Color Open 1
+    ok 1 - Colorv2.test.ts::ColorV2 Color Open 1
+      ---
+      duration_ms: 0.700662
+      type: 'test'
+      ...
+    # Subtest: Colorv2.test.ts::ColorV2 Color Enclosed 1
+    ok 2 - Colorv2.test.ts::ColorV2 Color Enclosed 1
+      ---
+      duration_ms: 0.812914
+      type: 'test'
+      ...
+    # Subtest: Colorv2.test.ts::ColorV2 Color Frac 1
+    ok 3 - Colorv2.test.ts::ColorV2 Color Frac 1
+      ---
+      duration_ms: 4.01668
+      type: 'test'
+      ...
+    # Subtest: Colorv2.test.ts::ColorV2 Color Nested 1
+    ok 4 - Colorv2.test.ts::ColorV2 Color Nested 1
+      ---
+      duration_ms: 0.622064
+      type: 'test'
+      ...
+    1..4
+ok 15 - colorv2: immutable upstream fixtures
+  ---
+  duration_ms: 7.39167
+  type: 'test'
+  ...
+# Subtest: colortbl: immutable upstream fixtures
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor 1
+    ok 1 - Colortbl.test.ts::Colortbl cellcolor 1
+      ---
+      duration_ms: 4.326585
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor late 1
+    ok 2 - Colortbl.test.ts::Colortbl cellcolor late 1
+      ---
+      duration_ms: 1.506523
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl rowcolor 1
+    ok 3 - Colortbl.test.ts::Colortbl rowcolor 1
+      ---
+      duration_ms: 1.764279
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl columncolor 1
+    ok 4 - Colortbl.test.ts::Colortbl columncolor 1
+      ---
+      duration_ms: 1.534616
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl columncolor in preamble 1
+    ok 5 - Colortbl.test.ts::Colortbl columncolor in preamble 1
+      ---
+      duration_ms: 4.436072
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor in preamble 1
+    ok 6 - Colortbl.test.ts::Colortbl cellcolor in preamble 1
+      ---
+      duration_ms: 0.95403
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor with rowcolor 1
+    ok 7 - Colortbl.test.ts::Colortbl cellcolor with rowcolor 1
+      ---
+      duration_ms: 1.842427
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor with columncolor 1
+    ok 8 - Colortbl.test.ts::Colortbl cellcolor with columncolor 1
+      ---
+      duration_ms: 0.874119
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl columncolor and rowcolor 1
+    ok 9 - Colortbl.test.ts::Colortbl columncolor and rowcolor 1
+      ---
+      duration_ms: 0.888537
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor with columncolor and rowcolor 1
+    ok 10 - Colortbl.test.ts::Colortbl cellcolor with columncolor and rowcolor 1
+      ---
+      duration_ms: 1.637641
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl columncolor ignore overlap 1
+    ok 11 - Colortbl.test.ts::Colortbl columncolor ignore overlap 1
+      ---
+      duration_ms: 0.851176
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor with frame 1
+    ok 12 - Colortbl.test.ts::Colortbl cellcolor with frame 1
+      ---
+      duration_ms: 3.057219
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor in pmatrix 1
+    ok 13 - Colortbl.test.ts::Colortbl cellcolor in pmatrix 1
+      ---
+      duration_ms: 1.480644
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl cellcolor with color model 1
+    ok 14 - Colortbl.test.ts::Colortbl cellcolor with color model 1
+      ---
+      duration_ms: 1.878125
+      type: 'test'
+      ...
+    # Subtest: Colortbl.test.ts::Colortbl color with no frame 1
+    ok 15 - Colortbl.test.ts::Colortbl color with no frame 1 # SKIP upstream extraction: custom-package-registration
+      ---
+      duration_ms: 0.090411
+      type: 'test'
+      ...
+    1..15
+ok 16 - colortbl: immutable upstream fixtures
+  ---
+  duration_ms: 29.30282
+  type: 'test'
+  ...
+# Subtest: boldsymbol: immutable upstream fixtures
+    # Subtest: Boldsymbol.test.ts::Boldsymbol Boldsymbol Single 1
+    ok 1 - Boldsymbol.test.ts::Boldsymbol Boldsymbol Single 1
+      ---
+      duration_ms: 1.017701
+      type: 'test'
+      ...
+    # Subtest: Boldsymbol.test.ts::Boldsymbol Boldsymbol Context 1
+    ok 2 - Boldsymbol.test.ts::Boldsymbol Boldsymbol Context 1
+      ---
+      duration_ms: 0.99575
+      type: 'test'
+      ...
+    # Subtest: Boldsymbol.test.ts::Boldsymbol Boldsymbol Operator 1
+    ok 3 - Boldsymbol.test.ts::Boldsymbol Boldsymbol Operator 1
+      ---
+      duration_ms: 0.90113
+      type: 'test'
+      ...
+    # Subtest: Boldsymbol.test.ts::Boldsymbol Boldsymbol Fraction 1
+    ok 4 - Boldsymbol.test.ts::Boldsymbol Boldsymbol Fraction 1
+      ---
+      duration_ms: 0.846107
+      type: 'test'
+      ...
+    # Subtest: Boldsymbol.test.ts::Boldsymbol Boldsymbol Recursive 1
+    ok 5 - Boldsymbol.test.ts::Boldsymbol Boldsymbol Recursive 1
+      ---
+      duration_ms: 2.413835
+      type: 'test'
+      ...
+    # Subtest: Boldsymbol.test.ts::Boldsymbol Boldsymbol Variant 1
+    ok 6 - Boldsymbol.test.ts::Boldsymbol Boldsymbol Variant 1
+      ---
+      duration_ms: 2.335147
+      type: 'test'
+      ...
+    1..6
+ok 17 - boldsymbol: immutable upstream fixtures
+  ---
+  duration_ms: 9.594037
+  type: 'test'
+  ...
+# Subtest: bbm: immutable upstream fixtures
+    # Subtest: Bbm.test.ts::Bbm mathbbm 1
+    ok 1 - Bbm.test.ts::Bbm mathbbm 1
+      ---
+      duration_ms: 1.212859
+      type: 'test'
+      ...
+    # Subtest: Bbm.test.ts::Bbm mathbbmss 1
+    ok 2 - Bbm.test.ts::Bbm mathbbmss 1
+      ---
+      duration_ms: 0.891303
+      type: 'test'
+      ...
+    # Subtest: Bbm.test.ts::Bbm mathbbmtt 1
+    ok 3 - Bbm.test.ts::Bbm mathbbmtt 1
+      ---
+      duration_ms: 1.398169
+      type: 'test'
+      ...
+    # Subtest: Bbm.test.ts::Bbm mathbbm mathversion 1
+    ok 4 - Bbm.test.ts::Bbm mathbbm mathversion 1
+      ---
+      duration_ms: 1.44135
+      type: 'test'
+      ...
+    # Subtest: Bbm.test.ts::Bbm mathbbmss mathversion 1
+    ok 5 - Bbm.test.ts::Bbm mathbbmss mathversion 1
+      ---
+      duration_ms: 1.157965
+      type: 'test'
+      ...
+    # Subtest: Bbm.test.ts::Bbm mathbbmtt mathversion 1
+    ok 6 - Bbm.test.ts::Bbm mathbbmtt mathversion 1
+      ---
+      duration_ms: 1.043369
+      type: 'test'
+      ...
+    # Subtest: Bbm.test.ts::Bbm mathbbm 2
+    ok 7 - Bbm.test.ts::Bbm mathbbm 2
+      ---
+      duration_ms: 0.896041
+      type: 'test'
+      ...
+    # Subtest: Bbm.test.ts::Bbm mathbbmss 2
+    ok 8 - Bbm.test.ts::Bbm mathbbmss 2
+      ---
+      duration_ms: 0.845997
+      type: 'test'
+      ...
+    # Subtest: Bbm.test.ts::Bbm mathbbmtt 2
+    ok 9 - Bbm.test.ts::Bbm mathbbmtt 2
+      ---
+      duration_ms: 0.86379
+      type: 'test'
+      ...
+    1..9
+ok 18 - bbm: immutable upstream fixtures
+  ---
+  duration_ms: 11.453936
+  type: 'test'
+  ...
+# Subtest: bbm: additional MathJax 4.1.3 behavior
+ok 19 - bbm: additional MathJax 4.1.3 behavior
+  ---
+  duration_ms: 17.404045
+  type: 'test'
+  ...
+# Subtest: bboldx: immutable upstream fixtures
+    # Subtest: Bboldx.test.ts::Bboldx mathbb 1
+    ok 1 - Bboldx.test.ts::Bboldx mathbb 1
+      ---
+      duration_ms: 1.753198
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx mathbfbb 1
+    ok 2 - Bboldx.test.ts::Bboldx mathbfbb 1
+      ---
+      duration_ms: 4.956754
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx dotless 1
+    ok 3 - Bboldx.test.ts::Bboldx dotless 1
+      ---
+      duration_ms: 1.185627
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx UC Greek 1
+    ok 4 - Bboldx.test.ts::Bboldx UC Greek 1
+      ---
+      duration_ms: 8.518075
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx LC Greek 1 1
+    ok 5 - Bboldx.test.ts::Bboldx LC Greek 1 1
+      ---
+      duration_ms: 4.249549
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx LC Greek 2 1
+    ok 6 - Bboldx.test.ts::Bboldx LC Greek 2 1
+      ---
+      duration_ms: 1.065742
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx UC Greek Bf 1
+    ok 7 - Bboldx.test.ts::Bboldx UC Greek Bf 1
+      ---
+      duration_ms: 0.923863
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx LC Greek Bf 1 1
+    ok 8 - Bboldx.test.ts::Bboldx LC Greek Bf 1 1
+      ---
+      duration_ms: 1.216085
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx LC Greek Bf 2 1
+    ok 9 - Bboldx.test.ts::Bboldx LC Greek Bf 2 1
+      ---
+      duration_ms: 0.944132
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Delimiters 1
+    ok 10 - Bboldx.test.ts::Bboldx Delimiters 1
+      ---
+      duration_ms: 0.850936
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Delimiters Bf 1
+    ok 11 - Bboldx.test.ts::Bboldx Delimiters Bf 1
+      ---
+      duration_ms: 0.816411
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text textbb 1
+    ok 12 - Bboldx.test.ts::Bboldx Text textbb 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.0583
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text textbfbb 1
+    ok 13 - Bboldx.test.ts::Bboldx Text textbfbb 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.05292
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text dotless 1
+    ok 14 - Bboldx.test.ts::Bboldx Text dotless 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.054753
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text UC Greek 1
+    ok 15 - Bboldx.test.ts::Bboldx Text UC Greek 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.060704
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text LC Greek 1 1
+    ok 16 - Bboldx.test.ts::Bboldx Text LC Greek 1 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.050836
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text LC Greek 2 1
+    ok 17 - Bboldx.test.ts::Bboldx Text LC Greek 2 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.049233
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text UC Greek Bf 1
+    ok 18 - Bboldx.test.ts::Bboldx Text UC Greek Bf 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.054202
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text LC Greek Bf 1 1
+    ok 19 - Bboldx.test.ts::Bboldx Text LC Greek Bf 1 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.049083
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text LC Greek Bf 2 1
+    ok 20 - Bboldx.test.ts::Bboldx Text LC Greek Bf 2 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.049143
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text Delimiters 1
+    ok 21 - Bboldx.test.ts::Bboldx Text Delimiters 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.047109
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx Text Delimiters Bf 1
+    ok 22 - Bboldx.test.ts::Bboldx Text Delimiters Bf 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.04748
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx light mathbb 1
+    ok 23 - Bboldx.test.ts::Bboldx light mathbb 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.049744
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx light mathbfbb 1
+    ok 24 - Bboldx.test.ts::Bboldx light mathbfbb 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.050274
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx light Some Greek 1
+    ok 25 - Bboldx.test.ts::Bboldx light Some Greek 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.048752
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx bfbb mathbb 1
+    ok 26 - Bboldx.test.ts::Bboldx bfbb mathbb 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.057218
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx bfbb mathbfbb 1
+    ok 27 - Bboldx.test.ts::Bboldx bfbb mathbfbb 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.049553
+      type: 'test'
+      ...
+    # Subtest: Bboldx.test.ts::Bboldx bfbb Some Greek 1
+    ok 28 - Bboldx.test.ts::Bboldx bfbb Some Greek 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.06902
+      type: 'test'
+      ...
+    1..28
+ok 20 - bboldx: immutable upstream fixtures
+  ---
+  duration_ms: 32.516164
+  type: 'test'
+  ...
+# Subtest: bboldx: additional MathJax 4.1.3 behavior
+ok 21 - bboldx: additional MathJax 4.1.3 behavior
+  ---
+  duration_ms: 11.552953
+  type: 'test'
+  ...
+# Subtest: dsfont: immutable upstream fixtures
+    # Subtest: Dsfont.test.ts::Dsfont mathds 1
+    ok 1 - Dsfont.test.ts::Dsfont mathds 1
+      ---
+      duration_ms: 0.918173
+      type: 'test'
+      ...
+    # Subtest: Dsfont.test.ts::Dsfont sans mathds 1
+    ok 2 - Dsfont.test.ts::Dsfont sans mathds 1
+      ---
+      duration_ms: 0.78422
+      type: 'test'
+      ...
+    1..2
+ok 22 - dsfont: immutable upstream fixtures
+  ---
+  duration_ms: 2.373309
+  type: 'test'
+  ...
+# Subtest: upgreek: immutable upstream fixtures
+    # Subtest: Upgreek.test.ts::Upgreek upalpha 1
+    ok 1 - Upgreek.test.ts::Upgreek upalpha 1
+      ---
+      duration_ms: 1.198993
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upbeta 1
+    ok 2 - Upgreek.test.ts::Upgreek upbeta 1
+      ---
+      duration_ms: 0.762589
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upgamma 1
+    ok 3 - Upgreek.test.ts::Upgreek upgamma 1
+      ---
+      duration_ms: 0.765525
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek updelta 1
+    ok 4 - Upgreek.test.ts::Upgreek updelta 1
+      ---
+      duration_ms: 0.785092
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upepsilon 1
+    ok 5 - Upgreek.test.ts::Upgreek upepsilon 1
+      ---
+      duration_ms: 0.755756
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upzeta 1
+    ok 6 - Upgreek.test.ts::Upgreek upzeta 1
+      ---
+      duration_ms: 0.753952
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upeta 1
+    ok 7 - Upgreek.test.ts::Upgreek upeta 1
+      ---
+      duration_ms: 0.749775
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek uptheta 1
+    ok 8 - Upgreek.test.ts::Upgreek uptheta 1
+      ---
+      duration_ms: 0.766056
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upiota 1
+    ok 9 - Upgreek.test.ts::Upgreek upiota 1
+      ---
+      duration_ms: 1.102541
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upkappa 1
+    ok 10 - Upgreek.test.ts::Upgreek upkappa 1
+      ---
+      duration_ms: 0.772157
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek uplambda 1
+    ok 11 - Upgreek.test.ts::Upgreek uplambda 1
+      ---
+      duration_ms: 0.73647
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upmu 1
+    ok 12 - Upgreek.test.ts::Upgreek upmu 1
+      ---
+      duration_ms: 1.214913
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upnu 1
+    ok 13 - Upgreek.test.ts::Upgreek upnu 1
+      ---
+      duration_ms: 1.204002
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upxi 1
+    ok 14 - Upgreek.test.ts::Upgreek upxi 1
+      ---
+      duration_ms: 1.821367
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upomicron 1
+    ok 15 - Upgreek.test.ts::Upgreek upomicron 1
+      ---
+      duration_ms: 0.792826
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek uppi 1
+    ok 16 - Upgreek.test.ts::Upgreek uppi 1
+      ---
+      duration_ms: 0.73612
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek uprho 1
+    ok 17 - Upgreek.test.ts::Upgreek uprho 1
+      ---
+      duration_ms: 0.769592
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upsigma 1
+    ok 18 - Upgreek.test.ts::Upgreek upsigma 1
+      ---
+      duration_ms: 0.791003
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek uptau 1
+    ok 19 - Upgreek.test.ts::Upgreek uptau 1
+      ---
+      duration_ms: 0.779551
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upupsilon 1
+    ok 20 - Upgreek.test.ts::Upgreek upupsilon 1
+      ---
+      duration_ms: 0.807143
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upphi 1
+    ok 21 - Upgreek.test.ts::Upgreek upphi 1
+      ---
+      duration_ms: 0.732212
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upchi 1
+    ok 22 - Upgreek.test.ts::Upgreek upchi 1
+      ---
+      duration_ms: 0.811141
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek uppsi 1
+    ok 23 - Upgreek.test.ts::Upgreek uppsi 1
+      ---
+      duration_ms: 4.274628
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upomega 1
+    ok 24 - Upgreek.test.ts::Upgreek upomega 1
+      ---
+      duration_ms: 0.553003
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upvarepsilon 1
+    ok 25 - Upgreek.test.ts::Upgreek upvarepsilon 1
+      ---
+      duration_ms: 0.499813
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upvartheta 1
+    ok 26 - Upgreek.test.ts::Upgreek upvartheta 1
+      ---
+      duration_ms: 0.510002
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upvarpi 1
+    ok 27 - Upgreek.test.ts::Upgreek upvarpi 1
+      ---
+      duration_ms: 0.518329
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upvarrho 1
+    ok 28 - Upgreek.test.ts::Upgreek upvarrho 1
+      ---
+      duration_ms: 0.506516
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upvarsigma 1
+    ok 29 - Upgreek.test.ts::Upgreek upvarsigma 1
+      ---
+      duration_ms: 0.848812
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek upvarphi 1
+    ok 30 - Upgreek.test.ts::Upgreek upvarphi 1
+      ---
+      duration_ms: 0.510885
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Upgamma 1
+    ok 31 - Upgreek.test.ts::Upgreek Upgamma 1
+      ---
+      duration_ms: 0.506967
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Updelta 1
+    ok 32 - Upgreek.test.ts::Upgreek Updelta 1
+      ---
+      duration_ms: 0.524179
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Uptheta 1
+    ok 33 - Upgreek.test.ts::Upgreek Uptheta 1
+      ---
+      duration_ms: 0.489895
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Uplambda 1
+    ok 34 - Upgreek.test.ts::Upgreek Uplambda 1
+      ---
+      duration_ms: 0.511265
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Upxi 1
+    ok 35 - Upgreek.test.ts::Upgreek Upxi 1
+      ---
+      duration_ms: 0.506606
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Uppi 1
+    ok 36 - Upgreek.test.ts::Upgreek Uppi 1
+      ---
+      duration_ms: 0.821481
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Upsigma 1
+    ok 37 - Upgreek.test.ts::Upgreek Upsigma 1
+      ---
+      duration_ms: 0.500625
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Upupsilon 1
+    ok 38 - Upgreek.test.ts::Upgreek Upupsilon 1
+      ---
+      duration_ms: 0.534178
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Upphi 1
+    ok 39 - Upgreek.test.ts::Upgreek Upphi 1
+      ---
+      duration_ms: 0.507428
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Uppsi 1
+    ok 40 - Upgreek.test.ts::Upgreek Uppsi 1
+      ---
+      duration_ms: 0.643284
+      type: 'test'
+      ...
+    # Subtest: Upgreek.test.ts::Upgreek Upomega 1
+    ok 41 - Upgreek.test.ts::Upgreek Upomega 1
+      ---
+      duration_ms: 0.524029
+      type: 'test'
+      ...
+    1..41
+ok 23 - upgreek: immutable upstream fixtures
+  ---
+  duration_ms: 38.357148
+  type: 'test'
+  ...
+# Subtest: gensymb: immutable upstream fixtures
+    # Subtest: Gensymb.test.ts::Gensymb ohm 1
+    ok 1 - Gensymb.test.ts::Gensymb ohm 1
+      ---
+      duration_ms: 0.682167
+      type: 'test'
+      ...
+    # Subtest: Gensymb.test.ts::Gensymb degree 1
+    ok 2 - Gensymb.test.ts::Gensymb degree 1
+      ---
+      duration_ms: 0.674793
+      type: 'test'
+      ...
+    # Subtest: Gensymb.test.ts::Gensymb celcius 1
+    ok 3 - Gensymb.test.ts::Gensymb celcius 1
+      ---
+      duration_ms: 0.51419
+      type: 'test'
+      ...
+    # Subtest: Gensymb.test.ts::Gensymb perthousand 1
+    ok 4 - Gensymb.test.ts::Gensymb perthousand 1
+      ---
+      duration_ms: 0.527295
+      type: 'test'
+      ...
+    # Subtest: Gensymb.test.ts::Gensymb micro 1
+    ok 5 - Gensymb.test.ts::Gensymb micro 1
+      ---
+      duration_ms: 0.490776
+      type: 'test'
+      ...
+    1..5
+ok 24 - gensymb: immutable upstream fixtures
+  ---
+  duration_ms: 3.87858
+  type: 'test'
+  ...
+# Subtest: textcomp: immutable upstream fixtures
+    # Subtest: Textcomp.test.ts::Textcomp textasciicircum 1
+    ok 1 - Textcomp.test.ts::Textcomp textasciicircum 1
+      ---
+      duration_ms: 0.90092
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textasciitilde 1
+    ok 2 - Textcomp.test.ts::Textcomp textasciitilde 1
+      ---
+      duration_ms: 1.061944
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textasteriskcentered 1
+    ok 3 - Textcomp.test.ts::Textcomp textasteriskcentered 1
+      ---
+      duration_ms: 0.602947
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbackslash 1
+    ok 4 - Textcomp.test.ts::Textcomp textbackslash 1
+      ---
+      duration_ms: 0.52993
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbar 1
+    ok 5 - Textcomp.test.ts::Textcomp textbar 1
+      ---
+      duration_ms: 0.531864
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbraceleft 1
+    ok 6 - Textcomp.test.ts::Textcomp textbraceleft 1
+      ---
+      duration_ms: 0.521855
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbraceright 1
+    ok 7 - Textcomp.test.ts::Textcomp textbraceright 1
+      ---
+      duration_ms: 0.531112
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbullet 1
+    ok 8 - Textcomp.test.ts::Textcomp textbullet 1
+      ---
+      duration_ms: 0.717093
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdagger 1
+    ok 9 - Textcomp.test.ts::Textcomp textdagger 1
+      ---
+      duration_ms: 0.549918
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdaggerdbl 1
+    ok 10 - Textcomp.test.ts::Textcomp textdaggerdbl 1
+      ---
+      duration_ms: 0.55638
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textellipsis 1
+    ok 11 - Textcomp.test.ts::Textcomp textellipsis 1
+      ---
+      duration_ms: 0.576689
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textemdash 1
+    ok 12 - Textcomp.test.ts::Textcomp textemdash 1
+      ---
+      duration_ms: 0.546922
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textendash 1
+    ok 13 - Textcomp.test.ts::Textcomp textendash 1
+      ---
+      duration_ms: 0.571679
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textexclamdown 1
+    ok 14 - Textcomp.test.ts::Textcomp textexclamdown 1
+      ---
+      duration_ms: 0.531944
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textgreater 1
+    ok 15 - Textcomp.test.ts::Textcomp textgreater 1
+      ---
+      duration_ms: 0.635099
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textless 1
+    ok 16 - Textcomp.test.ts::Textcomp textless 1
+      ---
+      duration_ms: 0.56131
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textordfeminine 1
+    ok 17 - Textcomp.test.ts::Textcomp textordfeminine 1
+      ---
+      duration_ms: 0.549197
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textordmasculine 1
+    ok 18 - Textcomp.test.ts::Textcomp textordmasculine 1
+      ---
+      duration_ms: 1.302388
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textparagraph 1
+    ok 19 - Textcomp.test.ts::Textcomp textparagraph 1
+      ---
+      duration_ms: 0.896081
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textperiodcentered 1
+    ok 20 - Textcomp.test.ts::Textcomp textperiodcentered 1
+      ---
+      duration_ms: 0.557963
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textquestiondown 1
+    ok 21 - Textcomp.test.ts::Textcomp textquestiondown 1
+      ---
+      duration_ms: 0.542984
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textquotedblleft 1
+    ok 22 - Textcomp.test.ts::Textcomp textquotedblleft 1
+      ---
+      duration_ms: 0.554807
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textquotedblright 1
+    ok 23 - Textcomp.test.ts::Textcomp textquotedblright 1
+      ---
+      duration_ms: 0.538967
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textquoteleft 1
+    ok 24 - Textcomp.test.ts::Textcomp textquoteleft 1
+      ---
+      duration_ms: 0.559746
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textquoteright 1
+    ok 25 - Textcomp.test.ts::Textcomp textquoteright 1
+      ---
+      duration_ms: 2.788733
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textsection 1
+    ok 26 - Textcomp.test.ts::Textcomp textsection 1
+      ---
+      duration_ms: 0.813976
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textunderscore 1
+    ok 27 - Textcomp.test.ts::Textcomp textunderscore 1
+      ---
+      duration_ms: 0.536813
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textvisiblespace 1
+    ok 28 - Textcomp.test.ts::Textcomp textvisiblespace 1
+      ---
+      duration_ms: 0.550198
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textacutedbl 1
+    ok 29 - Textcomp.test.ts::Textcomp textacutedbl 1
+      ---
+      duration_ms: 0.628126
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textasciiacute 1
+    ok 30 - Textcomp.test.ts::Textcomp textasciiacute 1
+      ---
+      duration_ms: 0.521394
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textasciibreve 1
+    ok 31 - Textcomp.test.ts::Textcomp textasciibreve 1
+      ---
+      duration_ms: 0.535691
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textasciicaron 1
+    ok 32 - Textcomp.test.ts::Textcomp textasciicaron 1
+      ---
+      duration_ms: 0.534769
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textasciidieresis 1
+    ok 33 - Textcomp.test.ts::Textcomp textasciidieresis 1
+      ---
+      duration_ms: 0.537625
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textasciimacron 1
+    ok 34 - Textcomp.test.ts::Textcomp textasciimacron 1
+      ---
+      duration_ms: 0.540349
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textgravedbl 1
+    ok 35 - Textcomp.test.ts::Textcomp textgravedbl 1
+      ---
+      duration_ms: 0.539909
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp texttildelow 1
+    ok 36 - Textcomp.test.ts::Textcomp texttildelow 1
+      ---
+      duration_ms: 0.553244
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbaht 1
+    ok 37 - Textcomp.test.ts::Textcomp textbaht 1
+      ---
+      duration_ms: 0.557953
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textcent 1
+    ok 38 - Textcomp.test.ts::Textcomp textcent 1
+      ---
+      duration_ms: 0.499132
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textcolonmonetary 1
+    ok 39 - Textcomp.test.ts::Textcomp textcolonmonetary 1
+      ---
+      duration_ms: 0.498321
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textcurrency 1
+    ok 40 - Textcomp.test.ts::Textcomp textcurrency 1
+      ---
+      duration_ms: 0.489264
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdollar 1
+    ok 41 - Textcomp.test.ts::Textcomp textdollar 1
+      ---
+      duration_ms: 0.535861
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdong 1
+    ok 42 - Textcomp.test.ts::Textcomp textdong 1
+      ---
+      duration_ms: 1.090618
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp texteuro 1
+    ok 43 - Textcomp.test.ts::Textcomp texteuro 1
+      ---
+      duration_ms: 0.565417
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textflorin 1
+    ok 44 - Textcomp.test.ts::Textcomp textflorin 1
+      ---
+      duration_ms: 1.039522
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textguarani 1
+    ok 45 - Textcomp.test.ts::Textcomp textguarani 1
+      ---
+      duration_ms: 0.584924
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textlira 1
+    ok 46 - Textcomp.test.ts::Textcomp textlira 1
+      ---
+      duration_ms: 0.549246
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textnaira 1
+    ok 47 - Textcomp.test.ts::Textcomp textnaira 1
+      ---
+      duration_ms: 0.539969
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textpeso 1
+    ok 48 - Textcomp.test.ts::Textcomp textpeso 1
+      ---
+      duration_ms: 0.545049
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textsterling 1
+    ok 49 - Textcomp.test.ts::Textcomp textsterling 1
+      ---
+      duration_ms: 0.547073
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textwon 1
+    ok 50 - Textcomp.test.ts::Textcomp textwon 1
+      ---
+      duration_ms: 0.537765
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textyen 1
+    ok 51 - Textcomp.test.ts::Textcomp textyen 1
+      ---
+      duration_ms: 0.543837
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textcircledP 1
+    ok 52 - Textcomp.test.ts::Textcomp textcircledP 1
+      ---
+      duration_ms: 0.55114
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textcompwordmark 1
+    ok 53 - Textcomp.test.ts::Textcomp textcompwordmark 1
+      ---
+      duration_ms: 1.053828
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textcopyleft 1
+    ok 54 - Textcomp.test.ts::Textcomp textcopyleft 1
+      ---
+      duration_ms: 0.850305
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textcopyright 1
+    ok 55 - Textcomp.test.ts::Textcomp textcopyright 1
+      ---
+      duration_ms: 0.598279
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textregistered 1
+    ok 56 - Textcomp.test.ts::Textcomp textregistered 1
+      ---
+      duration_ms: 0.839524
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textservicemark 1
+    ok 57 - Textcomp.test.ts::Textcomp textservicemark 1
+      ---
+      duration_ms: 0.857037
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp texttrademark 1
+    ok 58 - Textcomp.test.ts::Textcomp texttrademark 1
+      ---
+      duration_ms: 0.644567
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbardbl 1
+    ok 59 - Textcomp.test.ts::Textcomp textbardbl 1
+      ---
+      duration_ms: 0.609641
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbigcircle 1
+    ok 60 - Textcomp.test.ts::Textcomp textbigcircle 1
+      ---
+      duration_ms: 0.59356
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textblank 1
+    ok 61 - Textcomp.test.ts::Textcomp textblank 1
+      ---
+      duration_ms: 4.105849
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textbrokenbar 1
+    ok 62 - Textcomp.test.ts::Textcomp textbrokenbar 1
+      ---
+      duration_ms: 0.993735
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdiscount 1
+    ok 63 - Textcomp.test.ts::Textcomp textdiscount 1
+      ---
+      duration_ms: 0.521775
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textestimated 1
+    ok 64 - Textcomp.test.ts::Textcomp textestimated 1
+      ---
+      duration_ms: 0.595855
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textinterrobang 1
+    ok 65 - Textcomp.test.ts::Textcomp textinterrobang 1
+      ---
+      duration_ms: 0.601445
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textinterrobangdown 1
+    ok 66 - Textcomp.test.ts::Textcomp textinterrobangdown 1
+      ---
+      duration_ms: 4.298703
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textmusicalnote 1
+    ok 67 - Textcomp.test.ts::Textcomp textmusicalnote 1
+      ---
+      duration_ms: 0.645338
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textnumero 1
+    ok 68 - Textcomp.test.ts::Textcomp textnumero 1
+      ---
+      duration_ms: 0.600053
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textopenbullet 1
+    ok 69 - Textcomp.test.ts::Textcomp textopenbullet 1
+      ---
+      duration_ms: 0.575055
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textpertenthousand 1
+    ok 70 - Textcomp.test.ts::Textcomp textpertenthousand 1
+      ---
+      duration_ms: 0.559546
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textperthousand 1
+    ok 71 - Textcomp.test.ts::Textcomp textperthousand 1
+      ---
+      duration_ms: 2.517971
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textrecipe 1
+    ok 72 - Textcomp.test.ts::Textcomp textrecipe 1
+      ---
+      duration_ms: 0.673992
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textreferencemark 1
+    ok 73 - Textcomp.test.ts::Textcomp textreferencemark 1
+      ---
+      duration_ms: 0.595895
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textlangle 1
+    ok 74 - Textcomp.test.ts::Textcomp textlangle 1
+      ---
+      duration_ms: 0.533437
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textrangle 1
+    ok 75 - Textcomp.test.ts::Textcomp textrangle 1
+      ---
+      duration_ms: 0.561981
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textlbrackdbl 1
+    ok 76 - Textcomp.test.ts::Textcomp textlbrackdbl 1
+      ---
+      duration_ms: 0.540049
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textrbrackdbl 1
+    ok 77 - Textcomp.test.ts::Textcomp textrbrackdbl 1
+      ---
+      duration_ms: 0.565427
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textlquill 1
+    ok 78 - Textcomp.test.ts::Textcomp textlquill 1
+      ---
+      duration_ms: 0.558324
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textrquill 1
+    ok 79 - Textcomp.test.ts::Textcomp textrquill 1
+      ---
+      duration_ms: 0.540851
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textcelsius 1
+    ok 80 - Textcomp.test.ts::Textcomp textcelsius 1
+      ---
+      duration_ms: 0.548885
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdegree 1
+    ok 81 - Textcomp.test.ts::Textcomp textdegree 1
+      ---
+      duration_ms: 0.548025
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdiv 1
+    ok 82 - Textcomp.test.ts::Textcomp textdiv 1
+      ---
+      duration_ms: 0.547242
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdownarrow 1
+    ok 83 - Textcomp.test.ts::Textcomp textdownarrow 1
+      ---
+      duration_ms: 0.730628
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textfractionsolidus 1
+    ok 84 - Textcomp.test.ts::Textcomp textfractionsolidus 1
+      ---
+      duration_ms: 0.562351
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textleftarrow 1
+    ok 85 - Textcomp.test.ts::Textcomp textleftarrow 1
+      ---
+      duration_ms: 0.552463
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textlnot 1
+    ok 86 - Textcomp.test.ts::Textcomp textlnot 1
+      ---
+      duration_ms: 0.546922
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textmho 1
+    ok 87 - Textcomp.test.ts::Textcomp textmho 1
+      ---
+      duration_ms: 0.531433
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textminus 1
+    ok 88 - Textcomp.test.ts::Textcomp textminus 1
+      ---
+      duration_ms: 0.960472
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textmu 1
+    ok 89 - Textcomp.test.ts::Textcomp textmu 1
+      ---
+      duration_ms: 0.648313
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textohm 1
+    ok 90 - Textcomp.test.ts::Textcomp textohm 1
+      ---
+      duration_ms: 0.539448
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textonehalf 1
+    ok 91 - Textcomp.test.ts::Textcomp textonehalf 1
+      ---
+      duration_ms: 0.509701
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textonequarter 1
+    ok 92 - Textcomp.test.ts::Textcomp textonequarter 1
+      ---
+      duration_ms: 0.51977
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textonesuperior 1
+    ok 93 - Textcomp.test.ts::Textcomp textonesuperior 1
+      ---
+      duration_ms: 0.783268
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textpm 1
+    ok 94 - Textcomp.test.ts::Textcomp textpm 1
+      ---
+      duration_ms: 3.901604
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textrightarrow 1
+    ok 95 - Textcomp.test.ts::Textcomp textrightarrow 1
+      ---
+      duration_ms: 0.942689
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textsurd 1
+    ok 96 - Textcomp.test.ts::Textcomp textsurd 1
+      ---
+      duration_ms: 0.921579
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textthreequarters 1
+    ok 97 - Textcomp.test.ts::Textcomp textthreequarters 1
+      ---
+      duration_ms: 0.784751
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textthreesuperior 1
+    ok 98 - Textcomp.test.ts::Textcomp textthreesuperior 1
+      ---
+      duration_ms: 0.724888
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp texttimes 1
+    ok 99 - Textcomp.test.ts::Textcomp texttimes 1
+      ---
+      duration_ms: 0.711523
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp texttwosuperior 1
+    ok 100 - Textcomp.test.ts::Textcomp texttwosuperior 1
+      ---
+      duration_ms: 3.268849
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textuparrow 1
+    ok 101 - Textcomp.test.ts::Textcomp textuparrow 1
+      ---
+      duration_ms: 0.71505
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textborn 1
+    ok 102 - Textcomp.test.ts::Textcomp textborn 1
+      ---
+      duration_ms: 0.712174
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdied 1
+    ok 103 - Textcomp.test.ts::Textcomp textdied 1
+      ---
+      duration_ms: 1.395794
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textdivorced 1
+    ok 104 - Textcomp.test.ts::Textcomp textdivorced 1
+      ---
+      duration_ms: 1.116668
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcomp textmarried 1
+    ok 105 - Textcomp.test.ts::Textcomp textmarried 1
+      ---
+      duration_ms: 0.781695
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textasciicircum 1
+    ok 106 - Textcomp.test.ts::Textcompwith Textmacros textasciicircum 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.057098
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textcentoldstyle 1
+    ok 107 - Textcomp.test.ts::Textcompwith Textmacros textcentoldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.059703
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textdollaroldstyle 1
+    ok 108 - Textcomp.test.ts::Textcompwith Textmacros textdollaroldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.049874
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textzerooldstyle 1
+    ok 109 - Textcomp.test.ts::Textcompwith Textmacros textzerooldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.059993
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textoneoldstyle 1
+    ok 110 - Textcomp.test.ts::Textcompwith Textmacros textoneoldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.050265
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros texttwooldstyle 1
+    ok 111 - Textcomp.test.ts::Textcompwith Textmacros texttwooldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.052389
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textthreeoldstyle 1
+    ok 112 - Textcomp.test.ts::Textcompwith Textmacros textthreeoldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.064902
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textfouroldstyle 1
+    ok 113 - Textcomp.test.ts::Textcompwith Textmacros textfouroldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.040656
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textfiveoldstyle 1
+    ok 114 - Textcomp.test.ts::Textcompwith Textmacros textfiveoldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.034074
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textsixoldstyle 1
+    ok 115 - Textcomp.test.ts::Textcompwith Textmacros textsixoldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.044304
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textsevenoldstyle 1
+    ok 116 - Textcomp.test.ts::Textcompwith Textmacros textsevenoldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.033613
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros texteightoldstyle 1
+    ok 117 - Textcomp.test.ts::Textcompwith Textmacros texteightoldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.035787
+      type: 'test'
+      ...
+    # Subtest: Textcomp.test.ts::Textcompwith Textmacros textnineoldstyle 1
+    ok 118 - Textcomp.test.ts::Textcompwith Textmacros textnineoldstyle 1 # SKIP integration dependency not registered in this lane: textmacros
+      ---
+      duration_ms: 0.042991
+      type: 'test'
+      ...
+    1..118
+ok 25 - textcomp: immutable upstream fixtures
+  ---
+  duration_ms: 96.379117
+  type: 'test'
+  ...
+# Subtest: unicode: immutable upstream fixtures
+    # Subtest: Unicode.test.ts::Unicode Unicode Dec 1
+    ok 1 - Unicode.test.ts::Unicode Unicode Dec 1
+      ---
+      duration_ms: 0.751108
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Hex 1
+    ok 2 - Unicode.test.ts::Unicode Unicode Hex 1
+      ---
+      duration_ms: 0.386639
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Dec A 1
+    ok 3 - Unicode.test.ts::Unicode Unicode Dec A 1
+      ---
+      duration_ms: 0.358296
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Hex A 1
+    ok 4 - Unicode.test.ts::Unicode Unicode Hex A 1
+      ---
+      duration_ms: 0.308101
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Scale 1
+    ok 5 - Unicode.test.ts::Unicode Unicode Scale 1
+      ---
+      duration_ms: 0.318952
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Scale Font 1
+    ok 6 - Unicode.test.ts::Unicode Unicode Scale Font 1
+      ---
+      duration_ms: 0.625801
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Font 1
+    ok 7 - Unicode.test.ts::Unicode Unicode Font 1
+      ---
+      duration_ms: 0.373165
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Combined 1
+    ok 8 - Unicode.test.ts::Unicode Unicode Combined 1
+      ---
+      duration_ms: 0.698097
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Surrogate Hex 1
+    ok 9 - Unicode.test.ts::Unicode Unicode Surrogate Hex 1
+      ---
+      duration_ms: 0.479855
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Surrogate Dec 1
+    ok 10 - Unicode.test.ts::Unicode Unicode Surrogate Dec 1
+      ---
+      duration_ms: 0.405625
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Blackboard 1
+    ok 11 - Unicode.test.ts::Unicode Unicode Blackboard 1
+      ---
+      duration_ms: 0.379856
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Unicode Blackboard Geramond 1
+    ok 12 - Unicode.test.ts::Unicode Unicode Blackboard Geramond 1
+      ---
+      duration_ms: 0.305346
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Complete Unicode Caligraphic 1
+    ok 13 - Unicode.test.ts::Unicode Complete Unicode Caligraphic 1
+      ---
+      duration_ms: 0.361382
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Complete Unicode Bold 1
+    ok 14 - Unicode.test.ts::Unicode Complete Unicode Bold 1
+      ---
+      duration_ms: 0.354829
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode Complete Unicode Italic 1
+    ok 15 - Unicode.test.ts::Unicode Complete Unicode Italic 1
+      ---
+      duration_ms: 0.483492
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode others Raw Unicode 1
+    ok 16 - Unicode.test.ts::Unicode others Raw Unicode 1
+      ---
+      duration_ms: 0.451462
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode others Char numerical 1
+    ok 17 - Unicode.test.ts::Unicode others Char numerical 1
+      ---
+      duration_ms: 0.448716
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode others Char alpha 1
+    ok 18 - Unicode.test.ts::Unicode others Char alpha 1
+      ---
+      duration_ms: 1.471507
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode others Char command number 1
+    ok 19 - Unicode.test.ts::Unicode others Char command number 1
+      ---
+      duration_ms: 0.350772
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode others Char Yen 1
+    ok 20 - Unicode.test.ts::Unicode others Char Yen 1
+      ---
+      duration_ms: 0.391449
+      type: 'test'
+      ...
+    # Subtest: Unicode.test.ts::Unicode others Char number 1
+    ok 21 - Unicode.test.ts::Unicode others Char number 1
+      ---
+      duration_ms: 0.290758
+      type: 'test'
+      ...
+    1..21
+ok 26 - unicode: immutable upstream fixtures
+  ---
+  duration_ms: 11.507267
+  type: 'test'
+  ...
+# Subtest: unicode: additional MathJax 4.1.3 behavior
+ok 27 - unicode: additional MathJax 4.1.3 behavior
+  ---
+  duration_ms: 6.970425
+  type: 'test'
+  ...
+# Subtest: texhtml: immutable upstream fixtures
+    # Subtest: TexHtml.test.ts::Texhtml Html 1
+    ok 1 - TexHtml.test.ts::Texhtml Html 1
+      ---
+      duration_ms: 1.543803
+      type: 'test'
+      ...
+    # Subtest: TexHtml.test.ts::Texhtml Html multiple 1
+    ok 2 - TexHtml.test.ts::Texhtml Html multiple 1
+      ---
+      duration_ms: 0.681426
+      type: 'test'
+      ...
+    # Subtest: TexHtml.test.ts::Texhtml Html nested 1
+    ok 3 - TexHtml.test.ts::Texhtml Html nested 1
+      ---
+      duration_ms: 0.684662
+      type: 'test'
+      ...
+    # Subtest: TexHtml.test.ts::Texhtml Html empty tag 1
+    ok 4 - TexHtml.test.ts::Texhtml Html empty tag 1
+      ---
+      duration_ms: 0.539238
+      type: 'test'
+      ...
+    # Subtest: TexHtml.test.ts::Texhtml Html no tag 1
+    ok 5 - TexHtml.test.ts::Texhtml Html no tag 1
+      ---
+      duration_ms: 0.54066
+      type: 'test'
+      ...
+    # Subtest: TexHtml.test.ts::Texhtml not enabled Html not allowed 1
+    ok 6 - TexHtml.test.ts::Texhtml not enabled Html not allowed 1
+      ---
+      duration_ms: 0.945374
+      type: 'test'
+      ...
+    1..6
+ok 28 - texhtml: immutable upstream fixtures
+  ---
+  duration_ms: 5.720856
+  type: 'test'
+  ...
+# Subtest: texhtml AST renders as real React elements with escaped text and attributes
+ok 29 - texhtml AST renders as real React elements with escaped text and attributes
+  ---
+  duration_ms: 7.340403
+  type: 'test'
+  ...
+# Subtest: html: immutable upstream fixtures
+    # Subtest: Html.test.ts::Html Html Href Simple 1
+    ok 1 - Html.test.ts::Html Html Href Simple 1
+      ---
+      duration_ms: 0.661388
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Href Complex 1
+    ok 2 - Html.test.ts::Html Html Href Complex 1
+      ---
+      duration_ms: 0.383153
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Href Inner 1
+    ok 3 - Html.test.ts::Html Html Href Inner 1
+      ---
+      duration_ms: 0.41326
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Style Simple 1
+    ok 4 - Html.test.ts::Html Html Style Simple 1
+      ---
+      duration_ms: 0.319062
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Style Complex 1
+    ok 5 - Html.test.ts::Html Html Style Complex 1
+      ---
+      duration_ms: 0.357625
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Style Inner 1
+    ok 6 - Html.test.ts::Html Html Style Inner 1
+      ---
+      duration_ms: 0.351173
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Style Nested 1
+    ok 7 - Html.test.ts::Html Html Style Nested 1
+      ---
+      duration_ms: 0.312279
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Style Row 1
+    ok 8 - Html.test.ts::Html Html Style Row 1
+      ---
+      duration_ms: 0.401287
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Class Simple 1
+    ok 9 - Html.test.ts::Html Html Class Simple 1
+      ---
+      duration_ms: 0.318731
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Class Medium 1
+    ok 10 - Html.test.ts::Html Html Class Medium 1
+      ---
+      duration_ms: 0.331245
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Class Complex 1
+    ok 11 - Html.test.ts::Html Html Class Complex 1
+      ---
+      duration_ms: 0.350141
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Class nested 1
+    ok 12 - Html.test.ts::Html Html Class nested 1
+      ---
+      duration_ms: 0.309433
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Id Inner 1
+    ok 13 - Html.test.ts::Html Html Id Inner 1
+      ---
+      duration_ms: 0.304845
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Id Simple 1
+    ok 14 - Html.test.ts::Html Html Id Simple 1
+      ---
+      duration_ms: 0.42399
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Id Complex 1
+    ok 15 - Html.test.ts::Html Html Id Complex 1
+      ---
+      duration_ms: 0.410855
+      type: 'test'
+      ...
+    # Subtest: Html.test.ts::Html Html Data 1
+    ok 16 - Html.test.ts::Html Html Data 1
+      ---
+      duration_ms: 0.714057
+      type: 'test'
+      ...
+    1..16
+ok 30 - html: immutable upstream fixtures
+  ---
+  duration_ms: 7.776545
+  type: 'test'
+  ...
+# Subtest: action: immutable upstream fixtures
+    # Subtest: Action.test.ts::Action TextTip 1
+    ok 1 - Action.test.ts::Action TextTip 1
+      ---
+      duration_ms: 0.649005
+      type: 'test'
+      ...
+    # Subtest: Action.test.ts::Action MathTip 1
+    ok 2 - Action.test.ts::Action MathTip 1
+      ---
+      duration_ms: 0.390086
+      type: 'test'
+      ...
+    # Subtest: Action.test.ts::Action Toggle 1
+    ok 3 - Action.test.ts::Action Toggle 1
+      ---
+      duration_ms: 0.586587
+      type: 'test'
+      ...
+    1..3
+ok 31 - action: immutable upstream fixtures
+  ---
+  duration_ms: 2.300421
+  type: 'test'
+  ...
+# Subtest: tagformat: immutable upstream fixtures
+    # Subtest: TagFormat.test.ts::Tagformat Basic tag 1
+    ok 1 - TagFormat.test.ts::Tagformat Basic tag 1
+      ---
+      duration_ms: 1.004666
+      type: 'test'
+      ...
+    # Subtest: TagFormat.test.ts::Tagformat Text tag 1
+    ok 2 - TagFormat.test.ts::Tagformat Text tag 1
+      ---
+      duration_ms: 0.442996
+      type: 'test'
+      ...
+    # Subtest: TagFormat.test.ts::Tagformat Ref 1
+    ok 3 - TagFormat.test.ts::Tagformat Ref 1 # SKIP integration dependency not registered in this lane: ams/align
+      ---
+      duration_ms: 0.046037
+      type: 'test'
+      ...
+    # Subtest: TagFormat.test.ts::Tagformat Eqref 1
+    ok 4 - TagFormat.test.ts::Tagformat Eqref 1 # SKIP integration dependency not registered in this lane: ams/align
+      ---
+      duration_ms: 0.035928
+      type: 'test'
+      ...
+    # Subtest: TagFormat.test.ts::Tagformat Custom ref 1
+    ok 5 - TagFormat.test.ts::Tagformat Custom ref 1 # SKIP integration dependency not registered in this lane: ams/align
+      ---
+      duration_ms: 0.03711
+      type: 'test'
+      ...
+    # Subtest: TagFormat.test.ts::Tagformat Array tag 1
+    ok 6 - TagFormat.test.ts::Tagformat Array tag 1
+      ---
+      duration_ms: 0.446663
+      type: 'test'
+      ...
+    # Subtest: TagFormat.test.ts::Tagformat Array tag with empty entry 1
+    ok 7 - TagFormat.test.ts::Tagformat Array tag with empty entry 1
+      ---
+      duration_ms: 0.461902
+      type: 'test'
+      ...
+    # Subtest: TagFormat.test.ts::Tagformat Array tag with null entry 1
+    ok 8 - TagFormat.test.ts::Tagformat Array tag with null entry 1
+      ---
+      duration_ms: 0.454428
+      type: 'test'
+      ...
+    1..8
+ok 32 - tagformat: immutable upstream fixtures
+  ---
+  duration_ms: 3.630351
+  type: 'test'
+  ...
+# Subtest: fontsizev3: additional MathJax 4.1.3 behavior
+ok 33 - fontsizev3: additional MathJax 4.1.3 behavior
+  ---
+  duration_ms: 18.591275
+  type: 'test'
+  ...
+# Subtest: adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros
+ok 34 - adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros
+  ---
+  duration_ms: 187.186479
+  type: 'test'
+  ...
+# Subtest: parser sessions preserve document references and independent sessions isolate them
+ok 35 - parser sessions preserve document references and independent sessions isolate them
+  ---
+  duration_ms: 2.695437
+  type: 'test'
+  ...
+# Subtest: texclass presence and all explicit atom classes match MathJax
+ok 36 - texclass presence and all explicit atom classes match MathJax
+  ---
+  duration_ms: 25.960062
+  type: 'test'
+  ...
+# Subtest: adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias
+ok 37 - adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias
+  ---
+  duration_ms: 13.647846
+  type: 'test'
+  ...
+# Subtest: package activation is separate from module registration and unsupported contracts reject explicitly
+ok 38 - package activation is separate from module registration and unsupported contracts reject explicitly
+  ---
+  duration_ms: 2.525185
+  type: 'test'
+  ...
+# Subtest: a package adds commands, overrides, delimiters and an environment with one registry line
+ok 39 - a package adds commands, overrides, delimiters and an environment with one registry line
+  ---
+  duration_ms: 183.797824
+  type: 'test'
+  ...
+# Subtest: SSR exactly equals string output for all 848 executable base/newcommand fixtures
+ok 40 - SSR exactly equals string output for all 848 executable base/newcommand fixtures
+  ---
+  duration_ms: 408.663202
+  type: 'test'
+  ...
+1..40
+# tests 351
+# suites 0
+# pass 317
+# fail 0
+# cancelled 0
+# skipped 34
+# todo 0
+# duration_ms 1009.642403

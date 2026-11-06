@@ -1194,7 +1194,7 @@ export class Parser {
       if (space(c)) continue;
       if(c>=0) {
         const extension=this.configuration.extensions.get(spelling(t));
-        if(extension) { extension.execute(this,t,extension.definition,-1); continue; }
+        if(extension?.definition.type==='character') { extension.execute(this,t,extension.definition,-1); continue; }
       }
       switch (c) {
         case 123:
