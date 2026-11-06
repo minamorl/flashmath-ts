@@ -2,15 +2,18 @@ import { UnsupportedFeatureError } from "./ast.js";
 import type { ParseOptions } from "./ast.js";
 import {
   resolvePackages,
+  registeredPackages,
   validateConfigurationModules,
 } from "./packages/registry.js";
-import type { PackageConfiguration } from "./packages/types.js";
+import type { ActivePackageConfiguration, PackageEntry } from "./packages/types.js";
 
 export function configure(input: ParseOptions): {
   options: ParseOptions;
-  configuration: PackageConfiguration;
+  configuration: ActivePackageConfiguration;
 } {
-  if (input.mode !== undefined && input.mode !== "convert" && !(input.mode === "render" && input.packages?.some(p=>(typeof p==="string"?p:p[0])==="texhtml")))
+  if (input.mode !== undefined && input.mode !== "convert" &&
+      !(input.mode === "render" && input.packages?.some(p=>(typeof p==="string"?p:p[0])==="texhtml")) &&
+      !(input.mode === "output" && input.packages?.some(p=>(typeof p==="string"?p:p[0])==="bussproofs")))
     throw new UnsupportedFeatureError(
       `Unsupported mode: ${input.mode} (HTML discovery and SVG measurement are not implemented)`,
     );
@@ -20,12 +23,12 @@ export function configure(input: ParseOptions): {
   )
     throw new TypeError("executionOrder must be a nonnegative integer");
   validateConfigurationModules(input.configurationModules);
-  const configuration = resolvePackages(input.packages);
+  const configuration = resolveConfiguration(input.packages);
   const texOptions = input.texOptions ?? {};
   for (const key of Object.keys(texOptions))
     if (!configuration.options.has(key))
       throw new UnsupportedFeatureError(`Unsupported TeX option: ${key}`);
-  const options: ParseOptions = { ...input };
+  const options: ParseOptions = { ...input, texOptions: {...texOptions} };
   if (options.output !== undefined && options.output !== 'native' && options.output !== 'mathjax')
     throw new TypeError('output must be native or mathjax');
   for (const name of [
@@ -78,7 +81,7 @@ export function configure(input: ParseOptions): {
           !Number.isSafeInteger(tuple[1]) ||
           tuple[1] < 0 ||
           tuple[1] > 9)) ||
-      (tuple[2] !== undefined && typeof tuple[2] !== "string")
+      (tuple[2] !== undefined && typeof tuple[2] !== "string" && !(configuration.packages.some(p=>p.name==="configmacros") && Array.isArray(tuple[2]) && tuple[2].every(x=>typeof x==="string")))
     )
       throw new TypeError(`Unsupported macro configuration: ${name}`);
   }
@@ -110,4 +113,15 @@ export function configure(input: ParseOptions): {
     )
       throw new RangeError(`${name} must be a positive safe integer`);
   return { options, configuration };
+}
+
+/** Keep package lifecycle metadata outside the registry's registration-only boundary. */
+export function resolveConfiguration(entries:readonly PackageEntry[]=['base','newcommand']):ActivePackageConfiguration {
+  const configuration=resolvePackages(entries);
+  const selected=entries.map((entry,index)=>{
+    const [name,priority]=typeof entry==='string'?[entry,undefined]:entry;
+    const definition=registeredPackages.find(p=>p.name===name)!;
+    return {definition,priority:priority??definition.priority??5,index};
+  }).sort((a,b)=>b.priority-a.priority||a.index-b.index);
+  return {...configuration,entries:selected.map(x=>[x.definition.name,x.priority] as const),packages:selected.map(x=>x.definition)};
 }

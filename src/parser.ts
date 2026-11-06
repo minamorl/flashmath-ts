@@ -1,3 +1,4 @@
+import {configuredMacro} from "./packages/configmacros.js";
 import { K, ParseError, expose } from "./ast.js";
 import type { Node, ParseOptions, MathMLNode } from "./ast.js";
 import {
@@ -13,13 +14,12 @@ import type { Token, Macro } from "./scanner.js";
 import { preamble } from "./preamble.js";
 import type { Preamble } from "./preamble.js";
 import { C, definitions, ranges } from "./symbols.js";
-import { resolvePackages } from "./packages/registry.js";
-import { configure } from "./configuration.js";
+import { configure, resolveConfiguration } from "./configuration.js";
 import { mathMLForOutput } from "./output.js";
 import { sessionState } from "./session-state.js";
 import {format,tagNodes} from "./packages/tagformat.js";
 import type { SessionState, Reference } from "./session-state.js";
-import type { PackageConfiguration, RegisteredCommand } from "./packages/types.js";
+import type { ActivePackageConfiguration, RegisteredCommand } from "./packages/types.js";
 import type { Definition } from "./symbols.js";
 import {
   relationChars,
@@ -107,10 +107,11 @@ export class Parser {
   nonscript = false;
   pendingBreak = "";
   result: Node[] = [];
+  currentCommand = "";
   constructor(
     readonly tex: string,
     readonly options: ParseOptions,
-    readonly configuration: PackageConfiguration = resolvePackages(
+    public configuration: ActivePackageConfiguration = resolveConfiguration(
       options.packages,
     ),
     readonly session: SessionState = sessionState(),
@@ -139,15 +140,7 @@ export class Parser {
     );
     if (!session.initialized)
       for (const [name, value] of Object.entries(options.macros ?? {})) {
-        const [body, count = 0, opt] =
-          typeof value === "string" ? [value] : value;
-        this.macros.set(name, {
-          body: scan(body),
-          count,
-          optional: opt === undefined ? null : scan(opt),
-          prefix: [],
-          delimiters: [],
-        });
+        this.macros.set(name, configuredMacro(value));
       }
     session.initialized = true;
     this.frame(0, false, (n) => {
@@ -287,19 +280,22 @@ export class Parser {
   argument(done: (n: Node) => void, keepGroup = false, name = "") {
     this.stream.skip();
     const t = this.stream.peek();
-    if (!t) this.error(name ? `Missing argument for ${name}` : "Missing argument");
-    if (name && t[0] === 125) this.error("Extra close brace or missing open brace");
+    if (!t) this.error(`Missing argument for ${name || this.currentCommand}`);
+    if (t[0] === 125) this.error("Extra close brace or missing open brace");
     if (t[0] === 123) {
       this.stream.next();
       this.frame(125, false, (n) =>
         done(keepGroup ? this.atom(n) : this.row(n)),
       );
+      this.f.env = "argument";
     } else this.frame(0, true, (n) => done(this.row(n)));
     this.f.argumentScope = true;
   }
   args(count: number, done: (nodes: Node[]) => void, name = "") {
     const values: Node[] = [];
+    const command = this.currentCommand;
     const next = () => {
+      this.currentCommand = command;
       if (values.length === count) done(values);
       else
         this.argument((n) => {
@@ -309,11 +305,11 @@ export class Parser {
     };
     next();
   }
-  tokensArgument(name = ""): Token[] {
+  tokensArgument(name = this.currentCommand): Token[] {
     this.stream.skip();
     const first = this.stream.next();
     if (!first) this.error(`Missing argument for ${name}`);
-    if (name && first[0] === 125) this.error("Extra close brace or missing open brace");
+    if (first[0] === 125) this.error("Extra close brace or missing open brace");
     if (first[0] !== 123) return [first];
     const result: Token[] = [];
     let depth = 1;
@@ -334,10 +330,10 @@ export class Parser {
     let depth = 0;
     for (;;) {
       const t = this.stream.next();
-      if (!t) this.error("Couldn't find closing ']' for argument");
+      if (!t) this.error(`Could not find closing ']' for argument to ${this.currentCommand}`);
       if (t[0] === 93 && depth === 0) return out;
       if (t[0] === 123) depth++;
-      if (t[0] === 125) depth--;
+      if (t[0] === 125 && --depth < 0) this.error("Extra close brace while looking for ']'");
       out.push(t);
     }
   }
@@ -429,7 +425,7 @@ export class Parser {
       t = this.stream.next();
       if (this.stream.next()?.[0] !== 125) this.error("Missing close brace");
     }
-    if (!t) this.error("Missing delimiter");
+    if (!t) this.error(`Missing or unrecognized delimiter for ${this.currentCommand}`);
     for (let i = 0; i < 30; i++) {
       if (t![0] !== -1 && t![0] !== -3) break;
       const m: Macro | undefined =
@@ -444,15 +440,15 @@ export class Parser {
           ? this.configuration.extensions.get(spelling(t!))
           : this.configuration.commands[symbolId]
       )?.definition;
-      if (d?.char) return d.char === "<" ? "⟨" : d.char === ">" ? "⟩" : d.char;
-      this.error(`Unknown delimiter \\${spelling(t!)}`);
+      if (d?.char && (d.type === "delimiter" || stretchyChars.has(d.char) || "<>".includes(d.char))) return d.char === "<" ? "⟨" : d.char === ">" ? "⟩" : d.char;
+      this.error(`Missing or unrecognized delimiter for ${this.currentCommand}`);
     }
     const s = spelling(t!);
     if (s === ".") return "";
     if (s === "<") return "⟨";
     if (s === ">") return "⟩";
     if (!stretchyChars.has(s))
-      this.error(`Missing or unrecognized delimiter for ${s}`);
+      this.error(`Missing or unrecognized delimiter for ${this.currentCommand}`);
     return s;
   }
   delimiterNode(text: string, big = "", texclass = ""): Node {
@@ -692,6 +688,7 @@ export class Parser {
       this.append(n);
     };
     if (prime) {
+      if ([K.msup,K.msubsup,K.mover,K.munderover].includes(target.kind)) this.error("Prime causes double exponent: use braces to clarify");
       let count = 1;
       while ([39, 0x2019].includes(this.stream.peek()?.[0] ?? 0)) {
         this.stream.next();
@@ -706,6 +703,10 @@ export class Parser {
         ),
       );
     } else {
+      this.stream.skip();
+      const next = this.stream.peek();
+      if (!next) this.error("Missing superscript or subscript argument");
+      if ([94,95,39,0x2019].includes(next[0])) this.error(`Missing open brace for ${sup ? "superscript" : "subscript"}`);
       const level = this.f.level;
       this.argument((n) => {
         add(n);
@@ -745,6 +746,7 @@ export class Parser {
   }
   text(tokens: Token[], font = ""): Node {
     let text = raw(tokens)
+      .replace(/%[^\r\n]*(?:\r?\n|$)/g, "")
       .replace(/\\U\{([0-9a-fA-F]+)\}/g, (_, hex) =>
         String.fromCodePoint(parseInt(hex, 16)),
       )
@@ -869,11 +871,11 @@ export class Parser {
       t,
     );
     this.f.display = t.display;
-    if (t.latex) this.startCell(t);
+    if (t.latex) { this.stream.skip(); this.startCell(t); }
   }
   startCell(t: Table) {
     const real = t.plan.columns.filter((c) => c.insert === null);
-    const col = real[t.cells.length % real.length];
+    const col = real[t.cells.length];
     if (
       col?.before.length &&
       builtin(this.stream.peek() ?? [0, 0, 0, ""]) !== C.end
@@ -882,9 +884,10 @@ export class Parser {
   }
   finishCell(t: Table, nodes: Node[]) {
     const real = t.plan.columns.filter((c) => c.insert === null);
-    const col = real[t.cells.length % real.length];
+    const col = real[t.cells.length];
     if (col?.after.length) {
-      for (const token of col.after) {
+      if (raw(col.after) === "\\hspace{.5em}") nodes.push(this.node(K.mspace,[],"",{width:".5em"}));
+      else for (const token of col.after) {
         if (space(token[0])) continue;
         nodes.push(this.character(token));
       }
@@ -1130,7 +1133,7 @@ export class Parser {
       t.rows.map((c, rowIndex) => {
         if (name === "eqnarray") {
           for (let i = 0; i < c.length; i++) {
-            if (i % 3 === 1) c[i].children.unshift(this.node(K.mi));
+            if (i % 3 === 1 && c.length === 3) c[i].children.unshift(this.node(K.mi));
             if (i % 3 === 2)
               c[i].children = [
                 this.node(K.mstyle, c[i].children, "", { indentshift: ".7em" }),
@@ -1218,7 +1221,7 @@ export class Parser {
       if (!t) {
         if (this.frames.length !== 1)
           this.error(
-            this.f.missingMessage ?? (this.f.env ? `Missing \\end{${this.f.env}}` : "Missing close brace"),
+            this.f.missingMessage ?? (this.f.env === "argument" ? "Missing close brace" : this.f.env === "left" ? "Extra \\left or missing \\right" : this.f.env ? `Missing \\end{${this.f.env}}` : "Extra open brace or missing close brace"),
           );
         this.close();
         break;
@@ -1233,6 +1236,8 @@ export class Parser {
         this.close();
         continue;
       }
+      const active = (this.options.texOptions?.active as Record<string,unknown>)?.[spelling(t)];
+      if (c !== -1 && active !== undefined && this.configuration.packages.some(p=>p.name === "configmacros")) { this.expand(configuredMacro(active)); continue; }
       if (space(c)) continue;
       const characters = c > 0 ? this.characters?.get(c) : undefined;
       if (characters) {
@@ -1246,6 +1251,10 @@ export class Parser {
         if (handled) continue;
       }
       switch (c) {
+        case 37:
+          while(this.stream.peek() && ![10,13].includes(this.stream.peek()![0])) this.stream.next();
+          this.stream.next();
+          continue;
         case 123:
           this.frame(125, false, (n) => this.append(this.atom(n)));
           continue;
@@ -1271,6 +1280,19 @@ export class Parser {
           this.finishCell(f.table, f.nodes);
           f.nodes = [];
           f.font = f.table.originalFont;
+          if (f.env === "cases") {
+            if (f.table.cells.length > 1) this.error("Extra alignment tab in \\cases text");
+            const text:Token[]=[]; let depth=0;
+            while(this.stream.peek()) {
+              const next=this.stream.peek()!;
+              if (depth===0 && (next[0]===125 || builtin(next)===C.cr || spelling(next)==="\\" && next[0]===-1)) break;
+              if (next[0]===38 && depth===0) this.error("Extra alignment tab in \\cases text");
+              this.stream.next(); if(next[0]===123)depth++;if(next[0]===125)depth--;text.push(next);
+            }
+            while(text.length&&space(text[0][0]))text.shift();while(text.length&&space(text.at(-1)![0]))text.pop();
+            if (builtin(text[0]) === C.text) { this.stream.push(text); } else this.renderText(text);
+            continue;
+          }
           if (f.table.latex) this.startCell(f.table);
           continue;
         }
@@ -1280,6 +1302,7 @@ export class Parser {
           const n = this.node(K.mo, [], text, {
             fence: "false",
             stretchy: "false",
+            ...("|‖".includes(text) ? {"data-mjx-texclass":"ORD"} : {}),
           });
           n.rawAttrs = true;
           this.append(n);
@@ -1302,8 +1325,13 @@ export class Parser {
           const registered =
             id < 0
               ? this.configuration.extensions.get(name)
-              : this.configuration.commands[id];
-          if (!registered) this.error(`Undefined control sequence \\${name}`);
+              : this.configuration.commands[id] ?? this.configuration.extensions.get(name);
+          if (!registered) {
+            const fallback = [...this.configuration.packages].reverse().find(p => p.undefinedCommand)?.undefinedCommand;
+            if (fallback) { fallback(this, name); continue; }
+            this.error(`Undefined control sequence \\${name}`);
+          }
+          this.currentCommand = "\\" + name;
           registered.execute(this, t, registered.definition, id);
           continue;
         }
@@ -1385,6 +1413,7 @@ export class Parser {
   linebreak() {
     if (this.stream.peek()?.[0] === 42) this.stream.next();
     const spacing = this.optional();
+    if (spacing && !/^[+-]?(?:\d+(?:[.,]\d*)?|[.,]\d+)\s*(?:em|ex|pt|px|mu|cm|mm|in|pc)$/.test(raw(spacing).trim())) this.error("Bracket argument to \\\\ must be a dimension");
     const f = this.f;
     if (f.table) {
       const t = f.table;
@@ -1573,13 +1602,15 @@ export class Parser {
 function parseOne(
   tex: string,
   options: ParseOptions,
-  configuration: PackageConfiguration,
+  configuration: ActivePackageConfiguration,
   state: SessionState,
 ): MathMLNode {
   if (typeof tex !== "string")
     throw new TypeError("TeX input must be a string");
+  let parser:Parser|undefined;
   try {
-    return new Parser(tex, options, configuration, state).run();
+    parser = new Parser(tex, options, configuration, state);
+    return parser.run();
   } catch (error) {
     if (
       !(error instanceof ParseError) &&
@@ -1588,13 +1619,15 @@ function parseOne(
       throw error;
     if (options.throwOnError) throw error;
     const message = (error as Error).message;
+    if (typeof options.texOptions?.formatError === "function") (options.texOptions.formatError as Function)(null, error);
+    const formatter = [...(parser?.configuration??configuration).packages].reverse().find(p => p.formatError)?.formatError;
     return {
       kind: "math",
       attributes: {
         xmlns: NS,
         ...(options.display ? { display: "block" } : {}),
       },
-      children: [
+      children: formatter ? [formatter(message, tex)] : [
         {
           kind: "merror",
           attributes: { "data-mjx-error": message },

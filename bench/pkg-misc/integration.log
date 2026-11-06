@@ -1,0 +1,60 @@
+checkpoint: 0/1089 completed
+progress: 100/1089
+progress: 200/1089
+progress: 300/1089
+progress: 400/1089
+progress: 500/1089
+progress: 600/1089
+progress: 700/1089
+progress: 800/1089
+progress: 900/1089
+progress: 1000/1089
+group | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+autoload | 0 | 0 | 2 | 2 | 0.00%
+base | 790 | 0 | 21 | 811 | 97.41%
+bboldx | 17 | 0 | 0 | 17 | 100.00%
+begingroup | 19 | 0 | 0 | 19 | 100.00%
+bussproofs | 26 | 0 | 0 | 26 | 100.00%
+configmacros | 10 | 0 | 0 | 10 | 100.00%
+newcommand | 58 | 0 | 0 | 58 | 100.00%
+noerrors | 56 | 0 | 0 | 56 | 100.00%
+noundefined | 2 | 0 | 0 | 2 | 100.00%
+require | 0 | 0 | 8 | 8 | 0.00%
+setoptions | 10 | 0 | 2 | 12 | 83.33%
+textcomp | 13 | 0 | 0 | 13 | 100.00%
+textmacros | 48 | 0 | 2 | 50 | 96.00%
+verb | 5 | 0 | 0 | 5 | 100.00%
+ALL | 1054 | 0 | 35 | 1089 | 96.79%
+
+package membership (overlapping; each denominator includes failures and unsupported):
+package | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+base | 1054 | 0 | 35 | 1089 | 96.79%
+autoload | 0 | 0 | 3 | 3 | 0.00%
+userMacros | 0 | 0 | 5 | 5 | 0.00%
+userEnvs | 0 | 0 | 15 | 15 | 0.00%
+userFilters | 0 | 0 | 1 | 1 | 0.00%
+bboldx | 17 | 0 | 0 | 17 | 100.00%
+textmacros | 78 | 0 | 2 | 80 | 97.50%
+begingroup | 19 | 0 | 0 | 19 | 100.00%
+newcommand | 119 | 0 | 0 | 119 | 100.00%
+retry | 19 | 0 | 0 | 19 | 100.00%
+ams | 42 | 0 | 0 | 42 | 100.00%
+bussproofs | 26 | 0 | 0 | 26 | 100.00%
+configmacros | 10 | 0 | 0 | 10 | 100.00%
+colorv2 | 6 | 0 | 0 | 6 | 100.00%
+noerrors | 56 | 0 | 0 | 56 | 100.00%
+noundefined | 2 | 0 | 0 | 2 | 100.00%
+require | 0 | 0 | 10 | 10 | 0.00%
+require-load | 0 | 0 | 1 | 1 | 0.00%
+units | 5 | 0 | 0 | 5 | 100.00%
+setoptions | 10 | 0 | 2 | 12 | 83.33%
+textcomp | 13 | 0 | 0 | 13 | 100.00%
+color | 42 | 0 | 0 | 42 | 100.00%
+html | 31 | 0 | 0 | 31 | 100.00%
+unicode | 31 | 0 | 0 | 31 | 100.00%
+no-autoload | 0 | 0 | 1 | 1 | 0.00%
+verb | 5 | 0 | 0 | 5 | 100.00%
+
+classifications: {"typeset-component-pipeline":14,"custom-package-registration":21}

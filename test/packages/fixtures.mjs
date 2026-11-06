@@ -25,3 +25,13 @@ export function compare(name,cases){test(`${name}: additional MathJax 4.1.3 beha
   for(const entry of cases){const [tex,patch={}]=typeof entry==='string'?[entry]:entry;const options={packages:['base',name],display:true,...patch};assert.equal(normalizeMathML(subject(tex,options)),normalizeMathML(await oracle(tex,options)),tex);}
 });}
 export {assert,test,subject};
+
+import {run} from '../../conformance/runner.mjs';
+export async function packageFixtures(t,prefix) {
+ const records=fixture.records.filter(r=>r.id.startsWith(prefix+'.test.ts::'));
+ const local=records.filter(r=>{if(r.unsupported)return true;return r.input.packages.every(x=>available.has(Array.isArray(x)?x[0]:x));});
+ t.diagnostic(`${local.length}/${records.length} fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json`);
+ if(!local.some(r=>!r.unsupported)){t.skip('No executable fixtures in this lane; retain unsupported/dependency rows in the conformance report');return;}
+ const report=await run(subject,{...fixture,records:local});
+ assert.deepEqual(report.rows.filter(r=>r.status==='mismatch'),[]);
+}

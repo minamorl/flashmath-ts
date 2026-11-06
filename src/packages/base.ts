@@ -17,6 +17,7 @@ import {
 type Attrs = Record<string, string>;
 
 function executeBase(parser: Parser, t: Token, d: Definition, id: number) {
+  if (d.name === "uproot" || d.name === "leftroot") parser.error(`\\${d.name} can appear only within a root`);
   const name = d.name;
   if (d.char !== undefined) {
     parser.append(parser.symbol(t, id, d));
@@ -287,8 +288,9 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.Rule:
     case C.Space: {
       const offset = id === C.rule ? raw(parser.optional() ?? []) : "";
-      const width = raw(parser.tokensArgument()),
-        height = raw(parser.tokensArgument()),
+      const width = raw(parser.tokensArgument());
+      if (!width) parser.error(`Missing dimension or its units for \\${name}`);
+      const height = raw(parser.tokensArgument()),
         depth = id !== C.rule ? raw(parser.tokensArgument()) : "";
       let n = parser.node(K.mspace, [], "", {
         width,
@@ -309,11 +311,22 @@ function baseCommand(parser: Parser, id: number, name: string) {
       parser.args(2, (n) => parser.append(parser.node(K.mfrac, n)));
       return;
     case C.sqrt: {
-      const root = parser.optional();
+      let root = parser.optional();
+      const shift:Attrs={};
+      if(root) {
+        const input=raw(root), seen=new Set<string>();
+        root=scan(input.replace(/\\(leftroot|uproot)\s*(?:\{([^}]*)\}|([^\s{}]+))/g,(_,name,group,bare)=>{
+          if(seen.has(name))parser.error(`Multiple use of \\${name}`);seen.add(name);
+          const value=group??bare;if(!/^[+-]?\d+$/.test(value))parser.error(`The argument to \\${name} must be an integer`);
+          const em=Number(value)/15,amount=(em>=0?"+":"")+em+"em";
+          if(name==="leftroot")shift.width=amount;else {shift.voffset=amount;shift.height=amount;}
+          return "";
+        }));
+      }
       parser.argument((n) => {
         if (root)
           parser.parseTokens(root, (r) =>
-            parser.append(parser.node(K.mroot, [n, r])),
+            parser.append(parser.node(K.mroot, [n, Object.keys(shift).length ? parser.node(K.mpadded,[r],"",shift) : r])),
           );
         else
           parser.append(
@@ -324,9 +337,14 @@ function baseCommand(parser: Parser, id: number, name: string) {
     }
     case C.root: {
       const root: Token[] = [];
-      while (parser.stream.peek() && builtin(parser.stream.peek()!) !== C.of)
-        root.push(parser.stream.next()!);
-      if (!parser.stream.next()) parser.error("Missing \\of");
+      let depth=0;
+      while(parser.stream.peek()) {
+        const next=parser.stream.next()!;
+        if(next[0]===123)depth++;if(next[0]===125&&--depth<0)parser.error("Extra close brace while looking for \\of");
+        if(depth===0&&builtin(next)===C.of)break;
+        root.push(next);
+      }
+      if (!parser.stream.peek() || depth) parser.error("Could not find \\of for \\root");
       parser.argument((n) =>
         parser.parseTokens(root, (r) =>
           parser.append(parser.node(K.mroot, [n, r])),
@@ -352,14 +370,14 @@ function baseCommand(parser: Parser, id: number, name: string) {
     }
     case C.right: {
       const delim = parser.delimiter();
-      if (parser.f.env !== "left") parser.error("Extra \\right");
+      if (parser.f.env !== "left") parser.error("Missing \\left or extra \\right");
       parser.f.nodes.push(parser.delimiterNode(delim, "", "CLOSE"));
       parser.close();
       return;
     }
     case C.middle: {
       const d = parser.delimiter();
-      if (parser.f.env !== "left") parser.error("Misplaced \\middle");
+      if (parser.f.env !== "left") parser.error("Extra \\middle");
       parser.append(parser.atom([], "CLOSE"));
       parser.append(
         parser.node(K.mo, [], d, { stretchy: "true", symmetric: "true" }),
@@ -369,6 +387,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
     }
     case C.begin: {
       const name = raw(parser.tokensArgument()).trim();
+      if (name.includes("\\")) parser.error(`Invalid environment name '${name}'`);
       const custom = parser.environments.get(name);
       if (custom) {
         parser.envStack.push(name);
@@ -390,6 +409,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
         parser.stream.push(custom.end.body);
         return;
       }
+      if (!parser.f.env) parser.error(`Missing \\begin{${name}} or extra \\end{${name}}`);
       if (parser.f.env !== name)
         parser.error(`\\begin{${parser.f.env}} ended with \\end{${name}}`);
       const environment = parser.configuration.environments.get(name);
@@ -410,7 +430,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.atopwithdelims:
     case C.abovewithdelims: {
       const f = parser.f;
-      if (f.fraction) parser.error("Ambiguous use of fraction");
+      if (f.fraction) parser.error(`Ambiguous use of \\${name}`);
       let left = "",
         right = "";
       if (name.includes("withdelims")) {
@@ -458,6 +478,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
       ].includes(n.kind)
         ? n.children[0]
         : n;
+      if (!b.limits && !b.op && !(b.kind === K.mo && operator(b.text)?.[3]?.largeop)) parser.error(`\\${name} is allowed only on operators`);
       b.limits = id === C.nolimits ? -1 : id === C.limits ? 2 : 1;
       if (id === C.limits && b.kind === K.mo)
         b.attributes.movablelimits = "false";
@@ -560,7 +581,9 @@ function baseCommand(parser: Parser, id: number, name: string) {
       const tag = (
         { mi: K.mi, mo: K.mo, mn: K.mn, mtext: K.mtext } as Record<string, K>
       )[kind];
-      if (tag === undefined) parser.error("Invalid MathML token type");
+      if (tag === undefined) parser.error(`${kind} is not a token element`);
+      const invalid = attrs.match(/(?:^|,)\s*([^=, ]+)\s*=/)?.[1];
+      if (invalid && !/^[a-z]+$/i.test(invalid)) parser.error(`Invalid MathML attribute: ${invalid}`);
       const a: Attrs = {};
       for (const m of attrs.matchAll(
         /([a-zA-Z]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^,\s]+))/g,
@@ -581,7 +604,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
             "mathbackground",
           ].includes(m[1])
         )
-          parser.error("Invalid MathML token attribute");
+          parser.error(`${m[1]} is not a recognized attribute for ${kind}`);
         a[m[1]] = m[2] ?? m[3] ?? m[4];
       }
       const token = parser.node(tag, [], text, a);
@@ -664,6 +687,8 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.moveleft:
     case C.moveright: {
       let amount = parser.dimension();
+      parser.stream.skip();
+      if (!parser.stream.peek()) parser.error(`Missing box for \\${name}`);
       if (id === C.lower || id === C.moveleft)
         amount = amount.startsWith("-") ? amount.slice(1) : "-" + amount;
       if (!amount.startsWith("-") && !amount.startsWith("+"))
@@ -746,6 +771,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.hfil:
     case C.hfill:
     case C.hfilll:
+      if (!parser.f.table) parser.error(`Unsupported use of \\${name}`);
       if (parser.f.table)
         parser.f.table.fill = parser.f.table.fill
           ? "center"
@@ -754,6 +780,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
             : "right";
       return;
     case C.cr:
+      if (!parser.f.table) parser.error("Misplaced \\cr");
     case C.newline: {
       parser.linebreak();
       return;
@@ -871,6 +898,7 @@ function beginEnvironment(parser: Parser, name: string) {
     );
     return;
   }
+  if (["equation", "eqnarray", "displaymath"].includes(name) && parser.frames.some(f=>["equation","eqnarray","displaymath"].includes(f.env))) parser.error("Erroneous nesting of equation structures");
   if (["array", "darray", "eqnarray"].includes(name)) {
     const pos = parser.optional();
     const align = name === "eqnarray" ? "rcl" : raw(parser.tokensArgument());

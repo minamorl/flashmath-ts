@@ -1,0 +1,50 @@
+checkpoint: 0/989 completed
+progress: 100/989
+progress: 200/989
+progress: 300/989
+progress: 400/989
+progress: 500/989
+progress: 600/989
+progress: 700/989
+progress: 800/989
+progress: 900/989
+group | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+autoload | 0 | 0 | 2 | 2 | 0.00%
+base | 780 | 10 | 21 | 811 | 96.18%
+begingroup | 0 | 19 | 0 | 19 | 0.00%
+bussproofs | 0 | 26 | 0 | 26 | 0.00%
+configmacros | 0 | 10 | 0 | 10 | 0.00%
+noerrors | 0 | 56 | 0 | 56 | 0.00%
+noundefined | 0 | 2 | 0 | 2 | 0.00%
+require | 0 | 0 | 8 | 8 | 0.00%
+textmacros | 0 | 48 | 2 | 50 | 0.00%
+verb | 0 | 5 | 0 | 5 | 0.00%
+ALL | 780 | 176 | 33 | 989 | 78.87%
+
+package membership (overlapping; each denominator includes failures and unsupported):
+package | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+base | 780 | 176 | 33 | 989 | 78.87%
+autoload | 0 | 0 | 3 | 3 | 0.00%
+userMacros | 0 | 0 | 5 | 5 | 0.00%
+userEnvs | 0 | 0 | 15 | 15 | 0.00%
+userFilters | 0 | 0 | 1 | 1 | 0.00%
+begingroup | 0 | 19 | 0 | 19 | 0.00%
+newcommand | 0 | 61 | 0 | 61 | 0.00%
+retry | 0 | 19 | 0 | 19 | 0.00%
+ams | 0 | 26 | 0 | 26 | 0.00%
+bussproofs | 0 | 26 | 0 | 26 | 0.00%
+configmacros | 0 | 10 | 0 | 10 | 0.00%
+noerrors | 0 | 56 | 0 | 56 | 0.00%
+noundefined | 0 | 2 | 0 | 2 | 0.00%
+require | 0 | 0 | 8 | 8 | 0.00%
+require-load | 0 | 0 | 1 | 1 | 0.00%
+color | 0 | 42 | 0 | 42 | 0.00%
+textmacros | 0 | 48 | 2 | 50 | 0.00%
+html | 0 | 31 | 0 | 31 | 0.00%
+unicode | 0 | 31 | 0 | 31 | 0.00%
+no-autoload | 0 | 0 | 1 | 1 | 0.00%
+verb | 0 | 5 | 0 | 5 | 0.00%
+
+classifications: {"typeset-component-pipeline":12,"structure":4,"text":1,"attributes":5,"custom-package-registration":21,"subject-error":166}

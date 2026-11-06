@@ -1,0 +1,55 @@
+✔ scripts, compound arguments and nested fences (19.180698ms)
+✔ fixed arity MathML children are never combined as adjacent relations (0.992723ms)
+✔ macro substitution respects control word boundaries and def templates (2.390531ms)
+✔ nested custom environments and array frames (4.397949ms)
+✔ definitions and parser state do not leak between parses (1.608976ms)
+✔ recursive macros, output size and nesting are bounded (4.994936ms)
+✔ deep input uses explicit stacks through serialization (24.384739ms)
+✔ malformed input returns an error tree or throws on request (5.878604ms)
+✔ text and attribute values are escaped as XML, never executed (6.158252ms)
+✔ React returns elements and SSR exactly equals the string renderer (23.143406ms)
+✔ error paths always serialize valid MathML and XML (2.180615ms)
+﹣ autoload: original conformance fixtures (3.046239ms) # No executable fixtures in this lane; retain unsupported/dependency rows in the conformance report
+ℹ 2/2 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ autoload registers command triggers and honors disabled triggers (34.645543ms)
+✔ autoload keeps remaining triggers after loading another package (22.818323ms)
+✔ begingroup: original conformance fixtures (46.255394ms)
+ℹ 19/19 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ global environments survive group exit (1.437012ms)
+✔ bussproofs: original conformance fixtures (206.614734ms)
+ℹ 26/26 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ configmacros: original conformance fixtures (19.634294ms)
+ℹ 10/10 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ noerrors: original conformance fixtures (69.810277ms)
+ℹ 56/56 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ noundefined: original conformance fixtures (3.183908ms)
+ℹ 2/2 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+﹣ require: original conformance fixtures (1.211106ms) # No executable fixtures in this lane; retain unsupported/dependency rows in the conformance report
+ℹ 8/8 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ require loads only local registered packages and persists within a session (1.84365ms)
+✔ dynamically loaded noerrors formats the current error (0.73161ms)
+﹣ setoptions: original conformance fixtures (0.872336ms) # No executable fixtures in this lane; retain unsupported/dependency rows in the conformance report
+ℹ 2/12 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ setOptions changes package values and invokes filters without leaking caller options (3.985181ms)
+✔ setOptions preserves top-level number options across session inputs (0.607617ms)
+﹣ textmacros: original conformance fixtures (1.264065ms) # No executable fixtures in this lane; retain unsupported/dependency rows in the conformance report
+ℹ 2/50 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ text-mode expansion preserves optional parameters and package activation (3.12123ms)
+✔ verb: original conformance fixtures (4.012783ms)
+ℹ 5/5 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ verb reads raw comment characters and delimiters within scanner spans (0.853651ms)
+✔ adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros (112.169677ms)
+✔ parser sessions preserve document references and independent sessions isolate them (2.468439ms)
+✔ texclass presence and all explicit atom classes match MathJax (18.47711ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (17.538529ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (3.547855ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (105.661816ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (431.016127ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 4
+ℹ todo 0
+ℹ duration_ms 739.436419

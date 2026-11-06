@@ -57,3 +57,20 @@ the final gate independently. This worker starts no child agents.
   colors. Keep numeric character chains; texhtml's literal-name handler supplies
   its character when `char` is absent. Serializer/React support HTML text nodes
   while retaining chemistry's output-mode transformation and physics's CSS props.
+
+- Misc: union registration lists and lifecycle/character contracts; preserve
+  original numeric priorities in active configurations, clone mutable TeX options,
+  accept texhtml render and bussproofs output modes conditionally, retain native
+  output validation, and combine package diagnostic messages with physics's
+  explicit missing-fence messages. Merge test fixture helpers so both font tests
+  and misc package gates run against the real subject. Keep chemistry's broader
+  `test/*.test.mjs test/packages/*.test.mjs` manifest command. Initial stage runner
+  only expanded the top-level glob; stage 05 onward expands both manifest globs.
+  The stage 05 gate therefore reruns AMS/mathtools/chemistry package tests too.
+- Promote the misc units dependency candidate into typed `src/packages/units.ts`
+  with attribution and an explicit registration, after reading installed MathJax
+  `UnitsConfiguration.ts`. This fixes five SetOptions fixtures whose captured
+  configuration registers units even when their selected package list does not.
+  The supplied font textmacros patch does not apply: current misc already accepts
+  text-insert/textbb/textbfbb; verify its behavior with the full font fixtures
+  rather than replacing the updated shim with the older patch.

@@ -1,0 +1,32 @@
+suite | matched | mismatch | unsupported | total
+--- | ---: | ---: | ---: | ---:
+Base | 790 | 0 | 21 | 811
+Newcommand | 58 | 0 | 0 | 58
+Begingroup | 19 | 0 | 0 | 19
+Bussproofs | 26 | 0 | 0 | 26
+ConfigMacros | 10 | 0 | 0 | 10
+Noerrors | 56 | 0 | 0 | 56
+Noundefined | 2 | 0 | 0 | 2
+SetOptions | 10 | 0 | 2 | 12
+Textmacros | 48 | 0 | 2 | 50
+Verb | 5 | 0 | 0 | 5
+Require | 0 | 0 | 8 | 8
+Autoload | 0 | 0 | 2 | 2
+{
+  "sourceSha256": "e54867a1865c37474f66340573ad79a1ac9c287acc55f142957fedc15225ea31",
+  "selected": 1089,
+  "reports": {
+    "standalone": {
+      "matched": 966,
+      "mismatch": 88,
+      "unsupported": 35,
+      "total": 1089
+    },
+    "integration": {
+      "matched": 1054,
+      "mismatch": 0,
+      "unsupported": 35,
+      "total": 1089
+    }
+  }
+}

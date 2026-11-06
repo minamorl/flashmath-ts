@@ -1,0 +1,30 @@
+{
+  "color": {
+    "source": "/home/minamorl/repos/.worktrees/flashmath-ts/pkg-fonts/dist/packages/color.js",
+    "sha256": "e263deba60c79590c0c3dfcb12689886ec55f801a94fbc38c2b55d8a783b0628"
+  },
+  "html": {
+    "source": "/home/minamorl/repos/.worktrees/flashmath-ts/pkg-fonts/dist/packages/html.js",
+    "sha256": "760e785f1f61b3449355475cbe4b4ab6ebdf9e4225a85102c5daa7092d493bbe"
+  },
+  "unicode": {
+    "source": "/home/minamorl/repos/.worktrees/flashmath-ts/pkg-fonts/dist/packages/unicode.js",
+    "sha256": "754083618d9f55e6a1d6cd1edfce1dadb6ebba79d9d0b8e511fa3efca9777e96"
+  },
+  "ams": {
+    "source": "/home/minamorl/repos/.worktrees/flashmath-ts/pkg-ams/dist/packages/ams.js",
+    "sha256": "faee091bef5bcc7194c1e63588dc231b47a326637390417a6e732366852f3191"
+  },
+  "bboldx": {
+    "source": "/home/minamorl/repos/.worktrees/flashmath-ts/pkg-fonts/dist/packages/bboldx.js",
+    "sha256": "1e66ce4c7279b8de0514d6be8c8d08f882aadf22f678669cf949de3aba099e17"
+  },
+  "textcomp": {
+    "source": "/home/minamorl/repos/.worktrees/flashmath-ts/pkg-fonts/dist/packages/textcomp.js",
+    "sha256": "cd000b7dadf873a780ba0f0e57ff291c3d61c2b02b255f5ed7f5a40ca811bb67"
+  },
+  "bbm": {
+    "source": "/home/minamorl/repos/.worktrees/flashmath-ts/pkg-fonts/dist/packages/bbm.js",
+    "sha256": "69dfabf3d94c91e15372d0a3a181d355d874ad896822a63cc027ae838b85bd9a"
+  }
+}
