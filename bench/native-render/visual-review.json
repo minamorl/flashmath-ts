@@ -1,0 +1,101 @@
+{
+  "reviewer": "implementation agent; root verifier still required",
+  "method": "Opened each final screenshot panel through view_image and compared the native column with MathJax SVG",
+  "screen_run": "Chrome/153.0.8010.36: opened after.html; keyboard selected React SSR / toMathMLString / React SSR; inspected all listed panels",
+  "featureVerdict": "PASS",
+  "pixelParity": "NOT ACHIEVED",
+  "reviewed": [
+    {
+      "file": "after-enclose-1.png",
+      "sha256": "20a3f9fe71d7d18db8f1d2c1337d780fc8746068d6d8b5f5dcfbfa4eea54bf73"
+    },
+    {
+      "file": "after-enclose-2.png",
+      "sha256": "cf591ba5e5decf4c4d61fc4b8d3acaef582a42fc656da1b15202521dc1a6d40c"
+    },
+    {
+      "file": "after-enclose-3.png",
+      "sha256": "58e65602adaaed3906017035f9aad0009341810a05bd72a962a1de596d89968f"
+    },
+    {
+      "file": "after-enclose-4.png",
+      "sha256": "6b92857d68d6a48bdc7e006912353b49c6c8323046715a63e42db2425469eab7"
+    },
+    {
+      "file": "after-enclose-5.png",
+      "sha256": "4a5257fdb5ca288ca7a04e51516a90fa174fc57f2e61489435627bb46b7b184e"
+    },
+    {
+      "file": "after-enclose-6.png",
+      "sha256": "9c48e7d463b56eb83d575e11f9aacda026bad09f84a5ab83c166876b111cd122"
+    },
+    {
+      "file": "after-enclose-7.png",
+      "sha256": "23566326008793b209dcc5c549d545332a754fa062311651465b2260d913f513"
+    },
+    {
+      "file": "after-cancel-1.png",
+      "sha256": "343ec1d9f0c00f8ffa25c500ef23c12dabe0b0fe1fb1ad172bbc45b296d11f15"
+    },
+    {
+      "file": "after-cancel-2.png",
+      "sha256": "58d46b6164c73f61ca55fe0b3afe79a31851e7fb9aa379a765d8a413e8c0aa34"
+    },
+    {
+      "file": "after-frames-1.png",
+      "sha256": "c901d8050cbe585569a773e5bb030e5c72bff732cc55e9d5d7168d5c03be488d"
+    },
+    {
+      "file": "after-tags-1.png",
+      "sha256": "c58f48e9bba4156ea6fcb010f7c8dbfda1ba4a2efc88df9f64f3e38d44d5c6fa"
+    },
+    {
+      "file": "after-tags-2.png",
+      "sha256": "90577eade8bc871cc3d3a44efcbf71e58fa7bb86735b7e25fbef77b2faa2ef8b"
+    },
+    {
+      "file": "after-proofs-1.png",
+      "sha256": "080ab4d171b50fef2cc0230ae7bd53170baf1aaf78bb21e7291a51a52a519909"
+    },
+    {
+      "file": "after-proofs-2.png",
+      "sha256": "e66941b17d99592cadd493a51dac8aa77da91447dc098e8d8e25e0bc15ffeb2a"
+    },
+    {
+      "file": "after-overlap-1.png",
+      "sha256": "6e3837d28dfc549d0644de70f5e35df3b2bab18a3095a2227d560274f82c19e0"
+    },
+    {
+      "file": "after-variants-1.png",
+      "sha256": "81ff9325de58f80e4f65769ebd6f203d5e32b0cf80f359f39ff2bea7931089be"
+    },
+    {
+      "file": "after-variants-2.png",
+      "sha256": "dc829e340c72061dc9667002d720ef99cfa9850277ed89f565922d829fe130a7"
+    },
+    {
+      "file": "after-physics-1.png",
+      "sha256": "6bd52466c821eaf5866c5fbc492b87a9f04dfda44a34b02e4ecda0aa7c5512cd"
+    },
+    {
+      "file": "after-chemistry-1.png",
+      "sha256": "c17b6892e635c1d9eb203f097cdb55e92ee7a93795d18848078ef8997320ad81"
+    },
+    {
+      "file": "after-core-1.png",
+      "sha256": "1c77bcdc4087b15fa6494bd10db64763a80f2589eccd120dc6e8269673b38532"
+    }
+  ],
+  "notes": {
+    "enclose": "All 29 notations draw the requested edges, curves, radicals, strikes and arrow directions. Native strokes and metrics differ from SVG.",
+    "cancel": "cancel, bcancel, xcancel and cancelto render strikes; the target value remains visible. Superscript offsets differ.",
+    "frames": "Boxed formulas and padded bbox frames enclose the complete content; combined box/circle/strike and colors are visible.",
+    "tags": "Left/right tags share the intended row and occupy the outside edge; align columns and unnumbered rows remain aligned.",
+    "proofs": "Solid/dashed/noLine, upward/downward and nested proofs draw their rules with centered conclusions; labels remain attached. Vertical gaps differ.",
+    "overlap": "Slash, star and fraction overlays are centered over the original base; fractions preserve the shared math baseline.",
+    "variants": "Styled Unicode alphabets and digits render. Calligraphic/script glyph designs, sans/mono forms and Greek fallback appearance differ by font.",
+    "physics": "Bold/bold-italic vectors and script order/principal-value symbols are visible. Font shapes differ.",
+    "chemistry": "Unicode arrows, equilibrium compositions, labels, bonds and prescripts render without PUA boxes. Harpoon widths and dashed-bond vertical gaps differ.",
+    "core": "Ordinary arithmetic, fractions, radicals, sums, integrals, matrices, fences and scripts are visible. Overline core-8 now spans its whole base. Underbrace glyph shape and large-operator metrics differ."
+  }
+}

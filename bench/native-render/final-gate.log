@@ -1,0 +1,59 @@
+build: exit 0
+
+test: exit 0
+  ...
+1..1715
+# tests 2337
+# suites 0
+# pass 2331
+# fail 0
+# cancelled 0
+# skipped 6
+# todo 0
+# duration_ms 6865.748807
+conformance: exit 1
+progress: 1700/2683
+progress: 1800/2683
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683
+conformance exact gate: 2635 matched / 0 mismatched / 48 unsupported; baseline IDs/statuses unchanged
+harness: exit 0
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1287.55971
+compare: exit 0
+comparison after: 195 formulas; enclose, cancel, frames, tags, proofs, overlap, variants, physics, chemistry, core
+screen: exit 0
+CDP schema Page.captureScreenshot format,quality,clip,fromSurface,captureBeyondViewport,optimizeForSpeed
+CDP schema Runtime.evaluate expression,objectGroup,includeCommandLineAPI,silent,contextId,returnByValue,generatePreview,userGesture,awaitPromise,throwOnSideEffect,timeout,disableBreaks,replMode,allowUnsafeEvalBlockedByCSP,uniqueContextId,serializationOptions
+CDP schema Input.dispatchKeyEvent type,modifiers,timestamp,text,unmodifiedText,keyIdentifier,code,key,windowsVirtualKeyCode,nativeVirtualKeyCode,autoRepeat,isKeypad,isSystemKey,location,commands
+screen_run: Chrome/153.0.8010.36; opened after.html; keyboard switched React SSR → toMathMLString → React SSR; 195 formulas; SSR/string geometry equal; captured every group
+visual: exit 0
+cancel: 12 formulas, 54 checks, 0 failures
+frames: 6 formulas, 20 checks, 0 failures
+tags: 14 formulas, 68 checks, 0 failures
+proofs: 12 formulas, 62 checks, 0 failures
+overlap: 12 formulas, 48 checks, 0 failures
+variants: 24 formulas, 48 checks, 0 failures
+physics: 8 formulas, 16 checks, 0 failures
+chemistry: 10 formulas, 20 checks, 0 failures
+core: 10 formulas, 22 checks, 0 failures
+visual feature gate: 724 checks; no failures; pixel identity not asserted
+unchanged: exit 0
+
+diff: exit 0
+
+native render gate: PASS (feature/geometry parity; font-dependent pixel differences documented)

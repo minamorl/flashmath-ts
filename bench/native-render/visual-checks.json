@@ -1,0 +1,5054 @@
+{
+  "browser": "Chrome/153.0.8010.36",
+  "formulas": 195,
+  "ssrStringParity": true,
+  "checks": [
+    {
+      "id": "enclose-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-1",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-2",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-3",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-4",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-5",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-6",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-7",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-8",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-9",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-10",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-10",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-10",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-11",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-11",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-11",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-12",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-12",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-12",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-13",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-13",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-13",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-14",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-14",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-14",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-15",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-15",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-15",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-16",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-16",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-16",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-17",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-17",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-17",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-18",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-18",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-18",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-19",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-19",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-19",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-20",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-20",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-20",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-21",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-21",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-21",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-22",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-22",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-22",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-23",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-23",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-23",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-24",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-24",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-24",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-25",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-25",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-25",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-26",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-26",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-26",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-27",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-27",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-27",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-28",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-28",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-28",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-29",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-29",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-29",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-30",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-30",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-30",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-31",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-31",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-31",
+      "name": "Core radical",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-32",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-32",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-32",
+      "name": "Core radical",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-33",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-33",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-33",
+      "name": "Core radical",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-34",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-34",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-34",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-34",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-35",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-35",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-35",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-35",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-36",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-36",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-36",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-36",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-37",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-37",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-37",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-37",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-38",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-38",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-38",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-38",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-39",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-39",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-39",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-39",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-40",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-40",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-40",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-40",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-41",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-41",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-41",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-41",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-42",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-42",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-42",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-42",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-43",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-43",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-43",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-43",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-44",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-44",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-44",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-44",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-45",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-45",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-45",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-45",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-46",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-46",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-46",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-46",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-47",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-47",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-47",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-47",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-48",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-48",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-48",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-48",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-49",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-49",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-49",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-49",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-49",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-50",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-50",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-50",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-50",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-50",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-51",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-51",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-51",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-51",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-51",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-52",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-52",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-52",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-52",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-52",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-53",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-53",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-53",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-53",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-53",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-54",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-54",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-54",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-54",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-54",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-55",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-55",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-55",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-55",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-55",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-56",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-56",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-56",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-56",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-56",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-57",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-57",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-57",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-57",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-57",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-58",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-58",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-58",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-58",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-58",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-59",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-59",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-59",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-59",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-59",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-60",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-60",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-60",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-60",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-60",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-61",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-61",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-61",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-61",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-61",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-61",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-62",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-62",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-62",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-62",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-62",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-62",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-63",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-63",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-63",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-63",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-63",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-63",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-64",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-64",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-64",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-64",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-64",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-64",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-65",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-65",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-65",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-65",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-65",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-65",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-66",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-66",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-66",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-66",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-66",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-66",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-67",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-67",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-67",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-67",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-67",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-68",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-68",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-68",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-68",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-68",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-69",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-69",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-69",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-69",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-69",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-70",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-70",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-70",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-70",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-70",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-71",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-71",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-71",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-71",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-71",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-72",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-72",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-72",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-72",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-72",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-73",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-73",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-73",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-73",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-73",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-74",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-74",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-74",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-74",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-74",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-75",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-75",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-75",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-75",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-75",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-76",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-76",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-76",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-76",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-76",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-77",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-77",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-77",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-77",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-77",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-78",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-78",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-78",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-78",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-78",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-79",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-79",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-79",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-79",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-79",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-80",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-80",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-80",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-80",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-80",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-81",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-81",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-81",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-81",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-81",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-82",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-82",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-82",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-82",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-82",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-82",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-83",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-83",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-83",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-83",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-83",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-83",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-84",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-84",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-84",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-84",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-84",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-84",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-85",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-85",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-85",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-85",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-85",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-85",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-86",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-86",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-86",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-86",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-86",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-86",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-87",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-87",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-87",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-87",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-87",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "enclose-87",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-1",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-1",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-2",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-2",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-3",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-3",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-4",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-4",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-5",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-5",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-6",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-6",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-7",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-7",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-7",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-8",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-8",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-8",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-9",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-9",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-9",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-10",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-10",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-10",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-10",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-10",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-11",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-11",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-11",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-11",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-11",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-12",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-12",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-12",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-12",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "cancel-12",
+      "name": "painted arrowhead",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-1",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-2",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-3",
+      "name": "bbox encloses complete content",
+      "pass": true,
+      "details": {
+        "parent": {
+          "x": 1016.71875,
+          "y": 13621.890625,
+          "width": 75.0625,
+          "height": 30,
+          "right": 1091.78125,
+          "bottom": 13651.890625
+        },
+        "content": {
+          "left": 1021.71875,
+          "right": 1086.78125,
+          "top": 13626.890625,
+          "bottom": 13646.890625
+        }
+      }
+    },
+    {
+      "id": "frames-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-4",
+      "name": "bbox encloses complete content",
+      "pass": true,
+      "details": {
+        "parent": {
+          "x": 1035.796875,
+          "y": 13736.171875,
+          "width": 36.90625,
+          "height": 64.890625,
+          "right": 1072.703125,
+          "bottom": 13801.0625
+        },
+        "content": {
+          "left": 1043.984375,
+          "right": 1064.515625,
+          "top": 13744.359375,
+          "bottom": 13792.875
+        }
+      }
+    },
+    {
+      "id": "frames-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-5",
+      "name": "enclosure strokes exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-5",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-5",
+      "name": "painted stroke",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "frames-6",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-1",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1322.296875,
+          "y": 14198.84375,
+          "width": 61.703125,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14221.84375
+        },
+        "body": {
+          "left": 1020.390625,
+          "right": 1088.109375
+        }
+      }
+    },
+    {
+      "id": "tags-1",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-2",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1239.796875,
+          "y": 14321.3125,
+          "width": 144.203125,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14344.3125
+        },
+        "body": {
+          "left": 1019.453125,
+          "right": 1089.046875
+        }
+      }
+    },
+    {
+      "id": "tags-2",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-3",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1324.359375,
+          "y": 14448.84375,
+          "width": 59.640625,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14471.84375
+        },
+        "body": {
+          "left": 999.234375,
+          "right": 1109.25
+        }
+      }
+    },
+    {
+      "id": "tags-3",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-4",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1324.359375,
+          "y": 14562.9375,
+          "width": 59.640625,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14585.9375
+        },
+        "body": {
+          "left": 1042.890625,
+          "right": 1110.609375
+        }
+      }
+    },
+    {
+      "id": "tags-4",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-4",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1324.359375,
+          "y": 14589.9375,
+          "width": 59.640625,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14612.9375
+        },
+        "body": {
+          "left": 997.890625,
+          "right": 1107.90625
+        }
+      }
+    },
+    {
+      "id": "tags-4",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-5",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1324.359375,
+          "y": 14717.125,
+          "width": 59.640625,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14740.125
+        },
+        "body": {
+          "left": 997.890625,
+          "right": 1107.90625
+        }
+      }
+    },
+    {
+      "id": "tags-5",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-6",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1324.359375,
+          "y": 14819.0625,
+          "width": 59.640625,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14842.0625
+        },
+        "body": {
+          "left": 1020.390625,
+          "right": 1088.109375
+        }
+      }
+    },
+    {
+      "id": "tags-6",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-6",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1324.359375,
+          "y": 14856.296875,
+          "width": 59.640625,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14879.296875
+        },
+        "body": {
+          "left": 1020.890625,
+          "right": 1087.59375
+        }
+      }
+    },
+    {
+      "id": "tags-6",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-7",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1324.359375,
+          "y": 14968.53125,
+          "width": 59.640625,
+          "height": 23,
+          "right": 1384,
+          "bottom": 14991.53125
+        },
+        "body": {
+          "left": 960.578125,
+          "right": 1147.921875
+        }
+      }
+    },
+    {
+      "id": "tags-7",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-7",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1324.359375,
+          "y": 14995.53125,
+          "width": 59.640625,
+          "height": 23,
+          "right": 1384,
+          "bottom": 15018.53125
+        },
+        "body": {
+          "left": 961.796875,
+          "right": 1143.125
+        }
+      }
+    },
+    {
+      "id": "tags-7",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-8",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15106.625,
+          "width": 61.703125,
+          "height": 23,
+          "right": 786.203125,
+          "bottom": 15129.625
+        },
+        "body": {
+          "left": 1020.390625,
+          "right": 1088.109375
+        }
+      }
+    },
+    {
+      "id": "tags-8",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-9",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15229.09375,
+          "width": 144.203125,
+          "height": 23,
+          "right": 868.703125,
+          "bottom": 15252.09375
+        },
+        "body": {
+          "left": 1019.453125,
+          "right": 1089.046875
+        }
+      }
+    },
+    {
+      "id": "tags-9",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-10",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-10",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-10",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15356.625,
+          "width": 59.640625,
+          "height": 23,
+          "right": 784.140625,
+          "bottom": 15379.625
+        },
+        "body": {
+          "left": 999.234375,
+          "right": 1109.25
+        }
+      }
+    },
+    {
+      "id": "tags-10",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-11",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-11",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-11",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15470.71875,
+          "width": 59.640625,
+          "height": 23,
+          "right": 784.140625,
+          "bottom": 15493.71875
+        },
+        "body": {
+          "left": 1042.890625,
+          "right": 1110.609375
+        }
+      }
+    },
+    {
+      "id": "tags-11",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-11",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15497.71875,
+          "width": 59.640625,
+          "height": 23,
+          "right": 784.140625,
+          "bottom": 15520.71875
+        },
+        "body": {
+          "left": 997.890625,
+          "right": 1107.90625
+        }
+      }
+    },
+    {
+      "id": "tags-11",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-12",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-12",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-12",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15624.90625,
+          "width": 59.640625,
+          "height": 23,
+          "right": 784.140625,
+          "bottom": 15647.90625
+        },
+        "body": {
+          "left": 997.890625,
+          "right": 1107.90625
+        }
+      }
+    },
+    {
+      "id": "tags-12",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-13",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-13",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-13",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15726.84375,
+          "width": 59.640625,
+          "height": 23,
+          "right": 784.140625,
+          "bottom": 15749.84375
+        },
+        "body": {
+          "left": 1020.390625,
+          "right": 1088.109375
+        }
+      }
+    },
+    {
+      "id": "tags-13",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-13",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15764.078125,
+          "width": 59.640625,
+          "height": 23,
+          "right": 784.140625,
+          "bottom": 15787.078125
+        },
+        "body": {
+          "left": 1020.890625,
+          "right": 1087.59375
+        }
+      }
+    },
+    {
+      "id": "tags-13",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-14",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-14",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-14",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15876.3125,
+          "width": 59.640625,
+          "height": 23,
+          "right": 784.140625,
+          "bottom": 15899.3125
+        },
+        "body": {
+          "left": 960.578125,
+          "right": 1147.921875
+        }
+      }
+    },
+    {
+      "id": "tags-14",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "tags-14",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "left",
+        "tag": {
+          "x": 724.5,
+          "y": 15903.3125,
+          "width": 59.640625,
+          "height": 23,
+          "right": 784.140625,
+          "bottom": 15926.3125
+        },
+        "body": {
+          "left": 961.796875,
+          "right": 1143.125
+        }
+      }
+    },
+    {
+      "id": "tags-14",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-1",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "solid"
+        ],
+        "actual": [
+          "solid"
+        ]
+      }
+    },
+    {
+      "id": "proofs-1",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-1",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "proofs-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-2",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "solid",
+          "solid"
+        ],
+        "actual": [
+          "solid",
+          "solid"
+        ]
+      }
+    },
+    {
+      "id": "proofs-2",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-2",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "proofs-2",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-3",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "solid"
+        ],
+        "actual": [
+          "solid"
+        ]
+      }
+    },
+    {
+      "id": "proofs-3",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-3",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-4",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "solid",
+          "solid"
+        ],
+        "actual": [
+          "solid",
+          "solid"
+        ]
+      }
+    },
+    {
+      "id": "proofs-4",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-4",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-4",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-5",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "dashed"
+        ],
+        "actual": [
+          "dashed"
+        ]
+      }
+    },
+    {
+      "id": "proofs-5",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-5",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "proofs-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-6",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "dashed",
+          "solid"
+        ],
+        "actual": [
+          "dashed",
+          "solid"
+        ]
+      }
+    },
+    {
+      "id": "proofs-6",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-6",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "proofs-6",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-7",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "dashed"
+        ],
+        "actual": [
+          "dashed"
+        ]
+      }
+    },
+    {
+      "id": "proofs-7",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-7",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-8",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "dashed",
+          "solid"
+        ],
+        "actual": [
+          "solid",
+          "dashed"
+        ]
+      }
+    },
+    {
+      "id": "proofs-8",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-8",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-8",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-9",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [],
+        "actual": []
+      }
+    },
+    {
+      "id": "proofs-9",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-10",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-10",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-10",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "solid"
+        ],
+        "actual": [
+          "solid"
+        ]
+      }
+    },
+    {
+      "id": "proofs-10",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-10",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "proofs-11",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-11",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-11",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [],
+        "actual": []
+      }
+    },
+    {
+      "id": "proofs-11",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-12",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-12",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-12",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [
+          "solid"
+        ],
+        "actual": [
+          "solid"
+        ]
+      }
+    },
+    {
+      "id": "proofs-12",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-12",
+      "name": "conclusion/premises centered on rule",
+      "pass": true,
+      "details": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "overlap-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-1",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-1",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-2",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-2",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-3",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-3",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-4",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-4",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-5",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-5",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-6",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-6",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-7",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-7",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-8",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-8",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-9",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-9",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-10",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-10",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-10",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-10",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-11",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-11",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-11",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-11",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-12",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-12",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "overlap-12",
+      "name": "overlay horizontally centered",
+      "pass": true,
+      "details": {
+        "delta": 0.0078125
+      }
+    },
+    {
+      "id": "overlap-12",
+      "name": "overlay preserves base width",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-10",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-10",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-11",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-11",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-12",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-12",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-13",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-13",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-14",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-14",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-15",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-15",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-16",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-16",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-17",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-17",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-18",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-18",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-19",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-19",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-20",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-20",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-21",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-21",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-22",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-22",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-23",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-23",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-24",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "variants-24",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "physics-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-10",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-10",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-8",
+      "name": "enclosure borders exist",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-8",
+      "name": "overline spans complete base",
+      "pass": true,
+      "details": {
+        "base": 65.0625,
+        "accent": 65.0625
+      }
+    },
+    {
+      "id": "core-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-10",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "core-10",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    }
+  ],
+  "groups": [
+    {
+      "group": "enclose",
+      "formulas": 87,
+      "checks": 366,
+      "failed": 0
+    },
+    {
+      "group": "cancel",
+      "formulas": 12,
+      "checks": 54,
+      "failed": 0
+    },
+    {
+      "group": "frames",
+      "formulas": 6,
+      "checks": 20,
+      "failed": 0
+    },
+    {
+      "group": "tags",
+      "formulas": 14,
+      "checks": 68,
+      "failed": 0
+    },
+    {
+      "group": "proofs",
+      "formulas": 12,
+      "checks": 62,
+      "failed": 0
+    },
+    {
+      "group": "overlap",
+      "formulas": 12,
+      "checks": 48,
+      "failed": 0
+    },
+    {
+      "group": "variants",
+      "formulas": 24,
+      "checks": 48,
+      "failed": 0
+    },
+    {
+      "group": "physics",
+      "formulas": 8,
+      "checks": 16,
+      "failed": 0
+    },
+    {
+      "group": "chemistry",
+      "formulas": 10,
+      "checks": 20,
+      "failed": 0
+    },
+    {
+      "group": "core",
+      "formulas": 10,
+      "checks": 22,
+      "failed": 0
+    }
+  ],
+  "failures": [],
+  "referenceDifferences": [
+    {
+      "id": "frames-1",
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/0/0",
+        "expected": 3,
+        "actual": 1
+      }
+    },
+    {
+      "id": "tags-10",
+      "difference": {
+        "category": "attributes",
+        "path": "/math/0",
+        "expected": [
+          [
+            "{}displaystyle",
+            "true"
+          ],
+          [
+            "{}side",
+            "left"
+          ]
+        ],
+        "actual": [
+          [
+            "{}displaystyle",
+            "true"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "proofs-9",
+      "difference": {
+        "category": "attributes",
+        "path": "/math/0",
+        "expected": [
+          [
+            "{}align",
+            "top 2"
+          ],
+          [
+            "{}framespacing",
+            "0 0"
+          ],
+          [
+            "{}semantics",
+            "bspr_inferenceRule:down;bspr_inference:2;bspr_proof:true"
+          ]
+        ],
+        "actual": [
+          [
+            "{}align",
+            "top 2"
+          ],
+          [
+            "{}framespacing",
+            "0 0"
+          ],
+          [
+            "{}rowlines",
+            "none"
+          ],
+          [
+            "{}semantics",
+            "bspr_inferenceRule:down;bspr_inference:2;bspr_proof:true"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "proofs-10",
+      "difference": {
+        "category": "attributes",
+        "path": "/math/0/0/0/0/0/0/0/0/0/0/0",
+        "expected": [
+          [
+            "{}align",
+            "top 2"
+          ],
+          [
+            "{}framespacing",
+            "0 0"
+          ],
+          [
+            "{}semantics",
+            "bspr_inferenceRule:down"
+          ]
+        ],
+        "actual": [
+          [
+            "{}align",
+            "top 2"
+          ],
+          [
+            "{}framespacing",
+            "0 0"
+          ],
+          [
+            "{}rowlines",
+            "none"
+          ],
+          [
+            "{}semantics",
+            "bspr_inferenceRule:down"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "proofs-11",
+      "difference": {
+        "category": "attributes",
+        "path": "/math/0",
+        "expected": [
+          [
+            "{}align",
+            "top 2"
+          ],
+          [
+            "{}framespacing",
+            "0 0"
+          ],
+          [
+            "{}semantics",
+            "bspr_inferenceRule:up;bspr_inference:2;bspr_proof:true"
+          ]
+        ],
+        "actual": [
+          [
+            "{}align",
+            "top 2"
+          ],
+          [
+            "{}framespacing",
+            "0 0"
+          ],
+          [
+            "{}rowlines",
+            "none"
+          ],
+          [
+            "{}semantics",
+            "bspr_inferenceRule:up;bspr_inference:2;bspr_proof:true"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "proofs-12",
+      "difference": {
+        "category": "attributes",
+        "path": "/math/0/0/1/0/0/0/0/0/0/0/0",
+        "expected": [
+          [
+            "{}align",
+            "top 2"
+          ],
+          [
+            "{}framespacing",
+            "0 0"
+          ],
+          [
+            "{}semantics",
+            "bspr_inferenceRule:up"
+          ]
+        ],
+        "actual": [
+          [
+            "{}align",
+            "top 2"
+          ],
+          [
+            "{}framespacing",
+            "0 0"
+          ],
+          [
+            "{}rowlines",
+            "none"
+          ],
+          [
+            "{}semantics",
+            "bspr_inferenceRule:up"
+          ]
+        ]
+      }
+    }
+  ],
+  "pixelParity": "not asserted: different native and MathJax SVG fonts; see docs/native-render.md"
+}

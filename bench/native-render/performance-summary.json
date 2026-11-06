@@ -1,0 +1,31 @@
+{
+  "sourceSha256": "0381026e99d1653742bb1366385cbcf93525e13e570b6073945c0cf443b97d54",
+  "scope": "existing core corpus; TeX to MathML string, not SVG or browser paint; serial workers; setup excluded from warm samples; one fresh process per engine, five in-process warm samples, 30 corpus passes each; not a before/after claim",
+  "node": "v26.12.1",
+  "data": {
+    "flashmath": {
+      "importAndSetupMs": 58.097983,
+      "warmMicrosecondsPerConversion": [
+        16.074502777777788,
+        16.427586111111086,
+        16.78247777777781,
+        16.97205833333331,
+        18.761100000000003
+      ],
+      "p50": 16.78247777777781,
+      "p95": 18.761100000000003
+    },
+    "mathjax": {
+      "importAndSetupMs": 74.91651300000001,
+      "warmMicrosecondsPerConversion": [
+        219.9087388888889,
+        244.1800416666663,
+        249.892211111111,
+        259.1091333333335,
+        268.72915000000023
+      ],
+      "p50": 249.892211111111,
+      "p95": 268.72915000000023
+    }
+  }
+}

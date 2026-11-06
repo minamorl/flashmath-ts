@@ -268,6 +268,26 @@ reviewed separately; geometry alone is not evidence of matching glyph design.
 
 Browser: Chrome/153.0.8010.36. All 195 SSR/string pairs have identical measured geometry.
 
+<!-- /measured-results -->
+
+
+### Visual review of the captured panels
+
+| Group | Observation |
+| --- | --- |
+| enclose | All 29 notations draw the requested edges, curves, radicals, strikes and arrow directions. Native strokes and metrics differ from SVG. |
+| cancel | cancel, bcancel, xcancel and cancelto render strikes; the target value remains visible. Superscript offsets differ. |
+| frames | Boxed formulas and padded bbox frames enclose the complete content; combined box/circle/strike and colors are visible. |
+| tags | Left/right tags share the intended row and occupy the outside edge; align columns and unnumbered rows remain aligned. |
+| proofs | Solid/dashed/noLine, upward/downward and nested proofs draw their rules with centered conclusions; labels remain attached. Vertical gaps differ. |
+| overlap | Slash, star and fraction overlays are centered over the original base; fractions preserve the shared math baseline. |
+| variants | Styled Unicode alphabets and digits render. Calligraphic/script glyph designs, sans/mono forms and Greek fallback appearance differ by font. |
+| physics | Bold/bold-italic vectors and script order/principal-value symbols are visible. Font shapes differ. |
+| chemistry | Unicode arrows, equilibrium compositions, labels, bonds and prescripts render without PUA boxes. Harpoon widths and dashed-bond vertical gaps differ. |
+| core | Ordinary arithmetic, fractions, radicals, sums, integrals, matrices, fences and scripts are visible. Overline core-8 now spans its whole base. Underbrace glyph shape and large-operator metrics differ. |
+
+All panels listed and hashed in `bench/native-render/visual-review.json` were opened for visual inspection. Feature verdict: PASS. Pixel parity: NOT ACHIEVED.
+
 ## Verification limits
 
 Font-dependent metric and glyph differences described above remain. Existing
