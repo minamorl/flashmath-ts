@@ -1,1 +1,25 @@
 Initialized empty Git repository in /home/minamorl/.cc/tmp/yjwXVeVp/tmp.EmPMSEBIMV/
+[lane/conformance-harness df0f3f9] test: add MathJax 4.1.3 conformance harness
+ 19 files changed, 90612 insertions(+)
+ create mode 100644 conformance/.gitignore
+ create mode 100644 conformance/extract.mjs
+ create mode 100644 conformance/fixtures/ATTRIBUTION.MathJax
+ create mode 100644 conformance/fixtures/LICENSE.MathJax
+ create mode 100644 conformance/fixtures/extraction-diagnostics.json
+ create mode 100644 conformance/fixtures/mathjax-4.1.3.json
+ create mode 100644 conformance/harness.test.mjs
+ create mode 100644 conformance/mathjax.mjs
+ create mode 100644 conformance/normalize.mjs
+ create mode 100644 conformance/results/extraction-repro.log
+ create mode 100644 conformance/results/extraction.log
+ create mode 100644 conformance/results/git-delivery.log
+ create mode 100644 conformance/results/mathjax-partial-resume.log
+ create mode 100644 conformance/results/mathjax-resume.log
+ create mode 100644 conformance/results/mathjax-self.json
+ create mode 100644 conformance/results/mathjax-self.log
+ create mode 100644 conformance/results/tests.log
+ create mode 100644 conformance/runner.mjs
+ create mode 100644 docs/conformance.md
+commit_exit_code=0
+bundle_exit_code=0
+df0f3f9afb1ce7f72b5f83bd8b55b43bb4660007
