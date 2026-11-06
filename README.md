@@ -1,14 +1,17 @@
-# flashmath
+# @minamorl/flashmath
 
 TeX to MathML for React. Work in progress (0.x).
 
 ## Usage
 
-Build the workspace with `pnpm install --frozen-lockfile` and `pnpm run build`,
-then use the package entry points. The package remains private and unpublished.
+```sh
+npm install @minamorl/flashmath react react-dom
+```
+
+Use the core or React entry point:
 
 ```ts
-import {parseToMathMLAst, toMathMLString} from '@rainpulse/flashmath';
+import {parseToMathMLAst, toMathMLString} from '@minamorl/flashmath';
 
 const ast = parseToMathMLAst(String.raw`\frac{a+b}{\sqrt{x}}`, {
   display: true,
@@ -20,7 +23,7 @@ const mathml = toMathMLString(ast);
 For React, the separate entry point returns real MathML elements:
 
 ```tsx
-import {parseToReact} from '@rainpulse/flashmath/react';
+import {parseToReact} from '@minamorl/flashmath/react';
 
 export function Formula({tex}: {tex: string}) {
   return parseToReact(tex, {display: true});
@@ -37,7 +40,7 @@ For multiple expressions in one document, use a session so macros, labels and
 equation counters carry forward:
 
 ```ts
-import {createMathMLParser, toMathMLString} from '@rainpulse/flashmath';
+import {createMathMLParser, toMathMLString} from '@minamorl/flashmath';
 
 const document = createMathMLParser({display: true, tags: 'all'});
 document.parse(String.raw`x=1\label{value}`);
@@ -114,5 +117,5 @@ Add a package in `src/packages/<name>.ts` and one registration line; see
 [docs/packages.md](docs/packages.md) for the handler contract and validation.
 Generated symbol/operator data is attributed in `src/ATTRIBUTION.MathJax` and
 licensed under `src/LICENSE.MathJax`. Runtime code imports neither MathJax nor
-Temml. Regenerate the base decision tree using the pinned MathJax dependency:
+Temml. Regenerate the base symbol tables using the pinned MathJax dependency:
 `node bench/flashmath/generate-symbols.mjs`.

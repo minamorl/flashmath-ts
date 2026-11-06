@@ -9,7 +9,7 @@ import type {TexPackage,TexCommand,TexEnvironment} from './types.js';
 import {scan,raw,spelling} from '../scanner.js';
 import type {Token} from '../scanner.js';
 import {operator,em,dimensionEm,fenceChars} from '../mathml.js';
-const symbols = [
+const symbols = () => [
   {"name":"digamma","type":"mathchar0mi","char":"ϝ","attrs":{}},
   {"name":"varkappa","type":"mathchar0mi","char":"ϰ","attrs":{}},
   {"name":"varGamma","type":"mathchar0mi","char":"Γ","attrs":{"mathvariant":"italic"}},
@@ -259,7 +259,15 @@ const symbols = [
   {"name":"rVert","type":"delimiter","char":"‖","attrs":{"texClass":5}},
   {"name":"iiiint","type":"mathchar0mo","char":"⨌","attrs":{"texClass":1}},
 ];
-const commands:Record<string,TexCommand> = Object.fromEntries(symbols.map(d=>[d.name,{...d,execute(p,t,def,id){const n=p.symbol(t,id,def);n.relation=n.kind===K.mo&&operator(n.text)?.[2]===3;p.append(n);}}]));
+const commands:Record<string,TexCommand> = {};
+let symbolsLoaded=false;
+function packageCommands(){
+ if(!symbolsLoaded){symbolsLoaded=true;
+  for(const d of symbols())if(!commands[d.name])commands[d.name]={...d,execute(p,t,def,id){const n=p.symbol(t,id,def);n.relation=n.kind===K.mo&&operator(n.text)?.[2]===3;p.append(n);}};
+  for(const [name,d]of Object.entries(base.commands))if(d.char&&operator(d.char)?.[2]===3&&!commands[name])commands[name]={...d,execute(p,t,def,id){const n=p.symbol(t,id,def);n.relation=true;p.append(n);}};
+ }
+ return commands;
+}
 
 export function sequence(n:Node):Node[] {
   return n.kind===K.mrow&&!Object.keys(n.attributes).length?n.children:[n];
@@ -381,7 +389,7 @@ export function tagCell(p:Parser,tag:string,label='',starred=false):Node {
 }
 commands.tag={execute(p){const starred=star(p),tag=raw(p.tokensArgument()).trim(),t=p.tagTable();
   if(!tag){if(t)t.noNumbers.add(t.rows.length);return;}
-  if(t){const row=t.rows.length;if(!tag){t.noNumbers.add(row);return;}if(t.tagCells.has(row))p.error('Multiple \\tag');t.tagCells.set(row,tagCell(p,tag,t.labels[row],starred));(t.explicitTags??=new Map()).set(row,tag);t.noNumbers.delete(row);return;}
+  if(t){const row=t.rows.length;if(t.tagCells.has(row))p.error('Multiple \\tag');t.tagCells.set(row,tagCell(p,tag,t.labels[row],starred));(t.explicitTags??=new Map()).set(row,tag);t.noNumbers.delete(row);return;}
   const equation=[...p.frames].reverse().find(f=>f.env==='equation'||f.env==='equation*');
   if(equation){if(equationTags.has(equation))p.error('Multiple \\tag');equationTags.set(equation,{tag,starred});return;}
   if(explicitTags.has(p))p.error('Multiple \\tag');explicitTags.set(p,true);p.hasTaggableEnvironment=true;
@@ -471,9 +479,9 @@ function adjustFlalign(p:Parser,n:Node,bare:string,count:number){
   const width=padded?['fit','auto','auto']:['auto','auto','fit'];
   n.attributes={...(bare==='flalign'&&max<=2?{}:{width:'100%'}),...n.attributes,columnalign:Array.from({length:max},(_,i)=>pattern[i%3]).join(' '),columnspacing:'0em',columnwidth:Array.from({length:max},(_,i)=>width[i%3]).join(' '),'data-break-align':Array.from({length:max},(_,i)=>({left:'top',right:'bottom',center:'middle'})[pattern[i%3]]).join(' '),'data-width-includes-label':'true',...(bare!=='flalign'?{minlabelspacing:'0'}:{})};
 }
-for(const [name,d]of Object.entries(base.commands))if(d.char&&operator(d.char)?.[2]===3&&!commands[name])commands[name]={...d,execute(p,t,def,id){const n=p.symbol(t,id,def);n.relation=true;p.append(n);}};
+
 const environments:Record<string,TexEnvironment>={};
 for(const name of ['equation','equation*','eqnarray','eqnarray*','align','align*','multline','multline*','split','gather','gather*','alignat','alignat*','alignedat','aligned','gathered','xalignat','xalignat*','xxalignat','flalign','flalign*','subarray','smallmatrix','matrix','pmatrix','bmatrix','Bmatrix','vmatrix','Vmatrix','cases'])environments[name]={begin:beginAms};
 commands.mmlToken={...base.commands.mmlToken,execute(p,t,d,id){base.commands.mmlToken.execute(p,t,d,id);const n=p.f.nodes.at(-1)!;n.text=n.text.replace(/\\U\{([0-9a-fA-F]+)\}/g,(_,hex)=>String.fromCodePoint(parseInt(hex,16)));}};
 commands.mbox={execute(p){const tokens=p.tokensArgument(),text=raw(tokens).replace(/\\eqref\{([^}]+)\}/g,(_,label)=>'$\\eqref{'+label+'}$');p.renderText(scan(text),'',true);}};
-export default {name:'ams',commands,environments,configurationModules:['input/tex/ams/AmsConfiguration.js'],options:['ams']} satisfies TexPackage;
+export default {name:'ams',get commands(){return packageCommands();},environments,configurationModules:['input/tex/ams/AmsConfiguration.js'],options:['ams']} satisfies TexPackage;

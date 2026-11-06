@@ -1,7 +1,7 @@
 // Actions adapted from mhchemParser 4.2.1, copyright 2015–2023 Martin Hensel,
 // Apache-2.0 (../LICENSE.MathJax). Changed: numeric dispatch, source-span buffers,
 // handwritten matchers and direct TeX emission. No regexp lexer or runtime oracle.
-import {Pattern as P, Action as A, Machine as M, grammar} from './mhchem-grammar.js';
+import {Pattern as P, Action as A, Machine as M, chemistryGrammar} from './mhchem-grammar.js';
 import type {Option} from './mhchem-grammar.js';
 type SourceIndex = {braces?:Map<number,number>};
 type Piece = {source:string;start:number;end:number;index?:SourceIndex};
@@ -216,7 +216,7 @@ export class MhchemMachine {
   run(text:Text,machine:M,depth=0):Item[] {
     if(depth>=this.maxDepth)this.fail('Nesting limit exceeded');
     if(!nonempty(text))return [];
-    const v=new View(text),g=grammar[machine],buf:Buffer={fields:{},sb:false,bond:false,parentheses:0,defect:false,oxidation:false},out:Item[]=[];
+    const v=new View(text),g=chemistryGrammar()[machine],buf:Buffer={fields:{},sb:false,bond:false,parentheses:0,defect:false,oxidation:false},out:Item[]=[];
     let state=g.start,i=0,stalled=0;
     const go=(t:Text=[],m:M=machine)=>this.run(t,m,depth+1);
     const render=(t:Text=[],m:M=machine)=>join(go(t,m));

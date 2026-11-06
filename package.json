@@ -1,7 +1,6 @@
 {
-  "name": "@rainpulse/flashmath",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@minamorl/flashmath",
+  "version": "0.1.0",
   "description": "TeX to MathML parser for React, conformance-tested against MathJax",
   "type": "module",
   "license": "MIT",
@@ -18,7 +17,8 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3"
+    "@types/react-dom": "19.2.3",
+    "esbuild": "0.28.2"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -37,9 +37,20 @@
     "react-dom": ">=18"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "node scripts/build.mjs",
     "test": "node --test test/*.test.mjs test/packages/*.test.mjs",
     "conformance": "node bench/flashmath/conformance.mjs",
-    "bench": "node bench/flashmath/run.mjs"
-  }
+    "bench": "node bench/flashmath/run.mjs",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ]
 }

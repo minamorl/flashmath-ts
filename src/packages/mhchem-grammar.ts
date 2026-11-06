@@ -7,7 +7,8 @@ export const enum Machine {TeX, Ce, Amount, Body, Text, Sub, Sup, Oxidation, Mat
 export type Option = string | number | boolean | null;
 export type Rule = readonly [Pattern, readonly (readonly [Action, Option])[], number, number];
 export interface Grammar {name:string;names:readonly string[];states:readonly (readonly number[])[];rules:readonly Rule[];start:number}
-export const grammar: readonly Grammar[] = [
+let cachedGrammar: readonly Grammar[] | undefined;
+export function chemistryGrammar(): readonly Grammar[] {return cachedGrammar ??= [
   {name:"tex", names:["0"], start:0,
     states:[
       [0,1,2,3], // 0
@@ -428,4 +429,4 @@ export const grammar: readonly Grammar[] = [
       [Pattern.Any,[[Action.SetText,null]],-1,0], // 3
       [Pattern.Empty,[[Action.DecimalOutput,null]],-1,0], // 4
     ]},
-];
+];}

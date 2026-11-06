@@ -1,3 +1,4 @@
+import {build} from 'esbuild';
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
@@ -163,16 +164,16 @@ test("package activation is separate from module registration and unsupported co
 });
 
 test("a package adds commands, overrides, delimiters and an environment with one registry line", async () => {
-  // Copy compiled modules into a disposable fixture, leaving the real registry intact.
+  // Build a disposable source fixture to exercise the one-line package registry boundary.
   const tmp = fs.mkdtempSync(
     path.join(process.env.TMPDIR ?? os.tmpdir(), "flashmath-package-test-"),
   );
   try {
-    fs.cpSync(new URL("../dist/", import.meta.url), tmp, { recursive: true });
+    fs.cpSync(new URL("../src/", import.meta.url), path.join(tmp,"src"), { recursive: true });
     fs.writeFileSync(path.join(tmp, "package.json"), ' {"type":"module"}\n');
     const module = `export default {name:'probe',commands:{sentinel:{execute(p){p.append(p.text(p.tokensArgument()));}},frac:{execute(p){p.append(p.text(p.tokensArgument()));}},fence:{type:'delimiter',char:'|',attrs:{texClass:0},execute(p,t,d,id){p.append(p.symbol(t,id,d));}}},environments:{nest:{begin(p,name){p.frame(-4,false,n=>p.append(p.atom(n,'INNER')),name);}}}};\n`;
-    fs.writeFileSync(path.join(tmp, "packages/probe.js"), module);
-    const registry = path.join(tmp, "packages/registry.js");
+    fs.writeFileSync(path.join(tmp, "src/packages/probe.js"), module);
+    const registry = path.join(tmp, "src/packages/registry.ts");
     fs.writeFileSync(
       registry,
       fs
@@ -182,6 +183,7 @@ test("a package adds commands, overrides, delimiters and an environment with one
           "import probe from './probe.js'; registrations.push(probe);\nexport const registeredPackages",
         ),
     );
+    await build({entryPoints:[path.join(tmp,"src/index.ts")],outfile:path.join(tmp,"index.js"),bundle:true,format:"esm",platform:"neutral",target:"es2022"});
     const { parseToMathMLAst: parse } = await import(
       pathToFileURL(path.join(tmp, "index.js")).href
     );

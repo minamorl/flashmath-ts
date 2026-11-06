@@ -561,7 +561,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
         const x =
           id === C.mathop &&
           n.kind === K.mi &&
-          !!n.attributes.mathvariant && !n.attributes.mathvariant.startsWith("-tex-") || id === C.mathop && n.kind === K.mi && n.text.length > 1
+          (n.text.length > 1 || !!n.attributes.mathvariant && !n.attributes.mathvariant.startsWith("-tex-"))
             ? n
             : n.kind === K.mrow && n.children.length === 0
               ? n

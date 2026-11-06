@@ -4,7 +4,7 @@ import type {Parser} from '../parser.js';
 import {raw,scan} from '../scanner.js';
 import type {TexPackage} from './types.js';
 
-export function children(n:Node){return n.kind===K.mrow&&!Object.keys(n.attributes).length?n.children:[n];}
+export function children(n:Node){return n.inferred?n.children:[n];}
 export function scopeStyle(p:Parser,attrs:Record<string,string>){
   const f=p.f,existing=f.nodes,done=f.done;f.nodes=[];
   f.done=nodes=>done([...existing,p.node(K.mstyle,nodes,'',attrs)]);

@@ -1,14 +1,14 @@
 import {K} from '../ast.js';
 import type {Node} from '../ast.js';
 import type {Parser} from '../parser.js';
-import {metrics} from './bussproofs-metrics.js';
+import {fontMetrics} from './bussproofs-metrics.js';
 import {operator} from '../mathml.js';
 type Properties=Map<Node,Map<string,string>>;
 const em=(n:number)=>Math.abs(n)<.0006?'0em':n.toFixed(3).replace(/\.?0+$/,'')+'em';
 const length=(s:string)=>parseFloat(s)*(s.endsWith('ex')?.431:s.endsWith('px')?1/16:s.endsWith('pt')?.1:1)||0;
 function glyph(code:number,italic:boolean):readonly [number,number] {
  let mapped=code;if(italic){if(code>=65&&code<=90)mapped=code-65+0x1d434;else if(code>=97&&code<=122)mapped=code===104?0x210e:code-97+0x1d44e;}
- return metrics[mapped]??metrics[code]??[.5,0];
+ const metrics=fontMetrics();return metrics[mapped]??metrics[code]??[.5,0];
 }
 function bbox(n:Node):{w:number;ic:number} {
  let w=0,ic=0;
