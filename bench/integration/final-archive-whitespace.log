@@ -1,0 +1,14 @@
+bench/pkg-fonts/integration-gate.log:1: trailing whitespace.
++$ node conformance/runner.mjs --subject bench/pkg-fonts/integration/adapter.mjs --output bench/pkg-fonts/integration-conformance.json --fresh 
+bench/pkg-fonts/validation.log:1: trailing whitespace.
++$ node_modules/.bin/tsc -p tsconfig.json 
+bench/pkg-fonts/validation.log:2: trailing whitespace.
++exit: 0 
+bench/pkg-fonts/validation.log:4: trailing whitespace.
++$ node --test --test-reporter=tap test/core.test.mjs test/packages-fonts.test.mjs test/packages-references.test.mjs test/ssr-fixtures.test.mjs 
+bench/pkg-fonts/validation.log:5: trailing whitespace.
++exit: 0 
+bench/pkg-fonts/validation.log:18: trailing whitespace.
++$ node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output bench/pkg-fonts/final.json --fresh 
+bench/pkg-fonts/validation.log:19: trailing whitespace.
++exit: 1 

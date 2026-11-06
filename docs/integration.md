@@ -272,6 +272,16 @@ pnpm shared-store DB issue without installing or changing the lockfile.
 `final-*.log` files contain raw output. Conformance's retained-unsupported exit 1
 is recorded independently inside the successful stage gate.
 
+
+The full base-to-integration `git diff --check d3daf90` returns exit 2 solely for
+captured trailing spaces in `bench/pkg-fonts/integration-gate.log` and
+`bench/pkg-fonts/validation.log`. Their bytes match `930c254` exactly and are
+preserved as raw evidence. The gate separately requires exit 0 for all source,
+tests, documentation, manifest/lockfile and integration evidence diffs, and
+rejects any new whitespace diagnostic outside those two inherited logs. Both
+commands and their exits are retained in `final-checks.json` and
+`final-archive-whitespace.log`.
+
 screen_run: Chromium opened `bench/integration/integrated-native.html`, used
 mouse and keyboard to switch MathJax/native output, and showed 14 MathML formulas
 with 0 native PUA and 0 merror. Six isotope prescript boxes have gap 0 to their

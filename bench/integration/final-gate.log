@@ -11,7 +11,7 @@ progress: 2500/2683
 progress: 2600/2683
 harness: exit 0
 ℹ function-options subject calls=30; matched=30/30
-✔ runner restores function and RegExp options for any subject (0.239031ms)
+✔ runner restores function and RegExp options for any subject (0.23296ms)
 ℹ tests 43
 ℹ suites 0
 ℹ pass 43
@@ -19,7 +19,7 @@ harness: exit 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 929.864773
+ℹ duration_ms 927.068296
 grammar: exit 0
 text: 1 states, 10 rules
 pq: 4 states, 22 rules
@@ -68,4 +68,5 @@ prescript layout [{"base":"U","sub":"92","sup":"235","gap":0,"baseWidth":22.3593
 uppercase CSS computed {"color":"rgb(255, 0, 0)","backgroundColor":"rgb(230, 240, 255)"}
 screen_run: Chromium opened React SSR chemical MathML; selected MathJax and native output; native PUA=0, merror=0; screenshot integrated-native.png
 diff: exit 0
+archive-whitespace: exit 2 (unchanged original pkg-fonts raw logs; source/document checks exit 0)
 integration gate: PASS

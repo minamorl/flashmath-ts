@@ -65,8 +65,30 @@
       "git",
       "--git-dir=bench/.integration-git",
       "diff",
-      "--check"
+      "--check",
+      "d3daf90",
+      "--",
+      "src",
+      "test",
+      "docs",
+      "README.md",
+      "package.json",
+      "pnpm-lock.yaml",
+      "bench/integration"
     ],
     "exit": 0
+  },
+  {
+    "name": "archive-whitespace",
+    "command": [
+      "git",
+      "--git-dir=bench/.integration-git",
+      "diff",
+      "--check",
+      "d3daf90"
+    ],
+    "exit": 2,
+    "expected": 2,
+    "reason": "Unchanged raw pkg-fonts logs retain their captured trailing spaces"
   }
 ]
