@@ -1,628 +1,1516 @@
 {
-  "matched": 104,
-  "total": 104,
+  "matched": 216,
+  "total": 216,
   "rows": [
     {
       "category": "formulas",
       "tex": "\\ce{Al2(SO4)3}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{Ca3(PO4)2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{[Cu(NH3)4]SO4}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{K4[Fe(CN)6]}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{CH3CH2OH}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{C12H22O11}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{Na2CO3.10H2O}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{CuSO4*5H2O}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{MgCl2 * 6 H2O}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{3/2 O2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{0,25 O2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{(3/4) N2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{n H2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{x CO2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{^{235}_{92}U}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{^14_6C}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{^{18}O}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{_6^12C}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{D2 + O2 -> D2O}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{NH4+ + NO3- -> NH4NO3}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{SO4^{2-}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{Fe^{3+}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{ClO4-}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{PO4^3-}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{Fe^{III}Cl3}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{Cu^{II}SO4}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{Co^{II}_2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{O2^{.-}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{X_{site}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{X_{ab}^{2+}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{Y^{2+}_{site}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{NO_{2}^{-}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{A_{x+1}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{Fe_{1-x}O}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{H2(g) + Cl2(g) -> 2 HCl(g)}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{NaCl(s) -> Na+(aq) + Cl-(aq)}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{{acetic acid} + {water}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{{cis}-[Pt(NH3)2Cl2]}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{\\alpha-Fe}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{A\\bond{~}B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{A\\bond{~-}B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{A\\bond{~--}B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{A\\bond{-~-}B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{A\\bond{....}B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{A\\bond{->}B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{C-C=C#N}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{A, B; C}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{$k$ A -> $k$ B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "formulas",
       "tex": "\\ce{$\\ce{H2O}$}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Fe^x+}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Fe^{x+}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Fe^n-}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{X^x}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{X^{x}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{X_{x}^{x+}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Cu^{+II}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Fe^{-III}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Fe^{+-0}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Cr^{+VI}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Mn^{VII}O4-}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{^{238}_{92}U -> ^{234}_{90}Th + ^4_2He}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{^{13}_{6}C}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{_8^{16}O}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{^{99m}_{43}Tc}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{^1_1H}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{^{2}H2O}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{C{}^{14}C}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{(CH3)3COH}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{[Co(en)3]^{3+}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{K2[PtCl6]}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{\\{[Ag(NH3)2]\\}+}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Ca(OH)2(aq)}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{Fe(OH)3 v}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{H2 ^}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{CO2(g) ^}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{A (v) + B (^) -> C}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{SO4_{(aq)}^2-}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{CuSO4·7H2O}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{BaCl2⋅2H2O}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{2n H2O}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{$2n-1$ CO2}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{n/2 O2}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{$n$/3 CO2}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{-2 H2}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{C \\pm D}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{+ H2O}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{pH = 7}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{pOH}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{pK_a}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{iBu-Cl}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{sp^3-C}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{3d^5}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{A/B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{A \\, B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{A ... B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{A\\bond{=}B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{A\\bond{3}B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{X_{i,j}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{X_{V,2}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{X_{Ti,0.1}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{V^{..}_{O}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{$K_{eq}$ = $\\frac{1}{2}$}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{$\\ce{Na+} + \\ce{Cl-}$}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{\\frac{H2}{O2}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{\\overset{H}{Cl}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_chemistry",
+      "tex": "\\ce{\\underset{aq}{NaCl}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->[\\mathrm{cat.}] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->[\\text{hv}] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->[2H2O][-CO2] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->C[H2O] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->T[text above] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->M[k_1] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->C[H2O]T[below text] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A <-T[reverse]M[k_{-1}] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A <->T[forward]T[reverse] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A <-->[H2O][CO2] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A <=>>[H2][O2] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A <<=>[H2][O2] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A <=>[][H+] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A → B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ⟶ B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ⇌ B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->[\\frac{1}{2}] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->[{\\text{UV}}] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->[$\\ce{H2O}$] B}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_reactions",
+      "tex": "\\ce{A ->[\\pu{273 K}][\\pu{1 atm}] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{2 Na + Cl2 -> 2 NaCl}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{N2 + 3 H2 <=> 2 NH3}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[heat] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A <-[cold] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A <->[light] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A <-->[catalyst] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A <=>>[fast] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A <<=>[slow] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[Pt][300 K] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[][H2O] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[$k_1$][$k_{-1}$] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{$A$ ->[\\ce{+H2O}] $B$}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[\\ce{2 H2 + O2}] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[{warm water}] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[{$h\\nu$}] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A <=>[H+][OH-] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A<-->[above][below]B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[\\Delta] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{A ->[\\pu{300 K}] B}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{CaCO3 -> CaO + CO2 ^}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "reactions",
       "tex": "\\ce{Ag+ + Cl- -> AgCl v}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{9.81 m/s^2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{5 m s-1}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{7 kg*m/s2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{12 kg m//s2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{20 m//s^2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{6.02e23 mol-1}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{1.38E-23 J K-1}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{2,5e-3 mol L-1}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{273.15 K}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{25 °C}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{32 ^oF}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{10 ^{o}C}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{1.2 mm^2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{5 cm^{3}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{4 m^-2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{3 s^{-1}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{1.5 kg*m2}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{2 N*m}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{12345 J}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{1234567 J}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{1.23456 m}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{0,12345 s}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{3.14(2) m}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{10^3 Pa}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{2 x 10^3 J}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{2 * 10^{-3} J}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{1/2 mol}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{1 kg / mol}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{3 {kg m} / {s2}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{5 {m/s}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{7 \\mu m}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{2 \\Omega}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{-40 °C}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     },
     {
       "category": "units",
       "tex": "\\pu{+2.0 V}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{1.23 +- 0.04 kg}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{12.5 +/- 0.5 m}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{2.5 \\pm 0.1 s}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{1.0(2) kg}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{1.234(0.012) m}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{1.2e-5 +- 0.2e-5 mol}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{5.0 x 10^2 V}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{6.3 × 10^{-4} m}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{2.0 \\times 10^{5} Pa}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{-1.5E+6 J}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{1,2345e6 J}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{12345678 mm}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{.25 mol}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{0.00012345 s}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{100 kPa}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{50 km/h}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{8 J/(mol K)}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{2 kg m2 s-2}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{3 kg*m^2/s^2}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{4 mol//L}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{5 m//{s^2}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{6 {N m}//{mol K}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{7 kg//m^{3}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{8 m2/s}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{9 m s^{-2}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{10 kg.m2}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{11 m^{+2}}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{12 \\mu g}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{13 \\Omega m}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{14 °F}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{15 ^oC}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{16 ^{o}F}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{17 mmol L^-1}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{18 kg/(m s2)}",
+      "expectedError": false,
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "expanded_units",
+      "tex": "\\pu{19 {kg*m}//{s2}}",
+      "expectedError": false,
       "matched": true,
       "difference": null
     }
