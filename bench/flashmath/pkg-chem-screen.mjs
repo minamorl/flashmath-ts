@@ -9,6 +9,9 @@ import {parseToReact} from '../../dist/react.js';
 
 const folder = path.dirname(fileURLToPath(import.meta.url));
 const formulas = [
+  ['Isotopes', String.raw`\ce{^{235}_{92}U} \quad \ce{_8^{16}O} \quad \ce{H^3HO}`],
+  ['Isotope reaction', String.raw`\ce{^{238}_{92}U -> ^{234}_{90}Th + ^4_2He}`],
+  ['Charge and uncertainty', String.raw`\ce{Fe^x+} \qquad \pu{1.23 +- 0.04 kg}`],
   ['Reaction', String.raw`\ce{2 H2 + O2 ->[heat] 2 H2O}`],
   ['Left / reversible', String.raw`\ce{A <-[cold] B} \quad \ce{A <->[light] B}`],
   ['Two arrows', String.raw`\ce{A <-->[catalyst] B}`],
@@ -83,9 +86,12 @@ try {
   await evaluate('document.fonts.ready');
   const native=await evaluate(measure);console.log('native selection',JSON.stringify(native));
   if(native.pua||native.errors||native.math!==formulas.length)throw Error('Invalid native output');
+  const prescripts=await evaluate(`Array.from(document.querySelectorAll('mmultiscripts'),n=>{const b=n.children[0].getBoundingClientRect(),s=n.children[2].getBoundingClientRect(),t=n.children[3].getBoundingClientRect();return {base:n.children[0].textContent,sub:n.children[2].textContent,sup:n.children[3].textContent,gap:b.left-Math.max(s.right,t.right),baseWidth:b.width,prescriptWidth:Math.max(s.width,t.width)}})`);
+  console.log('prescript layout',JSON.stringify(prescripts));
+  if(prescripts.length<6||prescripts.some(r=>r.gap < -1||r.baseWidth<=0))throw Error('Native prescripts overlap their element');
   const screenshot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true});
   fs.writeFileSync(path.join(folder,'pkg-chem-native.png'),Buffer.from(screenshot.data,'base64'));
-  fs.writeFileSync(path.join(folder,'pkg-chem-screen.json'),JSON.stringify({browser:await send('Browser.getVersion'),compat,native},null,2)+'\n');
+  fs.writeFileSync(path.join(folder,'pkg-chem-screen.json'),JSON.stringify({browser:await send('Browser.getVersion'),compat,native,prescripts},null,2)+'\n');
   console.log('screen_run: Chromium opened React SSR chemical MathML; selected MathJax and native output; native PUA=0, merror=0; screenshot pkg-chem-native.png');
 } finally {
   socket?.close();chrome.kill();if(chrome.exitCode===null)await once(chrome,'exit').catch(()=>{});

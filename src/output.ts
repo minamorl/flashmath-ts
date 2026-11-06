@@ -1,4 +1,5 @@
 import type {MathMLNode, OutputOptions} from './ast.js';
+import {packageMark} from './package-mark.js';
 
 // MathJax's mhchem glyph slots belong to its own font. Native MathML uses
 // standard Unicode and MathML accents instead; see docs/packages-pkg-chem.md.
@@ -16,10 +17,10 @@ function compound(code: number) {
   return code === 0xe409 || code === 0xe40a || code >= 0xe411 && code <= 0xe413;
 }
 function codeOf(n: MathMLNode) {
-  return n.kind === 'mo' && n.text.length === 1 ? n.text.charCodeAt(0) : 0;
+  return packageMark(n)==='glyph' && n.kind === 'mo' && n.text.length === 1 ? n.text.charCodeAt(0) : 0;
 }
 function arrowLabel(n: MathMLNode) {
-  if (n.kind !== 'mpadded' || n.children.at(-1)?.kind !== 'mspace') return false;
+  if (packageMark(n)!=='arrow-label' || n.kind !== 'mpadded' || n.children.at(-1)?.kind !== 'mspace') return false;
   const a = n.attributes, strut = n.children.at(-1)!.attributes;
   return a.voffset === '-.2em' && a.height === '-.2em' && strut.depth === '.2em'
     || a.voffset === '.15em' && a.depth === '-.15em' && strut.height === '.75em';
@@ -60,7 +61,7 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
   let found = false;
   while (pending.length) {
     const node = pending.pop()!, code = codeOf(node);
-    if (glyph(code) || compound(code) || arrowLabel(node)) {found = true; break;}
+    if (glyph(code) || compound(code) || arrowLabel(node) || packageMark(node)==='prescript') {found = true; break;}
     for (const child of node.children) pending.push(child);
   }
   if (!found) return root;
@@ -75,6 +76,20 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     const length = input.children.length - (arrowLabel(input) ? 1 : 0);
     for (let i = 0; i < length; i++) {
       const child = input.children[i];
+      if(packageMark(child)==='prescript' && input.children[i+3]) {
+        const script=(which:number):MathMLNode=>{
+          const stack=[child.children[which]];
+          while(stack.length){const n=stack.pop();if(!n)continue;
+            if(n.kind==='mphantom')return {kind:n.children.length?'mrow':'none',attributes:{},children:n.children,text:'',start:child.start};
+            for(const c of n.children)stack.push(c);
+          }
+          return {kind:'none',attributes:{},children:[],text:'',start:child.start};
+        };
+        const source:MathMLNode={kind:'mmultiscripts',attributes:{},children:[
+          input.children[i+3],{kind:'mprescripts',attributes:{},children:[],text:'',start:child.start},script(1),script(2),
+        ],text:'',start:child.start};
+        const cloned=copy(source);output.children.push(cloned);stack.push([source,cloned]);i+=3;continue;
+      }
       const code = codeOf(child);
       if (glyph(code) || compound(code)) output.children.push(nativeGlyph(child));
       else {const cloned = copy(child); output.children.push(cloned); stack.push([child, cloned]);}

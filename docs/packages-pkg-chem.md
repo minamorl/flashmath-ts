@@ -1,50 +1,51 @@
 # pkg-chem: mhchem and extpfeil
 
-This revision starts from root's imported `2a7a4ae` and fixes the scanner,
-independent grammar coverage, browser glyph output and test discovery.
+This corrective revision starts from root's imported `1f7c114` and fixes variable
+charges, unit uncertainty, TeX arrow labels, label regression, isotope layout and
+literal PUA preservation.
 
 ## Scanner and grammar
 
-`src/packages/mhchem.ts` uses `charCodeAt` and integer `switch` dispatch for
-chemical entities, scripts, reaction arrows, grouping, math escapes and physical
-units. Nested machines share one source string and operate on `[start, end)`
-spans. There is no regexp recognizer, suffix `slice`, generated parser or fixture
-answer table. `substring` copies only a consumed lexeme when emitting expansion
-text; it never copies the unconsumed input. Expansions run on the host token stack.
+`src/packages/mhchem.ts` is the package boundary and layout handlers.
+`src/packages/mhchem-machine.ts` implements a handwritten character-code matcher,
+source-span buffers and numeric state/action dispatch. Commands and words stay
+as indexes until expansion emission; there is no input substring/slice lexer.
+`src/packages/mhchem-grammar.ts` retains all declarative transitions in all 14
+upstream machines. The source audit and per-machine state/rule counts are in
+[packages-mhchem-grammar.md](packages-mhchem-grammar.md). The development generator
+extracts grammar declarations only, and `--check` verifies them against the pinned
+primary source. Runtime does not import the upstream parser.
 
-The main entity state is Start/Body, with pending separation, upright text,
-script and bond state. Separate machines implement pq/bd script interpretation,
-math escapes, physical-unit numbers and upright unit products. Explicit nested
-`\ce` and `\pu` commands are expanded inside chemical labels instead of becoming
-upright command-name strings. Physical units support implicit/explicit powers,
-scientific notation, uncertainty, grouped digits, degree Celsius/Fahrenheit,
-grouped products, inline division and stacked division. Prescripts work in either
-script order; oxidation numerals and defect scripts retain distinct layout.
-
-The retained `extpfeil` implementation provides five extensible arrows and
-`\Newextarrow` definitions owned by a parser session. Its `xArrow` helper is also
-used by mhchem without activating extpfeil's commands.
+The bd/pq/formula distinctions now preserve `Fe^x+` as a variable charge while
+keeping the isolated defect `X^x` as a cross. The pu machine preserves `+-`, `+/-`
+and `\pm` uncertainty, decimal values and exponents. Generic grouped TeX controls
+remain intact in labels, and C/M/T annotation modes, negative chemical labels and
+nested chemical/unit expressions follow the original transitions.
 
 ## Independent tests and evidence
 
-`test/packages/mhchem-generalization.test.mjs` contains 104 distinct examples,
-selected by grammar feature before the scanner rewrite: formulas, coefficients,
+`test/packages/mhchem-generalization.test.mjs` contains 216 distinct examples,
+selected by grammar feature across the scanner revisions: formulas, coefficients,
 isotopes, charges, scripts, complexes, bonds, reaction labels and physical units.
 It asserts that none are captured fixture inputs and none are duplicates. Every
 example is evaluated by MathJax 4.1.3 and the subject; failures stay in the
-denominator and their raw MathML is reported. The required gate is >=95% agreement.
+denominator and their raw MathML is reported. The required gate is >=150 valid expressions and >=98% agreement.
 The reported unit-power and nested-label examples are also mandatory assertions.
 
 The before/after raw reports are:
 
-- `bench/flashmath/pkg-chem-generalization-before.json`: 72/104 agreement.
-- `bench/flashmath/pkg-chem-generalization.json`: 104/104 agreement.
+- `bench/flashmath/pkg-chem-generalization-before.json`: historical initial 72/104 report.
+- `bench/flashmath/pkg-chem-generalization.json`: current complete 216/216 report; all 216 are valid MathJax expressions.
 
 `test/packages/mhchem-output.test.mjs` checks every captured chemistry fixture
 through AST, string and React output, including non-mutation of compatibility
 ASTs, explicit compatibility output, PUA elimination, label padding conversion,
-all 14 chemical glyph slots, session overrides and invalid options. The original
+all 14 chemical glyph slots, literal PUA in base/mixed/package contexts, native
+isotope prescripts, variable charges, unit uncertainty, session overrides and
+invalid options. The original
 package tests and all existing root-level tests remain enabled by `npm test`.
+The final raw test output is `bench/flashmath/pkg-chem-final-tests.log`;
+`bench/flashmath/pkg-chem-grammar.log` records the source-transition audit.
 
 Full unmodified-harness reports remain at
 `bench/flashmath/pkg-chem-before.json` and
@@ -85,8 +86,11 @@ AST. Unrelated TeX parsing behavior and package activation remain unchanged.
 
 ## Native glyph mapping
 
-The mapping is implemented in `src/output.ts`; the original PUA is retained only
-in MathJax output. Native glyph metrics follow the browser's math font rather
+The mapping is implemented in `src/output.ts` and applies only to nodes marked
+by mhchem/extpfeil constructors. Private WeakMap provenance crosses `expose` and
+never becomes a MathML attribute. Literal PUA in base or mixed formulas is
+preserved, even when a chemical package is selected. An externally JSON-rebuilt
+AST has no constructor provenance and is not remapped merely by its codepoint. Native glyph metrics follow the browser's math font rather
 than MathJax's private font designs.
 
 | MathJax PUA | Chemical command / meaning | Native representation |
@@ -106,8 +110,13 @@ than MathJax's private font designs.
 | U+E42D | right bond arrow | U+2192 `→` |
 | U+E42E | bidirectional bond arrow | U+2194 `↔` |
 
+Native isotope prefixes use `mmultiscripts(element, mprescripts, lower, upper)`.
+Only a package-marked isotope sequence is replaced. Its MathJax phantom/negative
+kern/overlay sequence remains byte-for-byte compatible in mathjax output. Empty
+indices use `none`; no internal enum values were renumbered.
+
 Labeled arrows use these same mappings. Native output additionally replaces the
-known MathJax xArrow `mpadded` label boxes and struts with ordinary MathML rows,
+package-marked MathJax xArrow `mpadded` label boxes and struts with ordinary MathML rows,
 allowing browser under/over layout to center labels and reserve their width.
 Compatibility output preserves the complete original padding and texclasses.
 This normalization also serves extpfeil labels with standard Unicode arrows.
@@ -120,11 +129,14 @@ actual DevTools protocol. It reads the running browser's primary protocol schema
 before issuing commands. Temporary profiles are created under `$TMPDIR` and
 removed afterward; all durable output stays in this worktree.
 
-screen_run: Chromium opened `pkg-chem-native.html`, clicked the glyph-output
-select and used ArrowDown/Enter to choose MathJax codes (14 PUA), then selected
-native output (0 PUA, 0 merror, 9 MathML examples). The final screenshot was opened
-and inspected: arrows, harpoons and dashed/mixed bonds are visible, and the
-reaction labels no longer overlap following species.
+screen_run: Chromium opened `pkg-chem-native.html`, clicked the output select,
+used ArrowDown/Enter for mathjax output (15 PUA), and keyboard-selected native
+output (0 generated PUA, 0 merror, 12 MathML examples). Its actual mmultiscripts
+layout was measured for six prescripts: every digit-box right edge ended at the
+element's left edge (gap 0). The full screenshot was opened and inspected;
+235/92 precedes U without overlap, isotope reactions are legible, Fe carries x+
+and the measurement shows ±. Arrows, harpoons and mixed bonds have no missing
+glyph boxes, and their labels do not overlap following species.
 
 - `bench/flashmath/pkg-chem-native.png`: final native screenshot.
 - `bench/flashmath/pkg-chem-native.html`: self-contained React SSR page.
@@ -134,6 +146,7 @@ reaction labels no longer overlap following species.
 ## Reproduce
 
 ```sh
+node bench/flashmath/generate-mhchem-grammar.mjs --check
 node node_modules/typescript/bin/tsc -p tsconfig.json
 MHCHEM_GENERALIZATION_REPORT=bench/flashmath/pkg-chem-generalization.json npm test
 node conformance/runner.mjs --subject bench/flashmath/adapter.mjs \
@@ -158,9 +171,9 @@ Apache-2.0 (MathJax Consortium; Martin Hensel). The existing license is
 `src/LICENSE.MathJax`. Runtime code imports neither upstream parser.
 
 Shared Git metadata is outside the assigned write scope. The revision is
-exported in `bench/pkg-chem-revision.bundle` on top of root's imported `2a7a4ae`.
-Its `lane/pkg-chem` ref contains the scanner/generalization fix followed by the
-native-output/test-discovery fix. The real worktree files remain authoritative.
+exported in `bench/pkg-chem-final.bundle` on top of root's imported `1f7c114`.
+Its `lane/pkg-chem` ref contains the full state-machine fix followed by the
+provenance-scoped native isotope/glyph fix. The real worktree files remain authoritative.
 No push, merge, npm publication or external upload was performed.
 
 Review checkpoints for root (broker disabled):

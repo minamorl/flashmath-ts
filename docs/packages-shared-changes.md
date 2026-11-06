@@ -11,3 +11,10 @@
 - `package.json`: add `test/packages/*.test.mjs` to `npm test`, including package tests from other lanes; no dependency or lockfile change.
 
 The initial lane's two registry additions remain unchanged. No edit to `src/scanner.ts`, `src/packages/base.ts`, `src/symbols.ts`, `src/packages/types.ts` or `conformance/` was needed. Source-byte changes and reasons for other lanes belong in their own entries rather than replacing these.
+
+## Corrective revision after 1f7c114
+
+- `src/package-mark.ts`: add private WeakMap provenance for package-created glyphs, arrow labels and isotope prefixes; selecting a package or typing a matching PUA does not create this provenance.
+- `src/ast.ts`: copy private provenance while exposing internal nodes, and add public native-output kinds `mmultiscripts`, `mprescripts`, `none`; internal K enum values and parsing behavior are unchanged.
+- `src/output.ts`: gate glyph/label conversion on constructor provenance, preserve literal PUA, and replace only a marked isotope prefix plus its element with standard MathML prescripts that Chromium can lay out without overlays.
+- `src/packages/extpfeil.ts`: mark the arrow and label nodes at their constructors, without changing serialized compatibility output or command behavior.

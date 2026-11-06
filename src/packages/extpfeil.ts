@@ -4,6 +4,7 @@ import type {Parser} from '../parser.js';
 import {raw, scan} from '../scanner.js';
 import {em} from '../mathml.js';
 import type {TexPackage, TexCommand} from './types.js';
+import {markPackageNode} from '../package-mark.js';
 
 // Layout follows MathJax 4.1.3 AmsMethods.xArrow (Apache-2.0).
 // Labels are parsed on the existing stack; no nested parser or source rewrite.
@@ -12,18 +13,18 @@ export function xArrow(p: Parser, code: number, left: number, right: number) {
   const level = p.f.level;
   p.argument(top => {
     const finish = (below?: Node) => {
-      let arrow = p.node(K.mo, [], String.fromCodePoint(code), {
+      let arrow = markPackageNode(p.node(K.mo, [], String.fromCodePoint(code), {
         'data-mjx-texclass': 'ORD', stretchy: 'true',
-      });
+      }), 'glyph');
       if (level) arrow = p.node(K.mstyle, [arrow], '', {scriptlevel: '0'});
-      const label = (n: Node, under: boolean) => p.node(K.mpadded, [
+      const label = (n: Node, under: boolean) => markPackageNode(p.node(K.mpadded, [
         ...(n.kind === K.mrow && !n.attributes['data-mjx-texclass'] ? n.children : [n]),
         p.node(K.mspace, [], '', under ? {height: '.75em'} : {depth: '.2em'}),
       ], '', {
         width: '+' + em((left + right) / 18), lspace: em(left / 18),
         voffset: under ? '.15em' : '-.2em',
         ...(under ? {depth: '-.15em'} : {height: '-.2em'}),
-      });
+      }), 'arrow-label');
       p.append(p.atom([
         p.atom([], 'NONE'),
         p.node(below ? K.munderover : K.mover, [

@@ -1,3 +1,4 @@
+import {copyPackageMark} from './package-mark.js';
 /** A MathML tree. The parser uses numeric tags internally and exposes this string union. */
 export type MathMLKind =
   | "math"
@@ -24,7 +25,10 @@ export type MathMLKind =
   | "mtr"
   | "mlabeledtr"
   | "mtd"
-  | "menclose";
+  | "menclose"
+  | "mmultiscripts"
+  | "mprescripts"
+  | "none";
 export interface MathMLNode {
   kind: MathMLKind;
   attributes: Record<string, string>;
@@ -148,6 +152,7 @@ export function expose(root: Node): MathMLNode {
     start: root.start,
   };
   const stack: [Node, MathMLNode][] = [[root, result]];
+  copyPackageMark(root,result);
   while (stack.length) {
     const [n, out] = stack.pop()!;
     for (const c of n.children) {
@@ -159,6 +164,7 @@ export function expose(root: Node): MathMLNode {
         start: c.start,
       };
       out.children.push(v);
+      copyPackageMark(c,v);
       stack.push([c, v]);
     }
   }

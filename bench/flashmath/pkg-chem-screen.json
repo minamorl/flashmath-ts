@@ -8,18 +8,19 @@
   },
   "compat": {
     "mode": "mathjax",
-    "math": 9,
-    "pua": 14,
+    "math": 12,
+    "pua": 15,
     "errors": 0,
     "arrows": [],
-    "height": 1480
+    "height": 1854
   },
   "native": {
     "mode": "native",
-    "math": 9,
+    "math": 12,
     "pua": 0,
     "errors": 0,
     "arrows": [
+      "⟶",
       "⟶",
       "⟵",
       "⟷",
@@ -37,6 +38,56 @@
       "→",
       "←"
     ],
-    "height": 1480
-  }
+    "height": 1810
+  },
+  "prescripts": [
+    {
+      "base": "U",
+      "sub": "92",
+      "sup": "235",
+      "gap": 0,
+      "baseWidth": 22.359375,
+      "prescriptWidth": 36.640625
+    },
+    {
+      "base": "O",
+      "sub": "8",
+      "sup": "16",
+      "gap": 0,
+      "baseWidth": 23.015625,
+      "prescriptWidth": 24.421875
+    },
+    {
+      "base": "HO",
+      "sub": "",
+      "sup": "3",
+      "gap": 0,
+      "baseWidth": 45.578125,
+      "prescriptWidth": 12.21875
+    },
+    {
+      "base": "U",
+      "sub": "92",
+      "sup": "238",
+      "gap": 0,
+      "baseWidth": 22.359375,
+      "prescriptWidth": 36.640625
+    },
+    {
+      "base": "Th",
+      "sub": "90",
+      "sup": "234",
+      "gap": 0,
+      "baseWidth": 37.390625,
+      "prescriptWidth": 36.640625
+    },
+    {
+      "base": "He",
+      "sub": "2",
+      "sup": "4",
+      "gap": 0,
+      "baseWidth": 39.75,
+      "prescriptWidth": 12.21875
+    }
+  ]
 }
