@@ -18,6 +18,7 @@ function check(name,args,expected=[0]) {
 }
 check('build',['node_modules/typescript/bin/tsc','-p','tsconfig.json']);
 const files=fs.readdirSync('test').filter(f=>f.endsWith('.test.mjs')).map(f=>`test/${f}`);
+if(JSON.parse(fs.readFileSync('package.json')).scripts.test.includes('test/packages/*.test.mjs'))files.push(...fs.readdirSync('test/packages').filter(f=>f.endsWith('.test.mjs')).map(f=>`test/packages/${f}`));
 check('test',['--test',...files]);
 check('conformance',['conformance/runner.mjs','--subject','bench/flashmath/adapter.mjs','--output',`bench/integration/${stage}.json`,'--fresh'],[0,1]);
 fs.writeFileSync(new URL(`${stage}-checks.json`,directory),JSON.stringify(checks,null,2)+'\n');

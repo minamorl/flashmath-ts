@@ -17,6 +17,7 @@ import { resolvePackages } from "./packages/registry.js";
 import { configure } from "./configuration.js";
 import { mathMLForOutput } from "./output.js";
 import { sessionState } from "./session-state.js";
+import {format,tagNodes} from "./packages/tagformat.js";
 import type { SessionState, Reference } from "./session-state.js";
 import type { PackageConfiguration, RegisteredCommand } from "./packages/types.js";
 import type { Definition } from "./symbols.js";
@@ -79,6 +80,7 @@ interface Table {
   taggable: boolean;
   tagCells: Map<number, Node>;
   explicitTags?: Map<number, string>;
+  colors?: {cell:string;row:string;columns:string[];rowIndex:number};
 }
 const NS = "http://www.w3.org/1998/Math/MathML";
 const isDigit = (c: number) => c >= 48 && c <= 57;
@@ -120,7 +122,7 @@ export class Parser {
         // Resolution inserts lower precedence packages first. Keep every
         // character handler so a higher priority handler can decline a token.
         for (const command of characters) {
-          const key = command.definition.char!.charCodeAt(0);
+          const key = (command.definition.char ?? command.definition.name).charCodeAt(0);
           const chain = handlers.get(key) ?? [];
           chain.unshift(command);
           handlers.set(key, chain);
@@ -908,6 +910,11 @@ export class Parser {
     }
     if (t.align === "ll" && t.cells.length === 1 && nodes[0]?.kind !== K.mtext)
       nodes = [this.node(K.mtext, [], nodeText(nodes))];
+    if (t.colors) {
+      const color=t.colors.cell || (t.colors.rowIndex===t.rows.length?t.colors.row:"") || t.colors.columns[t.cells.length];
+      if(color)a.mathbackground=color;
+      t.colors.cell="";
+    }
     t.cells.push(this.node(K.mtd, nodes, "", a));
   }
   completeTable(t: Table, name: string, done: (n: Node) => void) {
@@ -973,12 +980,12 @@ export class Parser {
       }
     } else this.label = label;
   }
-  reference(label: string) {
+  reference(label: string, formatted = false) {
     const ref = this.session.labels.get(label) ??
       this.localLabels.get(label) ?? { tag: "???", id: "" };
     this.append(
-      this.node(K.mrow, [this.node(K.mtext, [], ref.tag)], "", {
-        href: (this.options.baseURL ?? "") + "#" + encodeURIComponent(ref.id),
+      this.node(K.mrow, formatted ? tagNodes(this,ref.tag,false,true) : [this.node(K.mtext, [], ref.tag)], "", {
+        href: String(format(this,"url",ref.id,this.options.baseURL ?? "")),
         class: "MathJax_ref",
       }),
     );
@@ -988,23 +995,14 @@ export class Parser {
     if (table.numbered && !table.noNumbers.has(index) && !table.tagCells.has(index))
       table.tagCells.set(index, this.labelCell(table.labels[index] ?? ""));
   }
-  labelCell(label: string) {
-    const n = ++this.session.counter,
-      tag = String(n);
+  labelCell(label: string, explicit?: string, starred = false) {
+    const tag = explicit ?? String(format(this,"number",++this.session.counter));
     const id =
-      "mjx-eqn:" +
-      ((this.options.useLabelIds !== false ? label : "") || tag).replace(
-        /\s/g,
-        "_",
-      );
+      String(format(this,"id",(this.options.useLabelIds !== false ? label : "") || tag));
     if (label) this.localLabels.set(label, { tag, id });
     return this.node(
       K.mtd,
-      [
-        this.node(K.mtext, [], "("),
-        this.node(K.mtext, [], tag),
-        this.node(K.mtext, [], ")"),
-      ],
+      tagNodes(this,tag,starred),
       "",
       {
         id,

@@ -49,3 +49,11 @@ the final gate independently. This worker starts no child agents.
 - Chem: union registry and shared-change notes. Native glyph provenance and
   isotope conversion, scanner dispatch and output-mode support merge alongside
   physics's CSS bridge and inferred-row metadata without discarding either.
+
+- Fonts: union registry lists and shared notes; remove temporary boldsymbol
+  registration in favor of full implementation. Union appended MathML kinds
+  (multiscripts before maction/html), maintaining name/enum positional identity
+  with a full rebuild. Retain `cases` tag validation, explicit tags and table
+  colors. Keep numeric character chains; texhtml's literal-name handler supplies
+  its character when `char` is absent. Serializer/React support HTML text nodes
+  while retaining chemistry's output-mode transformation and physics's CSS props.

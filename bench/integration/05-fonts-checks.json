@@ -1,0 +1,80 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "node_modules/typescript/bin/tsc",
+      "-p",
+      "tsconfig.json"
+    ],
+    "exit": 0,
+    "expected": [
+      0
+    ]
+  },
+  {
+    "name": "test",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "--test",
+      "test/core.test.mjs",
+      "test/packages-fonts.test.mjs",
+      "test/packages-pkg-physics.test.mjs",
+      "test/packages-references.test.mjs",
+      "test/ssr-fixtures.test.mjs",
+      "test/packages/action.test.mjs",
+      "test/packages/ams.test.mjs",
+      "test/packages/amscd.test.mjs",
+      "test/packages/bbm.test.mjs",
+      "test/packages/bboldx.test.mjs",
+      "test/packages/bbox.test.mjs",
+      "test/packages/boldsymbol.test.mjs",
+      "test/packages/braket.test.mjs",
+      "test/packages/cancel.test.mjs",
+      "test/packages/cases.test.mjs",
+      "test/packages/centernot.test.mjs",
+      "test/packages/color.test.mjs",
+      "test/packages/colortbl.test.mjs",
+      "test/packages/colorv2.test.mjs",
+      "test/packages/dsfont.test.mjs",
+      "test/packages/empheq.test.mjs",
+      "test/packages/enclose.test.mjs",
+      "test/packages/extpfeil.test.mjs",
+      "test/packages/fontsizev3.test.mjs",
+      "test/packages/gensymb.test.mjs",
+      "test/packages/html.test.mjs",
+      "test/packages/mathtools.test.mjs",
+      "test/packages/mhchem-generalization.test.mjs",
+      "test/packages/mhchem-output.test.mjs",
+      "test/packages/mhchem.test.mjs",
+      "test/packages/physics-scaling.test.mjs",
+      "test/packages/physics.test.mjs",
+      "test/packages/tagformat.test.mjs",
+      "test/packages/texhtml.test.mjs",
+      "test/packages/textcomp.test.mjs",
+      "test/packages/unicode.test.mjs",
+      "test/packages/upgreek.test.mjs"
+    ],
+    "exit": 0,
+    "expected": [
+      0
+    ]
+  },
+  {
+    "name": "conformance",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "conformance/runner.mjs",
+      "--subject",
+      "bench/flashmath/adapter.mjs",
+      "--output",
+      "bench/integration/05-fonts.json",
+      "--fresh"
+    ],
+    "exit": 1,
+    "expected": [
+      0,
+      1
+    ]
+  }
+]

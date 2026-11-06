@@ -28,7 +28,11 @@ export type MathMLKind =
   | "menclose"
   | "mmultiscripts"
   | "mprescripts"
-  | "none";
+  | "none"
+
+  | "maction"
+  | "#text"
+  | (string & {});
 export interface MathMLNode {
   kind: MathMLKind;
   attributes: Record<string, string>;
@@ -106,6 +110,8 @@ export const tags: MathMLKind[] = [
   "mmultiscripts",
   "mprescripts",
   "none",
+  "maction",
+  "html",
 ];
 export const enum K {
   math,
@@ -136,6 +142,8 @@ export const enum K {
   mmultiscripts,
   mprescripts,
   none,
+  maction,
+  html,
 }
 export interface Node {
   /** Internal inferred sequences may flatten; explicit mrows must survive. */
@@ -152,6 +160,8 @@ export interface Node {
   relation: boolean;
   fixed: boolean;
   rawAttrs: boolean;
+  /** Parsed HTML subtree, available only through the explicit texhtml package. */
+  html?: MathMLNode;
 }
 export function expose(root: Node): MathMLNode {
   const result: MathMLNode = {
@@ -166,6 +176,7 @@ export function expose(root: Node): MathMLNode {
   while (stack.length) {
     const [n, out] = stack.pop()!;
     for (const c of n.children) {
+      if (c.html) { out.children.push(c.html); continue; }
       const v: MathMLNode = {
         kind: tags[c.kind],
         attributes: c.attributes,

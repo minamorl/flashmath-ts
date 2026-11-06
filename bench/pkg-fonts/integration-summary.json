@@ -1,0 +1,116 @@
+{
+  "runnerExit": 1,
+  "subject": "bench/pkg-fonts/integration/adapter.mjs",
+  "packages": {
+    "color": {
+      "total": 71,
+      "matched": 71,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "colorv2": {
+      "total": 10,
+      "matched": 10,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "colortbl": {
+      "total": 15,
+      "matched": 14,
+      "mismatch": 0,
+      "unsupported": 1
+    },
+    "boldsymbol": {
+      "total": 191,
+      "matched": 191,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "bbm": {
+      "total": 9,
+      "matched": 9,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "bboldx": {
+      "total": 28,
+      "matched": 28,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "dsfont": {
+      "total": 2,
+      "matched": 2,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "upgreek": {
+      "total": 41,
+      "matched": 41,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "gensymb": {
+      "total": 5,
+      "matched": 5,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "textcomp": {
+      "total": 118,
+      "matched": 118,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "unicode": {
+      "total": 52,
+      "matched": 52,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "texhtml": {
+      "total": 6,
+      "matched": 6,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "html": {
+      "total": 47,
+      "matched": 47,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "action": {
+      "total": 3,
+      "matched": 3,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "tagformat": {
+      "total": 8,
+      "matched": 8,
+      "mismatch": 0,
+      "unsupported": 0
+    }
+  },
+  "base": {
+    "total": 811,
+    "matched": 780,
+    "mismatch": 10,
+    "unsupported": 21
+  },
+  "newcommand": {
+    "total": 58,
+    "matched": 58,
+    "mismatch": 0,
+    "unsupported": 0
+  },
+  "sourceHashes": {
+    "pkg-ams/packages/ams.ts": "3b2aea9c697fce835f58e3bda8ab2da497d921ddf5728dce8fd2322d2ecc7f5f",
+    "pkg-misc/packages/textmacros.ts": "d10ad8341d355c078b403ba956822180b85098da611fe3c5a5bc41008784d833",
+    "pkg-misc/packages/types.ts": "57386ee83b6a83061718b37c74a613dbfdb27f8885cba0617d4214f8b585504d",
+    "pkg-mathtools/packages/mathtools.ts": "9e7c4e2094de3da809e205beca46eb6abdb943c5c7e3e032d026da6891e22785",
+    "pkg-mathtools/session-state.ts": "cd6efb99e4a0be281e0c5964a2ae3659581a130d6faaa50c316cd7e256671975"
+  },
+  "gate": "all target membership rows matched; original unsupported rows preserved; baseline matched IDs preserved"
+}

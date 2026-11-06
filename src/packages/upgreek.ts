@@ -1,0 +1,48 @@
+// Symbol data adapted from MathJax 4.1.3, copyright The MathJax Consortium.
+// Apache-2.0; see ../LICENSE.MathJax. Parser handlers are independent.
+import {K} from '../ast.js';
+import type {TexPackage,TexCommand} from './types.js';
+const symbols={
+  "upalpha": "α",
+  "upbeta": "β",
+  "upgamma": "γ",
+  "updelta": "δ",
+  "upepsilon": "ϵ",
+  "upzeta": "ζ",
+  "upeta": "η",
+  "uptheta": "θ",
+  "upiota": "ι",
+  "upkappa": "κ",
+  "uplambda": "λ",
+  "upmu": "μ",
+  "upnu": "ν",
+  "upxi": "ξ",
+  "upomicron": "ο",
+  "uppi": "π",
+  "uprho": "ρ",
+  "upsigma": "σ",
+  "uptau": "τ",
+  "upupsilon": "υ",
+  "upphi": "ϕ",
+  "upchi": "χ",
+  "uppsi": "ψ",
+  "upomega": "ω",
+  "upvarepsilon": "ε",
+  "upvartheta": "ϑ",
+  "upvarpi": "ϖ",
+  "upvarrho": "ϱ",
+  "upvarsigma": "ς",
+  "upvarphi": "φ",
+  "Upgamma": "Γ",
+  "Updelta": "Δ",
+  "Uptheta": "Θ",
+  "Uplambda": "Λ",
+  "Upxi": "Ξ",
+  "Uppi": "Π",
+  "Upsigma": "Σ",
+  "Upupsilon": "Υ",
+  "Upphi": "Φ",
+  "Uppsi": "Ψ",
+  "Upomega": "Ω"
+};
+export default {name:'upgreek',commands:Object.fromEntries(Object.entries(symbols).map(([name,char])=>[name,{execute(p){p.append(p.node(K.mi,[],char,{mathvariant:p.f.font||'normal'}));}} satisfies TexCommand])),environments:{},configurationModules:['input/tex/upgreek/UpgreekConfiguration.js']} satisfies TexPackage;

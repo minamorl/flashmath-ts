@@ -10,7 +10,7 @@ export function configure(input: ParseOptions): {
   options: ParseOptions;
   configuration: PackageConfiguration;
 } {
-  if (input.mode !== undefined && input.mode !== "convert")
+  if (input.mode !== undefined && input.mode !== "convert" && !(input.mode === "render" && input.packages?.some(p=>(typeof p==="string"?p:p[0])==="texhtml")))
     throw new UnsupportedFeatureError(
       `Unsupported mode: ${input.mode} (HTML discovery and SVG measurement are not implemented)`,
     );

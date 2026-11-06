@@ -1,0 +1,24 @@
+--- a/src/packages/textmacros.ts
++++ b/src/packages/textmacros.ts
+@@ -5,6 +5,7 @@
+ import type {Token} from '../scanner.js';
+ import type {TexPackage,TexCommand} from './types.js';
+ import {em} from '../mathml.js';
++import {textVariant} from './bboldx.js';
+ const fonts:Record<string,string>={rm:'normal',mit:'italic',oldstyle:'-tex-oldstyle',cal:'-tex-calligraphic',it:'-tex-mathit',bf:'bold',sf:'sans-serif',tt:'monospace'};
+ const textfonts:Record<string,string>={textnormal:'normal',textup:'normal',textrm:'normal',textit:'-tex-mathit',textbf:'bold',textsf:'sans-serif',texttt:'monospace',frak:'fraktur',Bbb:'double-struck'};
+ const sizes:Record<string,number>={Tiny:.5,tiny:.6,scriptsize:.7,SMALL:.7,Small:.8,footnotesize:.8,small:.9,normalsize:1,large:1.095,Large:1.2,LARGE:1.44,huge:1.73,Huge:2.07,HUGE:2.49};
+@@ -59,11 +60,12 @@
+       if(name==='textcolor'){const color=raw(argument(f));frame(argument(f),f.attrs,n=>add(f,p.node(K.mstyle,n.kind===K.mrow&&!Object.keys(n.attributes).length?n.children:[n],'',{mathcolor:color})));continue;}
+       if(name==='colorbox'||name==='fcolorbox') {const first=raw(argument(f)),background=name==='colorbox'?first:raw(argument(f));frame(argument(f),f.attrs,n=>add(f,p.node(K.mpadded,n.kind===K.mrow&&!Object.keys(n.attributes).length?n.children:[n],'',{mathbackground:background,...(name==='fcolorbox'?{style:`border: 2px solid ${first}`} : {}),width:'+10px',height:'+5px',depth:'+5px',lspace:'5px'})));continue;}
+       if(name==='ref'||name==='eqref') {const label=raw(argument(f)),ref=p.session.labels.get(label)??p.localLabels.get(label)??{id:'',tag:'???'};add(f,p.node(K.mrow,[p.node(K.mtext,[],name==='eqref'?'('+ref.tag+')':ref.tag)],'',{href:(p.options.baseURL??'')+'#'+encodeURIComponent(ref.id),class:'MathJax_ref'}));continue;}
++      if((name==='textbb'||name==='textbfbb')&&p.configuration.extensions.has(name)){flush(f);frame(argument(f),{...f.attrs,'data-mjx-variant':textVariant(p,name==='textbfbb')},n=>add(f,n));continue;}
+       const macro=p.macros.get(name);
+       if(macro) {if(++p.expansions>(p.options.maxExpansions??10000))p.error('Macro expansion limit exceeded');const args:Token[][]=[];for(let i=0;i<macro.count;i++)args.push(argument(f));f.stream.push(p.substitute(macro,args));continue;}
+       const registered=p.configuration.extensions.get(name)??p.configuration.commands.find(x=>x?.definition.name===name);
+       const allowed=['hskip','hspace','kern','mskip','mspace','mkern','Rule','Space','rule','underline','llap','rlap','phantom','vphantom','hphantom','smash','mmlToken','href','class','style','data','cssId','unicode','U','char'];
+-      if(registered&&allowed.includes(name)) {
++      if(registered&&(allowed.includes(name)||registered.definition.type==='text-insert')) {
+         let suspended=false;
+         const shim=new Proxy(p,{get(target,key){
+           if(key==='stream')return f.stream;
