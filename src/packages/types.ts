@@ -1,3 +1,4 @@
+import type { MathMLNode } from "../ast.js";
 import type { Parser } from "../parser.js";
 import type { Token } from "../scanner.js";
 import type { Definition } from "../symbols.js";
@@ -22,6 +23,9 @@ export interface TexEnvironment {
 }
 export interface TexPackage {
   name: string;
+  initialize?: (parser: Parser) => void;
+  undefinedCommand?: (parser: Parser, name: string) => void;
+  formatError?: (message: string, tex: string) => MathMLNode;
   priority?: number;
   commands: Readonly<Record<string, TexCommand>>;
   environments: Readonly<Record<string, TexEnvironment>>;
@@ -34,6 +38,8 @@ export interface RegisteredCommand {
   id: number;
 }
 export interface PackageConfiguration {
+  entries: readonly PackageEntry[];
+  packages: readonly TexPackage[];
   commands: readonly (RegisteredCommand | undefined)[];
   extensions: ReadonlyMap<string, RegisteredCommand>;
   environments: ReadonlyMap<string, TexEnvironment>;

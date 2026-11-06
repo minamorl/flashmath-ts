@@ -12,7 +12,7 @@ export function scan(source:string,max=200000):Token[] {
     if(c<32&&c!==9&&c!==10&&c!==13||c>=0xdc00&&c<=0xdfff||c===0xfffe||c===0xffff)throw new ParseError('Invalid XML character',start);
     if(c===92){const from=i;if(letter(source.charCodeAt(i))){while(letter(source.charCodeAt(i)))i++;}else if(i<source.length){const next=source.charCodeAt(i);if(next<32&&next!==9&&next!==10&&next!==13||next>=0xd800&&next<=0xdfff||next===0xfffe||next===0xffff)throw new ParseError('Invalid control sequence character',start);i++;}
       tokens.push([-1,from,i,source]);
-    }else if(c===37){while(i<source.length&&source.charCodeAt(i)!==10&&source.charCodeAt(i)!==13)i++;}
+    }
     else {if(c>=0xd800&&c<=0xdbff){const low=source.charCodeAt(i);if(!(low>=0xdc00&&low<=0xdfff))throw new ParseError('Invalid XML character',start);i++;}tokens.push([c,start,i,source]);}
   }
   return tokens;

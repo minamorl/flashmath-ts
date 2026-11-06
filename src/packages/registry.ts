@@ -9,6 +9,17 @@ import base from './base.js'; registrations.push(base);
 import newcommand from './newcommand.js'; registrations.push(newcommand);
 import ams from './ams.js'; registrations.push(ams);
 import colorv2 from './colorv2.js'; registrations.push(colorv2);
+import verb from './verb.js'; registrations.push(verb);
+import noerrors from './noerrors.js'; registrations.push(noerrors);
+import noundefined from './noundefined.js'; registrations.push(noundefined);
+import begingroup from './begingroup.js'; registrations.push(begingroup);
+import configmacros from './configmacros.js'; registrations.push(configmacros);
+import retry from './retry.js'; registrations.push(retry);
+import textmacros from './textmacros.js'; registrations.push(textmacros);
+import require from './require.js'; registrations.push(require);
+import autoload from './autoload.js'; registrations.push(autoload);
+import setoptions from './setoptions.js'; registrations.push(setoptions);
+import bussproofs from './bussproofs.js'; registrations.push(bussproofs);
 export const registeredPackages:readonly TexPackage[]=Object.freeze(registrations);
 const modules=new Set(registeredPackages.flatMap(p=>p.configurationModules??[]));
 modules.add('input/tex/Configuration.js');
@@ -33,7 +44,7 @@ function build(entries:readonly PackageEntry[]):PackageConfiguration {
     for(const [name,value]of Object.entries(pkg.environments))environments.set(name,value);
     for(const name of pkg.options??[])options.add(name);
   }
-  return Object.freeze({commands:Object.freeze(commands),extensions,environments,options});
+  return Object.freeze({entries:Object.freeze(selected.map(x=>[x.definition.name,x.priority] as const)),packages: Object.freeze(selected.map(x=>x.definition)),commands:Object.freeze(commands),extensions,environments,options});
 }
 const defaults=build(['base','newcommand']);
 const baseOnly=build(['base']);

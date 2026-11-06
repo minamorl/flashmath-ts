@@ -10,7 +10,7 @@ export function configure(input: ParseOptions): {
   options: ParseOptions;
   configuration: PackageConfiguration;
 } {
-  if (input.mode !== undefined && input.mode !== "convert")
+  if (input.mode !== undefined && input.mode !== "convert" && !(input.mode === "output" && input.packages?.some(p=>(typeof p === "string"?p:p[0]) === "bussproofs")))
     throw new UnsupportedFeatureError(
       `Unsupported mode: ${input.mode} (HTML discovery and SVG measurement are not implemented)`,
     );
@@ -25,7 +25,7 @@ export function configure(input: ParseOptions): {
   for (const key of Object.keys(texOptions))
     if (!configuration.options.has(key))
       throw new UnsupportedFeatureError(`Unsupported TeX option: ${key}`);
-  const options: ParseOptions = { ...input };
+  const options: ParseOptions = { ...input, texOptions: {...texOptions} };
   for (const name of [
     "macros",
     "tags",
@@ -76,7 +76,7 @@ export function configure(input: ParseOptions): {
           !Number.isSafeInteger(tuple[1]) ||
           tuple[1] < 0 ||
           tuple[1] > 9)) ||
-      (tuple[2] !== undefined && typeof tuple[2] !== "string")
+      (tuple[2] !== undefined && typeof tuple[2] !== "string" && !(configuration.packages.some(p=>p.name==="configmacros") && Array.isArray(tuple[2]) && tuple[2].every(x=>typeof x==="string")))
     )
       throw new TypeError(`Unsupported macro configuration: ${name}`);
   }
