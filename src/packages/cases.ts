@@ -30,12 +30,12 @@ function begin(p:Parser,name:string){
   p.hasTaggableEnvironment=true;
   p.tableStart('numbered-cases','l l l',-4,table=>{
     const t=frame.table!,cols=Math.max(0,...t.rows.map(r=>r.length));
-    table.attributes={columnalign:Array(cols).fill('left').join(' '),columnspacing:'1em',rowspacing:'.2em','data-break-align':Array(cols).fill('top').join(' ')};
+    table.attributes={columnalign:Array(cols).fill('left').join(' '),columnspacing:'1em',rowspacing:'.2em',...(cols>1?{'data-break-align':Array(cols).fill('top').join(' ')}:{})};
     const numbered=p.options.tags==='cases'||p.options.tags==='ams'||p.options.tags==='all';
     let main=0;
     for(let i=0;i<table.children.length;i++){
       const row=table.children[i];
-      if(numbered&&row.kind!==K.mlabeledtr){
+      if(numbered&&!t.noNumbers.has(i)&&row.kind!==K.mlabeledtr){
         if(name==='subnumcases'&&p.options.tags==='cases'){
           if(!main)main=++p.session.counter;
           row.kind=K.mlabeledtr;row.children.unshift(tagCell(p,String(main)+String.fromCharCode(97+i),t.labels[i]??''));

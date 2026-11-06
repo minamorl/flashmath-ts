@@ -36,6 +36,7 @@ function begin(p:Parser,name:string){
     while(i<body.length){
       const t=body[i];
       if(t[0]===-1&&['\\','cr'].includes(spelling(t))){i++;cell(false);rows.push(p.node(K.mtr,cells.splice(0)));continue;}
+      if(t[0]===38){i++;cell(false);continue;}
       if(t[0]===64){
         let j=i+1;while(j<body.length&&space(body[j][0]))j++;
         const c=body[j]&&spelling(body[j]);
@@ -68,7 +69,7 @@ function begin(p:Parser,name:string){
       }
       const tokens:Token[]=[];let depth=0;
       do {const t=body[i++];tokens.push(t);if(t[0]===123)depth++;if(t[0]===125)depth--;}
-      while(i<body.length&&(depth||body[i][0]!==64&&!(body[i][0]===-1&&['\\','cr'].includes(spelling(body[i])))));
+      while(i<body.length&&(depth||body[i][0]!==38&&body[i][0]!==64&&!(body[i][0]===-1&&['\\','cr'].includes(spelling(body[i])))));
       parse(tokens,n=>{nodes.push(...sequence(n));next();});return;
     }
     if(nodes.length||cells.length){cell(false);rows.push(p.node(K.mtr,cells.splice(0)));}

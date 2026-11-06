@@ -1,0 +1,1516 @@
+[
+  {
+    "g": "base",
+    "tex": "\\displaystyle\\sum_i\\textstyle\\sum_j\\scriptstyle\\sum_k\\scriptscriptstyle\\sum_l",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\displaystyle\\sum_i\\textstyle\\sum_j\\scriptstyle\\sum_k\\scriptscriptstyle\\sum_l\" display=\"block\">\n  <mstyle data-latex=\"\\displaystyle\\sum_i\\textstyle\\sum_j\\scriptstyle\\sum_k\\scriptscriptstyle\\sum_l\">\n    <munder data-latex=\"\\sum_i\">\n      <mo data-latex=\"\\sum\">&#x2211;</mo>\n      <mi data-latex=\"i\">i</mi>\n    </munder>\n    <mstyle displaystyle=\"false\">\n      <munder data-latex=\"\\sum_j\">\n        <mo data-latex=\"\\sum\">&#x2211;</mo>\n        <mi data-latex=\"j\">j</mi>\n      </munder>\n      <mstyle scriptlevel=\"1\">\n        <munder data-latex=\"\\sum_k\">\n          <mo data-latex=\"\\sum\">&#x2211;</mo>\n          <mi data-latex=\"k\">k</mi>\n        </munder>\n        <mstyle scriptlevel=\"2\">\n          <munder data-latex=\"\\sum_l\">\n            <mo data-latex=\"\\sum\">&#x2211;</mo>\n            <mi data-latex=\"l\">l</mi>\n          </munder>\n        </mstyle>\n      </mstyle>\n    </mstyle>\n  </mstyle>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle displaystyle=\"true\"><munder><mo>∑</mo><mi>i</mi></munder><mstyle displaystyle=\"false\"><msub><mo>∑</mo><mi>j</mi></msub><mstyle scriptlevel=\"1\"><msub><mo>∑</mo><mi>k</mi></msub><mstyle displaystyle=\"false\" scriptlevel=\"2\"><msub><mo>∑</mo><mi>l</mi></msub></mstyle></mstyle></mstyle></mstyle></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "base",
+    "tex": "\\max_{x\\in S}\\min_{y}g(x,y)",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\max_{x\\in S}\\min_{y}g(x,y)\" display=\"block\">\n  <munder data-latex=\"\\max_{x\\in S}\">\n    <mo data-mjx-texclass=\"OP\" movablelimits=\"true\" data-latex=\"\\max\">max</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{x\\in S}\">\n      <mi data-latex=\"x\">x</mi>\n      <mo data-latex=\"\\in\">&#x2208;</mo>\n      <mi data-latex=\"S\">S</mi>\n    </mrow>\n  </munder>\n  <munder data-latex=\"\\min_{y}\">\n    <mo data-mjx-texclass=\"OP\" movablelimits=\"true\" data-latex=\"\\min\">min</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{y}\">\n      <mi data-latex=\"y\">y</mi>\n    </mrow>\n  </munder>\n  <mi data-latex=\"g\">g</mi>\n  <mo data-latex=\"(\" stretchy=\"false\">(</mo>\n  <mi data-latex=\"x\">x</mi>\n  <mo data-latex=\",\">,</mo>\n  <mi data-latex=\"y\">y</mi>\n  <mo data-latex=\")\" stretchy=\"false\">)</mo>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo movablelimits=\"true\" data-mjx-texclass=\"OP\">max</mo><mrow data-mjx-texclass=\"ORD\"><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></munder><munder><mo movablelimits=\"true\" data-mjx-texclass=\"OP\">min</mo><mrow data-mjx-texclass=\"ORD\"><mi>y</mi></mrow></munder><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=\"false\">)</mo></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "base",
+    "tex": "\\mathop{\\rm argmax}\\limits_{\\theta}L(\\theta)",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathop{\\rm argmax}\\limits_{\\theta}L(\\theta)\" display=\"block\">\n  <munder data-latex=\"\\limits_{\\theta}\">\n    <mi data-latex=\"\\limits\">argmax</mi>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\theta}\">\n      <mi data-latex=\"\\theta\">&#x3B8;</mi>\n    </mrow>\n  </munder>\n  <mo data-mjx-texclass=\"NONE\">&#x2061;</mo>\n  <mi data-latex=\"L\">L</mi>\n  <mo data-latex=\"(\" stretchy=\"false\">(</mo>\n  <mi data-latex=\"\\theta\">&#x3B8;</mi>\n  <mo data-latex=\")\" stretchy=\"false\">)</mo>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mrow data-mjx-texclass=\"OP\"><mi mathvariant=\"normal\">a</mi><mi mathvariant=\"normal\">r</mi><mi mathvariant=\"normal\">g</mi><mi mathvariant=\"normal\">m</mi><mi mathvariant=\"normal\">a</mi><mi mathvariant=\"normal\">x</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>θ</mi></mrow></munder><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>L</mi><mo stretchy=\"false\">(</mo><mi>θ</mi><mo stretchy=\"false\">)</mo></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "base",
+    "tex": "\\sum\\nolimits_{i}x_i\\int\\limits_0^1 f",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sum\\nolimits_{i}x_i\\int\\limits_0^1 f\" display=\"block\">\n  <msub data-latex=\"\\nolimits_{i}\">\n    <mo data-latex=\"\\nolimits\" movablelimits=\"false\">&#x2211;</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{i}\">\n      <mi data-latex=\"i\">i</mi>\n    </mrow>\n  </msub>\n  <msub data-latex=\"x_i\">\n    <mi data-latex=\"x\">x</mi>\n    <mi data-latex=\"i\">i</mi>\n  </msub>\n  <munderover data-latex=\"\\limits_0^1\">\n    <mo data-latex=\"\\limits\">&#x222B;</mo>\n    <mn data-latex=\"0\">0</mn>\n    <mn data-latex=\"1\">1</mn>\n  </munderover>\n  <mi data-latex=\"f\">f</mi>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo>∑</mo><mrow data-mjx-texclass=\"ORD\"><mi>i</mi></mrow></msub><msub><mi>x</mi><mi>i</mi></msub><munderover><mo>∫</mo><mn>0</mn><mn>1</mn></munderover><mi>f</mi></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "base",
+    "tex": "\\phantom{abc}x\\vphantom{y}\\hphantom{z}\\smash{w}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\phantom{abc}x\\vphantom{y}\\hphantom{z}\\smash{w}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\phantom{abc}\">\n    <mphantom>\n      <mi data-latex=\"a\">a</mi>\n      <mi data-latex=\"b\">b</mi>\n      <mi data-latex=\"c\">c</mi>\n    </mphantom>\n  </mrow>\n  <mi data-latex=\"x\">x</mi>\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{y}\">\n    <mpadded width=\"0\">\n      <mphantom>\n        <mi data-latex=\"y\">y</mi>\n      </mphantom>\n    </mpadded>\n  </mrow>\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\hphantom{z}\">\n    <mpadded height=\"0\" depth=\"0\">\n      <mphantom>\n        <mi data-latex=\"z\">z</mi>\n      </mphantom>\n    </mpadded>\n  </mrow>\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash{w}\">\n    <mpadded height=\"0\" depth=\"0\">\n      <mi data-latex=\"w\">w</mi>\n    </mpadded>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mphantom><mrow><mi>a</mi><mi>b</mi><mi>c</mi></mrow></mphantom></mrow><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>y</mi></mphantom></mpadded></mrow><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\" depth=\"0\"><mphantom><mi>z</mi></mphantom></mpadded></mrow><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\" depth=\"0\"><mi>w</mi></mpadded></mrow></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "newcommand",
+    "tex": "\\newcommand{\\bad}[10]{#1}\\bad",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\newcommand{\\bad}[10]{#1}\\bad\" display=\"block\">\n  <merror data-mjx-error=\"Missing argument for \\bad\">\n    <mtext>Missing argument for \\bad</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Illegal number of parameters\"><mtext>Illegal number of parameters</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "newcommand"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/newcommand/NewcommandConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js",
+        "input/tex/colorv2/ColorV2Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "ams",
+    "tex": "\\sum_{\\substack{1\\le i\\le n\\\\i\\ne j}}a_{ij}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/1/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sum_{\\substack{1\\le i\\le n\\\\i\\ne j}}a_{ij}\" display=\"block\">\n  <munder data-latex=\"\\sum_{{subarray}}\">\n    <mo data-latex=\"\\sum\">&#x2211;</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{{subarray}}\">\n      <mtable data-mjx-smallmatrix=\"true\" columnspacing=\"0em\" rowspacing=\"0.1em\" data-latex=\"{subarray}\">\n        <mtr data-latex=\"{c}\">\n          <mtd>\n            <mn data-latex=\"1\">1</mn>\n            <mo data-latex=\"\\le\">&#x2264;</mo>\n            <mi data-latex=\"i\">i</mi>\n            <mo data-latex=\"\\le\">&#x2264;</mo>\n            <mi data-latex=\"n\">n</mi>\n          </mtd>\n        </mtr>\n        <mtr data-latex=\"{c}\">\n          <mtd>\n            <mi data-latex=\"i\">i</mi>\n            <mo data-latex=\"\\ne\">&#x2260;</mo>\n            <mi data-latex=\"j\">j</mi>\n          </mtd>\n        </mtr>\n      </mtable>\n    </mrow>\n  </munder>\n  <msub data-latex=\"a_{i j}\">\n    <mi data-latex=\"a\">a</mi>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{i j}\">\n      <mi data-latex=\"i\">i</mi>\n      <mi data-latex=\"j\">j</mi>\n    </mrow>\n  </msub>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo>∑</mo><mrow data-mjx-texclass=\"ORD\"><mstyle scriptlevel=\"1\"><mtable columnspacing=\"0em\" rowspacing=\"0.1em\" data-mjx-smallmatrix=\"true\"><mtr><mtd><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mtd></mtr><mtr><mtd><mi>i</mi><mo>≠</mo><mi>j</mi></mtd></mtr></mtable></mstyle></mrow></munder><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mi>i</mi><mi>j</mi></mrow></msub></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "ams",
+    "tex": "\\operatorname{Hom}(A,B)\\operatorname*{colim}_{i}X_i",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\operatorname{Hom}(A,B)\\operatorname*{colim}_{i}X_i\" display=\"block\">\n  <mi data-latex=\"\\operatorname{Hom}\">Hom</mi>\n  <mo data-mjx-texclass=\"NONE\">&#x2061;</mo>\n  <mo data-latex=\"(\" stretchy=\"false\">(</mo>\n  <mi data-latex=\"A\">A</mi>\n  <mo data-latex=\",\">,</mo>\n  <mi data-latex=\"B\">B</mi>\n  <mo data-latex=\")\" stretchy=\"false\">)</mo>\n  <munder data-latex=\"\\operatorname*{colim}_{i}\">\n    <mi data-latex=\"\\operatorname*{colim}\">colim</mi>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{i}\">\n      <mi data-latex=\"i\">i</mi>\n    </mrow>\n  </munder>\n  <mo data-mjx-texclass=\"NONE\">&#x2061;</mo>\n  <msub data-latex=\"X_i\">\n    <mi data-latex=\"X\">X</mi>\n    <mi data-latex=\"i\">i</mi>\n  </msub>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>Hom</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy=\"false\">)</mo><munder><mi>colim</mi><mrow data-mjx-texclass=\"ORD\"><mi>i</mi></mrow></munder><msub><mi>X</mi><mi>i</mi></msub></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "ams",
+    "tex": "\\boxed{E=mc^2}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\boxed{E=mc^2}\" display=\"block\">\n  <menclose notation=\"box\" data-latex=\"\\fbox{$\\displaystyle{E=mc^2}$}\">\n    <mrow data-mjx-texclass=\"ORD\">\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\displaystyle{E=mc^2 }\">\n        <mi data-latex=\"E\">E</mi>\n        <mo data-latex=\"=\">=</mo>\n        <mi data-latex=\"m\">m</mi>\n        <msup data-latex=\"c^2\">\n          <mi data-latex=\"c\">c</mi>\n          <mn data-latex=\"2\">2</mn>\n        </msup>\n      </mrow>\n    </mrow>\n  </menclose>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><menclose notation=\"box\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></mrow></mrow></menclose></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "ams",
+    "tex": "\\cfrac{1}{1+\\cfrac{1}{x}}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/1/1/2/0/1"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\cfrac{1}{1+\\cfrac{1}{x}}\" display=\"block\">\n  <mfrac data-latex=\"\\cfrac{1}{1+\\cfrac{1}{x}}\">\n    <mrow data-latex=\"\\strut\\textstyle{1}\">\n      <mpadded height=\"8.6pt\" depth=\"3pt\" width=\"0\" data-latex=\"\\strut\">\n        <mrow></mrow>\n      </mpadded>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{1}\">\n        <mn data-latex=\"1\">1</mn>\n      </mrow>\n    </mrow>\n    <mrow data-latex=\"\\strut\\textstyle{1+\\cfrac{1}{x}}\">\n      <mpadded height=\"8.6pt\" depth=\"3pt\" width=\"0\" data-latex=\"\\strut\">\n        <mrow></mrow>\n      </mpadded>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{1+\\cfrac{1}{x}}\">\n        <mn data-latex=\"1\">1</mn>\n        <mo data-latex=\"+\">+</mo>\n        <mfrac data-latex=\"\\cfrac{1}{x}\">\n          <mrow data-latex=\"\\strut\\textstyle{1}\">\n            <mpadded height=\"8.6pt\" depth=\"3pt\" width=\"0\" data-latex=\"\\strut\">\n              <mrow></mrow>\n            </mpadded>\n            <mstyle scriptlevel=\"0\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{1}\">\n                <mn data-latex=\"1\">1</mn>\n              </mrow>\n            </mstyle>\n          </mrow>\n          <mrow data-latex=\"\\strut\\textstyle{x}\">\n            <mpadded height=\"8.6pt\" depth=\"3pt\" width=\"0\" data-latex=\"\\strut\">\n              <mrow></mrow>\n            </mpadded>\n            <mstyle scriptlevel=\"0\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{x}\">\n                <mi data-latex=\"x\">x</mi>\n              </mrow>\n            </mstyle>\n          </mrow>\n        </mfrac>\n      </mrow>\n    </mrow>\n  </mfrac>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mfrac><mrow><mpadded height=\"8.6pt\" depth=\"3pt\" width=\"0\"><mrow></mrow></mpadded><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></mrow><mrow><mpadded height=\"8.6pt\" depth=\"3pt\" width=\"0\"><mrow></mrow></mpadded><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mo>+</mo><mfrac><mrow><mpadded height=\"8.6pt\" depth=\"3pt\" width=\"0\"><mrow></mrow></mpadded><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></mrow><mrow><mpadded height=\"8.6pt\" depth=\"3pt\" width=\"0\"><mrow></mrow></mpadded><mrow data-mjx-texclass=\"ORD\"><mi>x</mi></mrow></mrow></mfrac></mrow></mrow></mfrac></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "ams",
+    "tex": "\\mathring{a}\\varinjlim\\varprojlim\\injlim",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathring{a}\\varinjlim\\varprojlim\\injlim\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathring{a}\">\n    <mover>\n      <mi data-latex=\"a\">a</mi>\n      <mo>&#x2DA;</mo>\n    </mover>\n  </mrow>\n  <mrow data-mjx-texclass=\"OP\" data-latex=\"\\mathop{\\underrightarrow{\\mmlToken{mi}{lim}}}\">\n    <munder data-latex=\"\\underrightarrow{\\mmlToken{mi}{lim}}\">\n      <mi data-latex=\"\\mmlToken{mi}{lim}\">lim</mi>\n      <mo>&#x2192;</mo>\n    </munder>\n  </mrow>\n  <mo data-mjx-texclass=\"NONE\">&#x2061;</mo>\n  <mrow data-mjx-texclass=\"OP\" data-latex=\"\\mathop{\\underleftarrow{\\mmlToken{mi}{lim}}}\">\n    <munder data-latex=\"\\underleftarrow{\\mmlToken{mi}{lim}}\">\n      <mi data-latex=\"\\mmlToken{mi}{lim}\">lim</mi>\n      <mo>&#x2190;</mo>\n    </munder>\n  </mrow>\n  <mo data-mjx-texclass=\"NONE\">&#x2061;</mo>\n  <mo data-mjx-texclass=\"OP\" movablelimits=\"true\" data-latex=\"\\injlim\">inj&#x2006;lim</mo>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mover><mi>a</mi><mo>˚</mo></mover></mrow><mrow data-mjx-texclass=\"OP\"><munder><mi>lim</mi><mo>→</mo></munder></mrow><mo data-mjx-texclass=\"NONE\">⁡</mo><mrow data-mjx-texclass=\"OP\"><munder><mi>lim</mi><mo>←</mo></munder></mrow><mo data-mjx-texclass=\"OP\" movablelimits=\"true\">inj lim</mo></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "amscd",
+    "tex": "\\begin{CD}A&B\\end{CD}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{CD}A&amp;B\\end{CD}\" display=\"block\">\n  <mtable columnspacing=\"5pt\" rowspacing=\"5pt\" displaystyle=\"true\" data-latex=\"\\begin{CD}A&amp;B\\end{CD}\">\n    <mtr>\n      <mtd>\n        <mi data-latex=\"A\">A</mi>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"B\">B</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Misplaced &amp;\"><mtext>Misplaced &amp;</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "amscd"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/amscd/AmsCdConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "mathtools",
+    "tex": "\\cramped{x^2}\\crampedsubstack{a\\\\b}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/1"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\cramped{x^2}\\crampedsubstack{a\\\\b}\" display=\"block\">\n  <mstyle data-cramped=\"true\" data-latex=\"\\cramped{x^2}\">\n    <msup data-latex=\"x^2\">\n      <mi data-latex=\"x\">x</mi>\n      <mn data-latex=\"2\">2</mn>\n    </msup>\n  </mstyle>\n  <mstyle scriptlevel=\"1\" data-latex=\"{crampedsubarray}\">\n    <mtable data-mjx-smallmatrix=\"true\" columnspacing=\"0em\" rowspacing=\"0.1em\" data-cramped=\"true\">\n      <mtr data-latex=\"{c}\">\n        <mtd>\n          <mi data-latex=\"a\">a</mi>\n        </mtd>\n      </mtr>\n      <mtr data-latex=\"{c}\">\n        <mtd>\n          <mi data-latex=\"b\">b</mi>\n        </mtd>\n      </mtr>\n    </mtable>\n  </mstyle>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle data-cramped=\"true\"><msup><mi>x</mi><mn>2</mn></msup></mstyle><mtable data-mjx-smallmatrix=\"true\" columnspacing=\"0em\" rowspacing=\"0.1em\" data-cramped=\"true\"><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "boldsymbol",
+        "mathtools"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/mathtools/MathtoolsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js",
+        "input/tex/boldsymbol/BoldsymbolConfiguration.js",
+        "input/tex/bbox/BboxConfiguration.js",
+        "input/tex/Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "boldsymbol",
+    "tex": "\\boldsymbol{\\mathit{B}}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\boldsymbol{\\mathit{B}}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\boldsymbol{\\mathit{B}}\">\n    <mi data-mjx-variant=\"bold-italic\" data-latex=\"B\">B</mi>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"bold-italic\">B</mi></mrow></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "boldsymbol"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/boldsymbol/BoldsymbolConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "boldsymbol",
+    "tex": "\\boldsymbol{\\left(\\frac{g}{h}\\right)}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\boldsymbol{\\left(\\frac{g}{h}\\right)}\" display=\"block\">\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\boldsymbol{\\left(\\frac{g}{h}\\right)}\">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left(\">(</mo>\n    <mfrac data-latex=\"\\frac{g}{h}\">\n      <mi data-latex=\"g\" mathvariant=\"bold-italic\">g</mi>\n      <mi data-latex=\"h\" mathvariant=\"bold-italic\">h</mi>\n    </mfrac>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right)\">)</mo>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\" mathvariant=\"bold\">(</mo><mfrac><mi mathvariant=\"bold-italic\">g</mi><mi mathvariant=\"bold-italic\">h</mi></mfrac><mo data-mjx-texclass=\"CLOSE\" mathvariant=\"bold\">)</mo></mrow></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "boldsymbol"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/boldsymbol/BoldsymbolConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "extpfeil",
+    "tex": "\\xtofrom{\\sum_i}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/1/1/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\xtofrom{\\sum_i}\" display=\"block\">\n  <mrow data-mjx-texclass=\"REL\" data-latex=\"\\xtofrom{\\sum_i}\">\n    <mrow data-mjx-texclass=\"NONE\"></mrow>\n    <mover>\n      <mo data-mjx-texclass=\"ORD\">&#x21C4;</mo>\n      <mpadded width=\"+1.333em\" lspace=\"0.667em\" voffset=\"-.2em\" height=\"-.2em\">\n        <munder data-latex=\"\\sum_i\">\n          <mo data-latex=\"\\sum\">&#x2211;</mo>\n          <mi data-latex=\"i\">i</mi>\n        </munder>\n        <mspace depth=\".2em\"></mspace>\n      </mpadded>\n    </mover>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"NONE\"></mrow><mover><mo data-mjx-texclass=\"ORD\">⇄</mo><mpadded width=\"+1.333em\" lspace=\"0.667em\" voffset=\"-.2em\" height=\"-.2em\"><msub><mo>∑</mo><mi>i</mi></msub><mspace depth=\".2em\"></mspace></mpadded></mover></mrow></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "extpfeil"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/extpfeil/ExtpfeilConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "action",
+    "tex": "\\toggle\\frac{a}{b}\\sum\\endtoggle",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\toggle\\frac{a}{b}\\sum\\endtoggle\" display=\"block\">\n  <merror data-mjx-error=\"Missing argument for \\frac\">\n    <mtext>Missing argument for \\frac</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Undefined control sequence \\endtoggle\"><mtext>Undefined control sequence \\endtoggle</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "action"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/action/ActionConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "action",
+    "tex": "\\toggle\\endtoggle",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\toggle\\endtoggle\" display=\"block\">\n  <maction data-latex=\"\\toggle\\endtoggle\">\n    <mrow></mrow>\n  </maction>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><maction></maction></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "action"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/action/ActionConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "action",
+    "tex": "\\toggle\\mathbf{x}\\mathrm{y}\\endtoggle",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\toggle\\mathbf{x}\\mathrm{y}\\endtoggle\" display=\"block\">\n  <merror data-mjx-error=\"Missing argument for \\mathbf\">\n    <mtext>Missing argument for \\mathbf</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Undefined control sequence \\endtoggle\"><mtext>Undefined control sequence \\endtoggle</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "action"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/action/ActionConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "bboldx",
+    "tex": "\\textbb{ab c}",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\textbb{ab c}\" display=\"block\">\n  <merror data-mjx-error=\"Undefined control sequence \\textbb\">\n    <mtext>Undefined control sequence \\textbb</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtext data-mjx-variant=\"-bboldx\">ab c</mtext></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "bboldx",
+        "textmacros"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/bboldx/BboldxConfiguration.js",
+        "input/tex/textmacros/TextMacrosConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "bboldx",
+    "tex": "\\textbfbb{de}",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\textbfbb{de}\" display=\"block\">\n  <merror data-mjx-error=\"Undefined control sequence \\textbfbb\">\n    <mtext>Undefined control sequence \\textbfbb</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtext data-mjx-variant=\"-bboldx-bold\">de</mtext></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "bboldx",
+        "textmacros"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/bboldx/BboldxConfiguration.js",
+        "input/tex/textmacros/TextMacrosConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "empheq",
+    "tex": "\\begin{empheq}[box=\\boxed]{align}x&=y\\end{empheq}",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{empheq}[box=\\boxed]{align}x&amp;=y\\end{empheq}\" display=\"block\">\n  <merror data-mjx-error=\"Invalid option: box\">\n    <mtext>Invalid option: box</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Invalid empheq option\"><mtext>Invalid empheq option</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "empheq",
+        "cases"
+      ],
+      "texOptions": {
+        "tags": "ams"
+      },
+      "configurationModules": [
+        "input/tex/empheq/EmpheqConfiguration.js",
+        "input/tex/cases/CasesConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "cases",
+    "tex": "\\begin{numcases}{h=}1\\end{numcases}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{numcases}{h=}1\\end{numcases}\" display=\"block\">\n  <mtable columnalign=\"right left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-latex=\"\\begin{numcases}{h=}1\\end{numcases}\">\n    <mlabeledtr data-latex=\"{h=}\">\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mpadded height=\"0\" depth=\"0\" voffset=\"height\">\n          <mpadded height=\"0\" depth=\"0\" voffset=\"-1height\">\n            <mi data-latex=\"h\">h</mi>\n            <mo data-latex=\"=\">=</mo>\n            <mo data-latex=\"\\mmlToken{mo}{\\U{7B}}\">{</mo>\n            <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n            <mphantom>\n              <mpadded width=\"0\">\n                <mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\">\n                  <mlabeledtr data-latex=\"{h=}\">\n                    <mtd>\n                      <mtext data-latex=\"\\text{(}\">(</mtext>\n                      <mtext data-latex=\"\\text{1}\">1</mtext>\n                      <mtext data-latex=\"\\text{)}\">)</mtext>\n                    </mtd>\n                    <mtd>\n                      <mn data-latex=\"1\">1</mn>\n                    </mtd>\n                  </mlabeledtr>\n                </mtable>\n              </mpadded>\n            </mphantom>\n          </mpadded>\n          <mphantom>\n            <mpadded width=\"0\">\n              <mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" align=\"baseline 1\">\n                <mlabeledtr data-latex=\"{h=}\">\n                  <mtd>\n                    <mtext data-latex=\"\\text{(}\">(</mtext>\n                    <mtext data-latex=\"\\text{1}\">1</mtext>\n                    <mtext data-latex=\"\\text{)}\">)</mtext>\n                  </mtd>\n                  <mtd>\n                    <mn data-latex=\"1\">1</mn>\n                  </mtd>\n                </mlabeledtr>\n              </mtable>\n            </mpadded>\n          </mphantom>\n        </mpadded>\n      </mtd>\n      <mtd>\n        <mn data-latex=\"1\">1</mn>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnalign=\"right left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-break-align=\"top\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mpadded height=\"0\" depth=\"0\" voffset=\"height\"><mpadded height=\"0\" depth=\"0\" voffset=\"-1height\"><mi>h</mi><mo>=</mo><mo>{</mo><mspace width=\"0.167em\"></mspace><mphantom><mpadded width=\"0\"><mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mn>1</mn></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded><mphantom><mpadded width=\"0\"><mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top\" align=\"baseline 1\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mn>1</mn></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded></mtd><mtd><mn>1</mn></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "cases"
+      ],
+      "texOptions": {
+        "tags": "ams"
+      },
+      "configurationModules": [
+        "input/tex/cases/CasesConfiguration.js",
+        "input/tex/empheq/EmpheqConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "cases",
+    "tex": "\\begin{numcases}{z=}a\\end{numcases}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{numcases}{z=}a\\end{numcases}\" display=\"block\">\n  <mtable columnalign=\"right left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-latex=\"\\begin{numcases}{z=}a\\end{numcases}\">\n    <mlabeledtr data-latex=\"{z=}\">\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mpadded height=\"0\" depth=\"0\" voffset=\"height\">\n          <mpadded height=\"0\" depth=\"0\" voffset=\"-1height\">\n            <mi data-latex=\"z\">z</mi>\n            <mo data-latex=\"=\">=</mo>\n            <mo data-latex=\"\\mmlToken{mo}{\\U{7B}}\">{</mo>\n            <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n            <mphantom>\n              <mpadded width=\"0\">\n                <mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\">\n                  <mlabeledtr data-latex=\"{z=}\">\n                    <mtd>\n                      <mtext data-latex=\"\\text{(}\">(</mtext>\n                      <mtext data-latex=\"\\text{1}\">1</mtext>\n                      <mtext data-latex=\"\\text{)}\">)</mtext>\n                    </mtd>\n                    <mtd>\n                      <mi data-latex=\"a\">a</mi>\n                    </mtd>\n                  </mlabeledtr>\n                </mtable>\n              </mpadded>\n            </mphantom>\n          </mpadded>\n          <mphantom>\n            <mpadded width=\"0\">\n              <mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" align=\"baseline 1\">\n                <mlabeledtr data-latex=\"{z=}\">\n                  <mtd>\n                    <mtext data-latex=\"\\text{(}\">(</mtext>\n                    <mtext data-latex=\"\\text{1}\">1</mtext>\n                    <mtext data-latex=\"\\text{)}\">)</mtext>\n                  </mtd>\n                  <mtd>\n                    <mi data-latex=\"a\">a</mi>\n                  </mtd>\n                </mlabeledtr>\n              </mtable>\n            </mpadded>\n          </mphantom>\n        </mpadded>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"a\">a</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnalign=\"right left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-break-align=\"top\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mpadded height=\"0\" depth=\"0\" voffset=\"height\"><mpadded height=\"0\" depth=\"0\" voffset=\"-1height\"><mi>z</mi><mo>=</mo><mo>{</mo><mspace width=\"0.167em\"></mspace><mphantom><mpadded width=\"0\"><mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded><mphantom><mpadded width=\"0\"><mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top\" align=\"baseline 1\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "cases"
+      ],
+      "texOptions": {
+        "tags": "ams"
+      },
+      "configurationModules": [
+        "input/tex/cases/CasesConfiguration.js",
+        "input/tex/empheq/EmpheqConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "cases",
+    "tex": "\\begin{cases}a&b\\\\c&d\\end{cases}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{cases}a&amp;b\\\\c&amp;d\\end{cases}\" display=\"block\">\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\begin{cases}a&amp;b\\\\c&amp;d\\end{cases}\">\n    <mo data-mjx-texclass=\"OPEN\">{</mo>\n    <mtable columnspacing=\"1em\" rowspacing=\".2em\" columnalign=\"left left\">\n      <mtr>\n        <mtd>\n          <mi data-latex=\"a\">a</mi>\n        </mtd>\n        <mtd>\n          <mi data-latex=\"b\">b</mi>\n        </mtd>\n      </mtr>\n      <mtr>\n        <mtd>\n          <mi data-latex=\"c\">c</mi>\n        </mtd>\n        <mtd>\n          <mi data-latex=\"d\">d</mi>\n        </mtd>\n      </mtr>\n    </mtable>\n    <mo data-mjx-texclass=\"CLOSE\" fence=\"true\" stretchy=\"true\" symmetric=\"true\"></mo>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Missing \\end{cases}\"><mtext>Missing \\end{cases}</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "cases"
+      ],
+      "texOptions": {
+        "tags": "ams"
+      },
+      "configurationModules": [
+        "input/tex/cases/CasesConfiguration.js",
+        "input/tex/empheq/EmpheqConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "cases",
+    "tex": "\\begin{numcases}{p=}a\\\\b\\\\c\\end{numcases}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{numcases}{p=}a\\\\b\\\\c\\end{numcases}\" display=\"block\">\n  <mtable columnalign=\"right left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-latex=\"\\begin{numcases}{p=}a\\\\b\\\\c\\end{numcases}\">\n    <mlabeledtr data-latex=\"{p=}\">\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mpadded height=\"0\" depth=\"0\" voffset=\"height\">\n          <mpadded height=\"0\" depth=\"0\" voffset=\"-1height\">\n            <mi data-latex=\"p\">p</mi>\n            <mo data-latex=\"=\">=</mo>\n            <mo data-latex=\"\\mmlToken{mo}{\\U{7B}}\">{</mo>\n            <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n            <mphantom>\n              <mpadded width=\"0\">\n                <mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\">\n                  <mlabeledtr data-latex=\"{p=}\">\n                    <mtd>\n                      <mtext data-latex=\"\\text{(}\">(</mtext>\n                      <mtext data-latex=\"\\text{1}\">1</mtext>\n                      <mtext data-latex=\"\\text{)}\">)</mtext>\n                    </mtd>\n                    <mtd>\n                      <mi data-latex=\"a\">a</mi>\n                    </mtd>\n                  </mlabeledtr>\n                  <mlabeledtr data-latex=\"{p=}\">\n                    <mtd>\n                      <mtext data-latex=\"\\text{(}\">(</mtext>\n                      <mtext data-latex=\"\\text{2}\">2</mtext>\n                      <mtext data-latex=\"\\text{)}\">)</mtext>\n                    </mtd>\n                    <mtd>\n                      <mi data-latex=\"b\">b</mi>\n                    </mtd>\n                  </mlabeledtr>\n                  <mlabeledtr data-latex=\"{p=}\">\n                    <mtd>\n                      <mtext data-latex=\"\\text{(}\">(</mtext>\n                      <mtext data-latex=\"\\text{3}\">3</mtext>\n                      <mtext data-latex=\"\\text{)}\">)</mtext>\n                    </mtd>\n                    <mtd>\n                      <mi data-latex=\"c\">c</mi>\n                    </mtd>\n                  </mlabeledtr>\n                </mtable>\n              </mpadded>\n            </mphantom>\n          </mpadded>\n          <mphantom>\n            <mpadded width=\"0\">\n              <mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" align=\"baseline 1\">\n                <mlabeledtr data-latex=\"{p=}\">\n                  <mtd>\n                    <mtext data-latex=\"\\text{(}\">(</mtext>\n                    <mtext data-latex=\"\\text{1}\">1</mtext>\n                    <mtext data-latex=\"\\text{)}\">)</mtext>\n                  </mtd>\n                  <mtd>\n                    <mi data-latex=\"a\">a</mi>\n                  </mtd>\n                </mlabeledtr>\n              </mtable>\n            </mpadded>\n          </mphantom>\n        </mpadded>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"a\">a</mi>\n      </mtd>\n    </mlabeledtr>\n    <mlabeledtr data-latex=\"{p=}\">\n      <mtd id=\"mjx-eqn:2\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{2}\">2</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd></mtd>\n      <mtd>\n        <mi data-latex=\"b\">b</mi>\n      </mtd>\n    </mlabeledtr>\n    <mlabeledtr data-latex=\"{p=}\">\n      <mtd id=\"mjx-eqn:3\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{3}\">3</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd></mtd>\n      <mtd>\n        <mi data-latex=\"c\">c</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnalign=\"right left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-break-align=\"top\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mpadded height=\"0\" depth=\"0\" voffset=\"height\"><mpadded height=\"0\" depth=\"0\" voffset=\"-1height\"><mi>p</mi><mo>=</mo><mo>{</mo><mspace width=\"0.167em\"></mspace><mphantom><mpadded width=\"0\"><mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(</mtext><mtext>2</mtext><mtext>)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr><mlabeledtr><mtd><mtext>(</mtext><mtext>3</mtext><mtext>)</mtext></mtd><mtd><mi>c</mi></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded><mphantom><mpadded width=\"0\"><mtable columnalign=\"left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top\" align=\"baseline 1\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:2\"><mtext>(</mtext><mtext>2</mtext><mtext>)</mtext></mtd><mtd></mtd><mtd><mi>b</mi></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:3\"><mtext>(</mtext><mtext>3</mtext><mtext>)</mtext></mtd><mtd></mtd><mtd><mi>c</mi></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "cases"
+      ],
+      "texOptions": {
+        "tags": "ams"
+      },
+      "configurationModules": [
+        "input/tex/cases/CasesConfiguration.js",
+        "input/tex/empheq/EmpheqConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "cases",
+    "tex": "\\begin{numcases}{q=}\\sum_i&\\int_0^1\\end{numcases}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/0/1/0/0/4/0/0/0/1/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{numcases}{q=}\\sum_i&amp;\\int_0^1\\end{numcases}\" display=\"block\">\n  <mtable columnalign=\"right left left left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-break-align=\"top top top\" data-latex=\"\\begin{numcases}{q=}\\sum_i&amp;\\int_0^1\\end{numcases}\">\n    <mlabeledtr data-latex=\"{q=}\">\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mpadded height=\"0\" depth=\"0\" voffset=\"height\">\n          <mpadded height=\"0\" depth=\"0\" voffset=\"-1height\">\n            <mi data-latex=\"q\">q</mi>\n            <mo data-latex=\"=\">=</mo>\n            <mo data-latex=\"\\mmlToken{mo}{\\U{7B}}\">{</mo>\n            <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n            <mphantom>\n              <mpadded width=\"0\">\n                <mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top top top\">\n                  <mlabeledtr data-latex=\"{q=}\">\n                    <mtd>\n                      <mtext data-latex=\"\\text{(}\">(</mtext>\n                      <mtext data-latex=\"\\text{1}\">1</mtext>\n                      <mtext data-latex=\"\\text{)}\">)</mtext>\n                    </mtd>\n                    <mtd>\n                      <munder data-latex=\"\\sum_i\">\n                        <mo data-latex=\"\\sum\">&#x2211;</mo>\n                        <mi data-latex=\"i\">i</mi>\n                      </munder>\n                    </mtd>\n                    <mtd>\n                      <mstyle indentshift=\"2em\">\n                        <mtext>\\int_0^1</mtext>\n                      </mstyle>\n                    </mtd>\n                    <mtd>\n                      <mstyle indentshift=\"2em\"></mstyle>\n                    </mtd>\n                  </mlabeledtr>\n                </mtable>\n              </mpadded>\n            </mphantom>\n          </mpadded>\n          <mphantom>\n            <mpadded width=\"0\">\n              <mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top top top\" align=\"baseline 1\">\n                <mlabeledtr data-latex=\"{q=}\">\n                  <mtd>\n                    <mtext data-latex=\"\\text{(}\">(</mtext>\n                    <mtext data-latex=\"\\text{1}\">1</mtext>\n                    <mtext data-latex=\"\\text{)}\">)</mtext>\n                  </mtd>\n                  <mtd>\n                    <munder data-latex=\"\\sum_i\">\n                      <mo data-latex=\"\\sum\">&#x2211;</mo>\n                      <mi data-latex=\"i\">i</mi>\n                    </munder>\n                  </mtd>\n                  <mtd>\n                    <mstyle indentshift=\"2em\">\n                      <mtext>\\int_0^1</mtext>\n                    </mstyle>\n                  </mtd>\n                  <mtd>\n                    <mstyle indentshift=\"2em\"></mstyle>\n                  </mtd>\n                </mlabeledtr>\n              </mtable>\n            </mpadded>\n          </mphantom>\n        </mpadded>\n      </mtd>\n      <mtd>\n        <munder data-latex=\"\\sum_i\">\n          <mo data-latex=\"\\sum\">&#x2211;</mo>\n          <mi data-latex=\"i\">i</mi>\n        </munder>\n      </mtd>\n      <mtd>\n        <mstyle indentshift=\"2em\">\n          <mtext>\\int_0^1</mtext>\n        </mstyle>\n      </mtd>\n      <mtd>\n        <mstyle indentshift=\"2em\"></mstyle>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnalign=\"right left left left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-break-align=\"top top top\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mpadded height=\"0\" depth=\"0\" voffset=\"height\"><mpadded height=\"0\" depth=\"0\" voffset=\"-1height\"><mi>q</mi><mo>=</mo><mo>{</mo><mspace width=\"0.167em\"></mspace><mphantom><mpadded width=\"0\"><mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top top top\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><msub><mo>∑</mo><mi>i</mi></msub></mtd><mtd><mstyle indentshift=\"2em\"><mtext>\\int_0^1</mtext></mstyle></mtd><mtd><mstyle indentshift=\"2em\"></mstyle></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded><mphantom><mpadded width=\"0\"><mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top top top\" align=\"baseline 1\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><msub><mo>∑</mo><mi>i</mi></msub></mtd><mtd><mstyle indentshift=\"2em\"><mtext>\\int_0^1</mtext></mstyle></mtd><mtd><mstyle indentshift=\"2em\"></mstyle></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded></mtd><mtd><msub><mo>∑</mo><mi>i</mi></msub></mtd><mtd><mstyle indentshift=\"2em\"><mtext>\\int_0^1</mtext></mstyle></mtd><mtd><mstyle indentshift=\"2em\"></mstyle></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "cases"
+      ],
+      "texOptions": {
+        "tags": "ams"
+      },
+      "configurationModules": [
+        "input/tex/cases/CasesConfiguration.js",
+        "input/tex/empheq/EmpheqConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "cases",
+    "tex": "\\begin{numcases}{r=}a\\notag&b\\end{numcases}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{numcases}{r=}a\\notag&amp;b\\end{numcases}\" display=\"block\">\n  <mtable columnalign=\"right left left left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-break-align=\"top top top\" data-latex=\"\\begin{numcases}{r=}a\\notag&amp;b\\end{numcases}\">\n    <mtr data-latex=\"{r=}\">\n      <mtd>\n        <mpadded height=\"0\" depth=\"0\" voffset=\"height\">\n          <mpadded height=\"0\" depth=\"0\" voffset=\"-1height\">\n            <mi data-latex=\"r\">r</mi>\n            <mo data-latex=\"=\">=</mo>\n            <mo data-latex=\"\\mmlToken{mo}{\\U{7B}}\">{</mo>\n            <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n            <mphantom>\n              <mpadded width=\"0\">\n                <mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top top top\">\n                  <mtr data-latex=\"{r=}\">\n                    <mtd>\n                      <mi data-latex=\"\\notag\">a</mi>\n                    </mtd>\n                    <mtd>\n                      <mstyle indentshift=\"2em\">\n                        <mtext>b</mtext>\n                      </mstyle>\n                    </mtd>\n                    <mtd>\n                      <mstyle indentshift=\"2em\"></mstyle>\n                    </mtd>\n                  </mtr>\n                </mtable>\n              </mpadded>\n            </mphantom>\n          </mpadded>\n          <mphantom>\n            <mpadded width=\"0\">\n              <mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top top top\" align=\"baseline 1\">\n                <mtr data-latex=\"{r=}\">\n                  <mtd>\n                    <mi data-latex=\"\\notag\">a</mi>\n                  </mtd>\n                  <mtd>\n                    <mstyle indentshift=\"2em\">\n                      <mtext>b</mtext>\n                    </mstyle>\n                  </mtd>\n                  <mtd>\n                    <mstyle indentshift=\"2em\"></mstyle>\n                  </mtd>\n                </mtr>\n              </mtable>\n            </mpadded>\n          </mphantom>\n        </mpadded>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\notag\">a</mi>\n      </mtd>\n      <mtd>\n        <mstyle indentshift=\"2em\">\n          <mtext>b</mtext>\n        </mstyle>\n      </mtd>\n      <mtd>\n        <mstyle indentshift=\"2em\"></mstyle>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnalign=\"right left left left\" columnspacing=\"0em 1em\" rowspacing=\".2em\" data-break-align=\"top top top\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mpadded height=\"0\" depth=\"0\" voffset=\"height\"><mpadded height=\"0\" depth=\"0\" voffset=\"-1height\"><mi>r</mi><mo>=</mo><mo>{</mo><mspace width=\"0.167em\"></mspace><mphantom><mpadded width=\"0\"><mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top top top\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mstyle indentshift=\"2em\"><mtext>b</mtext></mstyle></mtd><mtd><mstyle indentshift=\"2em\"></mstyle></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded><mphantom><mpadded width=\"0\"><mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\".2em\" data-break-align=\"top top top\" align=\"baseline 1\"><mlabeledtr><mtd><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mstyle indentshift=\"2em\"><mtext>b</mtext></mstyle></mtd><mtd><mstyle indentshift=\"2em\"></mstyle></mtd></mlabeledtr></mtable></mpadded></mphantom></mpadded></mtd><mtd><mi>a</mi></mtd><mtd><mstyle indentshift=\"2em\"><mtext>b</mtext></mstyle></mtd><mtd><mstyle indentshift=\"2em\"></mstyle></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "cases"
+      ],
+      "texOptions": {
+        "tags": "ams"
+      },
+      "configurationModules": [
+        "input/tex/cases/CasesConfiguration.js",
+        "input/tex/empheq/EmpheqConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "html",
+    "tex": "\\data{=}{n}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\data{=}{n}\" display=\"block\">\n  <mi data-latex=\"\\data{=}{n}\" data-=\"\">n</mi>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Invalid HTML attribute: data-\"><mtext>Invalid HTML attribute: data-</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "html"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/html/HtmlConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "textmacros",
+    "tex": "\\mbox{\\textbf{z}}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mbox{\\textbf{z}}\" display=\"block\">\n  <mstyle displaystyle=\"false\" data-latex=\"\\mbox{\\textbf{z}}\">\n    <mtext mathvariant=\"bold\">z</mtext>\n  </mstyle>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext mathvariant=\"bold\">z</mtext></mstyle></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "newcommand",
+        "color",
+        "html",
+        "unicode",
+        "textmacros"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/textmacros/TextMacrosConfiguration.js",
+        "input/tex/newcommand/NewcommandConfiguration.js",
+        "input/tex/color/ColorConfiguration.js",
+        "input/tex/html/HtmlConfiguration.js",
+        "input/tex/unicode/UnicodeConfiguration.js",
+        "input/tex/Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "textmacros",
+    "tex": "\\text{\\hskip 3pt o}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "text",
+      "p": "/math/0/1/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\text{\\hskip 3pt o}\" display=\"block\">\n  <mrow data-latex=\"\\text{\\hskip 3pt o}\">\n    <mspace width=\"3pt\"></mspace>\n    <mtext>o</mtext>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mspace width=\"3pt\"></mspace><mtext> o</mtext></mrow></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "newcommand",
+        "color",
+        "html",
+        "unicode",
+        "textmacros"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/textmacros/TextMacrosConfiguration.js",
+        "input/tex/newcommand/NewcommandConfiguration.js",
+        "input/tex/color/ColorConfiguration.js",
+        "input/tex/html/HtmlConfiguration.js",
+        "input/tex/unicode/UnicodeConfiguration.js",
+        "input/tex/Configuration.js"
+      ]
+    }
+  },
+  {
+    "g": "noerrors",
+    "tex": "\\end{matrix}",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\end{matrix}\" display=\"block\">\n  <merror data-mjx-error=\"Unknown environment 'matrix'\" title=\"Unknown environment 'matrix'\">\n    <mtext>\\end{matrix}</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Missing \\begin{matrix} or extra \\end{matrix}\" title=\"Missing \\begin{matrix} or extra \\end{matrix}\"><mtext>\\end{matrix}</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "noerrors"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/noerrors/NoErrorsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "noerrors",
+    "tex": "\\limits",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\limits\" display=\"block\">\n  <merror data-mjx-error=\"\\limits is allowed only on operators\" title=\"\\limits is allowed only on operators\">\n    <mtext>\\limits</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Limits controls must follow a math operator\" title=\"Limits controls must follow a math operator\"><mtext>\\limits</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "noerrors"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/noerrors/NoErrorsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "setoptions",
+    "tex": "\\setOptions{tagIndent=1em} a\\tag{1}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\setOptions{tagIndent=1em} a\\tag{1}\" display=\"block\">\n  <mtable minlabelspacing=\"1em\" displaystyle=\"true\" data-latex=\"\\setOptions{tagIndent=1em} a\\tag{1}\">\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{1}\">a</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "units",
+        "setoptions"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/setoptions/SetOptionsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js",
+        "input/tex/units/UnitsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "setoptions",
+    "tex": "\\setOptions{tagSide=left,tagIndent=2em} b\\tag{2}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\setOptions{tagSide=left,tagIndent=2em} b\\tag{2}\" display=\"block\">\n  <mtable side=\"left\" minlabelspacing=\"2em\" displaystyle=\"true\" data-latex=\"\\setOptions{tagSide=left,tagIndent=2em} b\\tag{2}\">\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:2\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{2}\">2</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{2}\">b</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" side=\"left\"><mlabeledtr><mtd id=\"mjx-eqn:2\"><mtext>(</mtext><mtext>2</mtext><mtext>)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "units",
+        "setoptions"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/setoptions/SetOptionsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js",
+        "input/tex/units/UnitsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "setoptions",
+    "tex": "\\setOptions{maxMacros=2} j",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\setOptions{maxMacros=2} j\" display=\"block\">\n  <mi data-latex=\"\\setOptions{maxMacros=2} j\">j</mi>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Option &quot;maxMacros&quot; is not allowed to be set\"><mtext>Option &quot;maxMacros&quot; is not allowed to be set</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "units",
+        "setoptions"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/setoptions/SetOptionsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js",
+        "input/tex/units/UnitsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "setoptions",
+    "tex": "\\setOptions{tagSide=center} l\\tag{1}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\setOptions{tagSide=center} l\\tag{1}\" display=\"block\">\n  <mtable side=\"center\" displaystyle=\"true\" data-latex=\"\\setOptions{tagSide=center} l\\tag{1}\">\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{1}\">l</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>l</mi></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "units",
+        "setoptions"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/setoptions/SetOptionsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js",
+        "input/tex/units/UnitsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "tagformat",
+    "tex": "\\begin{align}\\tag{}y\\end{align}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{align}\\tag{}y\\end{align}\" display=\"block\">\n  <mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\" data-latex=\"\\begin{align}\\tag{}y\\end{align}\">\n    <mtr>\n      <mtd>\n        <mi data-latex=\"y\">y</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:\"><mtext>&lt;&gt;</mtext></mtd><mtd><mi>y</mi></mtd></mlabeledtr></mtable></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "tagformat"
+      ],
+      "texOptions": {
+        "tags": "ams",
+        "tagformat": {
+          "number": {
+            "$function": "(n)=>`B${n}`"
+          },
+          "tag": {
+            "$function": "(t)=>`<${t}>`"
+          }
+        }
+      },
+      "configurationModules": [
+        "input/tex/tagformat/TagFormatConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "texhtml",
+    "tex": "<tex-html>plain</tex-html>",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"&lt;tex-html&gt;plain&lt;/tex-html&gt;\" display=\"block\">\n  <mtext data-latex=\"&lt;tex-html&gt;plain&lt;/tex-html&gt;\"><span>plain</span></mtext>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtext>plain</mtext></math>",
+    "o": {
+      "mode": "render",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "texhtml"
+      ],
+      "texOptions": {
+        "allowTexHTML": true
+      },
+      "configurationModules": [
+        "input/tex/texhtml/TexHtmlConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "texhtml",
+    "tex": "<tex-html><br></tex-html>",
+    "valid": true,
+    "o": {
+      "mode": "render",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "texhtml"
+      ],
+      "texOptions": {
+        "allowTexHTML": true
+      },
+      "configurationModules": [
+        "input/tex/texhtml/TexHtmlConfiguration.js"
+      ]
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"&lt;tex-html&gt;&lt;br&gt;&lt;/tex-html&gt;\" display=\"block\">\n  <mtext data-latex=\"&lt;tex-html&gt;&lt;br&gt;&lt;/tex-html&gt;\"><br></mtext>\n</math>",
+    "htmlVoidComparison": true
+  },
+  {
+    "g": "textcomp",
+    "tex": "\\mathbf{\\text{\\textyen}}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathbf{\\text{\\textyen}}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbf{\\text{\\textyen}}\">\n    <mtext mathvariant=\"bold\" data-latex=\"\\text{\\textyen}\">\\textyen</mtext>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mtext>\\textyen</mtext></mrow></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "textcomp"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/textcomp/TextcompConfiguration.js",
+        "input/tex/textmacros/TextMacrosConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "units",
+    "tex": "\\unitfrac[5][\\mathbf]{m}{s}",
+    "valid": false,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\unitfrac[5][\\mathbf]{m}{s}\" display=\"block\">\n  <merror data-mjx-error=\"Missing argument for \\mathbf\">\n    <mtext>Missing argument for \\mathbf</mtext>\n  </merror>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Extra close brace or missing open brace\"><mtext>Extra close brace or missing open brace</mtext></merror></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "units"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/units/UnitsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "upgreek",
+    "tex": "\\mathbf{\\upalpha}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathbf{\\upalpha}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbf{\\upalpha}\">\n    <mi mathvariant=\"normal\" data-latex=\"\\upalpha\">&#x3B1;</mi>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"bold\">α</mi></mrow></math>",
+    "o": {
+      "mode": "convert",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "upgreek"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/upgreek/UpgreekConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "bussproofs",
+    "tex": "\\begin{prooftree}\\AxiomC{a}\\noLine\\UnaryInfC{b}\\end{prooftree}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "attributes",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{prooftree}\\AxiomC{a}\\noLine\\UnaryInfC{b}\\end{prooftree}\" display=\"block\">\n  <mtable align=\"top 2\" framespacing=\"0 0\" data-latex=\"\\begin{prooftree}\\AxiomC{a}\\noLine\\UnaryInfC{b}\\end{prooftree}\" semantics=\"bspr_inferenceRule:down;bspr_inference:1;bspr_proof:true\">\n    <mtr>\n      <mtd>\n        <mtable framespacing=\"0 0\">\n          <mtr>\n            <mtd rowalign=\"bottom\">\n              <mrow data-latex=\"\\noLine\" semantics=\"bspr_axiom:true\">\n                <mspace width=\".5ex\"></mspace>\n                <mtext>a</mtext>\n                <mspace width=\".5ex\"></mspace>\n              </mrow>\n            </mtd>\n          </mtr>\n        </mtable>\n      </mtd>\n    </mtr>\n    <mtr>\n      <mtd>\n        <mrow>\n          <mspace width=\".5ex\"></mspace>\n          <mtext>b</mtext>\n          <mspace width=\".5ex\"></mspace>\n        </mrow>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable align=\"top 2\" rowlines=\"none\" framespacing=\"0 0\" semantics=\"bspr_inferenceRule:down;bspr_inference:1;bspr_proof:true\"><mtr><mtd><mtable framespacing=\"0 0\"><mtr><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mtext>a</mtext><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mspace width=\".5ex\"></mspace><mtext>b</mtext><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></math>",
+    "o": {
+      "mode": "output",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "bussproofs"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/bussproofs/BussproofsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "bussproofs",
+    "tex": "\\begin{prooftree}\\Axiom$a\\fCenter b$\\UnaryInf$c\\fCenter d$\\end{prooftree}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{prooftree}\\Axiom$a\\fCenter b$\\UnaryInf$c\\fCenter d$\\end{prooftree}\" display=\"block\">\n  <mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" data-latex=\"\\begin{prooftree}\\Axiom$a\\fCenter b$\\UnaryInf$c\\fCenter d$\\end{prooftree}\" semantics=\"bspr_inferenceRule:down;bspr_inference:1;bspr_proof:true\">\n    <mtr>\n      <mtd>\n        <mtable framespacing=\"0 0\">\n          <mtr>\n            <mtd rowalign=\"bottom\">\n              <mtable columnspacing=\".5ex\" columnalign=\"center 2\" data-latex=\"\\Axiom$a\\fCenter b$\" semantics=\"bspr_sequent:true;bspr_axiom:true;bspr_sequentAdjust_right:0.09100000000000003\">\n                <mtr>\n                  <mtd>\n                    <mi data-latex=\"a\">a</mi>\n                  </mtd>\n                  <mtd></mtd>\n                  <mtd>\n                    <mi data-latex=\"b\">b</mi>\n                    <mspace width=\"0.091em\"></mspace>\n                  </mtd>\n                </mtr>\n              </mtable>\n            </mtd>\n          </mtr>\n        </mtable>\n      </mtd>\n    </mtr>\n    <mtr>\n      <mtd>\n        <mtable columnspacing=\".5ex\" columnalign=\"center 2\" semantics=\"bspr_sequent:true;bspr_sequentAdjust_left:0.09600000000000003\">\n          <mtr>\n            <mtd>\n              <mspace width=\"0.096em\"></mspace>\n              <mi data-latex=\"c\">c</mi>\n            </mtd>\n            <mtd></mtd>\n            <mtd>\n              <mi data-latex=\"d\">d</mi>\n            </mtd>\n          </mtr>\n        </mtable>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Undefined control sequence \\Axiom\"><mtext>Undefined control sequence \\Axiom</mtext></merror></math>",
+    "o": {
+      "mode": "output",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "bussproofs"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/bussproofs/BussproofsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "bussproofs",
+    "tex": "\\begin{prooftree}\\AxiomC{$\\frac{a}{b}$}\\UnaryInfC{$\\sum_i$}\\end{prooftree}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/1/0/0/1/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{prooftree}\\AxiomC{$\\frac{a}{b}$}\\UnaryInfC{$\\sum_i$}\\end{prooftree}\" display=\"block\">\n  <mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" data-latex=\"\\begin{prooftree}\\AxiomC{$\\frac{a}{b}$}\\UnaryInfC{$\\sum_i$}\\end{prooftree}\" semantics=\"bspr_inferenceRule:down;bspr_inference:1;bspr_proof:true\">\n    <mtr>\n      <mtd>\n        <mtable framespacing=\"0 0\">\n          <mtr>\n            <mtd rowalign=\"bottom\">\n              <mrow data-latex=\"\\AxiomC{$\\frac{a}{b}$}\" semantics=\"bspr_axiom:true\">\n                <mspace width=\".5ex\"></mspace>\n                <mrow data-mjx-texclass=\"ORD\">\n                  <mfrac data-latex=\"\\frac{a}{b}\">\n                    <mi data-latex=\"a\">a</mi>\n                    <mi data-latex=\"b\">b</mi>\n                  </mfrac>\n                </mrow>\n                <mspace width=\".5ex\"></mspace>\n              </mrow>\n            </mtd>\n          </mtr>\n        </mtable>\n      </mtd>\n    </mtr>\n    <mtr>\n      <mtd>\n        <mrow>\n          <mspace width=\".5ex\"></mspace>\n          <mrow data-mjx-texclass=\"ORD\">\n            <munder data-latex=\"\\sum_i\">\n              <mo data-latex=\"\\sum\">&#x2211;</mo>\n              <mi data-latex=\"i\">i</mi>\n            </munder>\n          </mrow>\n          <mspace width=\".5ex\"></mspace>\n        </mrow>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" semantics=\"bspr_inferenceRule:down;bspr_inference:1;bspr_proof:true\"><mtr><mtd><mtable framespacing=\"0 0\"><mtr><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mrow data-mjx-texclass=\"ORD\"><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mspace width=\".5ex\"></mspace><mrow data-mjx-texclass=\"ORD\"><msub><mo>∑</mo><mi>i</mi></msub></mrow><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></math>",
+    "o": {
+      "mode": "output",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "bussproofs"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/bussproofs/BussproofsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "bussproofs",
+    "tex": "\\begin{prooftree}\\end{prooftree}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{prooftree}\\end{prooftree}\" display=\"block\"></math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow semantics=\"bspr_proof:true\"></mrow></math>",
+    "o": {
+      "mode": "output",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "bussproofs"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/bussproofs/BussproofsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "bussproofs",
+    "tex": "\\begin{prooftree}\\AxiomC{a}\\AxiomC{b}\\end{prooftree}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{prooftree}\\AxiomC{a}\\AxiomC{b}\\end{prooftree}\" display=\"block\">\n  <mrow data-latex=\"\\AxiomC{a}\" semantics=\"bspr_axiom:true\">\n    <mspace width=\".5ex\"></mspace>\n    <mstyle displaystyle=\"false\">\n      <mtext>a</mtext>\n    </mstyle>\n    <mspace width=\".5ex\"></mspace>\n  </mrow>\n  <mrow data-latex=\"\\AxiomC{b}\" semantics=\"bspr_axiom:true\">\n    <mspace width=\".5ex\"></mspace>\n    <mstyle displaystyle=\"false\">\n      <mtext>b</mtext>\n    </mstyle>\n    <mspace width=\".5ex\"></mspace>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow semantics=\"bspr_proof:true\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\"><mtext>a</mtext></mstyle><mspace width=\".5ex\"></mspace></mrow><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\"><mtext>b</mtext></mstyle><mspace width=\".5ex\"></mspace></mrow></mrow></math>",
+    "o": {
+      "mode": "output",
+      "display": true,
+      "prior": [],
+      "packages": [
+        "base",
+        "ams",
+        "bussproofs"
+      ],
+      "texOptions": {},
+      "configurationModules": [
+        "input/tex/bussproofs/BussproofsConfiguration.js",
+        "input/tex/ams/AmsConfiguration.js"
+      ]
+    }
+  },
+  {
+    "g": "CROSS",
+    "tex": "\\begin{align}\\ce{2H2 + O2}&\\xrightarrow{\\Delta}\\ce{2H2O}\\tag{R1}\\\\\\Delta G&=\\pu{-237 kJ/mol}\\end{align}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/0/2/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{align}\\ce{2H2 + O2}&amp;\\xrightarrow{\\Delta}\\ce{2H2O}\\tag{R1}\\\\\\Delta G&amp;=\\pu{-237 kJ/mol}\\end{align}\" display=\"block\">\n  <mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\" data-latex=\"{-237~\\mathrm{kJ}/\\mathrm{mol}}\\end{align}\">\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:R1\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{R1}\">R1</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2\\,\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}}{}+{}\\mathrm{O}{\\vphantom{A}}_{\\smash[t]{2}}}\">\n          <mn data-latex=\"2\">2</mn>\n          <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{H}\">\n            <mi mathvariant=\"normal\" data-latex=\"H\">H</mi>\n          </mrow>\n          <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n                <mpadded width=\"0\">\n                  <mphantom>\n                    <mi data-latex=\"A\">A</mi>\n                  </mphantom>\n                </mpadded>\n              </mrow>\n            </mrow>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n                <mpadded height=\"0\">\n                  <mn data-latex=\"2\">2</mn>\n                </mpadded>\n              </mrow>\n            </mrow>\n          </msub>\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n          <mo data-latex=\"+\">+</mo>\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{O}\">\n            <mi mathvariant=\"normal\" data-latex=\"O\">O</mi>\n          </mrow>\n          <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n                <mpadded width=\"0\">\n                  <mphantom>\n                    <mi data-latex=\"A\">A</mi>\n                  </mphantom>\n                </mpadded>\n              </mrow>\n            </mrow>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n                <mpadded height=\"0\">\n                  <mn data-latex=\"2\">2</mn>\n                </mpadded>\n              </mrow>\n            </mrow>\n          </msub>\n        </mrow>\n      </mtd>\n      <mtd>\n        <mstyle indentshift=\"2em\">\n          <mi></mi>\n          <mrow data-mjx-texclass=\"REL\" data-latex=\"\\xrightarrow{\\Delta}\">\n            <mrow data-mjx-texclass=\"NONE\"></mrow>\n            <mover>\n              <mo data-mjx-texclass=\"ORD\">&#x2192;</mo>\n              <mpadded width=\"+0.833em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\">\n                <mi mathvariant=\"normal\" data-latex=\"\\Delta\">&#x394;</mi>\n                <mspace depth=\".2em\"></mspace>\n              </mpadded>\n            </mover>\n          </mrow>\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2\\,\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}}\\mathrm{O}}\">\n            <mn data-latex=\"2\">2</mn>\n            <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{H}\">\n              <mi mathvariant=\"normal\" data-latex=\"H\">H</mi>\n            </mrow>\n            <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n                  <mpadded width=\"0\">\n                    <mphantom>\n                      <mi data-latex=\"A\">A</mi>\n                    </mphantom>\n                  </mpadded>\n                </mrow>\n              </mrow>\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n                  <mpadded height=\"0\">\n                    <mn data-latex=\"2\">2</mn>\n                  </mpadded>\n                </mrow>\n              </mrow>\n            </msub>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{O}\">\n              <mi mathvariant=\"normal\" data-latex=\"O\">O</mi>\n            </mrow>\n          </mrow>\n        </mstyle>\n      </mtd>\n    </mlabeledtr>\n    <mtr>\n      <mtd>\n        <mi mathvariant=\"normal\" data-latex=\"\\Delta\">&#x394;</mi>\n        <mi data-latex=\"G\">G</mi>\n      </mtd>\n      <mtd>\n        <mstyle indentshift=\"2em\">\n          <mi></mi>\n          <mo data-latex=\"=\">=</mo>\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"{-237~\\mathrm{kJ}/\\mathrm{mol}}\">\n            <mo data-latex=\"-\">&#x2212;</mo>\n            <mn data-latex=\"237\">237</mn>\n            <mtext data-latex=\"~\">&#xA0;</mtext>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{kJ}\">\n              <mi data-mjx-auto-op=\"false\" data-latex=\"kJ\">kJ</mi>\n            </mrow>\n            <mo data-latex=\"/\">/</mo>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{mol}\">\n              <mi data-mjx-auto-op=\"false\" data-latex=\"mol\">mol</mi>\n            </mrow>\n          </mrow>\n        </mstyle>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\"><mlabeledtr><mtd id=\"mjx-eqn:R1\"><mtext>(</mtext><mtext>R1</mtext><mtext>)</mtext></mtd><mtd><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mspace width=\"0.167em\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">H</mi></mrow><msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"><mn>2</mn></mpadded></mrow></mrow></msub><mrow data-mjx-texclass=\"ORD\"></mrow><mo>+</mo><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">O</mi></mrow><msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"><mn>2</mn></mpadded></mrow></mrow></msub></mrow></mtd><mtd><mstyle indentshift=\"2em\"><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"NONE\"></mrow><mover><mo data-mjx-texclass=\"ORD\">→</mo><mpadded width=\"+0.833em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\"><mi mathvariant=\"normal\">Δ</mi><mspace depth=\".2em\"></mspace></mpadded></mover></mrow><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mspace width=\"0.167em\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">H</mi></mrow><msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"><mn>2</mn></mpadded></mrow></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">O</mi></mrow></mrow></mstyle></mtd></mlabeledtr><mtr><mtd><mi mathvariant=\"normal\">Δ</mi><mi>G</mi></mtd><mtd><mstyle indentshift=\"2em\"><mi></mi><mo>=</mo><mrow data-mjx-texclass=\"ORD\"><mo>−</mo><mn>237</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">kJ</mi></mrow><mo>/</mo><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">mol</mi></mrow></mrow></mstyle></mtd></mtr></mtable></math>",
+    "o": {
+      "packages": [
+        "base",
+        "ams",
+        "newcommand",
+        "mathtools",
+        "boldsymbol",
+        "physics",
+        "mhchem",
+        "color",
+        "bbox",
+        "enclose",
+        "cancel",
+        "html",
+        "unicode",
+        "dsfont",
+        "bbm",
+        "upgreek",
+        "gensymb",
+        "textmacros",
+        "colortbl"
+      ],
+      "texOptions": {},
+      "mode": "convert",
+      "configurationModules": [
+        "input/tex/mathtools/MathtoolsConfiguration.js",
+        "input/tex/textmacros/TextMacrosConfiguration.js"
+      ],
+      "display": true,
+      "prior": []
+    }
+  },
+  {
+    "g": "CROSS",
+    "tex": "\\DeclarePairedDelimiter{\\nn}{\\lVert}{\\rVert}\\nn*{\\vb{v}}^2\\coloneqq\\textcolor{red}{\\qty(\\frac{a}{b})}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/3"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\DeclarePairedDelimiter{\\nn}{\\lVert}{\\rVert}\\nn*{\\vb{v}}^2\\coloneqq\\textcolor{red}{\\qty(\\frac{a}{b})}\" display=\"block\">\n  <mrow data-mjx-texclass=\"OPEN\" data-latex=\"\\mathopen{\\left\\lVert\\vb{v}\\right\\rVert}\">\n    <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\lVert\\vb{v}\\right\\rVert\">\n      <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\lVert\">&#x2016;</mo>\n      <mi mathvariant=\"bold\" data-latex=\"\\vb{v}\">v</mi>\n      <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\rVert\">&#x2016;</mo>\n    </mrow>\n  </mrow>\n  <msup data-latex=\"\\mathclose{}^2\">\n    <mrow data-mjx-texclass=\"CLOSE\" data-latex=\"\\mathclose{}\"></mrow>\n    <mn data-latex=\"2\">2</mn>\n  </msup>\n  <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mathrel{\\MTThinColon=}\">\n    <mpadded voffset=\".04em\" height=\"+.04em\" depth=\"-.04em\" width=\"-.08em\" lspace=\"-.04em\" data-latex=\"\\MTThinColon\">\n      <mo>:</mo>\n    </mpadded>\n    <mo data-latex=\"=\">=</mo>\n  </mrow>\n  <mstyle mathcolor=\"red\" data-latex=\"\\textcolor{red}{\\qty(\\frac{a}{b})}\">\n    <mrow data-latex=\"\\qty(\\frac{a}{b})\">\n      <mo data-mjx-texclass=\"OPEN\">(</mo>\n      <mfrac data-latex=\"\\frac{a}{b}\">\n        <mi data-latex=\"a\">a</mi>\n        <mi data-latex=\"b\">b</mi>\n      </mfrac>\n      <mo data-mjx-texclass=\"CLOSE\">)</mo>\n    </mrow>\n  </mstyle>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"OPEN\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">‖</mo><mi mathvariant=\"bold\">v</mi><mo data-mjx-texclass=\"CLOSE\">‖</mo></mrow></mrow><msup><mrow data-mjx-texclass=\"CLOSE\"></mrow><mn>2</mn></msup><mrow data-mjx-texclass=\"REL\"><mpadded voffset=\".04em\" height=\"+.04em\" depth=\"-.04em\" width=\"-.08em\" lspace=\"-.04em\"><mo>:</mo></mpadded><mo>=</mo></mrow><mstyle mathcolor=\"red\"><mo data-mjx-texclass=\"OPEN\">(</mo><mfrac><mi>a</mi><mi>b</mi></mfrac><mo data-mjx-texclass=\"CLOSE\">)</mo></mstyle></math>",
+    "o": {
+      "packages": [
+        "base",
+        "ams",
+        "newcommand",
+        "mathtools",
+        "boldsymbol",
+        "physics",
+        "mhchem",
+        "color",
+        "bbox",
+        "enclose",
+        "cancel",
+        "html",
+        "unicode",
+        "dsfont",
+        "bbm",
+        "upgreek",
+        "gensymb",
+        "textmacros",
+        "colortbl"
+      ],
+      "texOptions": {},
+      "mode": "convert",
+      "configurationModules": [
+        "input/tex/mathtools/MathtoolsConfiguration.js",
+        "input/tex/textmacros/TextMacrosConfiguration.js"
+      ],
+      "display": true,
+      "prior": []
+    }
+  },
+  {
+    "g": "CROSS",
+    "tex": "\\begin{cases}\\mathbb{R}&\\text{if }\\ce{H2O}\\\\\\boldsymbol{\\alpha}&\\href{u}{v}\\end{cases}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{cases}\\mathbb{R}&amp;\\text{if }\\ce{H2O}\\\\\\boldsymbol{\\alpha}&amp;\\href{u}{v}\\end{cases}\" display=\"block\">\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"{\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}}\\mathrm{O}}\\\\\\boldsymbol{\\alpha}&amp;\\href{u}{v}\\end{cases}\">\n    <mo data-mjx-texclass=\"OPEN\">{</mo>\n    <mtable columnspacing=\"1em\" rowspacing=\".2em\" columnalign=\"left left\">\n      <mtr>\n        <mtd>\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbb{R}\">\n            <mi mathvariant=\"double-struck\" data-latex=\"R\">R</mi>\n          </mrow>\n        </mtd>\n        <mtd>\n          <mtext data-latex=\"\\text{if }\">if&#xA0;</mtext>\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}}\\mathrm{O}}\">\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{H}\">\n              <mi mathvariant=\"normal\" data-latex=\"H\">H</mi>\n            </mrow>\n            <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n                  <mpadded width=\"0\">\n                    <mphantom>\n                      <mi data-latex=\"A\">A</mi>\n                    </mphantom>\n                  </mpadded>\n                </mrow>\n              </mrow>\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n                  <mpadded height=\"0\">\n                    <mn data-latex=\"2\">2</mn>\n                  </mpadded>\n                </mrow>\n              </mrow>\n            </msub>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{O}\">\n              <mi mathvariant=\"normal\" data-latex=\"O\">O</mi>\n            </mrow>\n          </mrow>\n        </mtd>\n      </mtr>\n      <mtr>\n        <mtd>\n          <mi data-latex=\"\\boldsymbol{\\alpha}\" mathvariant=\"bold-italic\">&#x3B1;</mi>\n        </mtd>\n        <mtd>\n          <mi data-latex=\"\\href{u}{v}\" href=\"u\">v</mi>\n        </mtd>\n      </mtr>\n    </mtable>\n    <mo data-mjx-texclass=\"CLOSE\" fence=\"true\" stretchy=\"true\" symmetric=\"true\"></mo>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><merror data-mjx-error=\"Missing \\end{cases}\"><mtext>Missing \\end{cases}</mtext></merror></math>",
+    "o": {
+      "packages": [
+        "base",
+        "ams",
+        "newcommand",
+        "mathtools",
+        "boldsymbol",
+        "physics",
+        "mhchem",
+        "color",
+        "bbox",
+        "enclose",
+        "cancel",
+        "html",
+        "unicode",
+        "dsfont",
+        "bbm",
+        "upgreek",
+        "gensymb",
+        "textmacros",
+        "colortbl"
+      ],
+      "texOptions": {},
+      "mode": "convert",
+      "configurationModules": [
+        "input/tex/mathtools/MathtoolsConfiguration.js",
+        "input/tex/textmacros/TextMacrosConfiguration.js"
+      ],
+      "display": true,
+      "prior": []
+    }
+  },
+  {
+    "g": "CROSS",
+    "tex": "\\sum_{\\substack{i\\\\j}}\\ket{i}\\bra{j}\\mathds{1}\\mathbbm{2}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/1/0"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sum_{\\substack{i\\\\j}}\\ket{i}\\bra{j}\\mathds{1}\\mathbbm{2}\" display=\"block\">\n  <munder data-latex=\"\\sum_{{subarray}}\">\n    <mo data-latex=\"\\sum\">&#x2211;</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{{subarray}}\">\n      <mtable data-mjx-smallmatrix=\"true\" columnspacing=\"0em\" rowspacing=\"0.1em\" data-latex=\"{subarray}\">\n        <mtr data-latex=\"{c}\">\n          <mtd>\n            <mi data-latex=\"i\">i</mi>\n          </mtd>\n        </mtr>\n        <mtr data-latex=\"{c}\">\n          <mtd>\n            <mi data-latex=\"j\">j</mi>\n          </mtd>\n        </mtr>\n      </mtable>\n    </mrow>\n  </munder>\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\vert{i}\\right\\rangle\">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\vert\">|</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{i}\">\n      <mi data-latex=\"i\">i</mi>\n    </mrow>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\rangle\">&#x27E9;</mo>\n  </mrow>\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\langle{j}\\right\\vert\">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\langle\">&#x27E8;</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{j}\">\n      <mi data-latex=\"j\">j</mi>\n    </mrow>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\vert\">|</mo>\n  </mrow>\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathds{1}\">\n    <mn data-mjx-variant=\"-ds-rm\" data-latex=\"1\">1</mn>\n  </mrow>\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbbm{2}\">\n    <mn data-mjx-variant=\"-bbm-normal\" data-latex=\"2\">2</mn>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo>∑</mo><mrow data-mjx-texclass=\"ORD\"><mstyle scriptlevel=\"1\"><mtable columnspacing=\"0em\" rowspacing=\"0.1em\" data-mjx-smallmatrix=\"true\"><mtr><mtd><mi>i</mi></mtd></mtr><mtr><mtd><mi>j</mi></mtd></mtr></mtable></mstyle></mrow></munder><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>i</mi></mrow><mo data-mjx-texclass=\"CLOSE\">⟩</mo></mrow><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">⟨</mo><mrow data-mjx-texclass=\"ORD\"><mi>j</mi></mrow><mo data-mjx-texclass=\"CLOSE\">|</mo></mrow><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn data-mjx-variant=\"-ds-rm\">1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mn data-mjx-variant=\"-bbm-normal\">2</mn></mrow></math>",
+    "o": {
+      "packages": [
+        "base",
+        "ams",
+        "newcommand",
+        "mathtools",
+        "boldsymbol",
+        "physics",
+        "mhchem",
+        "color",
+        "bbox",
+        "enclose",
+        "cancel",
+        "html",
+        "unicode",
+        "dsfont",
+        "bbm",
+        "upgreek",
+        "gensymb",
+        "textmacros",
+        "colortbl"
+      ],
+      "texOptions": {},
+      "mode": "convert",
+      "configurationModules": [
+        "input/tex/mathtools/MathtoolsConfiguration.js",
+        "input/tex/textmacros/TextMacrosConfiguration.js"
+      ],
+      "display": true,
+      "prior": []
+    }
+  },
+  {
+    "g": "CROSS",
+    "tex": "\\text{a $\\ce{H2}$ \\textbf{$\\qty(b)$}}",
+    "valid": true,
+    "same": false,
+    "d": {
+      "c": "structure",
+      "p": "/math/0/1"
+    },
+    "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\text{a $\\ce{H2}$ \\textbf{$\\qty(b)$}}\" display=\"block\">\n  <mrow data-latex=\"\\text{a $\\ce{H2}$ \\textbf{$\\qty(b)$}}\">\n    <mtext>a&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}}}\">\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{H}\">\n        <mi mathvariant=\"normal\" data-latex=\"H\">H</mi>\n      </mrow>\n      <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n            <mpadded width=\"0\">\n              <mphantom>\n                <mi data-latex=\"A\">A</mi>\n              </mphantom>\n            </mpadded>\n          </mrow>\n        </mrow>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n          <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n            <mpadded height=\"0\">\n              <mn data-latex=\"2\">2</mn>\n            </mpadded>\n          </mrow>\n        </mrow>\n      </msub>\n    </mrow>\n    <mtext>&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\">\n      <mrow data-latex=\"\\qty(b)\">\n        <mo data-mjx-texclass=\"OPEN\">(</mo>\n        <mi data-latex=\"b\">b</mi>\n        <mo data-mjx-texclass=\"CLOSE\">)</mo>\n      </mrow>\n    </mrow>\n  </mrow>\n</math>",
+    "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mtext>a </mtext><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">H</mi></mrow><msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"><mn>2</mn></mpadded></mrow></mrow></msub></mrow></mrow><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mrow><mo data-mjx-texclass=\"OPEN\">(</mo><mi>b</mi><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></mrow></mrow></math>",
+    "o": {
+      "packages": [
+        "base",
+        "ams",
+        "newcommand",
+        "mathtools",
+        "boldsymbol",
+        "physics",
+        "mhchem",
+        "color",
+        "bbox",
+        "enclose",
+        "cancel",
+        "html",
+        "unicode",
+        "dsfont",
+        "bbm",
+        "upgreek",
+        "gensymb",
+        "textmacros",
+        "colortbl"
+      ],
+      "texOptions": {},
+      "mode": "convert",
+      "configurationModules": [
+        "input/tex/mathtools/MathtoolsConfiguration.js",
+        "input/tex/textmacros/TextMacrosConfiguration.js"
+      ],
+      "display": true,
+      "prior": []
+    }
+  }
+]

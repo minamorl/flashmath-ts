@@ -52,15 +52,14 @@ function executeBase(parser: Parser, t: Token, d: Definition, id: number) {
     const existing = f.nodes;
     f.nodes = [];
     if (d.type === "SetStyle") {
-      if (args[2] === 0) delete attrs.scriptlevel;
-      if (args[1] === false && args[2] !== 2 && !f.display)
-        delete attrs.displaystyle;
+      if (args[2] === f.level) delete attrs.scriptlevel;
+      if (args[1] === f.display) delete attrs.displaystyle;
     }
     parser.frame(f.stop, false, (n) => {
       parser.frames.push(f);
       f.nodes = [
         ...existing,
-        ...(Object.keys(attrs).length
+        ...(Object.keys(attrs).length || n.length > 1
           ? [parser.node(K.mstyle, n, "", attrs)]
           : n),
       ];
@@ -80,7 +79,7 @@ function executeBase(parser: Parser, t: Token, d: Definition, id: number) {
       op ? { movablelimits: "true" } : {},
     );
     if (op) n.attributes["data-mjx-texclass"] = "OP";
-    n.op = 1;
+    n.op = op ? 0 : 1;
     n.limits = op ? 1 : 0;
     parser.append(n);
     return;
@@ -88,7 +87,7 @@ function executeBase(parser: Parser, t: Token, d: Definition, id: number) {
   if (d.type === "HBox") {
     parser.renderText(
       parser.tokensArgument(),
-      String(args[1] ?? ""),
+      String(args[1] ?? parser.f.font),
       args[0] === 0,
     );
     return;
@@ -409,6 +408,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
         parser.stream.push(custom.end.body);
         return;
       }
+      if (!parser.configuration.environments.has(name)) parser.error(`Unknown environment '${name}'`);
       if (!parser.f.env) parser.error(`Missing \\begin{${name}} or extra \\end{${name}}`);
       if (parser.f.env !== name)
         parser.error(`\\begin{${parser.f.env}} ended with \\end{${name}}`);
@@ -467,7 +467,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.nolimits:
     case C.displaylimits: {
       const n = parser.f.nodes.at(-1);
-      if (!n) parser.error("Limits controls must follow a math operator");
+      if (!n) parser.error(`\\${name} is allowed only on operators`);
       const b = [
         K.msub,
         K.msup,
@@ -482,10 +482,10 @@ function baseCommand(parser: Parser, id: number, name: string) {
       b.limits = id === C.nolimits ? -1 : id === C.limits ? 2 : 1;
       if (id === C.limits && b.kind === K.mo)
         b.attributes.movablelimits = "false";
-      if (id === C.nolimits) delete b.attributes.movablelimits;
+      if (id === C.nolimits && b.kind === K.mo) b.attributes.movablelimits = 'false';
       n.limits = b.limits;
       if (n !== b) {
-        const under = b.limits > 0 && (parser.f.display || b.limits === 2);
+        const under = b.limits > 0;
         const map: Partial<Record<K, K>> = under
           ? { [K.msub]: K.munder, [K.msup]: K.mover, [K.msubsup]: K.munderover }
           : {
@@ -556,16 +556,17 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.mathpunct:
     case C.mathinner: {
       parser.argument((n) => {
+        if(id === C.mathop && n.kind === K.mrow && n.children.length && n.children.every(c=>c.kind===K.mi&&c.attributes.mathvariant==='normal'))
+          n=parser.node(K.mi,[],n.children.map(c=>c.text).join(''));
         const x =
           id === C.mathop &&
           n.kind === K.mi &&
-          !!n.attributes.mathvariant &&
-          !n.attributes.mathvariant.startsWith("-tex-")
+          !!n.attributes.mathvariant && !n.attributes.mathvariant.startsWith("-tex-") || id === C.mathop && n.kind === K.mi && n.text.length > 1
             ? n
             : n.kind === K.mrow && n.children.length === 0
               ? n
               : parser.row(n.kind === K.mrow ? n.children : [n], true);
-        x.attributes["data-mjx-texclass"] = name.slice(4).toUpperCase();
+        if(!(id === C.mathop && x.kind === K.mi && !x.attributes.mathvariant)) x.attributes["data-mjx-texclass"] = name.slice(4).toUpperCase();
         if (id === C.mathop) {
           x.op = n.text || n.children.length ? 1 : 0;
           x.limits = 1;
@@ -632,7 +633,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.vphantom:
     case C.hphantom:
       parser.argument((n) => {
-        let result = parser.node(K.mphantom, [n]);
+        let result = parser.node(K.mphantom, n.inferred ? n.children : [n]);
         if (id !== C.phantom)
           result = parser.node(
             K.mpadded,
@@ -723,7 +724,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
       if (id === C.boxed)
         parser.argument((n) =>
           parser.append(
-            parser.node(K.menclose, [parser.atom([parser.atom([n])])], "", {
+            parser.node(K.menclose, [parser.atom([parser.atom(n.inferred ? n.children : [n])])], "", {
               notation: "box",
             }),
           ),

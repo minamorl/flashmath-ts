@@ -68,7 +68,7 @@ function define(parser: Parser, id: number) {
     const n = parser.optional();
     if (n) {
       count = Number(raw(n));
-      if (!Number.isInteger(count) || count < 0 || count > 9)
+      if (!Number.isInteger(count) || count < 0 || count > (parser.options.maxTokens??200000))
         parser.error("Illegal number of parameters");
       optional = parser.optional();
     }

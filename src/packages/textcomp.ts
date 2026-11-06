@@ -472,4 +472,4 @@ export const textcompSymbols:Record<string,[string,string]>={
     "-tex-oldstyle"
   ]
 };
-export default {name:'textcomp',commands:Object.fromEntries(Object.entries(textcompSymbols).map(([name,[char,font]])=>[name,{type:'text-insert',execute(p){p.append(p.node(K.mtext,[],char,font?{mathvariant:font}:{}));}} satisfies TexCommand])),environments:{},configurationModules:['input/tex/textcomp/TextcompConfiguration.js','input/tex/textmacros/TextMacrosConfiguration.js']} satisfies TexPackage;
+export default {name:'textcomp',commands:Object.fromEntries(Object.entries(textcompSymbols).map(([name,[char,font]])=>[name,{type:'text-insert',execute(p){const variant=font||p.f.font;p.append(p.node(K.mtext,[],char,variant?{mathvariant:variant}:{}));}} satisfies TexCommand])),environments:{},configurationModules:['input/tex/textcomp/TextcompConfiguration.js','input/tex/textmacros/TextMacrosConfiguration.js']} satisfies TexPackage;

@@ -61,6 +61,15 @@ export function balanceProof(p:Parser,root:Node,inferences:Node[],props:Properti
    let value=margins.get(inf);if(!value)margins.set(inf,value={left:0,right:0});value[right?'right':'left']+=amount;
    inf.attributes.style=(['left','right'] as const).filter(key=>value![key]).map(key=>`margin-${key}: ${em(value![key])}`).join('; ');
  }
+ const sequents=[...props].filter(([,v])=>v.has('sequent')).map(([n])=>n);
+ const maxLeft=Math.max(0,...sequents.map(n=>bbox(n.children[0].children[0]).w));
+ const maxRight=Math.max(0,...sequents.map(n=>bbox(n.children[0].children[2]).w));
+ for(const n of sequents){const cells=n.children[0].children;
+  for(const [index,max,side]of [[0,maxLeft,'left'],[2,maxRight,'right']] as const){
+   const delta=max-bbox(cells[index]).w;
+   if(delta>0){const space=p.node(K.mspace,[],'',{width:em(delta)});if(index===0)cells[index].children.unshift(space);else cells[index].children.push(space);set(n,'sequentAdjust_'+side,String(delta));}
+  }
+ }
  parentMap();let maxAdjust=0;
  for(const inf of inferences) {
    const proof=get(inf,'proof'),r=rule(inf),prem=premises(r),first=prem.children[0]?.children[0];let left=0;

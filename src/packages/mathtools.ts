@@ -289,8 +289,8 @@ for(const [prefix,left,right] of [['','',''],['p','(',')'],['b','[',']'],['B','{
   }
 }
 environments.crampedsubarray={begin(p,name){
-  const align=raw(p.tokensArgument());p.tableStart(name,align,-4,n=>{
-    n.attributes={'data-mjx-smallmatrix':'true',columnspacing:'0em',rowspacing:'0.1em','data-cramped':'true',...(align==='c'?{}:{columnalign:align==='l'?'left':'right'})};p.append(n);
+  const level=p.f.level,align=raw(p.tokensArgument());p.tableStart(name,align,-4,n=>{
+    n.attributes={'data-mjx-smallmatrix':'true',columnspacing:'0em',rowspacing:'0.1em','data-cramped':'true',...(align==='c'?{}:{columnalign:align==='l'?'left':'right'})};p.append(level===1?n:p.node(K.mstyle,[n],'',{scriptlevel:'1'}));
   });p.f.level=1;p.f.display=false;
 }};
 command('crampedsubstack',p=>push(p,`\\begin{crampedsubarray}{c}${raw(p.tokensArgument())}\\end{crampedsubarray}`));
@@ -365,7 +365,7 @@ function alignment(p:Parser,name:string){
   for(const row of n.children){
    if(!isGather)for(let c=1+(row.kind===K.mlabeledtr?1:0);c<row.children.length;c+=2){
     const cell=row.children[c],nodes=cell.children;
-    if(nodes[0]?.kind===K.mo)nodes.unshift(p.node(K.mi));
+    if(nodes[0]?.kind===K.mo||nodes[0]?.attributes['data-mjx-texclass']==='REL')nodes.unshift(p.node(K.mi));
     cell.children=[p.node(K.mstyle,nodes,'',{indentshift:'2em'})];
    }
   }

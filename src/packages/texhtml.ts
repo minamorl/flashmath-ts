@@ -23,7 +23,7 @@ function htmlTree(p:Parser,source:string):MathMLNode|null {
     if(!/^(area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)$/.test(name)&&!tag[3].endsWith('/')){if(stack.length>=(p.options.maxDepth??1024))p.error('Nesting limit exceeded');stack.push(node);}
   }
   p.nodes+=count;
-  if(!root.children.length)return null;return root.children.length===1?root.children[0]:root;
+  if(!root.children.length)return null;if(root.children.length===1&&root.children[0].kind!=='#text')return root.children[0];if(root.children.every(n=>n.kind==='#text'))root.kind='span';return root;
 }
 export default {name:'texhtml',commands:{'<':{type:'character',execute(p,t){
   const source=t[3];const start=t[1];

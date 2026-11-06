@@ -57,7 +57,7 @@ export function decorate(p:Parser,table:Node,left:Token[],right:Token[],done:(n:
 function options(p:Parser,tokens:Token[]){
   const result:{left:Token[];right:Token[]}={left:[],right:[]};
   let part:Token[]=[],depth=0;
-  const add=()=>{if(!part.length)return;const index=part.findIndex(t=>t[0]===61),key=raw(part.slice(0,index)).trim();if(index<0||key!=='left'&&key!=='right')p.error('Invalid empheq option');let value=part.slice(index+1);while(value[0]?.[0]===32)value.shift();while(value.at(-1)?.[0]===32)value.pop();if(value[0]?.[0]===123&&value.at(-1)?.[0]===125)value=value.slice(1,-1);result[key]=value;part=[];};
+  const add=()=>{if(!part.length)return;const index=part.findIndex(t=>t[0]===61),key=raw(part.slice(0,index)).trim();if(index<0||key!=='left'&&key!=='right')p.error('Invalid option: '+key);let value=part.slice(index+1);while(value[0]?.[0]===32)value.shift();while(value.at(-1)?.[0]===32)value.pop();if(value[0]?.[0]===123&&value.at(-1)?.[0]===125)value=value.slice(1,-1);result[key]=value;part=[];};
   for(const t of tokens){if(!depth&&t[0]===44){add();continue;}part.push(t);if(t[0]===123)depth++;if(t[0]===125)depth--;}
   add();return result;
 }

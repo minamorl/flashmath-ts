@@ -45,4 +45,4 @@ const symbols={
   "Uppsi": "Ψ",
   "Upomega": "Ω"
 };
-export default {name:'upgreek',commands:Object.fromEntries(Object.entries(symbols).map(([name,char])=>[name,{execute(p){p.append(p.node(K.mi,[],char,{mathvariant:p.f.font||'normal'}));}} satisfies TexCommand])),environments:{},configurationModules:['input/tex/upgreek/UpgreekConfiguration.js']} satisfies TexPackage;
+export default {name:'upgreek',commands:Object.fromEntries(Object.entries(symbols).map(([name,char])=>[name,{execute(p){p.append(p.node(K.mi,[],char,{mathvariant:'normal'}));}} satisfies TexCommand])),environments:{},configurationModules:['input/tex/upgreek/UpgreekConfiguration.js']} satisfies TexPackage;

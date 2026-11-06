@@ -267,8 +267,8 @@ export class Parser {
   argument(done: (n: Node) => void, keepGroup = false, name = "") {
     this.stream.skip();
     const t = this.stream.peek();
-    if (!t) this.error(`Missing argument for ${name || this.currentCommand}`);
-    if (t[0] === 125) this.error("Extra close brace or missing open brace");
+    if (!t || t[0] === 0) this.error(`Missing argument for ${name || this.currentCommand}`);
+    if (t[0] === 125) this.error(this.f.env === "argument" ? `Missing argument for ${name || this.currentCommand}` : "Extra close brace or missing open brace");
     if (t[0] === 123) {
       this.stream.next();
       this.frame(125, false, (n) =>
@@ -295,7 +295,7 @@ export class Parser {
   tokensArgument(name = this.currentCommand): Token[] {
     this.stream.skip();
     const first = this.stream.next();
-    if (!first) this.error(`Missing argument for ${name}`);
+    if (!first || first[0] === 0) this.error(`Missing argument for ${name}`);
     if (first[0] === 125) this.error("Extra close brace or missing open brace");
     if (first[0] !== 123) return [first];
     const result: Token[] = [];
@@ -650,7 +650,7 @@ export class Parser {
         sub = arg;
       }
       const useUnder =
-        (b.limits > 0 && (this.f.display || b.limits === 2)) || under;
+        (b.limits > 0 && (b.kind === K.mo || this.f.display || b.limits === 2)) || under;
       const k =
         sub && top
           ? useUnder
@@ -1267,12 +1267,12 @@ export class Parser {
           this.finishCell(f.table, f.nodes);
           f.nodes = [];
           f.font = f.table.originalFont;
-          if (f.env === "cases") {
+          if (f.env === "cases" && !f.table.latex) {
             if (f.table.cells.length > 1) this.error("Extra alignment tab in \\cases text");
             const text:Token[]=[]; let depth=0;
             while(this.stream.peek()) {
               const next=this.stream.peek()!;
-              if (depth===0 && (next[0]===125 || builtin(next)===C.cr || spelling(next)==="\\" && next[0]===-1)) break;
+              if (depth===0 && (next[0]===125 || builtin(next)===C.end || builtin(next)===C.cr || spelling(next)==="\\" && next[0]===-1)) break;
               if (next[0]===38 && depth===0) this.error("Extra alignment tab in \\cases text");
               this.stream.next(); if(next[0]===123)depth++;if(next[0]===125)depth--;text.push(next);
             }
@@ -1306,6 +1306,7 @@ export class Parser {
             m =
               c === -1 && this.macros.size ? this.macros.get(name) : undefined;
           if (m) {
+            this.currentCommand = "\\" + name;
             this.expand(m);
             continue;
           }
@@ -1503,7 +1504,7 @@ export class Parser {
       delete a.mathvariant;
   }
   functionArgument(node: Node): boolean {
-    if (node.kind === K.mspace) return false;
+    if (node.kind === K.mspace || node.text === "⁡") return false;
     if (node.kind === K.mstyle && node.children[0]?.kind === K.mspace)
       return false;
     let core = node;
@@ -1552,12 +1553,7 @@ export class Parser {
         ) {
           const next = children[i + 1];
           if (
-            n.op === 2
-              ? this.functionArgument(next)
-              : next.kind === K.mi ||
-                next.kind === K.mn ||
-                next.kind === K.mrow ||
-                (next.kind === K.mo && "([{|".includes(next.text))
+            this.functionArgument(next)
           ) {
             children.splice(
               ++i,

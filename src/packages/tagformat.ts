@@ -20,6 +20,7 @@ const explicit=new WeakSet<Parser>();
 export default {name:'tagformat',priority:1,commands:{
   tag:{execute(p){
     p.stream.skip();const starred=p.stream.peek()?.[0]===42;if(starred)p.stream.next();const tag=raw(p.tokensArgument()).trim(),table=p.tagTable();
+    if(!tag){if(table)table.noNumbers.add(table.rows.length);return;}
     if(table){const row=table.rows.length;if(table.tagCells.has(row))p.error('Multiple \\tag');table.tagCells.set(row,p.labelCell(table.labels[row]??'',tag,starred));return;}
     if(explicit.has(p))p.error('Multiple \\tag');explicit.add(p);p.hasTaggableEnvironment=true;
     const f=p.frames[0],done=f.done;f.done=nodes=>done([p.node(K.mtable,[p.node(K.mlabeledtr,[p.labelCell(p.label,tag,starred),p.node(K.mtd,nodes)])],'',{displaystyle:'true',...(p.options.tagSide==='left'?{side:'left'}:{})})]);

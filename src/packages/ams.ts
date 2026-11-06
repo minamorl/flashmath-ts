@@ -309,9 +309,9 @@ function fraction(p:Parser,name:string){
 for(const name of ['frac','tfrac','dfrac','binom','tbinom','dbinom','genfrac'])commands[name]={execute(p){fraction(p,name);}};
 commands.cfrac={execute(p){
   const align=raw(p.optional()??[]).trim();if(!['','l','r'].includes(align))p.error('Illegal alignment specified in \\cfrac');
-  const values=[p.tokensArgument(),p.tokensArgument()],nodes:Node[]=[];
+  const values=[p.tokensArgument(),p.tokensArgument()],nodes:Node[]=[],level=p.f.level;
   const next=()=>{if(nodes.length===2){p.append(p.node(K.mfrac,nodes,'',align?{numalign:align==='l'?'left':'right',denomalign:align==='l'?'left':'right'}:{}));return;}
-    p.parseTokens(values[nodes.length],n=>{nodes.push(p.row([p.node(K.mpadded,[p.row([],true)],'',{height:'8.6pt',depth:'3pt',width:'0'}),p.atom(sequence(n))],true));next();});p.f.display=false;p.f.level=0;};next();
+    p.parseTokens(values[nodes.length],n=>{const atom=p.atom(sequence(n));nodes.push(p.row([p.node(K.mpadded,[p.row([],true)],'',{height:'8.6pt',depth:'3pt',width:'0'}),level?p.node(K.mstyle,[atom],'',{scriptlevel:'0'}):atom],true));next();});p.f.display=false;p.f.level=1;};next();
 }};
 for(const [name,glyph,l]of [['xrightarrow','→',5],['xleftarrow','←',10]] as const)commands[name]={execute(p){
   const bottom=p.optional();
@@ -380,11 +380,12 @@ export function tagCell(p:Parser,tag:string,label='',starred=false):Node {
   return p.node(K.mtd,[...(starred?[]:[p.node(K.mtext,[],'(')]),p.node(K.mtext,[],tag),...(starred?[]:[p.node(K.mtext,[],')')])],'',{id});
 }
 commands.tag={execute(p){const starred=star(p),tag=raw(p.tokensArgument()).trim(),t=p.tagTable();
-  if(t){const row=t.rows.length;if(t.tagCells.has(row))p.error('Multiple \\tag');t.tagCells.set(row,tagCell(p,tag,t.labels[row],starred));(t.explicitTags??=new Map()).set(row,tag);t.noNumbers.delete(row);return;}
+  if(!tag){if(t)t.noNumbers.add(t.rows.length);return;}
+  if(t){const row=t.rows.length;if(!tag){t.noNumbers.add(row);return;}if(t.tagCells.has(row))p.error('Multiple \\tag');t.tagCells.set(row,tagCell(p,tag,t.labels[row],starred));(t.explicitTags??=new Map()).set(row,tag);t.noNumbers.delete(row);return;}
   const equation=[...p.frames].reverse().find(f=>f.env==='equation'||f.env==='equation*');
   if(equation){if(equationTags.has(equation))p.error('Multiple \\tag');equationTags.set(equation,{tag,starred});return;}
   if(explicitTags.has(p))p.error('Multiple \\tag');explicitTags.set(p,true);p.hasTaggableEnvironment=true;
-  const f=p.frames[0],done=f.done;f.done=nodes=>done([p.node(K.mtable,[p.node(K.mlabeledtr,[tagCell(p,tag,p.label,starred),p.node(K.mtd,nodes)])],'',{displaystyle:'true',...(p.options.tagSide==='left'?{side:'left'}:{})})]);
+  const f=p.frames[0],done=f.done;f.done=nodes=>done([p.node(K.mtable,[p.node(K.mlabeledtr,[tagCell(p,tag,p.label,starred),p.node(K.mtd,nodes)])],'',{displaystyle:'true',...(p.options.tagSide&&p.options.tagSide!=='right'?{side:p.options.tagSide}:{}),...(p.options.tagIndent&&p.options.tagIndent!=='0.8em'?{minlabelspacing:p.options.tagIndent}:{})})]);
 }};
 commands.notag={execute(p){const t=p.tagTable();if(t){t.noNumbers.add(t.rows.length);t.tagCells.delete(t.rows.length);t.explicitTags?.delete(t.rows.length);}else{const equation=[...p.frames].reverse().find(f=>f.env==='equation'||f.env==='equation*');if(equation)unnumberedEquations.add(equation);else p.numbered=false;}}};
 commands.nonumber=commands.notag;
@@ -399,6 +400,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
     p.hasTaggableEnvironment=true;
     p.frame(-4,false,n=>{const tag=equationTags.get(frame);if(numbered&&!unnumberedEquations.has(frame)||tag)append(p.node(K.mtable,[p.node(K.mlabeledtr,[tag?tagCell(p,tag.tag,p.label,tag.starred):p.labelCell(p.label),p.node(K.mtd,n)])],'',{displaystyle:'true'}));else if(done)done(p.row(n));else for(const x of n)append(x);},name);const frame=p.f;return;
   }
+  const surroundingLevel=p.f.level;
   const matrix=bare.includes('matrix')||bare==='subarray'||bare==='cases';
   const small=bare==='smallmatrix'||bare==='subarray';
   let position='';if(['aligned','alignedat','gathered'].includes(bare))position=raw(p.optional()??[]);
@@ -412,7 +414,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
     const t=frame.table!,rowspacing=n.attributes.rowspacing;
     if(matrix){
       n.attributes={columnspacing:small?(bare==='subarray'?'0em':'0.333em'):'1em',rowspacing:small?(bare==='subarray'?'0.1em':'.2em'):bare==='cases'?'.2em':'4pt',...(bare==='cases'?{columnalign:'left left'}:{}),...(align==='l'?{columnalign:'left'}:{})};
-      if(small){n.attributes['data-mjx-smallmatrix']='true';n=p.node(K.mstyle,[n],'',{scriptlevel:'1'});}
+      if(small){n.attributes['data-mjx-smallmatrix']='true';if(surroundingLevel!==1)n=p.node(K.mstyle,[n],'',{scriptlevel:'1'});}
       const sides:Record<string,string[]>={pmatrix:['(',')'],bmatrix:['[',']'],Bmatrix:['{','}'],vmatrix:['|','|'],Vmatrix:['‖','‖'],cases:['{','']};
       const override=bare==='vmatrix'||bare==='Vmatrix'?p.macros.get(bare==='vmatrix'?'vert':'Vert'):undefined;
       const removed=override?.body.length===1&&override.body[0][0]>=0&&!fenceChars.has(spelling(override.body[0]));
@@ -440,7 +442,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
         const cell=cells[i],left=align[i%align.length]==='l';
         if(bare==='eqnarray'&&i%3===1)cell.children.unshift(p.node(K.mi));
         if(left){
-          if(cell.children[0]?.kind===K.mo&&(cell.children[0].relation||[2,4].includes(operator(cell.children[0].text)?.[2]??-1)))cell.children.unshift(p.node(K.mi));
+          if(cell.children[0]&&(cell.children[0].attributes['data-mjx-texclass']==='REL'||cell.children[0].kind===K.mo&&(cell.children[0].relation||[2,4].includes(operator(cell.children[0].text)?.[2]??-1))))cell.children.unshift(p.node(K.mi));
           cell.children=[p.node(K.mstyle,cell.children,'',{indentshift:bare==='eqnarray'?'.7em':'2em'})];
         }
       }}

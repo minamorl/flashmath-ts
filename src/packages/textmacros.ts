@@ -23,7 +23,7 @@ export function renderTextMacros(p:Parser,tokens:readonly Token[],font='',style=
   function add(f:TextFrame,n:Node) {flush(f);if([K.mi,K.mn,K.mo,K.mtext,K.mspace].includes(n.kind))for(const [key,value]of Object.entries(f.attrs))n.attributes[key]??=value;f.nodes.push(n);}
   function flush(f:TextFrame) {if(!f.text)return;let text=f.text;f.text='';if(text[0]===' ')text='\u00a0'+text.slice(1);if(text.at(-1)===' ')text=text.slice(0,-1)+'\u00a0';f.nodes.push(p.node(K.mtext,[],text,{...f.attrs}));}
   function argument(f:TextFrame):Token[] {f.stream.skip();const first=f.stream.next()??p.error('Missing text argument');if(first[0]!==123)return[first];let depth=1;const out:Token[]=[];while(depth){const t=f.stream.next()??p.error('Missing close brace');if(t[0]===123)depth++;if(t[0]===125)depth--;if(depth)out.push(t);}return out;}
-  function math(f:TextFrame,ts:Token[]) {flush(f);p.parseTokens(ts,n=>{for(const key of ['mathcolor','mathsize'])if(f.attrs[key]) {if([K.mi,K.mo,K.mn,K.mtext,K.mstyle].includes(n.kind))n.attributes[key]??=f.attrs[key];else n=p.node(K.mstyle,n.kind===K.mrow&&!Object.keys(n.attributes).length?n.children:[n],'',{[key]:f.attrs[key]});}f.nodes.push(p.atom([n]));step();});p.f.font='';p.f.display=false;}
+  function math(f:TextFrame,ts:Token[]) {flush(f);p.parseTokens(ts,n=>{for(const key of ['mathcolor','mathsize'])if(f.attrs[key]) {if([K.mi,K.mo,K.mn,K.mtext,K.mstyle].includes(n.kind))n.attributes[key]??=f.attrs[key];else n=p.node(K.mstyle,n.kind===K.mrow&&!Object.keys(n.attributes).length?n.children:[n],'',{[key]:f.attrs[key]});}f.nodes.push(n.kind===K.mrow&&n.attributes['data-mjx-texclass']==='ORD'?n:p.atom([n]));step();});p.f.font='';p.f.display=false;}
   function step() {
     while(stack.length) {
       const f=stack.at(-1)!,t=f.stream.next();
@@ -69,12 +69,14 @@ export function renderTextMacros(p:Parser,tokens:readonly Token[],font='',style=
         const shim=new Proxy(p,{get(target,key){
           if(key==='stream')return f.stream;
           if(key==='f')return {...p.f,font:f.attrs.mathvariant??''};
+          if(key==='textMode')return true;
           if(key==='append')return (n:Node)=>{if(name==='kern'||name==='mkern')delete n.attributes.linebreak;add(f,n);};
           if(key==='tokensArgument')return ()=>argument(f);
           if(key==='argument')return (callback:(n:Node)=>void)=>{suspended=true;frame(argument(f),f.attrs,callback);};
           return Reflect.get(target,key);
         }});
         registered.execute(shim,t,registered.definition,registered.id);
+        if(['hskip','kern','mskip','mkern'].includes(name))f.stream.skip();
         if(suspended)continue;
         continue;
       }
@@ -85,8 +87,8 @@ export function renderTextMacros(p:Parser,tokens:readonly Token[],font='',style=
     }
   }
   const attrs:Record<string,string>=font?{mathvariant:font}:{};
-  const display=p.f.display;
-  frame(tokens,attrs,n=>{if(style)n=p.node(K.mstyle,n.kind===K.mrow&&!Object.keys(n.attributes).length?n.children:[n],'',{...(display?{displaystyle:'false'}:{}),scriptlevel:'0'});done(n);});step();
+  const display=p.f.display,level=p.f.level;
+  frame(tokens,attrs,n=>{if(style)n=p.node(K.mstyle,n.kind===K.mrow&&!Object.keys(n.attributes).length?n.children:[n],'',{...(display?{displaystyle:'false'}:{}),...(level?{scriptlevel:'0'}:{})});done(n);});step();
 }
 const commands:Record<string,TexCommand>={};
 for(const name of ['text','mbox','hbox',...Object.keys(textfonts).filter(x=>x.startsWith('text'))])commands[name]={execute(p){renderTextMacros(p,p.tokensArgument(),textfonts[name]??p.f.font,name==='mbox'||name==='hbox');}};
