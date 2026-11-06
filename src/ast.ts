@@ -32,7 +32,11 @@ export interface MathMLNode {
   text: string;
   start: number;
 }
-export interface ParseOptions {
+export interface OutputOptions {
+  /** Native browser glyphs by default; mathjax preserves MathJax font codes. */
+  output?: 'native' | 'mathjax';
+}
+export interface ParseOptions extends OutputOptions {
   display?: boolean;
   packages?: readonly (string | readonly [string, number])[];
   /** Requested package order and MathJax-compatible numeric priorities. */

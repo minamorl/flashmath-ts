@@ -19731,7 +19731,7 @@
     }
   ],
   "run": {
-    "fingerprint": "3c6e4acb13f2ffbe5089eba26d3ae34d03303903c8e150c3f769736cde579835",
+    "fingerprint": "981130898d5d51727687615b7148d7309ad27a374f8b00a1e3fb1f6d977183dd",
     "subject": "bench/flashmath/adapter.mjs",
     "node": "v26.12.1"
   }

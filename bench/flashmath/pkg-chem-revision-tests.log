@@ -1,0 +1,34 @@
+✔ scripts, compound arguments and nested fences (17.374329ms)
+✔ fixed arity MathML children are never combined as adjacent relations (0.641631ms)
+✔ macro substitution respects control word boundaries and def templates (3.696125ms)
+✔ nested custom environments and array frames (4.148449ms)
+✔ definitions and parser state do not leak between parses (1.532292ms)
+✔ recursive macros, output size and nesting are bounded (2.533341ms)
+✔ deep input uses explicit stacks through serialization (15.053229ms)
+✔ malformed input returns an error tree or throws on request (1.416874ms)
+✔ text and attribute values are escaped as XML, never executed (5.39994ms)
+✔ React returns elements and SSR exactly equals the string renderer (22.543243ms)
+✔ error paths always serialize valid MathML and XML (1.505842ms)
+✔ adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros (100.404163ms)
+✔ parser sessions preserve document references and independent sessions isolate them (2.841122ms)
+✔ texclass presence and all explicit atom classes match MathJax (18.873058ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (15.039252ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (1.236072ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (60.323062ms)
+✔ extpfeil: complete captured fixtures, including texclass and padding (27.340317ms)
+✔ extpfeil: independent above/below, empty, context and scripted labels (64.903756ms)
+✔ extpfeil: new arrows persist only within their parser session (1.639364ms)
+generalization: 104/104 (100.00%)
+✔ mhchem generalization: at least 60 distinct non-fixture examples, >=95% MathJax agreement (511.468456ms)
+✔ mhchem: all captured chemistry and physical-unit fixtures (215.242506ms)
+✔ mhchem: independent formulas, reactions, isotopes, labels, units and errors (216.614836ms)
+✔ mhchem: activation and resource budgets use the host parser boundary (3.366533ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (276.856685ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 772.29619

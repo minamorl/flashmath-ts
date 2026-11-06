@@ -1,0 +1,11 @@
+✔ mhchem output: all captured chemistry has native glyphs and unchanged MathJax mode (773.41919ms)
+✔ mhchem output: every chemical private-use slot has an explicit native representation (14.550771ms)
+✔ mhchem output: defaults, session overrides and invalid output values (4.66297ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1004.184381

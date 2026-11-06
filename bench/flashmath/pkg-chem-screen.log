@@ -1,0 +1,8 @@
+CDP schema Page.captureScreenshot format,quality,clip,fromSurface,captureBeyondViewport,optimizeForSpeed
+CDP schema Runtime.evaluate expression,objectGroup,includeCommandLineAPI,silent,contextId,returnByValue,generatePreview,userGesture,awaitPromise,throwOnSideEffect,timeout,disableBreaks,replMode,allowUnsafeEvalBlockedByCSP,uniqueContextId,serializationOptions
+CDP schema Input.dispatchMouseEvent type,x,y,modifiers,timestamp,button,buttons,clickCount,force,tangentialPressure,tiltX,tiltY,twist,deltaX,deltaY,pointerType
+initial {"mode":"native","math":9,"pua":0,"errors":0,"arrows":["⟶","⟵","⟷","⇆","⇌","⇀","↽","↽","⇀","⟶","┄","┄","┄","┄","→","←"],"height":1480}
+select after mouse/key mathjax
+mathjax selection {"mode":"mathjax","math":9,"pua":14,"errors":0,"arrows":[],"height":1480}
+native selection {"mode":"native","math":9,"pua":0,"errors":0,"arrows":["⟶","⟵","⟷","⇆","⇌","⇀","↽","↽","⇀","⟶","┄","┄","┄","┄","→","←"],"height":1480}
+screen_run: Chromium opened React SSR chemical MathML; selected MathJax and native output; native PUA=0, merror=0; screenshot pkg-chem-native.png

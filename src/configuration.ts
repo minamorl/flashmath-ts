@@ -26,6 +26,8 @@ export function configure(input: ParseOptions): {
     if (!configuration.options.has(key))
       throw new UnsupportedFeatureError(`Unsupported TeX option: ${key}`);
   const options: ParseOptions = { ...input };
+  if (options.output !== undefined && options.output !== 'native' && options.output !== 'mathjax')
+    throw new TypeError('output must be native or mathjax');
   for (const name of [
     "macros",
     "tags",
