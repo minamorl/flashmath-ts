@@ -3,6 +3,7 @@ import path from 'node:path';
 import {pathToFileURL, fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {parseMathML,firstDifference} from './normalize.mjs';
+import {reviveOptions} from './options.mjs';
 export const defaultFixture=fileURLToPath(new URL('./fixtures/mathjax-4.1.3.json',import.meta.url));
 export async function run(subject,fixture,{previousRows=[],onRow=()=>{}}={}) {
   const rows=[], groups={}, byPackage={}, classifications={};
@@ -24,7 +25,7 @@ export async function run(subject,fixture,{previousRows=[],onRow=()=>{}}={}) {
       if(expected) {
         try {
           const {tex,...options}=record.input;
-          row.actual=await subject(tex,options);
+          row.actual=await subject(tex,reviveOptions(options));
           let actual;
           try { actual=parseMathML(row.actual); }
           catch(e) { row.category='invalid-actual'; row.error=String(e); }

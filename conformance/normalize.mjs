@@ -1,7 +1,7 @@
 /** Strict XML-subset parser. No DOM repair, DTDs, network access or external entities. */
 const MATHML = 'http://www.w3.org/1998/Math/MathML';
 const XML = 'http://www.w3.org/XML/1998/namespace';
-const ignored = new Set(['data-latex', 'data-latex-item', 'data-mjx-texclass']);
+const ignored = new Set(['data-latex', 'data-latex-item']);
 const layout = new Set(['math','mrow','msqrt','mroot','mfrac','msub','msup','msubsup','munder','mover','munderover','mmultiscripts','mprescripts','none','mstyle','merror','mpadded','mphantom','mfenced','menclose','mtable','mtr','mlabeledtr','mtd','maction','semantics']);
 const tokens = new Set(['mi','mn','mo','mtext','ms','annotation']);
 const namePattern = '[A-Za-z_][A-Za-z0-9_.-]*(?::[A-Za-z_][A-Za-z0-9_.-]*)?';

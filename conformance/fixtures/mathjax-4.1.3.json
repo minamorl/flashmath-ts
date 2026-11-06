@@ -26475,7 +26475,7 @@
         "executionOrder": 0
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\x \\begingroup \\def\\x{B} \\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\def\\x{B}\">A</mi>\n  <mi data-latex=\"\\endgroup\">B</mi>\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Def Nested 1",
@@ -26509,7 +26509,7 @@
         "executionOrder": 1
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\x \\begingroup \\def\\x{B} \\x \\begingroup \\def\\x{C} \\x \\endgroup \\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\def\\x{B}\">A</mi>\n  <mi data-latex=\"\\def\\x{C}\">B</mi>\n  <mi data-latex=\"\\endgroup\">C</mi>\n  <mi data-latex=\"\\endgroup\">B</mi>\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Let Single 1",
@@ -26543,7 +26543,7 @@
         "executionOrder": 2
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\x \\begingroup \\let\\x=B \\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\let\\x=B\">A</mi>\n  <mi data-latex=\"\\endgroup\">B</mi>\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Let Nested 1",
@@ -26577,7 +26577,7 @@
         "executionOrder": 3
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\x \\begingroup \\let\\x=B \\x \\begingroup \\let\\x=C \\x \\endgroup \\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\let\\x=B\">A</mi>\n  <mi data-latex=\"\\let\\x=C\">B</mi>\n  <mi data-latex=\"\\endgroup\">C</mi>\n  <mi data-latex=\"\\endgroup\">B</mi>\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Env Single 1",
@@ -26611,7 +26611,7 @@
         "executionOrder": 4
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\newenvironment{test}{[}{]}\\begin{test}X\\end{test}\\begingroup\\newenvironment{test}{(}{)}\\begin{test}X\\end{test}\\endgroup\\begin{test}X\\end{test}\" display=\"block\">\n  <mo data-latex=\"[\" stretchy=\"false\">[</mo>\n  <mi data-latex=\"X\">X</mi>\n  <mo data-latex=\"]\" stretchy=\"false\">]</mo>\n  <mo data-latex=\"(\" stretchy=\"false\">(</mo>\n  <mi data-latex=\"X\">X</mi>\n  <mo data-latex=\")\" stretchy=\"false\">)</mo>\n  <mo data-latex=\"[\" stretchy=\"false\">[</mo>\n  <mi data-latex=\"X\">X</mi>\n  <mo data-latex=\"]\" stretchy=\"false\">]</mo>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Delimiter Single 1",
@@ -26645,7 +26645,7 @@
         "executionOrder": 5
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\let\\x=\\| \\left\\x A\\right\\x \\begingroup \\let\\x=| \\left\\x B \\right\\x \\endgroup \\left\\x C \\right\\x\" display=\"block\">\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\x A\\right\\x \">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\x \">&#x2016;</mo>\n    <mi data-latex=\"A\">A</mi>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\x \">&#x2016;</mo>\n  </mrow>\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\x B \\right\\x \">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\x \">|</mo>\n    <mi data-latex=\"B\">B</mi>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\x \">|</mo>\n  </mrow>\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\x C \\right\\x\">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\x \">&#x2016;</mo>\n    <mi data-latex=\"C\">C</mi>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\x\">&#x2016;</mo>\n  </mrow>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Delimiter Nested 1",
@@ -26679,7 +26679,7 @@
         "executionOrder": 6
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\let\\x=\\| \\left\\x A\\right\\x \\begingroup \\let\\x=| \\left\\x B \\right\\x \\begingroup \\let\\x=( \\left\\x C \\right\\x \\endgroup \\left\\x D \\right\\x \\endgroup \\left\\x E \\right\\x\" display=\"block\">\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\x A\\right\\x \">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\x \">&#x2016;</mo>\n    <mi data-latex=\"A\">A</mi>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\x \">&#x2016;</mo>\n  </mrow>\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\x B \\right\\x \">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\x \">|</mo>\n    <mi data-latex=\"B\">B</mi>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\x \">|</mo>\n  </mrow>\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\x C \\right\\x \">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\x \">(</mo>\n    <mi data-latex=\"C\">C</mi>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\x \">(</mo>\n  </mrow>\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\x D \\right\\x \">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\x \">|</mo>\n    <mi data-latex=\"D\">D</mi>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\x \">|</mo>\n  </mrow>\n  <mrow data-mjx-texclass=\"INNER\" data-latex=\"\\left\\x E \\right\\x\">\n    <mo data-mjx-texclass=\"OPEN\" data-latex=\"\\left\\x \">&#x2016;</mo>\n    <mi data-latex=\"E\">E</mi>\n    <mo data-mjx-texclass=\"CLOSE\" data-latex=\"\\right\\x\">&#x2016;</mo>\n  </mrow>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Global 1",
@@ -26713,7 +26713,7 @@
         "executionOrder": 7
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\x \\begingroup \\def\\x{B} \\x \\global\\def\\x{C} \\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\def\\x{B}\">A</mi>\n  <mi data-latex=\"\\def\\x{C}\">B</mi>\n  <mi data-latex=\"\\endgroup\">C</mi>\n  <mi data-latex=\"C\">C</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Global Nested 1",
@@ -26747,7 +26747,7 @@
         "executionOrder": 8
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\x \\begingroup \\def\\x{B} \\x \\begingroup \\gdef\\x{C} \\x \\endgroup \\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\def\\x{B}\">A</mi>\n  <mi data-latex=\"\\def\\x{C}\">B</mi>\n  <mi data-latex=\"\\endgroup\">C</mi>\n  <mi data-latex=\"\\endgroup\">C</mi>\n  <mi data-latex=\"C\">C</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Global Let 1",
@@ -26781,7 +26781,7 @@
         "executionOrder": 9
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\x \\begingroup \\let\\x=B \\x \\global\\let\\x=C \\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\let\\x=B\">A</mi>\n  <mi data-latex=\"\\let\\x=C\">B</mi>\n  <mi data-latex=\"\\endgroup\">C</mi>\n  <mi data-latex=\"C\">C</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Persists 1",
@@ -26815,7 +26815,7 @@
         "executionOrder": 10
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\begingroup \\def\\x{B}\" display=\"block\"></math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Persists 2",
@@ -26854,7 +26854,7 @@
         "executionOrder": 11
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\endgroup\">B</mi>\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup Reset 1",
@@ -26888,7 +26888,7 @@
         "executionOrder": 12
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\begingroup \\def\\x{B} \\begingroupReset \\x\" display=\"block\">\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup reset 2 1",
@@ -26922,7 +26922,7 @@
         "executionOrder": 13
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\begingroup \\def\\x{B} \\begingroupReset \\x\" display=\"block\">\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup let undefined 2 1",
@@ -26956,7 +26956,7 @@
         "executionOrder": 14
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\begingroup \\let\\x=\\undefined \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup global def undefines local delimiter 1",
@@ -26990,7 +26990,7 @@
         "executionOrder": 15
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\x \\begingroup \\let\\x=\\| \\x \\begingroup \\gdef\\x{C} \\x \\endgroup \\x \\endgroup \\x\" display=\"block\">\n  <mi data-latex=\"\\let\\x=\\|\">A</mi>\n  <mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\" data-latex=\"\\def\\x{C}\">&#x2016;</mo>\n  <mi data-latex=\"\\endgroup\">C</mi>\n  <mi data-latex=\"\\endgroup\">C</mi>\n  <mi data-latex=\"C\">C</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup global let delimiter undefines local def 1",
@@ -27024,7 +27024,7 @@
         "executionOrder": 16
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\let\\x=| \\x \\begingroup \\def\\x{A} \\x \\begingroup \\global\\let\\x=\\| \\x \\endgroup \\x \\endgroup \\x\" display=\"block\">\n  <mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\" data-latex=\"\\def\\x{A}\">|</mo>\n  <mi data-latex=\"\\let\\x=\\|\">A</mi>\n  <mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\" data-latex=\"\\endgroup\">&#x2016;</mo>\n  <mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\" data-latex=\"\\endgroup\">&#x2016;</mo>\n  <mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\" data-latex=\"\\x\">&#x2016;</mo>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup sandbox 1",
@@ -27058,7 +27058,7 @@
         "executionOrder": 17
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\begingroupSandbox \\def\\x{B} \\begingroupReset \\x\" display=\"block\">\n  <mi data-latex=\"B\">B</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Begingroup.test.ts::Begingroup Begingroup double sandbox 1",
@@ -27092,7 +27092,7 @@
         "executionOrder": 18
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\def\\x{A} \\begingroupSandbox \\def\\x{B} \\begingroupSandbox \\x\" display=\"block\">\n  <mi data-latex=\"A\">A</mi>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Boldsymbol.test.ts::Boldsymbol Boldsymbol Single 1",
@@ -62507,7 +62507,7 @@
         "executionOrder": 7
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\setOptions[ams]{multlineWidth=50%} \\begin{multline} a \\end{multline}\" display=\"block\">\n  <mtable displaystyle=\"true\" rowspacing=\".5em\" columnspacing=\"100%\" width=\"100%\" data-array-padding=\"1em 1em\" data-width-includes-label=\"true\" data-latex=\"\\setOptions[ams]{multlineWidth=50%} \\begin{multline} a \\end{multline}\">\n    <mtr>\n      <mtd columnalign=\"left\">\n        <mi data-latex=\"a\">a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "SetOptions.test.ts::Setoptions options filterOption 1",
@@ -62542,7 +62542,7 @@
         "executionOrder": 8
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\setOptions[ams]{multlineWidth=50%} \\begin{multline} a \\end{multline}\" display=\"block\">\n  <mtable displaystyle=\"true\" rowspacing=\".5em\" columnspacing=\"100%\" width=\"100%\" data-array-padding=\"1em 1em\" data-width-includes-label=\"true\" data-latex=\"\\setOptions[ams]{multlineWidth=50%} \\begin{multline} a \\end{multline}\">\n    <mtr>\n      <mtd columnalign=\"left\">\n        <mi data-latex=\"a\">a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "SetOptions.test.ts::Setoptions options filterValue 1",
@@ -62577,7 +62577,7 @@
         "executionOrder": 9
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\setOptions[ams]{multlineWidth=50%} \\begin{multline} a \\end{multline}\" display=\"block\">\n  <mtable displaystyle=\"true\" rowspacing=\".5em\" columnspacing=\"100%\" width=\"25%\" data-array-padding=\"1em 1em\" data-width-includes-label=\"true\" data-latex=\"\\setOptions[ams]{multlineWidth=50%} \\begin{multline} a \\end{multline}\">\n    <mtr>\n      <mtd columnalign=\"left\">\n        <mi data-latex=\"a\">a</mi>\n      </mtd>\n    </mtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "SetOptions.test.ts::Setoptions Require Require 1",
@@ -64833,7 +64833,7 @@
         "executionOrder": 0
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\tag{1}\" display=\"block\">\n  <mtable displaystyle=\"true\" data-latex=\"x \\tag{1}\">\n    <mlabeledtr>\n      <mtd id=\"my-tag:1\">\n        <mtext data-latex=\"\\text{[}\">[</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{]}\">]</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{1}\">x</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "TagFormat.test.ts::Tagformat Text tag 1",
@@ -64877,7 +64877,7 @@
         "executionOrder": 1
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\tag{x}\" display=\"block\">\n  <mtable displaystyle=\"true\" data-latex=\"x \\tag{x}\">\n    <mlabeledtr>\n      <mtd id=\"my-tag:x\">\n        <mtext data-latex=\"\\text{[}\">[</mtext>\n        <mtext data-latex=\"\\text{x}\">x</mtext>\n        <mtext data-latex=\"\\text{]}\">]</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{x}\">x</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "TagFormat.test.ts::Tagformat Ref 1",
@@ -64921,7 +64921,7 @@
         "executionOrder": 2
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{align}x \\label{test}\\tag{x}\\\\ \\ref{test} \\end{align}\" display=\"block\">\n  <mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\" data-latex=\"\\begin{align}x \\label{test}\\tag{x}\\\\ \\ref{test} \\end{align}\">\n    <mlabeledtr>\n      <mtd id=\"my-tag:test\">\n        <mtext data-latex=\"\\text{[}\">[</mtext>\n        <mtext data-latex=\"\\text{x}\">x</mtext>\n        <mtext data-latex=\"\\text{]}\">]</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{x}\">x</mi>\n      </mtd>\n    </mlabeledtr>\n    <mlabeledtr>\n      <mtd id=\"my-tag:A1\">\n        <mtext data-latex=\"\\text{[}\">[</mtext>\n        <mtext data-latex=\"\\text{A1}\">A1</mtext>\n        <mtext data-latex=\"\\text{]}\">]</mtext>\n      </mtd>\n      <mtd>\n        <mrow href=\"[[#my-tag%3Atest]]\" class=\"MathJax_ref\" data-latex=\"\\ref{test}\">\n          <mtext>x</mtext>\n        </mrow>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "TagFormat.test.ts::Tagformat Eqref 1",
@@ -64965,7 +64965,7 @@
         "executionOrder": 3
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{align}x \\label{test}\\tag{x}\\\\ \\eqref{test} \\end{align}\" display=\"block\">\n  <mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\" data-latex=\"\\begin{align}x \\label{test}\\tag{x}\\\\ \\eqref{test} \\end{align}\">\n    <mlabeledtr>\n      <mtd id=\"my-tag:test\">\n        <mtext data-latex=\"\\text{[}\">[</mtext>\n        <mtext data-latex=\"\\text{x}\">x</mtext>\n        <mtext data-latex=\"\\text{]}\">]</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{x}\">x</mi>\n      </mtd>\n    </mlabeledtr>\n    <mlabeledtr>\n      <mtd id=\"my-tag:A1\">\n        <mtext data-latex=\"\\text{[}\">[</mtext>\n        <mtext data-latex=\"\\text{A1}\">A1</mtext>\n        <mtext data-latex=\"\\text{]}\">]</mtext>\n      </mtd>\n      <mtd>\n        <mrow href=\"[[#my-tag%3Atest]]\" class=\"MathJax_ref\" data-latex=\"\\eqref{test}\">\n          <mtext>[x]</mtext>\n        </mrow>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "TagFormat.test.ts::Tagformat Custom ref 1",
@@ -65000,7 +65000,7 @@
         "executionOrder": 4
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{align}x \\label{test}\\tag{x}\\\\ \\eqref{test} \\end{align}\" display=\"block\">\n  <mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\" data-latex=\"\\begin{align}x \\label{test}\\tag{x}\\\\ \\eqref{test} \\end{align}\">\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:test\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{x}\">x</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{x}\">x</mi>\n      </mtd>\n    </mlabeledtr>\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{(}\">(</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{)}\">)</mtext>\n      </mtd>\n      <mtd>\n        <mrow href=\"#mjx-eqn%3Atest\" class=\"MathJax_ref\" data-latex=\"\\eqref{test}\">\n          <mtext>**x**</mtext>\n        </mrow>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "TagFormat.test.ts::Tagformat Array tag 1",
@@ -65035,7 +65035,7 @@
         "executionOrder": 5
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\tag{1}\" display=\"block\">\n  <mtable displaystyle=\"true\" data-latex=\"x \\tag{1}\">\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{|}\">|</mtext>\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{|}\">|</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{1}\">x</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "TagFormat.test.ts::Tagformat Array tag with empty entry 1",
@@ -65070,7 +65070,7 @@
         "executionOrder": 6
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\tag{1}\" display=\"block\">\n  <mtable displaystyle=\"true\" data-latex=\"x \\tag{1}\">\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{.}\">.</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{1}\">x</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "TagFormat.test.ts::Tagformat Array tag with null entry 1",
@@ -65105,7 +65105,7 @@
         "executionOrder": 7
       },
       "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\tag{1}\" display=\"block\">\n  <mtable displaystyle=\"true\" data-latex=\"x \\tag{1}\">\n    <mlabeledtr>\n      <mtd id=\"mjx-eqn:1\">\n        <mtext data-latex=\"\\text{1}\">1</mtext>\n        <mtext data-latex=\"\\text{.}\">.</mtext>\n      </mtd>\n      <mtd>\n        <mi data-latex=\"\\tag{1}\">x</mi>\n      </mtd>\n    </mlabeledtr>\n  </mtable>\n</math>",
-      "unsupported": "function-valued-options"
+      "unsupported": null
     },
     {
       "id": "Tex.test.ts::Stack toString 1",
