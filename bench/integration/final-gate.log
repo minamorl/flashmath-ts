@@ -11,7 +11,7 @@ progress: 2500/2683
 progress: 2600/2683
 harness: exit 0
 ℹ function-options subject calls=30; matched=30/30
-✔ runner restores function and RegExp options for any subject (0.23296ms)
+✔ runner restores function and RegExp options for any subject (0.279007ms)
 ℹ tests 43
 ℹ suites 0
 ℹ pass 43
@@ -19,7 +19,7 @@ harness: exit 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 927.068296
+ℹ duration_ms 944.310094
 grammar: exit 0
 text: 1 states, 10 rules
 pq: 4 states, 22 rules

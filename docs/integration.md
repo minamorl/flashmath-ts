@@ -280,7 +280,7 @@ preserved as raw evidence. The gate separately requires exit 0 for all source,
 tests, documentation, manifest/lockfile and integration evidence diffs, and
 rejects any new whitespace diagnostic outside those two inherited logs. Both
 commands and their exits are retained in `final-checks.json` and
-`final-archive-whitespace.log`.
+`final-archive-whitespace.json` (lossless JSON encoding of raw stdout/stderr).
 
 screen_run: Chromium opened `bench/integration/integrated-native.html`, used
 mouse and keyboard to switch MathJax/native output, and showed 14 MathML formulas

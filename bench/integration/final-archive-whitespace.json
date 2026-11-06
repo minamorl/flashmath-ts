@@ -1,0 +1,5 @@
+{
+  "exit": 2,
+  "stdout": "bench/pkg-fonts/integration-gate.log:1: trailing whitespace.\n+$ node conformance/runner.mjs --subject bench/pkg-fonts/integration/adapter.mjs --output bench/pkg-fonts/integration-conformance.json --fresh \nbench/pkg-fonts/validation.log:1: trailing whitespace.\n+$ node_modules/.bin/tsc -p tsconfig.json \nbench/pkg-fonts/validation.log:2: trailing whitespace.\n+exit: 0 \nbench/pkg-fonts/validation.log:4: trailing whitespace.\n+$ node --test --test-reporter=tap test/core.test.mjs test/packages-fonts.test.mjs test/packages-references.test.mjs test/ssr-fixtures.test.mjs \nbench/pkg-fonts/validation.log:5: trailing whitespace.\n+exit: 0 \nbench/pkg-fonts/validation.log:18: trailing whitespace.\n+$ node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output bench/pkg-fonts/final.json --fresh \nbench/pkg-fonts/validation.log:19: trailing whitespace.\n+exit: 1 \n",
+  "stderr": ""
+}

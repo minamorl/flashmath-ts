@@ -26,7 +26,7 @@ try{
  checks.push({name:'diff',command:['git',...sourceArgs],exit:diff.status});
  assert.equal(diff.status,0,diff.stdout+diff.stderr);console.log('diff: exit 0');
  const archive=spawnSync('git',['--git-dir=bench/.integration-git','diff','--check','d3daf90'],{encoding:'utf8'});
- fs.writeFileSync('bench/integration/final-archive-whitespace.log',archive.stdout+archive.stderr);
+ fs.writeFileSync('bench/integration/final-archive-whitespace.json',JSON.stringify({exit:archive.status,stdout:archive.stdout,stderr:archive.stderr},null,2)+'\n');
  const inherited=['bench/pkg-fonts/integration-gate.log','bench/pkg-fonts/validation.log'];
  const diagnostics=archive.stdout.split('\n').filter(line=>line.includes(': trailing whitespace.'));
  assert.equal(archive.status,2);
