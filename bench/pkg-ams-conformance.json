@@ -1,8 +1,8 @@
 {
   "version": "4.1.3",
   "total": 2683,
-  "matched": 1122,
-  "rate": 0.4181885948565039,
+  "matched": 1137,
+  "rate": 0.42377935147223256,
   "groups": {
     "action": {
       "total": 3,
@@ -204,8 +204,8 @@
     },
     "tag": {
       "total": 77,
-      "matched": 61,
-      "mismatch": 14,
+      "matched": 75,
+      "mismatch": 0,
       "unsupported": 2
     },
     "tagformat": {
@@ -216,8 +216,8 @@
     },
     "tex": {
       "total": 12,
-      "matched": 1,
-      "mismatch": 1,
+      "matched": 2,
+      "mismatch": 0,
       "unsupported": 10
     },
     "texhtml": {
@@ -266,8 +266,8 @@
   "byPackage": {
     "base": {
       "total": 2682,
-      "matched": 1122,
-      "mismatch": 1513,
+      "matched": 1137,
+      "mismatch": 1498,
       "unsupported": 47
     },
     "action": {
@@ -278,8 +278,8 @@
     },
     "ams": {
       "total": 547,
-      "matched": 275,
-      "mismatch": 270,
+      "matched": 290,
+      "mismatch": 255,
       "unsupported": 2
     },
     "amscd": {
@@ -344,8 +344,8 @@
     },
     "newcommand": {
       "total": 121,
-      "matched": 58,
-      "mismatch": 63,
+      "matched": 59,
+      "mismatch": 62,
       "unsupported": 0
     },
     "retry": {
@@ -580,9 +580,9 @@
   "classifications": {
     "subject-error": 1486,
     "typeset-component-pipeline": 14,
-    "structure": 10,
+    "structure": 6,
     "text": 1,
-    "attributes": 16,
+    "attributes": 5,
     "custom-package-registration": 26,
     "non-single-MathML-snapshot": 7,
     "input-not-captured": 1
@@ -16214,15 +16214,8 @@
     {
       "id": "Tag.test.ts::TagAll Notag Tag 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable></math>",
-      "difference": {
-        "category": "structure",
-        "path": "/math/0/0",
-        "expected": "{http://www.w3.org/1998/Math/MathML}mtr",
-        "actual": "{http://www.w3.org/1998/Math/MathML}mlabeledtr"
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagAll Ref 1",
@@ -16305,95 +16298,20 @@
     {
       "id": "Tag.test.ts::TagAll Ref Named 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagAll Ref Named Default 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:B\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow><mrow href=\"#mjx-eqn%3AB\" class=\"MathJax_ref\"><mtext>1</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagAll Ref Named Named 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:B\"><mtext>(</mtext><mtext>B</mtext><mtext>)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagNone Single Expression 1",
@@ -16416,57 +16334,8 @@
     {
       "id": "Tag.test.ts::TagNone Split 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/0",
-        "expected": [
-          [
-            "{}columnalign",
-            "right"
-          ],
-          [
-            "{}columnspacing",
-            "0em"
-          ],
-          [
-            "{}data-break-align",
-            "bottom"
-          ],
-          [
-            "{}displaystyle",
-            "true"
-          ],
-          [
-            "{}rowspacing",
-            "3pt"
-          ]
-        ],
-        "actual": [
-          [
-            "{}columnalign",
-            "right"
-          ],
-          [
-            "{}columnspacing",
-            ""
-          ],
-          [
-            "{}data-break-align",
-            "bottom"
-          ],
-          [
-            "{}displaystyle",
-            "true"
-          ],
-          [
-            "{}rowspacing",
-            "3pt"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagNone MultLine 1",
@@ -16501,15 +16370,8 @@
     {
       "id": "Tag.test.ts::TagNone Notag Tag 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable></math>",
-      "difference": {
-        "category": "structure",
-        "path": "/math/0/0",
-        "expected": "{http://www.w3.org/1998/Math/MathML}mtr",
-        "actual": "{http://www.w3.org/1998/Math/MathML}mlabeledtr"
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagNone Ref 1",
@@ -16586,95 +16448,20 @@
     {
       "id": "Tag.test.ts::TagNone Ref Named 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagNone Ref Named Default 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagNone Ref Named Named 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:B\"><mtext>(</mtext><mtext>B</mtext><mtext>)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagAms Single Expression 1",
@@ -16691,57 +16478,8 @@
     {
       "id": "Tag.test.ts::TagAms Split 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/0",
-        "expected": [
-          [
-            "{}columnalign",
-            "right"
-          ],
-          [
-            "{}columnspacing",
-            "0em"
-          ],
-          [
-            "{}data-break-align",
-            "bottom"
-          ],
-          [
-            "{}displaystyle",
-            "true"
-          ],
-          [
-            "{}rowspacing",
-            "3pt"
-          ]
-        ],
-        "actual": [
-          [
-            "{}columnalign",
-            "right"
-          ],
-          [
-            "{}columnspacing",
-            ""
-          ],
-          [
-            "{}data-break-align",
-            "bottom"
-          ],
-          [
-            "{}displaystyle",
-            "true"
-          ],
-          [
-            "{}rowspacing",
-            "3pt"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagAms MultLine 1",
@@ -16776,15 +16514,8 @@
     {
       "id": "Tag.test.ts::TagAms Notag Tag 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable></math>",
-      "difference": {
-        "category": "structure",
-        "path": "/math/0/0",
-        "expected": "{http://www.w3.org/1998/Math/MathML}mtr",
-        "actual": "{http://www.w3.org/1998/Math/MathML}mlabeledtr"
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagAms Ref 1",
@@ -16867,95 +16598,20 @@
     {
       "id": "Tag.test.ts::TagAms Ref Named 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagAms Ref Named Default 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:B\"><mtext>(</mtext><mtext>1</mtext><mtext>)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow><mrow href=\"#mjx-eqn%3AB\" class=\"MathJax_ref\"><mtext>1</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::TagAms Ref Named Named 1",
       "group": "tag",
-      "status": "mismatch",
-      "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right\" columnspacing=\"\" rowspacing=\"3pt\" data-break-align=\"bottom\"><mlabeledtr><mtd id=\"mjx-eqn:A\"><mtext>(</mtext><mtext>A</mtext><mtext>)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:B\"><mtext>(</mtext><mtext>B</mtext><mtext>)</mtext></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow><mrow href=\"#\" class=\"MathJax_ref\"><mtext>???</mtext></mrow></math>",
-      "difference": {
-        "category": "attributes",
-        "path": "/math/1",
-        "expected": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#mjx-eqn%3AA"
-          ]
-        ],
-        "actual": [
-          [
-            "{}class",
-            "MathJax_ref"
-          ],
-          [
-            "{}href",
-            "#"
-          ]
-        ]
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tag.test.ts::Page References Forward Reference 1",
@@ -17094,15 +16750,8 @@
     {
       "id": "Tex.test.ts::TexParser Removed delimiter 1",
       "group": "tex",
-      "status": "mismatch",
-      "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">|</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mi>a</mi></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">|</mo></mrow></math>",
-      "difference": {
-        "category": "structure",
-        "path": "/math/0",
-        "expected": "{http://www.w3.org/1998/Math/MathML}mtable",
-        "actual": "{http://www.w3.org/1998/Math/MathML}mrow"
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Tex.test.ts::NodeFactory create null kind 1",

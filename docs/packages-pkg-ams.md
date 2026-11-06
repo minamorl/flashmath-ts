@@ -1,6 +1,6 @@
 # pkg-ams delivery
 
-The assigned conformance groups match MathJax 4.1.3, including TeX classes and semantic attributes. The fixture corpus and normalizer are unchanged.
+The assigned conformance groups match MathJax 4.1.3, including TeX classes and semantic attributes. The fixture corpus and normalizer are unchanged. The broader set whose package lists use only base/newcommand and these four packages also has zero mismatches: 303 matched and 2 unchanged upstream unsupported records out of 305, including Tag and Tex consumers.
 
 | Group | Matched | Mismatch | Unsupported | Total |
 | --- | ---: | ---: | ---: | ---: |
@@ -33,7 +33,7 @@ Run from this worktree:
 node bench/pkg-ams-verify.mjs
 ```
 
-The verifier runs the TypeScript compiler, existing tests, all four package test files, the unmodified harness tests, a focused run using the unmodified `run()` API, and the complete unmodified CLI with `--fresh`. It then compares every fixture ID and every previously matched row against the saved baseline, and asserts that base/newcommand denominators stay fixed and matched counts never decrease. The focused selection is exactly the four assigned group names; expected results, normalization, unsupported markers, and denominators are not changed.
+The verifier runs the TypeScript compiler, existing tests, all four package test files, the unmodified harness tests, a focused run using the unmodified `run()` API, and the complete unmodified CLI with `--fresh`. It also checks the complete 305-record package-related subset without removing unsupported records, including later labels on explicit tags, explicit-tag cancellation, and removed delimiters. It then compares every fixture ID and every previously matched row against the saved baseline, and asserts that base/newcommand denominators stay fixed and matched counts never decrease. The group-focused selection is exactly the four assigned group names; expected results, normalization, unsupported markers, and denominators are not changed.
 
 Raw artifacts:
 

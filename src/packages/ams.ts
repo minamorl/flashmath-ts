@@ -8,7 +8,7 @@ import type {Parser} from '../parser.js';
 import type {TexPackage,TexCommand,TexEnvironment} from './types.js';
 import {scan,raw,spelling} from '../scanner.js';
 import type {Token} from '../scanner.js';
-import {operator,em,dimensionEm} from '../mathml.js';
+import {operator,em,dimensionEm,fenceChars} from '../mathml.js';
 const symbols = [
   {"name":"digamma","type":"mathchar0mi","char":"ϝ","attrs":{}},
   {"name":"varkappa","type":"mathchar0mi","char":"ϰ","attrs":{}},
@@ -380,13 +380,13 @@ export function tagCell(p:Parser,tag:string,label='',starred=false):Node {
   return p.node(K.mtd,[...(starred?[]:[p.node(K.mtext,[],'(')]),p.node(K.mtext,[],tag),...(starred?[]:[p.node(K.mtext,[],')')])],'',{id});
 }
 commands.tag={execute(p){const starred=star(p),tag=raw(p.tokensArgument()).trim(),t=p.tagTable();
-  if(t){const row=t.rows.length;if(t.tagCells.has(row))p.error('Multiple \\tag');t.tagCells.set(row,tagCell(p,tag,t.labels[row],starred));return;}
+  if(t){const row=t.rows.length;if(t.tagCells.has(row))p.error('Multiple \\tag');t.tagCells.set(row,tagCell(p,tag,t.labels[row],starred));(t.explicitTags??=new Map()).set(row,tag);t.noNumbers.delete(row);return;}
   const equation=[...p.frames].reverse().find(f=>f.env==='equation'||f.env==='equation*');
   if(equation){if(equationTags.has(equation))p.error('Multiple \\tag');equationTags.set(equation,{tag,starred});return;}
   if(explicitTags.has(p))p.error('Multiple \\tag');explicitTags.set(p,true);p.hasTaggableEnvironment=true;
   const f=p.frames[0],done=f.done;f.done=nodes=>done([p.node(K.mtable,[p.node(K.mlabeledtr,[tagCell(p,tag,p.label,starred),p.node(K.mtd,nodes)])],'',{displaystyle:'true',...(p.options.tagSide==='left'?{side:'left'}:{})})]);
 }};
-commands.notag={execute(p){const t=p.tagTable();if(t)t.noNumbers.add(t.rows.length);else{const equation=[...p.frames].reverse().find(f=>f.env==='equation'||f.env==='equation*');if(equation)unnumberedEquations.add(equation);else p.numbered=false;}}};
+commands.notag={execute(p){const t=p.tagTable();if(t){t.noNumbers.add(t.rows.length);t.tagCells.delete(t.rows.length);t.explicitTags?.delete(t.rows.length);}else{const equation=[...p.frames].reverse().find(f=>f.env==='equation'||f.env==='equation*');if(equation)unnumberedEquations.add(equation);else p.numbered=false;}}};
 commands.nonumber=commands.notag;
 commands.eqref={execute(p){const label=raw(p.tokensArgument());p.reference(label);const n=p.f.nodes.at(-1)!;n.children[0].text='('+n.children[0].text+')';}};
 for(const [name,side]of [['shoveleft','left'],['shoveright','right']] as const)commands[name]={execute(p){if(!p.f.env.startsWith('multline'))p.error('Command only allowed in multline environment');if(p.f.nodes.length)p.error('Command must come at the beginning of the line');p.f.table!.fill=side;}};
@@ -414,7 +414,9 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
       n.attributes={columnspacing:small?(bare==='subarray'?'0em':'0.333em'):'1em',rowspacing:small?(bare==='subarray'?'0.1em':'.2em'):bare==='cases'?'.2em':'4pt',...(bare==='cases'?{columnalign:'left left'}:{}),...(align==='l'?{columnalign:'left'}:{})};
       if(small){n.attributes['data-mjx-smallmatrix']='true';n=p.node(K.mstyle,[n],'',{scriptlevel:'1'});}
       const sides:Record<string,string[]>={pmatrix:['(',')'],bmatrix:['[',']'],Bmatrix:['{','}'],vmatrix:['|','|'],Vmatrix:['‖','‖'],cases:['{','']};
-      if(sides[bare]){const [l,r]=sides[bare];n=p.atom([p.delimiterNode(l,'','OPEN'),n,p.delimiterNode(r,'','CLOSE')],'INNER');}
+      const override=bare==='vmatrix'||bare==='Vmatrix'?p.macros.get(bare==='vmatrix'?'vert':'Vert'):undefined;
+      const removed=override?.body.length===1&&override.body[0][0]>=0&&!fenceChars.has(spelling(override.body[0]));
+      if(sides[bare]&&!removed){const [l,r]=sides[bare];n=p.atom([p.delimiterNode(l,'','OPEN'),n,p.delimiterNode(r,'','CLOSE')],'INNER');}
       append(n);return;
     }
     const cols=Math.max(0,...t.rows.map(r=>r.length));
@@ -431,6 +433,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
       n.attributes={displaystyle:'true',columnalign:Array.from({length:cols},(_,i)=>align[i%align.length]==='r'?'right':align[i%align.length]==='l'?'left':'center').join(' '),columnspacing:Array.from({length:Math.max(0,cols-1)},(_,i)=>bare==='eqnarray'?(i%2?'0.278em':'0em'):i%2?'2em':'0em').join(' '),rowspacing:'3pt','data-break-align':Array.from({length:cols},(_,i)=>align[i%align.length]==='r'?'bottom':align[i%align.length]==='l'?'top':'middle').join(' ')};
       if(!cols)n.attributes.columnspacing='0em';
       if(bare.startsWith('gather'))n.attributes.columnspacing='1em';
+      if(bare==='split')n.attributes.columnspacing='0em';
       if(count&&!fl)n.attributes.columnspacing=Array(Math.max(0,cols-1)).fill('0em').join(' ');
       if(n.attributes.columnalign==='center')delete n.attributes.columnalign;
       for(const row of n.children){const cells=row.children.slice(row.kind===K.mlabeledtr?1:0);for(let i=0;i<cells.length;i++){

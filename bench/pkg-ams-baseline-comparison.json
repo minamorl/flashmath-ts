@@ -460,8 +460,8 @@
     },
     "tag": {
       "total": 77,
-      "matched": 61,
-      "mismatch": 14,
+      "matched": 75,
+      "mismatch": 0,
       "unsupported": 2
     },
     "tagformat": {
@@ -472,8 +472,8 @@
     },
     "tex": {
       "total": 12,
-      "matched": 1,
-      "mismatch": 1,
+      "matched": 2,
+      "mismatch": 0,
       "unsupported": 10
     },
     "texhtml": {

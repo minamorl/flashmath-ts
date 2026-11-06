@@ -15,3 +15,12 @@ export async function compare(tex,packages,texOptions={}){
  const expected=await mathjax(tex,options),actual=subject(tex,options);
  assert.equal(firstDifference(parseMathML(expected),parseMathML(actual)),null,`${tex}\nexpected: ${expected}\nactual: ${actual}`);
 }
+export async function relatedFixtures(){
+ const owned=new Set(['ams','amscd','cases','empheq']),available=new Set(['base','newcommand',...owned]);
+ const records=fixture.records.filter(r=>{const packages=r.input?.packages?.map(p=>Array.isArray(p)?p[0]:p);return packages?.some(p=>owned.has(p))&&packages.every(p=>available.has(p));});
+ const report=await run(subject,{...fixture,records});
+ assert.equal(report.total,305);
+ assert.equal(report.matched,303);
+ assert.deepEqual(report.rows.filter(r=>r.status==='mismatch'),[]);
+ assert.equal(report.rows.filter(r=>r.status==='unsupported').length,2);
+}

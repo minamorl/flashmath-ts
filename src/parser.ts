@@ -74,6 +74,7 @@ interface Table {
   numbered: boolean;
   taggable: boolean;
   tagCells: Map<number, Node>;
+  explicitTags?: Map<number, string>;
 }
 const NS = "http://www.w3.org/1998/Math/MathML";
 const isDigit = (c: number) => c >= 48 && c <= 57;
@@ -929,8 +930,16 @@ export class Parser {
     )
       this.error(`Label '${label}' multiply defined`);
     this.localLabels.set(label, { tag: "???", id: "" });
-    if (table) table.labels[table.rows.length] = label;
-    else this.label = label;
+    if (table) {
+      table.labels[table.rows.length] = label;
+      const tag = table.explicitTags?.get(table.rows.length);
+      if (tag !== undefined) {
+        const id = "mjx-eqn:" + ((this.options.useLabelIds !== false ? label : "") || tag).replace(/\s/g, "_");
+        this.localLabels.set(label, { tag, id });
+        const cell = table.tagCells.get(table.rows.length);
+        if (cell) cell.attributes.id = id;
+      }
+    } else this.label = label;
   }
   reference(label: string) {
     const ref = this.session.labels.get(label) ??

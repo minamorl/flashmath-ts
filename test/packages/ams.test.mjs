@@ -52,3 +52,8 @@ test('ams: new MathML kinds serialize identically through React SSR',async()=>{
  }
  assert.throws(()=>parseToMathMLAst('x',{packages:['base','ams'],texOptions:{tags:'base'}}),/Unsupported tag mode/);
 });
+
+test('ams: all 305 related package fixtures retain their denominator (303 matched, 2 upstream unsupported)',async()=>{
+ const {relatedFixtures}=await import('./helpers.mjs');
+ await relatedFixtures();
+});

@@ -24,7 +24,12 @@ try{
  assert.deepEqual(regressions,[]);
  for(const group of ['base','newcommand']){assert.equal(after.groups[group].total,before.groups[group].total);assert.ok(after.groups[group].matched>=before.groups[group].matched,`${group} matched count decreased`);}
  for(const [group,count] of Object.entries({ams:158,amscd:13,cases:5,empheq:44}))assert.deepEqual(after.groups[group],{total:count,matched:count,mismatch:0,unsupported:0});
- const output=['baseline comparison: exit 0',...['base','newcommand','ams','amscd','cases','empheq'].map(group=>`${group}: ${JSON.stringify(after.groups[group])}`),'matched -> failing fixture IDs: '+JSON.stringify(regressions)].join('\n');
+ const fixture=JSON.parse(fs.readFileSync('conformance/fixtures/mathjax-4.1.3.json'));
+ const owned=new Set(['ams','amscd','cases','empheq']),available=new Set(['base','newcommand',...owned]);
+ const related=after.rows.filter((row,i)=>{const packages=fixture.records[i].input?.packages?.map(p=>Array.isArray(p)?p[0]:p);return packages?.some(p=>owned.has(p))&&packages.every(p=>available.has(p));});
+ const relatedCounts={total:related.length,matched:related.filter(r=>r.status==='matched').length,mismatch:related.filter(r=>r.status==='mismatch').length,unsupported:related.filter(r=>r.status==='unsupported').length};
+ assert.deepEqual(relatedCounts,{total:305,matched:303,mismatch:0,unsupported:2});
+ const output=['baseline comparison: exit 0',...['base','newcommand','ams','amscd','cases','empheq'].map(group=>`${group}: ${JSON.stringify(after.groups[group])}`),'matched -> failing fixture IDs: '+JSON.stringify(regressions),'related package fixtures: '+JSON.stringify(relatedCounts)].join('\n');
  console.log(output);evidence.push(output);
  fs.writeFileSync('bench/pkg-ams-baseline-comparison.json',JSON.stringify({before:before.groups,after:after.groups,regressions},null,2)+'\n');
 }catch(error){process.exitCode=1;evidence.push(String(error));console.error(error);}
