@@ -1,0 +1,4 @@
+{"packages":["base"],"configureUs":1.7527688999999982,"sample":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi></math>"}
+{"packages":["base","ams"],"configureUs":1.7846931999999982,"sample":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi></math>"}
+{"packages":["base","ams","mathtools"],"configureUs":2.0054216999999994,"sample":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi></math>"}
+{"packages":["base","bbox"],"configureUs":1.9466106999999966,"sample":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi></math>"}

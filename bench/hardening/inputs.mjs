@@ -1,0 +1,8 @@
+import fs from 'node:fs';import path from 'node:path';
+const V=path.dirname(new URL(import.meta.url).pathname);const {corpus,cross}=await import(path.join(V,'corpus.mjs'));
+const fx=JSON.parse(fs.readFileSync('conformance/fixtures/mathjax-4.1.3.json'));
+const base={};for(const r of fx.records){if(!r.input||r.unsupported)continue;const{tex,prior,executionOrder,...o}=r.input;if((prior||[]).length)continue;const pk=JSON.stringify(o.packages);(base[r.group]??={});const e=base[r.group][pk]??={n:0,o};e.n++;}
+const pick=g=>Object.values(base[g]||{}).sort((a,b)=>b.n-a.n)[0]?.o;
+const override={noundefined:{packages:['base','noundefined'],texOptions:{}},dsfont:{packages:['base','dsfont'],texOptions:{}},configmacros:{packages:['base','configmacros','newcommand'],texOptions:{}},cases:{packages:['base','ams','cases'],texOptions:{tags:'ams'}},tagformat:{packages:['base','ams','tagformat'],texOptions:{tags:'ams',tagformat:{number:{$function:'(n)=>`B${n}`'},tag:{$function:'(t)=>`<${t}>`'}}}},begingroup:{packages:['base','begingroup','newcommand'],texOptions:{}},units:{packages:['base','units'],texOptions:{}}};
+const crossO={packages:['base','ams','newcommand','mathtools','boldsymbol','physics','mhchem','color','bbox','enclose','cancel','html','unicode','dsfont','bbm','upgreek','gensymb','textmacros','colortbl'],texOptions:{},mode:'convert',configurationModules:['input/tex/mathtools/MathtoolsConfiguration.js','input/tex/textmacros/TextMacrosConfiguration.js'],display:true,prior:[]};
+export function optionsFor(group,tex){const opt=group==='CROSS'?crossO:{mode:'convert',display:true,prior:[],...pick(group),...(override[group]||{})};const it=(corpus[group]||[]).find(x=>typeof x!=='string'&&x.t===tex);return it?{...opt,texOptions:{...opt.texOptions,...it.o}}:opt;}

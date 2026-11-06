@@ -1,0 +1,10 @@
+CDP schema Page.captureScreenshot format,quality,clip,fromSurface,captureBeyondViewport,optimizeForSpeed
+CDP schema Runtime.evaluate expression,objectGroup,includeCommandLineAPI,silent,contextId,returnByValue,generatePreview,userGesture,awaitPromise,throwOnSideEffect,timeout,disableBreaks,replMode,allowUnsafeEvalBlockedByCSP,uniqueContextId,serializationOptions
+CDP schema Input.dispatchMouseEvent type,x,y,modifiers,timestamp,button,buttons,clickCount,force,tangentialPressure,tiltX,tiltY,twist,deltaX,deltaY,pointerType
+initial {"mode":"native","math":19,"pua":0,"errors":0,"arrows":["⟶","⟶","⟵","⟷","⇆","⇌","⇀","↽","↽","⇀","⟶","┄","┄","┄","┄","→","←",""],"height":2747}
+select after mouse/key mathjax
+mathjax selection {"mode":"mathjax","math":19,"pua":15,"errors":0,"arrows":[""],"height":2791}
+native selection {"mode":"native","math":19,"pua":0,"errors":0,"arrows":["⟶","⟶","⟵","⟷","⇆","⇌","⇀","↽","↽","⇀","⟶","┄","┄","┄","┄","→","←",""],"height":2747}
+prescript layout [{"base":"U","sub":"92","sup":"235","gap":0,"baseWidth":22.359375,"prescriptWidth":36.640625},{"base":"O","sub":"8","sup":"16","gap":0,"baseWidth":23.015625,"prescriptWidth":24.421875},{"base":"HO","sub":"","sup":"3","gap":0,"baseWidth":45.578125,"prescriptWidth":12.21875},{"base":"U","sub":"92","sup":"238","gap":0,"baseWidth":22.359375,"prescriptWidth":36.640625},{"base":"Th","sub":"90","sup":"234","gap":0,"baseWidth":37.390625,"prescriptWidth":36.640625},{"base":"He","sub":"2","sup":"4","gap":0,"baseWidth":39.75,"prescriptWidth":12.21875}]
+uppercase CSS computed {"color":"rgb(255, 0, 0)","backgroundColor":"rgb(230, 240, 255)"}
+screen_run: Chromium opened React SSR chemistry, cases, boxed, substack, cfrac and sequent proof MathML; selected MathJax and native output; native PUA=0, merror=0; screenshot hardening-native.png

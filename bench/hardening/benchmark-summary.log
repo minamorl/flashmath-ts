@@ -1,0 +1,2 @@
+{"groups":36,"statelessFasterThanMathJax":36,"temmlComparable":22,"statelessFasterThanTemml":22,"mathjaxMinSpeedup":5.92762063548492,"temmlMinSpeedup":1.026325505642722}
+{"coldImportToFirstStringMs":{"flashmath":{"p50":26.412396,"p95":31.971657999999998},"session":{"p50":24.574117,"p95":28.190863},"mathjax":{"p50":77.37031700000001,"p95":89.11230499999999},"temml":{"p50":22.369337,"p95":25.627355}}}

@@ -1,0 +1,588 @@
+{
+ "results": {
+  "base": {
+   "total": 45,
+   "match": 45,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 38,
+   "validMatch": 38,
+   "excluded": 0,
+   "cats": {}
+  },
+  "newcommand": {
+   "total": 24,
+   "match": 24,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 23,
+   "validMatch": 23,
+   "excluded": 0,
+   "cats": {}
+  },
+  "ams": {
+   "total": 32,
+   "match": 32,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 30,
+   "validMatch": 30,
+   "excluded": 0,
+   "cats": {}
+  },
+  "amscd": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 22,
+   "validMatch": 22,
+   "excluded": 0,
+   "cats": {}
+  },
+  "mathtools": {
+   "total": 32,
+   "match": 32,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 26,
+   "validMatch": 26,
+   "excluded": 0,
+   "cats": {}
+  },
+  "physics": {
+   "total": 33,
+   "match": 33,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 27,
+   "validMatch": 27,
+   "excluded": 0,
+   "cats": {}
+  },
+  "braket": {
+   "total": 24,
+   "match": 24,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 24,
+   "validMatch": 24,
+   "excluded": 0,
+   "cats": {}
+  },
+  "cancel": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 19,
+   "validMatch": 19,
+   "excluded": 0,
+   "cats": {}
+  },
+  "bbox": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 18,
+   "validMatch": 18,
+   "excluded": 0,
+   "cats": {}
+  },
+  "enclose": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 21,
+   "validMatch": 21,
+   "excluded": 0,
+   "cats": {}
+  },
+  "centernot": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 21,
+   "validMatch": 21,
+   "excluded": 0,
+   "cats": {}
+  },
+  "boldsymbol": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 20,
+   "validMatch": 20,
+   "excluded": 0,
+   "cats": {}
+  },
+  "mhchem": {
+   "total": 36,
+   "match": 36,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 36,
+   "validMatch": 36,
+   "excluded": 4,
+   "cats": {}
+  },
+  "extpfeil": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 20,
+   "validMatch": 20,
+   "excluded": 0,
+   "cats": {}
+  },
+  "action": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 16,
+   "validMatch": 16,
+   "excluded": 0,
+   "cats": {}
+  },
+  "bbm": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 21,
+   "validMatch": 21,
+   "excluded": 0,
+   "cats": {}
+  },
+  "bboldx": {
+   "total": 24,
+   "match": 24,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 17,
+   "validMatch": 17,
+   "excluded": 0,
+   "cats": {}
+  },
+  "color": {
+   "total": 27,
+   "match": 27,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 18,
+   "validMatch": 18,
+   "excluded": 0,
+   "cats": {}
+  },
+  "colortbl": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 15,
+   "validMatch": 15,
+   "excluded": 0,
+   "cats": {}
+  },
+  "colorv2": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 20,
+   "validMatch": 20,
+   "excluded": 0,
+   "cats": {}
+  },
+  "configmacros": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 19,
+   "validMatch": 19,
+   "excluded": 0,
+   "cats": {}
+  },
+  "dsfont": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 21,
+   "validMatch": 21,
+   "excluded": 0,
+   "cats": {}
+  },
+  "empheq": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 20,
+   "validMatch": 20,
+   "excluded": 0,
+   "cats": {}
+  },
+  "cases": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 21,
+   "validMatch": 21,
+   "excluded": 0,
+   "cats": {}
+  },
+  "gensymb": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 20,
+   "validMatch": 20,
+   "excluded": 0,
+   "cats": {}
+  },
+  "html": {
+   "total": 24,
+   "match": 24,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 21,
+   "validMatch": 21,
+   "excluded": 0,
+   "cats": {}
+  },
+  "textmacros": {
+   "total": 30,
+   "match": 30,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 23,
+   "validMatch": 23,
+   "excluded": 0,
+   "cats": {}
+  },
+  "begingroup": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 18,
+   "validMatch": 18,
+   "excluded": 0,
+   "cats": {}
+  },
+  "noerrors": {
+   "total": 24,
+   "match": 24,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 0,
+   "validMatch": 0,
+   "excluded": 4,
+   "cats": {}
+  },
+  "noundefined": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 20,
+   "validMatch": 20,
+   "excluded": 0,
+   "cats": {}
+  },
+  "setoptions": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 16,
+   "validMatch": 16,
+   "excluded": 0,
+   "cats": {}
+  },
+  "tagformat": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 21,
+   "validMatch": 21,
+   "excluded": 0,
+   "cats": {}
+  },
+  "texhtml": {
+   "total": 22,
+   "match": 20,
+   "mismatch": 1,
+   "fmThrow": 0,
+   "mjThrow": 1,
+   "bothError": 0,
+   "validTotal": 21,
+   "validMatch": 20,
+   "excluded": 0,
+   "cats": {
+    "invalid-xml": 1
+   }
+  },
+  "textcomp": {
+   "total": 23,
+   "match": 23,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 23,
+   "validMatch": 23,
+   "excluded": 2,
+   "cats": {}
+  },
+  "unicode": {
+   "total": 25,
+   "match": 20,
+   "mismatch": 4,
+   "fmThrow": 0,
+   "mjThrow": 1,
+   "bothError": 0,
+   "validTotal": 19,
+   "validMatch": 15,
+   "excluded": 0,
+   "cats": {
+    "attributes": 4
+   }
+  },
+  "units": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 18,
+   "validMatch": 18,
+   "excluded": 2,
+   "cats": {}
+  },
+  "upgreek": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 19,
+   "validMatch": 19,
+   "excluded": 0,
+   "cats": {}
+  },
+  "verb": {
+   "total": 22,
+   "match": 22,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 19,
+   "validMatch": 19,
+   "excluded": 0,
+   "cats": {}
+  },
+  "bussproofs": {
+   "total": 25,
+   "match": 25,
+   "mismatch": 0,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 22,
+   "validMatch": 22,
+   "excluded": 0,
+   "cats": {}
+  },
+  "CROSS": {
+   "total": 15,
+   "match": 14,
+   "mismatch": 1,
+   "fmThrow": 0,
+   "mjThrow": 0,
+   "bothError": 0,
+   "validTotal": 14,
+   "validMatch": 13,
+   "excluded": 0,
+   "cats": {
+    "attributes": 1
+   }
+  }
+ },
+ "rows": [
+  {
+   "g": "texhtml",
+   "tex": "t<u>v",
+   "kind": "mathjax-throw",
+   "mjErr": "TypeError: Cannot read properties of undefined (reading 'root')",
+   "fmOut": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>t</mi><mo>&lt;</mo><mi>u</mi><mo>&gt;</mo><mi>v</mi></math>"
+  },
+  {
+   "g": "texhtml",
+   "tex": "<tex-html><br></tex-html>",
+   "kind": "mismatch",
+   "valid": true,
+   "d": {
+    "category": "invalid-xml",
+    "error": "Error: Unbalanced closing tag mtext"
+   },
+   "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"&lt;tex-html&gt;&lt;br&gt;&lt;/tex-html&gt;\" display=\"block\">\n  <mtext data-latex=\"&lt;tex-html&gt;&lt;br&gt;&lt;/tex-html&gt;\"><br></mtext>\n</math>",
+   "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtext><br></br></mtext></math>"
+  },
+  {
+   "g": "unicode",
+   "tex": "\\unicode{x41}\\unicode{x42}",
+   "kind": "mismatch",
+   "valid": true,
+   "d": {
+    "category": "attributes",
+    "path": "/math/1",
+    "expected": "[[\"{}fontfamily\",\"0.8,0.2,0.5\"]]",
+    "actual": "[]"
+   },
+   "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\unicode{x41}\\unicode{x42}\" display=\"block\">\n  <mtext data-latex=\"\\unicode{x41}\">A</mtext>\n  <mtext fontfamily=\"0.8,0.2,0.5\" data-latex=\"\\unicode{x42}\">B</mtext>\n</math>",
+   "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtext>A</mtext><mtext>B</mtext></math>"
+  },
+  {
+   "g": "unicode",
+   "tex": "\\unicode{110000000}",
+   "kind": "mathjax-throw",
+   "mjErr": "RangeError: Invalid code point 110000000",
+   "fmOut": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtext>�</mtext></math>"
+  },
+  {
+   "g": "unicode",
+   "tex": "\\frac{\\unicode{x41}}{2}",
+   "kind": "mismatch",
+   "valid": true,
+   "d": {
+    "category": "attributes",
+    "path": "/math/0/0",
+    "expected": "[[\"{}fontfamily\",\"abc\"]]",
+    "actual": "[]"
+   },
+   "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\frac{\\unicode{x41}}{2}\" display=\"block\">\n  <mfrac data-latex=\"\\frac{\\unicode{x41}}{2}\">\n    <mtext fontfamily=\"abc\" data-latex=\"\\unicode{x41}\">A</mtext>\n    <mn data-latex=\"2\">2</mn>\n  </mfrac>\n</math>",
+   "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mfrac><mtext>A</mtext><mn>2</mn></mfrac></math>"
+  },
+  {
+   "g": "unicode",
+   "tex": "\\mathbf{\\unicode{x41}}",
+   "kind": "mismatch",
+   "valid": true,
+   "d": {
+    "category": "attributes",
+    "path": "/math/0/0",
+    "expected": "[[\"{}fontfamily\",\"abc\"],[\"{}fontweight\",\"bold\"]]",
+    "actual": "[[\"{}mathvariant\",\"bold\"]]"
+   },
+   "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathbf{\\unicode{x41}}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbf{\\unicode{x41}}\">\n    <mtext fontfamily=\"abc\" fontweight=\"bold\" data-latex=\"\\unicode{x41}\">A</mtext>\n  </mrow>\n</math>",
+   "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mtext mathvariant=\"bold\">A</mtext></mrow></math>"
+  },
+  {
+   "g": "unicode",
+   "tex": "\\unicode{x41}_i",
+   "kind": "mismatch",
+   "valid": true,
+   "d": {
+    "category": "attributes",
+    "path": "/math/0/0",
+    "expected": "[[\"{}fontfamily\",\"abc\"]]",
+    "actual": "[]"
+   },
+   "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\unicode{x41}_i\" display=\"block\">\n  <msub data-latex=\"\\unicode{x41}_i\">\n    <mtext fontfamily=\"abc\" data-latex=\"\\unicode{x41}\">A</mtext>\n    <mi data-latex=\"i\">i</mi>\n  </msub>\n</math>",
+   "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mtext>A</mtext><mi>i</mi></msub></math>"
+  },
+  {
+   "g": "CROSS",
+   "tex": "\\qty[\\begin{matrix}\\unicode{x41}&\\upalpha\\\\\\ohm&\\degree\\end{matrix}]",
+   "kind": "mismatch",
+   "valid": true,
+   "d": {
+    "category": "attributes",
+    "path": "/math/0/1/0/0/0",
+    "expected": "[[\"{}fontfamily\",\",\"]]",
+    "actual": "[]"
+   },
+   "ex": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\qty[\\begin{matrix}\\unicode{x41}&amp;\\upalpha\\\\\\ohm&amp;\\degree\\end{matrix}]\" display=\"block\">\n  <mrow data-latex=\"\\qty[\\begin{matrix}\\unicode{x41}&amp;\\upalpha\\\\\\ohm&amp;\\degree\\end{matrix}]\">\n    <mo data-mjx-texclass=\"OPEN\">[</mo>\n    <mtable columnspacing=\"1em\" rowspacing=\"4pt\" data-latex=\"{matrix}\">\n      <mtr>\n        <mtd>\n       ",
+   "ac": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mo data-mjx-texclass=\"OPEN\">[</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mtext>A</mtext></mtd><mtd><mi mathvariant=\"normal\">α</mi></mtd></mtr><mtr><mtd><mi mathvariant=\"normal\" class=\"MathML-Unit\">Ω</mi></mtd><mtd><mi mathvariant=\"normal\" class=\"MathML-Unit\">°</mi></mtd></mtr></mtable><mo data-mjx-texclass=\"CL"
+  }
+ ]
+}

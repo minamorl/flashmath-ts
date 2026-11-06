@@ -1,0 +1,1323 @@
+[
+ {
+  "group": "bench12",
+  "packages": [
+   "base",
+   "newcommand"
+  ],
+  "texOptions": {},
+  "configurationModules": [],
+  "texs": [
+   "x+1",
+   "x^2+y^2=z^2",
+   "\\alpha+\\beta=\\gamma",
+   "\\frac{a+b}{c+d}",
+   "\\sqrt{x^2+1}",
+   "\\sqrt[3]{x+y}",
+   "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+   "\\sum_{i=1}^{n}i^2",
+   "\\left(\\frac{a}{b}\\right)^2",
+   "\\int_0^1 x^2 dx",
+   "\\begin{array}{cc}a&b\\\\c&d\\end{array}",
+   "\\newcommand{\\pair}[2]{(#1,#2)}\\pair{x}{y}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "base",
+  "packages": [
+   "base"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/Configuration.js"
+  ],
+  "texs": [
+   "\\frac{\\partial^2 u}{\\partial t^2}=c^2\\nabla^2 u",
+   "\\sum_{k=0}^{\\infty}\\frac{x^k}{k!}=e^x",
+   "\\int_{-\\infty}^{\\infty}e^{-x^2}\\,dx=\\sqrt{\\pi}",
+   "\\lim_{h\\to 0}\\frac{f(x+h)-f(x)}{h}",
+   "\\left\\{\\begin{array}{l|r}p&q\\\\\\hline r&s\\end{array}\\right.",
+   "\\overline{AB}+\\underline{CD}",
+   "\\hat{x}\\tilde{y}\\vec{z}\\dot{a}\\ddot{b}\\bar{c}",
+   "\\widehat{xyz}\\widetilde{uvw}",
+   "\\overbrace{a+b+c}^{3}\\underbrace{d+e}_{2}",
+   "\\mathrm{sin}\\,\\mathbf{v}\\cdot\\mathit{u}\\times\\mathcal{L}\\mathsf{T}\\mathtt{q}\\mathfrak{g}\\mathbb{R}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "newcommand",
+  "packages": [
+   "base",
+   "newcommand"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/newcommand/NewcommandConfiguration.js",
+   "input/tex/ams/AmsConfiguration.js",
+   "input/tex/colorv2/ColorV2Configuration.js"
+  ],
+  "texs": [
+   "\\newcommand{\\R}{\\mathbb{R}}\\R^n",
+   "\\newcommand{\\abs}[1]{\\left|#1\\right|}\\abs{\\frac{x}{y}}",
+   "\\newcommand{\\inner}[2]{\\langle #1,#2\\rangle}\\inner{u}{v}+\\inner{a}{b}",
+   "\\newcommand{\\pow}[2][2]{#2^{#1}}\\pow{x}\\pow[3]{y}",
+   "\\renewcommand{\\alpha}{\\beta}\\alpha",
+   "\\def\\foo{bar}\\foo\\foo",
+   "\\def\\sq#1{#1^2}\\sq{x}+\\sq{y}",
+   "\\def\\dl#1|#2|{#1+#2}\\dl a|b|",
+   "\\let\\oldpi=\\pi\\renewcommand{\\pi}{3}\\oldpi\\pi",
+   "\\newenvironment{myenv}{\\left(}{\\right)}\\begin{myenv}x\\end{myenv}"
+  ],
+  "temml": [
+   false,
+   false,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false
+  ]
+ },
+ {
+  "group": "ams",
+  "packages": [
+   "base",
+   "ams"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/ams/AmsConfiguration.js"
+  ],
+  "texs": [
+   "\\begin{align}a&=b+c\\\\d&=e+f\\end{align}",
+   "\\begin{align*}x&=1&y&=2\\\\z&=3&w&=4\\end{align*}",
+   "\\begin{gather}a=b\\\\c=d\\end{gather}",
+   "\\begin{gather*}p\\\\q\\\\r\\end{gather*}",
+   "\\begin{multline}a+b\\\\+c+d\\\\+e\\end{multline}",
+   "\\begin{split}a&=b\\\\&=c\\end{split}",
+   "\\begin{equation*}\\begin{split}x&=y\\\\y&=z\\end{split}\\end{equation*}",
+   "\\begin{alignat}{2}a&=b&c&=d\\\\e&=f&g&=h\\end{alignat}",
+   "\\begin{aligned}u&=v\\\\w&=t\\end{aligned}+1",
+   "\\begin{gathered}m\\\\n\\end{gathered}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "amscd",
+  "packages": [
+   "base",
+   "amscd"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/amscd/AmsCdConfiguration.js"
+  ],
+  "texs": [
+   "\\begin{CD}P @>>> Q\\end{CD}",
+   "\\begin{CD}P @<<< Q\\end{CD}",
+   "\\begin{CD}P @>f>> Q\\\\@VgVV @VVhV\\\\R @>>k> S\\end{CD}",
+   "\\begin{CD}X @= Y\\end{CD}",
+   "\\begin{CD}X @. Y\\end{CD}",
+   "\\begin{CD}X\\\\@|\\\\Y\\end{CD}",
+   "\\begin{CD}U\\\\@AAA\\\\V\\end{CD}",
+   "\\begin{CD}U\\\\@AaAbA\\\\V\\end{CD}",
+   "\\begin{CD}U\\\\@VVV\\\\V\\end{CD}",
+   "\\begin{CD}\\mathbb{Z}@>\\times 2>>\\mathbb{Z}@>>>\\mathbb{Z}/2\\end{CD}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "mathtools",
+  "packages": [
+   "base",
+   "ams",
+   "boldsymbol",
+   "mathtools"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/mathtools/MathtoolsConfiguration.js",
+   "input/tex/ams/AmsConfiguration.js",
+   "input/tex/boldsymbol/BoldsymbolConfiguration.js",
+   "input/tex/bbox/BboxConfiguration.js",
+   "input/tex/Configuration.js"
+  ],
+  "texs": [
+   "\\coloneqq a\\eqqcolon b\\Coloneqq c\\Eqqcolon d",
+   "\\xmapsto{f}\\xhookrightarrow{g}\\xhookleftarrow{h}\\xLongrightarrow{k}",
+   "\\xrightharpoonup{a}\\xleftharpoondown[b]{c}\\xleftrightharpoons{d}",
+   "\\underbracket{a+b}_{c}\\overbracket[2pt][3pt]{d}^{e}",
+   "\\DeclarePairedDelimiter{\\norm}{\\lVert}{\\rVert}\\norm{x}\\norm*{\\frac{a}{b}}\\norm[\\big]{y}",
+   "\\DeclarePairedDelimiterX{\\set}[1]{\\{}{\\}}{#1}\\set{x}\\set*{\\frac{y}{z}}",
+   "\\DeclarePairedDelimiter\\ceil{\\lceil}{\\rceil}\\ceil{u}",
+   "\\begin{dcases}a&b\\\\c&d\\end{dcases}",
+   "\\begin{rcases}p\\\\q\\end{rcases}",
+   "\\begin{drcases}r\\\\s\\end{drcases}"
+  ],
+  "temml": [
+   true,
+   false,
+   true,
+   true,
+   false,
+   false,
+   false,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "physics",
+  "packages": [
+   "base",
+   "physics"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/physics/PhysicsConfiguration.js"
+  ],
+  "texs": [
+   "\\qty(\\frac{p}{q})\\qty[\\frac{r}{s}]\\qty{\\frac{t}{u}}\\qty|\\frac{v}{w}|",
+   "\\abs{x}\\abs*{\\frac{a}{b}}\\norm{\\vb{v}}\\norm{\\frac{c}{d}}",
+   "\\eval{x^2}_0^1\\eval{\\frac{f}{g}}_{a}",
+   "\\order{h^2}\\order{\\frac{1}{n}}",
+   "\\comm{A}{B}\\acomm{C}{D}\\pb{E}{F}",
+   "\\vb{a}\\vb*{b}\\vu{c}\\vu*{d}\\va{e}\\va*{f}",
+   "\\grad{\\phi}\\grad\\psi\\div{\\vb{E}}\\curl{\\vb{B}}\\laplacian{u}",
+   "\\dotproduct\\crossproduct\\vdot\\cross\\cp",
+   "\\dv{f}{x}\\dv[2]{g}{t}\\dv{x}\\dv[n]{y}",
+   "\\pdv{f}{x}\\pdv[2]{g}{y}\\pdv{h}{x}{y}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   true
+  ]
+ },
+ {
+  "group": "braket",
+  "packages": [
+   "base",
+   "braket"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/braket/BraketConfiguration.js"
+  ],
+  "texs": [
+   "\\bra{\\alpha}\\ket{\\beta}",
+   "\\Bra{\\alpha^2}",
+   "\\Ket{\\frac{\\beta}{2}}\\ket{\\frac{a}{b}}",
+   "\\braket{u|v}",
+   "\\Braket{u|v}",
+   "\\Braket{\\frac{p}{q}|\\frac{r}{s}}",
+   "\\Braket{a||b}",
+   "\\braket{a|H|b}",
+   "\\Braket{a|\\frac{H}{2}|b}",
+   "\\set{x|x>0}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "cancel",
+  "packages": [
+   "base",
+   "cancel"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/cancel/CancelConfiguration.js"
+  ],
+  "texs": [
+   "\\cancel{a+b}",
+   "\\bcancel{\\frac{x}{y}}",
+   "\\xcancel{x^2}",
+   "\\cancelto{0}{x^2}",
+   "\\cancel{}",
+   "\\cancel[color=blue]{y}",
+   "\\bcancel[color=red]{z}",
+   "\\xcancel[mathcolor=green]{u}",
+   "\\cancelto{\\frac{1}{2}}{\\frac{a}{b}}",
+   "\\cancel{\\cancel{v}}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "bbox",
+  "packages": [
+   "base",
+   "bbox"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/bbox/BboxConfiguration.js"
+  ],
+  "texs": [
+   "\\bbox[blue]{x+y}",
+   "\\bbox[10px]{\\frac{a}{b}}",
+   "\\bbox[1em]{y}",
+   "\\bbox[border:1px solid black]{z}",
+   "\\bbox[red,border:1px solid green]{a}",
+   "\\bbox[2pt,#ff0000]{b}",
+   "\\bbox[#00f]{c}",
+   "\\bbox[border-radius:3px]{d}",
+   "\\bbox[color:red]{e}",
+   "\\bbox{f}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "enclose",
+  "packages": [
+   "base",
+   "enclose"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/enclose/EncloseConfiguration.js"
+  ],
+  "texs": [
+   "\\enclose{box}{x+y}",
+   "\\enclose{roundedbox}{\\frac{a}{b}}",
+   "\\enclose{left}{c}",
+   "\\enclose{right}{d}",
+   "\\enclose{top}{e}",
+   "\\enclose{bottom}{f}",
+   "\\enclose{actuarial}{g}",
+   "\\enclose{longdiv}{h}",
+   "\\enclose{radical}{i}",
+   "\\enclose{phasorangle}{j}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "centernot",
+  "packages": [
+   "base",
+   "centernot"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/centernot/CenternotConfiguration.js"
+  ],
+  "texs": [
+   "\\centernot{=}",
+   "\\centernot=",
+   "\\centernot{\\to}",
+   "\\centerOver{\\circ}{x}",
+   "\\centerOver{+}{\\times}",
+   "\\centernot\\longrightarrow",
+   "\\centernot{\\in}A",
+   "\\centernot{\\sim}",
+   "\\centernot{\\equiv}^2",
+   "\\centerOver{a}{b}_i"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "boldsymbol",
+  "packages": [
+   "base",
+   "boldsymbol"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/boldsymbol/BoldsymbolConfiguration.js"
+  ],
+  "texs": [
+   "\\boldsymbol{\\alpha}",
+   "\\boldsymbol{\\Gamma}",
+   "\\boldsymbol{\\nabla}\\cdot v",
+   "\\boldsymbol{x^2}",
+   "\\boldsymbol{\\sum_i a_i}",
+   "\\boldsymbol{\\sqrt{x}}",
+   "\\boldsymbol{\\mathrm{A}}",
+   "\\boldsymbol{\\mathit{B}}",
+   "\\boldsymbol{\\mathcal{C}}",
+   "\\boldsymbol{\\mathfrak{d}}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "mhchem",
+  "packages": [
+   "base",
+   "mhchem"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/mhchem/MhchemConfiguration.js",
+   "input/tex/ams/AmsConfiguration.js"
+  ],
+  "texs": [
+   "\\ce{H2SO4}",
+   "\\ce{2H2 + O2 -> 2H2O}",
+   "\\ce{Fe^3+ + 3OH- <=> Fe(OH)3 v}",
+   "\\ce{NaOH(aq) + HCl(aq) -> NaCl(aq) + H2O(l)}",
+   "\\ce{CH3COOH}",
+   "\\ce{[Cu(NH3)4]^2+}",
+   "\\ce{SO4^2-}",
+   "\\ce{^{238}_{92}U}",
+   "\\ce{^{14}C}",
+   "\\ce{KCr(SO4)2*12H2O}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "extpfeil",
+  "packages": [
+   "base",
+   "extpfeil"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/extpfeil/ExtpfeilConfiguration.js"
+  ],
+  "texs": [
+   "\\xtwoheadrightarrow{a}",
+   "\\xtwoheadleftarrow{b}",
+   "\\xmapsto{c}",
+   "\\xlongequal{d}",
+   "\\xtofrom{e}",
+   "\\xtwoheadrightarrow[u]{v}",
+   "\\xtwoheadleftarrow[x^2]{\\frac{y}{z}}",
+   "\\xmapsto[below]{}",
+   "\\xlongequal[p]{q}",
+   "\\xtofrom[r]{s}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "action",
+  "packages": [
+   "base",
+   "action"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/action/ActionConfiguration.js"
+  ],
+  "texs": [
+   "\\texttip{\\frac{x}{y}}{hover}",
+   "\\mathtip{\\sqrt{a}}{\\frac{b}{c}}",
+   "\\toggle a\\endtoggle",
+   "\\toggle a b\\endtoggle",
+   "\\toggle{x+y}{z}\\endtoggle",
+   "\\mathtip{p}{q}^2",
+   "\\texttip{u}{v w}_i",
+   "\\mathtip{\\mathtip{a}{b}}{c}",
+   "\\frac{\\mathtip{m}{n}}{2}",
+   "\\texttip{}{a}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "bbm",
+  "packages": [
+   "base",
+   "bbm"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/bbm/BbmConfiguration.js"
+  ],
+  "texs": [
+   "\\mathbbm{R}",
+   "\\mathbbm{xyz}",
+   "\\mathbbmss{Q}",
+   "\\mathbbmtt{Z}",
+   "\\mathbbm{1}",
+   "\\mathbbmss{0}",
+   "\\mathbbmtt{9}",
+   "\\mathbbm{A}^2",
+   "\\mathbbmss{Ab1}",
+   "\\mathbbmtt{ab12}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "bboldx",
+  "packages": [
+   "base",
+   "bboldx",
+   "textmacros"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/bboldx/BboldxConfiguration.js",
+   "input/tex/textmacros/TextMacrosConfiguration.js"
+  ],
+  "texs": [
+   "\\mathbb{Zz}",
+   "\\mathbfbb{Qq}",
+   "\\mathbb{0123}",
+   "\\mathbfbb{456}",
+   "\\mathbb{\\Gamma}",
+   "\\bbGamma^2",
+   "\\bbalpha_i",
+   "\\bbbeta+\\bbgamma",
+   "\\imathbb_1",
+   "\\jmathbfbb^2"
+  ],
+  "temml": [
+   true,
+   false,
+   true,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "color",
+  "packages": [
+   "base",
+   "color"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/color/ColorConfiguration.js"
+  ],
+  "texs": [
+   "\\color{blue} a+b",
+   "{\\color{green}x}y",
+   "\\color{#ff0000}z",
+   "\\color[rgb]{1,0,0}w",
+   "\\color[RGB]{0,128,255}v",
+   "\\color[gray]{0.5}u",
+   "\\textcolor{purple}{\\frac{a}{b}}",
+   "\\textcolor[rgb]{0,0,1}{q}",
+   "\\definecolor{mine}{rgb}{.1,.2,.3}\\color{mine}p",
+   "\\colorbox{yellow}{n m}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   false,
+   true
+  ]
+ },
+ {
+  "group": "colortbl",
+  "packages": [
+   "base",
+   "colortbl"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/colortbl/ColortblConfiguration.js",
+   "input/tex/color/ColorConfiguration.js",
+   "input/tex/Configuration.js"
+  ],
+  "texs": [
+   "\\begin{array}{cc}\\rowcolor{cyan}a&b\\\\c&d\\end{array}",
+   "\\begin{array}{cc}a&\\cellcolor{cyan}b\\\\\\cellcolor{pink}c&d\\end{array}",
+   "\\begin{array}{cc}\\columncolor{cyan}a&b\\end{array}",
+   "\\begin{array}{>{\\columncolor{cyan}}c c}a&b\\end{array}",
+   "\\begin{array}{c}\\cellcolor[rgb]{1,0,0}a\\end{array}",
+   "\\begin{array}{c}\\rowcolor[RGB]{0,255,0}b\\end{array}",
+   "\\begin{array}{c}\\columncolor[gray]{.5}c\\end{array}",
+   "\\begin{array}{cc}\\rowcolor{red}\\cellcolor{blue}a&b\\end{array}",
+   "\\begin{array}{|c|c|}\\hline\\rowcolor{lime}a&b\\\\\\hline\\end{array}",
+   "\\begin{array}{c}\\cellcolor{red}\\frac{a}{b}\\end{array}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "colorv2",
+  "packages": [
+   "base",
+   "colorv2"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/colorv2/ColorV2Configuration.js"
+  ],
+  "texs": [
+   "\\color{blue}{x}",
+   "\\color{green}{a+b}",
+   "\\color{#123}{y}",
+   "\\color{red}{\\frac{a}{b}}",
+   "\\frac{\\color{red}{1}}{2}",
+   "\\color{red}{a}\\color{blue}{b}",
+   "\\sqrt{\\color{red}{c}}",
+   "x^{\\color{red}{2}}",
+   "\\color{red}{\\color{blue}{d}}",
+   "\\color{purple}{}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "dsfont",
+  "packages": [
+   "base",
+   "dsfont"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/dsfont/DsfontConfiguration.js"
+  ],
+  "texs": [
+   "\\mathds{R}",
+   "\\mathds{xyz}",
+   "\\mathds{1}",
+   "\\mathds{N}^2",
+   "\\mathds{Q}_i",
+   "\\mathds{0}",
+   "\\frac{\\mathds{Z}}{2}",
+   "\\mathds{}",
+   "\\mathds{\\Gamma}",
+   "\\mathds{a+b}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "empheq",
+  "packages": [
+   "base",
+   "ams",
+   "empheq",
+   "cases"
+  ],
+  "texOptions": {
+   "tags": "ams"
+  },
+  "configurationModules": [
+   "input/tex/empheq/EmpheqConfiguration.js",
+   "input/tex/cases/CasesConfiguration.js",
+   "input/tex/ams/AmsConfiguration.js"
+  ],
+  "texs": [
+   "\\begin{empheq}[left=\\empheqlbrace]{align}p&=q\\\\r&=s\\end{empheq}",
+   "\\begin{empheq}[right=\\empheqrbrace]{align}p&=q\\end{empheq}",
+   "\\begin{empheq}[left=\\empheqlbrack,right=\\empheqrbrack]{gather}a\\\\b\\end{empheq}",
+   "\\begin{empheq}[left=X,right=Y]{equation}a=b\\end{empheq}",
+   "\\begin{empheq}{align}a&=b\\end{empheq}",
+   "\\begin{empheq}[left=\\empheqlangle]{align*}c&=d\\end{empheq}",
+   "\\begin{empheq}[right=\\empheqrangle]{align*}e&=f\\end{empheq}",
+   "\\begin{empheq}[left={\\empheqbiglbrace}]{alignat=2}a&=b&c&=d\\end{empheq}",
+   "\\begin{empheq}[left=\\empheqlvert,right=\\empheqrvert]{align}g\\end{empheq}",
+   "\\begin{empheq}[left=\\empheqlVert]{align}h\\tag{Z}\\end{empheq}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "cases",
+  "packages": [
+   "base",
+   "ams",
+   "cases"
+  ],
+  "texOptions": {
+   "tags": "ams"
+  },
+  "configurationModules": [
+   "input/tex/cases/CasesConfiguration.js",
+   "input/tex/empheq/EmpheqConfiguration.js",
+   "input/tex/ams/AmsConfiguration.js"
+  ],
+  "texs": [
+   "\\begin{numcases}{g(y)=}a&b\\\\c&d\\end{numcases}",
+   "\\begin{subnumcases}{g(y)=}a&b\\\\c&d\\end{subnumcases}",
+   "\\begin{numcases}{h=}1\\end{numcases}",
+   "\\begin{numcases}{}x&y\\end{numcases}",
+   "\\begin{numcases}{u=}\\frac{a}{b}&\\text{if }c\\\\d&\\text{else}\\end{numcases}",
+   "\\begin{numcases}{v=}a\\label{w1}&b\\\\c\\label{w2}&d\\end{numcases}",
+   "\\begin{subnumcases}{v=}a\\label{w1}&b\\\\c&d\\end{subnumcases}",
+   "\\begin{numcases}{w=}a\\tag{P}&b\\\\c&d\\end{numcases}",
+   "\\begin{subnumcases}{w=}a&b\\tag{Q}\\end{subnumcases}",
+   "\\begin{numcases}{x=}a&$y$ text\\end{numcases}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "gensymb",
+  "packages": [
+   "base",
+   "gensymb"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/gensymb/GensymbConfiguration.js"
+  ],
+  "texs": [
+   "\\ohm+1",
+   "90\\degree",
+   "37\\celsius",
+   "5\\perthousand",
+   "\\micro m",
+   "\\frac{\\ohm}{\\micro}",
+   "\\degree^2",
+   "\\celsius_0",
+   "\\sqrt{\\perthousand}",
+   "\\mathbf{\\ohm}"
+  ],
+  "temml": [
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "html",
+  "packages": [
+   "base",
+   "html"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/html/HtmlConfiguration.js"
+  ],
+  "texs": [
+   "\\href{https://example.com/a?b=1&c=2}{x}",
+   "\\href{#local}{\\sum_i}",
+   "\\href{}{y}",
+   "\\href{a b}{z}",
+   "\\class{foo}{a}",
+   "\\class{foo bar}{\\frac{a}{b}}",
+   "\\cssId{qq}{b}",
+   "\\cssId{qq}{\\sqrt{c}}",
+   "\\style{color:red}{d}",
+   "\\style{font-size:200%}{e}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "textmacros",
+  "packages": [
+   "base",
+   "newcommand",
+   "color",
+   "html",
+   "unicode",
+   "textmacros"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/textmacros/TextMacrosConfiguration.js",
+   "input/tex/newcommand/NewcommandConfiguration.js",
+   "input/tex/color/ColorConfiguration.js",
+   "input/tex/html/HtmlConfiguration.js",
+   "input/tex/unicode/UnicodeConfiguration.js",
+   "input/tex/Configuration.js"
+  ],
+  "texs": [
+   "\\text{hello \\textbf{bold} world}",
+   "\\text{a \\textit{b} c}",
+   "\\text{\\emph{d}\\textrm{e}\\texttt{f}\\textsf{g}}",
+   "\\text{\\$5 \\% \\# \\& \\_}",
+   "\\text{a\\ b~c}",
+   "\\text{\\quad x\\qquad y}",
+   "\\text{$x+y$ and \\(z\\)}",
+   "\\text{``quoted''}",
+   "\\text{a--b---c}",
+   "\\text{\\{a\\}}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "begingroup",
+  "packages": [
+   "base",
+   "begingroup",
+   "newcommand"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/begingroup/BegingroupConfiguration.js",
+   "input/tex/newcommand/NewcommandConfiguration.js",
+   "input/tex/Configuration.js"
+  ],
+  "texs": [
+   "\\begingroup\\newcommand{\\p}{q}\\p\\endgroup",
+   "\\def\\z{0}\\begingroup\\def\\z{1}\\z\\endgroup\\z",
+   "\\begingroup a\\endgroup b",
+   "\\begingroup\\begingroup c\\endgroup\\endgroup",
+   "\\begingroup d",
+   "\\def\\m{A}\\begingroup\\global\\def\\m{B}\\endgroup\\m",
+   "\\begingroup\\gdef\\n{C}\\endgroup\\n",
+   "\\begingroup\\let\\o=\\alpha\\o\\endgroup",
+   "\\begingroup\\def\\r#1{#1^2}\\r{x}\\endgroup",
+   "\\newcommand{\\s}{1}\\begingroup\\renewcommand{\\s}{2}\\s\\endgroup\\s"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "noundefined",
+  "packages": [
+   "base",
+   "noundefined"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/noundefined/NoUndefinedConfiguration.js"
+  ],
+  "texs": [
+   "\\foo",
+   "\\foo{a}",
+   "a\\foo b\\bar c",
+   "\\frac{\\foo}{2}",
+   "\\foo^2",
+   "\\foo_x",
+   "\\sqrt{\\baz}",
+   "\\qux\\quux",
+   "x\\y z",
+   "\\Xyz"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "setoptions",
+  "packages": [
+   "base",
+   "ams",
+   "units",
+   "setoptions"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/setoptions/SetOptionsConfiguration.js",
+   "input/tex/ams/AmsConfiguration.js",
+   "input/tex/units/UnitsConfiguration.js"
+  ],
+  "texs": [
+   "\\setOptions{tagSide=right} a\\tag{1}",
+   "\\setOptions{tagIndent=1em} a\\tag{1}",
+   "\\setOptions{tagSide=left,tagIndent=2em} b\\tag{2}",
+   "\\setOptions[ams]{multlineWidth=40%} \\begin{multline}a\\\\b\\end{multline}",
+   "\\setOptions[ams]{multlineIndent=2em} \\begin{multline}c\\\\d\\end{multline}",
+   "\\setOptions[units]{loose=false} \\units[2]{m}",
+   "\\setOptions[units]{ugly=true} \\nicefrac{a}{b}",
+   "\\setOptions[ams]{operatornamePattern=/^[a-z]+/} \\operatorname{ab1}",
+   "\\setOptions{} e",
+   "\\setOptions[ams]{} f"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "tagformat",
+  "packages": [
+   "base",
+   "ams",
+   "tagformat"
+  ],
+  "texOptions": {
+   "tags": "ams"
+  },
+  "configurationModules": [
+   "input/tex/tagformat/TagFormatConfiguration.js",
+   "input/tex/ams/AmsConfiguration.js"
+  ],
+  "texs": [
+   "y \\tag{2}",
+   "y \\tag*{2}",
+   "\\begin{align}a\\\\b\\end{align}",
+   "\\begin{align}p \\label{u}\\\\ \\ref{u}\\end{align}",
+   "\\begin{align}p \\label{u}\\\\ \\eqref{u}\\end{align}",
+   "\\begin{gather}c\\tag{C}\\\\d\\end{gather}",
+   "\\begin{equation}e\\end{equation}",
+   "\\begin{equation}f\\notag\\end{equation}",
+   "\\begin{align*}g\\end{align*}",
+   "\\begin{align}h\\nonumber\\end{align}"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "textcomp",
+  "packages": [
+   "base",
+   "textcomp"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/textcomp/TextcompConfiguration.js",
+   "input/tex/textmacros/TextMacrosConfiguration.js"
+  ],
+  "texs": [
+   "\\text{\\textcent\\textsterling\\textyen}",
+   "\\text{\\texteuro\\textdollar}",
+   "\\text{\\textdegree 1}",
+   "\\text{\\textcopyright\\textregistered\\texttrademark}",
+   "\\text{\\textmu\\textohm\\textmho}",
+   "\\text{\\textbullet\\textperiodcentered}",
+   "\\text{\\textdagger\\textdaggerdbl}",
+   "\\text{\\textparagraph\\textsection}",
+   "\\text{\\textonehalf\\textonequarter\\textthreequarters}",
+   "\\text{\\textonesuperior\\texttwosuperior\\textthreesuperior}"
+  ],
+  "temml": [
+   false,
+   true,
+   true,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "unicode",
+  "packages": [
+   "base",
+   "unicode"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/unicode/UnicodeConfiguration.js"
+  ],
+  "texs": [
+   "\\unicode{x2200}",
+   "\\unicode{8704}",
+   "\\unicode{x3b1}",
+   "\\unicode{945}+1",
+   "\\unicode{x1F600}",
+   "\\unicode[.5,0]{x41}",
+   "\\unicode[0.8,0.2,0.5]{x42}",
+   "\\unicode[Arial]{x43}",
+   "\\unicode[0.7,0.1][Arial]{x44}",
+   "\\unicode{x41}\\unicode{x42}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "units",
+  "packages": [
+   "base",
+   "units"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/units/UnitsConfiguration.js"
+  ],
+  "texs": [
+   "\\units{km}",
+   "\\units[3]{km}",
+   "\\units[x^2]{m}",
+   "\\unitfrac{m}{s}",
+   "\\unitfrac[3]{m}{s}",
+   "\\nicefrac{1}{2}",
+   "\\nicefrac[\\mathrm]{a}{b}",
+   "\\nicefrac{x}{y}^2",
+   "\\units{}",
+   "\\units[]{m}"
+  ],
+  "temml": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "upgreek",
+  "packages": [
+   "base",
+   "upgreek"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/upgreek/UpgreekConfiguration.js"
+  ],
+  "texs": [
+   "\\upalpha+\\upbeta",
+   "\\upgamma^2",
+   "\\updelta_i",
+   "\\upepsilon\\upzeta\\upeta\\uptheta",
+   "\\upiota\\upkappa\\uplambda\\upmu",
+   "\\upnu\\upxi\\upomicron\\uppi",
+   "\\uprho\\upsigma\\uptau\\upupsilon",
+   "\\upphi\\upchi\\uppsi\\upomega",
+   "\\upvarepsilon\\upvartheta\\upvarpi\\upvarrho\\upvarsigma\\upvarphi",
+   "\\Upgamma\\Updelta"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   false
+  ]
+ },
+ {
+  "group": "verb",
+  "packages": [
+   "base",
+   "verb"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/verb/VerbConfiguration.js"
+  ],
+  "texs": [
+   "\\verb|a b|",
+   "\\verb!x^2!",
+   "\\verb+\\frac{a}{b}+",
+   "\\verb*a b*",
+   "\\verb|{|",
+   "\\verb/%/",
+   "1+\\verb|x|+2",
+   "\\frac{\\verb|a|}{2}",
+   "\\verb||",
+   "\\verb|<&>|"
+  ],
+  "temml": [
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ {
+  "group": "bussproofs",
+  "packages": [
+   "base",
+   "ams",
+   "bussproofs"
+  ],
+  "texOptions": {},
+  "configurationModules": [
+   "input/tex/bussproofs/BussproofsConfiguration.js",
+   "input/tex/ams/AmsConfiguration.js"
+  ],
+  "texs": [],
+  "temml": []
+ }
+]

@@ -1,0 +1,65 @@
+{
+  "state": "READY_FOR_ROOT_VERIFICATION",
+  "goal": "Verifier hardening, bounded stateless configuration cache, cold import reduction, full fixture preservation, public package tarball and raw comparative timings",
+  "constraints": {
+    "writeScope": "/home/minamorl/repos/.worktrees/flashmath-ts/hardening",
+    "externalWrites": false,
+    "publish": false,
+    "subagents": false,
+    "nativeRenderFilesUntouched": true
+  },
+  "decisions": [
+    "Code-first; no broker checkpoints per --no-review",
+    "FIFO configuration/template caches keyed by option contents; session state stays private",
+    "Source-span scanner and shared brace index",
+    "Lazy optional package evaluation in shared ESM build; compact generated numeric symbol trie",
+    "Public scoped npm metadata with strict files allowlist",
+    "Readonly original Git index: alternate local Git directory and incremental bundle"
+  ],
+  "changedPackage": {
+    "name": "@minamorl/flashmath",
+    "version": "0.1.0"
+  },
+  "evidence": {
+    "tests": {
+      "total": 2384,
+      "pass": 2378,
+      "fail": 0,
+      "skipped": 6,
+      "exit": 0
+    },
+    "conformance": {
+      "matched": 2635,
+      "mismatch": 0,
+      "unsupported": 48,
+      "harnessExit": 1,
+      "denominatorAssertionExit": 0
+    },
+    "corpus": {
+      "total": 971,
+      "match": 969,
+      "mismatch": 0,
+      "fmThrow": 0,
+      "mjThrow": 2,
+      "validTotal": 827,
+      "validMatch": 827
+    },
+    "benchmark": {
+      "groups": 36,
+      "statelessFasterThanMathJax": 36,
+      "temmlComparable": 22,
+      "statelessFasterThanTemml": 22,
+      "mathjaxMinSpeedup": 5.92762063548492,
+      "temmlMinSpeedup": 1.026325505642722
+    },
+    "pack": "bench/flashmath/pack-manifest.json",
+    "screen": "bench/hardening/screen.json"
+  },
+  "residualRisks": [
+    "Cold import remains slower than Temml on this machine",
+    "Smallest warm Temml p50 margin is about 3%; rankings are machine-specific",
+    "Native menclose/proof line rendering belongs to the parallel native-render lane",
+    "Linearity is measured for the requested five nested families, not arbitrary user macro/text expansions"
+  ],
+  "next": "Root verifier, native-render integration, npm publication by root"
+}
