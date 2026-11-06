@@ -71,3 +71,20 @@ state. ignoreDuplicateLabels is explicitly true in both engines. Every warm
 worker validates outputs before and after warmup. This replaces earlier
 measurements with ignored nested MathJax options and repeated-definition errors.
 Timing ranks are reported as observations, not enforced as correctness gates.
+
+## Final measured outcome
+
+The complete local gate finished at 2026-11-06T21:56:10.260Z
+(UTC completion time). `bench/release/checks.json` records the exact commands,
+expected exits and source SHA-256. Tests retain their six upstream skips.
+The independent corpus has 969 comparable matches (827 valid inputs), zero
+mismatches and two MathJax oracle exceptions, out of 971 inputs.
+
+Stateless p50 was below MathJax in 36/36 full groups (minimum 3.61x) and below
+Temml in 17/22 comparable cohorts. Temml remains faster in cancel, boldsymbol, extpfeil, begingroup, verb;
+therefore the requested universal fastest outcome has not been established.
+Cold import/setup/first-string p50 is 25.39 ms for stateless flashmath,
+27.08 ms for session, 73.46 ms for MathJax and 21.30 ms for Temml on this host.
+These measurements exclude browser layout and React SSR. The exact final
+candidate tarball size, integrity and file list are in pack.json and
+tarball-files.txt. External transmission and npm publication were not performed.

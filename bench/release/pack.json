@@ -1,0 +1,459 @@
+{
+  "id": "@minamorl/flashmath@0.1.0",
+  "name": "@minamorl/flashmath",
+  "version": "0.1.0",
+  "size": 167510,
+  "unpackedSize": 489504,
+  "shasum": "46434444ae1aa3793389b3efc9cf4bbe0aeba8c8",
+  "integrity": "sha512-ZbiSXhnl0ltX6JvuJu8ED/EbyXLZv3Ci7EMuRbggls04+cNBDcA6J3K38y+l2pmLlfW7ltu9IbMKhl/B5oJJVQ==",
+  "filename": "minamorl-flashmath-0.1.0.tgz",
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 12496,
+      "mode": 384
+    },
+    {
+      "path": "NOTICE",
+      "size": 1454,
+      "mode": 384
+    },
+    {
+      "path": "README.md",
+      "size": 9081,
+      "mode": 384
+    },
+    {
+      "path": "dist/ast.d.ts",
+      "size": 3343,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-2ERRW4YH.js",
+      "size": 14168,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-GOVLTU5G.js",
+      "size": 2349,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-GP4PSCSP.js",
+      "size": 326617,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-IHTB7IDO.js",
+      "size": 218,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-NBVURNP2.js",
+      "size": 30937,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-NOBQ3HZG.js",
+      "size": 1046,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-WZSFAGJH.js",
+      "size": 530,
+      "mode": 384
+    },
+    {
+      "path": "dist/configuration-cache.d.ts",
+      "size": 362,
+      "mode": 384
+    },
+    {
+      "path": "dist/configuration-cache.js",
+      "size": 174,
+      "mode": 384
+    },
+    {
+      "path": "dist/configuration.d.ts",
+      "size": 465,
+      "mode": 384
+    },
+    {
+      "path": "dist/configuration.js",
+      "size": 192,
+      "mode": 384
+    },
+    {
+      "path": "dist/fonts.css",
+      "size": 763,
+      "mode": 384
+    },
+    {
+      "path": "dist/fonts/mjx-ncm-c.woff2",
+      "size": 5948,
+      "mode": 384
+    },
+    {
+      "path": "dist/fonts/mjx-ncm-cb.woff2",
+      "size": 6216,
+      "mode": 384
+    },
+    {
+      "path": "dist/fonts/mjx-ncm-s.woff2",
+      "size": 10068,
+      "mode": 384
+    },
+    {
+      "path": "dist/fonts/mjx-ncm-sb.woff2",
+      "size": 8288,
+      "mode": 384
+    },
+    {
+      "path": "dist/fonts/provenance.json",
+      "size": 679,
+      "mode": 384
+    },
+    {
+      "path": "dist/index.d.ts",
+      "size": 436,
+      "mode": 384
+    },
+    {
+      "path": "dist/index.js",
+      "size": 876,
+      "mode": 384
+    },
+    {
+      "path": "dist/mathml.d.ts",
+      "size": 942,
+      "mode": 384
+    },
+    {
+      "path": "dist/native-layout.d.ts",
+      "size": 460,
+      "mode": 384
+    },
+    {
+      "path": "dist/native-variants.d.ts",
+      "size": 135,
+      "mode": 384
+    },
+    {
+      "path": "dist/native-variants.js",
+      "size": 108,
+      "mode": 384
+    },
+    {
+      "path": "dist/output.d.ts",
+      "size": 321,
+      "mode": 384
+    },
+    {
+      "path": "dist/output.js",
+      "size": 149,
+      "mode": 384
+    },
+    {
+      "path": "dist/package-mark.d.ts",
+      "size": 332,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/action.d.ts",
+      "size": 425,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/ams.d.ts",
+      "size": 975,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/amscd.d.ts",
+      "size": 822,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/autoload.d.ts",
+      "size": 423,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/base.d.ts",
+      "size": 709,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/bbm.d.ts",
+      "size": 652,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/bboldx.d.ts",
+      "size": 417,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/bbox.d.ts",
+      "size": 241,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/begingroup.d.ts",
+      "size": 248,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/boldsymbol.d.ts",
+      "size": 247,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/braket.d.ts",
+      "size": 240,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/bussproofs-layout.d.ts",
+      "size": 250,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/bussproofs-metrics.d.ts",
+      "size": 82,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/bussproofs.d.ts",
+      "size": 349,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/cancel.d.ts",
+      "size": 218,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/cases.d.ts",
+      "size": 383,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/centernot.d.ts",
+      "size": 346,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/color.d.ts",
+      "size": 897,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/colortbl.d.ts",
+      "size": 263,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/colorv2.d.ts",
+      "size": 337,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/configmacros.d.ts",
+      "size": 335,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/dsfont.d.ts",
+      "size": 266,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/empheq.d.ts",
+      "size": 631,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/enclose.d.ts",
+      "size": 408,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/extpfeil.d.ts",
+      "size": 354,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/fontsizev3.d.ts",
+      "size": 248,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/gensymb.d.ts",
+      "size": 248,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/html.d.ts",
+      "size": 218,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/mathtools.d.ts",
+      "size": 576,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/mhchem-grammar.d.ts",
+      "size": 3431,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/mhchem-machine.d.ts",
+      "size": 1444,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/mhchem.d.ts",
+      "size": 218,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/newcommand.d.ts",
+      "size": 353,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/noerrors.d.ts",
+      "size": 543,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/noundefined.d.ts",
+      "size": 247,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/physics.d.ts",
+      "size": 374,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/registry.d.ts",
+      "size": 331,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/registry.js",
+      "size": 241,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/require.d.ts",
+      "size": 521,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/retry.d.ts",
+      "size": 263,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/setoptions.d.ts",
+      "size": 522,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/tagformat.d.ts",
+      "size": 668,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/texhtml.d.ts",
+      "size": 344,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/textcomp.d.ts",
+      "size": 346,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/textmacros.d.ts",
+      "size": 696,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/types.d.ts",
+      "size": 1856,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/unicode.d.ts",
+      "size": 392,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/units.d.ts",
+      "size": 424,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/upgreek.d.ts",
+      "size": 248,
+      "mode": 384
+    },
+    {
+      "path": "dist/packages/verb.d.ts",
+      "size": 241,
+      "mode": 384
+    },
+    {
+      "path": "dist/parser.d.ts",
+      "size": 4999,
+      "mode": 384
+    },
+    {
+      "path": "dist/preamble.d.ts",
+      "size": 589,
+      "mode": 384
+    },
+    {
+      "path": "dist/react.d.ts",
+      "size": 362,
+      "mode": 384
+    },
+    {
+      "path": "dist/react.js",
+      "size": 1461,
+      "mode": 384
+    },
+    {
+      "path": "dist/scanner.d.ts",
+      "size": 962,
+      "mode": 384
+    },
+    {
+      "path": "dist/serialize.d.ts",
+      "size": 286,
+      "mode": 384
+    },
+    {
+      "path": "dist/session-state.d.ts",
+      "size": 516,
+      "mode": 384
+    },
+    {
+      "path": "dist/symbols.d.ts",
+      "size": 14218,
+      "mode": 384
+    },
+    {
+      "path": "package.json",
+      "size": 1447,
+      "mode": 384
+    }
+  ],
+  "entryCount": 89,
+  "bundled": []
+}

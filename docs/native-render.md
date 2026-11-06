@@ -276,8 +276,6 @@ Browser: Chrome/153.0.8010.36. All 195 SSR/string pairs have identical measured 
 
 <!-- /measured-results -->
 
-
-
 ### Visual review of the captured panels
 
 | Group | Observation |
@@ -293,14 +291,17 @@ Browser: Chrome/153.0.8010.36. All 195 SSR/string pairs have identical measured 
 | chemistry | Unicode arrows, equilibrium compositions, labels, bonds and prescripts render without PUA boxes. Harpoon widths and dashed-bond vertical gaps differ. |
 | core | Ordinary arithmetic, fractions, radicals, sums, integrals, matrices, fences and scripts are visible. Overline core-8 now spans its whole base. Underbrace glyph shape and large-operator metrics differ. |
 
-All panels listed and hashed in `bench/native-render/visual-review.json` were opened for visual inspection. Feature verdict: PASS. Pixel parity: NOT ACHIEVED.
+The current release directly re-opened the variant, tag and proof panels listed
+and hashed in `bench/native-render/visual-review.json`; the other observations
+above describe the inherited native lane review. Every release panel is
+regenerated and every formula measured by Chromium. Pixel parity: NOT ACHIEVED.
 
 ## Verification limits
 
 Font-dependent metric and glyph differences described above remain. Existing
-MathJax-mode disagreements on a few nonfixture proof/custom-frame combinations
-are recorded in `visual-checks.json`; native display work does not rewrite the
-conformance snapshots to hide them. Full fixture acceptance remains exactly
+MathJax-mode structural differences in the 195-formula corpus are now zero;
+`visual-checks.json` contains an empty referenceDifferences array, enforced by
+the strict gate. Native pixel identity is not claimed. Full fixture acceptance remains exactly
 2635 matched, 0 mismatched, 48 unsupported out of 2683 records.
 
 
