@@ -427,7 +427,7 @@ export class Parser {
       Object.assign(a, {
         fence: "true",
         symmetric: "true",
-        ...(["⏐", "⏪", "⎪", "/", "\\"].includes(text)
+        ...(["⏐", "⏪", "⎪", "/", "\\", "⌜", "⌝", "⌞", "⌟"].includes(text)
           ? { stretchy: "true" }
           : {}),
       });
@@ -750,7 +750,7 @@ export class Parser {
           this.parseTokens(p.tokens, (n) => {
             nodes.push(
               this.atom(
-                n.kind === K.mrow && !n.attributes["data-mjx-texclass"]
+                n.kind === K.mrow && !Object.keys(n.attributes).length
                   ? n.children
                   : [n],
               ),
@@ -943,7 +943,7 @@ export class Parser {
   }
   tagRow(table: Table) {
     const index = table.rows.length - 1;
-    if (table.numbered && !table.noNumbers.has(index))
+    if (table.numbered && !table.noNumbers.has(index) && !table.tagCells.has(index))
       table.tagCells.set(index, this.labelCell(table.labels[index] ?? ""));
   }
   labelCell(label: string) {
