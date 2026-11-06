@@ -15,6 +15,7 @@ import type { Preamble } from "./preamble.js";
 import { C, definitions, ranges } from "./symbols.js";
 import { resolvePackages } from "./packages/registry.js";
 import { configure } from "./configuration.js";
+import { mathMLForOutput } from "./output.js";
 import { sessionState } from "./session-state.js";
 import type { SessionState, Reference } from "./session-state.js";
 import type { PackageConfiguration, RegisteredCommand } from "./packages/types.js";
@@ -1618,15 +1619,17 @@ function parseOne(
   }
 }
 export interface MathMLParserSession {
-  parse(tex: string, options?: { display?: boolean }): MathMLNode;
+  parse(tex: string, options?: Pick<ParseOptions, 'display' | 'output'>): MathMLNode;
 }
 export function createMathMLParser(
   input: ParseOptions = {},
 ): MathMLParserSession {
   const { options, configuration } = configure(input),
     state = sessionState();
-  const parse = (tex: string, overrides: { display?: boolean } = {}) =>
-    parseOne(tex, { ...options, ...overrides }, configuration, state);
+  const parse = (tex: string, overrides: Pick<ParseOptions, 'display' | 'output'> = {}) => {
+    const resolved = { ...options, ...overrides };
+    return mathMLForOutput(parseOne(tex, resolved, configuration, state), resolved);
+  };
   for (const previous of options.prior ?? [])
     parse(previous.tex, { display: previous.display ?? options.display });
   return { parse };

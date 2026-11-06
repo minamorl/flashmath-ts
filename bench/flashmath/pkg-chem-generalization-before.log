@@ -1,0 +1,58 @@
+{"tex":"\\ce{0,25 O2}","difference":{"category":"structure","path":"/math/0/1","expected":"{http://www.w3.org/1998/Math/MathML}mrow","actual":"{http://www.w3.org/1998/Math/MathML}mo"}}
+{"tex":"\\ce{_6^12C}","difference":{"category":"structure","path":"/math/0","expected":4,"actual":6}}
+{"tex":"\\ce{Co^{II}_2}","difference":{"category":"structure","path":"/math/0","expected":3,"actual":2}}
+{"tex":"\\ce{$A$ ->[\\ce{+H2O}] $B$}","difference":{"category":"structure","path":"/math/0/2/0/1/1","expected":6,"actual":3}}
+{"tex":"\\ce{A ->[\\ce{2 H2 + O2}] B}","difference":{"category":"structure","path":"/math/0/2/0/1/1","expected":10,"actual":3}}
+{"tex":"\\ce{A ->[{$h\\nu$}] B}","difference":{"category":"structure","path":"/math/0/2/0/1/1/0","expected":2,"actual":1}}
+{"tex":"\\ce{A ->[\\pu{300 K}] B}","difference":{"category":"structure","path":"/math/0/2/0/1/1","expected":2,"actual":3}}
+{"tex":"\\pu{9.81 m/s^2}","difference":{"category":"structure","path":"/math/0/4","expected":"{http://www.w3.org/1998/Math/MathML}mrow","actual":"{http://www.w3.org/1998/Math/MathML}msup"}}
+{"tex":"\\pu{7 kg*m/s2}","difference":{"category":"structure","path":"/math/0","expected":11,"actual":9}}
+{"tex":"\\pu{20 m//s^2}","difference":{"category":"structure","path":"/math/0/2/0/1","expected":"{http://www.w3.org/1998/Math/MathML}mrow","actual":"{http://www.w3.org/1998/Math/MathML}msup"}}
+{"tex":"\\pu{25 °C}","difference":{"category":"structure","path":"/math/0","expected":3,"actual":4}}
+{"tex":"\\pu{32 ^oF}","difference":{"category":"structure","path":"/math/0","expected":3,"actual":2}}
+{"tex":"\\pu{10 ^{o}C}","difference":{"category":"structure","path":"/math/0/1","expected":"{http://www.w3.org/1998/Math/MathML}mtext","actual":"{http://www.w3.org/1998/Math/MathML}msup"}}
+{"tex":"\\pu{1.2 mm^2}","difference":{"category":"structure","path":"/math/0/2","expected":"{http://www.w3.org/1998/Math/MathML}mrow","actual":"{http://www.w3.org/1998/Math/MathML}msup"}}
+{"tex":"\\pu{5 cm^{3}}","difference":{"category":"structure","path":"/math/0/2","expected":"{http://www.w3.org/1998/Math/MathML}mrow","actual":"{http://www.w3.org/1998/Math/MathML}msup"}}
+{"tex":"\\pu{4 m^-2}","difference":{"category":"structure","path":"/math/0","expected":3,"actual":4}}
+{"tex":"\\pu{3 s^{-1}}","difference":{"category":"structure","path":"/math/0/2","expected":"{http://www.w3.org/1998/Math/MathML}mrow","actual":"{http://www.w3.org/1998/Math/MathML}msup"}}
+{"tex":"\\pu{12345 J}","difference":{"category":"structure","path":"/math/0","expected":5,"actual":3}}
+{"tex":"\\pu{1234567 J}","difference":{"category":"structure","path":"/math/0","expected":7,"actual":3}}
+{"tex":"\\pu{1.23456 m}","difference":{"category":"structure","path":"/math/0","expected":5,"actual":3}}
+{"tex":"\\pu{0,12345 s}","difference":{"category":"structure","path":"/math/0","expected":5,"actual":4}}
+{"tex":"\\pu{3.14(2) m}","difference":{"category":"structure","path":"/math/0","expected":6,"actual":7}}
+{"tex":"\\pu{10^3 Pa}","difference":{"category":"structure","path":"/math/0","expected":3,"actual":4}}
+{"tex":"\\pu{2 x 10^3 J}","difference":{"category":"structure","path":"/math/0","expected":5,"actual":7}}
+{"tex":"\\pu{2 * 10^{-3} J}","difference":{"category":"structure","path":"/math/0","expected":5,"actual":8}}
+{"tex":"\\pu{1/2 mol}","difference":{"category":"structure","path":"/math/0","expected":5,"actual":6}}
+{"tex":"\\pu{1 kg / mol}","difference":{"category":"structure","path":"/math/0","expected":5,"actual":7}}
+{"tex":"\\pu{3 {kg m} / {s2}}","difference":{"category":"structure","path":"/math/0","expected":9,"actual":7}}
+{"tex":"\\pu{5 {m/s}}","difference":{"category":"structure","path":"/math/0/2/0","expected":"{http://www.w3.org/1998/Math/MathML}mi","actual":"{http://www.w3.org/1998/Math/MathML}mrow"}}
+{"tex":"\\pu{7 \\mu m}","difference":{"category":"structure","path":"/math/0","expected":3,"actual":12}}
+{"tex":"\\pu{2 \\Omega}","difference":{"category":"structure","path":"/math/0","expected":3,"actual":10}}
+{"tex":"\\pu{-40 °C}","difference":{"category":"structure","path":"/math/0","expected":4,"actual":5}}
+generalization: 72/104 (69.23%)
+✖ mhchem generalization: at least 60 distinct non-fixture examples, >=95% MathJax agreement (478.930621ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 710.280626
+
+✖ failing tests:
+
+test at test/packages/mhchem-generalization.test.mjs:48:1
+✖ mhchem generalization: at least 60 distinct non-fixture examples, >=95% MathJax agreement (478.930621ms)
+  AssertionError [ERR_ASSERTION]: Required example: \pu{9.81 m/s^2}
+      at TestContext.<anonymous> (file:///home/minamorl/repos/.worktrees/flashmath-ts/pkg-chem/test/packages/mhchem-generalization.test.mjs:69:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

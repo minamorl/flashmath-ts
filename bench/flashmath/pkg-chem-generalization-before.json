@@ -1,0 +1,854 @@
+{
+  "matched": 72,
+  "total": 104,
+  "rows": [
+    {
+      "category": "formulas",
+      "tex": "\\ce{Al2(SO4)3}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{Ca3(PO4)2}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{[Cu(NH3)4]SO4}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{K4[Fe(CN)6]}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{CH3CH2OH}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{C12H22O11}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{Na2CO3.10H2O}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{CuSO4*5H2O}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{MgCl2 * 6 H2O}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{3/2 O2}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{0,25 O2}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/1",
+        "expected": "{http://www.w3.org/1998/Math/MathML}mrow",
+        "actual": "{http://www.w3.org/1998/Math/MathML}mo"
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\ce{0,25 O2}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{0{,}25\\,\\mathrm{O}{\\vphantom{A}}_{\\smash[t]{2}}}\">\n    <mn data-latex=\"0\">0</mn>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{,}\">\n      <mo data-latex=\",\">,</mo>\n    </mrow>\n    <mn data-latex=\"25\">25</mn>\n    <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{O}\">\n      <mi mathvariant=\"normal\" data-latex=\"O\">O</mi>\n    </mrow>\n    <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n          <mpadded width=\"0\">\n            <mphantom>\n              <mi data-latex=\"A\">A</mi>\n            </mphantom>\n          </mpadded>\n        </mrow>\n      </mrow>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n          <mpadded height=\"0\">\n            <mn data-latex=\"2\">2</mn>\n          </mpadded>\n        </mrow>\n      </mrow>\n    </msub>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>0</mn><mo>,</mo><mn>25</mn><mspace width=\"0.167em\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">O</mi></mrow><msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"><mn>2</mn></mpadded></mrow></mrow></msub></mrow></math>"
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{(3/4) N2}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{n H2}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{x CO2}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{^{235}_{92}U}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{^14_6C}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{^{18}O}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{_6^12C}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 4,
+        "actual": 6
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\ce{_6^12C}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{{\\vphantom{A}}^{\\hphantom{12}}_{\\hphantom{6}}\\mkern-1.5mu{\\vphantom{A}}^{\\smash[t]{\\vphantom{2}}\\llap{12}}_{\\vphantom{2}\\llap{\\smash[t]{6}}}\\mathrm{C}}\">\n    <msubsup data-latex=\"{\\vphantom{A}}^{\\hphantom{12}}_{\\hphantom{6}}\">\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n          <mpadded width=\"0\">\n            <mphantom>\n              <mi data-latex=\"A\">A</mi>\n            </mphantom>\n          </mpadded>\n        </mrow>\n      </mrow>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\hphantom{6}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\hphantom{6}\">\n          <mpadded height=\"0\" depth=\"0\">\n            <mphantom>\n              <mn data-latex=\"6\">6</mn>\n            </mphantom>\n          </mpadded>\n        </mrow>\n      </mrow>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\hphantom{12}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\hphantom{12}\">\n          <mpadded height=\"0\" depth=\"0\">\n            <mphantom>\n              <mn data-latex=\"12\">12</mn>\n            </mphantom>\n          </mpadded>\n        </mrow>\n      </mrow>\n    </msubsup>\n    <mspace width=\"-0.083em\" linebreak=\"nobreak\" data-latex=\"\\mkern-1.5mu\"></mspace>\n    <msubsup data-latex=\"{\\vphantom{A}}^{\\smash[t]{\\vphantom{2}}\\llap{12}}_{\\vphantom{2}\\llap{\\smash[t]{6}}}\">\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n          <mpadded width=\"0\">\n            <mphantom>\n              <mi data-latex=\"A\">A</mi>\n            </mphantom>\n          </mpadded>\n        </mrow>\n      </mrow>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{2}\\llap{\\smash[t]{6}}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{2}\">\n          <mpadded width=\"0\">\n            <mphantom>\n              <mn data-latex=\"2\">2</mn>\n            </mphantom>\n          </mpadded>\n        </mrow>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\llap{\\smash[t]{6}}\">\n          <mpadded width=\"0\" lspace=\"-1width\">\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{6}\">\n              <mpadded height=\"0\">\n                <mn data-latex=\"6\">6</mn>\n              </mpadded>\n            </mrow>\n          </mpadded>\n        </mrow>\n      </mrow>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{\\vphantom{2}}\\llap{12}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{\\vphantom{2}}\">\n          <mpadded height=\"0\">\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{2}\">\n              <mpadded width=\"0\">\n                <mphantom>\n                  <mn data-latex=\"2\">2</mn>\n                </mphantom>\n              </mpadded>\n            </mrow>\n          </mpadded>\n        </mrow>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\llap{12}\">\n          <mpadded width=\"0\" lspace=\"-1width\">\n            <mn data-latex=\"12\">12</mn>\n          </mpadded>\n        </mrow>\n      </mrow>\n    </msubsup>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{C}\">\n      <mi mathvariant=\"normal\" data-latex=\"C\">C</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"><mn>6</mn></mpadded></mrow></mrow></msub><mspace width=\"0.111em\" linebreak=\"nobreak\"></mspace><msubsup><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\" depth=\"0\"><mphantom></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\" depth=\"0\"><mphantom><mn>12</mn></mphantom></mpadded></mrow></mrow></msubsup><mspace width=\"-0.083em\" linebreak=\"nobreak\"></mspace><msubsup><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mn>2</mn></mphantom></mpadded></mrow><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\" lspace=\"-1width\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"></mpadded></mrow></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mn>2</mn></mphantom></mpadded></mrow></mpadded></mrow><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\" lspace=\"-1width\"><mn>12</mn></mpadded></mrow></mrow></msubsup><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">C</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{D2 + O2 -> D2O}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{NH4+ + NO3- -> NH4NO3}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{SO4^{2-}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{Fe^{3+}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{ClO4-}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{PO4^3-}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{Fe^{III}Cl3}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{Cu^{II}SO4}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{Co^{II}_2}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 3,
+        "actual": 2
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\ce{Co^{II}_2}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathrm{Co}{\\vphantom{A}}^{\\mathrm{II}}{\\vphantom{A}}_{\\smash[t]{2}}}\">\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{Co}\">\n      <mi data-mjx-auto-op=\"false\" data-latex=\"Co\">Co</mi>\n    </mrow>\n    <msup data-latex=\"{\\vphantom{A}}^{\\mathrm{II}}\">\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n          <mpadded width=\"0\">\n            <mphantom>\n              <mi data-latex=\"A\">A</mi>\n            </mphantom>\n          </mpadded>\n        </mrow>\n      </mrow>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathrm{II}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{II}\">\n          <mi data-mjx-auto-op=\"false\" data-latex=\"II\">II</mi>\n        </mrow>\n      </mrow>\n    </msup>\n    <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n          <mpadded width=\"0\">\n            <mphantom>\n              <mi data-latex=\"A\">A</mi>\n            </mphantom>\n          </mpadded>\n        </mrow>\n      </mrow>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n          <mpadded height=\"0\">\n            <mn data-latex=\"2\">2</mn>\n          </mpadded>\n        </mrow>\n      </mrow>\n    </msub>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">Co</mi></mrow><msubsup><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mphantom><mi>A</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mpadded height=\"0\"><mn>2</mn></mpadded></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">II</mi></mrow></mrow></msubsup></mrow></math>"
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{O2^{.-}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{X_{site}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{X_{ab}^{2+}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{Y^{2+}_{site}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{NO_{2}^{-}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{A_{x+1}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{Fe_{1-x}O}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{H2(g) + Cl2(g) -> 2 HCl(g)}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{NaCl(s) -> Na+(aq) + Cl-(aq)}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{{acetic acid} + {water}}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{{cis}-[Pt(NH3)2Cl2]}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{\\alpha-Fe}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{A\\bond{~}B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{A\\bond{~-}B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{A\\bond{~--}B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{A\\bond{-~-}B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{A\\bond{....}B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{A\\bond{->}B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{C-C=C#N}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{A, B; C}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{$k$ A -> $k$ B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "formulas",
+      "tex": "\\ce{$\\ce{H2O}$}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{2 Na + Cl2 -> 2 NaCl}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{N2 + 3 H2 <=> 2 NH3}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[heat] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A <-[cold] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A <->[light] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A <-->[catalyst] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A <=>>[fast] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A <<=>[slow] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[Pt][300 K] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[][H2O] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[$k_1$][$k_{-1}$] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{$A$ ->[\\ce{+H2O}] $B$}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2/0/1/1",
+        "expected": 6,
+        "actual": 3
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\ce{$A$ -&gt;[\\ce{+H2O}] $B$}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{A  {}\\mathrel{\\mhchemxrightarrow{{+}\\,\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}}\\mathrm{O}}}{} B }\">\n    <mi data-latex=\"A\">A</mi>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n    <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mathrel{\\mhchemxrightarrow{{+}\\,\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}}\\mathrm{O}}}\">\n      <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mhchemxrightarrow{{+}\\,\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}}\\mathrm{O}}\">\n        <mrow data-mjx-texclass=\"NONE\"></mrow>\n        <mover>\n          <mo data-mjx-texclass=\"ORD\" stretchy=\"true\">&#xE429;</mo>\n          <mpadded width=\"+0.778em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\">\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{+}\">\n              <mo data-latex=\"+\">+</mo>\n            </mrow>\n            <mstyle scriptlevel=\"0\" data-latex=\"\\,\">\n              <mspace width=\"0.167em\"></mspace>\n            </mstyle>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{H}\">\n              <mi mathvariant=\"normal\" data-latex=\"H\">H</mi>\n            </mrow>\n            <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n                  <mpadded width=\"0\">\n                    <mphantom>\n                      <mi data-latex=\"A\">A</mi>\n                    </mphantom>\n                  </mpadded>\n                </mrow>\n              </mrow>\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n                  <mpadded height=\"0\">\n                    <mn data-latex=\"2\">2</mn>\n                  </mpadded>\n                </mrow>\n              </mrow>\n            </msub>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{O}\">\n              <mi mathvariant=\"normal\" data-latex=\"O\">O</mi>\n            </mrow>\n            <mspace depth=\".2em\"></mspace>\n          </mpadded>\n        </mover>\n      </mrow>\n    </mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n    <mi data-latex=\"B\">B</mi>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mi>A</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"NONE\"></mrow><mover><mo data-mjx-texclass=\"ORD\" stretchy=\"true\"></mo><mpadded width=\"+0.778em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mtext>+H2O</mtext></mrow><mspace depth=\".2em\"></mspace></mpadded></mover></mrow></mrow><mrow data-mjx-texclass=\"ORD\"></mrow><mi>B</mi></mrow></math>"
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[\\ce{2 H2 + O2}] B}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2/0/1/1",
+        "expected": 10,
+        "actual": 3
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\ce{A -&gt;[\\ce{2 H2 + O2}] B}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathrm{A} {}\\mathrel{\\mhchemxrightarrow{2\\,\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}} {}+{} \\mathrm{O}{\\vphantom{A}}_{\\smash[t]{2}}}}{} \\mathrm{B}}\">\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{A}\">\n      <mi mathvariant=\"normal\" data-latex=\"A\">A</mi>\n    </mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n    <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mathrel{\\mhchemxrightarrow{2\\,\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}} {}+{} \\mathrm{O}{\\vphantom{A}}_{\\smash[t]{2}}}}\">\n      <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mhchemxrightarrow{2\\,\\mathrm{H}{\\vphantom{A}}_{\\smash[t]{2}} {}+{} \\mathrm{O}{\\vphantom{A}}_{\\smash[t]{2}}}\">\n        <mrow data-mjx-texclass=\"NONE\"></mrow>\n        <mover>\n          <mo data-mjx-texclass=\"ORD\" stretchy=\"true\">&#xE429;</mo>\n          <mpadded width=\"+0.778em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\">\n            <mn data-latex=\"2\">2</mn>\n            <mstyle scriptlevel=\"0\" data-latex=\"\\,\">\n              <mspace width=\"0.167em\"></mspace>\n            </mstyle>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{H}\">\n              <mi mathvariant=\"normal\" data-latex=\"H\">H</mi>\n            </mrow>\n            <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n                  <mpadded width=\"0\">\n                    <mphantom>\n                      <mi data-latex=\"A\">A</mi>\n                    </mphantom>\n                  </mpadded>\n                </mrow>\n              </mrow>\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n                  <mpadded height=\"0\">\n                    <mn data-latex=\"2\">2</mn>\n                  </mpadded>\n                </mrow>\n              </mrow>\n            </msub>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n            <mo data-latex=\"+\">+</mo>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{O}\">\n              <mi mathvariant=\"normal\" data-latex=\"O\">O</mi>\n            </mrow>\n            <msub data-latex=\"{\\vphantom{A}}_{\\smash[t]{2}}\">\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\vphantom{A}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vphantom{A}\">\n                  <mpadded width=\"0\">\n                    <mphantom>\n                      <mi data-latex=\"A\">A</mi>\n                    </mphantom>\n                  </mpadded>\n                </mrow>\n              </mrow>\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\smash[t]{2}}\">\n                <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\smash[t]{2}\">\n                  <mpadded height=\"0\">\n                    <mn data-latex=\"2\">2</mn>\n                  </mpadded>\n                </mrow>\n              </mrow>\n            </msub>\n            <mspace depth=\".2em\"></mspace>\n          </mpadded>\n        </mover>\n      </mrow>\n    </mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{B}\">\n      <mi mathvariant=\"normal\" data-latex=\"B\">B</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">A</mi></mrow><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"NONE\"></mrow><mover><mo data-mjx-texclass=\"ORD\" stretchy=\"true\"></mo><mpadded width=\"+0.778em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mtext>2 H2 + O2</mtext></mrow><mspace depth=\".2em\"></mspace></mpadded></mover></mrow></mrow><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[{warm water}] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[{$h\\nu$}] B}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2/0/1/1/0",
+        "expected": 2,
+        "actual": 1
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\ce{A -&gt;[{$h\\nu$}] B}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathrm{A} {}\\mathrel{\\mhchemxrightarrow{{h\\nu }}}{} \\mathrm{B}}\">\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{A}\">\n      <mi mathvariant=\"normal\" data-latex=\"A\">A</mi>\n    </mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n    <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mathrel{\\mhchemxrightarrow{{h\\nu }}}\">\n      <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mhchemxrightarrow{{h\\nu }}\">\n        <mrow data-mjx-texclass=\"NONE\"></mrow>\n        <mover>\n          <mo data-mjx-texclass=\"ORD\" stretchy=\"true\">&#xE429;</mo>\n          <mpadded width=\"+0.778em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\">\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{h\\nu }\">\n              <mi data-latex=\"h\">h</mi>\n              <mi data-latex=\"\\nu\">&#x3BD;</mi>\n            </mrow>\n            <mspace depth=\".2em\"></mspace>\n          </mpadded>\n        </mover>\n      </mrow>\n    </mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{B}\">\n      <mi mathvariant=\"normal\" data-latex=\"B\">B</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">A</mi></mrow><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"NONE\"></mrow><mover><mo data-mjx-texclass=\"ORD\" stretchy=\"true\"></mo><mpadded width=\"+0.778em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mi>ν</mi></mrow></mrow><mspace depth=\".2em\"></mspace></mpadded></mover></mrow></mrow><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A <=>[H+][OH-] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A<-->[above][below]B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[\\Delta] B}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{A ->[\\pu{300 K}] B}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2/0/1/1",
+        "expected": 2,
+        "actual": 3
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\ce{A -&gt;[\\pu{300 K}] B}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathrm{A} {}\\mathrel{\\mhchemxrightarrow{{300~\\mathrm{K}}}}{} \\mathrm{B}}\">\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{A}\">\n      <mi mathvariant=\"normal\" data-latex=\"A\">A</mi>\n    </mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n    <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mathrel{\\mhchemxrightarrow{{300~\\mathrm{K}}}}\">\n      <mrow data-mjx-texclass=\"REL\" data-latex=\"\\mhchemxrightarrow{{300~\\mathrm{K}}}\">\n        <mrow data-mjx-texclass=\"NONE\"></mrow>\n        <mover>\n          <mo data-mjx-texclass=\"ORD\" stretchy=\"true\">&#xE429;</mo>\n          <mpadded width=\"+0.778em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\">\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{300~\\mathrm{K}}\">\n              <mn data-latex=\"300\">300</mn>\n              <mtext data-latex=\"~\">&#xA0;</mtext>\n              <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{K}\">\n                <mi mathvariant=\"normal\" data-latex=\"K\">K</mi>\n              </mrow>\n            </mrow>\n            <mspace depth=\".2em\"></mspace>\n          </mpadded>\n        </mover>\n      </mrow>\n    </mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{B}\">\n      <mi mathvariant=\"normal\" data-latex=\"B\">B</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">A</mi></mrow><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"NONE\"></mrow><mover><mo data-mjx-texclass=\"ORD\" stretchy=\"true\"></mo><mpadded width=\"+0.778em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mtext>300 K</mtext></mrow><mspace depth=\".2em\"></mspace></mpadded></mover></mrow></mrow><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{CaCO3 -> CaO + CO2 ^}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "reactions",
+      "tex": "\\ce{Ag+ + Cl- -> AgCl v}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{9.81 m/s^2}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/4",
+        "expected": "{http://www.w3.org/1998/Math/MathML}mrow",
+        "actual": "{http://www.w3.org/1998/Math/MathML}msup"
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{9.81 m/s^2}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{9.81~\\mathrm{m}/\\mathrm{s^{2}}}\">\n    <mn data-latex=\"9.81\">9.81</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{m}\">\n      <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n    </mrow>\n    <mo data-latex=\"/\">/</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{s^{2}}\">\n      <msup data-latex=\"s^{2}\">\n        <mi mathvariant=\"normal\" data-latex=\"s\">s</mi>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\">\n          <mn data-latex=\"2\">2</mn>\n        </mrow>\n      </msup>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>9.81</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow><mo>/</mo><msup><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">s</mi></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{5 m s-1}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{7 kg*m/s2}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 11,
+        "actual": 9
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{7 kg*m/s2}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{7~\\mathrm{kg}\\mkern1mu{\\cdot}\\mkern1mu \\mathrm{m}\\,/\\,\\mathrm{s^{2}}}\">\n    <mn data-latex=\"7\">7</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{kg}\">\n      <mi data-mjx-auto-op=\"false\" data-latex=\"kg\">kg</mi>\n    </mrow>\n    <mspace width=\"0.056em\" linebreak=\"nobreak\" data-latex=\"\\mkern1mu\"></mspace>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\cdot}\">\n      <mo data-latex=\"\\cdot\">&#x22C5;</mo>\n    </mrow>\n    <mspace width=\"0.056em\" linebreak=\"nobreak\" data-latex=\"\\mkern1mu\"></mspace>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{m}\">\n      <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n    </mrow>\n    <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n    <mo data-latex=\"/\">/</mo>\n    <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{s^{2}}\">\n      <msup data-latex=\"s^{2}\">\n        <mi mathvariant=\"normal\" data-latex=\"s\">s</mi>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\">\n          <mn data-latex=\"2\">2</mn>\n        </mrow>\n      </msup>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>7</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">kg</mi></mrow><mspace width=\"0.056em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mo>⋅</mo></mrow><mspace width=\"0.056em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow><mo>/</mo><mrow data-mjx-texclass=\"ORD\"><msup><mi mathvariant=\"normal\">s</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{12 kg m//s2}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{20 m//s^2}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2/0/1",
+        "expected": "{http://www.w3.org/1998/Math/MathML}mrow",
+        "actual": "{http://www.w3.org/1998/Math/MathML}msup"
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{20 m//s^2}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{20~\\mathchoice{\\textstyle\\frac{\\mathrm{m}}{\\mathrm{s^{2}}}}{\\frac{\\mathrm{m}}{\\mathrm{s^{2}}}}{\\frac{\\mathrm{m}}{\\mathrm{s^{2}}}}{\\frac{\\mathrm{m}}{\\mathrm{s^{2}}}}}\">\n    <mn data-latex=\"20\">20</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mstyle displaystyle=\"false\" data-latex=\"\\textstyle\\frac{\\mathrm{m}}{\\mathrm{s^{2}}}\">\n      <mfrac data-latex=\"\\frac{\\mathrm{m}}{\\mathrm{s^{2}}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{m}\">\n          <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n        </mrow>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{s^{2}}\">\n          <msup data-latex=\"s^{2}\">\n            <mi mathvariant=\"normal\" data-latex=\"s\">s</mi>\n            <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\">\n              <mn data-latex=\"2\">2</mn>\n            </mrow>\n          </msup>\n        </mrow>\n      </mfrac>\n    </mstyle>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>20</mn><mtext> </mtext><mstyle displaystyle=\"false\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow><msup><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">s</mi></mrow><mn>2</mn></msup></mfrac></mstyle></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{6.02e23 mol-1}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{1.38E-23 J K-1}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{2,5e-3 mol L-1}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{273.15 K}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{25 °C}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 3,
+        "actual": 4
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{25 &#xB0;C}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{25~\\mathrm{{}^{\\circ}C}}\">\n    <mn data-latex=\"25\">25</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{{}^{\\circ}C}\">\n      <msup data-latex=\"{}^{\\circ}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\circ}\">\n          <mo data-latex=\"\\circ\">&#x2218;</mo>\n        </mrow>\n      </msup>\n      <mi mathvariant=\"normal\" data-latex=\"C\">C</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>25</mn><mtext> </mtext><mo>°</mo><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">C</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{32 ^oF}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 3,
+        "actual": 2
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{32 ^oF}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{32~\\mathrm{{}^{\\circ}F}}\">\n    <mn data-latex=\"32\">32</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{{}^{\\circ}F}\">\n      <msup data-latex=\"{}^{\\circ}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\circ}\">\n          <mo data-latex=\"\\circ\">&#x2218;</mo>\n        </mrow>\n      </msup>\n      <mi mathvariant=\"normal\" data-latex=\"F\">F</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>32</mn><msup><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">oF</mi></mrow></msup></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{10 ^{o}C}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/1",
+        "expected": "{http://www.w3.org/1998/Math/MathML}mtext",
+        "actual": "{http://www.w3.org/1998/Math/MathML}msup"
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{10 ^{o}C}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{10~\\mathrm{{}^{\\circ}C}}\">\n    <mn data-latex=\"10\">10</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{{}^{\\circ}C}\">\n      <msup data-latex=\"{}^{\\circ}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\circ}\">\n          <mo data-latex=\"\\circ\">&#x2218;</mo>\n        </mrow>\n      </msup>\n      <mi mathvariant=\"normal\" data-latex=\"C\">C</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>10</mn><msup><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">o</mi></mrow></mrow></msup><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">C</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{1.2 mm^2}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2",
+        "expected": "{http://www.w3.org/1998/Math/MathML}mrow",
+        "actual": "{http://www.w3.org/1998/Math/MathML}msup"
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{1.2 mm^2}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{1.2~\\mathrm{mm^{2}}}\">\n    <mn data-latex=\"1.2\">1.2</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{mm^{2}}\">\n      <msup data-latex=\"mm^{2}\">\n        <mi data-mjx-auto-op=\"false\" data-latex=\"mm\">mm</mi>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\">\n          <mn data-latex=\"2\">2</mn>\n        </mrow>\n      </msup>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>1.2</mn><mtext> </mtext><msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">mm</mi></mrow><mn>2</mn></msup></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{5 cm^{3}}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2",
+        "expected": "{http://www.w3.org/1998/Math/MathML}mrow",
+        "actual": "{http://www.w3.org/1998/Math/MathML}msup"
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{5 cm^{3}}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{5~\\mathrm{cm^{3}}}\">\n    <mn data-latex=\"5\">5</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{cm^{3}}\">\n      <msup data-latex=\"cm^{3}\">\n        <mi data-mjx-auto-op=\"false\" data-latex=\"cm\">cm</mi>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{3}\">\n          <mn data-latex=\"3\">3</mn>\n        </mrow>\n      </msup>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>5</mn><mtext> </mtext><msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">cm</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>3</mn></mrow></msup></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{4 m^-2}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 3,
+        "actual": 4
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{4 m^-2}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{4~\\mathrm{m^{-2}}}\">\n    <mn data-latex=\"4\">4</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{m^{-2}}\">\n      <msup data-latex=\"m^{-2}\">\n        <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{-2}\">\n          <mo data-latex=\"-\">&#x2212;</mo>\n          <mn data-latex=\"2\">2</mn>\n        </mrow>\n      </msup>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>4</mn><mtext> </mtext><msup><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow><mo>−</mo></msup><mn>2</mn></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{3 s^{-1}}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2",
+        "expected": "{http://www.w3.org/1998/Math/MathML}mrow",
+        "actual": "{http://www.w3.org/1998/Math/MathML}msup"
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{3 s^{-1}}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{3~\\mathrm{s^{-1}}}\">\n    <mn data-latex=\"3\">3</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{s^{-1}}\">\n      <msup data-latex=\"s^{-1}\">\n        <mi mathvariant=\"normal\" data-latex=\"s\">s</mi>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{-1}\">\n          <mo data-latex=\"-\">&#x2212;</mo>\n          <mn data-latex=\"1\">1</mn>\n        </mrow>\n      </msup>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>3</mn><mtext> </mtext><msup><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">s</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mo>−</mo><mn>1</mn></mrow></msup></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{1.5 kg*m2}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{2 N*m}",
+      "matched": true,
+      "difference": null
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{12345 J}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 5,
+        "actual": 3
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{12345 J}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{12\\mkern2mu 345~\\mathrm{J}}\">\n    <mn data-latex=\"12\">12</mn>\n    <mspace width=\"0.111em\" linebreak=\"nobreak\" data-latex=\"\\mkern2mu\"></mspace>\n    <mn data-latex=\"345\">345</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{J}\">\n      <mi mathvariant=\"normal\" data-latex=\"J\">J</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>12345</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">J</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{1234567 J}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 7,
+        "actual": 3
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{1234567 J}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{1\\mkern2mu 234\\mkern2mu 567~\\mathrm{J}}\">\n    <mn data-latex=\"1\">1</mn>\n    <mspace width=\"0.111em\" linebreak=\"nobreak\" data-latex=\"\\mkern2mu\"></mspace>\n    <mn data-latex=\"234\">234</mn>\n    <mspace width=\"0.111em\" linebreak=\"nobreak\" data-latex=\"\\mkern2mu\"></mspace>\n    <mn data-latex=\"567\">567</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{J}\">\n      <mi mathvariant=\"normal\" data-latex=\"J\">J</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>1234567</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">J</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{1.23456 m}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 5,
+        "actual": 3
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{1.23456 m}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{1.234\\mkern2mu 56~\\mathrm{m}}\">\n    <mn data-latex=\"1.234\">1.234</mn>\n    <mspace width=\"0.111em\" linebreak=\"nobreak\" data-latex=\"\\mkern2mu\"></mspace>\n    <mn data-latex=\"56\">56</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{m}\">\n      <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>1.23456</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{0,12345 s}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 5,
+        "actual": 4
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{0,12345 s}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{0{,}123\\mkern2mu 45~\\mathrm{s}}\">\n    <mn data-latex=\"0{,}123\">0,123</mn>\n    <mspace width=\"0.111em\" linebreak=\"nobreak\" data-latex=\"\\mkern2mu\"></mspace>\n    <mn data-latex=\"45\">45</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{s}\">\n      <mi mathvariant=\"normal\" data-latex=\"s\">s</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>0,123</mn><mn>45</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">s</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{3.14(2) m}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 6,
+        "actual": 7
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{3.14(2) m}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{3.14(2)~\\mathrm{m}}\">\n    <mn data-latex=\"3.14\">3.14</mn>\n    <mo data-latex=\"(\" stretchy=\"false\">(</mo>\n    <mn data-latex=\"2\">2</mn>\n    <mo data-latex=\")\" stretchy=\"false\">)</mo>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{m}\">\n      <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>3.14</mn><mtext> </mtext><mo stretchy=\"false\">(</mo><mn>2</mn><mo stretchy=\"false\">)</mo><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{10^3 Pa}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 3,
+        "actual": 4
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{10^3 Pa}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{10^{3}~\\mathrm{Pa}}\">\n    <msup data-latex=\"10^{3}\">\n      <mn data-latex=\"10\">10</mn>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{3}\">\n        <mn data-latex=\"3\">3</mn>\n      </mrow>\n    </msup>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{Pa}\">\n      <mi data-mjx-auto-op=\"false\" data-latex=\"Pa\">Pa</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>10</mn><msup><mtext> </mtext><mn>3</mn></msup><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">Pa</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{2 x 10^3 J}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 5,
+        "actual": 7
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{2 x 10^3 J}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2\\times 10^{3}~\\mathrm{J}}\">\n    <mn data-latex=\"2\">2</mn>\n    <mo data-latex=\"\\times\">&#xD7;</mo>\n    <msup data-latex=\"10^{3}\">\n      <mn data-latex=\"10\">10</mn>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{3}\">\n        <mn data-latex=\"3\">3</mn>\n      </mrow>\n    </msup>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{J}\">\n      <mi mathvariant=\"normal\" data-latex=\"J\">J</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">x</mi></mrow><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><msup><mn>10</mn><mn>3</mn></msup><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">J</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{2 * 10^{-3} J}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 5,
+        "actual": 8
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{2 * 10^{-3} J}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2\\cdot 10^{{-3}}~\\mathrm{J}}\">\n    <mn data-latex=\"2\">2</mn>\n    <mo data-latex=\"\\cdot\">&#x22C5;</mo>\n    <msup data-latex=\"10^{{-3}}\">\n      <mn data-latex=\"10\">10</mn>\n      <mrow data-mjx-texclass=\"ORD\" data-latex=\"{{-3}}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{-3}\">\n          <mo data-latex=\"-\">&#x2212;</mo>\n          <mn data-latex=\"3\">3</mn>\n        </mrow>\n      </mrow>\n    </msup>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{J}\">\n      <mi mathvariant=\"normal\" data-latex=\"J\">J</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mtext> </mtext><mspace width=\"0.056em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mo>⋅</mo></mrow><mspace width=\"0.056em\" linebreak=\"nobreak\"></mspace><msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mo>−</mo><mn>3</mn></mrow></msup><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">J</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{1/2 mol}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 5,
+        "actual": 6
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{1/2 mol}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{1~\\mathrm{/^{2}}\\mkern3mu \\mathrm{mol}}\">\n    <mn data-latex=\"1\">1</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{/^{2}}\">\n      <msup data-latex=\"/^{2}\">\n        <mo data-latex=\"/\">/</mo>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\">\n          <mn data-latex=\"2\">2</mn>\n        </mrow>\n      </msup>\n    </mrow>\n    <mspace width=\"0.167em\" linebreak=\"nobreak\" data-latex=\"\\mkern3mu\"></mspace>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{mol}\">\n      <mi data-mjx-auto-op=\"false\" data-latex=\"mol\">mol</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mtext> </mtext><mo>/</mo><mn>2</mn><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">mol</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{1 kg / mol}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 5,
+        "actual": 7
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{1 kg / mol}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{1~\\mathrm{kg}/\\mathrm{mol}}\">\n    <mn data-latex=\"1\">1</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{kg}\">\n      <mi data-mjx-auto-op=\"false\" data-latex=\"kg\">kg</mi>\n    </mrow>\n    <mo data-latex=\"/\">/</mo>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{mol}\">\n      <mi data-mjx-auto-op=\"false\" data-latex=\"mol\">mol</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">kg</mi></mrow><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mo>/</mo><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">mol</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{3 {kg m} / {s2}}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 9,
+        "actual": 7
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{3 {kg m} / {s2}}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{3~\\mathrm{kg}\\mkern3mu \\mathrm{m}\\,/\\,\\mathrm{s^{2}}}\">\n    <mn data-latex=\"3\">3</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{kg}\">\n      <mi data-mjx-auto-op=\"false\" data-latex=\"kg\">kg</mi>\n    </mrow>\n    <mspace width=\"0.167em\" linebreak=\"nobreak\" data-latex=\"\\mkern3mu\"></mspace>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{m}\">\n      <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n    </mrow>\n    <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n    <mo data-latex=\"/\">/</mo>\n    <mspace width=\"0.167em\" data-latex=\"\\,\"></mspace>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{s^{2}}\">\n      <msup data-latex=\"s^{2}\">\n        <mi mathvariant=\"normal\" data-latex=\"s\">s</mi>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\">\n          <mn data-latex=\"2\">2</mn>\n        </mrow>\n      </msup>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>3</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">kg</mi></mrow><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow></mrow><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mo>/</mo><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi mathvariant=\"normal\">s</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{5 {m/s}}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0/2/0",
+        "expected": "{http://www.w3.org/1998/Math/MathML}mi",
+        "actual": "{http://www.w3.org/1998/Math/MathML}mrow"
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{5 {m/s}}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{5~\\mathrm{m/s}}\">\n    <mn data-latex=\"5\">5</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{m/s}\">\n      <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n      <mo data-latex=\"/\">/</mo>\n      <mi mathvariant=\"normal\" data-latex=\"s\">s</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>5</mn><mtext> </mtext><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow><mo>/</mo><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">s</mi></mrow></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{7 \\mu m}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 3,
+        "actual": 12
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{7 \\mu m}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{7~\\mathrm{\\mu m}}\">\n    <mn data-latex=\"7\">7</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{\\mu m}\">\n      <mi data-latex=\"\\mu\">&#x3BC;</mi>\n      <mi mathvariant=\"normal\" data-latex=\"m\">m</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>7</mn><mtext> </mtext><mspace linebreak=\"newline\"></mspace><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mi>r</mi><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>u</mi></mrow><mspace width=\"0.167em\" linebreak=\"nobreak\"></mspace><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">m</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{2 \\Omega}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 3,
+        "actual": 10
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{2 \\Omega}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{2~\\mathrm{\\Omega}}\">\n    <mn data-latex=\"2\">2</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{\\Omega}\">\n      <mi mathvariant=\"normal\" data-latex=\"\\Omega\">&#x3A9;</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mtext> </mtext><mspace linebreak=\"newline\"></mspace><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mi>r</mi><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mi>O</mi><mi>m</mi><mi>e</mi><mi>g</mi><mi>a</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{-40 °C}",
+      "matched": false,
+      "difference": {
+        "category": "structure",
+        "path": "/math/0",
+        "expected": 4,
+        "actual": 5
+      },
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pu{-40 &#xB0;C}\" display=\"block\">\n  <mrow data-mjx-texclass=\"ORD\" data-latex=\"{-40~\\mathrm{{}^{\\circ}C}}\">\n    <mo data-latex=\"-\">&#x2212;</mo>\n    <mn data-latex=\"40\">40</mn>\n    <mtext data-latex=\"~\">&#xA0;</mtext>\n    <mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{{}^{\\circ}C}\">\n      <msup data-latex=\"{}^{\\circ}\">\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow>\n        <mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\circ}\">\n          <mo data-latex=\"\\circ\">&#x2218;</mo>\n        </mrow>\n      </msup>\n      <mi mathvariant=\"normal\" data-latex=\"C\">C</mi>\n    </mrow>\n  </mrow>\n</math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mo>−</mo><mn>40</mn><mtext> </mtext><mo>°</mo><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">C</mi></mrow></mrow></math>"
+    },
+    {
+      "category": "units",
+      "tex": "\\pu{+2.0 V}",
+      "matched": true,
+      "difference": null
+    }
+  ]
+}

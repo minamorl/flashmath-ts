@@ -1,3 +1,4 @@
+import {copyPackageMark} from './package-mark.js';
 /** A MathML tree. The parser uses numeric tags internally and exposes this string union. */
 export type MathMLKind =
   | "math"
@@ -35,7 +36,11 @@ export interface MathMLNode {
   text: string;
   start: number;
 }
-export interface ParseOptions {
+export interface OutputOptions {
+  /** Native browser glyphs by default; mathjax preserves MathJax font codes. */
+  output?: 'native' | 'mathjax';
+}
+export interface ParseOptions extends OutputOptions {
   display?: boolean;
   packages?: readonly (string | readonly [string, number])[];
   /** Requested package order and MathJax-compatible numeric priorities. */
@@ -157,6 +162,7 @@ export function expose(root: Node): MathMLNode {
     start: root.start,
   };
   const stack: [Node, MathMLNode][] = [[root, result]];
+  copyPackageMark(root,result);
   while (stack.length) {
     const [n, out] = stack.pop()!;
     for (const c of n.children) {
@@ -168,6 +174,7 @@ export function expose(root: Node): MathMLNode {
         start: c.start,
       };
       out.children.push(v);
+      copyPackageMark(c,v);
       stack.push([c, v]);
     }
   }

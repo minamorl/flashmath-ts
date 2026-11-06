@@ -1,0 +1,41 @@
+
+> @rainpulse/flashmath@0.0.0 test
+> node --test test/*.test.mjs test/packages/*.test.mjs
+
+✔ scripts, compound arguments and nested fences (19.698325ms)
+✔ fixed arity MathML children are never combined as adjacent relations (0.737512ms)
+✔ macro substitution respects control word boundaries and def templates (1.49424ms)
+✔ nested custom environments and array frames (2.001448ms)
+✔ definitions and parser state do not leak between parses (0.449749ms)
+✔ recursive macros, output size and nesting are bounded (1.43025ms)
+✔ deep input uses explicit stacks through serialization (7.067608ms)
+✔ malformed input returns an error tree or throws on request (1.312317ms)
+✔ text and attribute values are escaped as XML, never executed (2.328644ms)
+✔ React returns elements and SSR exactly equals the string renderer (25.358627ms)
+✔ error paths always serialize valid MathML and XML (1.135523ms)
+✔ adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros (103.291382ms)
+✔ parser sessions preserve document references and independent sessions isolate them (0.76315ms)
+✔ texclass presence and all explicit atom classes match MathJax (12.565694ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (11.593379ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (1.280366ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (65.638604ms)
+✔ extpfeil: complete captured fixtures, including texclass and padding (34.074025ms)
+✔ extpfeil: independent above/below, empty, context and scripted labels (79.174418ms)
+✔ extpfeil: new arrows persist only within their parser session (3.230437ms)
+generalization: 104/104 (100.00%)
+✔ mhchem generalization: at least 60 distinct non-fixture examples, >=95% MathJax agreement (549.99364ms)
+✔ mhchem output: all captured chemistry has native glyphs and unchanged MathJax mode (666.271731ms)
+✔ mhchem output: every chemical private-use slot has an explicit native representation (7.096402ms)
+✔ mhchem output: defaults, session overrides and invalid output values (2.853655ms)
+✔ mhchem: all captured chemistry and physical-unit fixtures (210.399768ms)
+✔ mhchem: independent formulas, reactions, isotopes, labels, units and errors (193.964761ms)
+✔ mhchem: activation and resource budgets use the host parser boundary (3.984539ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (334.213909ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 943.476733

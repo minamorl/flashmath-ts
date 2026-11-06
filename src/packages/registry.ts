@@ -19,6 +19,8 @@ import centernot from './centernot.js'; registrations.push(centernot);
 import bbox from './bbox.js'; registrations.push(bbox);
 import enclose from './enclose.js'; registrations.push(enclose);
 import physics from './physics.js'; registrations.push(physics);
+import extpfeil from './extpfeil.js'; registrations.push(extpfeil);
+import mhchem from './mhchem.js'; registrations.push(mhchem);
 export const registeredPackages:readonly TexPackage[]=Object.freeze(registrations);
 const modules=new Set(registeredPackages.flatMap(p=>p.configurationModules??[]));
 modules.add('input/tex/Configuration.js');

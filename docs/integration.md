@@ -45,3 +45,7 @@ the final gate independently. This worker starts no child agents.
   SSR comparison now retains strict tree/text/attribute checks while canonicalizing
   whitespace around CSS declaration separators only, preserving quoted/function
   values. The conformance normalizer is unchanged and still compares literal CSS.
+
+- Chem: union registry and shared-change notes. Native glyph provenance and
+  isotope conversion, scanner dispatch and output-mode support merge alongside
+  physics's CSS bridge and inferred-row metadata without discarding either.
