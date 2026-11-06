@@ -1,0 +1,18 @@
+group | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+base | 778 | 12 | 21 | 811 | 95.93%
+newcommand | 51 | 7 | 0 | 58 | 87.93%
+ALL | 829 | 19 | 21 | 869 | 95.40%
+
+package membership (overlapping; each denominator includes failures and unsupported):
+package | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+base | 829 | 19 | 21 | 869 | 95.40%
+userMacros | 0 | 0 | 5 | 5 | 0.00%
+userEnvs | 0 | 0 | 15 | 15 | 0.00%
+userFilters | 0 | 0 | 1 | 1 | 0.00%
+newcommand | 51 | 7 | 0 | 58 | 87.93%
+colorv2 | 0 | 6 | 0 | 6 | 0.00%
+ams | 5 | 1 | 0 | 6 | 83.33%
+
+classifications: {"structure":12,"text":1,"attributes":6,"custom-package-registration":21}

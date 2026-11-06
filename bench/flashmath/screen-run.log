@@ -1,6 +1,6 @@
-[10:10:1107/030141.950858:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/minamorl/.config/chromium/Crash Reports/settings.dat: 読み込み専用ファイルシステムです (30)
-[10:10:1107/030141.952426:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/minamorl/.config/chromium/Crash Reports/settings.dat: 読み込み専用ファイルシステムです (30)
-[10:27:1107/030142.047508:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/minamorl/.config/chromium/Crash Reports/settings.dat: 読み込み専用ファイルシステムです (30)
-[10:10:1107/030142.227292:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.systemd1.Manager.StartTransientUnit: object_path= /org/freedesktop/systemd1: org.freedesktop.DBus.Error.InvalidArgs: Process 10 is a kernel thread, refusing.
-[10:10:1107/030142.335328:ERROR:components/dbus/xdg/request.cc:173] Request ended (non-user cancelled).
+[10:10:1107/033624.631308:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/minamorl/.config/chromium/Crash Reports/settings.dat: 読み込み専用ファイルシステムです (30)
+[10:10:1107/033624.632804:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/minamorl/.config/chromium/Crash Reports/settings.dat: 読み込み専用ファイルシステムです (30)
+[10:36:1107/033624.752711:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /home/minamorl/.config/chromium/Crash Reports/settings.dat: 読み込み専用ファイルシステムです (30)
+[10:10:1107/033625.018670:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.systemd1.Manager.StartTransientUnit: object_path= /org/freedesktop/systemd1: org.freedesktop.DBus.Error.InvalidArgs: Process 10 is a kernel thread, refusing.
+[10:10:1107/033625.111356:ERROR:components/dbus/xdg/request.cc:173] Request ended (non-user cancelled).
 96942 bytes written to file /home/minamorl/repos/.worktrees/flashmath-ts/core/bench/flashmath/preview.png

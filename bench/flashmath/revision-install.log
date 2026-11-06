@@ -1,0 +1,8 @@
+✓ Lockfile passes supply-chain policies (verified 59m ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+[WARN] The metadata of typescript is missing the "time" field; skipping the minimumReleaseAge check for this package.
+[WARN] The metadata of glob is missing the "time" field; skipping the minimumReleaseAge check for this package.
+[WARN] The metadata of minimatch is missing the "time" field; skipping the minimumReleaseAge check for this package.
+Progress: resolved 75, reused 0, downloaded 0, added 0, done
+
+Done in 771ms using pnpm v11.18.0

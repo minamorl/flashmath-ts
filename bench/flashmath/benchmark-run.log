@@ -19,6 +19,6 @@ round 6/7 temml
 round 7/7 mathjax
 round 7/7 temml
 round 7/7 flashmath
-mathjax {"warmMicrosecondsPerConversion":{"p50":393.7098583333333,"p95":427.35818499999993},"coldStartToFirstStringMs":{"p50":116.998059,"p95":119.57575299999999}}
-temml {"warmMicrosecondsPerConversion":{"p50":33.88657583333336,"p95":55.15209166666668},"coldStartToFirstStringMs":{"p50":36.16181400000001,"p95":37.218108}}
-flashmath {"warmMicrosecondsPerConversion":{"p50":23.096720833333343,"p95":28.193398333333327},"coldStartToFirstStringMs":{"p50":28.652022000000002,"p95":48.103742000000004}}
+mathjax {"warmMicrosecondsPerConversion":{"p50":305.19621916666665,"p95":563.4639316666669},"coldStartToFirstStringMs":{"p50":87.514528,"p95":127.85633199999998}}
+temml {"warmMicrosecondsPerConversion":{"p50":29.53700083333333,"p95":37.01095583333334},"coldStartToFirstStringMs":{"p50":29.663061000000003,"p95":31.89359}}
+flashmath {"warmMicrosecondsPerConversion":{"p50":18.880840833333323,"p95":26.95664749999999},"coldStartToFirstStringMs":{"p50":36.27538,"p95":50.011843}}

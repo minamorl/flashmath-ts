@@ -1,0 +1,4 @@
+src/parser.ts 273ms
+src/packages/base.ts 100ms (unchanged)
+src/session-state.ts 5ms (unchanged)
+test/packages-references.test.mjs 35ms

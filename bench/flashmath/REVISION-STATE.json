@@ -1,0 +1,48 @@
+{
+  "goal": "Root revision requests 1–7",
+  "phase": "verified; ready for root independent review",
+  "sourceSha256": "d66b4eababf9ff369bf2e76f0417a046e3df9aa2c58f57e84e69943151e9641c",
+  "normalizerSha256": "17b0871ca19dc142d8f7c6505a76b421d3190253dbb750d1290656454e6831af",
+  "groups": {
+    "base": {
+      "total": 811,
+      "matched": 780,
+      "mismatch": 10,
+      "unsupported": 21
+    },
+    "newcommand": {
+      "total": 58,
+      "matched": 58,
+      "mismatch": 0,
+      "unsupported": 0
+    }
+  },
+  "full": {
+    "matched": 848,
+    "total": 2683
+  },
+  "frozenInstallExitCode": 0,
+  "buildExitCode": 0,
+  "testExitCode": 0,
+  "harnessExitCode": 0,
+  "scopeExitCode": 0,
+  "fullExitCode": 1,
+  "benchmarkExitCode": 0,
+  "screenExitCode": 0,
+  "packageName": "@rainpulse/flashmath",
+  "remaining": [
+    "root independent final verification and integration"
+  ],
+  "failures": [
+    "Base.test.ts::Roots Tweaked Root 1",
+    "Base.test.ts::Matrix Matrix Cases two columns braces 1",
+    "Base.test.ts::Array Empty Array with Template 1",
+    "Base.test.ts::Complete Array column r c repeat |  1",
+    "Base.test.ts::Complete Array column r c repeat | {} 1",
+    "Base.test.ts::Complete Array column r c repeat | {} 2",
+    "Base.test.ts::Complete Array column r c repeat | {} 3",
+    "Base.test.ts::Complete Array eqnarray extend last row 1",
+    "Base.test.ts::Complete Array column ! | @ 1",
+    "Base.test.ts::Complete Array column @ | ! c 1"
+  ]
+}

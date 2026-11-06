@@ -1,0 +1,15 @@
+fatal: Unable to create '/home/minamorl/repos/flashmath-ts/.git/worktrees/core/index.lock': 読み込み専用ファイルシステムです
+Cloning into bare repository '/home/minamorl/.cc/tmp/3sezjabu/tmp.rSyzpsmmEH'...
+done.
+[lane/core 38638da] fix: preserve TeX classes and register package handlers with document references
+ 18 files changed, 3447 insertions(+), 333 deletions(-)
+ create mode 100644 src/configuration.ts
+ create mode 100644 src/mathml.ts
+ create mode 100644 src/packages/ams.ts
+ create mode 100644 src/packages/base.ts
+ create mode 100644 src/packages/colorv2.ts
+ create mode 100644 src/packages/newcommand.ts
+ create mode 100644 src/packages/registry.ts
+ create mode 100644 src/packages/types.ts
+ create mode 100644 src/session-state.ts
+ create mode 100644 test/packages-references.test.mjs

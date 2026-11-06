@@ -1,20 +1,26 @@
-✔ scripts, compound arguments and nested fences (16.444194ms)
-✔ fixed arity MathML children are never combined as adjacent relations (0.783478ms)
-✔ macro substitution respects control word boundaries and def templates (3.685034ms)
-✔ nested custom environments and array frames (4.040375ms)
-✔ definitions and parser state do not leak between parses (0.459357ms)
-✔ recursive macros, output size and nesting are bounded (3.0361ms)
-✔ deep input uses explicit stacks through serialization (10.96861ms)
-✔ malformed input returns an error tree or throws on request (0.804068ms)
-✔ text and attribute values are escaped as XML, never executed (2.232824ms)
-✔ React returns elements and SSR exactly equals the string renderer (23.394731ms)
-✔ error paths always serialize valid MathML and XML (1.173174ms)
-✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (215.886491ms)
-ℹ tests 12
+✔ scripts, compound arguments and nested fences (10.719039ms)
+✔ fixed arity MathML children are never combined as adjacent relations (0.542063ms)
+✔ macro substitution respects control word boundaries and def templates (1.235852ms)
+✔ nested custom environments and array frames (1.932166ms)
+✔ definitions and parser state do not leak between parses (0.42949ms)
+✔ recursive macros, output size and nesting are bounded (1.334348ms)
+✔ deep input uses explicit stacks through serialization (4.209885ms)
+✔ malformed input returns an error tree or throws on request (1.059419ms)
+✔ text and attribute values are escaped as XML, never executed (2.410018ms)
+✔ React returns elements and SSR exactly equals the string renderer (13.373068ms)
+✔ error paths always serialize valid MathML and XML (1.060021ms)
+✔ adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros (81.299239ms)
+✔ parser sessions preserve document references and independent sessions isolate them (0.458876ms)
+✔ texclass presence and all explicit atom classes match MathJax (10.615073ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (7.930226ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (1.265598ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (46.25905ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (249.666152ms)
+ℹ tests 18
 ℹ suites 0
-ℹ pass 12
+ℹ pass 18
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 391.056041
+ℹ duration_ms 453.139188

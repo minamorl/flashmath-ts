@@ -1,13 +1,13 @@
 {
   "version": "4.1.3",
   "total": 869,
-  "matched": 834,
-  "rate": 0.9597238204833142,
+  "matched": 838,
+  "rate": 0.9643268124280783,
   "groups": {
     "base": {
       "total": 811,
-      "matched": 776,
-      "mismatch": 14,
+      "matched": 780,
+      "mismatch": 10,
       "unsupported": 21
     },
     "newcommand": {
@@ -20,8 +20,8 @@
   "byPackage": {
     "base": {
       "total": 869,
-      "matched": 834,
-      "mismatch": 14,
+      "matched": 838,
+      "mismatch": 10,
       "unsupported": 21
     },
     "userMacros": {
@@ -62,7 +62,7 @@
     }
   },
   "classifications": {
-    "structure": 8,
+    "structure": 4,
     "text": 1,
     "attributes": 5,
     "custom-package-registration": 21
@@ -800,7 +800,7 @@
       "group": "base",
       "status": "mismatch",
       "category": "text",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mo>{</mo><mtable columnspacing=\"1em\" rowspacing=\".2em\" columnalign=\"left left\" data-frame-styles=\"\" framespacing=\".2em .125em\"><mtr><mtd><mi>a</mi></mtd><mtd><mtext>b</mtext></mtd></mtr></mtable><mo fence=\"true\" stretchy=\"true\" symmetric=\"true\"></mo></mrow></math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">{</mo><mtable columnspacing=\"1em\" rowspacing=\".2em\" columnalign=\"left left\" data-frame-styles=\"\" framespacing=\".2em .125em\"><mtr><mtd><mi>a</mi></mtd><mtd><mtext>b</mtext></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\" fence=\"true\" stretchy=\"true\" symmetric=\"true\"></mo></mrow></math>",
       "difference": {
         "category": "text",
         "path": "/math/0/1/0/1/0/0",
@@ -865,15 +865,8 @@
     {
       "id": "Base.test.ts::InternalMath Mbox Math 1",
       "group": "base",
-      "status": "mismatch",
-      "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mstyle displaystyle=\"false\"><mtext> </mtext><mrow><mi>a</mi><mi>b</mi></mrow><mtext> </mtext></mstyle><mi>c</mi></math>",
-      "difference": {
-        "category": "structure",
-        "path": "/math/1/1",
-        "expected": 1,
-        "actual": 2
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Base.test.ts::InternalMath Mbox CR 1",
@@ -1275,15 +1268,8 @@
     {
       "id": "Base.test.ts::Multirel Multirel Font 2 1",
       "group": "base",
-      "status": "mismatch",
-      "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mo>&lt;=</mo><mrow><mrow><mo>=&gt;</mo></mrow></mrow><mi>b</mi></math>",
-      "difference": {
-        "category": "structure",
-        "path": "/math/2/0",
-        "expected": "{http://www.w3.org/1998/Math/MathML}mo",
-        "actual": "{http://www.w3.org/1998/Math/MathML}mrow"
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Base.test.ts::Multirel Multirel Font 3 1",
@@ -4078,28 +4064,14 @@
     {
       "id": "Base.test.ts::Moving Elements Rlap 2 1",
       "group": "base",
-      "status": "mismatch",
-      "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mrow><mrow><mpadded width=\"0\"><mrow><mspace width=\"0.167em\"></mspace><mo>/</mo></mrow></mpadded></mrow><mrow><mo>=</mo></mrow></mrow><mi>b</mi></math>",
-      "difference": {
-        "category": "structure",
-        "path": "/math/1/0/0",
-        "expected": 2,
-        "actual": 1
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Base.test.ts::Moving Elements Llap 2 1",
       "group": "base",
-      "status": "mismatch",
-      "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mrow><mrow><mo>=</mo></mrow><mrow><mpadded width=\"0\" lspace=\"-1width\"><mrow><mo>/</mo><mspace width=\"0.167em\"></mspace></mrow></mpadded></mrow></mrow><mi>b</mi></math>",
-      "difference": {
-        "category": "structure",
-        "path": "/math/1/1/0",
-        "expected": 2,
-        "actual": 1
-      }
+      "status": "matched",
+      "category": null
     },
     {
       "id": "Base.test.ts::Moving Elements Raise In Line 1",
@@ -4805,7 +4777,7 @@
       "group": "base",
       "status": "mismatch",
       "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"1em\" rowspacing=\"4pt\" columnalign=\"right center center\" columnlines=\"solid solid\" data-frame-styles=\"\" framespacing=\".5em .125em\"><mtr><mtd><mi>a</mi><mrow><mtext>(3)</mtext></mrow></mtd><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"1em\" rowspacing=\"4pt\" columnalign=\"right center center\" columnlines=\"solid solid\" data-frame-styles=\"\" framespacing=\".5em .125em\"><mtr><mtd><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mtext>(3)</mtext></mrow></mtd><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></math>",
       "difference": {
         "category": "attributes",
         "path": "/math/0",
@@ -4868,7 +4840,7 @@
       "group": "base",
       "status": "mismatch",
       "category": "attributes",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"1em\" rowspacing=\"4pt\" columnalign=\"right center center\" columnlines=\"solid solid\" data-frame-styles=\"\" framespacing=\".5em .125em\"><mtr><mtd><mi>a</mi><mrow><mtable columnspacing=\"1em\" rowspacing=\"4pt\" data-frame-styles=\"\" framespacing=\".5em .125em\"><mtr><mtd><mi>Q</mi></mtd></mtr></mtable></mrow></mtd><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"1em\" rowspacing=\"4pt\" columnalign=\"right center center\" columnlines=\"solid solid\" data-frame-styles=\"\" framespacing=\".5em .125em\"><mtr><mtd><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mtable columnspacing=\"1em\" rowspacing=\"4pt\" data-frame-styles=\"\" framespacing=\".5em .125em\"><mtr><mtd><mi>Q</mi></mtd></mtr></mtable></mrow></mtd><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></math>",
       "difference": {
         "category": "attributes",
         "path": "/math/0",
@@ -5006,7 +4978,7 @@
       "group": "base",
       "status": "mismatch",
       "category": "structure",
-      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"0em 0.278em 0em\" rowspacing=\"3pt\" columnalign=\"right center left right\" displaystyle=\"true\" data-break-align=\"bottom middle top bottom\"><mtr><mtd><mrow><mi>r</mi><mi>c</mi><mi>l</mi></mrow><mi>a</mi></mtd><mtd><mi></mi><mi>b</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd><mtd><mi></mi><mi>c</mi></mtd><mtd><mstyle indentshift=\".7em\"><mi>c</mi></mstyle></mtd><mtd><mi>c</mi></mtd></mtr></mtable></math>",
+      "actual": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"0em 0.278em 0em\" rowspacing=\"3pt\" columnalign=\"right center left right\" displaystyle=\"true\" data-break-align=\"bottom middle top bottom\"><mtr><mtd><mrow data-mjx-texclass=\"ORD\"><mi>r</mi><mi>c</mi><mi>l</mi></mrow><mi>a</mi></mtd><mtd><mi></mi><mi>b</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd><mtd><mi></mi><mi>c</mi></mtd><mtd><mstyle indentshift=\".7em\"><mi>c</mi></mstyle></mtd><mtd><mi>c</mi></mtd></mtr></mtable></math>",
       "difference": {
         "category": "structure",
         "path": "/math/0/0/1",
@@ -5640,5 +5612,10 @@
     }
   ],
   "scope": "base and newcommand groups; denominator includes harness unsupported records",
-  "node": "v26.12.1"
+  "node": "v26.12.1",
+  "run": {
+    "sourceSha256": "d66b4eababf9ff369bf2e76f0417a046e3df9aa2c58f57e84e69943151e9641c",
+    "normalizerSha256": "17b0871ca19dc142d8f7c6505a76b421d3190253dbb750d1290656454e6831af",
+    "fixtureSha256": "aa810fe8b99d427ef35cee54171ea19009c58415081f130e904d85fcdc2faf2e"
+  }
 }

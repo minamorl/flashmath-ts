@@ -1,0 +1,14 @@
+✔ adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros (53.256646ms)
+✔ parser sessions preserve document references and independent sessions isolate them (0.367464ms)
+✔ texclass presence and all explicit atom classes match MathJax (7.692737ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (4.482459ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (0.756007ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (32.212202ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 251.220675

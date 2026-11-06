@@ -1,25 +1,36 @@
 {
+  "sourceSha256": "d66b4eababf9ff369bf2e76f0417a046e3df9aa2c58f57e84e69943151e9641c",
+  "normalizerSha256": "17b0871ca19dc142d8f7c6505a76b421d3190253dbb750d1290656454e6831af",
   "commands": [
     {
       "command": "node_modules/.bin/tsc -p tsconfig.json",
       "exitCode": 0,
-      "log": "build.log"
+      "log": "revision-build.log"
     },
     {
       "command": "node --test test/*.test.mjs",
       "exitCode": 0,
-      "log": "test.log"
+      "log": "revision-test.log"
+    },
+    {
+      "command": "node --test conformance/harness.test.mjs",
+      "exitCode": 0,
+      "log": "revision-harness.log"
     },
     {
       "command": "node bench/flashmath/conformance.mjs",
       "exitCode": 0,
-      "log": "conformance-run.log"
+      "log": "revision-conformance.log"
     },
     {
       "command": "node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output bench/flashmath/full-conformance.json --fresh",
       "exitCode": 1,
-      "log": "full-conformance-run.log",
-      "reason": "full MathJax package coverage exceeds this lane scope"
+      "log": "revision-full-conformance.log"
+    },
+    {
+      "command": "CI=true pnpm install --offline --frozen-lockfile --package-import-method copy --store-dir \"$TMPDIR/flashmath-pnpm-store\"",
+      "exitCode": 0,
+      "log": "revision-frozen-install.log"
     },
     {
       "command": "node bench/flashmath/run.mjs --samples 7 --iterations 100",
@@ -30,13 +41,6 @@
       "command": "chromium --headless ... --dump-dom file://<cwd>/bench/flashmath/preview.html",
       "exitCode": 0,
       "log": "screen-run.html"
-    },
-    {
-      "command": "pnpm install --offline --frozen-lockfile --lockfile-only --ignore-scripts --store-dir \"$TMPDIR/flashmath-pnpm-store\" --cache-dir \"$TMPDIR/flashmath-pnpm-cache\"",
-      "exitCode": 1,
-      "log": "lockfile-check.log",
-      "reason": "lockfile synchronization is outside the assigned write scope"
     }
-  ],
-  "sourceSha256": "df7e40c94c9ac4847ee241087bfcfc3c21c1facec3bf0d1566d1955ec151475e"
+  ]
 }

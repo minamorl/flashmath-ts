@@ -1,29 +1,41 @@
-# flashmath core delivery
+# flashmath core revision
 
-In-scope implementation and scoped conformance targets are met. Integration remains blocked on the manifest/lockfile mismatch: pnpm-lock.yaml is outside this lane’s allowed write list. No external network delivery or npm publish was performed. The original Git index is read-only; commits are carried by core.bundle instead of changing its branch.
+The texclass-preserving harness is the current oracle. Earlier compatibility results that discarded texclass are withdrawn. This revision meets the base/newcommand group targets under the unchanged current normalizer. Frozen install now succeeds. No npm publish, external delivery, or child agent was used. Git index access remains read-only; the revision is delivered as a bundle based on acbe7fe.
 
-## State
+## Changes and decisions
 
-- Goal: handwritten TeX → MathML, token macros, React elements, conformance evidence, and same-input comparative timings.
-- Constraints: source/test/bench/flashmath plus the authorized manifest, tsconfig, and README usage section only; conformance read-only; no child agents, external sends, or publishing.
-- Known: scoped denominators include harness unsupported cases; all 848 executable scoped fixture outputs also exactly match React SSR.
-- Decisions: inline is the API default; display:true adds block display; errors return merror unless throwOnError; core and React have separate entry points; package name is @minamorl/flashmath; limits are per parse. All emitted attributes, group wrappers, styles, spacing, and labels aim at the upstream MathML structure. No fixture expected output is used by runtime code.
-- Changed: src/, test/, bench/flashmath/, tsconfig.json, package.json, README usage. React dependencies were restored from the local pnpm content store for this sandbox; the store was not modified by that helper.
-- Failures: original Git index.lock cannot be created; initial Temml XML validation failed because its XML namespace option was omitted, corrected to xml:true with preflight before timing. Final benchmark raw is from a subsequent isolated orchestrator run, with no concurrent conformance job launched by this lane.
-- Unknowns/risks: broader MathJax packages are outside the implemented scope; no clean frozen install can pass until root updates the lockfile. Full harness includes two unsupported configmacros shapes that raise subject-error. Browser checks used installed headless Chromium; other browsers and React versions were not tested.
-- Next: root verifier checks the diff and raw evidence, imports the bundle, updates the lockfile in its authorized scope, and re-runs frozen install/integration gates.
+- Restored the npm name to `@rainpulse/flashmath`; repository name is unchanged. Synced the lockfile for React and its types.
+- Explicit TeX atoms, fences, named operators, function application and combined relations retain their semantic texclass; inferred sequences remain distinct.
+- `src/packages/base.ts` and `newcommand.ts` own their command/environment tables. New packages need their module and one shared registration line. Delimiter-only AMS and legacy-color-only colorv2 subsets are explicit registrations, not claims of full package support.
+- The adapter forwards packages/priority tuples, prior inputs, mode, configuration modules, TeX options, display and execution metadata. Unsupported packages, modes, registration modules and options fail explicitly. RegExp/string number patterns, serialized RegExp, digits alias and identifier patterns are exercised against MathJax.
+- `createMathMLParser()` owns document state. Label/ref handling consumes the requested label, preserves tag counters and encoded URLs, supports completed prior equations and completed eqnarray rows, preserves same-equation unresolved placeholders, and honors duplicate-label policy without renaming IDs. Independent calls remain isolated.
+- React and string output remain separate public entry points; the scoped SSR test forwards the complete fixture options rather than simplifying them.
 
-## Scope evidence
+## Goal and verification
 
-`node_modules/.bin/tsc -p tsconfig.json` → exit 0; raw: [build.log](build.log).
+Target: each of base/newcommand >=95%, including harness unsupported records in each denominator. Runtime code does not import fixture expected outputs, MathJax, or Temml. Conformance sources, fixtures and normalization are read-only.
 
-`node --test test/*.test.mjs` → exit 0; raw: [test.log](test.log).
+```text
+sourceSha256=d66b4eababf9ff369bf2e76f0417a046e3df9aa2c58f57e84e69943151e9641c
+normalizerSha256=17b0871ca19dc142d8f7c6505a76b421d3190253dbb750d1290656454e6831af
+fixtureSha256=aa810fe8b99d427ef35cee54171ea19009c58415081f130e904d85fcdc2faf2e
+```
 
-`node bench/flashmath/conformance.mjs` → exit 0; raw: [conformance-run.log](conformance-run.log).
+`node_modules/.bin/tsc -p tsconfig.json` → exit 0; [revision-build.log](revision-build.log).
 
-`node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output bench/flashmath/full-conformance.json --fresh` → exit 1; raw: [full-conformance-run.log](full-conformance-run.log).
+`node --test test/*.test.mjs` → exit 0; [revision-test.log](revision-test.log).
 
-`node bench/flashmath/run.mjs --samples 7 --iterations 100` → exit 0; raw: [benchmark-run.log](benchmark-run.log).
+`node --test conformance/harness.test.mjs` → exit 0; [revision-harness.log](revision-harness.log).
+
+`node bench/flashmath/conformance.mjs` → exit 0; [revision-conformance.log](revision-conformance.log).
+
+`node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output bench/flashmath/full-conformance.json --fresh` → exit 1; [revision-full-conformance.log](revision-full-conformance.log).
+
+`CI=true pnpm install --offline --frozen-lockfile --package-import-method copy --store-dir "$TMPDIR/flashmath-pnpm-store"` → exit 0; [revision-frozen-install.log](revision-frozen-install.log).
+
+`node bench/flashmath/run.mjs --samples 7 --iterations 100` → exit 0; [benchmark-run.log](benchmark-run.log).
+
+`chromium --headless ... --dump-dom file://<cwd>/bench/flashmath/preview.html` → exit 0; [screen-run.html](screen-run.html).
 
 ```text
 build exit_code=0
@@ -31,50 +43,61 @@ build exit_code=0
 ```
 
 ```text
-test exit_code=0
-✔ malformed input returns an error tree or throws on request (0.804068ms)
-✔ text and attribute values are escaped as XML, never executed (2.232824ms)
-✔ React returns elements and SSR exactly equals the string renderer (23.394731ms)
-✔ error paths always serialize valid MathML and XML (1.173174ms)
-✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (215.886491ms)
-ℹ tests 12
+tests exit_code=0
+✔ parser sessions preserve document references and independent sessions isolate them (0.458876ms)
+✔ texclass presence and all explicit atom classes match MathJax (10.615073ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (7.930226ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (1.265598ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (46.25905ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (249.666152ms)
+ℹ tests 18
 ℹ suites 0
-ℹ pass 12
+ℹ pass 18
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 391.056041
+ℹ duration_ms 453.139188
+```
+
+```text
+harness exit_code=0
+ℹ function-options subject calls=30; matched=30/30
+✔ runner restores function and RegExp options for any subject (0.306729ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1352.2839
 ```
 
 ```text
 scoped conformance exit_code=0
 group | matched | mismatch | unsupported | total | matched/total
 --- | ---: | ---: | ---: | ---: | ---:
-base | 776 | 14 | 21 | 811 | 95.68%
+base | 780 | 10 | 21 | 811 | 96.18%
 newcommand | 58 | 0 | 0 | 58 | 100.00%
-ALL | 834 | 14 | 21 | 869 | 95.97%
-
+ALL | 838 | 10 | 21 | 869 | 96.43%
 ```
 
-Fixture groups are the target denominator. Package membership tables overlap and include fixtures from other groups; those rates are not interchangeable.
+Package membership tables overlap and include other fixture groups. Group rates above are the target; they must not be substituted with package membership rates.
 
 ```text
 full conformance exit_code=1
-ALL | 872 | 1733 | 78 | 2683 | 32.50%
+ALL | 848 | 1787 | 48 | 2683 | 31.61%
+classifications: {"subject-error":1601,"structure":180,"typeset-component-pipeline":14,"text":1,"attributes":5,"custom-package-registration":26,"non-single-MathML-snapshot":7,"input-not-captured":1}
 ```
 
-The full denominator is 2683; the scoped denominator is 869. The full result is retained without filtering failures.
+The full harness includes unimplemented packages, options and modes. Its subject-error rows are retained, not converted to unsupported or removed from the denominator. This is not full MathJax compatibility.
 
-Remaining scoped mismatches:
+Current scoped failures:
 
 - `Base.test.ts::Roots Tweaked Root 1` — structure
 - `Base.test.ts::Matrix Matrix Cases two columns braces 1` — text
-- `Base.test.ts::InternalMath Mbox Math 1` — structure
 - `Base.test.ts::Array Empty Array with Template 1` — structure
-- `Base.test.ts::Multirel Multirel Font 2 1` — structure
-- `Base.test.ts::Moving Elements Rlap 2 1` — structure
-- `Base.test.ts::Moving Elements Llap 2 1` — structure
 - `Base.test.ts::Complete Array column r c repeat |  1` — attributes
 - `Base.test.ts::Complete Array column r c repeat | {} 1` — attributes
 - `Base.test.ts::Complete Array column r c repeat | {} 2` — attributes
@@ -83,108 +106,67 @@ Remaining scoped mismatches:
 - `Base.test.ts::Complete Array column ! | @ 1` — attributes
 - `Base.test.ts::Complete Array column @ | ! c 1` — structure
 
-## Benchmark
+## Dependency installation
 
-Same 12 independent inputs, display=true, seven fresh processes per engine, 200 corpus warmup passes, 100 timed corpus passes per sample. No expression-result cache. Warm timings include parsing and MathML serialization; import/setup is excluded. Cold includes import/setup through the first MathML string, excluding Node process startup. Raw child data is checkpointed after every sample. Percentiles use nearest rank.
+```text
+frozen install exit_code=0
+Already up to date
+Done in 650ms using pnpm v11.18.0
+```
+
+The first full offline attempt found an incomplete private store after recreating node_modules. The existing local pnpm SQLite index and content from already-installed packages were copied into a private TMPDIR store; pnpm verified the file digests and installed from that store with downloaded=0. The final frozen-install command above ran with scripts enabled. The original dependency tree and original store were read only. `seed-offline-store.mjs` records the local CAS restoration helper. No dependency version outside the React-related lockfile additions was upgraded.
+
+## Package integration proof
+
+`test/packages-references.test.mjs` adds a disposable package module and one registry line to a copy of compiled modules. It verifies a new command, override priorities, a new delimiter, environment lookup and package activation. Differential tests use installed MathJax 4.1.3 for tag/ref/session behavior, explicit classes and configurable scanners. Unsupported render/output modes and callback options are tested as explicit rejections.
+
+## Fresh performance evidence
+
+Same independent 12-input corpus; seven fresh processes per engine; warmup and setup excluded from warm measurements. Cold includes import/setup through the first string, excluding Node process startup. Each child sample is persisted immediately. The final timing run was started after the harness/conformance jobs finished.
 
 ```text
 benchmark exit_code=0
-mathjax {"warmMicrosecondsPerConversion":{"p50":393.7098583333333,"p95":427.35818499999993},"coldStartToFirstStringMs":{"p50":116.998059,"p95":119.57575299999999}}
-temml {"warmMicrosecondsPerConversion":{"p50":33.88657583333336,"p95":55.15209166666668},"coldStartToFirstStringMs":{"p50":36.16181400000001,"p95":37.218108}}
-flashmath {"warmMicrosecondsPerConversion":{"p50":23.096720833333343,"p95":28.193398333333327},"coldStartToFirstStringMs":{"p50":28.652022000000002,"p95":48.103742000000004}}
+mathjax {"warmMicrosecondsPerConversion":{"p50":305.19621916666665,"p95":563.4639316666669},"coldStartToFirstStringMs":{"p50":87.514528,"p95":127.85633199999998}}
+temml {"warmMicrosecondsPerConversion":{"p50":29.53700083333333,"p95":37.01095583333334},"coldStartToFirstStringMs":{"p50":29.663061000000003,"p95":31.89359}}
+flashmath {"warmMicrosecondsPerConversion":{"p50":18.880840833333323,"p95":26.95664749999999},"coldStartToFirstStringMs":{"p50":36.27538,"p95":50.011843}}
 ```
 
-These timings describe this machine and corpus. Temml uses different wrappers/attributes on all 12 inputs; the flashmath benchmark outputs normalize identically to MathJax on all 12. Cold p95 for flashmath is higher than Temml in this run; a general fastest claim is not established. See benchmark.json for timestamps, versions, machine, source hash, every sample, and output checks.
+Flashmath output agrees with MathJax under the current normalizer on 12 of the 12 benchmark inputs. Temml differs in structure/attributes on 12 inputs. These timings are machine/corpus measurements, not a universal fastest claim; Temml has lower cold p50/p95 in this run. Raw process timings, source hash, normalizer hash and output differences are in benchmark.json.
 
-## Screen
+## Browser
 
-screen_run: preview.html を headless Chromium で開き、React SSR の12式を表示。Switch display を2回クリックし、inline→block の属性切り替え、全式の非ゼロの描画寸法、merror が無いことを実行時に確認。preview.png を開いて分数・根・上下付き・配列の描画を目視確認。
+screen_run: preview.html を headless Chromium で開き、React SSR の式を表示。Switch display を2回クリックして inline/block 切替を実行し、各式の描画寸法と merror が無いことを確認。preview.png を開いて分数・根・上下付き・配列を目視確認。
 
 ```text
 screen exit_code=0
 data-screen-run="pass"
 ```
 
-## Integration gate
+## Review checkpoints (--no-review)
+
+- Before expensive execution: verify complete adapter options, unchanged normalizer, independent input corpus, XML preflight, source/normalizer fingerprints and timing boundaries.
+- Before integration: inspect package ownership/one-line registration, label/ref differential evidence, strict-class failure rows, frozen-install output and bundle diff. Root supplies the independent final verifier; no agent-lane-review checkpoint was called.
+
+## Placement
+
+Actual listing captured before final bundle refresh:
 
 ```text
-frozen install exit_code=1
-? Verifying lockfile against supply-chain policies (69 entries)...
-✓ Lockfile passes supply-chain policies (69 entries in 1s)
-[ERR_PNPM_OUTDATED_LOCKFILE] Cannot install with "frozen-lockfile" because pnpm-lock.yaml is not up to date with <ROOT>/package.json
+-rw------- 1 minamorl minamorl  63520 11月  7 03:35 bench/flashmath/benchmark.json
+-rw------- 1 minamorl minamorl 136922 11月  7 03:34 bench/flashmath/conformance.json
+-rw------- 1 minamorl minamorl  32016 11月  7 03:32 bench/flashmath/revision.bundle
+-rw------- 1 minamorl minamorl   5891 11月  7 03:33 docs/packages.md
+-rw------- 1 minamorl minamorl   1118 11月  7 03:12 package.json
+-rw------- 1 minamorl minamorl  22721 11月  7 03:12 pnpm-lock.yaml
+-rw------- 1 minamorl minamorl   3952 11月  7 03:28 src/configuration.ts
+-rw------- 1 minamorl minamorl    568 11月  7 03:30 src/session-state.ts
 
-Note that in CI environments this setting is true by default. If you still need to run install in such cases, use "pnpm install --no-frozen-lockfile"
-
-  Failure reason:
-  specifiers in the lockfile don't match specifiers in package.json:
-* 4 dependencies were added: react@19.2.4, react-dom@19.2.4, @types/react@19.2.14, @types/react-dom@19.2.3
-```
-
-The lockfile was left byte-for-byte unchanged. Original-index commit attempt exited 128 with:
-
-```text
-fatal: Unable to create '/home/minamorl/repos/flashmath-ts/.git/worktrees/core/index.lock': 読み込み専用ファイルシステムです
-```
-
-## Requested review checkpoints (--no-review)
-
-- Before expensive execution: compare engine preflight XML checks, timing boundaries, common corpus, sample count, and unmodified normalizer.
-- Before DONE/integration: inspect the source diff, 14 remaining scoped mismatches, unsupported-inclusive denominator, SSR evidence, browser artifact, bundle contents, and the RED frozen-install gate. No broker checkpoint was called.
-
-## Placement evidence
-
-Actual `ls -l src/ test/ bench/flashmath/ tsconfig.json package.json README.md` output captured while preparing delivery (bundle/receipt are created afterwards):
-
-```text
--rw------- 1 minamorl minamorl 3179 11月  7 02:58 README.md
--rw------- 1 minamorl minamorl 1117 11月  7 02:40 package.json
--rw------- 1 minamorl minamorl  271 11月  7 02:40 tsconfig.json
-
-bench/flashmath/:
-total 2484
--rw------- 1 minamorl minamorl     282 11月  7 02:58 adapter.mjs
--rw------- 1 minamorl minamorl     876 11月  7 03:00 benchmark-run.log
--rw------- 1 minamorl minamorl   63616 11月  7 03:00 benchmark.json
--rw------- 1 minamorl minamorl   49654 11月  7 03:00 benchmark.raw.json
--rw------- 1 minamorl minamorl       0 11月  7 02:58 build.log
--rw------- 1 minamorl minamorl     743 11月  7 02:59 conformance-run.log
--rw------- 1 minamorl minamorl  138057 11月  7 02:59 conformance.json
--rw------- 1 minamorl minamorl     764 11月  7 02:44 conformance.mjs
--rw------- 1 minamorl minamorl     494 11月  7 02:55 corpus.mjs
--rw------- 1 minamorl minamorl    1155 11月  7 03:01 delivery-build.log
--rw------- 1 minamorl minamorl    1589 11月  7 02:56 engines.mjs
--rw------- 1 minamorl minamorl    4325 11月  7 02:59 full-conformance-run.log
--rw------- 1 minamorl minamorl 1154404 11月  7 02:59 full-conformance.json
--rw------- 1 minamorl minamorl  909841 11月  7 02:59 full-conformance.json.jsonl
--rw------- 1 minamorl minamorl    3469 11月  7 02:48 generate-symbols.mjs
--rw------- 1 minamorl minamorl     608 11月  7 03:01 lockfile-check.log
--rw------- 1 minamorl minamorl   22110 11月  7 03:01 pnpm-help.log
--rw------- 1 minamorl minamorl    4642 11月  7 03:01 preview.html
--rw------- 1 minamorl minamorl    1975 11月  7 02:56 preview.mjs
--rw------- 1 minamorl minamorl   96942 11月  7 03:01 preview.png
--rw------- 1 minamorl minamorl    7902 11月  7 03:02 report.mjs
--rw------- 1 minamorl minamorl    1448 11月  7 02:47 restore-react-offline.mjs
--rw------- 1 minamorl minamorl    3506 11月  7 02:59 run.mjs
--rw------- 1 minamorl minamorl    5148 11月  7 03:01 screen-run.html
--rw------- 1 minamorl minamorl    1104 11月  7 03:01 screen-run.log
--rw------- 1 minamorl minamorl    1033 11月  7 02:58 test.log
--rw------- 1 minamorl minamorl    1333 11月  7 02:55 worker.mjs
-
-src/:
-total 304
--rw------- 1 minamorl minamorl    488 11月  7 02:58 ATTRIBUTION.MathJax
--rw------- 1 minamorl minamorl  11358 11月  7 02:40 LICENSE.MathJax
--rw------- 1 minamorl minamorl   2044 11月  7 02:48 ast.ts
--rw------- 1 minamorl minamorl    196 11月  7 02:44 index.ts
--rw------- 1 minamorl minamorl  50077 11月  7 02:58 parser.ts
--rw------- 1 minamorl minamorl   3039 11月  7 02:52 preamble.ts
--rw------- 1 minamorl minamorl   1204 11月  7 02:58 react.ts
--rw------- 1 minamorl minamorl   2730 11月  7 02:58 scanner.ts
--rw------- 1 minamorl minamorl    772 11月  7 02:44 serialize.ts
--rw------- 1 minamorl minamorl 216387 11月  7 02:48 symbols.ts
-
-test/:
-total 12
--rw------- 1 minamorl minamorl 4823 11月  7 02:58 core.test.mjs
--rw------- 1 minamorl minamorl  852 11月  7 02:58 ssr-fixtures.test.mjs
+src/packages/:
+total 48
+-rw------- 1 minamorl minamorl   881 11月  7 03:28 ams.ts
+-rw------- 1 minamorl minamorl 27431 11月  7 03:30 base.ts
+-rw------- 1 minamorl minamorl   643 11月  7 03:28 colorv2.ts
+-rw------- 1 minamorl minamorl  3408 11月  7 03:28 newcommand.ts
+-rw------- 1 minamorl minamorl  2770 11月  7 03:15 registry.ts
+-rw------- 1 minamorl minamorl  1209 11月  7 03:28 types.ts
 ```
