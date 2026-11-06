@@ -1,0 +1,72 @@
+[
+  {
+    "name": "stage",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "bench/integration/stage.mjs",
+      "07-fixes"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "harness",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "--test",
+      "conformance/harness.test.mjs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "grammar",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "bench/flashmath/generate-mhchem-grammar.mjs",
+      "--check"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "comparison",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "bench/integration/compare.mjs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "baseline",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "bench/integration/prepare-baseline.mjs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "probes",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "bench/integration/probes.mjs",
+      "--gate"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "screen",
+    "command": [
+      "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+      "bench/integration/screen.mjs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "diff",
+    "command": [
+      "git",
+      "--git-dir=bench/.integration-git",
+      "diff",
+      "--check"
+    ],
+    "exit": 0
+  }
+]

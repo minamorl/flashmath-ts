@@ -1,0 +1,71 @@
+stage: exit 0
+progress: 1700/2683
+progress: 1800/2683
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683
+harness: exit 0
+ℹ function-options subject calls=30; matched=30/30
+✔ runner restores function and RegExp options for any subject (0.239031ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 929.864773
+grammar: exit 0
+text: 1 states, 10 rules
+pq: 4 states, 22 rules
+bd: 4 states, 21 rules
+oxidation: 1 states, 3 rules
+tex-math: 1 states, 9 rules
+tex-math tight: 1 states, 11 rules
+9,9: 1 states, 3 rules
+pu: 6 states, 17 rules
+pu-2: 3 states, 10 rules
+pu-9,9: 3 states, 5 rules
+comparison: exit 0
+mathtools: 1052/2683; regressions []
+physics: 1528/2683; regressions []
+chem: 966/2683; regressions []
+fonts: 1124/2683; regressions []
+fonts-supplement: 1613/2683; regressions []
+misc: 976/2683; regressions []
+misc-supplement: 1054/1089; regressions []
+ALL 2635/2683; executable 2635/2635; unsupported 48
+union of earlier matched IDs: 2625; regressions: []
+unchanged conformance/ and pnpm-lock.yaml: PASS
+baseline: exit 0
+physics baseline 1e1867f build: exit 0
+probes: exit 0
+DIFF unnumbered-empheq \begin{empheq}[left=L]{equation}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation}x=y\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation}x\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[left=L,right=R]{equation}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[left=L]{equation*}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation*}x=y\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation*}x\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation*}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[left=L,right=R]{equation*}\end{empheq} true
+chem nonfixture: 216/216
+screen: exit 0
+CDP schema Page.captureScreenshot format,quality,clip,fromSurface,captureBeyondViewport,optimizeForSpeed
+CDP schema Runtime.evaluate expression,objectGroup,includeCommandLineAPI,silent,contextId,returnByValue,generatePreview,userGesture,awaitPromise,throwOnSideEffect,timeout,disableBreaks,replMode,allowUnsafeEvalBlockedByCSP,uniqueContextId,serializationOptions
+CDP schema Input.dispatchMouseEvent type,x,y,modifiers,timestamp,button,buttons,clickCount,force,tangentialPressure,tiltX,tiltY,twist,deltaX,deltaY,pointerType
+initial {"mode":"native","math":14,"pua":0,"errors":0,"arrows":["⟶","⟶","⟵","⟷","⇆","⇌","⇀","↽","↽","⇀","⟶","┄","┄","┄","┄","→","←"],"height":2047}
+select after mouse/key mathjax
+mathjax selection {"mode":"mathjax","math":14,"pua":15,"errors":0,"arrows":[],"height":2091}
+native selection {"mode":"native","math":14,"pua":0,"errors":0,"arrows":["⟶","⟶","⟵","⟷","⇆","⇌","⇀","↽","↽","⇀","⟶","┄","┄","┄","┄","→","←"],"height":2047}
+prescript layout [{"base":"U","sub":"92","sup":"235","gap":0,"baseWidth":22.359375,"prescriptWidth":36.640625},{"base":"O","sub":"8","sup":"16","gap":0,"baseWidth":23.015625,"prescriptWidth":24.421875},{"base":"HO","sub":"","sup":"3","gap":0,"baseWidth":45.578125,"prescriptWidth":12.21875},{"base":"U","sub":"92","sup":"238","gap":0,"baseWidth":22.359375,"prescriptWidth":36.640625},{"base":"Th","sub":"90","sup":"234","gap":0,"baseWidth":37.390625,"prescriptWidth":36.640625},{"base":"He","sub":"2","sup":"4","gap":0,"baseWidth":39.75,"prescriptWidth":12.21875}]
+uppercase CSS computed {"color":"rgb(255, 0, 0)","backgroundColor":"rgb(230, 240, 255)"}
+screen_run: Chromium opened React SSR chemical MathML; selected MathJax and native output; native PUA=0, merror=0; screenshot integrated-native.png
+diff: exit 0
+integration gate: PASS

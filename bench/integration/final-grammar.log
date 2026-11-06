@@ -1,0 +1,14 @@
+tex: 1 states, 4 rules
+ce: 23 states, 162 rules
+a: 3 states, 6 rules
+o: 3 states, 12 rules
+text: 1 states, 10 rules
+pq: 4 states, 22 rules
+bd: 4 states, 21 rules
+oxidation: 1 states, 3 rules
+tex-math: 1 states, 9 rules
+tex-math tight: 1 states, 11 rules
+9,9: 1 states, 3 rules
+pu: 6 states, 17 rules
+pu-2: 3 states, 10 rules
+pu-9,9: 3 states, 5 rules

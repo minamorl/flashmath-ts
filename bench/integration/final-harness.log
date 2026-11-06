@@ -1,0 +1,53 @@
+✔ attribute order, quotes, self-closing and numeric entities are serialization only (3.039586ms)
+✔ explicit tracking attributes and structural indentation are ignored (0.327017ms)
+✔ namespace prefixes resolve to the same expanded name (0.184007ms)
+✔ CDATA and XML line ending handling (0.189888ms)
+✔ negative: token cannot normalize away (0.212992ms)
+✔ negative: number cannot normalize away (0.163318ms)
+✔ negative: structure cannot normalize away (0.193145ms)
+✔ negative: missing node cannot normalize away (0.15882ms)
+✔ negative: sibling order cannot normalize away (0.165061ms)
+✔ negative: display mode cannot normalize away (0.32335ms)
+✔ negative: variant cannot normalize away (0.197363ms)
+✔ negative: stretchy cannot normalize away (0.183446ms)
+✔ negative: unknown data attribute cannot normalize away (0.172416ms)
+✔ negative: id cannot normalize away (0.140305ms)
+✔ negative: href cannot normalize away (0.155664ms)
+✔ spaces in tokens, mtext, annotations and attribute values remain significant (0.506145ms)
+✔ invalid XML: unbalanced (0.254551ms)
+✔ invalid XML: duplicate attribute (0.090881ms)
+✔ invalid XML: raw ampersand (0.081955ms)
+✔ invalid XML: unknown entity (0.078338ms)
+✔ invalid XML: invalid code point (0.118734ms)
+✔ invalid XML: DTD (0.07412ms)
+✔ invalid XML: extra root (0.132219ms)
+✔ invalid XML: wrong namespace (0.13774ms)
+✔ invalid XML: missing namespace (0.206259ms)
+✔ invalid XML: unbound prefix (0.136207ms)
+✔ invalid XML: trailing text (0.111822ms)
+✔ invalid XML: empty (0.056928ms)
+✔ invalid XML: attribute missing separator (0.081805ms)
+✔ runner uses all cases as denominator and distinguishes failure classes (2.44812ms)
+✔ blank subject never passes fixture and changing one genuine fixture token is detected (22.202631ms)
+✔ only XML whitespace is formatting; NBSP in content cannot disappear (0.39178ms)
+✔ upstream capture order and single-line MathML snapshots are retained (24.550723ms)
+✔ checkpoint resumes completed cases without re-evaluating the subject (1.31414ms)
+✔ CLI resumes a torn JSONL checkpoint, rejects stale code, and returns failure for incomplete coverage (179.480166ms)
+✔ reserved namespaces and inherited object keys cannot become valid namespace bindings (0.557833ms)
+✔ mi and mo remain distinct token types (0.173738ms)
+✔ mrow is neither flattened nor removed when empty (0.246806ms)
+✔ texclass values and presence are semantic attributes (0.672459ms)
+✔ all fixture texclass deletions and REL rewrites are detected (460.380902ms)
+ℹ texclass mutations detected: delete=1287, replace-with-REL=1218
+✔ real MathJax relation, binary, punctuation and inner classes differ from ORD (60.739197ms)
+✔ runner executes every function-options fixture, including Begingroup retry registration (70.903299ms)
+ℹ function-options subject calls=30; matched=30/30
+✔ runner restores function and RegExp options for any subject (0.239031ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 929.864773

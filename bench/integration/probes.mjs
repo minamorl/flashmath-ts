@@ -32,7 +32,12 @@ for(const {tex,packages,group} of cases){
   output.push(row);
 }
 const regressions=output.filter(r=>r.beforeMatched&&!r.matched);
-const summary={total:output.length,matched:output.filter(r=>r.matched).length,valid:output.filter(r=>r.valid).length,validMatched:output.filter(r=>r.valid&&r.matched).length,regressions:regressions.map(r=>r.tex),byGroup:{}};
+const cohort=JSON.parse(fs.readFileSync(new URL('../flashmath/pkg-physics-verifier/cohort.json',import.meta.url)));
+const original=output.slice(0,corpus.length);
+for(let i=0;i<original.length;i++){assert.equal(original[i].tex,cohort[i].tex);assert.equal(original[i].valid,!cohort[i].isError);}
+const frozenValid=original.filter((r,i)=>cohort[i].novel&&r.valid);
+const originalPhysics={total:original.length,matched:original.filter(r=>r.matched).length,frozenNovelValid:frozenValid.length,frozenNovelValidMatched:frozenValid.filter(r=>r.matched).length};
+const summary={originalPhysics,total:output.length,matched:output.filter(r=>r.matched).length,valid:output.filter(r=>r.valid).length,validMatched:output.filter(r=>r.valid&&r.matched).length,regressions:regressions.map(r=>r.tex),byGroup:{}};
 for(const r of output){const g=summary.byGroup[r.group]??={total:0,matched:0,valid:0,validMatched:0};g.total++;if(r.matched)g.matched++;if(r.valid)g.valid++;if(r.valid&&r.matched)g.validMatched++;}
 fs.writeFileSync(new URL('./probes.json',import.meta.url),JSON.stringify({summary,rows:output},null,2)+'\n');
 console.log(JSON.stringify(summary,null,2));

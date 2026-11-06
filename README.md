@@ -59,16 +59,34 @@ string or `[replacement, arity, optionalDefault]`. `decimalSeparator` accepts
 accepts a RegExp. MathJax's supported configuration aliases are also accepted
 under `texOptions`, including `digits`, `macros`, and the implemented tag options.
 
-The target is MathJax 4.1.3's base and newcommand fixture groups. The implementation
-covers core identifiers, numbers, symbols, fractions, roots, scripts, fences,
-arrays, text, styles, macro definitions and user environments. The current
-conformance output compares **texclass, attributes, text and tree structure**;
-unsupported fixtures remain in the denominator. It is not complete MathJax
-package coverage. Adjusted roots and some advanced array/text layouts still
-differ. The registered `ams` and `colorv2` modules are explicitly limited subsets,
-as listed in [the package guide](docs/packages.md). Other packages, unknown
-registration modules/options, and unimplemented `render`/`output` modes raise
-`UnsupportedFeatureError` rather than being silently ignored.
+The integrated parser matches **2,635 / 2,683 captured MathJax 4.1.3 records
+(98.21%)**, including **every executable fixture (2,635 / 2,635)**. The other
+48 records remain marked unsupported by the original extraction harness; they
+stay in the denominator. There are no executable fixture mismatches, and none
+of the 2,625 distinct fixture IDs matched by earlier lanes regressed. Comparisons
+include TeX classes, all semantic attributes, text and tree structure.
+
+Registered packages now include AMS/AMScd/cases/empheq, mathtools,
+physics/braket/cancel/bbox/enclose/centernot, mhchem/extpfeil, the font/color/HTML
+packages, and textmacros/bussproofs/configmacros/begingroup/setoptions/
+require/autoload/error handlers. `units` is also integrated. Packages are enabled
+explicitly through `packages`; registering a module alone does not activate it.
+Unknown packages/modules/options still raise `UnsupportedFeatureError`.
+
+This is measured fixture coverage, not a claim of universal MathJax compatibility.
+The retained unsupported records include custom package registration and the
+component typesetting pipeline. `mode: 'render'` is limited to selected texhtml
+input, and `mode: 'output'` to selected bussproofs MathML geometry; this package
+does not implement a general MathJax SVG renderer. See
+[the integration report](docs/integration.md) for every package's counts, merge
+resolutions, all unsupported IDs, independent probes and remaining boundaries.
+
+Browser output defaults to `output: 'native'`: mhchem font slots become Unicode
+and native MathML isotope scripts. Use `output: 'mathjax'` in parsing and
+serialization options to retain MathJax font codes for strict oracle comparison.
+The conformance adapter selects that mode explicitly. React SSR exercises all
+2,635 executable fixtures and compares the same structure, allowing only CSS
+declaration whitespace differences introduced by React.
 
 ```sh
 pnpm run build
@@ -80,9 +98,11 @@ pnpm run bench -- --samples 7 --iterations 100
 ```
 
 The scoped conformance command gates base and newcommand separately at 95%.
-The full harness includes other packages and normally exits 1. Current raw
-results and limitations are in `bench/flashmath/REPORT.md` and its linked JSON
-and logs. Earlier results that discarded texclass are withdrawn and are not
+The full harness exits 1 because it retains the 48 upstream unsupported
+records. Current integration results are in `bench/integration/07-fixes.json`;
+`node bench/integration/final-gate.mjs` rebuilds, tests and verifies the full
+corpus and lane regression gate. `bench/flashmath/REPORT.md` describes the
+earlier core-only measurements. Earlier results that discarded texclass are withdrawn and are not
 current compatibility evidence.
 
 The benchmark uses the same independent inputs for MathJax 4.1.3, Temml 0.14.0

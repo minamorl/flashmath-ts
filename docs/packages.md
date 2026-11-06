@@ -101,9 +101,11 @@ The public default is `['base', 'newcommand']`. The harness adapter forwards its
 explicit `packages` list, including priority tuples. Importing a known
 `configurationModules` name registers metadata; it does not activate a package
 that was omitted from `packages`. Unknown packages and registration modules raise
-`UnsupportedFeatureError`. Only `mode: 'convert'` is implemented. HTML discovery
-(`render`) and SVG measurement (`output`) raise that error instead of silently
-running as convert.
+`UnsupportedFeatureError`. `mode: 'convert'` is the normal parser path. Selected texhtml additionally
+accepts captured `render` inputs; selected bussproofs accepts MathML `output`
+inputs to calculate proof geometry. Other modes still raise
+`UnsupportedFeatureError`; no general SVG renderer is provided. Integrated
+package counts and current limitations are in [integration.md](integration.md).
 
 `prior` inputs run on the same session before the requested input. This preserves
 macro definitions, equation counters and resolved labels. `executionOrder` is

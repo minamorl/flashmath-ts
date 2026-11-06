@@ -1,0 +1,21 @@
+build: exit 0
+
+test: exit 0
+ℹ tests 1616
+ℹ suites 0
+ℹ pass 1616
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3080.75908
+conformance: exit 1
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683
+Exact checkpoint replay matches every original row: PASS

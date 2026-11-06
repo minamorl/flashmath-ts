@@ -1,0 +1,28 @@
+build: exit 0
+
+test: exit 0
+Invalid DOM property `fontstyle`. Did you mean `fontStyle`?
+✔ SSR structurally equals string output for all 2635 executable fixtures (2123.272775ms)
+ℹ {"groups":{"action":3,"ams":158,"amscd":13,"base":790,"bbm":9,"bboldx":28,"bbox":6,"begingroup":19,"boldsymbol":6,"braket":30,"bussproofs":26,"cancel":8,"cases":5,"centernot":2,"color":29,"colortbl":14,"colorv2":4,"configmacros":10,"dsfont":2,"empheq":44,"enclose":6,"extpfeil":6,"gensymb":5,"html":16,"mathtools":196,"mhchem":112,"newcommand":58,"noerrors":56,"noundefined":2,"physics":628,"setoptions":10,"tag":75,"tagformat":8,"tex":2,"texhtml":6,"textcomp":118,"textmacros":48,"unicode":21,"units":10,"upgreek":41,"verb":5},"unsupported":0}
+✔ SSR comparison only tolerates CSS declaration whitespace (0.422167ms)
+ℹ tests 2327
+ℹ suites 0
+ℹ pass 2321
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 5500.131439
+conformance: exit 1
+progress: 1500/2683
+progress: 1600/2683
+progress: 1700/2683
+progress: 1800/2683
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683

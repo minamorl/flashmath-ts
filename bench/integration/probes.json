@@ -1,5 +1,11 @@
 {
   "summary": {
+    "originalPhysics": {
+      "total": 467,
+      "matched": 466,
+      "frozenNovelValid": 395,
+      "frozenNovelValidMatched": 395
+    },
     "total": 1003,
     "matched": 992,
     "valid": 948,
