@@ -6,9 +6,16 @@ import {raw, scan} from '../scanner.js';
 import type {TexPackage, TexCommand} from './types.js';
 import {xArrow} from './extpfeil.js';
 
-// Independent cursor scanner. Chemistry is expanded into tokens on the existing
-// TeX stack; neither the remaining input nor a MathJax parser is reconstructed.
-// MathJax 4.1.3 MhchemConfiguration and mhchemParser 4.2.1 specify the layout.
+// Character-code state machine based on the ce, pq/bd, tex-math and pu grammar
+// of MathJax 4.1.3 / mhchemParser 4.2.1. No regexp recognizer and no copying of
+// the unconsumed suffix. Child machines share the source and operate on spans;
+// substring() is used only to emit a consumed lexeme into TeX expansion tokens.
+type Span = readonly [start: number, end: number];
+const enum Entity {Start, Body}
+const letter = (c: number) => c >= 65 && c <= 90 || c >= 97 && c <= 122;
+const lower = (c: number) => c >= 97 && c <= 122;
+const digit = (c: number) => c >= 48 && c <= 57;
+const white = (c: number) => c === 32 || c === 9 || c === 10 || c === 13 || c === 160;
 const phantom = String.raw`{\vphantom{A}}`;
 const roman = (s: string) => `\\mathrm{${s}}`;
 const subscript = (s: string) => `_{\\flashmathChemSmash{${s}}}`;
@@ -17,7 +24,6 @@ const arrows: Record<string, string> = {
   '<=>': 'rightleftharpoons', '<->': 'leftrightarrow', '->': 'rightarrow', '<-': 'leftarrow',
   '→': 'rightarrow', '⟶': 'rightarrow', '⇌': 'rightleftharpoons',
 };
-const arrowTokens = Object.keys(arrows); // Longest matching prefix first.
 const arrowNames: Record<string, readonly [number, number, number]> = {
   rightarrow: [0xe429, 5, 9], leftarrow: [0xe428, 9, 5],
   leftrightarrow: [0xe42a, 9, 9], leftrightarrows: [0xe42b, 9, 9],
@@ -31,295 +37,469 @@ const bonds: Record<string, string> = {
   '...': '{{\\cdot}{\\cdot}{\\cdot}}', '....': '{{\\cdot}{\\cdot}{\\cdot}{\\cdot}}',
   '->': '{\\mhchemrightarrow}', '<-': '{\\mhchemleftarrow}', '<': '{<}', '>': '{>}',
 };
-const alpha = (s: string) => s >= 'A' && s <= 'Z' || s >= 'a' && s <= 'z';
-const digit = (s: string) => s >= '0' && s <= '9';
-const white = (s: string) => s === ' ' || s === '\n' || s === '\t' || s === '\r';
 
 class Chemistry {
-  i = 0;
-  constructor(readonly s: string, readonly p: Parser, readonly depth = 0) {
+  i: number;
+  constructor(readonly s: string, readonly p: Parser, readonly depth = 0,
+    start = 0, readonly end = s.length) {
+    this.i = start;
     if (depth >= (p.options.maxDepth ?? 1024)) p.error('Nesting limit exceeded');
   }
-  skip() {while (white(this.s[this.i])) this.i++;}
-  command() {
-    const start = this.i++;
-    if (alpha(this.s[this.i])) while (alpha(this.s[this.i])) this.i++;
-    else if (this.i < this.s.length) this.i++;
-    return this.s.slice(start, this.i);
+  c(offset = 0) {return this.i + offset < this.end ? this.s.charCodeAt(this.i + offset) : -1;}
+  at(text: string, from = this.i) {
+    if (from + text.length > this.end) return false;
+    for (let j = 0; j < text.length; j++) if (this.s.charCodeAt(from + j) !== text.charCodeAt(j)) return false;
+    return true;
   }
-  group(open = '{', close = '}') {
-    if (this.s[this.i] !== open) this.p.error(`Missing ${open} in mhchem argument`);
+  text(span: Span) {return this.s.substring(span[0], span[1]);}
+  child(span: Span) {return new Chemistry(this.s, this.p, this.depth + 1, span[0], span[1]);}
+  inner(span: Span, commaSpace = 6) {return this.child(span).ce(commaSpace);}
+  skip() {while (white(this.c())) this.i++;}
+  command(): string {
+    const start = this.i++;
+    if (letter(this.c())) while (letter(this.c())) this.i++;
+    else if (this.i < this.end) this.i++;
+    return this.text([start, this.i]);
+  }
+  group(open = 123, close = 125): Span {
+    if (this.c() !== open) this.p.error(`Missing ${String.fromCharCode(open)} in mhchem argument`);
     const start = ++this.i;
-    let depth = 1;
-    while (this.i < this.s.length) {
-      const c = this.s[this.i];
-      if (c === '\\') {this.command(); continue;}
+    let depth = 1, braces = 0;
+    while (this.i < this.end) {
+      const code = this.c();
+      if (code === 92) {this.command(); continue;}
       this.i++;
-      if (c === open) depth++;
-      if (c === close && --depth === 0) return this.s.slice(start, this.i - 1);
+      if (open !== 123) {
+        if (code === 123) braces++;
+        if (code === 125) braces--;
+        if (braces) continue;
+      }
+      if (code === open) depth++;
+      if (code === close && --depth === 0) return [start, this.i - 1];
     }
-    return this.p.error(`Missing ${close} in mhchem argument`);
+    return this.p.error(`Missing ${String.fromCharCode(close)} in mhchem argument`);
   }
   math() {
     const start = ++this.i;
-    while (this.i < this.s.length) {
-      if (this.s[this.i] === '\\') {this.command(); continue;}
-      if (this.s[this.i++] === '$') {
-        const text = new Chemistry(this.s.slice(start, this.i - 1), this.p, this.depth + 1);
-        let expanded = '', braces = 0;
-        while (text.i < text.s.length) {
-          if (text.s[text.i] !== '\\') {
-            if (text.s[text.i] === '{') braces++;
-            if (text.s[text.i] === '}') braces--;
-            expanded += text.s[text.i++]; continue;
+    while (this.i < this.end) {
+      if (this.c() === 92) {this.command(); continue;}
+      if (this.c() !== 36) {this.i++; continue;}
+      const text = this.child([start, this.i++]);
+      let out = '', braces = 0;
+      while (text.i < text.end) {
+        switch (text.c()) {
+          case 123: braces++; out += '{'; text.i++; break;
+          case 125: braces--; out += '}'; text.i++; break;
+          case 92: {
+            const cmd = text.command();
+            if (cmd === '\\ce' && !braces) {text.skip(); out += text.inner(text.group());}
+            else out += cmd;
+            break;
           }
-          const command = text.command();
-          if (command === '\\ce' && braces === 0) {text.skip(); expanded += text.inner(text.group());}
-          else expanded += command;
+          default: out += String.fromCodePoint(text.s.codePointAt(text.i)!); text.i += text.s.codePointAt(text.i)! > 0xffff ? 2 : 1;
         }
-        return expanded + ' ';
       }
+      return out + ' ';
     }
     return this.p.error('Unclosed math delimiter in mhchem');
   }
-  inner(s: string, commaSpace = 6) {return new Chemistry(s, this.p, this.depth + 1).ce(commaSpace);}
-  scriptValue(s: string, sup: boolean): string {
-    const c = new Chemistry(s, this.p, this.depth + 1);
+  textGroup(span: Span): string {
+    const c = this.child(span);
+    let result = '', text = '';
+    const flush = () => {if (text) {result += `\\text{${text}}`; text = '';}};
+    while (c.i < c.end) {
+      if (c.c() === 36) {flush(); result += c.math();}
+      else text += c.s[c.i++];
+    }
+    flush(); return result;
+  }
+  numeric(span: Span) {
+    if (span[0] === span[1]) return false;
+    for (let i = span[0]; i < span[1]; i++) if (!digit(this.s.charCodeAt(i))) return false;
+    return true;
+  }
+  oxidation(span: Span) {
+    if (span[0] === span[1]) return false;
+    for (let i = span[0]; i < span[1]; i++) {
+      switch (this.s.charCodeAt(i)) {case 73: case 86: case 88: case 76: case 67: case 68: case 77: break; default: return false;}
+    }
+    return true;
+  }
+  scriptValue(span: Span, sup: boolean): string {
+    const c = this.child(span);
     let out = '';
-    while (c.i < s.length) {
-      const ch = s[c.i];
-      if (ch === '$') {out += c.math(); continue;}
-      if (ch === '{') {out += `\\text{${c.group()}}`; continue;}
-      if (ch === '(' && /^\([a-z]+/.test(s.slice(c.i))) {out += c.stateGroup(true); continue;}
-      if (ch === '\\') {out += roman(c.command()); continue;}
-      if (alpha(ch)) {
-        const start = c.i++;
-        while (alpha(s[c.i])) c.i++;
-        const text = s.slice(start, c.i);
-        out += text === 'x' && sup ? '{\\times}' : ['x', 'n', 'e'].includes(text) ? text + ' ' : roman(text);
+    while (c.i < c.end) {
+      const code = c.c();
+      switch (code) {
+        case 36: out += c.math(); continue;
+        case 123: out += c.textGroup(c.group()); continue;
+        case 40: if (lower(c.c(1))) {out += c.stateGroup(true); continue;} break;
+        case 92: {
+          const cmd = c.command();
+          if (cmd === '\\ce') out += c.inner(c.group());
+          else if (cmd === '\\pu') out += '{' + c.child(c.group()).pu() + '}';
+          else out += roman(cmd);
+          continue;
+        }
+      }
+      if (letter(code)) {
+        const from = c.i++;
+        while (letter(c.c())) c.i++;
+        const word = c.text([from, c.i]);
+        out += word === 'x' && sup ? '{\\times}' : word === 'x' || word === 'n' || word === 'e' ? word + ' ' : roman(word);
         continue;
       }
       c.i++;
-      out += ch === '.' && sup ? '\\mkern1mu \\bullet\\mkern1mu '
-        : ch === "'" ? '\\prime '
-        : ch === ',' ? '{,}\\mkern1mu ' : ch;
+      switch (code) {
+        case 46: out += sup ? '\\mkern1mu \\bullet\\mkern1mu ' : '.'; break;
+        case 39: out += '\\prime '; break;
+        case 44: out += '{,}\\mkern1mu '; break;
+        default: out += String.fromCharCode(code);
+      }
     }
     return out;
   }
-  script(sup: boolean) {
+  script(sup: boolean): {tex: string; numeric: boolean; oxidation: boolean; state: boolean} {
     this.i++;
-    if (this.s[this.i] === '{') return this.scriptValue(this.group(), sup);
-    if (this.s[this.i] === '$') return this.math();
-    const start = this.i;
-    if (this.s[this.i] === '\\') return roman(this.command());
-    if (this.s[this.i] === '+' || this.s[this.i] === '-') {
-      this.i++; while (digit(this.s[this.i])) this.i++;
-    }
+    let span: Span;
+    if (this.c() === 123) span = this.group();
+    else if (this.c() === 36) return {tex: this.math(), numeric: false, oxidation: false, state: false};
     else {
-      while (digit(this.s[this.i])) this.i++;
-      if (this.i === start && alpha(this.s[this.i])) this.i++;
-      if (['+', '-', '.', '*', "'"].includes(this.s[this.i]) && !(this.s[this.i] === '-' && alpha(this.s[this.i + 1]))) this.i++;
+      const start = this.i;
+      if (this.c() === 92) this.command();
+      else if (this.c() === 43 || this.c() === 45) {this.i++; while (digit(this.c())) this.i++;}
+      else {
+        while (digit(this.c())) this.i++;
+        if (this.i === start && letter(this.c())) this.i++;
+        switch (this.c()) {
+          case 45: if (!letter(this.c(1))) this.i++; break;
+          case 43: case 46: case 42: case 39: this.i++;
+        }
+      }
+      if (start === this.i) this.p.error('Missing mhchem script');
+      span = [start, this.i];
     }
-    if (start === this.i) this.p.error('Missing mhchem script');
-    return this.scriptValue(this.s.slice(start, this.i), sup);
+    return {tex: this.scriptValue(span, sup), numeric: this.numeric(span), oxidation: this.oxidation(span), state: this.s.charCodeAt(span[0]) === 40};
+  }
+  stateAt(from = this.i, math = false) {
+    if (!this.at('(', from)) return false;
+    for (const name of ['aq', 's', 'l', 'g', 'cr', 'c']) {
+      if (this.at(name, from + 1)) {
+        const next = this.s.charCodeAt(from + name.length + 1);
+        if (next === 41 || next === 44) return true;
+      }
+    }
+    return math && (this.at('\\ca', from + 1) || this.s.charCodeAt(from + 1) === 36
+      && lower(this.s.charCodeAt(from + 2)) && this.s.charCodeAt(from + 3) === 36);
   }
   stateGroup(script = false) {
-    // Parentheses containing a lower-case state of matter are upright and get
-    // a small separation, unlike structural parentheses around a formula.
-    const body = this.group('(', ')');
-    return `\\mskip${script ? 1 : 2}mu (${this.inner(body, 0)})`;
+    return `\\mskip${script ? 1 : 2}mu (${this.inner(this.group(40, 41), 0)})`;
+  }
+  isotope(top: string, bottom: string) {
+    return `${phantom}^{\\flashmathChemHphantom{${top}}}_{\\flashmathChemHphantom{${bottom}}}\\mkern-1.5mu${phantom}^{\\flashmathChemSmash{\\vphantom{2}}\\llap{${top}}}_{\\vphantom{2}\\llap{\\flashmathChemSmash{${bottom}}}}`;
+  }
+  arrow(): string {
+    switch (this.c()) {
+      case 60:
+        if (this.at('<-->')) return '<-->';
+        if (this.at('<=>>')) return '<=>>';
+        if (this.at('<<=>')) return '<<=>';
+        if (this.at('<=>')) return '<=>';
+        if (this.at('<->')) return '<->';
+        if (this.at('<-')) return '<-';
+        return '';
+      case 45: return this.c(1) === 62 ? '->' : '';
+      case 0x2192: return '→'; case 0x27f6: return '⟶'; case 0x21cc: return '⇌';
+      default: return '';
+    }
   }
   ce(commaSpace = 6): string {
     const out: string[] = [];
-    let letters = '', start = true, spaced = false, sup = false, hyphen = false;
+    let letters = '', entity = Entity.Start, spaced = false, sup = false, hyphen = false;
     const flush = () => {if (letters) {out.push(roman(letters)); letters = '';}};
-    const begin = () => {if (spaced && !start) out.push('~'); spaced = false; start = false;};
-    while (this.i < this.s.length) {
-      const ch = this.s[this.i];
-      if (white(ch)) {flush(); this.skip(); spaced = true; continue;}
-      const arrow = arrowTokens.find(a => this.s.startsWith(a, this.i));
+    const begin = () => {if (spaced && entity === Entity.Body) out.push('~'); spaced = false; entity = Entity.Body;};
+    while (this.i < this.end) {
+      const code = this.c();
+      if (white(code)) {flush(); this.skip(); spaced = true; continue;}
+      const arrow = this.arrow();
       if (arrow) {
         flush(); this.i += arrow.length; this.skip();
         let above = '', below = '';
-        if (this.s[this.i] === '[') above = this.inner(this.group('[', ']'));
-        if (this.s[this.i] === '[') below = this.inner(this.group('[', ']'));
+        if (this.c() === 91) above = this.inner(this.group(91, 93));
+        if (this.c() === 91) below = this.inner(this.group(91, 93));
         const name = arrows[arrow];
         let a = `\\mhchemlong${name}`;
         if (above || below) {
-          if (['leftrightarrows', 'rightleftharpoons', 'Rightleftharpoons', 'Leftrightharpoons'].includes(name) && below) {
-            // MathJax's compatibility replacement deliberately only collapses
-            // the 2mu case; the harpoon lower label retains its 6mu padding.
-            a = `\\mhchemx${name}{${above}}`;
-            a = `\\underset{\\flashmathChemLower${name === 'leftrightarrows' ? 2 : 6}mu{${below}}}{${a}}`;
-            if (name === 'leftrightarrows') a = `\\mhchemx${name}[${below}]{${above}}`;
-          } else a = `\\mhchemx${name}${below ? `[{${below}}]` : ''}{${above}}`;
+          switch (name) {
+            case 'leftrightarrows': a = `\\mhchemx${name}${below ? `[${below}]` : ''}{${above}}`; break;
+            case 'rightleftharpoons': case 'Rightleftharpoons': case 'Leftrightharpoons':
+              a = `\\mhchemx${name}{${above}}`;
+              if (below) a = `\\underset{\\flashmathChemLower6mu{${below}}}{${a}}`;
+              break;
+            default: a = `\\mhchemx${name}${below ? `[{${below}}]` : ''}{${above}}`;
+          }
         }
-        out.push(` {}\\flashmathChemRel{${a}}{} `); start = true; spaced = false; sup = false; continue;
+        out.push(` {}\\flashmathChemRel{${a}}{} `); entity = Entity.Start; spaced = false; sup = false; continue;
       }
-      const standalonePhase = (ch === 'v' || ch === '^') && (spaced || start)
-        && (!this.s[this.i + 1] || white(this.s[this.i + 1]));
-      if (standalonePhase || this.s.startsWith('(v)', this.i) || this.s.startsWith('(^)', this.i)) {
-        flush(); const up = ch === '^' || this.s[this.i + 1] === '^';
-        this.i += ch === '(' ? 3 : 1;
-        out.push(` \\${up ? 'uparrow' : 'downarrow'}{} `); start = false; spaced = true; continue;
+      const phase = (code === 118 || code === 94) && (spaced || entity === Entity.Start)
+        && (this.c(1) === -1 || white(this.c(1)));
+      if (phase || this.at('(v)') || this.at('(^)')) {
+        flush(); const up = code === 94 || this.c(1) === 94;
+        this.i += code === 40 ? 3 : 1;
+        out.push(` \\${up ? 'uparrow' : 'downarrow'}{} `); entity = Entity.Body; spaced = true; continue;
       }
-      if ('+-=<>'.includes(ch) && (spaced || start && ch !== '-')) {
-        flush(); out.push(` {}${ch}{} `); this.i++; spaced = false; start = true; sup = false; continue;
-      }
-      if (ch === '$') {
-        flush(); begin(); out.push(this.math()); hyphen = true;
-        if (white(this.s[this.i])) {
-          this.skip();
-          if (alpha(this.s[this.i])) out.push('\\,');
-          else spaced = true;
+      switch (code) {
+        case 43: case 45: case 61: case 60: case 62:
+          if (entity === Entity.Start && (code === 43 || code === 45) && !white(this.c(1))) {
+            out.push(`{${String.fromCharCode(code)}}\\,`); this.i++; entity = Entity.Body; continue;
+          }
+          if (spaced || entity === Entity.Start && code !== 45) {
+            flush(); out.push(` {}${String.fromCharCode(code)}{} `); this.i++; spaced = false; entity = Entity.Start; sup = false; continue;
+          }
+          if (code === 43 || code === 45) {
+            flush(); this.i++;
+            const next = this.c();
+            if (code === 45 && next !== -1 && !white(next) && next !== 41 && next !== 93 && next !== 125 && !this.stateAt()) out.push(hyphen ? '\\text{-}' : '{-}');
+            else out.push(`${phantom}^{${String.fromCharCode(code)}}`);
+            sup = true; continue;
+          }
+          if (code === 61) {flush(); out.push('{=}'); this.i++; continue;}
+          break;
+        case 36:
+          flush(); begin(); out.push(this.math()); hyphen = true;
+          if (white(this.c())) {this.skip(); if (letter(this.c())) out.push('\\,'); else spaced = true;}
+          continue;
+        case 123: {
+          const span = this.group();
+          if (span[0] === span[1] && letters.charCodeAt(0) === 92) {letters += '{}'; continue;}
+          flush();
+          if (span[0] !== span[1]) {begin(); out.push('{' + this.textGroup(span) + '}');}
+          continue;
         }
-        continue;
-      }
-      if (ch === '{') {
-        const text = this.group();
-        if (!text && letters.startsWith('\\')) {letters += '{}'; continue;}
-        flush();
-        if (text) {begin(); out.push(`{\\text{${text}}}`);}
-        continue;
-      }
-      if (ch === '^' || ch === '_') {
-        flush(); spaced = false;
-        const up = ch === '^', scriptStart = this.i, v = this.script(up);
-        // Numeric scripts immediately before another element are isotopes.
-        if (up && (start || /^[0-9]+$/.test(v) && alpha(this.s[this.i]) && this.s[this.i] <= 'Z')) {
-          let bottom = '';
-          if (this.s[this.i] === '_') bottom = this.script(false);
-          if (!start) out.push('\\mkern2mu');
-          out.push(`${phantom}^{\\flashmathChemHphantom{${v}}}_{\\flashmathChemHphantom{${bottom}}}\\mkern-1.5mu${phantom}^{\\flashmathChemSmash{\\vphantom{2}}\\llap{${v}}}_{\\vphantom{2}\\llap{\\flashmathChemSmash{${bottom}}}}`);
-          start = false; sup = false;
-        } else {
-          out.push((!up && sup ? '' : phantom) + (up ? `^{${v}}` : subscript(v)));
-          sup = up && !v.includes('\\mskip') && !this.s.slice(scriptStart + 1, this.i).includes('(');
-          if (up && this.s.startsWith('_{(', this.i)) sup = false;
-          start = false;
+        case 94: case 95: {
+          flush(); spaced = false;
+          const up = code === 94, value = this.script(up);
+          if (entity === Entity.Start || up && value.numeric && this.c() >= 65 && this.c() <= 90) {
+            let top = up ? value.tex : '', bottom = up ? '' : value.tex;
+            if (this.c() === (up ? 95 : 94)) {
+              const other = this.script(!up);
+              if (up) bottom = other.tex; else top = other.tex;
+            }
+            if (entity !== Entity.Start) out.push('\\mkern2mu');
+            out.push(this.isotope(top, bottom)); entity = Entity.Body; sup = false;
+          } else {
+            out.push((!up && sup ? '' : phantom) + (up ? `^{${value.tex}}` : subscript(value.tex)));
+            sup = up && !value.oxidation && !value.state && !this.at('_{(');
+            entity = Entity.Body;
+          }
+          continue;
         }
-        continue;
-      }
-      if (ch === "'") {
-        flush(); let value = '';
-        while (this.s[this.i] === "'") {value += '\\prime '; this.i++;}
-        out.push(`${phantom}^{${value}}`); sup = true; continue;
-      }
-      if (ch === '+' || ch === '-') {
-        flush(); this.i++;
-        const state = /^\((?:aq|s|l|g|cr|c)(?=[,)])/.test(this.s.slice(this.i));
-        if (ch === '-' && this.i < this.s.length && !white(this.s[this.i]) && !')]}'.includes(this.s[this.i]) && !state) out.push(hyphen ? '\\text{-}' : '{-}');
-        else out.push(`${phantom}^{${ch}}`);
-        sup = true; continue;
-      }
-      if (ch === '=' || ch === '#') {flush(); out.push(bonds[ch]); this.i++; continue;}
-      if (ch === '*' || ch === '.') {flush(); out.push('\\,{\\cdot}\\,'); this.i++; start = true; spaced = false; continue;}
-      if (ch === ',' || ch === ';') {flush(); out.push(commaSpace ? `{${ch}}\\mkern${commaSpace}mu ` : ch); this.i++; spaced = false; start = true; continue;}
-      if (ch === '\\') {
-        const cmd = this.command();
-        if (cmd === '\\bond') {
-          flush(); const bond = this.group();
-          if (!Object.hasOwn(bonds, bond)) this.p.error('mhchem bug T. Please report.');
-          out.push(bonds[bond]); continue;
+        case 39: {
+          flush(); let value = '';
+          while (this.c() === 39) {value += '\\prime '; this.i++;}
+          out.push(`${phantom}^{${value}}`); sup = true; continue;
         }
-        if (cmd === '\\ca') {flush(); out.push('{\\sim}'); spaced = false; continue;}
-        if (['\\pm', '\\approx'].includes(cmd)) {flush(); out.push(` {}${cmd}{} `); start = true; spaced = false; continue;}
-        if (cmd === '\\frac' || cmd === '\\overset' || cmd === '\\underset') {
-          flush(); begin(); const a = this.inner(this.group()); const b = this.inner(this.group());
-          out.push(`${cmd}{${a}}{${b}}`); continue;
+        case 35: flush(); out.push(bonds['#']); this.i++; continue;
+        case 42: case 46: flush(); out.push('\\,{\\cdot}\\,'); this.i++; entity = Entity.Start; spaced = false; continue;
+        case 44: case 59:
+          flush(); out.push(commaSpace ? `{${String.fromCharCode(code)}}\\mkern${commaSpace}mu ` : String.fromCharCode(code));
+          this.i++; spaced = false; entity = Entity.Start; continue;
+        case 92: {
+          const cmd = this.command();
+          switch (cmd) {
+            case '\\ce': flush(); begin(); this.skip(); out.push(this.inner(this.group())); continue;
+            case '\\pu': flush(); begin(); this.skip(); out.push('{' + this.child(this.group()).pu() + '}'); continue;
+            case '\\bond': {
+              flush(); this.skip(); const bond = this.text(this.group());
+              if (!Object.hasOwn(bonds, bond)) this.p.error('mhchem bug T. Please report.');
+              out.push(bonds[bond]); continue;
+            }
+            case '\\ca': flush(); out.push('{\\sim}'); spaced = false; continue;
+            case '\\pm': case '\\approx': flush(); out.push(` {}${cmd}{} `); entity = Entity.Start; spaced = false; continue;
+            case '\\frac': case '\\overset': case '\\underset': {
+              flush(); begin(); this.skip(); const a = this.inner(this.group()); this.skip(); const b = this.inner(this.group());
+              out.push(`${cmd}{${a}}{${b}}`); continue;
+            }
+            case '\\{': case '\\}': flush(); begin(); out.push(cmd); continue;
+            case '\\leftarrow': case '\\rightarrow': case '\\leftrightarrow': case '\\rightleftharpoons':
+              flush(); out.push(cmd === '\\rightleftharpoons' ? cmd + ' ' : '\\mhchem' + cmd.substring(1) + ' '); this.skip(); spaced = false; continue;
+          }
+          begin(); letters += cmd;
+          if (white(this.c())) {this.skip(); letters += ' ';}
+          hyphen = true; continue;
         }
-        if (cmd === '\\{' || cmd === '\\}') {flush(); begin(); out.push(cmd); continue;}
-        if (['\\leftarrow', '\\rightarrow', '\\leftrightarrow', '\\rightleftharpoons'].includes(cmd)) {
-          flush(); out.push(cmd === '\\rightleftharpoons' ? cmd + ' ' : '\\mhchem' + cmd.slice(1) + ' '); this.skip(); spaced = false; continue;
+        case 40: {
+          flush();
+          let j = this.i + 1;
+          while (digit(this.s.charCodeAt(j)) && j < this.end) j++;
+          if (entity === Entity.Start && j > this.i + 1 && this.s.charCodeAt(j) === 47) {
+            j++; const denominator = j;
+            while (digit(this.s.charCodeAt(j)) && j < this.end) j++;
+            if (j > denominator && this.s.charCodeAt(j) === 41) {
+              out.push(this.text([this.i, j + 1]) + '\\,'); this.i = j + 1; this.skip(); entity = Entity.Body; spaced = false; continue;
+            }
+          }
+          if (this.stateAt(this.i, true)) {out.push(this.stateGroup()); spaced = false; entity = Entity.Body; continue;}
+          begin(); out.push('('); this.i++; entity = Entity.Start; continue;
         }
-        begin(); letters += cmd;
-        if (white(this.s[this.i])) {this.skip(); letters += ' ';}
-        hyphen = true; continue;
+        case 41: case 91: case 93:
+          flush(); begin(); out.push(String.fromCharCode(code)); this.i++; entity = code === 91 ? Entity.Start : Entity.Body; sup = false; continue;
       }
-      if (ch === '(') {
-        flush();
-        const fraction = this.s.slice(this.i).match(/^\(\d+\/\d+\)/);
-        if (start && fraction) {out.push(fraction[0] + '\\,'); this.i += fraction[0].length; this.skip(); start = false; spaced = false; continue;}
-        const state = this.s.slice(this.i).match(/^\((?:(?:aq|s|l|g|cr|c)(?=[,)])|\\ca|\$[a-z]\$)/);
-        if (state) {out.push(this.stateGroup()); spaced = false; start = false; continue;}
-        begin(); out.push('('); this.i++; start = true; continue;
-      }
-      if (')[]'.includes(ch)) {flush(); begin(); out.push(ch); this.i++; start = ch === '['; sup = false; continue;}
-      if (digit(ch)) {
+      if (digit(code)) {
         flush(); const from = this.i++;
-        while (digit(this.s[this.i]) || (start || spaced) && [',', '.'].includes(this.s[this.i]) && digit(this.s[this.i + 1])) this.i++;
-        let value = this.s.slice(from, this.i);
-        if (start || spaced) {
+        const coefficient = entity === Entity.Start || spaced;
+        while (digit(this.c()) || coefficient && (this.c() === 44 || this.c() === 46) && digit(this.c(1))) this.i++;
+        let value = this.decimal([from, this.i]);
+        if (coefficient) {
           begin();
-          if (this.s[this.i] === '/' && digit(this.s[this.i + 1])) {
-            const a = value; const from = ++this.i;
-            while (digit(this.s[this.i])) this.i++;
-            value = `\\flashmathChemFraction{${a}}{${this.s.slice(from, this.i)}}`;
+          if (this.c() === 47 && digit(this.c(1))) {
+            const numerator = value, from = ++this.i;
+            while (digit(this.c())) this.i++;
+            value = `\\flashmathChemFraction{${numerator}}{${this.text([from, this.i])}}`;
           }
           out.push(value); this.skip();
-          const orbital = this.s[this.i] >= 'a' && this.s[this.i] <= 'z' && this.s[this.i + 1] === '^';
+          const orbital = lower(this.c()) && this.c(1) === 94;
           if (orbital) hyphen = true;
-          if (this.i < this.s.length && (alpha(this.s[this.i]) || this.s[this.i] === '$' || this.s[this.i] === '\\') && !orbital) out.push('\\,');
+          if ((letter(this.c()) || this.c() === 36 || this.c() === 92) && !orbital) out.push('\\,');
         } else out.push(phantom + subscript(value));
         sup = false; continue;
       }
-      if (alpha(ch)) {
-        if (start && ['x', 'n'].includes(ch) && (white(this.s[this.i + 1]) || this.s[this.i + 1] === '-')) {
-          flush(); out.push(ch); this.i++; this.skip();
-          if (this.s[this.i] !== '-') out.push('\\,');
-          else out.push(' ');
-          start = false; spaced = false; hyphen = true; continue;
+      if (letter(code)) {
+        if (entity === Entity.Start && (code === 120 || code === 110) && (white(this.c(1)) || this.c(1) === 45)) {
+          flush(); out.push(String.fromCharCode(code)); this.i++; this.skip();
+          out.push(this.c() !== 45 ? '\\,' : ' '); entity = Entity.Body; spaced = false; hyphen = true; continue;
         }
-        begin(); letters += ch; this.i++; sup = false; continue;
+        begin(); letters += String.fromCharCode(code); this.i++; sup = false; continue;
       }
-      flush(); begin(); out.push(ch); this.i++;
+      flush(); begin(); out.push(String.fromCharCode(code)); this.i++;
     }
     flush(); return out.join('');
   }
-}
-
-function units(s: string, p: Parser): string {
-  const c = new Chemistry(s.trim(), p);
-  let out = '';
-  const from = c.i;
-  if (c.s[c.i] === '+' || c.s[c.i] === '-') c.i++;
-  while (digit(c.s[c.i]) || [',', '.'].includes(c.s[c.i]) && digit(c.s[c.i + 1])) c.i++;
-  if (c.i > from) {
-    out += c.s.slice(from, c.i).replaceAll(',', '{,}');
-    if (c.s[c.i] === 'e' || c.s[c.i] === 'E') {
-      const times = c.s[c.i++] === 'E'; const start = c.i;
-      if (c.s[c.i] === '+' || c.s[c.i] === '-') c.i++;
-      while (digit(c.s[c.i])) c.i++;
-      out += `\\${times ? 'times' : 'cdot'} 10^{${c.s.slice(start, c.i)}}`;
+  decimal(span: Span, group = false) {
+    let separator = span[1];
+    for (let i = span[0]; i < span[1]; i++) if (this.s.charCodeAt(i) === 44 || this.s.charCodeAt(i) === 46) {separator = i; break;}
+    let out = '', digits = separator - span[0];
+    if (this.s.charCodeAt(span[0]) === 43 || this.s.charCodeAt(span[0]) === 45) digits--;
+    for (let i = span[0]; i < span[1]; i++) {
+      const code = this.s.charCodeAt(i);
+      if (group && digit(code)) {
+        const integerRemaining = separator - i;
+        const decimalIndex = i - separator - 1;
+        if (i > span[0] && i < separator && digits > 4 && integerRemaining % 3 === 0
+          || i > separator && span[1] - separator - 1 > 4 && decimalIndex > 0 && decimalIndex % 3 === 0) out += '\\mkern2mu ';
+      }
+      out += code === 44 ? '{,}' : String.fromCharCode(code);
     }
-    c.skip(); if (c.i < c.s.length) out += '~';
+    return out;
   }
-  const body = c.s.slice(c.i);
-  function u(text: string): string {
-    let i = 0, result = '';
-    while (i < text.length) {
-      if (white(text[i])) {while (white(text[i])) i++; if (i < text.length) result += '\\mkern3mu '; continue;}
-      if (text[i] === '*') {result += '\\mkern1mu{\\cdot}\\mkern1mu '; i++; while (white(text[i])) i++; continue;}
-      if (text[i] === '/') {result += '/'; i++; continue;}
-      const start = i;
-      while (alpha(text[i]) || text[i] === 'µ' || text[i] === 'Ω') i++;
-      if (start === i) {result += text[i++]; continue;}
-      let word = text.slice(start, i);
-      const power = i;
-      if (text[i] === '-' || text[i] === '+') i++;
-      while (digit(text[i])) i++;
-      if (i > power) word += `^{${text.slice(power, i)}}`;
-      result += roman(word);
+  unitBody(span: Span): {tex: string; terms: number} {
+    const c = this.child(span);
+    let out = '', word = '', terms = 0;
+    const flush = () => {if (word) {out += roman(word); word = ''; terms++;}};
+    while (c.i < c.end) {
+      const code = c.c();
+      switch (code) {
+        case 32: case 9: case 10: case 13:
+          flush(); c.skip(); if (c.i < c.end) {out += '\\mkern3mu '; terms++;} continue;
+        case 42: flush(); out += '\\mkern1mu{\\cdot}\\mkern1mu '; terms++; c.i++; c.skip(); continue;
+        case 92:
+          word += c.command();
+          if (white(c.c())) {word += ' '; c.skip();}
+          continue;
+        case 123: {
+          const body = c.group();
+          const inner = c.unitBody(body);
+          flush(); out += inner.tex; terms += inner.terms;
+          continue;
+        }
+        case 176: word += '{}^{\\circ}'; c.i++; continue;
+        case 94:
+          c.i++;
+          if (c.c() === 111 && (c.c(1) === 67 || c.c(1) === 70)) {word += '{}^{\\circ}'; c.i++; continue;}
+          if (c.at('{o}') && (c.c(3) === 67 || c.c(3) === 70)) {word += '{}^{\\circ}'; c.i += 3; continue;}
+          if (c.c() === 123) {word += `^{${c.text(c.group())}}`; continue;}
+          {
+            const from = c.i;
+            if (c.c() === 45 || c.c() === 43) c.i++;
+            while (digit(c.c()) || (c.c() === 44 || c.c() === 46) && digit(c.c(1))) c.i++;
+            if (c.i === from && c.i < c.end) c.i++;
+            word += `^{${c.decimal([from, c.i])}}`; continue;
+          }
+      }
+      if ((digit(code) || code === 45 || code === 43) && word) {
+        const from = c.i++;
+        while (digit(c.c()) || (c.c() === 44 || c.c() === 46) && digit(c.c(1))) c.i++;
+        word += `^{${c.decimal([from, c.i])}}`; continue;
+      }
+      word += String.fromCharCode(code); c.i++;
     }
-    return result;
+    flush(); return {tex: out, terms};
   }
-  const div = body.indexOf('//');
-  if (div >= 0) {
-    return out + `\\flashmathChemFraction{${u(body.slice(0, div).trim())}}{${u(body.slice(div + 2).trim())}}`;
+  pu(): string {
+    this.skip();
+    let out = '';
+    const from = this.i;
+    if (this.c() === 43 || this.c() === 45) this.i++;
+    const numberStart = this.i;
+    while (digit(this.c()) || (this.c() === 44 || this.c() === 46) && digit(this.c(1))) this.i++;
+    if (this.i > numberStart) {
+      out = this.decimal([from, this.i], true);
+      if (this.c() === 40) {
+        const uncertainty = this.i;
+        this.group(40, 41); out += this.text([uncertainty, this.i]);
+      }
+      if (this.c() === 101 || this.c() === 69) {
+        const times = this.c() === 69; this.i++;
+        const start = this.i;
+        if (this.c() === 43 || this.c() === 45) this.i++;
+        while (digit(this.c())) this.i++;
+        out += `\\${times ? 'times' : 'cdot'} 10^{${this.text([start, this.i])}}`;
+      } else {
+        this.skip();
+        const exponent = this.c(1);
+        const numericPower = digit(exponent) || exponent === 43 || exponent === 45
+          || exponent === 123 && (digit(this.c(2)) || this.c(2) === 43 || this.c(2) === 45);
+        if (this.c() === 94 && numericPower) {
+          this.i++;
+          if (this.c() === 123) out += `^{${this.text(this.group())}}`;
+          else {const start = this.i; if (this.c() === 43 || this.c() === 45) this.i++; while (digit(this.c())) this.i++; out += `^{${this.text([start, this.i])}}`;}
+        } else if ((this.c() === 120 || this.c() === 42) && white(this.c(1))) {
+          const times = this.c() === 120; this.i++; this.skip();
+          if (this.at('10^')) {
+            this.i += 3;
+            let exponent: string;
+            if (this.c() === 123) exponent = '{' + this.text(this.group()) + '}';
+            else {const start = this.i; if (this.c() === 43 || this.c() === 45) this.i++; while (digit(this.c())) this.i++; exponent = this.text([start, this.i]);}
+            out += `\\${times ? 'times' : 'cdot'} 10^{${exponent}}`;
+          }
+        }
+      }
+      this.skip(); if (this.i < this.end) out += '~';
+    } else this.i = from;
+    let end = this.end;
+    while (end > this.i && white(this.s.charCodeAt(end - 1))) end--;
+    let braces = 0, slash = -1;
+    for (let i = this.i; i < end; i++) {
+      switch (this.s.charCodeAt(i)) {
+        case 92: i++; while (letter(this.s.charCodeAt(i + 1))) i++; break;
+        case 123: braces++; break; case 125: braces--; break;
+        case 47: if (!braces && i > this.i) slash = i; break;
+      }
+      if (slash >= 0) break;
+    }
+    const trim = (span: Span): Span => {
+      let [a,b] = span; while (a < b && white(this.s.charCodeAt(a))) a++; while (b > a && white(this.s.charCodeAt(b - 1))) b--; return [a,b];
+    };
+    if (slash >= 0) {
+      const fraction = this.s.charCodeAt(slash + 1) === 47;
+      const numerator = this.unitBody(trim([this.i, slash]));
+      const denominator = this.unitBody(trim([slash + (fraction ? 2 : 1), end]));
+      if (fraction) return out + `\\flashmathChemFraction{${numerator.tex}}{${denominator.tex}}`;
+      return out + numerator.tex + (numerator.terms > 1 || denominator.terms > 1 ? '\\,/\\,' : '/') + denominator.tex;
+    }
+    return out + this.unitBody([this.i, end]).tex;
   }
-  return out + u(body);
 }
-
 const inferred = (n: Node) => n.kind === K.mrow && !n.attributes['data-mjx-texclass'] ? n.children : [n];
 function expand(p: Parser, tex: string) {
   if (!tex) return;
@@ -327,7 +507,7 @@ function expand(p: Parser, tex: string) {
 }
 const commands: Record<string, TexCommand> = {
   ce: {execute(p) {expand(p, new Chemistry(raw(p.tokensArgument('\\ce')), p).ce());}},
-  pu: {execute(p) {expand(p, units(raw(p.tokensArgument('\\pu')), p));}},
+  pu: {execute(p) {expand(p, new Chemistry(raw(p.tokensArgument('\\pu')), p).pu());}},
   flashmathChemSmash: {execute(p) {p.argument(n => p.append(p.atom([p.node(K.mpadded, inferred(n), '', {height: '0'})])));}},
   flashmathChemHphantom: {execute(p) {p.argument(n => p.append(p.atom([
     p.node(K.mpadded, [p.node(K.mphantom, inferred(n))], '', {height: '0', depth: '0'}),
@@ -341,8 +521,8 @@ const commands: Record<string, TexCommand> = {
     const level = p.f.level;
     let amount = p.dimension();
     if (amount.endsWith('mu')) amount = em(parseFloat(amount) / 18);
-    const positive = amount.startsWith('-') ? amount.slice(1) : '-' + amount;
-    const negative = positive.startsWith('-') ? '+' + positive.slice(1) : '-' + positive;
+    const positive = amount.charCodeAt(0) === 45 ? amount.substring(1) : '-' + amount;
+    const negative = positive.charCodeAt(0) === 45 ? '+' + positive.substring(1) : '-' + positive;
     p.argument(n => p.append(p.node(K.mpadded, [p.atom(inferred(n))], '', {height: positive, depth: negative, voffset: positive})));
     p.f.level = level + 1;
     p.f.display = false;
