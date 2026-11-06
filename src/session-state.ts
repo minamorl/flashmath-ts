@@ -5,6 +5,7 @@ export interface Reference {
 }
 /** Owned by one document/session; never shared between independent parser calls. */
 export interface SessionState {
+  packageData: Map<string, unknown>;
   macros: Map<string, Macro>;
   environments: Map<string, { begin: Macro; end: Macro }>;
   labels: Map<string, Reference>;
@@ -13,6 +14,7 @@ export interface SessionState {
 }
 export function sessionState(): SessionState {
   return {
+    packageData: new Map(),
     macros: new Map(),
     environments: new Map(),
     labels: new Map(),

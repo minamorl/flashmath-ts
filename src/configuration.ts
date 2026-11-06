@@ -83,6 +83,7 @@ export function configure(input: ParseOptions): {
   if (
     options.tags !== undefined &&
     !["none", "all"].includes(options.tags) &&
+    !(options.tags === "ams" && configuration.options.has("mathtools")) &&
     !( ["ams", "cases"].includes(options.tags) && input.packages?.some(entry => {
       const name = typeof entry === "string" ? entry : entry[0];
       return name === options.tags || (options.tags === "ams" && name === "cases");

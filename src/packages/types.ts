@@ -22,8 +22,10 @@ export interface TexEnvironment {
 }
 export interface TexPackage {
   name: string;
+  initialize?: (parser: Parser) => void;
   priority?: number;
   commands: Readonly<Record<string, TexCommand>>;
+  characters?: Readonly<Record<string, TexCommand>>;
   environments: Readonly<Record<string, TexEnvironment>>;
   configurationModules?: readonly string[];
   options?: readonly string[];
@@ -34,6 +36,8 @@ export interface RegisteredCommand {
   id: number;
 }
 export interface PackageConfiguration {
+  initializers: readonly ((parser: Parser) => void)[];
+  characters: ReadonlyMap<string, RegisteredCommand>;
   commands: readonly (RegisteredCommand | undefined)[];
   extensions: ReadonlyMap<string, RegisteredCommand>;
   environments: ReadonlyMap<string, TexEnvironment>;

@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import subject from './adapter.mjs';
+import {run, table} from '../../conformance/runner.mjs';
+const fixture=JSON.parse(fs.readFileSync(new URL('../../conformance/fixtures/mathjax-4.1.3.json',import.meta.url)));
+const records=fixture.records.filter(record=>record.group==='mathtools');
+if(records.length!==196)throw Error(`Mathtools fixture denominator changed: ${records.length}`);
+const report=await run(subject,{...fixture,records});
+fs.writeFileSync(new URL('./pkg-mathtools-conformance.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
+console.log(table(report));
+process.exitCode=report.matched===report.total?0:1;

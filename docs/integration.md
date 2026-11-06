@@ -28,3 +28,9 @@ Broker disabled by caller. Before running comparisons, review should check the
 immutable corpus boundary, all denominators and row-by-row baseline comparison.
 Before accepting delivery, root should inspect conflict resolutions and rerun
 the final gate independently. This worker starts no child agents.
+
+- Mathtools: union registry registrations and shared-change notes; preserve AMS's
+  `cases` tag mode and allow `ams` with either AMS/cases or mathtools selected.
+  Numeric node kinds from both lanes coincide. Keep the temporary boldsymbol/bbox
+  subsets until their full owning lanes arrive. Parser initializer, session data
+  and literal colon handler additions merge alongside AMS tag metadata.
