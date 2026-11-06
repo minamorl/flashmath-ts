@@ -1,0 +1,15 @@
+✔ row spacing is adjacent to the break; whitespace starts literal next-row brackets (30.33565ms)
+✔ React CSS bridge accepts case-insensitive names and preserves custom properties and quoted values (7.06859ms)
+✔ dynamically required character handlers work immediately and in later session inputs (12.605079ms)
+✔ promoted units dependency obeys options and package activation (21.980822ms)
+✔ nested physics Dirac arguments consume slices linearly without losing fences (42.376893ms)
+ℹ [{"name":"ket","rows":[{"depth":100,"slices":201,"characters":401},{"depth":200,"slices":401,"characters":801},{"depth":400,"slices":801,"characters":1601}]},{"name":"bra","rows":[{"depth":100,"slices":300,"characters":500},{"depth":200,"slices":600,"characters":1000},{"depth":400,"slices":1200,"characters":2000}]},{"name":"braket","rows":[{"depth":100,"slices":401,"characters":901},{"depth":200,"slices":801,"characters":1801},{"depth":400,"slices":1601,"characters":3601}]},{"name":"dyad","rows":[{"depth":100,"slices":401,"characters":701},{"depth":200,"slices":801,"characters":1401},{"depth":400,"slices":1601,"characters":2801}]}]
+✔ unnumbered empheq preserves upstream mixed token/cell shape and empty gather layout (60.746801ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 367.097907

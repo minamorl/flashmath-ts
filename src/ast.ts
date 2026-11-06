@@ -162,6 +162,8 @@ export interface Node {
   rawAttrs: boolean;
   /** Parsed HTML subtree, available only through the explicit texhtml package. */
   html?: MathMLNode;
+  /** Preserve upstream mixed token/cell serialization in unnumbered empheq. */
+  tokenCellSpacing?: boolean;
 }
 export function expose(root: Node): MathMLNode {
   const result: MathMLNode = {
@@ -171,11 +173,12 @@ export function expose(root: Node): MathMLNode {
     text: root.text,
     start: root.start,
   };
-  const stack: [Node, MathMLNode][] = [[root, result]];
+  const stack: [Node, MathMLNode, number][] = [[root, result, 0]];
   copyPackageMark(root,result);
   while (stack.length) {
-    const [n, out] = stack.pop()!;
+    const [n, out, depth] = stack.pop()!;
     for (const c of n.children) {
+      if(n.tokenCellSpacing&&c.kind===K.mtd)out.children.push({kind:'#text',attributes:{},children:[],text:' '.repeat(2*(depth+1)),start:c.start});
       if (c.html) { out.children.push(c.html); continue; }
       const v: MathMLNode = {
         kind: tags[c.kind],
@@ -186,7 +189,7 @@ export function expose(root: Node): MathMLNode {
       };
       out.children.push(v);
       copyPackageMark(c,v);
-      stack.push([c, v]);
+      stack.push([c, v, depth+1]);
     }
   }
   return result;

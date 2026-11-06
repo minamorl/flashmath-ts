@@ -1,0 +1,97 @@
+{
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.36",
+    "revision": "@507c6ee3e2f3b2ca0e660547e5b9ea4820c67f4c",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.10"
+  },
+  "compat": {
+    "mode": "mathjax",
+    "math": 14,
+    "pua": 15,
+    "errors": 0,
+    "arrows": [],
+    "height": 2091
+  },
+  "native": {
+    "mode": "native",
+    "math": 14,
+    "pua": 0,
+    "errors": 0,
+    "arrows": [
+      "⟶",
+      "⟶",
+      "⟵",
+      "⟷",
+      "⇆",
+      "⇌",
+      "⇀",
+      "↽",
+      "↽",
+      "⇀",
+      "⟶",
+      "┄",
+      "┄",
+      "┄",
+      "┄",
+      "→",
+      "←"
+    ],
+    "height": 2047
+  },
+  "prescripts": [
+    {
+      "base": "U",
+      "sub": "92",
+      "sup": "235",
+      "gap": 0,
+      "baseWidth": 22.359375,
+      "prescriptWidth": 36.640625
+    },
+    {
+      "base": "O",
+      "sub": "8",
+      "sup": "16",
+      "gap": 0,
+      "baseWidth": 23.015625,
+      "prescriptWidth": 24.421875
+    },
+    {
+      "base": "HO",
+      "sub": "",
+      "sup": "3",
+      "gap": 0,
+      "baseWidth": 45.578125,
+      "prescriptWidth": 12.21875
+    },
+    {
+      "base": "U",
+      "sub": "92",
+      "sup": "238",
+      "gap": 0,
+      "baseWidth": 22.359375,
+      "prescriptWidth": 36.640625
+    },
+    {
+      "base": "Th",
+      "sub": "90",
+      "sup": "234",
+      "gap": 0,
+      "baseWidth": 37.390625,
+      "prescriptWidth": 36.640625
+    },
+    {
+      "base": "He",
+      "sub": "2",
+      "sup": "4",
+      "gap": 0,
+      "baseWidth": 39.75,
+      "prescriptWidth": 12.21875
+    }
+  ],
+  "cssComputed": {
+    "color": "rgb(255, 0, 0)",
+    "backgroundColor": "rgb(230, 240, 255)"
+  }
+}

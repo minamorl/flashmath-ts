@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const destination=new URL('./physics-before/',import.meta.url);
+fs.mkdirSync(destination,{recursive:true});
+const archive=spawnSync('git',['archive','1e1867f','src','tsconfig.json'],{maxBuffer:16*1024*1024});
+if(archive.status!==0)throw Error(archive.stderr.toString());
+const extract=spawnSync('tar',['-xf','-','-C',destination.pathname],{input:archive.stdout});
+if(extract.status!==0)throw Error(extract.stderr.toString());
+const build=spawnSync(process.execPath,['node_modules/typescript/bin/tsc','-p',new URL('./physics-before/tsconfig.json',import.meta.url).pathname],{encoding:'utf8'});
+process.stdout.write(build.stdout+build.stderr);
+console.log('physics baseline 1e1867f build: exit',build.status);
+process.exitCode=build.status;

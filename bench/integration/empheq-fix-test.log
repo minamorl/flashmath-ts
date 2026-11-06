@@ -1,0 +1,19 @@
+✔ row spacing is adjacent to the break; whitespace starts literal next-row brackets (31.878892ms)
+✔ React CSS bridge accepts case-insensitive names and preserves custom properties and quoted values (7.419873ms)
+✔ dynamically required character handlers work immediately and in later session inputs (15.330221ms)
+✔ promoted units dependency obeys options and package activation (20.631055ms)
+✔ ams: all immutable MathJax 4.1.3 fixtures including texclass and attributes (159.506241ms)
+✔ ams: activation, invalid arguments, and isolated session numbering (3.865775ms)
+✔ ams: additional MathJax comparisons for tags, optional row spacing and grouped operators (120.510398ms)
+✔ ams: new MathML kinds serialize identically through React SSR (25.109917ms)
+✔ ams: all 305 related package fixtures retain their denominator (303 matched, 2 upstream unsupported) (207.840527ms)
+✔ empheq: all immutable MathJax 4.1.3 fixtures (61.463835ms)
+✔ empheq: simultaneous decorations, equation layout and invalid environment (34.541297ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 676.802031

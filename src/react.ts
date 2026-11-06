@@ -16,7 +16,8 @@ function cssProperties(source:string):Record<string,string> {
     else if(c===58&&colon<0)colon=i;
     if(i===source.length||c===59&&!depth&&!quote){
       if(colon>=start){
-        const property=source.slice(start,colon).trim();
+        const original=source.slice(start,colon).trim();
+        const property=original.startsWith('--')?original:original.toLowerCase();
         let name='';
         if(property.startsWith('--'))name=property;
         else for(let j=0;j<property.length;j++){

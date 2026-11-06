@@ -13,7 +13,7 @@ function comparable(xml) {
  while(stack.length){const n=stack.pop();for(const a of n.attrs)if(a[0]==='{}style')a[1]=a[1].replace(/"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\([^)]*\)|\s*([:;])\s*/g,(all,separator)=>separator??all).replace(/;$/,'');for(const c of n.children)if(typeof c!=='string')stack.push(c);}
  return tree;
 }
-test('SSR structurally equals string output for every executable fixture of every supported package',t=>{
+test('SSR structurally equals string output for all 2635 executable fixtures',t=>{
  const groups={};let unsupported=0;
  for(const record of fixture.records.filter(r=>r.input&&!r.unsupported)){
   const {tex,...input}=record.input,options=reviveOptions(input);
@@ -24,5 +24,15 @@ test('SSR structurally equals string output for every executable fixture of ever
   groups[record.group]=(groups[record.group]??0)+1;
  }
  for(const name of ['base','newcommand','physics','braket','cancel','centernot','bbox','enclose'])assert.ok(groups[name],name);
+ assert.equal(unsupported,0,'Every executable fixture must exercise the integrated React path');
+ assert.equal(Object.values(groups).reduce((a,b)=>a+b,0),2635);
  t.diagnostic(JSON.stringify({groups,unsupported}));
+});
+
+test('SSR comparison only tolerates CSS declaration whitespace',()=>{
+ const math=style=>`<math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle style="${style}"><mi>x</mi></mstyle></math>`;
+ assert.deepEqual(comparable(math('border: 1px solid; color: red')),comparable(math('border:1px solid;color:red')));
+ for(const other of ['border:2px solid;color:red','border:1px solid;color:blue'])assert.notDeepEqual(comparable(math('border:1px solid;color:red')),comparable(math(other)));
+ assert.notDeepEqual(comparable(math("content:'a: b'")),comparable(math("content:'a:b'")));
+ assert.notDeepEqual(comparable(math('color:red')),comparable(math('color:red').replace('<mi>x</mi>','<mo>x</mo>')));
 });

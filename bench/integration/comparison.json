@@ -1,0 +1,5203 @@
+{
+  "fixtureSHA256": "aa810fe8b99d427ef35cee54171ea19009c58415081f130e904d85fcdc2faf2e",
+  "total": 2683,
+  "matched": 2635,
+  "rate": 0.9821095788296683,
+  "executable": 2635,
+  "mismatches": [],
+  "unionPreviouslyMatched": 2625,
+  "regressions": [],
+  "snapshots": [
+    {
+      "name": "core",
+      "revision": "d3daf90",
+      "file": "bench/flashmath/full-conformance.json",
+      "sha256": "477c162ead6ff4f7259a076bc73856a0db697a000a872bd98c0fd72f63674ec5",
+      "total": 2683,
+      "matched": 848,
+      "regressions": [],
+      "groups": {
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 158,
+          "matched": 6,
+          "mismatch": 152,
+          "unsupported": 0
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 780,
+          "mismatch": 10,
+          "unsupported": 21
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "bbox": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 29,
+          "matched": 0,
+          "mismatch": 29,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 4,
+          "matched": 2,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 16,
+          "matched": 0,
+          "mismatch": 16,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tag": {
+          "total": 77,
+          "matched": 2,
+          "mismatch": 73,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "tex": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 10
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 0,
+          "mismatch": 48,
+          "unsupported": 2
+        },
+        "unicode": {
+          "total": 21,
+          "matched": 0,
+          "mismatch": 21,
+          "unsupported": 0
+        },
+        "units": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 2682,
+          "matched": 848,
+          "mismatch": 1787,
+          "unsupported": 47
+        },
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 547,
+          "matched": 14,
+          "mismatch": 531,
+          "unsupported": 2
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 0,
+          "mismatch": 78,
+          "unsupported": 2
+        },
+        "bbox": {
+          "total": 7,
+          "matched": 0,
+          "mismatch": 7,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 121,
+          "matched": 58,
+          "mismatch": 63,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 191,
+          "matched": 0,
+          "mismatch": 191,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 49,
+          "matched": 0,
+          "mismatch": 49,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 71,
+          "matched": 0,
+          "mismatch": 71,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "nopadding": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 10,
+          "matched": 8,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 47,
+          "matched": 0,
+          "mismatch": 47,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 15,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "stackMacros": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "matchBrackets": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "mml": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "(uncaptured)": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 52,
+          "matched": 0,
+          "mismatch": 52,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "name": "ams",
+      "revision": "2d6b58e",
+      "file": "bench/pkg-ams-conformance.json",
+      "sha256": "2a6773b881cf462817c2eca42003db365bcf5769f29bbd5e8660fbe2d9de0398",
+      "total": 2683,
+      "matched": 1137,
+      "regressions": [],
+      "groups": {
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 158,
+          "matched": 158,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 13,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 780,
+          "mismatch": 10,
+          "unsupported": 21
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "bbox": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 29,
+          "matched": 0,
+          "mismatch": 29,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 4,
+          "matched": 2,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 44,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 16,
+          "matched": 0,
+          "mismatch": 16,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tag": {
+          "total": 77,
+          "matched": 75,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "tex": {
+          "total": 12,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 0,
+          "mismatch": 48,
+          "unsupported": 2
+        },
+        "unicode": {
+          "total": 21,
+          "matched": 0,
+          "mismatch": 21,
+          "unsupported": 0
+        },
+        "units": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 2682,
+          "matched": 1137,
+          "mismatch": 1498,
+          "unsupported": 47
+        },
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 547,
+          "matched": 290,
+          "mismatch": 255,
+          "unsupported": 2
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 13,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 0,
+          "mismatch": 78,
+          "unsupported": 2
+        },
+        "bbox": {
+          "total": 7,
+          "matched": 0,
+          "mismatch": 7,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 121,
+          "matched": 59,
+          "mismatch": 62,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 191,
+          "matched": 0,
+          "mismatch": 191,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 49,
+          "matched": 49,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 71,
+          "matched": 0,
+          "mismatch": 71,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "nopadding": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 10,
+          "matched": 8,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 44,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 47,
+          "matched": 0,
+          "mismatch": 47,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 15,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "stackMacros": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "matchBrackets": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "mml": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "(uncaptured)": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 52,
+          "matched": 0,
+          "mismatch": 52,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "name": "mathtools",
+      "revision": "03ce698",
+      "file": "bench/flashmath/pkg-mathtools-full.json",
+      "sha256": "dac04865bed1583f38dcda7e13bcc6008fb4c85c8098f20fcd9957c3cda5a608",
+      "total": 2683,
+      "matched": 1052,
+      "regressions": [],
+      "groups": {
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 158,
+          "matched": 6,
+          "mismatch": 152,
+          "unsupported": 0
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 780,
+          "mismatch": 10,
+          "unsupported": 21
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "bbox": {
+          "total": 6,
+          "matched": 5,
+          "mismatch": 1,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 6,
+          "matched": 3,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 29,
+          "matched": 0,
+          "mismatch": 29,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 4,
+          "matched": 2,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 16,
+          "matched": 0,
+          "mismatch": 16,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 196,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tag": {
+          "total": 77,
+          "matched": 2,
+          "mismatch": 73,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "tex": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 10
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 0,
+          "mismatch": 48,
+          "unsupported": 2
+        },
+        "unicode": {
+          "total": 21,
+          "matched": 0,
+          "mismatch": 21,
+          "unsupported": 0
+        },
+        "units": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 2682,
+          "matched": 1052,
+          "mismatch": 1583,
+          "unsupported": 47
+        },
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 547,
+          "matched": 210,
+          "mismatch": 335,
+          "unsupported": 2
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 0,
+          "mismatch": 78,
+          "unsupported": 2
+        },
+        "bbox": {
+          "total": 7,
+          "matched": 6,
+          "mismatch": 1,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 121,
+          "matched": 59,
+          "mismatch": 62,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 191,
+          "matched": 188,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 49,
+          "matched": 0,
+          "mismatch": 49,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 71,
+          "matched": 0,
+          "mismatch": 71,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "nopadding": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 10,
+          "matched": 8,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 47,
+          "matched": 0,
+          "mismatch": 47,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 196,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 15,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "stackMacros": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "matchBrackets": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "mml": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "(uncaptured)": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 52,
+          "matched": 0,
+          "mismatch": 52,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "name": "physics",
+      "revision": "2d4bf3c",
+      "file": "bench/flashmath/pkg-physics-conformance.json",
+      "sha256": "de972358f097cf98d68b18d60be10e55f0119146d3594b0501113117e79b680c",
+      "total": 2683,
+      "matched": 1528,
+      "regressions": [],
+      "groups": {
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 158,
+          "matched": 6,
+          "mismatch": 152,
+          "unsupported": 0
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 780,
+          "mismatch": 10,
+          "unsupported": 21
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "bbox": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 30,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 8,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 29,
+          "matched": 0,
+          "mismatch": 29,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 4,
+          "matched": 2,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 16,
+          "matched": 0,
+          "mismatch": 16,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 628,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tag": {
+          "total": 77,
+          "matched": 2,
+          "mismatch": 73,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "tex": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 10
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 0,
+          "mismatch": 48,
+          "unsupported": 2
+        },
+        "unicode": {
+          "total": 21,
+          "matched": 0,
+          "mismatch": 21,
+          "unsupported": 0
+        },
+        "units": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 2682,
+          "matched": 1528,
+          "mismatch": 1107,
+          "unsupported": 47
+        },
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 547,
+          "matched": 14,
+          "mismatch": 531,
+          "unsupported": 2
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 0,
+          "mismatch": 78,
+          "unsupported": 2
+        },
+        "bbox": {
+          "total": 7,
+          "matched": 6,
+          "mismatch": 1,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 121,
+          "matched": 58,
+          "mismatch": 63,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 191,
+          "matched": 0,
+          "mismatch": 191,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 30,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 8,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 49,
+          "matched": 0,
+          "mismatch": 49,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 71,
+          "matched": 0,
+          "mismatch": 71,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "nopadding": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 10,
+          "matched": 8,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 47,
+          "matched": 0,
+          "mismatch": 47,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 628,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 15,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "stackMacros": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "matchBrackets": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "mml": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "(uncaptured)": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 52,
+          "matched": 0,
+          "mismatch": 52,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "name": "chem",
+      "revision": "b96b358",
+      "file": "bench/flashmath/pkg-chem-conformance.json",
+      "sha256": "0435099fca704e2c3b7a49cb51dc8d1a578007a09196c073dc99c8a78ad6bb30",
+      "total": 2683,
+      "matched": 966,
+      "regressions": [],
+      "groups": {
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 158,
+          "matched": 6,
+          "mismatch": 152,
+          "unsupported": 0
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 780,
+          "mismatch": 10,
+          "unsupported": 21
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "bbox": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 29,
+          "matched": 0,
+          "mismatch": 29,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 4,
+          "matched": 2,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 16,
+          "matched": 0,
+          "mismatch": 16,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 112,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tag": {
+          "total": 77,
+          "matched": 2,
+          "mismatch": 73,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "tex": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 10
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 0,
+          "mismatch": 48,
+          "unsupported": 2
+        },
+        "unicode": {
+          "total": 21,
+          "matched": 0,
+          "mismatch": 21,
+          "unsupported": 0
+        },
+        "units": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 2682,
+          "matched": 966,
+          "mismatch": 1669,
+          "unsupported": 47
+        },
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 547,
+          "matched": 29,
+          "mismatch": 516,
+          "unsupported": 2
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 0,
+          "mismatch": 78,
+          "unsupported": 2
+        },
+        "bbox": {
+          "total": 7,
+          "matched": 0,
+          "mismatch": 7,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 121,
+          "matched": 58,
+          "mismatch": 63,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 191,
+          "matched": 0,
+          "mismatch": 191,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 49,
+          "matched": 0,
+          "mismatch": 49,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 71,
+          "matched": 0,
+          "mismatch": 71,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "nopadding": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 10,
+          "matched": 8,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 47,
+          "matched": 0,
+          "mismatch": 47,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 112,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 15,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "stackMacros": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "matchBrackets": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "mml": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "(uncaptured)": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 52,
+          "matched": 0,
+          "mismatch": 52,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "name": "fonts",
+      "revision": "930c254",
+      "file": "bench/pkg-fonts/final.json",
+      "sha256": "3f164d2947dfd3b6beb1b7f63ae2661faa4e5746263e82a74063f6edd3ad43bd",
+      "total": 2683,
+      "matched": 1124,
+      "regressions": [],
+      "groups": {
+        "action": {
+          "total": 3,
+          "matched": 3,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 158,
+          "matched": 6,
+          "mismatch": 152,
+          "unsupported": 0
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 780,
+          "mismatch": 10,
+          "unsupported": 21
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 9,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 11,
+          "mismatch": 17,
+          "unsupported": 0
+        },
+        "bbox": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 29,
+          "matched": 29,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 14,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 4,
+          "matched": 4,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 16,
+          "matched": 16,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tag": {
+          "total": 77,
+          "matched": 3,
+          "mismatch": 72,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 5,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "tex": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 10
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 105,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 0,
+          "mismatch": 48,
+          "unsupported": 2
+        },
+        "unicode": {
+          "total": 21,
+          "matched": 21,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "units": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 41,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 2682,
+          "matched": 1124,
+          "mismatch": 1511,
+          "unsupported": 47
+        },
+        "action": {
+          "total": 3,
+          "matched": 3,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 547,
+          "matched": 20,
+          "mismatch": 525,
+          "unsupported": 2
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 9,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 11,
+          "mismatch": 17,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 0,
+          "mismatch": 78,
+          "unsupported": 2
+        },
+        "bbox": {
+          "total": 7,
+          "matched": 0,
+          "mismatch": 7,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 121,
+          "matched": 58,
+          "mismatch": 63,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 191,
+          "matched": 6,
+          "mismatch": 185,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 49,
+          "matched": 0,
+          "mismatch": 49,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 71,
+          "matched": 29,
+          "mismatch": 42,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 14,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "nopadding": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 10,
+          "matched": 10,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 47,
+          "matched": 16,
+          "mismatch": 31,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 15,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 5,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "stackMacros": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "matchBrackets": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "mml": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "(uncaptured)": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 105,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 52,
+          "matched": 21,
+          "mismatch": 31,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 41,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "name": "fonts-supplement",
+      "revision": "930c254",
+      "file": "bench/pkg-fonts/integration-conformance.json",
+      "sha256": "aa3a9c12c9dfc4467ac996b0dd81ceaa5b841c967cbc1666d044e528795839b1",
+      "total": 2683,
+      "matched": 1613,
+      "regressions": [],
+      "groups": {
+        "action": {
+          "total": 3,
+          "matched": 3,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 158,
+          "matched": 155,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 780,
+          "mismatch": 10,
+          "unsupported": 21
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 9,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 28,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bbox": {
+          "total": 6,
+          "matched": 5,
+          "mismatch": 1,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 29,
+          "matched": 29,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 14,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 4,
+          "matched": 4,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 16,
+          "matched": 16,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 196,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tag": {
+          "total": 77,
+          "matched": 61,
+          "mismatch": 14,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 8,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "tex": {
+          "total": 12,
+          "matched": 1,
+          "mismatch": 1,
+          "unsupported": 10
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 118,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 47,
+          "mismatch": 1,
+          "unsupported": 2
+        },
+        "unicode": {
+          "total": 21,
+          "matched": 21,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "units": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 41,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 2682,
+          "matched": 1613,
+          "mismatch": 1022,
+          "unsupported": 47
+        },
+        "action": {
+          "total": 3,
+          "matched": 3,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 547,
+          "matched": 427,
+          "mismatch": 118,
+          "unsupported": 2
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 9,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 28,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 77,
+          "mismatch": 1,
+          "unsupported": 2
+        },
+        "bbox": {
+          "total": 7,
+          "matched": 6,
+          "mismatch": 1,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 121,
+          "matched": 101,
+          "mismatch": 20,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 0,
+          "mismatch": 19,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 191,
+          "matched": 191,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 0,
+          "mismatch": 26,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 49,
+          "matched": 0,
+          "mismatch": 49,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 71,
+          "matched": 71,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 14,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "nopadding": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 10,
+          "matched": 10,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 47,
+          "matched": 47,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 196,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 0,
+          "mismatch": 56,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 15,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 8,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "stackMacros": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "matchBrackets": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "mml": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "(uncaptured)": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 118,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 52,
+          "matched": 52,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 41,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "name": "misc",
+      "revision": "ed7da08",
+      "file": "bench/pkg-misc/full-conformance.json",
+      "sha256": "7f0a45837977e574d68d8f0abf8749c648216e22590ce682d39c25073ca01b04",
+      "total": 2683,
+      "matched": 976,
+      "regressions": [],
+      "groups": {
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 158,
+          "matched": 6,
+          "mismatch": 152,
+          "unsupported": 0
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 790,
+          "mismatch": 0,
+          "unsupported": 21
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "bbox": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 19,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 26,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 29,
+          "matched": 0,
+          "mismatch": 29,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 4,
+          "matched": 2,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 10,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 16,
+          "matched": 0,
+          "mismatch": 16,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 56,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tag": {
+          "total": 77,
+          "matched": 2,
+          "mismatch": 73,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "tex": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 10
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 0,
+          "mismatch": 48,
+          "unsupported": 2
+        },
+        "unicode": {
+          "total": 21,
+          "matched": 0,
+          "mismatch": 21,
+          "unsupported": 0
+        },
+        "units": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 0
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 2682,
+          "matched": 976,
+          "mismatch": 1659,
+          "unsupported": 47
+        },
+        "action": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 3,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 547,
+          "matched": 40,
+          "mismatch": 505,
+          "unsupported": 2
+        },
+        "amscd": {
+          "total": 13,
+          "matched": 0,
+          "mismatch": 13,
+          "unsupported": 0
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bbm": {
+          "total": 9,
+          "matched": 0,
+          "mismatch": 9,
+          "unsupported": 0
+        },
+        "bboldx": {
+          "total": 28,
+          "matched": 0,
+          "mismatch": 28,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 0,
+          "mismatch": 78,
+          "unsupported": 2
+        },
+        "bbox": {
+          "total": 7,
+          "matched": 0,
+          "mismatch": 7,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 19,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 121,
+          "matched": 77,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 19,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "boldsymbol": {
+          "total": 191,
+          "matched": 0,
+          "mismatch": 191,
+          "unsupported": 0
+        },
+        "braket": {
+          "total": 30,
+          "matched": 0,
+          "mismatch": 30,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 26,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "cancel": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "cases": {
+          "total": 49,
+          "matched": 0,
+          "mismatch": 49,
+          "unsupported": 0
+        },
+        "centernot": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 71,
+          "matched": 0,
+          "mismatch": 71,
+          "unsupported": 0
+        },
+        "colortbl": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 14,
+          "unsupported": 1
+        },
+        "nopadding": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "colorv2": {
+          "total": 10,
+          "matched": 8,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 10,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "dsfont": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 2,
+          "unsupported": 0
+        },
+        "empheq": {
+          "total": 44,
+          "matched": 0,
+          "mismatch": 44,
+          "unsupported": 0
+        },
+        "enclose": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "extpfeil": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "gensymb": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 5,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 47,
+          "matched": 0,
+          "mismatch": 47,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 0,
+          "mismatch": 196,
+          "unsupported": 0
+        },
+        "mhchem": {
+          "total": 112,
+          "matched": 0,
+          "mismatch": 112,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 56,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "physics": {
+          "total": 628,
+          "matched": 0,
+          "mismatch": 628,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 15,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 0,
+          "mismatch": 10,
+          "unsupported": 2
+        },
+        "tagformat": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 8,
+          "unsupported": 0
+        },
+        "stackMacros": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "matchBrackets": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "mml": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "(uncaptured)": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "texhtml": {
+          "total": 6,
+          "matched": 0,
+          "mismatch": 6,
+          "unsupported": 0
+        },
+        "textcomp": {
+          "total": 118,
+          "matched": 0,
+          "mismatch": 118,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 52,
+          "matched": 0,
+          "mismatch": 52,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "upgreek": {
+          "total": 41,
+          "matched": 0,
+          "mismatch": 41,
+          "unsupported": 0
+        },
+        "verb": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "name": "misc-supplement",
+      "revision": "ed7da08",
+      "file": "bench/pkg-misc/integration.json",
+      "sha256": "8b2031873895c7036ae8051b0cd2035eb9baeab9f368da5eeeb9f1980b0e9cf8",
+      "total": 1089,
+      "matched": 1054,
+      "regressions": [],
+      "groups": {
+        "autoload": {
+          "total": 2,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "base": {
+          "total": 811,
+          "matched": 790,
+          "mismatch": 0,
+          "unsupported": 21
+        },
+        "bboldx": {
+          "total": 17,
+          "matched": 17,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 19,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 26,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 10,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 56,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 8,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 8
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 10,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "textcomp": {
+          "total": 13,
+          "matched": 13,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 50,
+          "matched": 48,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "verb": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        }
+      },
+      "byPackage": {
+        "base": {
+          "total": 1089,
+          "matched": 1054,
+          "mismatch": 0,
+          "unsupported": 35
+        },
+        "autoload": {
+          "total": 3,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 3
+        },
+        "userMacros": {
+          "total": 5,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 5
+        },
+        "userEnvs": {
+          "total": 15,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 15
+        },
+        "userFilters": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "bboldx": {
+          "total": 17,
+          "matched": 17,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "textmacros": {
+          "total": 80,
+          "matched": 78,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "begingroup": {
+          "total": 19,
+          "matched": 19,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "newcommand": {
+          "total": 119,
+          "matched": 119,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "retry": {
+          "total": 19,
+          "matched": 19,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "ams": {
+          "total": 42,
+          "matched": 42,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "bussproofs": {
+          "total": 26,
+          "matched": 26,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "configmacros": {
+          "total": 10,
+          "matched": 10,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "colorv2": {
+          "total": 6,
+          "matched": 6,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noerrors": {
+          "total": 56,
+          "matched": 56,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "noundefined": {
+          "total": 2,
+          "matched": 2,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "require": {
+          "total": 10,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 10
+        },
+        "require-load": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "units": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "setoptions": {
+          "total": 12,
+          "matched": 10,
+          "mismatch": 0,
+          "unsupported": 2
+        },
+        "textcomp": {
+          "total": 13,
+          "matched": 13,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "color": {
+          "total": 42,
+          "matched": 42,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "html": {
+          "total": 31,
+          "matched": 31,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "unicode": {
+          "total": 31,
+          "matched": 31,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "no-autoload": {
+          "total": 1,
+          "matched": 0,
+          "mismatch": 0,
+          "unsupported": 1
+        },
+        "verb": {
+          "total": 5,
+          "matched": 5,
+          "mismatch": 0,
+          "unsupported": 0
+        }
+      }
+    }
+  ],
+  "stageRegressions": [
+    {
+      "from": "01-ams",
+      "to": "02-mathtools",
+      "ids": []
+    },
+    {
+      "from": "02-mathtools",
+      "to": "03-physics",
+      "ids": []
+    },
+    {
+      "from": "03-physics",
+      "to": "04-chem",
+      "ids": []
+    },
+    {
+      "from": "04-chem",
+      "to": "05-fonts",
+      "ids": []
+    },
+    {
+      "from": "05-fonts",
+      "to": "06-misc",
+      "ids": []
+    },
+    {
+      "from": "06-misc",
+      "to": "07-fixes",
+      "ids": []
+    }
+  ],
+  "unsupported": [
+    {
+      "id": "Autoload.test.ts::Autoload Autoload package 1",
+      "group": "autoload",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Autoload.test.ts::Autoload Autoload environment 1",
+      "group": "autoload",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Base.test.ts::User Defined Macros Macro with empty optional def 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Macros Macro with optional def 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Macros EqRef 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Macros Right Color 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Macros Middle Color 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Environments smallmatrix 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Environments pmatrix 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Environments Crampedsubarray 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Environments Gather 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Environments User 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Environments Cases star 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::User Defined Environments EqnTest 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::Tagged Environments EqnTest 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::Tagged Environments Equation 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::MathStyle French 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::MathStyle French 2",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::MathStyle ISO 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::MathStyle upright 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::MathStyle other 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::Multiletter Indentifier Mismatch 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Base.test.ts::Postfilter Empty list 1",
+      "group": "base",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Colortbl.test.ts::Colortbl color with no frame 1",
+      "group": "colortbl",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Require.test.ts::Require Require package 1",
+      "group": "require",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Require.test.ts::Require Require with dependencies 1",
+      "group": "require",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Require.test.ts::Require Require with preprocessors 1",
+      "group": "require",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Require.test.ts::Require Require with stack items 1",
+      "group": "require",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Require.test.ts::Require Require with menu extensions 1",
+      "group": "require",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Require.test.ts::Require Options DefaultAllow with allow 1",
+      "group": "require",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Require.test.ts::Require Options Prefixed options 1",
+      "group": "require",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Require.test.ts::Require Options RequireLoad with prefix 1",
+      "group": "require",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "SetOptions.test.ts::Setoptions Require Require 1",
+      "group": "setoptions",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "SetOptions.test.ts::Setoptions Require Require with option 1",
+      "group": "setoptions",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Tag.test.ts::Page References Forward Reference 1",
+      "group": "tag",
+      "category": "non-single-MathML-snapshot"
+    },
+    {
+      "id": "Tag.test.ts::Page References Forward Reference 2",
+      "group": "tag",
+      "category": "non-single-MathML-snapshot"
+    },
+    {
+      "id": "Tex.test.ts::Stack toString 1",
+      "group": "tex",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Tex.test.ts::Stack getTop 1",
+      "group": "tex",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Tex.test.ts::FindTeX display math 1",
+      "group": "tex",
+      "category": "non-single-MathML-snapshot"
+    },
+    {
+      "id": "Tex.test.ts::FindTeX environment 1",
+      "group": "tex",
+      "category": "non-single-MathML-snapshot"
+    },
+    {
+      "id": "Tex.test.ts::FindTeX Nested braces 1",
+      "group": "tex",
+      "category": "non-single-MathML-snapshot"
+    },
+    {
+      "id": "Tex.test.ts::FindTeX processEscapes 1",
+      "group": "tex",
+      "category": "non-single-MathML-snapshot"
+    },
+    {
+      "id": "Tex.test.ts::FindTeX ref undefined 1",
+      "group": "tex",
+      "category": "non-single-MathML-snapshot"
+    },
+    {
+      "id": "Tex.test.ts::TexParser GetBrackets matchBrakets 1",
+      "group": "tex",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Tex.test.ts::TexParser mml 1",
+      "group": "tex",
+      "category": "custom-package-registration"
+    },
+    {
+      "id": "Tex.test.ts::NodeFactory create null kind 1",
+      "group": "tex",
+      "category": "input-not-captured"
+    },
+    {
+      "id": "Textmacros.test.ts::Textmacros Autoload Autoload 1",
+      "group": "textmacros",
+      "category": "typeset-component-pipeline"
+    },
+    {
+      "id": "Textmacros.test.ts::Textmacros Autoload No Autoload 1",
+      "group": "textmacros",
+      "category": "typeset-component-pipeline"
+    }
+  ]
+}

@@ -43,6 +43,7 @@ export interface ActivePackageConfiguration extends PackageConfiguration {
   packages: readonly TexPackage[];
 }
 export interface PackageConfiguration {
+  characterHandlers: ReadonlyMap<number, readonly RegisteredCommand[]>;
   initializers: readonly ((parser: Parser) => void)[];
   characters: ReadonlyMap<string, RegisteredCommand>;
   commands: readonly (RegisteredCommand | undefined)[];

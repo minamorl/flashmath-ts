@@ -1,0 +1,12 @@
+core: 848/2683; regressions []
+ams: 1137/2683; regressions []
+mathtools: 1052/2683; regressions []
+physics: 1528/2683; regressions []
+chem: 966/2683; regressions []
+fonts: 1124/2683; regressions []
+fonts-supplement: 1613/2683; regressions []
+misc: 976/2683; regressions []
+misc-supplement: 1054/1089; regressions []
+ALL 2635/2683; executable 2635/2635; unsupported 48
+union of earlier matched IDs: 2625; regressions: []
+unchanged conformance/ and pnpm-lock.yaml: PASS

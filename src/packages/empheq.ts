@@ -13,7 +13,20 @@ import {beginAms,clone,environmentBody,sequence} from './ams.js';
 /** Decorations size themselves from independent, id-free copies of the table. */
 export function decorate(p:Parser,table:Node,left:Token[],right:Token[],done:(n:Node)=>void){
   const original=clone(p,table,true);
-  const phantom=(n:Node)=>p.node(K.mphantom,[p.node(K.mpadded,[n],'',{width:'0'})]);
+  const phantom=(n:Node)=>p.node(K.mphantom,[p.node(K.mpadded,n.kind===K.mrow&&n.inferred?n.children:[n],'',{width:'0'})]);
+  // Upstream also decorates an unnumbered equation's inferred sequence.
+  // A lone token's text-child decorations are omitted by its serializer.
+  if([K.mi,K.mn,K.mo,K.mtext].includes(table.kind)){
+    const finish=()=>{if(left.length){table.attributes.columnalign=right.length?'right left':'right undefined';table.attributes.columnspacing=right.length?' 0em':'0em undefined';}done(table);};
+    const afterLeft=()=>right.length?p.parseTokens(right,finish):finish();
+    if(left.length)p.parseTokens(left,afterLeft);else afterLeft();return;
+  }
+  if(table.kind===K.mrow&&table.inferred)for(let i=0;i<table.children.length;i++){
+    const row=table.children[i];
+    if(row.text){p.clean(row,i,table.children.length);row.rawAttrs=true;row.tokenCellSpacing=true;
+      const text=p.node(K.html);text.html={kind:'#text',attributes:{},children:[],text:row.text,start:row.start};row.text='';row.children.push(text);
+    }
+  }
   const block=(tokens:Token[],cb:(n:Node)=>void)=>{
     p.parseTokens(tokens,n=>{
       const top=clone(p,original,true);top.children=top.children.slice(0,1);top.attributes.align='baseline 1';
@@ -59,6 +72,7 @@ export default {
     if(!['equation','align','gather','flalign','alignat','multline'].includes(env.replace(/\*$/,'')))p.error(`Invalid environment "${env}" for empheq`);
     const body=environmentBody(p,name);
     p.stream.push([...scan(n?'{'+n+'}':''),...body,...scan('\\end{'+env+'}')]);
-    beginAms(p,env,table=>{if(opts.left.length||opts.right.length)decorate(p,table,opts.left,opts.right,n=>p.append(n));else p.append(table);});
+    const append=(n:Node)=>{if(n.kind===K.mrow&&n.inferred)for(const c of n.children)p.append(c);else p.append(n);};
+    beginAms(p,env,table=>{if(opts.left.length||opts.right.length)decorate(p,table,opts.left,opts.right,append);else append(table);});
   }}},configurationModules:['input/tex/empheq/EmpheqConfiguration.js'],
 } satisfies TexPackage;

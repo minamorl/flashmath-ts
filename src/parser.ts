@@ -88,7 +88,9 @@ const same = (a: Token | undefined, b: Token) =>
   !!a && a[0] === b[0] && spelling(a) === spelling(b);
 
 export class Parser {
-  readonly characters?: ReadonlyMap<number, readonly RegisteredCommand[]>;
+  get characters(): ReadonlyMap<number, readonly RegisteredCommand[]> {
+    return this.configuration.characterHandlers;
+  }
   readonly stream: Stream;
   readonly macros: Map<string, Macro>;
   readonly environments: Map<string, { begin: Macro; end: Macro }>;
@@ -116,21 +118,6 @@ export class Parser {
     ),
     readonly session: SessionState = sessionState(),
   ) {
-    if (configuration.extensions.size) {
-      const characters = [...configuration.extensions.values()].filter(c => c.definition.type === 'character');
-      if (characters.length) {
-        const handlers = new Map<number, RegisteredCommand[]>();
-        // Resolution inserts lower precedence packages first. Keep every
-        // character handler so a higher priority handler can decline a token.
-        for (const command of characters) {
-          const key = (command.definition.char ?? command.definition.name).charCodeAt(0);
-          const chain = handlers.get(key) ?? [];
-          chain.unshift(command);
-          handlers.set(key, chain);
-        }
-        this.characters = handlers;
-      }
-    }
     this.macros = session.macros;
     this.environments = session.environments;
     this.numbered = options.tags === "all" && !!options.display;
@@ -1412,7 +1399,8 @@ export class Parser {
   }
   linebreak() {
     if (this.stream.peek()?.[0] === 42) this.stream.next();
-    const spacing = this.optional();
+    // TeX only reads a row-spacing option adjacent to the row break.
+    const spacing = this.stream.peek()?.[0] === 91 ? this.optional() : null;
     if (spacing && !/^[+-]?(?:\d+(?:[.,]\d*)?|[.,]\d+)\s*(?:em|ex|pt|px|mu|cm|mm|in|pc)$/.test(raw(spacing).trim())) this.error("Bracket argument to \\\\ must be a dimension");
     const f = this.f;
     if (f.table) {

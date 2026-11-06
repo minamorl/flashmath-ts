@@ -1,0 +1,98 @@
+{
+  "total": 1003,
+  "matched": 992,
+  "valid": 948,
+  "validMatched": 948,
+  "regressions": [],
+  "byGroup": {
+    "physics": {
+      "total": 285,
+      "matched": 285,
+      "valid": 254,
+      "validMatched": 254
+    },
+    "braket": {
+      "total": 33,
+      "matched": 33,
+      "valid": 32,
+      "validMatched": 32
+    },
+    "cancel": {
+      "total": 24,
+      "matched": 24,
+      "valid": 23,
+      "validMatched": 23
+    },
+    "bbox": {
+      "total": 33,
+      "matched": 33,
+      "valid": 28,
+      "validMatched": 28
+    },
+    "enclose": {
+      "total": 39,
+      "matched": 39,
+      "valid": 38,
+      "validMatched": 38
+    },
+    "centernot": {
+      "total": 22,
+      "matched": 21,
+      "valid": 19,
+      "validMatched": 19
+    },
+    "mixed": {
+      "total": 13,
+      "matched": 13,
+      "valid": 13,
+      "validMatched": 13
+    },
+    "physics+braket": {
+      "total": 9,
+      "matched": 9,
+      "valid": 8,
+      "validMatched": 8
+    },
+    "braket+physics": {
+      "total": 9,
+      "matched": 9,
+      "valid": 8,
+      "validMatched": 8
+    },
+    "quantity-composition": {
+      "total": 480,
+      "matched": 480,
+      "valid": 480,
+      "validMatched": 480
+    },
+    "extra-physics": {
+      "total": 6,
+      "matched": 6,
+      "valid": 6,
+      "validMatched": 6
+    },
+    "array-spacing": {
+      "total": 5,
+      "matched": 5,
+      "valid": 4,
+      "validMatched": 4
+    },
+    "unnumbered-empheq": {
+      "total": 45,
+      "matched": 35,
+      "valid": 35,
+      "validMatched": 35
+    }
+  }
+}
+DIFF centernot \centernot{} true
+DIFF unnumbered-empheq \begin{empheq}[left=L]{equation}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation}x=y\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation}x\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[left=L,right=R]{equation}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[left=L]{equation*}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation*}x=y\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation*}x\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[right=R]{equation*}\end{empheq} true
+DIFF unnumbered-empheq \begin{empheq}[left=L,right=R]{equation*}\end{empheq} true

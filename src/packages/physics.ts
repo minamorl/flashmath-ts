@@ -217,29 +217,57 @@ function outputBraket(a: string, b: string, c: string, one: boolean, two: boolea
     : one ? `\\langle{${a}}\\vert{${b}}\\vert{${c}}\\rangle`
     : `\\left\\langle{${a}}\\right\\vert{${b}}\\left\\vert{${c}}\\right\\rangle`;
 }
-define('ket', (p, name) => { const fixed = star(p), body = arg(p, name); parsed(p, fixed ? `\\vert{${body}}\\rangle` : `\\left\\vert{${body}}\\right\\rangle`); });
-define('bra', (p, name) => {
-  const fixed = star(p), body = arg(p, name);
-  let ket = false, ketStar = false, right = '';
-  const t = next(p), alias = t?.[0] === -1 ? p.macros.get(spelling(t)) : undefined;
-  const ketAlias = alias?.body.length === 1 && alias.body[0][0] === -3 && spelling(alias.body[0]) === 'ket';
-  if (peek(p) === '\\ket' || ketAlias) {
-    p.stream.next(); ket = true;
-    ketStar = star(p);
-    if (peek(p) === '{') right = arg(p, name);
-    else { if (ketStar) insert(p, '*'); ketStar = false; }
+// These arguments remain on the parser's frame stack: nested kets and
+// bra/inner/outer products never reconstruct and scan their complete bodies.
+function groupedArgument(p:Parser,name:string,done:(n:Node)=>void) {
+  p.argument(n=>done(p.atom(children(n))),false,'\\'+name);
+}
+function fixedFence(p:Parser,text:string) {
+  return p.node(K.mo,[],text,{fence:'false',stretchy:'false',...('|‖'.includes(text)?{'data-mjx-texclass':'ORD'}:{})});
+}
+function braketNodes(p:Parser,left:string,right:string,bodies:Node[],fixed:boolean,outer=false) {
+  const nodes:Node[]=[fixed?fixedFence(p,left):p.delimiterNode(left,'','OPEN'),bodies[0]];
+  if(bodies.length>1){
+    const middle=(text:string)=>{
+      if(!fixed)nodes.push(p.atom([],'CLOSE'));
+      nodes.push(fixed?fixedFence(p,text):p.node(K.mo,[],text,text==='|'?{stretchy:'true',symmetric:'true'}:{}));
+      if(!fixed)nodes.push(p.atom([],'OPEN'));
+    };
+    if(outer){middle('⟩');nodes.push(p.node(K.mspace,[],'',{width:'-0.167em'}));middle('⟨');}
+    else middle('|');
+    nodes.push(bodies[1]);
   }
-  parsed(p, ket ? fixed || ketStar ? `\\langle{${body}}\\vert{${right}}\\rangle`
-    : `\\left\\langle{${body}}\\middle\\vert{${right}}\\right\\rangle`
-    : fixed ? `\\langle{${body}}\\vert` : `\\left\\langle{${body}}\\right\\vert{}`);
+  nodes.push(fixed?fixedFence(p,right):p.delimiterNode(right,'','CLOSE'));
+  if(fixed)for(const n of nodes)p.append(n);else p.append(p.atom(nodes,'INNER'));
+}
+function copyArgument(p:Parser,node:Node):Node {
+  const copy=(n:Node)=>Object.assign(p.node(n.kind),n,{attributes:{...n.attributes},children:[] as Node[]});
+  const root=copy(node),stack:[Node,Node][]=[[node,root]];
+  while(stack.length){const [source,target]=stack.pop()!;for(const n of source.children){
+    const child=p.node(n.kind,[],n.text,{...n.attributes},n.start);Object.assign(child,n,{children:[],attributes:{...n.attributes}});
+    target.children.push(child);stack.push([n,child]);
+  }}
+  return root;
+}
+define('ket',(p,name)=>{const fixed=star(p);groupedArgument(p,name,n=>braketNodes(p,'|','⟩',[n],fixed));});
+define('bra',(p,name)=>{
+  const fixed=star(p);
+  groupedArgument(p,name,body=>{
+    const t=next(p),alias=t?.[0]===-1?p.macros.get(spelling(t)):undefined;
+    const ketAlias=alias?.body.length===1&&alias.body[0][0]===-3&&spelling(alias.body[0])==='ket';
+    if(peek(p)==='\\ket'||ketAlias){
+      p.stream.next();const ketStar=star(p);
+      if(peek(p)==='{')groupedArgument(p,name,right=>braketNodes(p,'⟨','⟩',[body,right],fixed||ketStar));
+      else {if(ketStar)insert(p,'*');braketNodes(p,'⟨','⟩',[body,p.atom([])],fixed);}
+    }else{braketNodes(p,'⟨','|',[body],fixed);if(!fixed)p.append(p.atom([]));}
+  });
 });
-define('innerproduct ip braket outerproduct dyad ketbra op', (p, name) => {
-  const fixed = star(p), a = arg(p, name), b = peek(p) === '{' ? arg(p, name) : a;
-  const outer = ['outerproduct', 'dyad', 'ketbra', 'op'].includes(name);
-  parsed(p, outer ? fixed ? `\\vert{${a}}\\rangle\\!\\langle{${b}}\\vert`
-    : `\\left\\vert{${a}}\\middle\\rangle\\!\\middle\\langle{${b}}\\right\\vert`
-    : fixed ? `\\langle{${a}}\\vert{${b}}\\rangle`
-    : `\\left\\langle{${a}}\\middle\\vert{${b}}\\right\\rangle`);
+define('innerproduct ip braket outerproduct dyad ketbra op',(p,name)=>{
+  const fixed=star(p),outer=['outerproduct','dyad','ketbra','op'].includes(name);
+  groupedArgument(p,name,a=>{
+    const done=(b:Node)=>braketNodes(p,outer?'|':'⟨',outer?'|':'⟩',[a,b],fixed,outer);
+    if(peek(p)==='{')groupedArgument(p,name,done);else done(copyArgument(p,a));
+  });
 });
 define('expectationvalue expval ev matrixelement matrixel mel', (p, name) => {
   const one = star(p), two = one && star(p), a = arg(p, name);

@@ -366,7 +366,7 @@ commands.sideset={execute(p){p.args(3,([pre,post,base])=>{
   const result=p.atom([...(ar.length&&a?[a]:[]),...ar,...sequence(n),...br],'OP');result.limits=1;p.append(result);
 });}};
 export function clone(p:Parser,n:Node,stripIds=false):Node {
-  const copy=(n:Node)=>{const c=p.node(n.kind,[],n.text,{...n.attributes},n.start);c.op=n.op;c.limits=n.limits;c.fixed=n.fixed;c.rawAttrs=n.rawAttrs;c.relation=n.relation;if(stripIds)delete c.attributes.id;return c;};
+  const copy=(n:Node)=>{const c=p.node(n.kind,[],n.text,{...n.attributes},n.start);c.op=n.op;c.limits=n.limits;c.fixed=n.fixed;c.rawAttrs=n.rawAttrs;c.relation=n.relation;c.inferred=n.inferred;c.html=n.html;c.tokenCellSpacing=n.tokenCellSpacing;if(stripIds)delete c.attributes.id;return c;};
   const result=copy(n),stack:[Node,Node][]=[[n,result]];
   while(stack.length){const [source,target]=stack.pop()!;for(const child of source.children){const c=copy(child);target.children.push(c);stack.push([child,c]);}}
   return result;
@@ -397,7 +397,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
   if(bare==='equation'){
     const numbered=!starred&&p.options.tags!==undefined&&p.options.tags!=='none';
     p.hasTaggableEnvironment=true;
-    p.frame(-4,false,n=>{const tag=equationTags.get(frame);if(numbered&&!unnumberedEquations.has(frame)||tag)append(p.node(K.mtable,[p.node(K.mlabeledtr,[tag?tagCell(p,tag.tag,p.label,tag.starred):p.labelCell(p.label),p.node(K.mtd,n)])],'',{displaystyle:'true'}));else for(const x of n)append(x);},name);const frame=p.f;return;
+    p.frame(-4,false,n=>{const tag=equationTags.get(frame);if(numbered&&!unnumberedEquations.has(frame)||tag)append(p.node(K.mtable,[p.node(K.mlabeledtr,[tag?tagCell(p,tag.tag,p.label,tag.starred):p.labelCell(p.label),p.node(K.mtd,n)])],'',{displaystyle:'true'}));else if(done)done(p.row(n));else for(const x of n)append(x);},name);const frame=p.f;return;
   }
   const matrix=bare.includes('matrix')||bare==='subarray'||bare==='cases';
   const small=bare==='smallmatrix'||bare==='subarray';
@@ -432,7 +432,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
     }else{
       n.attributes={displaystyle:'true',columnalign:Array.from({length:cols},(_,i)=>align[i%align.length]==='r'?'right':align[i%align.length]==='l'?'left':'center').join(' '),columnspacing:Array.from({length:Math.max(0,cols-1)},(_,i)=>bare==='eqnarray'?(i%2?'0.278em':'0em'):i%2?'2em':'0em').join(' '),rowspacing:'3pt','data-break-align':Array.from({length:cols},(_,i)=>align[i%align.length]==='r'?'bottom':align[i%align.length]==='l'?'top':'middle').join(' ')};
       if(!cols)n.attributes.columnspacing='0em';
-      if(bare.startsWith('gather'))n.attributes.columnspacing='1em';
+      if(bare.startsWith('gather')){n.attributes.columnspacing='1em';if(!cols){delete n.attributes.columnalign;n.attributes['data-break-align']='middle';}}
       if(bare==='split')n.attributes.columnspacing='0em';
       if(count&&!fl)n.attributes.columnspacing=Array(Math.max(0,cols-1)).fill('0em').join(' ');
       if(n.attributes.columnalign==='center')delete n.attributes.columnalign;
