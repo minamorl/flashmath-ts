@@ -1,0 +1,19 @@
+{
+  "name": "@rainpulse/flashmath",
+  "version": "0.0.0",
+  "private": true,
+  "description": "TeX to MathML parser for React, conformance-tested against MathJax",
+  "type": "module",
+  "license": "MIT",
+  "author": "minamorl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rainpulse/flashmath-ts.git"
+  },
+  "devDependencies": {
+    "@mathjax/src": "4.1.3",
+    "temml": "0.14.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
