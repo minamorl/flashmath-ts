@@ -34,12 +34,12 @@ function build(entries:readonly PackageEntry[]):PackageConfiguration {
     for(const [name,value]of Object.entries(pkg.environments))environments.set(name,value);
     for(const [name,value]of Object.entries(pkg.characters??{})){
       const {execute,...data}=value;
-      characters.set(name,{definition:{name,type:'character',...data},execute,id:-1});
+      characters.set(name,{definition:Object.freeze({name,type:'character',...data}),execute,id:-1});
     }
     for(const name of pkg.options??[])options.add(name);
   }
   const initializers=selected.flatMap(({definition})=>definition.initialize?[definition.initialize]:[]);
-  return Object.freeze({commands:Object.freeze(commands),extensions,environments,options,initializers,characters});
+  return Object.freeze({commands:Object.freeze(commands),extensions,environments,options,initializers:Object.freeze(initializers),characters});
 }
 const defaults=build(['base','newcommand']);
 const baseOnly=build(['base']);

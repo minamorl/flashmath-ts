@@ -1258,7 +1258,8 @@ export class Parser {
           continue;
         }
       }
-      const characterHandler = this.configuration.characters.get(spelling(t));
+      const characterHandler = this.configuration.characters.size
+        ? this.configuration.characters.get(spelling(t)) : undefined;
       if (characterHandler) {
         characterHandler.execute(this, t, characterHandler.definition, -1);
         continue;

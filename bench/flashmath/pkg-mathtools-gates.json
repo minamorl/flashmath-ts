@@ -1,0 +1,86 @@
+{
+  "evidence": [
+    {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.json"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "test/*.test.mjs",
+        "test/packages/mathtools.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "node",
+        "bench/flashmath/pkg-mathtools-verify.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "node",
+        "conformance/runner.mjs",
+        "--subject",
+        "bench/flashmath/adapter.mjs",
+        "--output",
+        "bench/flashmath/pkg-mathtools-full.json",
+        "--fresh"
+      ],
+      "exit": 1
+    },
+    {
+      "comparison": {
+        "unchangedDenominator": true,
+        "regressions": [],
+        "base": {
+          "total": 811,
+          "matched": 780,
+          "mismatch": 10,
+          "unsupported": 21
+        },
+        "newcommand": {
+          "total": 58,
+          "matched": 58,
+          "mismatch": 0,
+          "unsupported": 0
+        },
+        "mathtools": {
+          "total": 196,
+          "matched": 196,
+          "mismatch": 0,
+          "unsupported": 0
+        }
+      }
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "conformance",
+        "pnpm-lock.yaml",
+        "package.json"
+      ],
+      "exit": 0
+    }
+  ],
+  "passed": true
+}

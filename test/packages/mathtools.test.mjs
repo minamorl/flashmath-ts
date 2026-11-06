@@ -49,3 +49,43 @@ test('package expansions and parsing obey existing resource limits',()=>{
   assert.match(xml(String.raw`\xmathstrut{0.1}`,{maxNodes:2}),/Node limit exceeded/);
   assert.match(xml(String.raw`\prescript{a}{b}{X}`,{maxDepth:1}),/Nesting limit exceeded/);
 });
+
+test('37 independent variants agree with the installed MathJax 4.1.3 oracle',async()=>{
+  const cases=[
+  "\\mathllap[\\textstyle]{x+y}",
+  "\\mathclap[\\scriptscriptstyle]{x+y}",
+  "\\sum_{\\textllap{a $x$ b}}",
+  "\\textclap{a $x$ b}",
+  "\\cramped[\\displaystyle]{x}",
+  "\\xleftrightarrow[a+b]{c+d}",
+  "\\sum_{\\xRightarrow[a]{b}}",
+  "\\underbracket{x+y}",
+  "\\overbracket{x}",
+  "\\begin{matrix*}[r]a&b\\\\c&d\\end{matrix*}",
+  "x_{\\begin{smallmatrix*}a&b\\end{smallmatrix*}}",
+  "\\begin{dcases*}a&yes\\\\b&no\\end{dcases*}",
+  "\\DeclarePairedDelimiterX\\p[2]{(}{)}{#1+\\delimsize|#2}\\p*{x}{y}",
+  "\\DeclarePairedDelimiter\\abs{|}{|}\\abs{xy}",
+  "\\DeclarePairedDelimiter\\abs{|}{|}\\abs*{xy}",
+  "\\DeclarePairedDelimiter\\abs{|}{|}\\abs[\\big]{xy}",
+  "\\prescript{a}{b}{X}_d^c",
+  "\\prescript{a}{b}{X}_d",
+  "\\prescript{}{b}{X}'",
+  "\\prescript{a}{b}{X}^2",
+  "\\splitfrac{x}{y}",
+  "\\splitdfrac{x}{y}",
+  "\\frac{\\splitdfrac{x}{y}}{z}",
+  "\\mathtoolsset{centercolon=true}a:b",
+  "\\newtagform{a}{[}{]}\\usetagform{a}x\\tag{2}",
+  "\\begin{multlined}a\\\\b\\\\c\\end{multlined}",
+  "\\begin{lgathered}a\\\\b\\end{lgathered}",
+  "\\begin{align*}a&=b\\\\c&=d\\end{align*}",
+  "\\begin{aligned}a&=b\\\\c&=d\\end{aligned}",
+  "\\xmathstrut[-.2]{-.1}",
+  "\\mathtoolsset{allow-mathtoolsset=false}"
+];
+  cases.push(...["\\prescript{a}{b}{X}_{\\sum_i x}","x_{\\splitfrac{\\sum_i a}{b}}","\\prescript{\\sum_i a}{b}{X}","\\begin{multlined}[bad]x\\end{multlined}","\\begin{alignat*}{-1}x\\end{alignat*}","\\frac{\\splitfrac{\\sum_i}{b}}{z}"]);
+  for(const tex of cases) {
+    assert.equal(normalizeMathML(xml(tex)),normalizeMathML(await oracle(tex,options)),tex);
+  }
+});

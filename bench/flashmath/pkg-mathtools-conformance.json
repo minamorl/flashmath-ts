@@ -1,0 +1,1231 @@
+{
+  "version": "4.1.3",
+  "total": 196,
+  "matched": 196,
+  "rate": 1,
+  "groups": {
+    "mathtools": {
+      "total": 196,
+      "matched": 196,
+      "mismatch": 0,
+      "unsupported": 0
+    }
+  },
+  "byPackage": {
+    "base": {
+      "total": 196,
+      "matched": 196,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "ams": {
+      "total": 196,
+      "matched": 196,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "boldsymbol": {
+      "total": 185,
+      "matched": 185,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "mathtools": {
+      "total": 196,
+      "matched": 196,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "newcommand": {
+      "total": 1,
+      "matched": 1,
+      "mismatch": 0,
+      "unsupported": 0
+    },
+    "bbox": {
+      "total": 1,
+      "matched": 1,
+      "mismatch": 0,
+      "unsupported": 0
+    }
+  },
+  "classifications": {},
+  "rows": [
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control mathllap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control mathrlap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control mathclap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control clap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control mathmakebox 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control mathmakebox [r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control mathmakebox [R] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control mathmbox 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control textllap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control textrlap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control textclap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control cramped 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control crampedllap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control crampedrlap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control crampedclap 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control crampedsubstack 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Spacing Control adjustlimits 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Tagging newtagform 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Tagging newtagform styled 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Tagging renewtagform 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Tagging refeq 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Tagging Tags add 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Symbols Delimiters 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Symbols Other 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xleftrightarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xLeftarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xRightarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xLeftrightarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xhookleftarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xhookrightarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xmapsto 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xrightharpoondown 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xleftharpoondown 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xrightleftharpoons 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xleftrightharpoons 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xrightharpoonup 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xleftharpoonup 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xlongleftarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xLongleftarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xlongrightarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy xLongrightarrow 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy underbracket 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy underbracket thickness 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy underbracket height 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy underbracket thickness height 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy overbracket 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy overbracket thickness 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy overbracket height 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools stretchy overbracket thickness height 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments matrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments matrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments matrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments matrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments pmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments pmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments pmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments pmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments bmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments bmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments bmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments bmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments Bmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments Bmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments Bmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments Bmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments vmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments vmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments vmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments vmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments Vmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments Vmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments Vmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Matrix Environments Vmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments smallmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments smallmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments smallmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments smallmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments psmallmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments psmallmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments psmallmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments psmallmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments bsmallmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments bsmallmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments bsmallmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments bsmallmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Bsmallmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Bsmallmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Bsmallmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Bsmallmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments vsmallmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments vsmallmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments vsmallmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments vsmallmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Vsmallmatrix* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Vsmallmatrix*[l] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Vsmallmatrix*[c] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Vsmallmatrix*[r] 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments smallmatrix 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments smallmatrix 2",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments psmallmatrix 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments bsmallmatrix 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Bsmallmatrix 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments vsmallmatrix 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Small Matrix Environments Vsmallmatrix 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments multlined 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments multlined [b] width 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments multlined [c] width 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments multlined [t] width 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments multlined width 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments multlined shoved 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments multlined shoved distance 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments multlined empty row 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments dcases 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments dcases* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments rcases 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments rcases* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments drcases 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments drcases* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments cases* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments MoveEqLeft 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments Spreadlines 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments Spreadlines no environment 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments Spreadlines multiple environments 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments lgathered 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments rgathered 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments ArrowBetweenLines 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments ArrowBetweenLines* 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments vdotswithin smallvdotswithin 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments smallvdotswithin star 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools More Environments vdotswithin smallvdotswithin 2",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Paired Delimiters DeclarePairedDelimiter 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Paired Delimiters DeclarePairedDelimiter star 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Paired Delimiters DeclarePairedDelimiter size 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Paired Delimiters DeclarePairedDelimiterX 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Paired Delimiters DeclarePairedDelimiterXPP 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Paired Delimiters DeclarePairedDelimiters Backward Compatibility 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Boxed Equations Aboxed 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Boxed Equations Aboxed odd column 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Boxed Equations MakeAboxedCommand 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Boxed Equations MakeAboxedCommand star 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons := 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons vcentercolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons ordinarycolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons coloneq 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Coloneq 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons coloneqq 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Coloneqq 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons eqqcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Eqqcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons eqcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Eqcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons colonapprox 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Colonapprox 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons colonsim 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Colonsim 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons dblcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons approxcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Approxcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons simcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Simcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons colondash 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Colondash 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons dashcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Centered Colons Dashcolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescripts sub sup 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescripts sub 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescripts sup 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescripts no post sub 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescripts no post sup 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescripts no postscripts 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescripts empty 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescripts empty no postscripts 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Prescripts prescript filter ingores others 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Split Fractions splitfrac 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools Split Fractions splitfrac nested 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools struts xmathstrut 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools struts xmathstrut 2",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions multlined gap and pos 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions multlined-pos override 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions multlined skips 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions multlined width 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions smallmatrix-align 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions contercolon 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions contercolon-offset 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions thincolor dx and dw 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions use-unicode 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools setoptions prescript formats 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options tagforms 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options tagforms reset 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options pairedDelimiters 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options pairedDelimiters 2",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options pairedDelimiters 3",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options mathtoolsset 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options mathtoolsset legacycolonsymbols 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options legacycolonsymbols option 1",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    },
+    {
+      "id": "Mathtools.test.ts::Mathtools options legacycolonsymbols option 2",
+      "group": "mathtools",
+      "status": "matched",
+      "category": null
+    }
+  ]
+}

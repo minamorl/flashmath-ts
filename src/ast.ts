@@ -44,7 +44,7 @@ export interface ParseOptions {
   configurationModules?: readonly string[];
   executionOrder?: number;
   prior?: readonly { tex: string; display?: boolean }[];
-  tags?: "none" | "all";
+  tags?: "none" | "all" | "ams";
   baseURL?: string;
   useLabelIds?: boolean;
   ignoreDuplicateLabels?: boolean;

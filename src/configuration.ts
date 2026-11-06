@@ -81,7 +81,7 @@ export function configure(input: ParseOptions): {
       throw new TypeError(`Unsupported macro configuration: ${name}`);
   }
   if (options.tags !== undefined && !["none", "all"].includes(options.tags) &&
-      !(options.tags as string === "ams" && configuration.options.has("mathtools")))
+      !(options.tags === "ams" && configuration.options.has("mathtools")))
     throw new UnsupportedFeatureError(`Unsupported tag mode: ${options.tags}`);
   for (const name of ["baseURL", "tagSide", "tagIndent", "tagAlign"] as const)
     if (options[name] !== undefined && typeof options[name] !== "string")

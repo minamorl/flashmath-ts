@@ -1,0 +1,16 @@
+group | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+mathtools | 196 | 0 | 0 | 196 | 100.00%
+ALL | 196 | 0 | 0 | 196 | 100.00%
+
+package membership (overlapping; each denominator includes failures and unsupported):
+package | matched | mismatch | unsupported | total | matched/total
+--- | ---: | ---: | ---: | ---: | ---:
+base | 196 | 0 | 0 | 196 | 100.00%
+ams | 196 | 0 | 0 | 196 | 100.00%
+boldsymbol | 185 | 0 | 0 | 185 | 100.00%
+mathtools | 196 | 0 | 0 | 196 | 100.00%
+newcommand | 1 | 0 | 0 | 1 | 100.00%
+bbox | 1 | 0 | 0 | 1 | 100.00%
+
+classifications: {}

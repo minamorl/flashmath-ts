@@ -1,0 +1,32 @@
+✔ scripts, compound arguments and nested fences (19.088324ms)
+✔ fixed arity MathML children are never combined as adjacent relations (0.727122ms)
+✔ macro substitution respects control word boundaries and def templates (5.407465ms)
+✔ nested custom environments and array frames (2.165026ms)
+✔ definitions and parser state do not leak between parses (3.699051ms)
+✔ recursive macros, output size and nesting are bounded (1.49438ms)
+✔ deep input uses explicit stacks through serialization (15.35627ms)
+✔ malformed input returns an error tree or throws on request (2.329457ms)
+✔ text and attribute values are escaped as XML, never executed (5.621018ms)
+✔ React returns elements and SSR exactly equals the string renderer (30.78105ms)
+✔ error paths always serialize valid MathML and XML (3.500637ms)
+✔ adapter reproduces MathJax label/ref values, URLs, counter, duplicates and prior macros (97.525159ms)
+✔ parser sessions preserve document references and independent sessions isolate them (0.55631ms)
+✔ texclass presence and all explicit atom classes match MathJax (20.648337ms)
+✔ adapter preserves numberPattern as RegExp and serialized RegExp, and the digits alias (12.948316ms)
+✔ package activation is separate from module registration and unsupported contracts reject explicitly (1.223689ms)
+✔ a package adds commands, overrides, delimiters and an environment with one registry line (53.568084ms)
+✔ all 196 immutable MathJax mathtools fixtures, including attributes and texclass (305.390034ms)
+✔ base and newcommand match status never regresses from the captured baseline (208.74228ms)
+✔ mathtools activation and literal colon are separate from the control sequence (36.288354ms)
+✔ paired delimiters, options and tag forms persist in a session and remain isolated (2.186727ms)
+✔ package expansions and parsing obey existing resource limits (1.46202ms)
+✔ 37 independent variants agree with the installed MathJax 4.1.3 oracle (96.25361ms)
+✔ SSR exactly equals string output for all 848 executable base/newcommand fixtures (371.122335ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 965.974212

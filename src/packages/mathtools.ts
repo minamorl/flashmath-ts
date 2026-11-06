@@ -1,5 +1,7 @@
 /** MathJax 4.1.3 mathtools semantics, implemented on the token/frame parser.
  * Reference: MathJax MathtoolsMappings/Methods/Items/Util (Apache-2.0).
+ * Mapping data and MathML recipes adapted from MathJax, copyright 2020-2026
+ * MathJax Consortium, Apache-2.0; see ../LICENSE.MathJax.
  * No oracle, fixture lookup, or runtime MathJax dependency is used here.
  */
 import {K} from '../ast.js';
@@ -7,7 +9,7 @@ import type {Node} from '../ast.js';
 import type {Parser} from '../parser.js';
 import type {Token} from '../scanner.js';
 import {scan, raw, spelling} from '../scanner.js';
-import {dimensionEm, em, nodeText} from '../mathml.js';
+import {dimensionEm, em} from '../mathml.js';
 import {definitions} from '../symbols.js';
 import type {TexCommand, TexEnvironment, TexPackage} from './types.js';
 import newcommand from './newcommand.js';
@@ -20,6 +22,7 @@ interface State {
   tagforms: Map<string, string[]>;
   tagform: string[] | null;
   tables: WeakMap<object,TableExtra>;
+  styles: WeakMap<object,{display:boolean;level:number}>;
 }
 const defaults: Options = {
   'multlined-gap':'1em', 'multlined-pos':'c', 'multlined-width':'',
@@ -40,15 +43,23 @@ function push(p: Parser, tex: string) {
 function macro(p: Parser, name: string, body: string, count=0, optional: string | null=null) {
   p.macros.set(name,{body:scan(body),count,optional:optional === null ? null : scan(optional),prefix:[],delimiters:[]});
 }
+function inheritedStyle(p: Parser): {display:boolean;level:number} {
+  for(let i=p.frames.length-1;i>=0;i--){
+    const frame=p.frames[i],style=state(p).styles.get(frame);
+    if(style&&frame.level===p.f.level&&frame.display===p.f.display)return style;
+  }
+  return {display:p.f.display,level:p.f.level};
+}
 function styleAttrs(p: Parser, style: string): Record<string,string> {
   const level = ['\\displaystyle','\\textstyle','\\scriptstyle','\\scriptscriptstyle'].indexOf(style.trim());
-  return level < 0 ? {} : {...(p.f.display===(level===0)?{}:{displaystyle:String(level===0)}),...(p.f.level===Math.max(0,level-1)?{}:{scriptlevel:String(Math.max(0,level-1))})};
+  const inherited=inheritedStyle(p);
+  return level < 0 ? {} : {...(inherited.display===(level===0)?{}:{displaystyle:String(level===0)}),...(inherited.level===Math.max(0,level-1)?{}:{scriptlevel:String(Math.max(0,level-1))})};
 }
 function initialize(p: Parser) {
   if (!p.session.packageData.has('mathtools')) {
     const opts = {...defaults,...p.options.texOptions?.mathtools as Options};
     const s: State = {options:opts,pairs:new Map(Object.entries(opts.pairedDelimiters as Record<string,Pair> ?? {})),
-      tagforms:new Map(Object.entries(opts.tagforms as Record<string,string[]> ?? {})),tagform:null,tables:new WeakMap()};
+      tagforms:new Map(Object.entries(opts.tagforms as Record<string,string[]> ?? {})),tagform:null,tables:new WeakMap(),styles:new WeakMap()};
     p.session.packageData.set('mathtools',s);
     for (const name of s.pairs.keys()) macro(p,name,`\\MTpaired{${name}}`);
   }
@@ -122,7 +133,9 @@ for(const name of ['underbracket','overbracket']) command(name,(p,name)=>{
   const thickness=raw(p.optional()??scan('.1em'))||'.1em',height=raw(p.optional()??scan('.2em'));
   const toks=p.tokensArgument(),over=name==='overbracket';
   p.parseTokens(toks,base=>p.parseTokens(toks,copy=>{
-    const thicknessEm=thickness.endsWith('px')?parseFloat(thickness)/16:dimensionEm(thickness);
+    const unit=thickness.replace(/[-+0-9.\s]/g,''),value=parseFloat(thickness);
+    const units:Record<string,number>={px:1/16,in:6,cm:6/2.54,mm:6/25.4,em:1,ex:.431,pt:.1,pc:1.2,mu:1/18,'%':.001};
+    const thicknessEm=Number.isNaN(value) ? .1 : value*(units[unit]??.1);
     const script=p.node(K.mpadded,[p.node(K.mphantom,children(copy))],'',{
       style:`border: ${em(thicknessEm)} solid; border-${over?'bottom':'top'}: none`,height,depth:'0'});
     const n=p.node(over?K.mover:K.munder,[base,script],'',{[over?'accent':'accentunder']:'true'});
@@ -177,22 +190,29 @@ command('xmathstrut',p=>{
   p.append(p.atom([p.node(K.mpadded,[p.node(K.mphantom,[p.node(K.mo,[],'(',{stretchy:'false'})])],'',
     {width:'0',height:signed(dh)+'height',depth:signed(dd||dh)+'depth'})]));
 });
-// A fraction's arguments use the next TeX style; keep that state on frames.
+// Track inherited MathML style independently of TeX parsing (MathJax parses
+// operator limits before inheritance). Only package wrappers consume this map.
 command('frac',p=>{
- const display=p.f.display,level=p.f.level,values:Node[]=[];
+ const {display,level}=inheritedStyle(p),values:Node[]=[];
  const next=()=>{if(values.length===2){p.append(p.node(K.mfrac,values));return;}
-  p.argument(n=>{values.push(n);next();});p.f.display=false;p.f.level=display?level:level+1;
+  p.argument(n=>{values.push(n);next();});state(p).styles.set(p.f,{display:false,level:display?level:level+1});
  };next();
 });
 for(const name of ['splitfrac','splitdfrac'])command(name,(p,name)=>{
-  const display=name==='splitdfrac',outerDisplay=p.f.display,parentLevel=p.f.level;
-  p.args(2,([num,den])=>{
+  const display=name==='splitdfrac',{display:outerDisplay,level:parentLevel}=inheritedStyle(p);
+  const values:Node[]=[],argDisplay=[...p.frames].reverse().find(f=>f.level===0)?.display??p.options.display??false;
+  const next=()=>{
+    if(values.length!==2){
+      p.argument(n=>{values.push(n);next();});p.f.level=0;p.f.display=argDisplay;
+      state(p).styles.set(p.f,{display,level:0});return;
+    }
+    const [num,den]=values;
     const row=(nodes:Node[])=>p.node(K.mstyle,nodes,'',display?{}:{scriptlevel:'0'});
     const frac=p.node(K.mfrac,[row([...children(num),p.node(K.mi),p.node(K.mspace,[],'',{width:'1em'})]),
       row([p.node(K.mspace,[],'',{width:'1em'}),p.node(K.mi),...children(den)])],'',{linethickness:'0',numalign:'left',denomalign:'right'});
     const attrs:Record<string,string>={...(display===outerDisplay?{}:{displaystyle:String(display)}),...(parentLevel?{scriptlevel:'0'}:{})};
     p.append(Object.keys(attrs).length?p.node(K.mstyle,[frac],'',attrs):frac);
-  });
+  };next();
 });
 function scriptArgument(p:Parser,pos:string,done:(n:Node)=>void){
   let toks=p.tokensArgument(),format=option(p,`prescript-${pos}-format`);
@@ -258,7 +278,7 @@ for(const [prefix,left,right] of [['','',''],['p','(',')'],['b','[',']'],['B','{
     const names=small?[prefix+'smallmatrix*',...(prefix?[prefix+'smallmatrix']:['smallmatrix'])]:[prefix+'matrix*'];
     for(const name of names)environments[name]={begin(p,name){
       const alignment=name.endsWith('*')?raw(p.optional()??scan(small?option(p,'smallmatrix-align'):'c')):'c';
-      const align=alignment||'c',parentLevel=p.f.level;
+      const align=alignment||'c',parentLevel=inheritedStyle(p).level;
       p.tableStart(name,align,-4,n=>{
         n.attributes=small?{'data-mjx-smallmatrix':'true',columnspacing:'0.333em',rowspacing:'.2em',...(align==='c'?{}:{columnalign:({l:'left',r:'right'} as Record<string,string>)[align]??align})}:
           {columnspacing:'1em',rowspacing:'4pt',...(align==='c'?{}:{columnalign:Array.from(align,c=>({l:'left',c:'center',r:'right'} as Record<string,string>)[c]??c).join(' ')})};
@@ -304,17 +324,18 @@ for(const name of ['dcases','rcases','drcases','dcases*','rcases*','drcases*','c
    p.append(wrapTable(p,n,right?'':'{',right?'}':''));
  });p.f.display=display;
 }};
-interface TableExtra {shoves:Map<number,string>; rowGaps:Map<number,number>; arrowRows:Set<number>}
+interface TableExtra {shoves:Map<number,string>; rowGaps:Map<number,number>}
 // Metadata belongs to the live frame/table, via a closure created at begin.
 
 function extra(p:Parser):TableExtra {
  const t=p.f.table;if(!t)p.error('Command can only be used in aligment environments');
- let e=state(p).tables.get(t);if(!e){e={shoves:new Map(),rowGaps:new Map(),arrowRows:new Set()};state(p).tables.set(t,e);}return e;
+ let e=state(p).tables.get(t);if(!e){e={shoves:new Map(),rowGaps:new Map()};state(p).tables.set(t,e);}return e;
 }
 environments.multlined={begin(p,name){
  let pos=option(p,'multlined-pos')||'c',width=option(p,'multlined-width');
  // Unlike other optional arguments these must be immediately adjacent.
  if(p.stream.peek()?.[0]===91){const arg=raw(p.optional()??[]);if(/^[ctb]$/.test(arg)){pos=arg;width=p.stream.peek()?.[0]===91?raw(p.optional()??[]):'';}else width=arg;}
+ if(width&&!/^\s*[-+]?(?:\d+(?:[.,]\d*)?|[.,]\d+)\s*(?:em|ex|pt|pc|px|in|cm|mm|mu)\s*$/.test(width))p.error(`Width for \\begin{${name}} must be a dimension`);
  p.tableStart(name,'c',-4,n=>{
   const t=state(p).tables.get(table),rows=n.children;
   if(rows.length>1){const first=rows[0].children[0],last=rows.at(-1)!.children[0];
@@ -332,13 +353,16 @@ for(const name of ['shoveleft','shoveright'])command(name,(p,name)=>{
  p.argument(n=>{if(shift){const s=p.node(K.mspace,[],'',{width:shift});p.append(p.row(left?[s,n]:[n,s],true));}else p.append(n);});
 });
 function alignment(p:Parser,name:string){
- const isGather=name.includes('gather'),alignat=name.includes('alignat'),pairs=alignat?Number(raw(p.tokensArgument())):0;
+ const isGather=name.includes('gather'),alignat=name.includes('alignat');
+ const count=alignat?raw(p.tokensArgument()):'0',pairs=Number(count);
+ if(alignat&&!/^\d*$/.test(count))p.error(`Argument to \\begin{${name}} must be a positive integer`);
+ if(!Number.isSafeInteger(pairs)||pairs>(p.options.maxNodes??100000)/2)p.error('Node limit exceeded');
  const pos=raw(p.optional()??[]),gathered=name==='lgathered'||name==='rgathered';
  const align=isGather?(name==='lgathered'?'l':name==='rgathered'?'r':'c'):'rl'.repeat(pairs||1);
  p.tableStart(name,align,-4,n=>{
   const max=Math.max(1,...n.children.map(row=>row.children.length-(row.kind===K.mlabeledtr?1:0)));
   const columns=isGather?1:Math.max(alignat?pairs*2:0,max),e=state(p).tables.get(table);
-  for(const [i,row] of n.children.entries()){
+  for(const row of n.children){
    if(!isGather)for(let c=1+(row.kind===K.mlabeledtr?1:0);c<row.children.length;c+=2){
     const cell=row.children[c],nodes=cell.children;
     if(nodes[0]?.kind===K.mo)nodes.unshift(p.node(K.mi));
@@ -464,6 +488,7 @@ command('framebox',p=>{
  p.append(p.atom([p.node(K.menclose,[n],'',{notation:'box'})]));
 });
 const characters={':':commands[':']};delete commands[':'];
+delete commands.boldsymbol;delete commands.bbox;
 export default {name:'mathtools',commands,characters,environments,initialize,
  configurationModules:['input/tex/mathtools/MathtoolsConfiguration.js','input/tex/bbox/BboxConfiguration.js'],
  options:['mathtools'],
