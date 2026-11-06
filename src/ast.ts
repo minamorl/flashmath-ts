@@ -24,7 +24,10 @@ export type MathMLKind =
   | "mtr"
   | "mlabeledtr"
   | "mtd"
-  | "menclose";
+  | "menclose"
+  | "maction"
+  | "#text"
+  | (string & {});
 export interface MathMLNode {
   kind: MathMLKind;
   attributes: Record<string, string>;
@@ -41,7 +44,7 @@ export interface ParseOptions {
   configurationModules?: readonly string[];
   executionOrder?: number;
   prior?: readonly { tex: string; display?: boolean }[];
-  tags?: "none" | "all";
+  tags?: "none" | "all" | "ams";
   baseURL?: string;
   useLabelIds?: boolean;
   ignoreDuplicateLabels?: boolean;
@@ -95,6 +98,8 @@ export const tags: MathMLKind[] = [
   "mlabeledtr",
   "mtd",
   "menclose",
+  "maction",
+  "html",
 ];
 export const enum K {
   math,
@@ -122,6 +127,8 @@ export const enum K {
   mlabeledtr,
   mtd,
   menclose,
+  maction,
+  html,
 }
 export interface Node {
   kind: K;
@@ -134,6 +141,8 @@ export interface Node {
   relation: boolean;
   fixed: boolean;
   rawAttrs: boolean;
+  /** Parsed HTML subtree, available only through the explicit texhtml package. */
+  html?: MathMLNode;
 }
 export function expose(root: Node): MathMLNode {
   const result: MathMLNode = {
@@ -147,6 +156,7 @@ export function expose(root: Node): MathMLNode {
   while (stack.length) {
     const [n, out] = stack.pop()!;
     for (const c of n.children) {
+      if (c.html) { out.children.push(c.html); continue; }
       const v: MathMLNode = {
         kind: tags[c.kind],
         attributes: c.attributes,

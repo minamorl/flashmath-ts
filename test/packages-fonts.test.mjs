@@ -1,0 +1,16 @@
+import './packages/color.test.mjs';
+import './packages/colorv2.test.mjs';
+import './packages/colortbl.test.mjs';
+import './packages/boldsymbol.test.mjs';
+import './packages/bbm.test.mjs';
+import './packages/bboldx.test.mjs';
+import './packages/dsfont.test.mjs';
+import './packages/upgreek.test.mjs';
+import './packages/gensymb.test.mjs';
+import './packages/textcomp.test.mjs';
+import './packages/unicode.test.mjs';
+import './packages/texhtml.test.mjs';
+import './packages/html.test.mjs';
+import './packages/action.test.mjs';
+import './packages/tagformat.test.mjs';
+import './packages/fontsizev3.test.mjs';

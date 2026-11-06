@@ -10,7 +10,7 @@ export function configure(input: ParseOptions): {
   options: ParseOptions;
   configuration: PackageConfiguration;
 } {
-  if (input.mode !== undefined && input.mode !== "convert")
+  if (input.mode !== undefined && input.mode !== "convert" && !(input.mode === "render" && input.packages?.some(p=>(typeof p==="string"?p:p[0])==="texhtml")))
     throw new UnsupportedFeatureError(
       `Unsupported mode: ${input.mode} (HTML discovery and SVG measurement are not implemented)`,
     );
@@ -80,7 +80,7 @@ export function configure(input: ParseOptions): {
     )
       throw new TypeError(`Unsupported macro configuration: ${name}`);
   }
-  if (options.tags !== undefined && !["none", "all"].includes(options.tags))
+  if (options.tags !== undefined && !( ["none", "all"].includes(options.tags) || (options.tags==="ams" && input.packages?.some(p => (typeof p === "string" ? p : p[0]) === "ams"))))
     throw new UnsupportedFeatureError(`Unsupported tag mode: ${options.tags}`);
   for (const name of ["baseURL", "tagSide", "tagIndent", "tagAlign"] as const)
     if (options[name] !== undefined && typeof options[name] !== "string")

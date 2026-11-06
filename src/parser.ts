@@ -16,6 +16,7 @@ import { C, definitions, ranges } from "./symbols.js";
 import { resolvePackages } from "./packages/registry.js";
 import { configure } from "./configuration.js";
 import { sessionState } from "./session-state.js";
+import {format,tagNodes} from "./packages/tagformat.js";
 import type { SessionState, Reference } from "./session-state.js";
 import type { PackageConfiguration } from "./packages/types.js";
 import type { Definition } from "./symbols.js";
@@ -73,6 +74,7 @@ interface Table {
   numbered: boolean;
   taggable: boolean;
   tagCells: Map<number, Node>;
+  colors?: {cell:string;row:string;columns:string[];rowIndex:number};
 }
 const NS = "http://www.w3.org/1998/Math/MathML";
 const isDigit = (c: number) => c >= 48 && c <= 57;
@@ -874,6 +876,11 @@ export class Parser {
     }
     if (t.align === "ll" && t.cells.length === 1 && nodes[0]?.kind !== K.mtext)
       nodes = [this.node(K.mtext, [], nodeText(nodes))];
+    if (t.colors) {
+      const color=t.colors.cell || (t.colors.rowIndex===t.rows.length?t.colors.row:"") || t.colors.columns[t.cells.length];
+      if(color)a.mathbackground=color;
+      t.colors.cell="";
+    }
     t.cells.push(this.node(K.mtd, nodes, "", a));
   }
   completeTable(t: Table, name: string, done: (n: Node) => void) {
@@ -931,38 +938,29 @@ export class Parser {
     if (table) table.labels[table.rows.length] = label;
     else this.label = label;
   }
-  reference(label: string) {
+  reference(label: string, formatted = false) {
     const ref = this.session.labels.get(label) ??
       this.localLabels.get(label) ?? { tag: "???", id: "" };
     this.append(
-      this.node(K.mrow, [this.node(K.mtext, [], ref.tag)], "", {
-        href: (this.options.baseURL ?? "") + "#" + encodeURIComponent(ref.id),
+      this.node(K.mrow, formatted ? tagNodes(this,ref.tag,false,true) : [this.node(K.mtext, [], ref.tag)], "", {
+        href: String(format(this,"url",ref.id,this.options.baseURL ?? "")),
         class: "MathJax_ref",
       }),
     );
   }
   tagRow(table: Table) {
     const index = table.rows.length - 1;
-    if (table.numbered && !table.noNumbers.has(index))
+    if (table.numbered && !table.noNumbers.has(index) && !table.tagCells.has(index))
       table.tagCells.set(index, this.labelCell(table.labels[index] ?? ""));
   }
-  labelCell(label: string) {
-    const n = ++this.session.counter,
-      tag = String(n);
+  labelCell(label: string, explicit?: string, starred = false) {
+    const tag = explicit ?? String(format(this,"number",++this.session.counter));
     const id =
-      "mjx-eqn:" +
-      ((this.options.useLabelIds !== false ? label : "") || tag).replace(
-        /\s/g,
-        "_",
-      );
+      String(format(this,"id",(this.options.useLabelIds !== false ? label : "") || tag));
     if (label) this.localLabels.set(label, { tag, id });
     return this.node(
       K.mtd,
-      [
-        this.node(K.mtext, [], "("),
-        this.node(K.mtext, [], tag),
-        this.node(K.mtext, [], ")"),
-      ],
+      tagNodes(this,tag,starred),
       "",
       {
         id,
@@ -1194,6 +1192,10 @@ export class Parser {
         continue;
       }
       if (space(c)) continue;
+      if(c>=0) {
+        const extension=this.configuration.extensions.get(spelling(t));
+        if(extension) { extension.execute(this,t,extension.definition,-1); continue; }
+      }
       switch (c) {
         case 123:
           this.frame(125, false, (n) => this.append(this.atom(n)));
