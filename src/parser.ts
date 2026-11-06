@@ -129,6 +129,7 @@ export class Parser {
     this.frame(0, false, (n) => {
       this.result = n;
     });
+    for (const initialize of configuration.initializers) initialize(this);
   }
   error(message: string): never {
     throw new ParseError(message, this.position);
@@ -1256,6 +1257,11 @@ export class Parser {
           registered.execute(this, t, registered.definition, id);
           continue;
         }
+      }
+      const characterHandler = this.configuration.characters.get(spelling(t));
+      if (characterHandler) {
+        characterHandler.execute(this, t, characterHandler.definition, -1);
+        continue;
       }
       if (
         isDigit(c) ||

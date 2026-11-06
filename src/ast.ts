@@ -24,7 +24,10 @@ export type MathMLKind =
   | "mtr"
   | "mlabeledtr"
   | "mtd"
-  | "menclose";
+  | "menclose"
+  | "mmultiscripts"
+  | "mprescripts"
+  | "none";
 export interface MathMLNode {
   kind: MathMLKind;
   attributes: Record<string, string>;
@@ -95,6 +98,9 @@ export const tags: MathMLKind[] = [
   "mlabeledtr",
   "mtd",
   "menclose",
+  "mmultiscripts",
+  "mprescripts",
+  "none",
 ];
 export const enum K {
   math,
@@ -122,6 +128,9 @@ export const enum K {
   mlabeledtr,
   mtd,
   menclose,
+  mmultiscripts,
+  mprescripts,
+  none,
 }
 export interface Node {
   kind: K;
