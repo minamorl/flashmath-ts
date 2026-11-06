@@ -4,6 +4,7 @@
 import {K} from '../ast.js';
 import {raw} from '../scanner.js';
 import type {TexPackage} from './types.js';
+import {markPackageNode} from '../package-mark.js';
 
 const units = new Set(['pt', 'em', 'ex', 'mu', 'px', 'in', 'cm', 'mm']);
 const digit = (c: number) => c >= 48 && c <= 57;
@@ -56,7 +57,7 @@ export default {name: 'bbox', commands: {bbox: {execute(p) {
       } else p.error(`"${part}" doesn't look like a color, a padding dimension, or a style`);
     }
     const children = () => math.kind === K.mrow && math.inferred ? math.children : [math];
-    if (padding) math = p.node(K.mpadded, children(), '', padding);
+    if (padding) math = markPackageNode(p.node(K.mpadded, children(), '', padding),'bbox-padding');
     if (background || style) math = p.node(K.mstyle, children(), '', {
       ...(background ? {mathbackground: background} : {}), ...(style ? {style} : {})});
     p.append(math);

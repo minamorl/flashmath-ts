@@ -1,6 +1,6 @@
 // Provenance is private object metadata, never a MathML attribute. Literal
 // user glyphs cannot acquire it merely by selecting a package or a codepoint.
-type PackageMark = 'glyph' | 'arrow-label' | 'prescript';
+type PackageMark = 'glyph' | 'arrow-label' | 'prescript' | 'bbox-padding';
 const marks = new WeakMap<object, PackageMark>();
 export function markPackageNode<T extends object>(node:T, kind:PackageMark):T {
   marks.set(node,kind);return node;

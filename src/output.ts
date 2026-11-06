@@ -1,5 +1,7 @@
 import type {MathMLNode, OutputOptions} from './ast.js';
 import {packageMark} from './package-mark.js';
+import {variantName, variantText} from './native-variants.js';
+import {addStyle, isCenterOver, nativeBBox, nativeCenterOver, nativeEnclosure, nativeTable} from './native-layout.js';
 
 // MathJax's mhchem glyph slots belong to its own font. Native MathML uses
 // standard Unicode and MathML accents instead; see docs/packages-pkg-chem.md.
@@ -24,6 +26,10 @@ function arrowLabel(n: MathMLNode) {
   const a = n.attributes, strut = n.children.at(-1)!.attributes;
   return a.voffset === '-.2em' && a.height === '-.2em' && strut.depth === '.2em'
     || a.voffset === '.15em' && a.depth === '-.15em' && strut.height === '.75em';
+}
+function overline(n:MathMLNode):boolean {
+  const accent=n.children[1];
+  return (n.kind==='mover'||n.kind==='munder')&&accent?.kind==='mo'&&accent.text==='―'&&accent.attributes.accent==='true';
 }
 function nativeGlyph(n: MathMLNode): MathMLNode {
   const code = codeOf(n), text = glyph(code);
@@ -51,8 +57,8 @@ function nativeGlyph(n: MathMLNode): MathMLNode {
   return result;
 }
 
-/** Select glyph output without mutating the caller's AST. MathJax mode preserves
- * the supplied codes; native mode maps mhchem's private-use font slots. */
+/** Native output lowers renderer-specific layout to MathML Core and inline CSS.
+ * MathJax output returns the original tree verbatim. Neither mode mutates input. */
 export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): MathMLNode {
   const mode = options.output === undefined ? 'native' : options.output;
   if (mode !== 'native' && mode !== 'mathjax') throw new TypeError('output must be native or mathjax');
@@ -60,40 +66,82 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
   const pending = [root];
   let found = false;
   while (pending.length) {
-    const node = pending.pop()!, code = codeOf(node);
-    if (glyph(code) || compound(code) || arrowLabel(node) || packageMark(node)==='prescript') {found = true; break;}
-    for (const child of node.children) pending.push(child);
+    const n = pending.pop()!, code = codeOf(n), variant=n.attributes.mathvariant;
+    if (glyph(code) || compound(code) || arrowLabel(n) || packageMark(n)==='prescript' || packageMark(n)==='bbox-padding'
+      || n.kind==='menclose' || n.kind==='mlabeledtr' || isCenterOver(n)
+      || overline(n)
+      || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame)
+      || variant && (variant!=='normal' && (variant!=='italic' || n.kind!=='mi' || Array.from(n.text).length!==1) || n.kind==='mstyle')) {found = true; break;}
+    for (const child of n.children) pending.push(child);
   }
   if (!found) return root;
-  // Browser under/over layout determines the arrow's width from its labels.
-  // MathJax's relative mpadded dimensions and struts belong to its own renderer.
   const copy = (n: MathMLNode): MathMLNode => arrowLabel(n)
     ? {...n, kind: 'mrow', attributes: {}, children: []}
     : {...n, attributes: {...n.attributes}, children: []};
-  const result = copy(root), stack: [MathMLNode, MathMLNode][] = [[root, result]];
-  while (stack.length) {
-    const [input, output] = stack.pop()!;
-    const length = input.children.length - (arrowLabel(input) ? 1 : 0);
-    for (let i = 0; i < length; i++) {
-      const child = input.children[i];
-      if(packageMark(child)==='prescript' && input.children[i+3]) {
-        const script=(which:number):MathMLNode=>{
-          const stack=[child.children[which]];
-          while(stack.length){const n=stack.pop();if(!n)continue;
-            if(n.kind==='mphantom')return {kind:n.children.length?'mrow':'none',attributes:{},children:n.children,text:'',start:child.start};
-            for(const c of n.children)stack.push(c);
-          }
-          return {kind:'none',attributes:{},children:[],text:'',start:child.start};
-        };
-        const source:MathMLNode={kind:'mmultiscripts',attributes:{},children:[
-          input.children[i+3],{kind:'mprescripts',attributes:{},children:[],text:'',start:child.start},script(1),script(2),
-        ],text:'',start:child.start};
-        const cloned=copy(source);output.children.push(cloned);stack.push([source,cloned]);i+=3;continue;
+  const result=copy(root);
+  const defaultSide='tagSide' in options&&options.tagSide==='left'?'left':'right';
+  let hasLabels=false;
+  type Job={input:MathMLNode;output:MathMLNode;variant:string;done:boolean};
+  const work:Job[]=[{input:root,output:result,variant:'',done:false}];
+  while(work.length){
+    const job=work.pop()!,{input,output}=job;
+    const variant=input.attributes['data-mjx-variant']??input.attributes.mathvariant??job.variant;
+    if(!job.done){
+      work.push({...job,done:true});
+      const sourceChildren=input.children.slice(0,input.children.length-(arrowLabel(input)?1:0));
+      const children:MathMLNode[]=[];
+      for(let i=0;i<sourceChildren.length;i++){
+        const child=sourceChildren[i];
+        if(packageMark(child)==='prescript' && sourceChildren[i+3]){
+          const script=(which:number):MathMLNode=>{
+            const stack=[child.children[which]];
+            while(stack.length){const n=stack.pop();if(!n)continue;
+              if(n.kind==='mphantom')return {kind:n.children.length?'mrow':'none',attributes:{},children:n.children,text:'',start:child.start};
+              for(const c of n.children)stack.push(c);
+            }
+            return {kind:'none',attributes:{},children:[],text:'',start:child.start};
+          };
+          children.push({kind:'mmultiscripts',attributes:{},children:[sourceChildren[i+3],{kind:'mprescripts',attributes:{},children:[],text:'',start:child.start},script(1),script(2)],text:'',start:child.start});
+          i+=3;
+        }else children.push(child);
       }
-      const code = codeOf(child);
-      if (glyph(code) || compound(code)) output.children.push(nativeGlyph(child));
-      else {const cloned = copy(child); output.children.push(cloned); stack.push([child, cloned]);}
+      for(const child of children){
+        const cloned=copy(child);output.children.push(cloned);
+        work.push({input:child,output:cloned,variant,done:false});
+      }
+      continue;
+    }
+    const code=codeOf(input);
+    if(glyph(code)||compound(code)){Object.assign(output,nativeGlyph(input));continue;}
+    if(variant){
+      const name=variantName(variant);
+      if(['mi','mn','mo','mtext'].includes(output.kind)){
+        const mapped=output.kind==='mtext'?output.text:variantText(output.text,variant);
+        if(name!=='normal'&&mapped===output.text){
+          if(name.includes('bold'))addStyle(output,'font-weight:bold;');
+          if(name.includes('italic')||name.includes('script'))addStyle(output,'font-style:italic;');
+          if(name.includes('sans-serif'))addStyle(output,'font-family:sans-serif;');
+          if(name==='monospace')addStyle(output,'font-family:monospace;');
+        }
+        output.text=mapped;
+        delete output.attributes['data-mjx-variant'];
+        if(output.kind==='mi')output.attributes.mathvariant='normal';
+        else delete output.attributes.mathvariant;
+      }else delete output.attributes.mathvariant;
+    }
+    if(packageMark(input)==='bbox-padding')nativeBBox(output);
+    else if(output.kind==='menclose')Object.assign(output,nativeEnclosure(output));
+    else if(isCenterOver(output))nativeCenterOver(output);
+    else if(output.kind==='mtable'){
+      const labeled=output.children.some(n=>n.kind==='mlabeledtr');
+      nativeTable(output,defaultSide);hasLabels ||= labeled;
+    }
+    if(overline(output)){
+      const under=output.kind==='munder';
+      Object.assign(output,nativeEnclosure({...output,attributes:{...output.attributes,notation:under?'bottom':'top','data-padding':'.1em','data-thickness':'.04em'},children:[output.children[0]]}));
+      output.attributes['data-flashmath-accent']=under?'underline':'overline';
     }
   }
-  return glyph(codeOf(root)) || compound(codeOf(root)) ? nativeGlyph(root) : result;
+  if(hasLabels&&result.kind==='math'&&result.attributes.display==='block')addStyle(result,'width:100%;display:block;');
+  return result;
 }

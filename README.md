@@ -36,6 +36,12 @@ AST before creating elements. Keys are deterministic integers derived from
 source offsets and sibling positions. Text and attributes are escaped; the React
 path does not use `dangerouslySetInnerHTML`.
 
+Native output includes inline CSS for enclosure strokes, boxes, equation tags,
+proof rules and centered overlays, and Unicode mathematical font variants.
+See [native rendering](docs/native-render.md) for the lowering rules, browser/CSS
+requirements and the 195-expression MathJax SVG comparison. Use `output:
+'mathjax'` during parsing and serialization to preserve upstream MathML instead.
+
 For multiple expressions in one document, use a session so macros, labels and
 equation counters carry forward:
 

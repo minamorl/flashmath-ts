@@ -23,5 +23,5 @@ const lazyPackages={name:'lazy-package-tables',setup(b){
     return {contents,loader:'ts'};
   });
 }};
-await build({entryPoints:['src/index.ts','src/react.ts','src/configuration.ts','src/configuration-cache.ts','src/packages/registry.ts'],outdir:'dist',outbase:'src',bundle:true,splitting:true,format:'esm',platform:'neutral',target:'es2022',minify:true,external:['react','react-dom'],legalComments:'eof',plugins:[lazyPackages]});
+await build({entryPoints:['src/index.ts','src/react.ts','src/output.ts','src/native-variants.ts','src/configuration.ts','src/configuration-cache.ts','src/packages/registry.ts'],outdir:'dist',outbase:'src',bundle:true,splitting:true,format:'esm',platform:'neutral',target:'es2022',minify:true,external:['react','react-dom'],legalComments:'eof',plugins:[lazyPackages]});
 console.error('Built shared ESM runtime and TypeScript declarations');

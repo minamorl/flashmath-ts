@@ -8,7 +8,7 @@ import {run} from '../../conformance/runner.mjs';
 import {normalizeMathML} from '../../conformance/normalize.mjs';
 
 const options={packages:['base','ams','mathtools'],display:true};
-const xml=(tex,extra={})=>toMathMLString(parseToMathMLAst(tex,{...options,...extra}));
+const xml=(tex,extra={})=>toMathMLString(parseToMathMLAst(tex,{...options,...extra,output:'mathjax'}),{output:'mathjax'});
 const fixture=JSON.parse(fs.readFileSync(new URL('../../conformance/fixtures/mathjax-4.1.3.json',import.meta.url)));
 
 test('all 196 immutable MathJax mathtools fixtures, including attributes and texclass',async()=>{
