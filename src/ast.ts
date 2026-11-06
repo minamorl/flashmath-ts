@@ -1,0 +1,27 @@
+/** A MathML tree. The parser uses numeric tags internally and exposes this string union. */
+export type MathMLKind = 'math'|'mi'|'mn'|'mo'|'mtext'|'mspace'|'mrow'|'mfrac'|'msqrt'|'mroot'|'msub'|'msup'|'msubsup'|'munder'|'mover'|'munderover'|'mstyle'|'merror'|'mpadded'|'mphantom'|'mtable'|'mtr'|'mlabeledtr'|'mtd'|'menclose';
+export interface MathMLNode { kind: MathMLKind; attributes: Record<string,string>; children: MathMLNode[]; text: string; start: number }
+export interface ParseOptions {
+  display?: boolean;
+  maxExpansions?: number;
+  maxNodes?: number;
+  maxTokens?: number;
+  maxDepth?: number;
+  /** Throw instead of returning MathJax-compatible merror markup. */
+  throwOnError?: boolean;
+  macros?: Record<string,string | [string,number,string?]>;
+  /** Decimal separator; default is '.'. */
+  decimalSeparator?: '.'|',';
+}
+export class ParseError extends Error {
+  constructor(message:string, public readonly position:number) {super(message);this.name='ParseError';}
+}
+export const tags: MathMLKind[] = ['math','mi','mn','mo','mtext','mspace','mrow','mfrac','msqrt','mroot','msub','msup','msubsup','munder','mover','munderover','mstyle','merror','mpadded','mphantom','mtable','mtr','mlabeledtr','mtd','menclose'];
+export const enum K {math,mi,mn,mo,mtext,mspace,mrow,mfrac,msqrt,mroot,msub,msup,msubsup,munder,mover,munderover,mstyle,merror,mpadded,mphantom,mtable,mtr,mlabeledtr,mtd,menclose}
+export interface Node {kind:K;attributes:Record<string,string>;children:Node[];text:string;start:number;op:number;limits:number;relation:boolean;fixed:boolean;rawAttrs:boolean}
+export function expose(root:Node):MathMLNode {
+  const result:MathMLNode={kind:tags[root.kind],attributes:root.attributes,children:[],text:root.text,start:root.start};
+  const stack:[Node,MathMLNode][]=[[root,result]];
+  while(stack.length){const [n,out]=stack.pop()!;for(const c of n.children){const v:MathMLNode={kind:tags[c.kind],attributes:c.attributes,children:[],text:c.text,start:c.start};out.children.push(v);stack.push([c,v]);}}
+  return result;
+}

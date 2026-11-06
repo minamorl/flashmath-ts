@@ -1,0 +1,7 @@
+The generated symbol definitions in symbols.ts are adapted from MathJax-src
+4.1.3 ts/input/tex/base/BaseMappings.ts and
+ts/core/MmlTree/OperatorDictionary.ts, copyright 2009-2026 The MathJax
+Consortium, licensed under Apache License 2.0. See LICENSE.MathJax in this
+folder. Source: https://github.com/mathjax/MathJax-src/tree/4.1.3
+Generation changes representation to immutable data and an integer decision tree.
+Parser, scanner, AST, and rendering code are independent implementations.

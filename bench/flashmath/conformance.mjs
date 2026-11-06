@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {run,table} from '../../conformance/runner.mjs';
+import subject from './adapter.mjs';
+const fixture=JSON.parse(fs.readFileSync(new URL('../../conformance/fixtures/mathjax-4.1.3.json',import.meta.url)));
+const selected={...fixture,records:fixture.records.filter(r=>r.group==='base'||r.group==='newcommand')};
+const report=await run(subject,selected);
+report.scope='base and newcommand groups; denominator includes harness unsupported records';
+report.node=process.version;
+fs.writeFileSync(new URL('./conformance.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
+console.log(table(report));
+process.exitCode=Object.values(report.groups).every(g=>g.matched/g.total>=0.95)?0:1;
