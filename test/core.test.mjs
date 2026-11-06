@@ -34,7 +34,8 @@ test('definitions and parser state do not leak between parses',()=>{
  assert.equal(content('\\def\\foo{x}\\foo')[0].text,'x');
  assert.equal(content('\\foo')[0].kind,'merror');
  assert.equal(content('a')[0].attributes.mathvariant,undefined);
- assert.equal(content('\\bf a')[0].attributes.mathvariant,'bold');
+ assert.equal(content('\\bf a')[0].text,'𝐚');
+ assert.equal(parseToMathMLAst('\\bf a',{output:'mathjax'}).children[0].attributes.mathvariant,'bold');
  assert.equal(content('a')[0].attributes.mathvariant,undefined);
 });
 test('recursive macros, output size and nesting are bounded',()=>{
