@@ -1,5 +1,5 @@
 {
-  "name": "@minamorl/flashmath",
+  "name": "@rainpulse/flashmath",
   "version": "0.0.0",
   "private": true,
   "description": "TeX to MathML parser for React, conformance-tested against MathJax",

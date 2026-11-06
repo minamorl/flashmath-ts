@@ -49,7 +49,7 @@ test('recursive macros, output size and nesting are bounded',()=>{
 });
 test('deep input uses explicit stacks through serialization',()=>{
  const n=500;const out=xml('{'.repeat(n)+'x'+'}'.repeat(n),{maxDepth:600});
- assert.equal(out.match(/<mrow>/g).length,n);
+ assert.equal(out.match(/<mrow(?:>| )/g).length,n);
 });
 test('malformed input returns an error tree or throws on request',()=>{
  for(const tex of ['{','}', '\\left(x','\\frac{1}', '\\newenvironment{a}{x}{y}\\begin{a}','\\unknown']){

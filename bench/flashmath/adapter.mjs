@@ -1,4 +1,7 @@
 import {parseToMathMLAst,toMathMLString} from '../../dist/index.js';
-export default function subject(tex,{display=true,texOptions={}}={}) {
- return toMathMLString(parseToMathMLAst(tex,{display,macros:texOptions.macros,decimalSeparator:texOptions.digits?.includes(',')?',':'.'}));
+import {reviveOptions} from '../../conformance/options.mjs';
+/** Pass the complete harness contract. The core explicitly rejects unsupported
+ * packages, modes, registration modules and TeX options instead of ignoring them. */
+export default function subject(tex,options={}) {
+ return toMathMLString(parseToMathMLAst(tex,{display:true,...reviveOptions(options)}));
 }
