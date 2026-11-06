@@ -9,9 +9,10 @@ import {operator} from '../mathml.js';
 import type {TexPackage} from './types.js';
 
 function center(p: Parser, negated = false) {
-  const base = p.tokensArgument();
-  const over = negated ? scan('{⧸}') : p.tokensArgument();
-  const group = (n: Node) => p.atom(n.kind === K.mrow && !Object.keys(n.attributes).length ? n.children : [n]);
+  const name = negated ? '\\centernot' : '\\centerOver';
+  const base = p.tokensArgument(name);
+  const over = negated ? scan('{⧸}') : p.tokensArgument(name);
+  const group = (n: Node) => p.atom(n.kind === K.mrow && n.inferred ? n.children : [n]);
   p.parseTokens(over, symbol => {
     p.parseTokens(base, phantom => {
       p.parseTokens(base, visible => {
@@ -21,7 +22,7 @@ function center(p: Parser, negated = false) {
         const cls = core.attributes['data-mjx-texclass'] ??
           (core.kind === K.mi && core.op ? 'OP' : core.kind === K.mo
             ? ['ORD', 'OP', 'BIN', 'REL', 'OPEN', 'CLOSE', 'PUNCT', 'INNER'][operator(core.text)?.[2] ?? 0] : 'ORD');
-        const content = symbol.kind === K.mrow && !Object.keys(symbol.attributes).length ? symbol.children : [symbol];
+        const content = symbol.kind === K.mrow && symbol.inferred ? symbol.children : [symbol];
         p.append(p.atom([group(visible), p.node(K.mpadded, [
           p.node(K.mpadded, content, '', {width: '0', lspace: '-.5width'}),
           p.node(K.mphantom, [group(phantom)]),

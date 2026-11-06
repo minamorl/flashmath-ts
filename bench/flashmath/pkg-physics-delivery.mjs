@@ -22,7 +22,7 @@ try {
   git(['init', '--bare', gitdir]);
   fs.writeFileSync(path.join(gitdir, 'objects/info/alternates'), objects + '\n');
   const ref = 'refs/heads/lane/pkg-physics';
-  let parent = base;
+  let parent = git(['rev-parse', 'HEAD']);
   if (previous && fs.existsSync(bundle)) {
     local(['fetch', bundle, ref + ':' + ref]);
     parent = local(['rev-parse', ref]);
@@ -30,11 +30,14 @@ try {
   local(['read-tree', parent]);
   const files = [
     ...['physics', 'braket', 'bbox', 'cancel', 'centernot', 'enclose'].map(n => `src/packages/${n}.ts`),
-    'src/parser.ts', 'src/packages/registry.ts', 'test/packages', 'test/packages-pkg-physics.test.mjs', 'docs/packages-shared-changes.md',
+    'src/parser.ts', 'src/ast.ts', 'src/react.ts', 'src/packages/base.ts', 'src/packages/types.ts',
+    'src/packages/registry.ts', 'test/packages', 'test/ssr-fixtures.test.mjs', 'test/packages-pkg-physics.test.mjs', 'docs/packages-shared-changes.md',
     'docs/packages-pkg-physics.md', 'bench/flashmath/pkg-physics-delivery.mjs',
     'bench/flashmath/pkg-physics-differences.mjs', 'bench/flashmath/pkg-physics-conformance.json',
     'bench/flashmath/pkg-physics-validation.json', 'bench/flashmath/pkg-physics-validation.mjs',
     'bench/flashmath/pkg-physics-tests.log', 'bench/flashmath/pkg-physics-conformance.log',
+    'bench/flashmath/pkg-physics-validation.log', 'bench/flashmath/pkg-physics-scaling.log',
+    'bench/flashmath/pkg-physics-verifier',
   ].filter(name => fs.existsSync(path.join(root, name)));
   local(['add', '-f', '--', ...files]);
   const tree = local(['write-tree']);

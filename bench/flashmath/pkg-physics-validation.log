@@ -1,0 +1,56 @@
+build: exit 0
+
+tests: exit 0
+✔ SSR exactly equals string output for every executable fixture of every supported package (1774.139704ms)
+ℹ {"groups":{"ams":130,"base":790,"bbox":6,"braket":30,"cancel":8,"centernot":2,"colorv2":4,"enclose":6,"newcommand":58,"physics":628,"tag":50,"tex":2},"unsupported":921}
+ℹ tests 802
+ℹ suites 0
+ℹ pass 802
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2453.763342
+scaling: exit 0
+✔ quantity, function and enclosure hot paths do not run regex, split, match or replace (6.381363ms)
+ℹ [{"name":"cancel","counts":{"exec":0,"test":0,"split":0,"match":0,"replace":0}},{"name":"bbox","counts":{"exec":0,"test":0,"split":0,"match":0,"replace":0}},{"name":"enclose","counts":{"exec":0,"test":0,"split":0,"match":0,"replace":0}},{"name":"physics","counts":{"exec":0,"test":0,"split":0,"match":0,"replace":0}}]
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 435.047594
+verifier: exit 0
+│ enclose        │ 39    │ 39    │ 39    │ 39         │ 38    │ 38         │
+│ centernot      │ 22    │ 21    │ 21    │ 20         │ 18    │ 18         │
+│ mixed          │ 13    │ 13    │ 13    │ 13         │ 13    │ 13         │
+│ physics+braket │ 9     │ 9     │ 9     │ 9          │ 8     │ 8          │
+│ braket+physics │ 9     │ 9     │ 9     │ 9          │ 8     │ 8          │
+└────────────────┴───────┴───────┴───────┴────────────┴───────┴────────────┘
+{"total":467,"matched":465,"novel":439,"novelMatched":437,"valid":395,"validMatched":394,"ssrThrows":0,"ssrExact":466,"corpusSHA256":"c44ca0b973aa44f435472a02822e841e9ad36a529a2acae2e6da6d250b1f0360","groups":{"physics":{"total":285,"novel":263,"match":284,"novelMatch":262,"valid":232,"validMatch":231},"braket":{"total":33,"novel":32,"match":33,"novelMatch":32,"valid":31,"validMatch":31},"cancel":{"total":24,"novel":21,"match":24,"novelMatch":21,"valid":20,"validMatch":20},"bbox":{"total":33,"novel":32,"match":33,"novelMatch":32,"valid":27,"validMatch":27},"enclose":{"total":39,"novel":39,"match":39,"novelMatch":39,"valid":38,"validMatch":38},"centernot":{"total":22,"novel":21,"match":21,"novelMatch":20,"valid":18,"validMatch":18},"mixed":{"total":13,"novel":13,"match":13,"novelMatch":13,"valid":13,"validMatch":13},"physics+braket":{"total":9,"novel":9,"match":9,"novelMatch":9,"valid":8,"validMatch":8},"braket+physics":{"total":9,"novel":9,"match":9,"novelMatch":9,"valid":8,"validMatch":8}}}
+MISMATCH {"tex":"\\begin{array}{c}(a)\\\\ [b]\\end{array}","group":"physics","novel":true,"isError":false,"difference":{"category":"attributes","path":"/math/0","expected":[["{}columnspacing","1em"],["{}data-frame-styles",""],["{}framespacing",".5em .125em"],["{}rowspacing","4pt"]],"actual":[["{}columnspacing","1em"],["{}data-frame-styles",""],["{}framespacing",".5em .125em"],["{}rowspacing","NaNem"]]}}
+MISMATCH {"tex":"\\centernot{}","group":"centernot","novel":true,"isError":true,"oracleError":"TypeError: Cannot read properties of undefined (reading 'texClass')"}
+SSR {"tex":"\\bbox[yellow,5px,border: 1px solid]{x+y}","group":"bbox","exact":false,"actual":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle mathbackground=\"yellow\" style=\"border:1px solid\"><mpadded height=\"+5px\" depth=\"+5px\" lspace=\"5px\" width=\"+10px\"><mi>x</mi><mo>+</mo><mi>y</mi></mpadded></mstyle></math>","expected":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle mathbackground=\"yellow\" style=\"border: 1px solid\"><mpadded height=\"+5px\" depth=\"+5px\" lspace=\"5px\" width=\"+10px\"><mi>x</mi><mo>+</mo><mi>y</mi></mpadded></mstyle></math>"}
+conformance: exit 1
+progress: 1700/2683
+progress: 1800/2683
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683
+regressions []
+physics {"total":628,"matched":628,"mismatch":0,"unsupported":0}
+braket {"total":30,"matched":30,"mismatch":0,"unsupported":0}
+cancel {"total":8,"matched":8,"mismatch":0,"unsupported":0}
+centernot {"total":2,"matched":2,"mismatch":0,"unsupported":0}
+bbox {"total":6,"matched":6,"mismatch":0,"unsupported":0}
+enclose {"total":6,"matched":6,"mismatch":0,"unsupported":0}
+base {"total":811,"matched":780,"mismatch":10,"unsupported":21}
+newcommand {"total":58,"matched":58,"mismatch":0,"unsupported":0}
+crossPackageRows [{"id":"Mathtools.test.ts::Mathtools Boxed Equations MakeAboxedCommand star 1","group":"mathtools","status":"mismatch","category":"subject-error","error":"UnsupportedFeatureError: Unsupported configuration module: input/tex/mathtools/MathtoolsConfiguration.js"}]

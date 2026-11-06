@@ -8,7 +8,7 @@ export type CommandHandler = (
   token: Token,
   definition: Definition,
   id: number,
-) => void;
+) => void | boolean;
 export interface TexCommand {
   type?: string;
   char?: string;

@@ -83,7 +83,7 @@ const same = (a: Token | undefined, b: Token) =>
   !!a && a[0] === b[0] && spelling(a) === spelling(b);
 
 export class Parser {
-  readonly characters?: ReadonlyMap<string, RegisteredCommand>;
+  readonly characters?: ReadonlyMap<number, readonly RegisteredCommand[]>;
   readonly stream: Stream;
   readonly macros: Map<string, Macro>;
   readonly environments: Map<string, { begin: Macro; end: Macro }>;
@@ -112,8 +112,18 @@ export class Parser {
   ) {
     if (configuration.extensions.size) {
       const characters = [...configuration.extensions.values()].filter(c => c.definition.type === 'character');
-      if (characters.length)
-        this.characters = new Map(characters.map(c => [c.definition.char!, c]));
+      if (characters.length) {
+        const handlers = new Map<number, RegisteredCommand[]>();
+        // Resolution inserts lower precedence packages first. Keep every
+        // character handler so a higher priority handler can decline a token.
+        for (const command of characters) {
+          const key = command.definition.char!.charCodeAt(0);
+          const chain = handlers.get(key) ?? [];
+          chain.unshift(command);
+          handlers.set(key, chain);
+        }
+        this.characters = handlers;
+      }
     }
     this.macros = session.macros;
     this.environments = session.environments;
@@ -168,7 +178,10 @@ export class Parser {
     return result;
   }
   row(nodes: Node[], force = false): Node {
-    return !force && nodes.length === 1 ? nodes[0] : this.node(K.mrow, nodes);
+    if (!force && nodes.length === 1) return nodes[0];
+    const row = this.node(K.mrow, nodes);
+    row.inferred = !force;
+    return row;
   }
   atom(nodes: Node[], texclass = "ORD"): Node {
     return this.node(K.mrow, nodes, "", { "data-mjx-texclass": texclass });
@@ -265,10 +278,11 @@ export class Parser {
     this.frames.pop();
     f.done(nodes);
   }
-  argument(done: (n: Node) => void, keepGroup = false) {
+  argument(done: (n: Node) => void, keepGroup = false, name = "") {
     this.stream.skip();
     const t = this.stream.peek();
-    if (!t) this.error("Missing argument");
+    if (!t) this.error(name ? `Missing argument for ${name}` : "Missing argument");
+    if (name && t[0] === 125) this.error("Extra close brace or missing open brace");
     if (t[0] === 123) {
       this.stream.next();
       this.frame(125, false, (n) =>
@@ -277,7 +291,7 @@ export class Parser {
     } else this.frame(0, true, (n) => done(this.row(n)));
     this.f.argumentScope = true;
   }
-  args(count: number, done: (nodes: Node[]) => void) {
+  args(count: number, done: (nodes: Node[]) => void, name = "") {
     const values: Node[] = [];
     const next = () => {
       if (values.length === count) done(values);
@@ -285,7 +299,7 @@ export class Parser {
         this.argument((n) => {
           values.push(n);
           next();
-        });
+        }, false, name);
     };
     next();
   }
@@ -293,6 +307,7 @@ export class Parser {
     this.stream.skip();
     const first = this.stream.next();
     if (!first) this.error(`Missing argument for ${name}`);
+    if (name && first[0] === 125) this.error("Extra close brace or missing open brace");
     if (first[0] !== 123) return [first];
     const result: Token[] = [];
     let depth = 1;
@@ -622,8 +637,8 @@ export class Parser {
         b.limits !== 0 &&
         (b.kind === K.munder || b.kind === K.mover || b.kind === K.munderover);
       if (
-        [K.msub, K.msup, K.msubsup].includes(b.kind) ||
-        (b.limits !== 0 && [K.munder, K.mover, K.munderover].includes(b.kind))
+        !b.scriptBoundary && ([K.msub, K.msup, K.msubsup].includes(b.kind) ||
+        (b.limits !== 0 && [K.munder, K.mover, K.munderover].includes(b.kind)))
       ) {
         if (b.kind === K.msub || b.kind === K.munder) sub = b.children[1];
         else if (b.kind === K.msup || b.kind === K.mover) top = b.children[1];
@@ -1209,10 +1224,16 @@ export class Parser {
         continue;
       }
       if (space(c)) continue;
-      const character = c > 0 ? this.characters?.get(spelling(t)) : undefined;
-      if (character) {
-        character.execute(this, t, character.definition, character.id);
-        continue;
+      const characters = c > 0 ? this.characters?.get(c) : undefined;
+      if (characters) {
+        let handled = false;
+        for (const command of characters) {
+          if (command.execute(this, t, command.definition, command.id) !== false) {
+            handled = true;
+            break;
+          }
+        }
+        if (handled) continue;
       }
       switch (c) {
         case 123:

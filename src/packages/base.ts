@@ -317,7 +317,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
           );
         else
           parser.append(
-            parser.node(K.msqrt, n.kind === K.mrow ? n.children : [n]),
+            parser.node(K.msqrt, n.kind === K.mrow && n.inferred ? n.children : [n]),
           );
       });
       return;

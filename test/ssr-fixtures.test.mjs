@@ -2,12 +2,20 @@ import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {renderToStaticMarkup} from 'react-dom/server';
-import {parseToMathMLAst,toMathMLString} from '../dist/index.js';
+import {parseToMathMLAst,toMathMLString,UnsupportedFeatureError} from '../dist/index.js';
 import {parseToReact} from '../dist/react.js';
+import {reviveOptions} from '../conformance/options.mjs';
 const fixture=JSON.parse(fs.readFileSync(new URL('../conformance/fixtures/mathjax-4.1.3.json',import.meta.url)));
-test('SSR exactly equals string output for all 848 executable base/newcommand fixtures',()=>{
- for(const record of fixture.records.filter(r=>['base','newcommand'].includes(r.group)&&!r.unsupported)){
-  const {tex,...options}=record.input;
-  assert.equal(renderToStaticMarkup(parseToReact(record.input.tex,options)),toMathMLString(parseToMathMLAst(record.input.tex,options)),record.id);
+test('SSR exactly equals string output for every executable fixture of every supported package',t=>{
+ const groups={};let unsupported=0;
+ for(const record of fixture.records.filter(r=>r.input&&!r.unsupported)){
+  const {tex,...input}=record.input,options=reviveOptions(input);
+  let ast;
+  try{ast=parseToMathMLAst(tex,options);}
+  catch(error){if(error instanceof UnsupportedFeatureError){unsupported++;continue;}throw error;}
+  assert.equal(renderToStaticMarkup(parseToReact(tex,options)),toMathMLString(ast),record.id);
+  groups[record.group]=(groups[record.group]??0)+1;
  }
+ for(const name of ['base','newcommand','physics','braket','cancel','centernot','bbox','enclose'])assert.ok(groups[name],name);
+ t.diagnostic(JSON.stringify({groups,unsupported}));
 });

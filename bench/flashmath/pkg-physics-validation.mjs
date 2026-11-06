@@ -19,9 +19,15 @@ function check(name, args, accepted = [0]) {
 }
 check('build', ['node_modules/typescript/bin/tsc', '-p', 'tsconfig.json']);
 check('tests', ['--test', 'test/*.test.mjs']);
+check('scaling', ['--test', 'test/packages/physics-scaling.test.mjs']);
+check('verifier', ['bench/flashmath/pkg-physics-verifier/diff.mjs']);
 check('conformance', ['conformance/runner.mjs', '--subject', 'bench/flashmath/adapter.mjs',
   '--output', prefix + 'conformance.json', '--fresh'], [0, 1]);
 const report = JSON.parse(fs.readFileSync(path.join(root, prefix + 'conformance.json')));
+const baselineMatched = new Set(JSON.parse(fs.readFileSync(path.join(root, 'bench/flashmath/pkg-physics-verifier/baseline-matched.json'))));
+const regressions = report.rows.filter(r => baselineMatched.has(r.id) && r.status !== 'matched');
+console.log('regressions', JSON.stringify(regressions));
+assert.equal(regressions.length, 0);
 const expected = {physics: 628, braket: 30, cancel: 8, centernot: 2, bbox: 6, enclose: 6};
 const groups = {};
 for (const [name, total] of Object.entries(expected)) {
@@ -41,11 +47,13 @@ const owned = new Set(Object.keys(expected));
 const crossPackageRows = report.rows.filter((row, i) => !owned.has(row.group) &&
   fixture.records[i].input?.packages?.some(p => owned.has(Array.isArray(p) ? p[0] : p)));
 console.log('crossPackageRows', JSON.stringify(crossPackageRows));
-const inputs = ['src/parser.ts', 'src/scanner.ts', 'src/ast.ts', 'src/serialize.ts', 'src/symbols.ts',
+const inputs = ['src/parser.ts', 'src/scanner.ts', 'src/ast.ts', 'src/serialize.ts', 'src/symbols.ts', 'src/react.ts',
   'src/packages/base.ts', 'src/packages/newcommand.ts', 'src/packages/registry.ts', 'src/packages/types.ts',
-  ...Object.keys(expected).map(n => `src/packages/${n}.ts`), 'conformance/fixtures/mathjax-4.1.3.json'];
+  ...Object.keys(expected).map(n => `src/packages/${n}.ts`), 'conformance/fixtures/mathjax-4.1.3.json',
+  'bench/flashmath/pkg-physics-verifier/corpus.mjs', 'bench/flashmath/pkg-physics-verifier/cohort.json',
+  'bench/flashmath/pkg-physics-verifier/baseline-matched.json'];
 const sha256 = Object.fromEntries(inputs.map(name => [name,
   createHash('sha256').update(fs.readFileSync(path.join(root, name))).digest('hex')]));
 fs.writeFileSync(path.join(root, prefix + 'validation.json'), JSON.stringify({checks, groups,
   fullConformance: {total: report.total, matched: report.matched, classifications: report.classifications},
-  crossPackageRows, sha256}, null, 2) + '\n');
+  crossPackageRows, regressions, sha256}, null, 2) + '\n');

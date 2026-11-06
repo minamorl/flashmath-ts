@@ -1,0 +1,2804 @@
+[
+  {
+    "tex": "\\dv{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dv{f}{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dv[2]{f}{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dv[n]{f}{x}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\dv{x}(x^2+1)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dv{f}{x}(x^2)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dv*{f}{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dv*[3]{f}{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv{f}{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv{f}{x}{y}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv[2]{f}{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv*{f}{x}{y}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv{f}{x}(a)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv{\\qty(f+g)}{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv{f}{x}{y}(a)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\fdv{F}{g}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\fdv[2]{F}{g}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\fdv{F}{g}(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\var{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\var(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dd{x}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\dd[3]{x}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\dd(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dd x",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\dd[2](x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\int \\dd[3]{r}\\, f",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\frac{\\dd{y}}{\\dd{x}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(\\frac{a}{b})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty[\\frac ab]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty|x|",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty\\big(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty\\Bigg[x]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty\\bigg|x|",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty\\big{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty x",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pqty{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bqty{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Bqty{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vqty{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pqty\\big{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pqty*{\\frac ab}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bqty*{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\abs{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\abs*{\\frac ab}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\abs\\big{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\abs{\\abs{x}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\norm{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\norm*{\\frac12}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\norm\\Big{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\order{x^2}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\order*{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\order\\big{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\eval{x}_0^1",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\eval(x^2)_0^1",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\eval[x|_0^1",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\eval*{x}_0^1",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\eval*(x|_0^1",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\eval x",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\comm{A}{B}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\comm*{A}{B}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\comm\\big{A}{B}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\acomm{A}{B}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\acomm*{A}{B}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pb{A}{B}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\pb\\Big{A}{B}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra{\\psi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ket{\\phi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra*{\\psi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ket*{\\phi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra{a}\\ket{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra{a}\\ket*{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra*{a}\\ket{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra{a}\\,\\ket{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket*{a}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ip{a}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ketbra{a}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\op{a}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dyad{a}{b}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\op*{a}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ev{A}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\ev{A}{\\psi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ev*{A}{\\psi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ev**{A}{\\psi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mel{a}{O}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mel*{a}{O}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mel**{a}{O}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ket{\\frac{\\psi}{2}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra{\\psi}\\hat{H}\\ket{\\phi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty(a&b\\\\c&d)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty[a&b\\\\c&d]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty|a&b\\\\c&d|",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty{a&b\\\\c&d}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty*(a&b)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pmqty{a&b\\\\c&d}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Pmqty{a&b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bmqty{a&b\\\\c&d}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vmqty{a&b\\\\c&d}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\smqty(a&b\\\\c&d)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\spmqty{a&b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sbmqty{a}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\svmqty{a}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sPmqty{a}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mdet{a&b\\\\c&d}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\smdet{a}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\imat{2}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\mqty(\\imat{3})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\xmat{0}{2}{3}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\xmat*{a}{2}{3}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\xmat*{a}{1}{3}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\xmat*{a}{3}{1}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\xmat*{a}{1}{1}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\zmat{2}{2}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\pmat{0}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\pmat{1}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\pmat{2}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\pmat{3}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\pmat{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\pmat{y}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\pmat{z}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\mqty(\\pmat{y})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dmat{1,2,3}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\admat{1,2,3}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\mqty(\\dmat{1,2})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pmqty{\\admat{1,2}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pmqty{\\imat{2}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bmqty{\\xmat*{x}{2}{2}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dmat{{a,b},c}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\mqty(\\dmat{\\mqty{a&b\\\\c&d},e})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{a}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\vb*{a}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{\\alpha}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb*{\\alpha}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{\\Omega}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{a+b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{1}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{ab}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{\\mathrm{a}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\va{a}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\va*{a}",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\vu{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vu*{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\va{\\vb{x}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{\\hat{x}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vdot",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "a\\vdot b",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "a\\cross b",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "a\\cp b",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\grad f",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\grad{f}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\grad(f)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\grad[f]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\grad{f+g}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\div{E}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\div(E)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\div[E]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\curl{B}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\curl(B)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\laplacian{\\phi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\laplacian(\\phi)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\curl\\curl E",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\grad\\cross A",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\grad\\vdot\\vb{A}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\div\\grad f",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\curl\\grad f",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sin(x)",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\sin[2](x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sin[2]x",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\cos[n](\\theta)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\exp(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\log(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ln[2](x)",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\tr A",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\tr(A)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Tr(\\rho)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\trace(A)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\erf(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\det(A)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Pr(A)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Re(z)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Im{z}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Re{z}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Res(f)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Res[f]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Res{f}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pv{\\int f}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\PV{\\int f}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sine(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\rank(A)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\arctan[2](x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qq{if}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qq*{if}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qcc",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\qif",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qthen",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qand",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\qc",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qcc*",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qfor*",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\flatfrac{a}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\real",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\imaginary",
+    "group": "physics",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\divsymbol",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dv{\\vb{x}}{t} = \\vb{v}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "i\\hbar\\pdv{\\psi}{t} = \\hat H\\ket{\\psi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\abs{\\braket{a}{b}}^2",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\norm{\\grad f}^2",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(\\pdv{f}{x})^2",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty(\\dv{x}{t} \\\\ \\dv{y}{t})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ev{\\comm{A}{B}}{\\psi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra{\\psi}\\pdv{t}\\ket{\\psi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sum_i \\ket{i}\\bra{i}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\curl\\vb{E} = -\\pdv{\\vb{B}}{t}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\oint \\vb{E}\\vdot\\dd{\\vb{l}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\int_0^1 \\dd{x} \\abs{f(x)}^2",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\exp(\\qty[\\frac{a}{b}])",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sin[2](\\abs{x})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty\\Big(\\sum_i \\abs{x_i})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\order{\\norm{x}^2}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sin(\\cos(\\tan(x)))",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mel{\\psi}{\\grad}{\\phi}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty(\\abs{a}&\\norm{b}\\\\ \\ket{c}&\\bra{d})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\dv[2]{x}{t} + \\omega^2 x = 0",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\grad\\qty(\\frac{1}{r})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{F} = q\\qty(\\vb{E} + \\vb{v}\\cross\\vb{B})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pdv{x}\\qty(\\pdv{f}{y})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\eval{\\dv{f}{x}}_{x=0}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Tr(\\op{\\psi})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\pmqty{\\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vmqty{\\vu{x}&\\vu{y}\\\\a&b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ket{\\vb{k}}\\otimes\\ket{\\uparrow}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\comm{\\hat x}{\\hat p} = i\\hbar",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "e^{\\qty(a+b)}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "x_{\\abs{y}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\frac{\\abs{x}}{\\norm{y}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sqrt{\\abs{x}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sum_{\\ket{i}}\\dd{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sqrt[3]{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(\\sqrt[3]{x})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty[\\sqrt[3]{x}]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\left(a\\right)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\left[a\\right]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bigl(x\\bigr)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "(a|b)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "[x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "x_{(1)}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\begin{array}{c}(a)\\\\ [b]\\end{array}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(a[b)c]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty[(])",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(\\left(\\right))",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(\\frac{a)}{b})",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty((a)(b))",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty|a(b)|",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(a|b)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty(a(b)&c)",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\frac ab",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mathbf{x}\\sin x",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\matrix{a&b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\def\\f(#1){#1}\\f(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\def\\g[#1]{#1}\\g[x]",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\newcommand{\\h}[2][y]{#1#2}\\h[a]{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\newcommand{\\h}[1]{\\abs{#1}}\\h{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\def\\k{\\ket}\\k{a}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\def\\p{\\qty}\\p(x)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mathrm{\\vb{x}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{\\mathbf{x}}",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\abs x",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\qty(",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\qty[x",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\mqty(a",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\xmat{a}{b}{c}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\imat{x}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\dv",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\comm{A}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\comm A",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\bra",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\ket",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\pmqty",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\qty)",
+    "group": "physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\norm x",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\mel{a}{b}",
+    "group": "physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\bra{a}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ket{b}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Bra{\\frac ab}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Ket{\\frac ab}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ketbra{a}{b}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Ketbra{\\frac ab}{c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a|b}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a|b|c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{a|b|c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{\\frac ab|c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\set{x|x>0}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Set{x|\\frac{x}{2}>0}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Set{a|b|c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\set{a|b|c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a||b}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{a||b}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\set{x\\|y}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{a\\|b}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "|x|",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{\\braket{a|b}|c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{\\Braket{a|b}|c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{\\left(a|b\\right)}",
+    "group": "braket",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\Set{\\sqrt{x|y}}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{a|b}^2",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "x_{\\braket{a|b}}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket a",
+    "group": "braket",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\Set x",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\set{}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{a|\\mathrm{b}|c}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\frac{\\Braket{a|b}}{\\set{x|y}}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{|}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{a|}",
+    "group": "braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel{x}",
+    "group": "cancel",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\bcancel{x}",
+    "group": "cancel",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\xcancel{x}",
+    "group": "cancel",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\cancelto{0}{x}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel{x+y}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel[mathcolor=red]{x}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bcancel[mathbackground=yellow]{a}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\xcancel[color=red,data-thickness=2px]{a}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancelto[mathcolor=blue]{0}{x}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancelto{\\infty}{\\frac ab}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\frac{\\cancel{a}b}{\\cancel{a}c}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel{\\cancel{x}}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel x",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel{}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\sum\\cancel{x}_i",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancelto{0}{x}^2",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel[data-padding=0]{x}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel[foo=1]{x}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancelto{0}x",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancelto0x",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel",
+    "group": "cancel",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\bcancel{\\frac{a}{b}}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel{x}^2",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "x^{\\xcancel{2}}",
+    "group": "cancel",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[red]{x}",
+    "group": "bbox",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[#ff0]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[#FFCC00]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[3px]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[.5em]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[1.5em]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[2mu]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[1in]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[red,5px]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[5px,red]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[5px,border:2px solid red]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[yellow,5px,border: 1px solid]{x+y}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[color:red]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[ 5pt , blue ]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[-1px]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\bbox[5]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[5pt]{\\frac ab}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[#12]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\bbox[red;]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "x^{\\bbox[red]{2}}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[1.px]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[0pt]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[5PX]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[background:red;padding:2px]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[url(x)]{y}",
+    "group": "bbox",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\bbox[red, 2pt, color:blue]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox x",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[red]x",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox",
+    "group": "bbox",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\bbox[1.25em]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[0.1em]{x}",
+    "group": "bbox",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{longdiv}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{actuarial}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{phasorangle}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{radical}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{roundedbox}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{circle}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{left}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{right}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{top}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{bottom}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{updiagonalstrike}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{downdiagonalstrike}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{verticalstrike}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{horizontalstrike}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{updiagonalarrow}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{northeastarrow}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{madruwb}{x+1}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box circle}{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box,circle}{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[mathcolor=red]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[mathbackground=yellow]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[data-thickness=2px]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[data-padding=1px]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{northeastarrow}[data-arrowhead=\"5\"]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[color=blue]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[background=red]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[foo=bar,mathcolor=red]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{}{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}{}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}x",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[style=x]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[mathcolor=\"red\"]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}[mathcolor={red}]{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{circle}{\\frac ab}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}{\\enclose{circle}{x}}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{unknown}{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose box{x}",
+    "group": "enclose",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose",
+    "group": "enclose",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\centernot{=}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot{\\in}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot\\in",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot{\\longrightarrow}",
+    "group": "centernot",
+    "novel": false,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot\\to",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "a\\centernot\\Rightarrow b",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot{x}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot{\\sum}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot{\\mathop{x}}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot{\\mathbin{+}}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot+",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centerOver{=}{/}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centerOver{\\rightarrow}{x}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centerOver{ab}{c}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centerOver{\\frac ab}{c}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "a \\centernot{\\parallel} b",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot{}",
+    "group": "centernot",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\centernot{(}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot",
+    "group": "centernot",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\centerOver{a}",
+    "group": "centernot",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "A\\centernot{\\sim}B",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centerOver{\\mathrel{a}}{b}",
+    "group": "centernot",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancel{\\dv{f}{x}}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[red]{\\ket{a}}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{box}{\\abs{x}}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[5px]{\\mqty(a&b)}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\cancelto{0}{\\pdv{f}{x}}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centernot{\\grad}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bbox[yellow,2pt]{\\cancel{\\vb{x}}}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\enclose{circle}{\\qty(x)}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(\\cancel{x})",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\mqty(\\cancel{a}&\\bbox[red]{b})",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{\\cancel{x}}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\vb{\\bbox[red]{x}}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\centerOver{\\vb{x}}{\\ket{y}}",
+    "group": "mixed",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra{a}",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ket{a}",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a}{b}",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a|b}",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{a|b}",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\set{a|b}",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(a|b)",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Set{\\qty(a|b)|c}",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\qty|a|",
+    "group": "physics+braket",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\bra{a}",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\ket{a}",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a}{b}",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\braket{a|b}",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Braket{a|b}",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\set{a|b}",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\qty(a|b)",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": false
+  },
+  {
+    "tex": "\\Set{\\qty(a|b)|c}",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": true
+  },
+  {
+    "tex": "\\qty|a|",
+    "group": "braket+physics",
+    "novel": true,
+    "isError": false
+  }
+]

@@ -53,7 +53,7 @@ for (const [name, body, count] of [
   ['ketbra', '{\\vert {#1} \\rangle\\langle {#2} \\vert}', 2],
   ['Ketbra', '{\\left\\vert {#1} \\right\\rangle\\left\\langle {#2} \\right\\vert}', 2],
 ] as const) commands[name] = {execute(p) {
-  const args = Array.from({length: count}, () => p.tokensArgument());
+  const args = Array.from({length: count}, () => p.tokensArgument('\\' + name));
   const tokens = p.substitute({body: scan(body), count, optional: null, prefix: [], delimiters: []}, args);
   p.stream.push(tokens);
 }};
@@ -61,22 +61,20 @@ for (const name of ['braket', 'Braket', 'set', 'Set']) commands[name] = {execute
   const stretchy = name[0] === name[0].toUpperCase(), set = name.toLowerCase() === 'set';
   const ctx = {stretchy, max: set ? 1 : Infinity, count: 0, saved: [] as Node[]};
   p.argument(inner => {
-    const nodes = [...ctx.saved, ...(inner.kind === K.mrow && !Object.keys(inner.attributes).length ? inner.children : [inner])];
+    const nodes = [...ctx.saved, ...(inner.kind === K.mrow && inner.inferred ? inner.children : [inner])];
     const fence = (text: string, cls: string) => p.node(K.mo, [], text,
       {'data-mjx-texclass': cls, ...(stretchy ? {} : {fence: 'true', stretchy: 'false', symmetric: 'true'})});
     if (name === 'Set') { nodes.unshift(p.node(K.mspace, [], '', {width: '0.167em'})); nodes.push(p.node(K.mspace, [], '', {width: '0.167em'})); }
     nodes.unshift(fence(set ? '{' : '⟨', 'OPEN'));
     nodes.push(fence(set ? '}' : '⟩', 'CLOSE'));
     p.append(stretchy ? p.atom(nodes, 'INNER') : p.row(nodes, true));
-  });
+  }, false, '\\' + name);
   (p.f as BraketFrame).braket = ctx;
 }};
 commands['|'] = {type: 'delimiter', char: '‖', attrs: {texClass: 0}, execute(p, t, d, id) {
   if (!bar(p, true)) p.append(p.symbol(t, id, d));
 }};
-commands['@character:|'] = {type: 'character', char: '|', execute(p, t) {
-  if (!bar(p)) p.append(p.character(t));
-}};
+commands['@braket-character:|'] = {type: 'character', char: '|', execute: p => bar(p)};
 
 export default {name: 'braket', priority: 3, commands,
   environments: {},

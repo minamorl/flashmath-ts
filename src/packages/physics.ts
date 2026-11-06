@@ -14,9 +14,9 @@ const commands: Record<string, TexCommand> = {};
 const next = (p: Parser) => { p.stream.skip(); return p.stream.peek(); };
 const peek = (p: Parser) => { const t = next(p); return t ? (t[0] === -1 ? '\\' : '') + spelling(t) : ''; };
 const star = (p: Parser) => { if (peek(p) !== '*') return false; p.stream.next(); return true; };
-const arg = (p: Parser) => raw(p.tokensArgument());
+const arg = (p: Parser, name: string) => raw(p.tokensArgument('\\' + name));
 const optional = (p: Parser) => { const t = p.optional(); return t === null ? null : raw(t); };
-const children = (n: Node) => n.kind === K.mrow && !Object.keys(n.attributes).length ? n.children : [n];
+const children = (n: Node) => n.kind === K.mrow && n.inferred ? n.children : [n];
 const insert = (p: Parser, tex: string) => {
   if (++p.expansions > (p.options.maxExpansions ?? 10000)) p.error('Macro expansion limit exceeded');
   p.stream.push(scan(tex, p.options.maxTokens ?? 200000));
@@ -28,8 +28,8 @@ function define(names: string, fn: (p: Parser, name: string) => void) {
   for (const name of names.split(' ')) commands[name] = {execute: p => fn(p, name)};
 }
 function macro(names: string, body: string, count = 0) {
-  define(names, p => {
-    const args = Array.from({length: count}, () => p.tokensArgument());
+  define(names, (p, name) => {
+    const args = Array.from({length: count}, () => p.tokensArgument('\\' + name));
     p.stream.push(p.substitute({body: scan(body), count, optional: null, prefix: [], delimiters: []}, args));
   });
 }
@@ -62,7 +62,7 @@ function automatic(p: Parser, open: string, close: string, size = '', smash = fa
   p.f.missingMessage = 'Extra open or missing close delimiter';
 }
 function autoCharacter(p: Parser, t: Token): boolean {
-  const a = (p.f as AutoFrame).physicsAuto, text = spelling(t);
+  const a = (p.f as AutoFrame).physicsAuto, text = String.fromCharCode(t[0]);
   if (!a) return false;
   if (text === a.close && a.count-- === 0) { p.close(); return true; }
   if (text === a.open) a.count++;
@@ -76,34 +76,53 @@ define('quantity qty pqty bqty vqty Bqty absolutevalue abs norm order', (p, name
     : ['vqty', 'absolutevalue', 'abs'].includes(name) ? ['|', '|'] : name === 'norm' ? ['\\|', '\\|'] : ['(', ')'];
   if (fixedArg && left !== '{') p.error(`Missing argument for \\${name}`);
   if (!pairs[left]) {
-    p.append(p.atom([p.delimiterNode(open.replace('\\', ''), '', 'OPEN'), p.row([]),
-      p.delimiterNode(close.replace('\\', ''), '', 'CLOSE')], 'INNER'));
+    p.append(p.atom([p.delimiterNode('(', '', 'OPEN'), p.row([]),
+      p.delimiterNode(')', '', 'CLOSE')], 'INNER'));
     return;
   }
   if (name === 'order') {
     const n = p.node(K.mi, [], 'O', {mathvariant: '-tex-calligraphic', 'data-mjx-texclass': 'OP'}); n.op = 2; p.append(n);
   }
   if (left === '{') {
-    parsed(p, fenced(fixedArg ? open : '\\{', fixedArg ? close : '\\}', arg(p), fixed, size));
+    const l = fixedArg ? open : '\\{', r = fixedArg ? close : '\\}';
+    // Consume the argument on the existing frame stack. Reading it as raw TeX
+    // and re-scanning at every depth makes nested quantities quadratic.
+    p.argument(n => {
+      const body = children(n);
+      if (fixed) {
+        parsed(p, l, a => parsed(p, r, b => {
+          p.append(a); for (const item of body) p.append(item); p.append(b);
+        }));
+      } else if (size) {
+        const fence = (text: string, cls: string) => p.atom([
+          p.delimiterNode(text.charCodeAt(0) === 92 ? text === '\\|' ? '‖' : text[1] : text, sizes[size]),
+        ], cls);
+        p.append(fence(l, 'OPEN')); for (const item of body) p.append(item); p.append(fence(r, 'CLOSE'));
+      } else {
+        const delim = (text: string) => text === '\\|' ? '‖' : text.charCodeAt(0) === 92 ? text[1] : text;
+        p.append(p.atom([p.delimiterNode(delim(l), '', 'OPEN'), ...body,
+          p.delimiterNode(delim(r), '', 'CLOSE')], 'INNER'));
+      }
+    }, false, '\\' + name);
   } else { p.stream.next(); automatic(p, left, pairs[left], size); }
 });
-define('evaluated eval', p => {
+define('evaluated eval', (p, name) => {
   const fixed = star(p), left = peek(p);
   if (left === '(' || left === '[') { p.stream.next(); automatic(p, left, '|', '', fixed, true); }
   else {
-    const body = left === '{' ? arg(p) : '';
+    const body = left === '{' ? arg(p, name) : '';
     insert(p, `\\left.${fixed ? `\\smash{${body}}` : body}\\vphantom{\\int}\\right|`);
   }
 });
 define('commutator comm anticommutator acomm poissonbracket pb', (p, name) => {
   const fixed = star(p), size = big(p);
   if (peek(p) !== '{') p.error(`Missing argument for \\${name}`);
-  const a = arg(p), b = arg(p), braces = !['comm', 'commutator'].includes(name);
+  const a = arg(p, name), b = arg(p, name), braces = !['comm', 'commutator'].includes(name);
   parsed(p, fenced(braces ? '\\{' : '[', braces ? '\\}' : ']', a + ',' + b, fixed, size));
 });
 
-define('vectorbold vb', p => {
-  const fixed = star(p), tokens = p.tokensArgument();
+define('vectorbold vb', (p, name) => {
+  const fixed = star(p), tokens = p.tokensArgument('\\' + name);
   p.parseTokens(tokens, n => emit(p, n));
   p.f.font = '';
   p.f.tokenTransform = n => {
@@ -114,7 +133,7 @@ define('vectorbold vb', p => {
   };
 });
 define('vectorarrow va vectorunit vu', (p, name) => {
-  const fixed = star(p), body = arg(p), accent = ['va', 'vectorarrow'].includes(name) ? 'vec' : 'hat';
+  const fixed = star(p), body = arg(p, name), accent = ['va', 'vectorarrow'].includes(name) ? 'vec' : 'hat';
   insert(p, `\\${accent}{\\vb${fixed ? '*' : ''}{${body}}}`);
 });
 for (const [names, text, attrs] of [
@@ -124,7 +143,7 @@ for (const [names, text, attrs] of [
 define('real imaginary', (p, name) => p.append(p.node(K.mi, [], name === 'real' ? 'ℜ' : 'ℑ', {mathvariant: 'normal'})));
 define('vnabla', p => parsed(p, (p.options.texOptions?.physics as {arrowdel?: boolean})?.arrowdel ? '\\vec{\\gradientnabla}' : '{\\gradientnabla}'));
 define('diffd', p => parsed(p, (p.options.texOptions?.physics as {italicdiff?: boolean})?.italicdiff ? 'd' : '{\\rm d}'));
-function application(p: Parser, op: string, fences: string[], fn = true) {
+function application(p: Parser, op: string, fences: string[], fn: boolean, name: string) {
   parsed(p, op, n => {
     const nodes = children(n);
     if (fn && nodes.length) nodes[nodes.length - 1].op = 2;
@@ -132,7 +151,7 @@ function application(p: Parser, op: string, fences: string[], fn = true) {
     const left = peek(p);
     if (!pairs[left]) return;
     if (left === '{') {
-      const body = arg(p);
+      const body = arg(p, name);
       insert(p, fences.includes(left) ? fenced('\\{', '\\}', body) : ' ' + body + ' ');
     } else if (fences.includes(left)) { p.stream.next(); automatic(p, left, pairs[left]); }
   });
@@ -143,12 +162,13 @@ define('gradient grad divergence div curl laplacian Res principalvalue pv PV Re 
     : name === 'laplacian' ? '\\nabla^2' : name === 'Res' ? '\\Residue'
     : ['pv', 'principalvalue'].includes(name) ? '{\\cal P}' : name === 'PV' ? '{\\rm P.V.}' : `\\mathrm{${name}}`;
   application(p, op, ['Re', 'Im'].includes(name) ? ['{'] : name === 'Res' ? ['(', '[', '{'] : ['principalvalue', 'pv', 'PV'].includes(name) ? [] : ['(', '['],
-    !['divergence', 'div', 'curl'].includes(name));
+    !['divergence', 'div', 'curl'].includes(name), name);
 });
 macro('Residue', '\\mathrm{Res}');
 const trig = 'sin sinh arcsin asin cos cosh arccos acos tan tanh arctan atan csc csch arccsc acsc sec sech arcsec asec cot coth arccot acot log ln';
+const poweredFunctions = new Set(trig.split(' '));
 define(trig + ' exp det Pr tr trace Tr Trace erf', (p, name) => {
-  const exp = trig.split(' ').includes(name) ? optional(p) : null;
+  const exp = poweredFunctions.has(name) ? optional(p) : null;
   const fn = p.node(K.mi, [], name === 'trace' ? 'tr' : name === 'Trace' ? 'Tr' : name);
   const emit = (n: Node) => {
     n.op = 2; p.append(n);
@@ -165,23 +185,23 @@ for (const [name, text] of Object.entries({sine: 'sin', hypsine: 'sinh', arcsine
   define(name, p => { const n = p.node(K.mi, [], text); n.op = 1; p.append(n); });
 
 define('qqtext qq qcomma qc qcc qif qthen qelse qotherwise qunless qgiven qusing qassume qsince qlet qfor qall qeven qodd qinteger qand qor qas qin', (p, name) => {
-  const fixed = star(p), text = ['qqtext', 'qq'].includes(name) ? arg(p) : ['qc', 'qcomma'].includes(name) ? ',' : name === 'qcc' ? 'c.c.' : name.slice(1);
+  const fixed = star(p), text = ['qqtext', 'qq'].includes(name) ? arg(p, name) : ['qc', 'qcomma'].includes(name) ? ',' : name === 'qcc' ? 'c.c.' : name.slice(1);
   insert(p, (fixed || ['qc', 'qcomma'].includes(name) ? '' : '\\quad') + `\\text{${text}}\\quad `);
 });
 macro('flatfrac', '\\left.#1\\middle/#2\\right.', 2);
 define('differential dd variation var', (p, name) => {
   const op = ['differential', 'dd'].includes(name) ? '\\diffd' : '\\delta';
   const opt = optional(p), power = opt === null ? ' ' : `^{${opt}}`, left = peek(p);
-  if (left === '{') parsed(p, op + power + arg(p), n => p.append(p.atom(children(n), 'OP')));
+  if (left === '{') parsed(p, op + power + arg(p, name), n => p.append(p.atom(children(n), 'OP')));
   else if (left === '(') {
     p.stream.next(); parsed(p, op + power, n => { p.append(n); automatic(p, '(', ')'); });
-  } else parsed(p, op + power + (next(p) && !['}', ')', ']'].includes(peek(p)) ? arg(p) : ''));
+  } else parsed(p, op + power + (next(p) && !['}', ')', ']'].includes(peek(p)) ? arg(p, name) : ''));
 });
 define('derivative dv partialderivative pderivative pdv functionalderivative fderivative fdv', (p, name) => {
   const fixed = star(p), opt = optional(p), partial = ['partialderivative', 'pderivative', 'pdv'].includes(name);
   const op = partial ? '\\partial' : ['derivative', 'dv'].includes(name) ? '\\diffd' : '\\delta';
-  const args = [arg(p)], max = partial ? 3 : 2;
-  while (args.length < max && peek(p) === '{') args.push(arg(p));
+  const args = [arg(p, name)], max = partial ? 3 : 2;
+  while (args.length < max && peek(p) === '{') args.push(arg(p, name));
   const power1 = partial && args.length > 2 ? '^{2}' : opt !== null ? `^{${opt}}` : ' ';
   const power2 = partial && args.length > 2 ? ' ' : power1;
   const first = args.length > 1 ? args[0] : '', second = args.length > 1 ? args[1] : args[0];
@@ -197,16 +217,16 @@ function outputBraket(a: string, b: string, c: string, one: boolean, two: boolea
     : one ? `\\langle{${a}}\\vert{${b}}\\vert{${c}}\\rangle`
     : `\\left\\langle{${a}}\\right\\vert{${b}}\\left\\vert{${c}}\\right\\rangle`;
 }
-define('ket', p => { const fixed = star(p), body = arg(p); parsed(p, fixed ? `\\vert{${body}}\\rangle` : `\\left\\vert{${body}}\\right\\rangle`); });
-define('bra', p => {
-  const fixed = star(p), body = arg(p);
+define('ket', (p, name) => { const fixed = star(p), body = arg(p, name); parsed(p, fixed ? `\\vert{${body}}\\rangle` : `\\left\\vert{${body}}\\right\\rangle`); });
+define('bra', (p, name) => {
+  const fixed = star(p), body = arg(p, name);
   let ket = false, ketStar = false, right = '';
   const t = next(p), alias = t?.[0] === -1 ? p.macros.get(spelling(t)) : undefined;
   const ketAlias = alias?.body.length === 1 && alias.body[0][0] === -3 && spelling(alias.body[0]) === 'ket';
   if (peek(p) === '\\ket' || ketAlias) {
     p.stream.next(); ket = true;
     ketStar = star(p);
-    if (peek(p) === '{') right = arg(p);
+    if (peek(p) === '{') right = arg(p, name);
     else { if (ketStar) insert(p, '*'); ketStar = false; }
   }
   parsed(p, ket ? fixed || ketStar ? `\\langle{${body}}\\vert{${right}}\\rangle`
@@ -214,7 +234,7 @@ define('bra', p => {
     : fixed ? `\\langle{${body}}\\vert` : `\\left\\langle{${body}}\\right\\vert{}`);
 });
 define('innerproduct ip braket outerproduct dyad ketbra op', (p, name) => {
-  const fixed = star(p), a = arg(p), b = peek(p) === '{' ? arg(p) : a;
+  const fixed = star(p), a = arg(p, name), b = peek(p) === '{' ? arg(p, name) : a;
   const outer = ['outerproduct', 'dyad', 'ketbra', 'op'].includes(name);
   parsed(p, outer ? fixed ? `\\vert{${a}}\\rangle\\!\\langle{${b}}\\vert`
     : `\\left\\vert{${a}}\\middle\\rangle\\!\\middle\\langle{${b}}\\right\\vert`
@@ -222,21 +242,21 @@ define('innerproduct ip braket outerproduct dyad ketbra op', (p, name) => {
     : `\\left\\langle{${a}}\\middle\\vert{${b}}\\right\\rangle`);
 });
 define('expectationvalue expval ev matrixelement matrixel mel', (p, name) => {
-  const one = star(p), two = one && star(p), a = arg(p);
+  const one = star(p), two = one && star(p), a = arg(p, name);
   let expansion: string;
-  if (['matrixelement', 'matrixel', 'mel'].includes(name)) expansion = outputBraket(a, arg(p), arg(p), one, two);
+  if (['matrixelement', 'matrixel', 'mel'].includes(name)) expansion = outputBraket(a, arg(p, name), arg(p, name), one, two);
   else {
-    const b = peek(p) === '{' ? arg(p) : null;
+    const b = peek(p) === '{' ? arg(p, name) : null;
     expansion = a && b ? outputBraket(b, a, b, one, two) : one ? `\\langle {${a}} \\rangle` : `\\left\\langle {${a}} \\right\\rangle`;
   }
   parsed(p, expansion);
 });
 
-function upTo(p: Parser, close: string): string {
+function upTo(p: Parser, close: string, name: string): string {
   const tokens: Token[] = []; let depth = 0;
   for (;;) {
     const t = p.stream.next();
-    if (!t) p.error(`Could not find closing ${close}`);
+    if (!t) p.error(`Could not find ${close} for \\${name}`);
     if (!depth && t[0] !== -1 && spelling(t) === close) return raw(tokens);
     if (t[0] === 123) depth++;
     if (t[0] === 125) depth--;
@@ -246,9 +266,9 @@ function upTo(p: Parser, close: string): string {
 define('matrixquantity mqty smallmatrixquantity smqty', (p, name) => {
   const fixed = star(p), left = peek(p), small = ['smallmatrixquantity', 'smqty'].includes(name);
   let body = '', open = '', close = '';
-  if (left === '{') body = arg(p);
+  if (left === '{') body = arg(p, name);
   else if (['(', '[', '|'].includes(left)) {
-    p.stream.next(); body = upTo(p, pairs[left]);
+    p.stream.next(); body = upTo(p, pairs[left], name);
     open = left === '(' && fixed ? '\\lgroup' : left;
     close = left === '(' && fixed ? '\\rgroup' : pairs[left];
   } else { open = '('; close = ')'; }
@@ -268,14 +288,14 @@ for (const [name, body] of Object.entries({pmqty: '\\mqty(#1)', Pmqty: '\\mqty*(
 function matrixLimit(p: Parser, n: number, m: number) {
   if (!Number.isSafeInteger(n) || !Number.isSafeInteger(m) || n * m > (p.options.maxNodes ?? 100000)) p.error('Node limit exceeded');
 }
-define('identitymatrix imat', p => {
-  const size = parseInt(arg(p), 10);
+define('identitymatrix imat', (p, name) => {
+  const size = parseInt(arg(p, name), 10);
   if (Number.isNaN(size)) p.error('Invalid number');
   matrixLimit(p, Math.max(size, 1), Math.max(size, 1));
   insert(p, size <= 1 ? '1' : Array.from({length: size}, (_, i) => Array.from({length: size}, (_, j) => i === j ? '1' : '0').join(' & ')).join('\\\\ '));
 });
-define('xmatrix xmat', p => {
-  const fixed = star(p), a = arg(p), b = arg(p), c = arg(p);
+define('xmatrix xmat', (p, name) => {
+  const fixed = star(p), a = arg(p, name), b = arg(p, name), c = arg(p, name);
   let n = parseInt(b, 10), m = parseInt(c, 10);
   if (String(n) !== b || String(m) !== c || Number.isNaN(n) || Number.isNaN(m)) p.error('Invalid number');
   n = Math.max(1, n); m = Math.max(1, m); matrixLimit(p, n, m);
@@ -283,14 +303,14 @@ define('xmatrix xmat', p => {
     : n === 1 ? `${a}_{${j + 1}}` : m === 1 ? `${a}_{${i + 1}}` : `${a}_{{${i + 1}}{${j + 1}}}`).join(' & ')).join('\\\\ '));
 });
 macro('zeromatrix zmat', '\\xmat{0}{#1}{#2}', 2);
-define('paulimatrix pmat', p => {
-  const a = arg(p), rows: Record<string, string> = {'0': '1 & 0\\\\0 & 1', '1': '0 & 1\\\\1 & 0',
+define('paulimatrix pmat', (p, name) => {
+  const a = arg(p, name), rows: Record<string, string> = {'0': '1 & 0\\\\0 & 1', '1': '0 & 1\\\\1 & 0',
     x: '0 & 1\\\\1 & 0', '2': '0 & -i\\\\i & 0', y: '0 & -i\\\\i & 0', '3': '1 & 0\\\\0 & -1', z: '1 & 0\\\\0 & -1'};
   insert(p, a.slice(1) + ' ' + (rows[a[0]] ?? ''));
 });
 define('diagonalmatrix dmat antidiagonalmatrix admat', (p, name) => {
   if (peek(p) !== '{') return;
-  const tokens = p.tokensArgument(), elements: Token[][] = [[]]; let depth = 0;
+  const tokens = p.tokensArgument('\\' + name), elements: Token[][] = [[]]; let depth = 0;
   for (const t of tokens) {
     if (t[0] === 123) depth++;
     if (t[0] === 125) depth--;
@@ -300,8 +320,8 @@ define('diagonalmatrix dmat antidiagonalmatrix admat', (p, name) => {
   insert(p, elements.map((e, i) => '&'.repeat(anti ? elements.length - i - 1 : i) + `\\mqty{${raw(e)}}`).join('\\\\ '));
 });
 
-for (const char of ['(', ')', '[', ']', '|']) commands['@character:' + char] = {
-  type: 'character', char, execute(p, t) { if (!autoCharacter(p, t)) p.append(p.character(t)); },
+for (const char of ['(', ')', '[', ']', '|']) commands['@physics-character:' + char] = {
+  type: 'character', char, execute: autoCharacter,
 };
 
 export default {name: 'physics', commands, environments: {smallmatrix: {begin(p, name) {
