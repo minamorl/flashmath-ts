@@ -1,0 +1,3 @@
+# Host-specific in-progress checkpoints; final JSON reports and logs are tracked.
+results/*.jsonl
+!results/*.log

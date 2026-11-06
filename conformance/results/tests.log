@@ -1,0 +1,45 @@
+✔ attribute order, quotes, self-closing and numeric entities are serialization only (2.674818ms)
+✔ explicit tracking attributes and structural indentation are ignored (0.421425ms)
+✔ namespace prefixes resolve to the same expanded name (0.186792ms)
+✔ CDATA and XML line ending handling (0.188616ms)
+✔ negative: token cannot normalize away (0.229964ms)
+✔ negative: number cannot normalize away (0.190149ms)
+✔ negative: structure cannot normalize away (0.191932ms)
+✔ negative: missing node cannot normalize away (0.162146ms)
+✔ negative: sibling order cannot normalize away (0.277193ms)
+✔ negative: display mode cannot normalize away (0.350261ms)
+✔ negative: variant cannot normalize away (0.239822ms)
+✔ negative: stretchy cannot normalize away (0.19571ms)
+✔ negative: unknown data attribute cannot normalize away (0.240894ms)
+✔ negative: id cannot normalize away (0.244621ms)
+✔ negative: href cannot normalize away (0.222229ms)
+✔ spaces in tokens, mtext, annotations and attribute values remain significant (0.553024ms)
+✔ invalid XML: unbalanced (0.354379ms)
+✔ invalid XML: duplicate attribute (0.096903ms)
+✔ invalid XML: raw ampersand (0.086603ms)
+✔ invalid XML: unknown entity (0.151015ms)
+✔ invalid XML: invalid code point (0.148561ms)
+✔ invalid XML: DTD (0.10077ms)
+✔ invalid XML: extra root (0.143381ms)
+✔ invalid XML: wrong namespace (0.096622ms)
+✔ invalid XML: missing namespace (0.128232ms)
+✔ invalid XML: unbound prefix (0.1591ms)
+✔ invalid XML: trailing text (0.139513ms)
+✔ invalid XML: empty (0.076714ms)
+✔ invalid XML: attribute missing separator (0.082966ms)
+✔ runner uses all cases as denominator and distinguishes failure classes (3.06268ms)
+✔ blank subject never passes fixture and changing one genuine fixture token is detected (26.707844ms)
+✔ only XML whitespace is formatting; NBSP in content cannot disappear (0.325153ms)
+✔ upstream capture order and single-line MathML snapshots are retained (28.782989ms)
+✔ checkpoint resumes completed cases without re-evaluating the subject (1.246322ms)
+✔ CLI resumes a torn JSONL checkpoint, rejects stale code, and returns failure for incomplete coverage (214.792398ms)
+✔ reserved namespaces and inherited object keys cannot become valid namespace bindings (0.640749ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 386.501809
+exit_code=0

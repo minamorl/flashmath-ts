@@ -1,0 +1,11 @@
+TeX input and expected MathML in mathjax-4.1.3.json are extracted from:
+MathJax-src 4.1.3, commit fb987178c2d279a99b0db5ea02e751691703955e
+https://github.com/mathjax/MathJax-src/tree/4.1.3/testsuite/tests/input/tex
+Licensed under Apache-2.0; see LICENSE.MathJax.
+MathJax project attribution: The MathJax Consortium.
+
+This distribution converts upstream tests/snapshots into JSON and adds captured
+configuration, ordering, source hashes and coverage metadata. It is not an
+unmodified upstream distribution. No upstream NOTICE or NOTICE.txt was present
+at the root of the source revision used. This file is harness attribution,
+not an upstream NOTICE.
