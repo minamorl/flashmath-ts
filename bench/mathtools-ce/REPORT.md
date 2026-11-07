@@ -9,7 +9,7 @@ mathtools overrides AMS alignment environments. Its private alignment callback
 still examined only the first cell node, bypassing the shared `fixInitialMO`
 introduced in `47238f9`. Chemistry emits an empty ORD atom before its REL
 arrow, so the callback failed to prepend the empty `mi` required by MathJax.
-`before.log` records the original comparison failures, including the requested
+`before.log.gz` records the original comparison failures, including the requested
 single-row/two-row aligned and align expressions.
 
 Primary source read: installed MathJax 4.1.3 `ParseUtil.fixInitialMO`,
@@ -127,3 +127,8 @@ was requested or run; the caller can inspect the bundle before later delivery.
 Disabled-review checkpoint before DONE: inspect the raw gate exits, source and
 archive fingerprints, six actual tarball regressions, browser screenshot,
 final diff and bundle prerequisite against the stated base.
+
+The final base-to-HEAD whitespace check detected trailing whitespace in the
+captured assertion log. That log is now stored as `before.log.gz`; decompression
+was compared byte-for-byte against the original phase commit. No raw evidence
+was trimmed. The final base-to-HEAD diff check is rerun after this packaging fix.
