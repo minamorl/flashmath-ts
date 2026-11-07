@@ -194,9 +194,18 @@ function match(v:View,i:number,p:P):Match|null {
     case P.Product:{const j=v.skip(i);return v.c(j)===42||v.c(j)===46?yes(v.skip(j+1),j,j+1):null;}
   }
 }
-interface Item {tex:string;escape?:boolean}
+interface Item {tex:string;escape?:boolean;children?:Item[];count?:number}
 const item=(tex:string,escape=false):Item=>({tex,escape});
-const join=(items:Item[])=>items.map(x=>x.tex).join('');
+const itemCount=(items:Item[])=>items.reduce((n,x)=>n+(x.count??1),0);
+// Retain child output by reference. Copying its leaves into every ancestor
+// takes quadratic time for nested \\ce; flatten once, with an explicit stack.
+const join=(items:Item[])=>{
+  const text:string[]=[],stack=[{items,index:0}];
+  while(stack.length){const f=stack[stack.length-1];if(f.index===f.items.length){stack.pop();continue;}
+    const next=f.items[f.index++];if(next.children)stack.push({items:next.children,index:0});else text.push(next.tex);
+  }
+  return text.join('');
+};
 const append=(a:Text=[],b:Text=[]):Text=>{
   const parts:Piece[]=[];
   for(const group of [a,b])for(const p of group){const last=parts.at(-1);
@@ -218,8 +227,9 @@ type Work=Generator<Deferred,Item[],Item[]>;
 const noItems:Item[]=[];
 const after=(result:Result,finish:(items:Item[])=>Item[]):Result=>Array.isArray(result)?finish(result):{requests:result.requests,finish:items=>finish(result.finish(items))};
 export class MhchemMachine {
-  constructor(readonly fail:(message:string)=>never,readonly maxDepth=200000){}
+  constructor(readonly fail:(message:string)=>never,readonly maxDepth=1024){}
   run(text:Text,machine:M):Item[] {
+    if(this.maxDepth<1)this.fail('Nesting limit exceeded');
     type Frame={work:Work;pending?:Deferred;results:Item[][];index:number;resume:Item[]};
     const frame=(r:Request):Frame=>({work:this.steps(r.text,r.machine),results:[],index:0,resume:noItems});
     const stack:Frame[]=[frame({text,machine})];
@@ -278,7 +288,7 @@ export class MhchemMachine {
             return defer([request(d,M.Pu),request(q,M.Pu)],([top,bottom])=>{
               const result=emit(f.o)==='//'
                 ?[item(`\\flashmathChemFraction{${join(top)}}{${join(bottom)}}`)]
-                :[...top,item(top.length>1||bottom.length>1?'\\,/\\,':'/'),...bottom];
+                :[...top,item(itemCount(top)>1||itemCount(bottom)>1?'\\,/\\,':'/'),...bottom];
               reset();return result;
             });
           }
@@ -388,7 +398,8 @@ export class MhchemMachine {
         for(const [action,option]of actions){
           const field=fields[action];if(field){buf.fields[field]=append(buf.fields[field],m.value);continue;}
           const result=act(action,m,option),values=Array.isArray(result)?result:yield result;
-          for(const value of values)out.push(value);
+          if(values.length===1)out.push(values[0]);
+          else if(values.length)out.push({tex:'',children:values,count:itemCount(values),escape:values.some(x=>x.escape)});
         }
         if(next>=0)state=next;
         if(i===v.length)return out;

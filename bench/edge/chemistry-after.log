@@ -1,0 +1,9 @@
+{"run":0,"depth":5000,"ms":285.455651,"bytes":270177,"error":false}
+{"run":0,"depth":10000,"ms":340.485803,"bytes":540177,"error":false}
+{"run":0,"depth":20000,"ms":553.437986,"bytes":1080177,"error":false}
+{"run":1,"depth":5000,"ms":141.97129799999993,"bytes":270177,"error":false}
+{"run":1,"depth":10000,"ms":296.50307,"bytes":540177,"error":false}
+{"run":1,"depth":20000,"ms":538.9753329999999,"bytes":1080177,"error":false}
+{"run":2,"depth":5000,"ms":127.21605099999988,"bytes":270177,"error":false}
+{"run":2,"depth":10000,"ms":229.93894,"bytes":540177,"error":false}
+{"run":2,"depth":20000,"ms":533.6255370000003,"bytes":1080177,"error":false}

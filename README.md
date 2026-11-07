@@ -61,9 +61,9 @@ value; references to completed equations use their actual tag and URL.
 
 Defaults are inline display, packages `['base', 'newcommand']`, 10,000 macro
 expansions, 100,000 allocated nodes, 200,000 consumed tokens, and 1,024 nested
-parser frames. With mhchem active, chemistry actions and parser frames use an
-explicit stack bounded by the token budget by default, so deep chemistry has
-no independent recursion cutoff. An explicit `maxDepth` limits both stacks.
+parser frames. The depth limit applies with every package configuration.
+Chemistry actions use an explicit stack within the remaining depth budget;
+an explicit `maxDepth` raises or lowers both limits.
 Override these with `display`, `packages`, `maxExpansions`,
 `maxNodes`, `maxTokens`, and `maxDepth`. `throwOnError: true` throws `ParseError`;
 otherwise malformed TeX produces an `merror` tree. `macros` accepts a replacement

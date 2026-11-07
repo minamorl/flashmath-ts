@@ -28,8 +28,8 @@ const commands: Record<string, TexCommand> = {
       for(const child of children)p.append(child);
     });
   }},
-  ce: {execute(p) {expand(p, new MhchemMachine(message => p.error(message), p.options.maxDepth ?? p.options.maxTokens).toTex(raw(p.tokensArgument('\\ce'))));}},
-  pu: {execute(p) {expand(p, new MhchemMachine(message => p.error(message), p.options.maxDepth ?? p.options.maxTokens).toTex(raw(p.tokensArgument('\\pu')), true));}},
+  ce: {execute(p) {expand(p, new MhchemMachine(message => p.error(message), (p.options.maxDepth ?? 1024) - p.frames.length).toTex(raw(p.tokensArgument('\\ce'))));}},
+  pu: {execute(p) {expand(p, new MhchemMachine(message => p.error(message), (p.options.maxDepth ?? 1024) - p.frames.length).toTex(raw(p.tokensArgument('\\pu')), true));}},
   flashmathChemSmash: {execute(p) {p.argument(n => p.append(p.atom([p.node(K.mpadded, inferred(n), '', {height: '0'})])));}},
   flashmathChemHphantom: {execute(p) {p.argument(n => p.append(p.atom([
     p.node(K.mpadded, [p.node(K.mphantom, inferred(n))], '', {height: '0', depth: '0'}),

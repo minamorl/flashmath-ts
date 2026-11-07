@@ -63,13 +63,14 @@ test('deep chemistry around depth 800 agrees with MathJax using default limits',
   await compareCases(t, cases);
 });
 
-test('chemistry default limits accept MathJax depth 2000 and explicit limits still apply', async () => {
+test('chemistry depth 2000 requires an explicit larger depth budget', async () => {
   const tex = '\\ce{H'.repeat(2000) + 'O' + '}'.repeat(2000);
   const options = {packages:['base','mhchem'], display:true};
-  const expected = await oracle(tex, options), actual = subject(tex, options);
+  const expected = await oracle(tex, options), actual = subject(tex, {...options, maxDepth:8000});
   assert.doesNotMatch(expected, /merror/);
   assert.doesNotMatch(actual, /merror/);
   assert.equal(actual.replace(/<[^>]*>/g,''), 'H'.repeat(2000)+'O');
+  assert.match(subject(tex, options), /merror.*Nesting limit exceeded/);
   assert.match(subject(tex, {...options, maxDepth:512}), /merror.*Nesting limit exceeded/);
   assert.doesNotMatch(subject(tex, {...options, maxDepth:8000}), /merror/);
 });
