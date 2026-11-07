@@ -1,10 +1,10 @@
 # Finish performance investigation
 
 The target is lower time than Temml on every accepted cohort. Final full-run
-result: 20/22 Temml cohorts;
+result: 22/22 Temml cohorts;
 36/36 full MathJax groups.
-The universal Temml target remains unmet.
-Remaining slower cohorts: boldsymbol (0.98×), verb (0.96×).
+Every comparable Temml cohort was faster in this run; this is not a universal ranking.
+Remaining slower cohorts: none.
 
 ## Measured causes and changes
 

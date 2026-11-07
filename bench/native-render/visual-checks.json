@@ -1,6 +1,6 @@
 {
   "browser": "Chrome/153.0.8010.36",
-  "formulas": 202,
+  "formulas": 211,
   "ssrStringParity": true,
   "checks": [
     {
@@ -7129,6 +7129,166 @@
       "name": "proof line types",
       "pass": true,
       "details": {}
+    },
+    {
+      "id": "polish-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-2",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1321.765625,
+          "y": 27358.8125,
+          "width": 62.234375,
+          "height": 23,
+          "right": 1384,
+          "bottom": 27381.8125
+        },
+        "body": {
+          "left": 1023.34375,
+          "right": 1085.140625
+        }
+      }
+    },
+    {
+      "id": "polish-2",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-3",
+      "name": "tag side and separation",
+      "pass": true,
+      "details": {
+        "side": "right",
+        "tag": {
+          "x": 1327.625,
+          "y": 27483.8125,
+          "width": 56.375,
+          "height": 23,
+          "right": 1384,
+          "bottom": 27506.8125
+        },
+        "body": {
+          "left": 1023.34375,
+          "right": 1085.140625
+        }
+      }
+    },
+    {
+      "id": "polish-3",
+      "name": "tag shares equation row",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-7",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-7",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-8",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-8",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-9",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "polish-9",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
     }
   ],
   "groups": [
@@ -7189,6 +7349,12 @@
     {
       "group": "core",
       "formulas": 10,
+      "checks": 22,
+      "failed": 0
+    },
+    {
+      "group": "polish",
+      "formulas": 9,
       "checks": 22,
       "failed": 0
     }

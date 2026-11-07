@@ -1,0 +1,28 @@
+{
+  "node": "v26.12.1",
+  "method": "release worker; rotating fresh baseline/current/Temml processes; 9 processes each; 1500 warmup passes; 21 samples of 20 passes; identical Temml accepted cohorts; native serialized output; timing is evidence, not a CI gate",
+  "rows": [
+    {
+      "group": "boldsymbol",
+      "usPerExpression": {
+        "baseline": 15.360689999999977,
+        "current": 13.659374999999727,
+        "temml": 19.15038999999979
+      },
+      "improvement": 1.1245529169526631,
+      "temmlSpeedup": 1.4019960649737027,
+      "samplesPerEngine": 189
+    },
+    {
+      "group": "verb@temml",
+      "usPerExpression": {
+        "baseline": 10.834111111111294,
+        "current": 9.060433333332993,
+        "temml": 11.25434999999963
+      },
+      "improvement": 1.1957608110478566,
+      "temmlSpeedup": 1.2421425759621563,
+      "samplesPerEngine": 189
+    }
+  ]
+}

@@ -49,8 +49,10 @@ Explicit equation tags now use the AMS environment handler even when tagformat
 is enabled, without an extra numbered outer row. Unterminated script groups
 report MathJax's error without changing sqrt/bbox error handling. Nested text
 math and macro arguments share token spans and brace indexes; tests record
-400/1600 timing slopes and copied-token counts. Chemistry has a hard recursive
-action ceiling of 512, returning merror when requested limits exceed it.
+400/1600 timing slopes and copied-token counts. Chemistry now batches child
+calculations on an explicit work stack. With mhchem active, default depth is
+bounded by the token budget; an explicit maxDepth limits both work and parser
+stacks. Tests cover default depth 2000 and raised limits at depth 5000.
 
 Native mixed bonds use CSS stroke coordinates; asymmetric harpoons have separate
 shaft lengths and allocated neighbour spacing. noLine tables use the same native
@@ -90,10 +92,10 @@ Timing ranks are reported as observations, not enforced as correctness gates.
 
 ## Final measured outcome
 
-Generated at 2026-11-07T00:54:17.735Z (UTC report generation time).
+Generated at 2026-11-07T01:52:04.362Z (UTC report generation time).
 The full benchmark measured stateless p50 below MathJax in 36/36
-full groups and below Temml in 20/22 identical-input cohorts.
-Remaining Temml losses: boldsymbol, verb.
+full groups and below Temml in 22/22 identical-input cohorts.
+Remaining Temml losses: none in this run.
 See [performance investigation](performance-finish.md) for measured costs,
 before/after samples and the remaining limits. The source fingerprint and exact
 commands/exits are recorded in ../bench/release/checks.json. Candidate sizes,

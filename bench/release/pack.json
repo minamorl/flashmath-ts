@@ -2,10 +2,10 @@
   "id": "@minamorl/flashmath@0.1.0",
   "name": "@minamorl/flashmath",
   "version": "0.1.0",
-  "size": 169179,
-  "unpackedSize": 495645,
-  "shasum": "bc90f3f09ceb1ee37795a9554e9c4a17e48592ed",
-  "integrity": "sha512-nfo8reSpFjBymf951pqkBvCDZKLoeEpkybwHygmMEg7DudhhAGuW7beuJfw5Xbcv5LoN6oFIDsC+hyAjAg9b3g==",
+  "size": 169252,
+  "unpackedSize": 499079,
+  "shasum": "949a2b503e8b1fee6c07e0340d4434cd1647ba2a",
+  "integrity": "sha512-v15Sd9UKUFPwKUXlkOS3aAyH+FwBUaIukDnnGNWCbOieYqjGIcOneBkuLSJTljlzSVOE2NGr2NsvaCWudIg2SQ==",
   "filename": "minamorl-flashmath-0.1.0.tgz",
   "files": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "path": "README.md",
-      "size": 10022,
+      "size": 10079,
       "mode": 384
     },
     {
@@ -29,8 +29,18 @@
       "mode": 384
     },
     {
-      "path": "dist/chunk-FAPSG72K.js",
-      "size": 1348,
+      "path": "dist/chunk-2BLNXHV2.js",
+      "size": 16145,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-3RTFRBSC.js",
+      "size": 32466,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-42ROELGW.js",
+      "size": 328732,
       "mode": 384
     },
     {
@@ -39,23 +49,13 @@
       "mode": 384
     },
     {
-      "path": "dist/chunk-KGNG53K5.js",
-      "size": 327108,
-      "mode": 384
-    },
-    {
-      "path": "dist/chunk-R4J4JIBX.js",
-      "size": 31978,
+      "path": "dist/chunk-KDAOMSCC.js",
+      "size": 1889,
       "mode": 384
     },
     {
       "path": "dist/chunk-TXV67IQS.js",
       "size": 2370,
-      "mode": 384
-    },
-    {
-      "path": "dist/chunk-UY2JH3C2.js",
-      "size": 15859,
       "mode": 384
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "path": "dist/configuration-cache.d.ts",
-      "size": 362,
+      "size": 273,
       "mode": 384
     },
     {
@@ -75,12 +75,12 @@
     },
     {
       "path": "dist/configuration.d.ts",
-      "size": 465,
+      "size": 690,
       "mode": 384
     },
     {
       "path": "dist/configuration.js",
-      "size": 192,
+      "size": 224,
       "mode": 384
     },
     {
@@ -310,7 +310,7 @@
     },
     {
       "path": "dist/packages/mhchem-machine.d.ts",
-      "size": 1444,
+      "size": 1447,
       "mode": 384
     },
     {
@@ -410,7 +410,7 @@
     },
     {
       "path": "dist/parser.d.ts",
-      "size": 5128,
+      "size": 5248,
       "mode": 384
     },
     {
@@ -430,7 +430,7 @@
     },
     {
       "path": "dist/scanner.d.ts",
-      "size": 1500,
+      "size": 1647,
       "mode": 384
     },
     {

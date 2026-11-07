@@ -1,0 +1,12 @@
+{
+  "node": "v26.12.1",
+  "nodeExecutable": "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+  "pnpm": "11.18.0 (pinned local executable; install stdout is in ci-node-26/install.log)",
+  "nodeVersionsDirectory": "/home/minamorl/.nvm/versions/node",
+  "installedNodeVersions": [
+    "v24.16.0",
+    "v26.12.1"
+  ],
+  "node22Available": false,
+  "installEnvironment": "pnpm_config_offline=true; writable temporary store seeded from the existing store index and read-only package files; no dependency or lockfile changes"
+}

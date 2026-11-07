@@ -1,0 +1,20 @@
+generalization: 216/216 (100.00%)
+valid MathJax expressions: 216/216
+✔ mhchem generalization: at least 150 distinct non-fixture examples, >=98% MathJax agreement (532.468586ms)
+✔ mhchem output: all captured chemistry has native glyphs and unchanged MathJax mode (489.80666ms)
+✔ mhchem output: every chemical private-use slot has an explicit native representation (2.203819ms)
+✔ mhchem output: defaults, session overrides and invalid output values (1.983022ms)
+✔ native output only maps package-created nodes, including mixed literal PUA (10.973959ms)
+✔ native isotope prescripts attach to their element using standard MathML (2.571763ms)
+✔ variable charges and physical-unit uncertainty retain their meaning in both output modes (1.038099ms)
+✔ mhchem: all captured chemistry and physical-unit fixtures (140.495375ms)
+✔ mhchem: independent formulas, reactions, isotopes, labels, units and errors (154.846266ms)
+✔ mhchem: activation and resource budgets use the host parser boundary (1.808794ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 698.047125
