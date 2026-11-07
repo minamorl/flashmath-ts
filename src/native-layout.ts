@@ -116,6 +116,7 @@ export function nativeEnclosure(n:MathMLNode):MathMLNode {
 }
 
 export function isCenterOver(n:MathMLNode):boolean {
+  if(n.kind!=='mrow')return false;
   const outer=n.children[1],inner=outer?.children[0];
   return n.kind==='mrow'&&n.children.length===2&&outer?.kind==='mpadded'&&outer.attributes.width==='0'&&outer.attributes.lspace==='-.5width'
     &&inner?.kind==='mpadded'&&inner.attributes.width==='0'&&inner.attributes.lspace==='-.5width'&&outer.children[1]?.kind==='mphantom';

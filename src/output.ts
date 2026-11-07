@@ -19,10 +19,10 @@ function compound(code: number) {
   return code === 0xe409 || code === 0xe40a || code >= 0xe411 && code <= 0xe413;
 }
 function codeOf(n: MathMLNode) {
-  return packageMark(n)==='glyph' && n.kind === 'mo' && n.text.length === 1 ? n.text.charCodeAt(0) : 0;
+  return n.kind === 'mo' && n.text.length === 1 && packageMark(n)==='glyph' ? n.text.charCodeAt(0) : 0;
 }
 function arrowLabel(n: MathMLNode) {
-  if (packageMark(n)!=='arrow-label' || n.kind !== 'mpadded' || n.children.at(-1)?.kind !== 'mspace') return false;
+  if (n.kind !== 'mpadded' || packageMark(n)!=='arrow-label' || n.children.at(-1)?.kind !== 'mspace') return false;
   const a = n.attributes, strut = n.children.at(-1)!.attributes;
   return a.voffset === '-.2em' && a.height === '-.2em' && strut.depth === '.2em'
     || a.voffset === '.15em' && a.depth === '-.15em' && strut.height === '.75em';
@@ -77,8 +77,8 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
   const pending = [root];
   let found = false;
   while (pending.length) {
-    const n = pending.pop()!, code = codeOf(n), variant=n.attributes.mathvariant;
-    if (glyph(code) || compound(code) || arrowLabel(n) || packageMark(n)==='prescript' || packageMark(n)==='bbox-padding'
+    const n = pending.pop()!, mark=packageMark(n), code = n.kind==='mo'&&n.text.length===1&&mark==='glyph'?n.text.charCodeAt(0):0, variant=n.attributes.mathvariant;
+    if (glyph(code) || compound(code) || mark==='arrow-label'&&arrowLabel(n) || mark==='prescript' || mark==='bbox-padding'
       || n.kind==='menclose' || n.kind==='mlabeledtr' || isCenterOver(n)
       || overline(n)
       || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame || n.attributes.semantics?.includes('bspr_inferenceRule:'))
@@ -100,23 +100,20 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     if(!job.done){
       job.done=true;work.push(job);
       const sourceChildren=input.children,childCount=sourceChildren.length-(arrowLabel(input)?1:0);
-      const children:MathMLNode[]=[];
       for(let i=0;i<childCount;i++){
-        const child=sourceChildren[i];
+        const sourceChild=sourceChildren[i];let child=sourceChild;
         if(packageMark(child)==='prescript' && sourceChildren[i+3]){
           const script=(which:number):MathMLNode=>{
-            const stack=[child.children[which]];
+            const stack=[sourceChild.children[which]];
             while(stack.length){const n=stack.pop();if(!n)continue;
               if(n.kind==='mphantom')return {kind:n.children.length?'mrow':'none',attributes:{},children:n.children,text:'',start:child.start};
               for(const c of n.children)stack.push(c);
             }
             return {kind:'none',attributes:{},children:[],text:'',start:child.start};
           };
-          children.push({kind:'mmultiscripts',attributes:{},children:[sourceChildren[i+3],{kind:'mprescripts',attributes:{},children:[],text:'',start:child.start},script(1),script(2)],text:'',start:child.start});
+          child={kind:'mmultiscripts',attributes:{},children:[sourceChildren[i+3],{kind:'mprescripts',attributes:{},children:[],text:'',start:child.start},script(1),script(2)],text:'',start:child.start};
           i+=3;
-        }else children.push(child);
-      }
-      for(const child of children){
+        }
         const cloned=copy(child);output.children.push(cloned);
         work.push({input:child,output:cloned,variant,done:false});
       }
