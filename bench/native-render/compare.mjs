@@ -16,7 +16,7 @@ import {SerializedMmlVisitor} from '@mathjax/src/js/core/MmlTree/SerializedMmlVi
 const directory=new URL('./',import.meta.url), stage=process.argv.includes('--before')?'before':'after';
 const require=createRequire(import.meta.resolve('@mathjax/src/package.json'));
 mathjax.asyncLoad=name=>import(pathToFileURL(require.resolve(name.replace('/js/','/mjs/'))).href);
-for(const [pkg,name] of Object.entries({base:'Base',newcommand:'Newcommand',ams:'Ams',bbox:'Bbox',cancel:'Cancel',enclose:'Enclose',bussproofs:'Bussproofs',centernot:'Centernot',physics:'Physics',mhchem:'Mhchem'}))await import(`@mathjax/src/js/input/tex/${pkg}/${name}Configuration.js`);
+for(const [pkg,name] of Object.entries({base:'Base',newcommand:'Newcommand',ams:'Ams',bbox:'Bbox',cancel:'Cancel',enclose:'Enclose',bussproofs:'Bussproofs',centernot:'Centernot',physics:'Physics',mhchem:'Mhchem',boldsymbol:'Boldsymbol',verb:'Verb'}))await import(`@mathjax/src/js/input/tex/${pkg}/${name}Configuration.js`);
 const adaptor=liteAdaptor();RegisterHTMLHandler(adaptor);
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 const archived=stage==='before'&&fs.existsSync(new URL('before-cases.json',directory))?JSON.parse(fs.readFileSync(new URL('before-cases.json',directory))):null;

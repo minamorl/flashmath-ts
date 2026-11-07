@@ -6,8 +6,8 @@ export default {name:'boldsymbol',commands:{boldsymbol:{execute(p){p.argument(n=
     // Text boxes create a fresh math environment. Explicit inner boldsymbol
     // commands have already rewritten their own arguments.
     if(x.kind===K.mstyle&&x.attributes.displaystyle==='false')continue;
-    if([K.mi,K.mn,K.mo].includes(x.kind)&&x.attributes.stretchy!=='true'&&!['OPEN','CLOSE'].includes(x.attributes['data-mjx-texclass'])){
-      const variant=x.attributes.mathvariant||(x.kind===K.mi&&Array.from(x.text).length===1?'italic':'normal');
+    if((x.kind===K.mi||x.kind===K.mn||x.kind===K.mo)&&x.attributes.stretchy!=='true'&&x.attributes['data-mjx-texclass']!=='OPEN'&&x.attributes['data-mjx-texclass']!=='CLOSE'){
+      const variant=x.attributes.mathvariant||(x.kind===K.mi&&(x.text.length===1||x.text.length===2&&x.text.codePointAt(0)!>0xffff)?'italic':'normal');
       if(bold[variant]){if(variant==='-tex-mathit'){delete x.attributes.mathvariant;x.attributes['data-mjx-variant']='bold-italic';}else x.attributes.mathvariant=bold[variant];}
     }stack.push(...x.children);
   }

@@ -68,3 +68,20 @@ test('chemistry default limits accept MathJax depth 2000 and explicit limits sti
   assert.match(subject(tex, {...options, maxDepth:512}), /merror.*Nesting limit exceeded/);
   assert.doesNotMatch(subject(tex, {...options, maxDepth:8000}), /merror/);
 });
+
+test('boldsymbol optimization retains MathJax behavior on fresh font and script expressions', async t => {
+  const cases = [];
+  for (const body of ['q',String.raw`\beta`,String.raw`\Delta`,String.raw`\partial`,String.raw`\nabla`,String.raw`\infty`,String.raw`\sum_{j=3}^9q_j`,String.raw`\frac{q}{r}`,String.raw`\sqrt{r}`,String.raw`\mathrm{PQ}`,String.raw`\mathcal{MN}`,String.raw`\mathfrak{pq}`]) {
+    for (const suffix of ['+7','_{j+7}','^3']) cases.push({tex:`{\\boldsymbol{${body}}}${suffix}`,packages:['base','boldsymbol'],display:true});
+  }
+  await compareCases(t, cases);
+});
+
+test('verb raw consumption retains MathJax behavior across delimiters and following math', async t => {
+  const cases = [];
+  for (const delimiter of ['|','!','+','/']) for (const body of ['a%b','x { y','<a>&b',String.raw`\frac{p}{q}`,'two words','😀 x','a_b^7','{nested}']) {
+    cases.push({tex:`\\verb${delimiter}${body}${delimiter}+q_7`,packages:['base','verb'],display:true});
+  }
+  cases.push({tex:String.raw`\verb\raw\q_7`,packages:['base','verb'],display:true});
+  await compareCases(t, cases);
+});

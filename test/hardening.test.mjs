@@ -99,3 +99,21 @@ test('compact option keys separate primitives, escaped keys and accessors',()=>{
  const input=JSON.parse('{"__proto__":{"x":1},"texOptions":{"tags":"none"}}');
  assert.notEqual(configurationKey(input),configurationKey({texOptions:{tags:'none'}}));
 });
+
+test('warm option snapshots observe nested mutations and accessor replacement',()=>{
+ const options={packages:['base','newcommand'],macros:{q:'a'},texOptions:{}};
+ assert.match(render('\\q',options),/>a</);
+ options.macros.q='b';assert.match(render('\\q',options),/>b</);
+ options.packages.splice(1,1,'boldsymbol');
+ assert.doesNotMatch(render('\\boldsymbol{x}',options),/merror/);
+ const oldKey=configurationKey(options);
+ options.texOptions.unknown=true;
+ assert.notEqual(configurationKey(options),oldKey);
+ assert.throws(()=>render('x',options),/Unsupported TeX option/);
+ let reads=0;
+ Object.defineProperty(options.macros,'q',{enumerable:true,configurable:true,get(){reads++;return 'c';}});
+ assert.equal(configurationKey(options),undefined);assert.equal(reads,0);
+ const warmed={child:{x:1}};configurationKey(warmed);warmed.child.loop=warmed;
+ assert.equal(configurationKey(warmed),undefined);
+ delete warmed.child.loop;assert.equal(configurationKey(warmed),configurationKey({child:{x:1}}));
+});

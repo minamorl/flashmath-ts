@@ -1,0 +1,89 @@
+{
+  "totalHits": 2698,
+  "rows": [
+    {
+      "name": "r",
+      "hits": 555,
+      "file": "chunk-FAPSG72K.js",
+      "column": 156,
+      "source": "(e){if(e===void 0)return\"u\";if(e===null)return\"null\";if(typeof e==\"string\")return JSON.stringify(e);if(typeof e==\"boolean\")return String(e);if(typeof e==\"number\")return\"n\"+(Object.is(e,-0)?\"-0\":String(e));if(e instanceof RegExp)return\"r\"+JS"
+    },
+    {
+      "name": "Z",
+      "hits": 231,
+      "file": "chunk-UY2JH3C2.js",
+      "column": 12282,
+      "source": "(t,i={}){let r=i.output===void 0?\"native\":i.output;if(r!==\"native\"&&r!==\"mathjax\")throw new TypeError(\"output must be native or mathjax\");if(r===\"mathjax\")return t;let o=[t],c=!1;for(;o.length;){let n=o.pop(),d=v(n),e=n.kind===\"mo\"&&n.text."
+    },
+    {
+      "name": "run",
+      "hits": 175,
+      "file": "chunk-JPBKU4LI.js",
+      "column": 24003,
+      "source": "(){for(;this.frames.length;){for(;this.f?.single&&this.f.nodes.length;)this.close();if(!this.frames.length)break;let e=this.stream.next();if(!e){this.frames.length!==1&&this.error(this.f.missingMessage??(this.f.env===\"argument\"?\"Missing clo"
+    },
+    {
+      "name": "m",
+      "hits": 131,
+      "file": "index.js",
+      "column": 400,
+      "source": "(e,a={}){let r=\"\",n=[p(e,a)];for(;n.length;){let t=n.pop();if(typeof t==\"string\"){r+=t;continue}if(t.kind===\"#text\"){r+=s(t.text);continue}r+=\"<\"+t.kind;for(let o of Object.keys(t.attributes))r+=\" \"+o+'=\"'+s(t.attributes[o])+'\"';r+=\">\",n.pu"
+    },
+    {
+      "name": "c",
+      "hits": 117,
+      "file": "chunk-FAPSG72K.js",
+      "column": 984,
+      "source": "(t){if(t instanceof RegExp)return new RegExp(t.source,t.flags);if(Array.isArray(t))return t.map(c);if(t&&typeof t==\"object\"){let n={};for(let r of Object.keys(t)){let e=c(t[r]);r===\"__proto__\"?Object.defineProperty(n,r,{value:e,enumerable:!"
+    },
+    {
+      "name": "il",
+      "hits": 100,
+      "file": "chunk-BQ3ITF62.js",
+      "column": 286363,
+      "source": "(e){let t=Lt(e),n=t===void 0?void 0:Fa.get(t);return n||(n=Ls(e),t!==void 0&&Bt(Fa,t,{...n,options:Ft(n.options)})),{configuration:n.configuration,options:t===void 0?n.options:Ft(n.options)}}function Ls(e){if(e.mode!==void 0&&e.mode!==\"conv"
+    },
+    {
+      "name": "Te",
+      "hits": 93,
+      "file": "chunk-JPBKU4LI.js",
+      "column": 32326,
+      "source": "(b,e={}){let t=$(e);return t.options.prior?.length?le(e).parse(b):D(ie(b,t.options,t.configuration,A()),t.options)}export{le as a,Te as b};\n"
+    },
+    {
+      "name": "m",
+      "hits": 64,
+      "file": "chunk-UY2JH3C2.js",
+      "column": 13042,
+      "source": "n=>S(n)?{...n,kind:\"mrow\",attributes:{},children:[]}:{...n,attributes:{...n.attributes},children:[]},l=m(t),u=\"tagSide\"in i&&i.tagSide===\"left\"?\"left\":\"right\",p=!1,s=[{input:t,output:l,variant:\"\",done:!1}];for(;s.length;){let n=s.pop(),{inp"
+    },
+    {
+      "name": "s",
+      "hits": 58,
+      "file": "index.js",
+      "column": 336,
+      "source": "(e){return/[&<>\"']/.test(e)?e.replace(/[&<>\"']/g,g):e}function m(e,a={}){let r=\"\",n=[p(e,a)];for(;n.length;){let t=n.pop();if(typeof t==\"string\"){r+=t;continue}if(t.kind===\"#text\"){r+=s(t.text);continue}r+=\"<\"+t.kind;for(let o of Object.key"
+    },
+    {
+      "name": "execute",
+      "hits": 52,
+      "file": "chunk-BQ3ITF62.js",
+      "column": 275386,
+      "source": "(e){e.stream.skip();let t=e.stream.next()??e.error(\"Missing argument for \\\\verb\"),n=t[3],r=t[1]-(t[0]===-1?1:0),a=n.charAt(r),o=r+1,s=n.indexOf(a,o);s<0&&e.error(\"Can't find closing delimiter for \\\\verb\");let l=t;for(;e.stream.peek();){let "
+    },
+    {
+      "name": "get f",
+      "hits": 51,
+      "file": "chunk-JPBKU4LI.js",
+      "column": 3951,
+      "source": "(){return this.frames[this.frames.length-1]}frame(e,t,n,i=\"\",s=null){this.frames.length>=(this.options.maxDepth??(this.configuration.extensions.has(\"ce\")?this.options.maxTokens??2e5:1024))&&this.error(\"Nesting limit exceeded\");let r=this.f;"
+    },
+    {
+      "name": "p",
+      "hits": 43,
+      "file": "chunk-FAPSG72K.js",
+      "column": 128,
+      "source": "(t){let n=new Set;function r(e){if(e===void 0)return\"u\";if(e===null)return\"null\";if(typeof e==\"string\")return JSON.stringify(e);if(typeof e==\"boolean\")return String(e);if(typeof e==\"number\")return\"n\"+(Object.is(e,-0)?\"-0\":String(e));if(e in"
+    }
+  ]
+}

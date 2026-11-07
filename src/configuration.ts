@@ -15,13 +15,24 @@ export function configure(input: ParseOptions): {
   options: ParseOptions;
   configuration: ActivePackageConfiguration;
 } {
+  return configured(input, false);
+}
+
+/** Borrow a private template only when parsing has no mutable option state. */
+export function parserConfiguration(input: ParseOptions) {
+  return configured(input, true);
+}
+
+function configured(input: ParseOptions, borrow: boolean) {
   const key = configurationKey(input);
   let resolved = key === undefined ? undefined : optionCache.get(key);
   if (!resolved) {
     resolved = configureUncached(input);
-    if (key !== undefined) remember(optionCache, key, { ...resolved, options: copyConfiguration(resolved.options) });
+    if (key !== undefined) resolved = remember(optionCache, key, { ...resolved, options: copyConfiguration(resolved.options) });
   }
-  return { configuration: resolved.configuration, options: key === undefined ? resolved.options : copyConfiguration(resolved.options) };
+  const options = resolved.options;
+  const readonly = borrow && !resolved.configuration.initializers.length && !options.numberPattern && !options.identifierPattern;
+  return { configuration: resolved.configuration, options: key === undefined || readonly ? options : copyConfiguration(options) };
 }
 
 function configureUncached(input: ParseOptions): {

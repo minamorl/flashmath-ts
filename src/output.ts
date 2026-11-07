@@ -97,7 +97,7 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
   while(work.length){
     const job=work.pop()!,{input,output}=job;
     const variant=input.attributes['data-mjx-variant']??input.attributes.mathvariant??job.variant;
-    if(!job.done){
+    if(!job.done&&input.children.length){
       job.done=true;work.push(job);
       const sourceChildren=input.children,childCount=sourceChildren.length-(arrowLabel(input)?1:0);
       for(let i=0;i<childCount;i++){
@@ -125,6 +125,11 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
       const name=variantName(variant);
       if(['mi','mn','mo','mtext'].includes(output.kind)){
         const mapped=output.kind==='mtext'?output.text:variantText(output.text,variant);
+        // Remove variant keys before adding CSS, retaining fast attribute shapes
+        // for text tokens such as verb's monospace output.
+        delete output.attributes['data-mjx-variant'];
+        if(output.kind==='mi')output.attributes.mathvariant='normal';
+        else delete output.attributes.mathvariant;
         if(name!=='normal'&&mapped===output.text&&!['script','bold-script'].includes(name)){
           if(name.includes('bold'))addStyle(output,'font-weight:bold;');
           if(name.includes('italic')||name.includes('script'))addStyle(output,'font-style:italic;');
@@ -138,9 +143,6 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
         else if(name==='script'||name==='bold-script')
           addStyle(output,`font-family:'Flashmath Script',math;font-style:normal;font-weight:${name.includes('bold')?'bold':'normal'};`);
         output.text=mapped;
-        delete output.attributes['data-mjx-variant'];
-        if(output.kind==='mi')output.attributes.mathvariant='normal';
-        else delete output.attributes.mathvariant;
       }else delete output.attributes.mathvariant;
     }
     if(output.attributes.semantics?.includes('bspr_prooflabel:')){
