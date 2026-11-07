@@ -30,3 +30,11 @@ add('polish',String.raw`\verb|x { y % z|+q_7`,['verb']);
 // Initial-operator regressions: preserve the exact MathJax tree and browser path.
 for(const tex of [String.raw`\begin{multlined}a+b\\+c\end{multlined}`,String.raw`\begin{multlined}[t]a+b\\+c\end{multlined}`,String.raw`\begin{multlined}a_7\\\,+c_5\end{multlined}`])add('edge',tex,['ams','mathtools']);
 for(const tex of [String.raw`\begin{aligned}\ce{A &-> B}\end{aligned}`,String.raw`\begin{align}\ce{A &= B}\end{align}`])add('edge',tex,['ams','mhchem']);
+
+// mathtools overrides AMS alignments; exercise its chemistry path in the browser.
+for(const tex of [String.raw`\begin{aligned}\ce{A &-> B}\end{aligned}`,
+  String.raw`\begin{aligned}\ce{A &-> B}\\\ce{B &<=> C}\end{aligned}`,
+  String.raw`\begin{align}\ce{A &= B}\end{align}`,
+  String.raw`\begin{gathered}\ce{A &-> B}\\\ce{B &<=> C}\end{gathered}`,
+  String.raw`\begin{lgathered}\ce{A &-> B}\end{lgathered}`,
+  String.raw`\begin{alignedat}{1}\ce{A &-> B}\end{alignedat}`])add('mathtools-ce',tex,['ams','mhchem','mathtools']);

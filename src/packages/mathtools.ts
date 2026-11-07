@@ -320,7 +320,7 @@ for(const name of ['dcases','rcases','drcases','dcases*','rcases*','drcases*','c
  if(starred)starCasesBody(p,name);
  p.tableStart(name,'lll',-4,n=>{
    n.attributes={columnspacing:'1em',rowspacing:'.2em',columnalign:starred?'left':'left left',...(display?{displaystyle:'true'}:{})};
-   if(starred)for(const row of n.children){const cell=row.children[1];if(cell&&(display||cell.children.length!==1||cell.children[0].kind!==K.mtext))cell.children=[p.node(K.mstyle,cell.children.flatMap(children),'',display?{displaystyle:'false'}:{})];}
+   if(starred)for(const row of n.children){const cell=row.children[1];if(cell&&(display||p.configuration.packages.some(pkg=>pkg.name==='textmacros')||cell.children.length!==1||cell.children[0].kind!==K.mtext))cell.children=[p.node(K.mstyle,cell.children.flatMap(children),'',display?{displaystyle:'false'}:{})];}
    p.append(wrapTable(p,n,right?'':'{',right?'}':''));
  });p.f.display=display;
 }};
@@ -354,7 +354,7 @@ for(const name of ['shoveleft','shoveright'])command(name,(p,name)=>{
  p.argument(n=>{if(shift){const s=p.node(K.mspace,[],'',{width:shift});p.append(p.row(left?[s,n]:[n,s],true));}else p.append(n);});
 });
 function alignment(p:Parser,name:string){
- const isGather=name.includes('gather'),alignat=name.includes('alignat');
+ const isGather=name.includes('gather'),alignat=name.includes('alignat')||name==='alignedat';
  const count=alignat?raw(p.tokensArgument()):'0',pairs=Number(count);
  if(alignat&&!/^\d*$/.test(count))p.error(`Argument to \\begin{${name}} must be a positive integer`);
  if(!Number.isSafeInteger(pairs)||pairs>(p.options.maxNodes??100000)/2)p.error('Node limit exceeded');
@@ -364,9 +364,10 @@ function alignment(p:Parser,name:string){
   const max=Math.max(1,...n.children.map(row=>row.children.length-(row.kind===K.mlabeledtr?1:0)));
   const columns=isGather?1:Math.max(alignat?pairs*2:0,max),e=state(p).tables.get(table);
   for(const row of n.children){
+   if(isGather&&name!=='rgathered')for(let c=1+(row.kind===K.mlabeledtr?1:0);c<row.children.length;c++)p.fixInitialMO(row.children[c].children);
    if(!isGather)for(let c=1+(row.kind===K.mlabeledtr?1:0);c<row.children.length;c+=2){
     const cell=row.children[c],nodes=cell.children;
-    if(nodes[0]?.kind===K.mo||nodes[0]?.attributes['data-mjx-texclass']==='REL')nodes.unshift(p.node(K.mi));
+    p.fixInitialMO(nodes);
     cell.children=[p.node(K.mstyle,nodes,'',{indentshift:'2em'})];
    }
   }

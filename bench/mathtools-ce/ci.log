@@ -1,0 +1,177 @@
+{
+  "name": "install",
+  "command": [
+    "pnpm",
+    "install",
+    "--frozen-lockfile"
+  ],
+  "exit": 0,
+  "allowed": [
+    0
+  ],
+  "tail": [
+    "Already up to date",
+    "Done in 374ms using pnpm v11.18.0"
+  ]
+}
+{
+  "name": "build",
+  "command": [
+    "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+    "scripts/build.mjs"
+  ],
+  "exit": 0,
+  "allowed": [
+    0
+  ],
+  "tail": [
+    "Built shared ESM runtime and TypeScript declarations"
+  ]
+}
+{
+  "name": "tests",
+  "command": [
+    "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+    "--test",
+    "test/core.test.mjs",
+    "test/edge-compatibility.test.mjs",
+    "test/edge-depth.test.mjs",
+    "test/hardening-compatibility.test.mjs",
+    "test/hardening.test.mjs",
+    "test/integration.test.mjs",
+    "test/native-render.test.mjs",
+    "test/packages-fonts.test.mjs",
+    "test/packages-misc.test.mjs",
+    "test/packages-pkg-physics.test.mjs",
+    "test/packages-references.test.mjs",
+    "test/polish-compatibility.test.mjs",
+    "test/react-properties.test.mjs",
+    "test/ssr-fixtures.test.mjs",
+    "test/symbol-trie.test.mjs",
+    "test/packages/action.test.mjs",
+    "test/packages/ams.test.mjs",
+    "test/packages/amscd.test.mjs",
+    "test/packages/autoload.test.mjs",
+    "test/packages/bbm.test.mjs",
+    "test/packages/bboldx.test.mjs",
+    "test/packages/bbox.test.mjs",
+    "test/packages/begingroup.test.mjs",
+    "test/packages/boldsymbol.test.mjs",
+    "test/packages/braket.test.mjs",
+    "test/packages/bussproofs.test.mjs",
+    "test/packages/cancel.test.mjs",
+    "test/packages/cases.test.mjs",
+    "test/packages/centernot.test.mjs",
+    "test/packages/color.test.mjs",
+    "test/packages/colortbl.test.mjs",
+    "test/packages/colorv2.test.mjs",
+    "test/packages/configmacros.test.mjs",
+    "test/packages/dsfont.test.mjs",
+    "test/packages/empheq.test.mjs",
+    "test/packages/enclose.test.mjs",
+    "test/packages/extpfeil.test.mjs",
+    "test/packages/fontsizev3.test.mjs",
+    "test/packages/gensymb.test.mjs",
+    "test/packages/html.test.mjs",
+    "test/packages/mathtools.test.mjs",
+    "test/packages/mhchem-alignment.test.mjs",
+    "test/packages/mhchem-generalization.test.mjs",
+    "test/packages/mhchem-output.test.mjs",
+    "test/packages/mhchem.test.mjs",
+    "test/packages/noerrors.test.mjs",
+    "test/packages/noundefined.test.mjs",
+    "test/packages/physics-scaling.test.mjs",
+    "test/packages/physics.test.mjs",
+    "test/packages/require.test.mjs",
+    "test/packages/setoptions.test.mjs",
+    "test/packages/tagformat.test.mjs",
+    "test/packages/texhtml.test.mjs",
+    "test/packages/textcomp.test.mjs",
+    "test/packages/textmacros.test.mjs",
+    "test/packages/unicode.test.mjs",
+    "test/packages/upgreek.test.mjs",
+    "test/packages/verb.test.mjs",
+    "conformance/harness.test.mjs",
+    "scripts/ci-checks.test.mjs"
+  ],
+  "exit": 0,
+  "allowed": [
+    0
+  ],
+  "tail": [
+    "✔ SSR structurally equals string output for all 2635 executable fixtures (1559.665701ms)",
+    "ℹ {\"groups\":{\"action\":3,\"ams\":158,\"amscd\":13,\"base\":790,\"bbm\":9,\"bboldx\":28,\"bbox\":6,\"begingroup\":19,\"boldsymbol\":6,\"braket\":30,\"bussproofs\":26,\"cancel\":8,\"cases\":5,\"centernot\":2,\"color\":29,\"colortbl\":14,\"colorv2\":4,\"configmacros\":10,\"dsfont\":2,\"empheq\":44,\"enclose\":6,\"extpfeil\":6,\"gensymb\":5,\"html\":16,\"mathtools\":196,\"mhchem\":112,\"newcommand\":58,\"noerrors\":56,\"noundefined\":2,\"physics\":628,\"setoptions\":10,\"tag\":75,\"tagformat\":8,\"tex\":2,\"texhtml\":6,\"textcomp\":118,\"textmacros\":48,\"unicode\":21,\"units\":10,\"upgreek\":41,\"verb\":5},\"unsupported\":0}",
+    "✔ SSR comparison normalizes only documented React serialization differences (0.465168ms)",
+    "✔ generated compact trie resolves every definition from source spans without prefix collisions (43.800692ms)",
+    "ℹ tests 2503",
+    "ℹ suites 0",
+    "ℹ pass 2497",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 6",
+    "ℹ todo 0",
+    "ℹ duration_ms 11072.145394"
+  ]
+}
+{
+  "name": "conformance",
+  "command": [
+    "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+    "conformance/runner.mjs",
+    "--subject",
+    "bench/flashmath/adapter.mjs",
+    "--output",
+    "bench/release/ci-conformance.json",
+    "--fresh"
+  ],
+  "exit": 1,
+  "allowed": [
+    0,
+    1
+  ],
+  "tail": [
+    "progress: 1500/2683",
+    "progress: 1600/2683",
+    "progress: 1700/2683",
+    "progress: 1800/2683",
+    "progress: 1900/2683",
+    "progress: 2000/2683",
+    "progress: 2100/2683",
+    "progress: 2200/2683",
+    "progress: 2300/2683",
+    "progress: 2400/2683",
+    "progress: 2500/2683",
+    "progress: 2600/2683"
+  ]
+}
+{
+  "name": "conformance-gate",
+  "command": [
+    "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+    "scripts/ci-conformance-gate.mjs",
+    "bench/release/ci-conformance.json"
+  ],
+  "exit": 0,
+  "allowed": [
+    0
+  ],
+  "tail": [
+    "Conformance gate PASS: {\"matched\":2635,\"mismatch\":0,\"unsupported\":48,\"total\":2683,\"classifications\":{\"typeset-component-pipeline\":14,\"custom-package-registration\":26,\"non-single-MathML-snapshot\":7,\"input-not-captured\":1}}"
+  ]
+}
+{
+  "name": "pack-smoke",
+  "command": [
+    "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+    "scripts/ci-pack-smoke.mjs"
+  ],
+  "exit": 0,
+  "allowed": [
+    0
+  ],
+  "tail": [
+    "{\"coreImport\":true,\"reactImport\":true,\"reactSSR\":true,\"coreBytes\":455,\"reactBytes\":455}",
+    "Pack smoke PASS: {\"tarball\":\"minamorl-flashmath-0.1.0.tgz\",\"files\":89,\"unpackedBytes\":499959}"
+  ]
+}
+CI replay: PASS

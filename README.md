@@ -151,13 +151,13 @@ otherwise document state persists. Both set ignoreDuplicateLabels=true.
 
 | Corpus | Common inputs | Stateless | Session | MathJax | Temml |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| bench12 | 12/12 | 11.25 | 10.25 | 220.75 | 18.53 |
-| base | 10/10 | 25.42 | 23.47 | 402.75 | 37.72 |
-| newcommand | 6/10 | 9.47 | 8.55 | 149.38 | 15.31 |
-| ams | 10/10 | 29.61 | 28.62 | 378.03 | 46.64 |
-| mathtools | 6/10 | 27.90 | 24.47 | 390.32 | 38.82 |
-| physics | 9/10 | 33.82 | 32.62 | 476.06 | 65.92 |
-| mhchem | 10/10 | 93.05 | 90.65 | 815.86 | 101.72 |
+| bench12 | 12/12 | 11.57 | 10.45 | 216.66 | 19.29 |
+| base | 10/10 | 25.46 | 23.34 | 410.18 | 39.61 |
+| newcommand | 6/10 | 9.50 | 8.64 | 148.70 | 16.84 |
+| ams | 10/10 | 30.72 | 29.01 | 380.30 | 50.64 |
+| mathtools | 6/10 | 27.75 | 24.62 | 402.29 | 41.66 |
+| physics | 9/10 | 34.14 | 33.70 | 484.51 | 71.48 |
+| mhchem | 10/10 | 94.81 | 90.34 | 816.13 | 108.10 |
 
 Across the full corpus, stateless flashmath had lower p50 than MathJax in
 36/36 groups and Temml in
@@ -170,7 +170,7 @@ p50 / p95 milliseconds (excludes Node process bootstrap):
 
 | Stateless | Session | MathJax | Temml |
 | ---: | ---: | ---: | ---: |
-| 26.77 / 27.32 | 26.88 / 27.74 | 67.81 / 69.34 | 20.37 / 20.69 |
+| 27.17 / 29.05 | 27.31 / 28.97 | 69.05 / 70.46 | 20.66 / 21.80 |
 
 [Full cohorts, p50/p95 and method](https://github.com/minamorl/flashmath-ts/blob/main/bench/flashmath/hardening-benchmark.md) ·
 [raw samples](https://github.com/minamorl/flashmath-ts/blob/main/bench/flashmath/hardening-benchmark.raw.json). Earlier hardening

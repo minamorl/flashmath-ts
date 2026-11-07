@@ -92,7 +92,7 @@ Timing ranks are reported as observations, not enforced as correctness gates.
 
 ## Final measured outcome
 
-Generated at 2026-11-07T02:22:24.636Z (UTC report generation time).
+Generated at 2026-11-07T02:44:18.437Z (UTC report generation time).
 The full benchmark measured stateless p50 below MathJax in 36/36
 full groups and below Temml in 22/22 identical-input cohorts.
 Remaining Temml losses: none in this run.

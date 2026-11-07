@@ -1,6 +1,6 @@
 {
   "node": "v26.12.1",
-  "createdAt": "2026-11-07T02:22:45.253Z",
+  "createdAt": "2026-11-07T02:44:39.045Z",
   "checks": [
     {
       "name": "install",
@@ -15,7 +15,7 @@
       ],
       "tail": [
         "Already up to date",
-        "Done in 373ms using pnpm v11.18.0"
+        "Done in 374ms using pnpm v11.18.0"
       ]
     },
     {
@@ -78,6 +78,7 @@
         "test/packages/gensymb.test.mjs",
         "test/packages/html.test.mjs",
         "test/packages/mathtools.test.mjs",
+        "test/packages/mhchem-alignment.test.mjs",
         "test/packages/mhchem-generalization.test.mjs",
         "test/packages/mhchem-output.test.mjs",
         "test/packages/mhchem.test.mjs",
@@ -102,18 +103,18 @@
         0
       ],
       "tail": [
-        "✔ SSR structurally equals string output for all 2635 executable fixtures (1336.440797ms)",
+        "✔ SSR structurally equals string output for all 2635 executable fixtures (1559.665701ms)",
         "ℹ {\"groups\":{\"action\":3,\"ams\":158,\"amscd\":13,\"base\":790,\"bbm\":9,\"bboldx\":28,\"bbox\":6,\"begingroup\":19,\"boldsymbol\":6,\"braket\":30,\"bussproofs\":26,\"cancel\":8,\"cases\":5,\"centernot\":2,\"color\":29,\"colortbl\":14,\"colorv2\":4,\"configmacros\":10,\"dsfont\":2,\"empheq\":44,\"enclose\":6,\"extpfeil\":6,\"gensymb\":5,\"html\":16,\"mathtools\":196,\"mhchem\":112,\"newcommand\":58,\"noerrors\":56,\"noundefined\":2,\"physics\":628,\"setoptions\":10,\"tag\":75,\"tagformat\":8,\"tex\":2,\"texhtml\":6,\"textcomp\":118,\"textmacros\":48,\"unicode\":21,\"units\":10,\"upgreek\":41,\"verb\":5},\"unsupported\":0}",
-        "✔ SSR comparison normalizes only documented React serialization differences (0.461871ms)",
-        "✔ generated compact trie resolves every definition from source spans without prefix collisions (58.682706ms)",
-        "ℹ tests 2485",
+        "✔ SSR comparison normalizes only documented React serialization differences (0.465168ms)",
+        "✔ generated compact trie resolves every definition from source spans without prefix collisions (43.800692ms)",
+        "ℹ tests 2503",
         "ℹ suites 0",
-        "ℹ pass 2479",
+        "ℹ pass 2497",
         "ℹ fail 0",
         "ℹ cancelled 0",
         "ℹ skipped 6",
         "ℹ todo 0",
-        "ℹ duration_ms 10380.388263"
+        "ℹ duration_ms 11072.145394"
       ]
     },
     {
@@ -174,7 +175,7 @@
       ],
       "tail": [
         "{\"coreImport\":true,\"reactImport\":true,\"reactSSR\":true,\"coreBytes\":455,\"reactBytes\":455}",
-        "Pack smoke PASS: {\"tarball\":\"minamorl-flashmath-0.1.0.tgz\",\"files\":89,\"unpackedBytes\":499785}"
+        "Pack smoke PASS: {\"tarball\":\"minamorl-flashmath-0.1.0.tgz\",\"files\":89,\"unpackedBytes\":499959}"
       ]
     }
   ]

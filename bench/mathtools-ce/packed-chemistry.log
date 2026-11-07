@@ -1,0 +1,7 @@
+{"packages":["base","ams","mhchem","mathtools"],"tex":"\\begin{aligned}\\ce{A &-> B}\\end{aligned}","difference":null}
+{"packages":["base","ams","mhchem","mathtools"],"tex":"\\begin{aligned}\\ce{A &-> B}\\\\\\ce{B &<=> C}\\end{aligned}","difference":null}
+{"packages":["base","ams","mhchem","mathtools"],"tex":"\\begin{align}\\ce{A &= B}\\end{align}","difference":null}
+{"packages":["base","ams","newcommand","mathtools","boldsymbol","physics","mhchem","color","bbox","enclose","cancel","html","unicode","dsfont","bbm","upgreek","gensymb","textmacros","colortbl"],"tex":"\\begin{aligned}\\ce{A &-> B}\\end{aligned}","difference":null}
+{"packages":["base","ams","newcommand","mathtools","boldsymbol","physics","mhchem","color","bbox","enclose","cancel","html","unicode","dsfont","bbm","upgreek","gensymb","textmacros","colortbl"],"tex":"\\begin{aligned}\\ce{A &-> B}\\\\\\ce{B &<=> C}\\end{aligned}","difference":null}
+{"packages":["base","ams","newcommand","mathtools","boldsymbol","physics","mhchem","color","bbox","enclose","cancel","html","unicode","dsfont","bbm","upgreek","gensymb","textmacros","colortbl"],"tex":"\\begin{align}\\ce{A &= B}\\end{align}","difference":null}
+Actual tarball chemistry regressions: PASS

@@ -274,10 +274,12 @@ reviewed separately; geometry alone is not evidence of matching glyph design.
 | core | 10 | 22 | 0 |
 | polish | 9 | 22 | 0 |
 | edge | 5 | 10 | 0 |
+| mathtools-ce | 6 | 12 | 0 |
 
-Browser: Chrome/153.0.8010.36. All 216 SSR/string pairs have identical measured geometry.
+Browser: Chrome/153.0.8010.36. All 222 SSR/string pairs have identical measured geometry.
 
 <!-- /measured-results -->
+
 
 
 

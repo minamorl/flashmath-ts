@@ -1,6 +1,6 @@
 {
   "reactChecks": {
-    "hydrated": 216,
+    "hydrated": 222,
     "clientRendered": 2638,
     "errors": [],
     "recoverable": []
@@ -40,7 +40,7 @@
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
     "jsVersion": "15.3.76.10"
   },
-  "count": 216,
+  "count": 222,
   "ssrStringParity": true,
   "exceptions": [],
   "screenshots": [
@@ -66,7 +66,8 @@
     "after-chemistry-2.png",
     "after-core-1.png",
     "after-polish-1.png",
-    "after-edge-1.png"
+    "after-edge-1.png",
+    "after-mathtools-ce-1.png"
   ],
   "measurements": [
     {
@@ -17085,6 +17086,192 @@
         "bottom": 28978.109375
       },
       "text": "A=B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "mathtools-ce-1",
+      "native": {
+        "x": 993.9375,
+        "y": 29130.203125,
+        "width": 120.609375,
+        "height": 30.4375,
+        "right": 1114.546875,
+        "bottom": 29160.640625
+      },
+      "reference": {
+        "x": 319.5,
+        "y": 29133.640625,
+        "width": 102.5,
+        "height": 29.46875,
+        "right": 422,
+        "bottom": 29163.109375
+      },
+      "text": "A⟶B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "mathtools-ce-2",
+      "native": {
+        "x": 993.796875,
+        "y": 29240.578125,
+        "width": 120.90625,
+        "height": 61.875,
+        "right": 1114.703125,
+        "bottom": 29302.453125
+      },
+      "reference": {
+        "x": 319.296875,
+        "y": 29237.609375,
+        "width": 102.90625,
+        "height": 67.8125,
+        "right": 422.203125,
+        "bottom": 29305.421875
+      },
+      "text": "A⟶BB⇌C",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "mathtools-ce-3",
+      "native": {
+        "x": 1001.46875,
+        "y": 29382.390625,
+        "width": 105.5625,
+        "height": 30.4375,
+        "right": 1107.03125,
+        "bottom": 29412.828125
+      },
+      "reference": {
+        "x": 329.59375,
+        "y": 29385.828125,
+        "width": 82.296875,
+        "height": 29.46875,
+        "right": 411.890625,
+        "bottom": 29415.296875
+      },
+      "text": "A=B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "mathtools-ce-4",
+      "native": {
+        "x": 993.796875,
+        "y": 29492.765625,
+        "width": 120.90625,
+        "height": 61.875,
+        "right": 1114.703125,
+        "bottom": 29554.640625
+      },
+      "reference": {
+        "x": 304.546875,
+        "y": 29489.796875,
+        "width": 132.390625,
+        "height": 67.8125,
+        "right": 436.9375,
+        "bottom": 29557.609375
+      },
+      "text": "A⟶BB⇌C",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "mathtools-ce-5",
+      "native": {
+        "x": 993.9375,
+        "y": 29634.578125,
+        "width": 120.609375,
+        "height": 30.4375,
+        "right": 1114.546875,
+        "bottom": 29665.015625
+      },
+      "reference": {
+        "x": 304.75,
+        "y": 29638.015625,
+        "width": 131.984375,
+        "height": 29.46875,
+        "right": 436.734375,
+        "bottom": 29667.484375
+      },
+      "text": "A⟶B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "mathtools-ce-6",
+      "native": {
+        "x": 993.9375,
+        "y": 29759.578125,
+        "width": 120.609375,
+        "height": 30.4375,
+        "right": 1114.546875,
+        "bottom": 29790.015625
+      },
+      "reference": {
+        "x": 319.5,
+        "y": 29763.015625,
+        "width": 102.5,
+        "height": 29.46875,
+        "right": 422,
+        "bottom": 29792.484375
+      },
+      "text": "A⟶B",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],

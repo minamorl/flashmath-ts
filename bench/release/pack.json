@@ -2,10 +2,10 @@
   "id": "@minamorl/flashmath@0.1.0",
   "name": "@minamorl/flashmath",
   "version": "0.1.0",
-  "size": 169857,
-  "unpackedSize": 499785,
-  "shasum": "208e3ab828df35854730bea8a730c97da99adfc8",
-  "integrity": "sha512-NhZvD/VUU11iGVPSB/lmWNwiGMtWRQSNJw5THQIIXuWtJVbeISAz2pUYwiuEnJxoiKnN3E05wrQHCpu0sqCaLg==",
+  "size": 169825,
+  "unpackedSize": 499959,
+  "shasum": "100c0e78d72004415d9b2e785ca81dc10ce8fcd4",
+  "integrity": "sha512-+SzserLDQGiw49tDmZjvnnDVAPGqnZf/qRcLejPiilKSrvSIgoFtcToxNJVguiOKJbKeJQDN2dGakNgRCPB0Cg==",
   "filename": "minamorl-flashmath-0.1.0.tgz",
   "files": [
     {
@@ -34,7 +34,7 @@
       "mode": 384
     },
     {
-      "path": "dist/chunk-F426UZRU.js",
+      "path": "dist/chunk-BCYDUHHK.js",
       "size": 32818,
       "mode": 384
     },
@@ -49,11 +49,6 @@
       "mode": 384
     },
     {
-      "path": "dist/chunk-S2HUNVGP.js",
-      "size": 328925,
-      "mode": 384
-    },
-    {
       "path": "dist/chunk-TXV67IQS.js",
       "size": 2370,
       "mode": 384
@@ -61,6 +56,11 @@
     {
       "path": "dist/chunk-WZSFAGJH.js",
       "size": 530,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-X6BR56FI.js",
+      "size": 329099,
       "mode": 384
     },
     {

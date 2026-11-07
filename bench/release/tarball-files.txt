@@ -2,12 +2,12 @@
 -rw------- 0/0            1454 1985-10-26 17:15 package/NOTICE
 -rw------- 0/0             763 1985-10-26 17:15 package/dist/fonts.css
 -rw------- 0/0           16145 1985-10-26 17:15 package/dist/chunk-2BLNXHV2.js
--rw------- 0/0           32818 1985-10-26 17:15 package/dist/chunk-F426UZRU.js
+-rw------- 0/0           32818 1985-10-26 17:15 package/dist/chunk-BCYDUHHK.js
 -rw------- 0/0             218 1985-10-26 17:15 package/dist/chunk-IHTB7IDO.js
 -rw------- 0/0            1889 1985-10-26 17:15 package/dist/chunk-KDAOMSCC.js
--rw------- 0/0          328925 1985-10-26 17:15 package/dist/chunk-S2HUNVGP.js
 -rw------- 0/0            2370 1985-10-26 17:15 package/dist/chunk-TXV67IQS.js
 -rw------- 0/0             530 1985-10-26 17:15 package/dist/chunk-WZSFAGJH.js
+-rw------- 0/0          329099 1985-10-26 17:15 package/dist/chunk-X6BR56FI.js
 -rw------- 0/0             174 1985-10-26 17:15 package/dist/configuration-cache.js
 -rw------- 0/0             224 1985-10-26 17:15 package/dist/configuration.js
 -rw------- 0/0             877 1985-10-26 17:15 package/dist/index.js

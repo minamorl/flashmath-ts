@@ -1,5 +1,5 @@
 Packed core import and parse: PASS (React absent)
 Packed react import, React SSR, sequent and font export: PASS
-minamorl-flashmath-0.1.0.tgz: 169857 bytes packed, 499785 bytes unpacked
-sha512 integrity: sha512-NhZvD/VUU11iGVPSB/lmWNwiGMtWRQSNJw5THQIIXuWtJVbeISAz2pUYwiuEnJxoiKnN3E05wrQHCpu0sqCaLg==
+minamorl-flashmath-0.1.0.tgz: 169825 bytes packed, 499959 bytes unpacked
+sha512 integrity: sha512-+SzserLDQGiw49tDmZjvnnDVAPGqnZf/qRcLejPiilKSrvSIgoFtcToxNJVguiOKJbKeJQDN2dGakNgRCPB0Cg==
 Release REPORT.md regenerated from verified archive and measured benchmark
