@@ -47,3 +47,38 @@ successful raised-limit conversion, rather than timing early rejection.
 
 The original Git metadata is outside the assigned write scope. Local commits
 use the ignored `.release-git` directory and will be delivered in a bundle.
+
+## Initial operators
+
+Primary source read: installed MathJax 4.1.3 `ParseUtil.fixInitialMO`,
+`ams/AmsItems.ts`, `base/BaseItems.ts`, `mathtools/MathtoolsItems.ts` and
+`core/MmlTree/MmlNode.ts` / `MmlNodes/TeXAtom.ts`.
+
+Decisions:
+
+- Apply the initial-infix correction to later multlined rows and left-aligned
+  AMS cells, including an initial operator following empty chemistry atoms.
+- Share the correction with multline, retaining embellished operator behavior.
+- Retain the implicit mstyle boundary of Spacer commands as private metadata.
+  `\\,` serializes as mspace but must stop the initial-operator search as its
+  upstream mstyle does. No new MathML attribute or public AST field is emitted.
+- Add the reported formulas and a spacing control to the interactive native
+  comparison page (`edge` group) for the final browser run.
+
+`test/edge-compatibility.test.mjs`: 198 independent multlined comparisons and
+152 chemistry alignment comparisons, all outside captured fixtures. Includes
+positions, empty atoms, explicit spaces, ordinary atoms, varied operators,
+multiple rows and aligned/align/align*/split environments.
+
+Checks: build exit 0 (`build-compatibility.log`); 13 package/comparison tests
+exit 0 (`compatibility-tests.log`); scoped conformance exit 0 with the existing
+848 matched / 0 mismatched / 21 unsupported (`compatibility-conformance.log`).
+Original exact counterexamples are retained in `compatibility-before.log`.
+
+Test development caught a null fixture input and missing spaces after generated
+control sequences; those test-generation defects were corrected. Expanded
+controls also exposed the Spacer mstyle boundary and grouped-operator semantics;
+the implementation now retains both.
+
+Disabled-review checkpoint: inspect independent oracle validity, the nonempty
+comparisons, empty-atom traversal and Spacer control before release verification.
