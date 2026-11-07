@@ -2,10 +2,10 @@
   "id": "@minamorl/flashmath@0.1.0",
   "name": "@minamorl/flashmath",
   "version": "0.1.0",
-  "size": 167510,
-  "unpackedSize": 489504,
-  "shasum": "46434444ae1aa3793389b3efc9cf4bbe0aeba8c8",
-  "integrity": "sha512-ZbiSXhnl0ltX6JvuJu8ED/EbyXLZv3Ci7EMuRbggls04+cNBDcA6J3K38y+l2pmLlfW7ltu9IbMKhl/B5oJJVQ==",
+  "size": 169179,
+  "unpackedSize": 495645,
+  "shasum": "bc90f3f09ceb1ee37795a9554e9c4a17e48592ed",
+  "integrity": "sha512-nfo8reSpFjBymf951pqkBvCDZKLoeEpkybwHygmMEg7DudhhAGuW7beuJfw5Xbcv5LoN6oFIDsC+hyAjAg9b3g==",
   "filename": "minamorl-flashmath-0.1.0.tgz",
   "files": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "path": "README.md",
-      "size": 9081,
+      "size": 10022,
       "mode": 384
     },
     {
@@ -29,18 +29,8 @@
       "mode": 384
     },
     {
-      "path": "dist/chunk-2ERRW4YH.js",
-      "size": 14168,
-      "mode": 384
-    },
-    {
-      "path": "dist/chunk-GOVLTU5G.js",
-      "size": 2349,
-      "mode": 384
-    },
-    {
-      "path": "dist/chunk-GP4PSCSP.js",
-      "size": 326617,
+      "path": "dist/chunk-FAPSG72K.js",
+      "size": 1348,
       "mode": 384
     },
     {
@@ -49,13 +39,23 @@
       "mode": 384
     },
     {
-      "path": "dist/chunk-NBVURNP2.js",
-      "size": 30937,
+      "path": "dist/chunk-KGNG53K5.js",
+      "size": 327108,
       "mode": 384
     },
     {
-      "path": "dist/chunk-NOBQ3HZG.js",
-      "size": 1046,
+      "path": "dist/chunk-R4J4JIBX.js",
+      "size": 31978,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-TXV67IQS.js",
+      "size": 2370,
+      "mode": 384
+    },
+    {
+      "path": "dist/chunk-UY2JH3C2.js",
+      "size": 15859,
       "mode": 384
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "path": "dist/index.js",
-      "size": 876,
+      "size": 877,
       "mode": 384
     },
     {
@@ -365,7 +365,7 @@
     },
     {
       "path": "dist/packages/tagformat.d.ts",
-      "size": 668,
+      "size": 650,
       "mode": 384
     },
     {
@@ -380,7 +380,7 @@
     },
     {
       "path": "dist/packages/textmacros.d.ts",
-      "size": 696,
+      "size": 719,
       "mode": 384
     },
     {
@@ -410,7 +410,7 @@
     },
     {
       "path": "dist/parser.d.ts",
-      "size": 4999,
+      "size": 5128,
       "mode": 384
     },
     {
@@ -425,17 +425,17 @@
     },
     {
       "path": "dist/react.js",
-      "size": 1461,
+      "size": 2522,
       "mode": 384
     },
     {
       "path": "dist/scanner.d.ts",
-      "size": 962,
+      "size": 1500,
       "mode": 384
     },
     {
       "path": "dist/serialize.d.ts",
-      "size": 286,
+      "size": 207,
       "mode": 384
     },
     {
@@ -450,7 +450,7 @@
     },
     {
       "path": "package.json",
-      "size": 1447,
+      "size": 1446,
       "mode": 384
     }
   ],

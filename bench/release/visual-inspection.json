@@ -1,0 +1,20 @@
+{
+  "inspectedAt": "2026-11-07T00:55:01.401Z",
+  "method": "opened generated images with view_image after final release gate",
+  "panels": [
+    {
+      "file": "bench/native-render/after-chemistry-1.png",
+      "sha256": "c014afe0958e2012e97d6c7470edb5229111f4813d0f16b95c130adef923933c"
+    },
+    {
+      "file": "bench/native-render/after-proofs-2.png",
+      "sha256": "18c1953f73cb64ddf3f50ba1e8eb7749b72916aa60c0d356e763f0a48c0fa6b4"
+    }
+  ],
+  "observations": [
+    "Mixed bond strokes share ends and spacing on the adjacent atom math axis.",
+    "Asymmetric harpoons have long and short shafts, correct directions and clear neighbour space.",
+    "proofs-12 and added left/right noLine labels remain adjacent without overlap.",
+    "Native fonts, proof vertical gaps and SVG stroke rasterization differ; pixel identity is not claimed."
+  ]
+}

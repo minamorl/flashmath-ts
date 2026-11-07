@@ -1,0 +1,42 @@
+{
+  "method": "source through tsx; 500 passes; includes per-stage clock overhead/JIT; diagnosis only",
+  "rows": [
+    {
+      "group": "boldsymbol",
+      "usPerExpression": {
+        "configure": 4.643223199999761,
+        "parseAndExpose": 8.297682000000702,
+        "nativeLowering": 4.661943799999944,
+        "serializeAndNativeCheck": 2.312509800000015
+      }
+    },
+    {
+      "group": "mhchem",
+      "usPerExpression": {
+        "configure": 5.686037200001511,
+        "parseAndExpose": 380.22217380000137,
+        "nativeLowering": 9.730535999997972,
+        "serializeAndNativeCheck": 7.979241199999854
+      }
+    },
+    {
+      "group": "extpfeil",
+      "usPerExpression": {
+        "configure": 3.610836000003201,
+        "parseAndExpose": 8.616654000003109,
+        "nativeLowering": 4.589567600001101,
+        "serializeAndNativeCheck": 2.124248600001374
+      }
+    },
+    {
+      "group": "tagformat",
+      "usPerExpression": {
+        "configure": 5.581544799998755,
+        "parseAndExpose": 20.072701199994572,
+        "nativeLowering": 8.525543199997083,
+        "serializeAndNativeCheck": 4.182328799998322
+      }
+    }
+  ],
+  "checksum": 11119500
+}

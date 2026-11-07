@@ -1,4 +1,10 @@
 {
+  "reactChecks": {
+    "hydrated": 202,
+    "clientRendered": 2638,
+    "errors": [],
+    "recoverable": []
+  },
   "variantGlyphs": {
     "faces": [
       {
@@ -34,7 +40,7 @@
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
     "jsVersion": "15.3.76.10"
   },
-  "count": 195,
+  "count": 202,
   "ssrStringParity": true,
   "exceptions": [],
   "screenshots": [
@@ -57,6 +63,7 @@
     "after-variants-2.png",
     "after-physics-1.png",
     "after-chemistry-1.png",
+    "after-chemistry-2.png",
     "after-core-1.png"
   ],
   "measurements": [
@@ -130,6 +137,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -206,6 +216,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -282,6 +295,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -358,6 +374,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -434,6 +453,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -510,6 +532,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -586,6 +611,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -662,6 +690,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -738,6 +769,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -814,6 +848,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -890,6 +927,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -966,6 +1006,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1042,6 +1085,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1118,6 +1164,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1194,6 +1243,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1270,6 +1322,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1346,6 +1401,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1422,6 +1480,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1498,6 +1559,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1574,6 +1638,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1650,6 +1717,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1726,6 +1796,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1802,6 +1875,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1878,6 +1954,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -1954,6 +2033,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2030,6 +2112,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2106,6 +2191,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2198,6 +2286,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2290,6 +2381,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2382,6 +2476,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2441,6 +2538,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2500,6 +2600,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2559,6 +2662,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2674,6 +2780,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2789,6 +2898,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -2904,6 +3016,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3003,6 +3118,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3102,6 +3220,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3201,6 +3322,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3300,6 +3424,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3399,6 +3526,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3498,6 +3628,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3597,6 +3730,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3696,6 +3832,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3795,6 +3934,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3894,6 +4036,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -3993,6 +4138,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4092,6 +4240,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4204,6 +4355,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4316,6 +4470,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4428,6 +4585,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4540,6 +4700,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4652,6 +4815,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4764,6 +4930,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4876,6 +5045,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -4988,6 +5160,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -5100,6 +5275,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -5212,6 +5390,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -5324,6 +5505,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -5436,6 +5620,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -5560,6 +5747,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -5684,6 +5874,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -5808,6 +6001,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -5932,6 +6128,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6056,6 +6255,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6180,6 +6382,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6292,6 +6497,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6404,6 +6612,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6516,6 +6727,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6628,6 +6842,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6740,6 +6957,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6852,6 +7072,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -6964,6 +7187,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7076,6 +7302,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7188,6 +7417,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7300,6 +7532,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7412,6 +7647,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7524,6 +7762,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7636,6 +7877,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7748,6 +7992,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7860,6 +8107,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -7984,6 +8234,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -8108,6 +8361,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -8232,6 +8488,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -8356,6 +8615,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -8480,6 +8742,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -8604,6 +8869,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -8703,6 +8971,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -8802,6 +9073,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -8901,6 +9175,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9000,6 +9277,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9099,6 +9379,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9198,6 +9481,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9336,6 +9622,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9474,6 +9763,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9612,6 +9904,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9724,6 +10019,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9836,6 +10134,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -9948,6 +10249,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -10024,6 +10328,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -10100,6 +10407,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -10128,6 +10438,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [
@@ -10207,6 +10520,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [
@@ -10373,6 +10689,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -10449,6 +10768,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -10477,6 +10799,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "right",
@@ -10551,6 +10876,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "right",
@@ -10625,6 +10953,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "right",
@@ -10699,6 +11030,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "right",
@@ -10834,6 +11168,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "right",
@@ -10916,6 +11253,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "right",
@@ -11035,6 +11375,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "right",
@@ -11202,6 +11545,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "left",
@@ -11276,6 +11622,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "left",
@@ -11350,6 +11699,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "left",
@@ -11424,6 +11776,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "left",
@@ -11559,6 +11914,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "left",
@@ -11641,6 +11999,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "left",
@@ -11760,6 +12121,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [
         {
           "side": "left",
@@ -11927,6 +12291,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
@@ -11956,11 +12323,11 @@
     {
       "id": "proofs-2",
       "native": {
-        "x": 979.171875,
+        "x": 954.78125,
         "y": 16198.03125,
-        "width": 150.140625,
+        "width": 198.921875,
         "height": 94.3125,
-        "right": 1129.3125,
+        "right": 1153.703125,
         "bottom": 16292.34375
       },
       "reference": {
@@ -11975,35 +12342,59 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 16214.0625,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 16232.0625
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 16204.25,
+            "width": 124.734375,
+            "height": 56.65625,
+            "right": 1089.109375,
+            "bottom": 16260.90625
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
           "border": "solid",
           "box": {
-            "x": 988.765625,
+            "x": 964.375,
             "y": 16237.796875,
             "width": 124.734375,
             "height": 23.109375,
-            "right": 1113.5,
+            "right": 1089.109375,
             "bottom": 16260.90625
           },
           "content": {
-            "x": 1008.96875,
+            "x": 984.578125,
             "y": 16241.90625,
             "width": 84.3125,
             "height": 19,
-            "right": 1093.28125,
+            "right": 1068.890625,
             "bottom": 16260.90625
           }
         },
         {
           "border": "solid",
           "box": {
-            "x": 990.203125,
+            "x": 965.8125,
             "y": 16270.234375,
-            "width": 82.84375,
+            "width": 131.625,
             "height": 22.109375,
-            "right": 1073.046875,
+            "right": 1097.4375,
             "bottom": 16292.34375
           },
           "content": {
@@ -12042,6 +12433,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
@@ -12071,11 +12465,11 @@
     {
       "id": "proofs-4",
       "native": {
-        "x": 979.171875,
+        "x": 954.78125,
         "y": 16508.5,
-        "width": 150.140625,
+        "width": 198.921875,
         "height": 94.3125,
-        "right": 1129.3125,
+        "right": 1153.703125,
         "bottom": 16602.8125
       },
       "reference": {
@@ -12090,43 +12484,67 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 16545.9375,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 16563.9375
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 16539.9375,
+            "width": 124.734375,
+            "height": 56.65625,
+            "right": 1089.109375,
+            "bottom": 16596.59375
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
           "border": "solid",
           "box": {
-            "x": 990.203125,
+            "x": 965.8125,
             "y": 16529.609375,
-            "width": 82.84375,
+            "width": 131.625,
             "height": 73.203125,
-            "right": 1073.046875,
+            "right": 1097.4375,
             "bottom": 16602.8125
           },
           "content": {
-            "x": 990.203125,
+            "x": 965.8125,
             "y": 16533.71875,
-            "width": 82.84375,
+            "width": 131.625,
             "height": 69.09375,
-            "right": 1073.046875,
+            "right": 1097.4375,
             "bottom": 16602.8125
           }
         },
         {
           "border": "solid",
           "box": {
-            "x": 988.765625,
+            "x": 964.375,
             "y": 16562.046875,
             "width": 124.734375,
             "height": 34.546875,
-            "right": 1113.5,
+            "right": 1089.109375,
             "bottom": 16596.59375
           },
           "content": {
-            "x": 988.765625,
+            "x": 964.375,
             "y": 16566.15625,
             "width": 124.734375,
             "height": 30.4375,
-            "right": 1113.5,
+            "right": 1089.109375,
             "bottom": 16596.59375
           }
         }
@@ -12157,6 +12575,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
@@ -12186,11 +12607,11 @@
     {
       "id": "proofs-6",
       "native": {
-        "x": 979.171875,
+        "x": 954.78125,
         "y": 16818.96875,
-        "width": 150.140625,
+        "width": 198.921875,
         "height": 94.3125,
-        "right": 1129.3125,
+        "right": 1153.703125,
         "bottom": 16913.28125
       },
       "reference": {
@@ -12205,35 +12626,59 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 16835,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 16853
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 16825.1875,
+            "width": 124.734375,
+            "height": 56.65625,
+            "right": 1089.109375,
+            "bottom": 16881.84375
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
           "border": "dashed",
           "box": {
-            "x": 988.765625,
+            "x": 964.375,
             "y": 16858.734375,
             "width": 124.734375,
             "height": 23.109375,
-            "right": 1113.5,
+            "right": 1089.109375,
             "bottom": 16881.84375
           },
           "content": {
-            "x": 1008.96875,
+            "x": 984.578125,
             "y": 16862.84375,
             "width": 84.3125,
             "height": 19,
-            "right": 1093.28125,
+            "right": 1068.890625,
             "bottom": 16881.84375
           }
         },
         {
           "border": "solid",
           "box": {
-            "x": 990.203125,
+            "x": 965.8125,
             "y": 16891.171875,
-            "width": 82.84375,
+            "width": 131.625,
             "height": 22.109375,
-            "right": 1073.046875,
+            "right": 1097.4375,
             "bottom": 16913.28125
           },
           "content": {
@@ -12272,6 +12717,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
@@ -12301,11 +12749,11 @@
     {
       "id": "proofs-8",
       "native": {
-        "x": 979.171875,
+        "x": 954.78125,
         "y": 17129.4375,
-        "width": 150.140625,
+        "width": 198.921875,
         "height": 94.3125,
-        "right": 1129.3125,
+        "right": 1153.703125,
         "bottom": 17223.75
       },
       "reference": {
@@ -12320,43 +12768,67 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 17166.875,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 17184.875
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 17160.875,
+            "width": 124.734375,
+            "height": 56.65625,
+            "right": 1089.109375,
+            "bottom": 17217.53125
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
           "border": "solid",
           "box": {
-            "x": 990.203125,
+            "x": 965.8125,
             "y": 17150.546875,
-            "width": 82.84375,
+            "width": 131.625,
             "height": 73.203125,
-            "right": 1073.046875,
+            "right": 1097.4375,
             "bottom": 17223.75
           },
           "content": {
-            "x": 990.203125,
+            "x": 965.8125,
             "y": 17154.65625,
-            "width": 82.84375,
+            "width": 131.625,
             "height": 69.09375,
-            "right": 1073.046875,
+            "right": 1097.4375,
             "bottom": 17223.75
           }
         },
         {
           "border": "dashed",
           "box": {
-            "x": 988.765625,
+            "x": 964.375,
             "y": 17182.984375,
             "width": 124.734375,
             "height": 34.546875,
-            "right": 1113.5,
+            "right": 1089.109375,
             "bottom": 17217.53125
           },
           "content": {
-            "x": 988.765625,
+            "x": 964.375,
             "y": 17187.09375,
             "width": 124.734375,
             "height": 30.4375,
-            "right": 1113.5,
+            "right": 1089.109375,
             "bottom": 17217.53125
           }
         }
@@ -12368,12 +12840,12 @@
     {
       "id": "proofs-9",
       "native": {
-        "x": 982.28125,
-        "y": 17294.140625,
-        "width": 143.921875,
-        "height": 73.3125,
-        "right": 1126.203125,
-        "bottom": 17367.453125
+        "x": 991.875,
+        "y": 17303.46875,
+        "width": 124.734375,
+        "height": 54.65625,
+        "right": 1116.609375,
+        "bottom": 17358.125
       },
       "reference": {
         "x": 312.203125,
@@ -12387,6 +12859,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12396,12 +12871,12 @@
     {
       "id": "proofs-10",
       "native": {
-        "x": 969.578125,
-        "y": 17427.984375,
-        "width": 169.328125,
-        "height": 111.96875,
-        "right": 1138.90625,
-        "bottom": 17539.953125
+        "x": 954.78125,
+        "y": 17437.3125,
+        "width": 198.921875,
+        "height": 93.3125,
+        "right": 1153.703125,
+        "bottom": 17530.625
       },
       "reference": {
         "x": 284.40625,
@@ -12415,25 +12890,49 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 17453.34375,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 17471.34375
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 17443.53125,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1089.109375,
+            "bottom": 17499.1875
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
           "border": "solid",
           "box": {
-            "x": 980.609375,
-            "y": 17517.84375,
-            "width": 102.03125,
+            "x": 965.8125,
+            "y": 17508.515625,
+            "width": 131.625,
             "height": 22.109375,
-            "right": 1082.640625,
-            "bottom": 17539.953125
+            "right": 1097.4375,
+            "bottom": 17530.625
           },
           "content": {
             "x": 1015.09375,
-            "y": 17521.953125,
+            "y": 17512.625,
             "width": 33.0625,
             "height": 18,
             "right": 1048.15625,
-            "bottom": 17539.953125
+            "bottom": 17530.625
           }
         }
       ],
@@ -12444,12 +12943,12 @@
     {
       "id": "proofs-11",
       "native": {
-        "x": 982.28125,
-        "y": 17600.484375,
-        "width": 143.921875,
-        "height": 73.3125,
-        "right": 1126.203125,
-        "bottom": 17673.796875
+        "x": 991.875,
+        "y": 17609.8125,
+        "width": 124.734375,
+        "height": 54.65625,
+        "right": 1116.609375,
+        "bottom": 17664.46875
       },
       "reference": {
         "x": 312.203125,
@@ -12463,6 +12962,9 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12472,12 +12974,12 @@
     {
       "id": "proofs-12",
       "native": {
-        "x": 969.578125,
-        "y": 17734.328125,
-        "width": 169.328125,
-        "height": 111.96875,
-        "right": 1138.90625,
-        "bottom": 17846.296875
+        "x": 954.78125,
+        "y": 17743.65625,
+        "width": 198.921875,
+        "height": 93.3125,
+        "right": 1153.703125,
+        "bottom": 17836.96875
       },
       "reference": {
         "x": 284.40625,
@@ -12491,25 +12993,49 @@
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 17781.09375,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 17799.09375
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 17775.09375,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1089.109375,
+            "bottom": 17830.75
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [
         {
           "border": "solid",
           "box": {
-            "x": 980.609375,
-            "y": 17755.4375,
-            "width": 102.03125,
-            "height": 90.859375,
-            "right": 1082.640625,
-            "bottom": 17846.296875
+            "x": 965.8125,
+            "y": 17764.765625,
+            "width": 131.625,
+            "height": 72.203125,
+            "right": 1097.4375,
+            "bottom": 17836.96875
           },
           "content": {
-            "x": 980.609375,
-            "y": 17759.546875,
-            "width": 102.03125,
-            "height": 86.75,
-            "right": 1082.640625,
-            "bottom": 17846.296875
+            "x": 965.8125,
+            "y": 17768.875,
+            "width": 131.625,
+            "height": 68.09375,
+            "right": 1097.4375,
+            "bottom": 17836.96875
           }
         }
       ],
@@ -12518,22 +13044,230 @@
       "pua": 0
     },
     {
+      "id": "proofs-13",
+      "native": {
+        "x": 964.375,
+        "y": 17915.65625,
+        "width": 179.734375,
+        "height": 55.65625,
+        "right": 1144.109375,
+        "bottom": 17971.3125
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 17907.65625,
+        "width": 172.671875,
+        "height": 71.671875,
+        "right": 457.078125,
+        "bottom": 17979.328125
+      },
+      "text": "ruleABA∧B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "left",
+          "label": {
+            "x": 964.375,
+            "y": 17925.46875,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1013.15625,
+            "bottom": 17943.46875
+          },
+          "rule": {
+            "x": 1019.375,
+            "y": 17915.65625,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1144.109375,
+            "bottom": 17971.3125
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-14",
+      "native": {
+        "x": 964.375,
+        "y": 18046.703125,
+        "width": 179.734375,
+        "height": 55.65625,
+        "right": 1144.109375,
+        "bottom": 18102.359375
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 18038.703125,
+        "width": 172.671875,
+        "height": 71.671875,
+        "right": 457.078125,
+        "bottom": 18110.375
+      },
+      "text": "ABA∧Brule",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 18056.515625,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 18074.515625
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 18046.703125,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1089.109375,
+            "bottom": 18102.359375
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-15",
+      "native": {
+        "x": 964.375,
+        "y": 18177.75,
+        "width": 179.734375,
+        "height": 55.65625,
+        "right": 1144.109375,
+        "bottom": 18233.40625
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 18169.75,
+        "width": 172.671875,
+        "height": 71.671875,
+        "right": 457.078125,
+        "bottom": 18241.421875
+      },
+      "text": "ruleA∧BAB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "left",
+          "label": {
+            "x": 964.375,
+            "y": 18183.75,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1013.15625,
+            "bottom": 18201.75
+          },
+          "rule": {
+            "x": 1019.375,
+            "y": 18177.75,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1144.109375,
+            "bottom": 18233.40625
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-16",
+      "native": {
+        "x": 964.375,
+        "y": 18308.796875,
+        "width": 179.734375,
+        "height": 55.65625,
+        "right": 1144.109375,
+        "bottom": 18364.453125
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 18300.796875,
+        "width": 172.671875,
+        "height": 71.671875,
+        "right": 457.078125,
+        "bottom": 18372.46875
+      },
+      "text": "A∧BABrule",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [
+        {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 18314.796875,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 18332.796875
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 18308.796875,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1089.109375,
+            "bottom": 18364.453125
+          },
+          "gap": 6.21875
+        }
+      ],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
       "id": "overlap-1",
       "native": {
         "x": 1044.78125,
-        "y": 17988.46875,
+        "y": 18512.65625,
         "width": 18.921875,
         "height": 24,
         "right": 1063.703125,
-        "bottom": 18012.46875
+        "bottom": 18536.65625
       },
       "reference": {
         "x": 359.28125,
-        "y": 17987.5625,
+        "y": 18511.75,
         "width": 22.921875,
         "height": 31.6875,
         "right": 382.203125,
-        "bottom": 18019.25
+        "bottom": 18543.4375
       },
       "text": "=⧸",
       "legacy": 0,
@@ -12542,40 +13276,43 @@
         {
           "box": {
             "x": 1044.78125,
-            "y": 17988.46875,
+            "y": 18512.65625,
             "width": 18.921875,
             "height": 24,
             "right": 1063.703125,
-            "bottom": 18012.46875
+            "bottom": 18536.65625
           },
           "children": [
             {
               "x": 1044.78125,
-              "y": 17996.46875,
+              "y": 18520.65625,
               "width": 18.921875,
               "height": 10,
               "right": 1063.703125,
-              "bottom": 18006.46875
+              "bottom": 18530.65625
             },
             {
               "x": 1054.234375,
-              "y": 17988.46875,
+              "y": 18512.65625,
               "width": 0,
               "height": 24,
               "right": 1054.234375,
-              "bottom": 18012.46875
+              "bottom": 18536.65625
             }
           ],
           "overlayContent": {
             "x": 1049.1640625,
-            "y": 17988.46875,
+            "y": 18512.65625,
             "width": 10.140625,
             "height": 24,
             "right": 1059.3046875,
-            "bottom": 18012.46875
+            "bottom": 18536.65625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12586,19 +13323,19 @@
       "id": "overlap-2",
       "native": {
         "x": 1044.78125,
-        "y": 18117.46875,
+        "y": 18641.65625,
         "width": 18.921875,
         "height": 16,
         "right": 1063.703125,
-        "bottom": 18133.46875
+        "bottom": 18657.65625
       },
       "reference": {
         "x": 356,
-        "y": 18122.359375,
+        "y": 18646.546875,
         "width": 29.484375,
         "height": 12.46875,
         "right": 385.484375,
-        "bottom": 18134.828125
+        "bottom": 18659.015625
       },
       "text": "=∗",
       "legacy": 0,
@@ -12607,40 +13344,43 @@
         {
           "box": {
             "x": 1044.78125,
-            "y": 18117.46875,
+            "y": 18641.65625,
             "width": 18.921875,
             "height": 16,
             "right": 1063.703125,
-            "bottom": 18133.46875
+            "bottom": 18657.65625
           },
           "children": [
             {
               "x": 1044.78125,
-              "y": 18122.46875,
+              "y": 18646.65625,
               "width": 18.921875,
               "height": 10,
               "right": 1063.703125,
-              "bottom": 18132.46875
+              "bottom": 18656.65625
             },
             {
               "x": 1054.234375,
-              "y": 18117.46875,
+              "y": 18641.65625,
               "width": 0,
               "height": 16,
               "right": 1054.234375,
-              "bottom": 18133.46875
+              "bottom": 18657.65625
             }
           ],
           "overlayContent": {
             "x": 1045.3046875,
-            "y": 18117.46875,
+            "y": 18641.65625,
             "width": 17.859375,
             "height": 16,
             "right": 1063.1640625,
-            "bottom": 18133.46875
+            "bottom": 18657.65625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12651,19 +13391,19 @@
       "id": "overlap-3",
       "native": {
         "x": 1044.78125,
-        "y": 18226.203125,
+        "y": 18750.390625,
         "width": 18.921875,
         "height": 48.515625,
         "right": 1063.703125,
-        "bottom": 18274.71875
+        "bottom": 18798.90625
       },
       "reference": {
         "x": 359.28125,
-        "y": 18220.578125,
+        "y": 18744.765625,
         "width": 22.921875,
         "height": 59.78125,
         "right": 382.203125,
-        "bottom": 18280.359375
+        "bottom": 18804.546875
       },
       "text": "=12",
       "legacy": 0,
@@ -12672,40 +13412,43 @@
         {
           "box": {
             "x": 1044.78125,
-            "y": 18226.203125,
+            "y": 18750.390625,
             "width": 18.921875,
             "height": 48.515625,
             "right": 1063.703125,
-            "bottom": 18274.71875
+            "bottom": 18798.90625
           },
           "children": [
             {
               "x": 1044.78125,
-              "y": 18249.4375,
+              "y": 18773.625,
               "width": 18.921875,
               "height": 10,
               "right": 1063.703125,
-              "bottom": 18259.4375
+              "bottom": 18783.625
             },
             {
               "x": 1054.234375,
-              "y": 18226.203125,
+              "y": 18750.390625,
               "width": 0,
               "height": 48.515625,
               "right": 1054.234375,
-              "bottom": 18274.71875
+              "bottom": 18798.90625
             }
           ],
           "overlayContent": {
             "x": 1045.6015625,
-            "y": 18226.203125,
+            "y": 18750.390625,
             "width": 17.265625,
             "height": 48.515625,
             "right": 1062.8671875,
-            "bottom": 18274.71875
+            "bottom": 18798.90625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12716,19 +13459,19 @@
       "id": "overlap-4",
       "native": {
         "x": 1037.25,
-        "y": 18363.46875,
+        "y": 18887.65625,
         "width": 33.984375,
         "height": 24,
         "right": 1071.234375,
-        "bottom": 18387.46875
+        "bottom": 18911.65625
       },
       "reference": {
         "x": 349.265625,
-        "y": 18362.5625,
+        "y": 18886.75,
         "width": 42.953125,
         "height": 31.6875,
         "right": 392.21875,
-        "bottom": 18394.25
+        "bottom": 18918.4375
       },
       "text": "⟹⧸",
       "legacy": 0,
@@ -12737,40 +13480,43 @@
         {
           "box": {
             "x": 1037.25,
-            "y": 18363.46875,
+            "y": 18887.65625,
             "width": 33.984375,
             "height": 24,
             "right": 1071.234375,
-            "bottom": 18387.46875
+            "bottom": 18911.65625
           },
           "children": [
             {
               "x": 1037.25,
-              "y": 18368.46875,
+              "y": 18892.65625,
               "width": 33.984375,
               "height": 13,
               "right": 1071.234375,
-              "bottom": 18381.46875
+              "bottom": 18905.65625
             },
             {
               "x": 1054.234375,
-              "y": 18363.46875,
+              "y": 18887.65625,
               "width": 0,
               "height": 24,
               "right": 1054.234375,
-              "bottom": 18387.46875
+              "bottom": 18911.65625
             }
           ],
           "overlayContent": {
             "x": 1049.1640625,
-            "y": 18363.46875,
+            "y": 18887.65625,
             "width": 10.140625,
             "height": 24,
             "right": 1059.3046875,
-            "bottom": 18387.46875
+            "bottom": 18911.65625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12781,19 +13527,19 @@
       "id": "overlap-5",
       "native": {
         "x": 1037.25,
-        "y": 18492.46875,
+        "y": 19016.65625,
         "width": 33.984375,
         "height": 16,
         "right": 1071.234375,
-        "bottom": 18508.46875
+        "bottom": 19032.65625
       },
       "reference": {
         "x": 346,
-        "y": 18495.625,
+        "y": 19019.8125,
         "width": 49.5,
         "height": 15.921875,
         "right": 395.5,
-        "bottom": 18511.546875
+        "bottom": 19035.734375
       },
       "text": "⟹∗",
       "legacy": 0,
@@ -12802,40 +13548,43 @@
         {
           "box": {
             "x": 1037.25,
-            "y": 18492.46875,
+            "y": 19016.65625,
             "width": 33.984375,
             "height": 16,
             "right": 1071.234375,
-            "bottom": 18508.46875
+            "bottom": 19032.65625
           },
           "children": [
             {
               "x": 1037.25,
-              "y": 18494.46875,
+              "y": 19018.65625,
               "width": 33.984375,
               "height": 13,
               "right": 1071.234375,
-              "bottom": 18507.46875
+              "bottom": 19031.65625
             },
             {
               "x": 1054.234375,
-              "y": 18492.46875,
+              "y": 19016.65625,
               "width": 0,
               "height": 16,
               "right": 1054.234375,
-              "bottom": 18508.46875
+              "bottom": 19032.65625
             }
           ],
           "overlayContent": {
             "x": 1045.3046875,
-            "y": 18492.46875,
+            "y": 19016.65625,
             "width": 17.859375,
             "height": 16,
             "right": 1063.1640625,
-            "bottom": 18508.46875
+            "bottom": 19032.65625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12846,19 +13595,19 @@
       "id": "overlap-6",
       "native": {
         "x": 1037.25,
-        "y": 18601.203125,
+        "y": 19125.390625,
         "width": 33.984375,
         "height": 48.515625,
         "right": 1071.234375,
-        "bottom": 18649.71875
+        "bottom": 19173.90625
       },
       "reference": {
         "x": 349.265625,
-        "y": 18595.578125,
+        "y": 19119.765625,
         "width": 42.953125,
         "height": 59.78125,
         "right": 392.21875,
-        "bottom": 18655.359375
+        "bottom": 19179.546875
       },
       "text": "⟹12",
       "legacy": 0,
@@ -12867,40 +13616,43 @@
         {
           "box": {
             "x": 1037.25,
-            "y": 18601.203125,
+            "y": 19125.390625,
             "width": 33.984375,
             "height": 48.515625,
             "right": 1071.234375,
-            "bottom": 18649.71875
+            "bottom": 19173.90625
           },
           "children": [
             {
               "x": 1037.25,
-              "y": 18621.4375,
+              "y": 19145.625,
               "width": 33.984375,
               "height": 13,
               "right": 1071.234375,
-              "bottom": 18634.4375
+              "bottom": 19158.625
             },
             {
               "x": 1054.234375,
-              "y": 18601.203125,
+              "y": 19125.390625,
               "width": 0,
               "height": 48.515625,
               "right": 1054.234375,
-              "bottom": 18649.71875
+              "bottom": 19173.90625
             }
           ],
           "overlayContent": {
             "x": 1045.6015625,
-            "y": 18601.203125,
+            "y": 19125.390625,
             "width": 17.265625,
             "height": 48.515625,
             "right": 1062.8671875,
-            "bottom": 18649.71875
+            "bottom": 19173.90625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12911,19 +13663,19 @@
       "id": "overlap-7",
       "native": {
         "x": 1021.9375,
-        "y": 18738.46875,
+        "y": 19262.65625,
         "width": 64.609375,
         "height": 24,
         "right": 1086.546875,
-        "bottom": 18762.46875
+        "bottom": 19286.65625
       },
       "reference": {
         "x": 336.96875,
-        "y": 18737.5625,
+        "y": 19261.75,
         "width": 67.5625,
         "height": 31.6875,
         "right": 404.53125,
-        "bottom": 18769.25
+        "bottom": 19293.4375
       },
       "text": "a=b⧸",
       "legacy": 0,
@@ -12932,40 +13684,43 @@
         {
           "box": {
             "x": 1021.9375,
-            "y": 18738.46875,
+            "y": 19262.65625,
             "width": 64.609375,
             "height": 24,
             "right": 1086.546875,
-            "bottom": 18762.46875
+            "bottom": 19286.65625
           },
           "children": [
             {
               "x": 1021.9375,
-              "y": 18738.46875,
+              "y": 19262.65625,
               "width": 64.609375,
               "height": 18,
               "right": 1086.546875,
-              "bottom": 18756.46875
+              "bottom": 19280.65625
             },
             {
               "x": 1054.234375,
-              "y": 18738.46875,
+              "y": 19262.65625,
               "width": 0,
               "height": 24,
               "right": 1054.234375,
-              "bottom": 18762.46875
+              "bottom": 19286.65625
             }
           ],
           "overlayContent": {
             "x": 1049.1640625,
-            "y": 18738.46875,
+            "y": 19262.65625,
             "width": 10.140625,
             "height": 24,
             "right": 1059.3046875,
-            "bottom": 18762.46875
+            "bottom": 19286.65625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -12976,19 +13731,19 @@
       "id": "overlap-8",
       "native": {
         "x": 1021.9375,
-        "y": 18865.96875,
+        "y": 19390.15625,
         "width": 64.609375,
         "height": 19,
         "right": 1086.546875,
-        "bottom": 18884.96875
+        "bottom": 19409.15625
       },
       "reference": {
         "x": 333.6875,
-        "y": 18865.5,
+        "y": 19389.6875,
         "width": 74.109375,
         "height": 20.78125,
         "right": 407.796875,
-        "bottom": 18886.28125
+        "bottom": 19410.46875
       },
       "text": "a=b∗",
       "legacy": 0,
@@ -12997,40 +13752,43 @@
         {
           "box": {
             "x": 1021.9375,
-            "y": 18865.96875,
+            "y": 19390.15625,
             "width": 64.609375,
             "height": 19,
             "right": 1086.546875,
-            "bottom": 18884.96875
+            "bottom": 19409.15625
           },
           "children": [
             {
               "x": 1021.9375,
-              "y": 18865.96875,
+              "y": 19390.15625,
               "width": 64.609375,
               "height": 18,
               "right": 1086.546875,
-              "bottom": 18883.96875
+              "bottom": 19408.15625
             },
             {
               "x": 1054.234375,
-              "y": 18868.96875,
+              "y": 19393.15625,
               "width": 0,
               "height": 16,
               "right": 1054.234375,
-              "bottom": 18884.96875
+              "bottom": 19409.15625
             }
           ],
           "overlayContent": {
             "x": 1045.3046875,
-            "y": 18868.96875,
+            "y": 19393.15625,
             "width": 17.859375,
             "height": 16,
             "right": 1063.1640625,
-            "bottom": 18884.96875
+            "bottom": 19409.15625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13041,19 +13799,19 @@
       "id": "overlap-9",
       "native": {
         "x": 1021.9375,
-        "y": 18976.203125,
+        "y": 19500.390625,
         "width": 64.609375,
         "height": 48.515625,
         "right": 1086.546875,
-        "bottom": 19024.71875
+        "bottom": 19548.90625
       },
       "reference": {
         "x": 336.96875,
-        "y": 18970.578125,
+        "y": 19494.765625,
         "width": 67.5625,
         "height": 59.78125,
         "right": 404.53125,
-        "bottom": 19030.359375
+        "bottom": 19554.546875
       },
       "text": "a=b12",
       "legacy": 0,
@@ -13062,40 +13820,43 @@
         {
           "box": {
             "x": 1021.9375,
-            "y": 18976.203125,
+            "y": 19500.390625,
             "width": 64.609375,
             "height": 48.515625,
             "right": 1086.546875,
-            "bottom": 19024.71875
+            "bottom": 19548.90625
           },
           "children": [
             {
               "x": 1021.9375,
-              "y": 18991.4375,
+              "y": 19515.625,
               "width": 64.609375,
               "height": 18,
               "right": 1086.546875,
-              "bottom": 19009.4375
+              "bottom": 19533.625
             },
             {
               "x": 1054.234375,
-              "y": 18976.203125,
+              "y": 19500.390625,
               "width": 0,
               "height": 48.515625,
               "right": 1054.234375,
-              "bottom": 19024.71875
+              "bottom": 19548.90625
             }
           ],
           "overlayContent": {
             "x": 1045.6015625,
-            "y": 18976.203125,
+            "y": 19500.390625,
             "width": 17.265625,
             "height": 48.515625,
             "right": 1062.8671875,
-            "bottom": 19024.71875
+            "bottom": 19548.90625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13106,19 +13867,19 @@
       "id": "overlap-10",
       "native": {
         "x": 1044.921875,
-        "y": 19103.703125,
+        "y": 19627.890625,
         "width": 18.640625,
         "height": 43.515625,
         "right": 1063.5625,
-        "bottom": 19147.21875
+        "bottom": 19671.40625
       },
       "reference": {
         "x": 356.46875,
-        "y": 19098.71875,
+        "y": 19622.90625,
         "width": 28.5625,
         "height": 53.5,
         "right": 385.03125,
-        "bottom": 19152.21875
+        "bottom": 19676.40625
       },
       "text": "ab⧸",
       "legacy": 0,
@@ -13127,40 +13888,43 @@
         {
           "box": {
             "x": 1044.921875,
-            "y": 19103.703125,
+            "y": 19627.890625,
             "width": 18.640625,
             "height": 43.515625,
             "right": 1063.5625,
-            "bottom": 19147.21875
+            "bottom": 19671.40625
           },
           "children": [
             {
               "x": 1044.921875,
-              "y": 19103.703125,
+              "y": 19627.890625,
               "width": 18.640625,
               "height": 43.515625,
               "right": 1063.5625,
-              "bottom": 19147.21875
+              "bottom": 19671.40625
             },
             {
               "x": 1054.234375,
-              "y": 19113.9375,
+              "y": 19638.125,
               "width": 0,
               "height": 24,
               "right": 1054.234375,
-              "bottom": 19137.9375
+              "bottom": 19662.125
             }
           ],
           "overlayContent": {
             "x": 1049.1640625,
-            "y": 19113.9375,
+            "y": 19638.125,
             "width": 10.140625,
             "height": 24,
             "right": 1059.3046875,
-            "bottom": 19137.9375
+            "bottom": 19662.125
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13171,19 +13935,19 @@
       "id": "overlap-11",
       "native": {
         "x": 1044.921875,
-        "y": 19228.703125,
+        "y": 19752.890625,
         "width": 18.640625,
         "height": 43.515625,
         "right": 1063.5625,
-        "bottom": 19272.21875
+        "bottom": 19796.40625
       },
       "reference": {
         "x": 353.1875,
-        "y": 19223.71875,
+        "y": 19747.90625,
         "width": 35.109375,
         "height": 53.5,
         "right": 388.296875,
-        "bottom": 19277.21875
+        "bottom": 19801.40625
       },
       "text": "ab∗",
       "legacy": 0,
@@ -13192,40 +13956,43 @@
         {
           "box": {
             "x": 1044.921875,
-            "y": 19228.703125,
+            "y": 19752.890625,
             "width": 18.640625,
             "height": 43.515625,
             "right": 1063.5625,
-            "bottom": 19272.21875
+            "bottom": 19796.40625
           },
           "children": [
             {
               "x": 1044.921875,
-              "y": 19228.703125,
+              "y": 19752.890625,
               "width": 18.640625,
               "height": 43.515625,
               "right": 1063.5625,
-              "bottom": 19272.21875
+              "bottom": 19796.40625
             },
             {
               "x": 1054.234375,
-              "y": 19241.9375,
+              "y": 19766.125,
               "width": 0,
               "height": 16,
               "right": 1054.234375,
-              "bottom": 19257.9375
+              "bottom": 19782.125
             }
           ],
           "overlayContent": {
             "x": 1045.3046875,
-            "y": 19241.9375,
+            "y": 19766.125,
             "width": 17.859375,
             "height": 16,
             "right": 1063.1640625,
-            "bottom": 19257.9375
+            "bottom": 19782.125
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13236,19 +14003,19 @@
       "id": "overlap-12",
       "native": {
         "x": 1044.921875,
-        "y": 19351.203125,
+        "y": 19875.390625,
         "width": 18.640625,
         "height": 48.515625,
         "right": 1063.5625,
-        "bottom": 19399.71875
+        "bottom": 19923.90625
       },
       "reference": {
         "x": 356.46875,
-        "y": 19345.40625,
+        "y": 19869.59375,
         "width": 28.5625,
         "height": 60.109375,
         "right": 385.03125,
-        "bottom": 19405.515625
+        "bottom": 19929.703125
       },
       "text": "ab12",
       "legacy": 0,
@@ -13257,40 +14024,43 @@
         {
           "box": {
             "x": 1044.921875,
-            "y": 19351.203125,
+            "y": 19875.390625,
             "width": 18.640625,
             "height": 48.515625,
             "right": 1063.5625,
-            "bottom": 19399.71875
+            "bottom": 19923.90625
           },
           "children": [
             {
               "x": 1044.921875,
-              "y": 19356.203125,
+              "y": 19880.390625,
               "width": 18.640625,
               "height": 43.515625,
               "right": 1063.5625,
-              "bottom": 19399.71875
+              "bottom": 19923.90625
             },
             {
               "x": 1054.234375,
-              "y": 19351.203125,
+              "y": 19875.390625,
               "width": 0,
               "height": 48.515625,
               "right": 1054.234375,
-              "bottom": 19399.71875
+              "bottom": 19923.90625
             }
           ],
           "overlayContent": {
             "x": 1045.6015625,
-            "y": 19351.203125,
+            "y": 19875.390625,
             "width": 17.265625,
             "height": 48.515625,
             "right": 1062.8671875,
-            "bottom": 19399.71875
+            "bottom": 19923.90625
           }
         }
       ],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13301,24 +14071,27 @@
       "id": "variants-1",
       "native": {
         "x": 995.1875,
-        "y": 19548.96875,
+        "y": 20073.15625,
         "width": 118.109375,
         "height": 23,
         "right": 1113.296875,
-        "bottom": 19571.96875
+        "bottom": 20096.15625
       },
       "reference": {
         "x": 308.203125,
-        "y": 19550.375,
+        "y": 20074.5625,
         "width": 125.09375,
         "height": 26.46875,
         "right": 433.296875,
-        "bottom": 19576.84375
+        "bottom": 20101.03125
       },
       "text": "𝐀𝐁𝐂𝐱𝐲𝐳",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13329,24 +14102,27 @@
       "id": "variants-2",
       "native": {
         "x": 1020.4375,
-        "y": 19676.46875,
+        "y": 20200.65625,
         "width": 67.609375,
         "height": 18,
         "right": 1088.046875,
-        "bottom": 19694.46875
+        "bottom": 20218.65625
       },
       "reference": {
         "x": 336.84375,
-        "y": 19676.65625,
+        "y": 20200.84375,
         "width": 67.8125,
         "height": 19.625,
         "right": 404.65625,
-        "bottom": 19696.28125
+        "bottom": 20220.46875
       },
       "text": "𝟎𝟏𝟐𝟑",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13357,24 +14133,27 @@
       "id": "variants-3",
       "native": {
         "x": 1026.9375,
-        "y": 19800.46875,
+        "y": 20324.65625,
         "width": 54.609375,
         "height": 20,
         "right": 1081.546875,
-        "bottom": 19820.46875
+        "bottom": 20344.65625
       },
       "reference": {
         "x": 344.203125,
-        "y": 19800.171875,
+        "y": 20324.359375,
         "width": 53.09375,
         "height": 21.109375,
         "right": 397.296875,
-        "bottom": 19821.28125
+        "bottom": 20345.46875
       },
       "text": "𝚪αθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13385,24 +14164,27 @@
       "id": "variants-4",
       "native": {
         "x": 996.640625,
-        "y": 19923.96875,
+        "y": 20448.15625,
         "width": 115.203125,
         "height": 23,
         "right": 1111.84375,
-        "bottom": 19946.96875
+        "bottom": 20471.15625
       },
       "reference": {
         "x": 318.015625,
-        "y": 19924.84375,
+        "y": 20449.03125,
         "width": 105.453125,
         "height": 27.15625,
         "right": 423.46875,
-        "bottom": 19952
+        "bottom": 20476.1875
       },
       "text": "𝐴𝐵𝐶𝑥𝑦𝑧",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13413,24 +14195,27 @@
       "id": "variants-5",
       "native": {
         "x": 1023.71875,
-        "y": 20050.96875,
+        "y": 20575.15625,
         "width": 61.0625,
         "height": 19,
         "right": 1084.78125,
-        "bottom": 20069.96875
+        "bottom": 20594.15625
       },
       "reference": {
         "x": 340.625,
-        "y": 20051.328125,
+        "y": 20575.515625,
         "width": 60.25,
         "height": 20.28125,
         "right": 400.875,
-        "bottom": 20071.609375
+        "bottom": 20595.796875
       },
       "text": "0123",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13441,24 +14226,27 @@
       "id": "variants-6",
       "native": {
         "x": 1025.875,
-        "y": 20175.46875,
+        "y": 20699.65625,
         "width": 56.734375,
         "height": 20,
         "right": 1082.609375,
-        "bottom": 20195.46875
+        "bottom": 20719.65625
       },
       "reference": {
         "x": 343.734375,
-        "y": 20175.171875,
+        "y": 20699.359375,
         "width": 54.015625,
         "height": 21.109375,
         "right": 397.75,
-        "bottom": 20196.28125
+        "bottom": 20720.46875
       },
       "text": "Γαθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13469,24 +14257,27 @@
       "id": "variants-7",
       "native": {
         "x": 1008.046875,
-        "y": 20298.46875,
+        "y": 20822.65625,
         "width": 92.40625,
         "height": 24,
         "right": 1100.453125,
-        "bottom": 20322.46875
+        "bottom": 20846.65625
       },
       "reference": {
         "x": 314.46875,
-        "y": 20299.9375,
+        "y": 20824.125,
         "width": 112.5625,
         "height": 27.0625,
         "right": 427.03125,
-        "bottom": 20327
+        "bottom": 20851.1875
       },
       "text": "ABC𝑥𝑦𝑧",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13497,24 +14288,27 @@
       "id": "variants-8",
       "native": {
         "x": 1027.609375,
-        "y": 20425.96875,
+        "y": 20950.15625,
         "width": 53.28125,
         "height": 19,
         "right": 1080.890625,
-        "bottom": 20444.96875
+        "bottom": 20969.15625
       },
       "reference": {
         "x": 340.625,
-        "y": 20426.328125,
+        "y": 20950.515625,
         "width": 60.25,
         "height": 20.28125,
         "right": 400.875,
-        "bottom": 20446.609375
+        "bottom": 20970.796875
       },
       "text": "0123",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13525,24 +14319,27 @@
       "id": "variants-9",
       "native": {
         "x": 1030.9375,
-        "y": 20550.46875,
+        "y": 21074.65625,
         "width": 46.609375,
         "height": 20,
         "right": 1077.546875,
-        "bottom": 20570.46875
+        "bottom": 21094.65625
       },
       "reference": {
         "x": 343.734375,
-        "y": 20550.171875,
+        "y": 21074.359375,
         "width": 54.015625,
         "height": 21.109375,
         "right": 397.75,
-        "bottom": 20571.28125
+        "bottom": 21095.46875
       },
       "text": "𝛤αθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13553,24 +14350,27 @@
       "id": "variants-10",
       "native": {
         "x": 997.8125,
-        "y": 20673.96875,
+        "y": 21198.15625,
         "width": 112.875,
         "height": 23,
         "right": 1110.6875,
-        "bottom": 20696.96875
+        "bottom": 21221.15625
       },
       "reference": {
         "x": 301.421875,
-        "y": 20675.703125,
+        "y": 21199.890625,
         "width": 138.65625,
         "height": 26.703125,
         "right": 440.078125,
-        "bottom": 20702.40625
+        "bottom": 21226.59375
       },
       "text": "𝒜ℬ𝒞𝓍𝓎𝓏",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13581,24 +14381,27 @@
       "id": "variants-11",
       "native": {
         "x": 1027.609375,
-        "y": 20800.96875,
+        "y": 21325.15625,
         "width": 53.28125,
         "height": 19,
         "right": 1080.890625,
-        "bottom": 20819.96875
+        "bottom": 21344.15625
       },
       "reference": {
         "x": 340.625,
-        "y": 20801.328125,
+        "y": 21325.515625,
         "width": 60.25,
         "height": 20.28125,
         "right": 400.875,
-        "bottom": 20821.609375
+        "bottom": 21345.796875
       },
       "text": "0123",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13609,24 +14412,27 @@
       "id": "variants-12",
       "native": {
         "x": 1030.9375,
-        "y": 20925.46875,
+        "y": 21449.65625,
         "width": 46.609375,
         "height": 20,
         "right": 1077.546875,
-        "bottom": 20945.46875
+        "bottom": 21469.65625
       },
       "reference": {
         "x": 343.734375,
-        "y": 20925.171875,
+        "y": 21449.359375,
         "width": 54.015625,
         "height": 21.109375,
         "right": 397.75,
-        "bottom": 20946.28125
+        "bottom": 21470.46875
       },
       "text": "𝛤αθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13637,24 +14443,27 @@
       "id": "variants-13",
       "native": {
         "x": 1000.59375,
-        "y": 21047.46875,
+        "y": 21571.65625,
         "width": 107.3125,
         "height": 26,
         "right": 1107.90625,
-        "bottom": 21073.46875
+        "bottom": 21597.65625
       },
       "reference": {
         "x": 319.015625,
-        "y": 21050.390625,
+        "y": 21574.578125,
         "width": 103.453125,
         "height": 27.0625,
         "right": 422.46875,
-        "bottom": 21077.453125
+        "bottom": 21601.640625
       },
       "text": "𝔄𝔅ℭ𝔵𝔶𝔷",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13665,24 +14474,27 @@
       "id": "variants-14",
       "native": {
         "x": 1023.71875,
-        "y": 21176.46875,
+        "y": 21700.65625,
         "width": 61.0625,
         "height": 18,
         "right": 1084.78125,
-        "bottom": 21194.46875
+        "bottom": 21718.65625
       },
       "reference": {
         "x": 341.265625,
-        "y": 21176.328125,
+        "y": 21700.515625,
         "width": 58.96875,
         "height": 20.28125,
         "right": 400.234375,
-        "bottom": 21196.609375
+        "bottom": 21720.796875
       },
       "text": "0123",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13693,24 +14505,27 @@
       "id": "variants-15",
       "native": {
         "x": 1027.578125,
-        "y": 21300.46875,
+        "y": 21824.65625,
         "width": 53.328125,
         "height": 20,
         "right": 1080.90625,
-        "bottom": 21320.46875
+        "bottom": 21844.65625
       },
       "reference": {
         "x": 345.1875,
-        "y": 21300.171875,
+        "y": 21824.359375,
         "width": 51.109375,
         "height": 21.109375,
         "right": 396.296875,
-        "bottom": 21321.28125
+        "bottom": 21845.46875
       },
       "text": "Γαθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13721,24 +14536,27 @@
       "id": "variants-16",
       "native": {
         "x": 995.1875,
-        "y": 21423.96875,
+        "y": 21948.15625,
         "width": 118.109375,
         "height": 23,
         "right": 1113.296875,
-        "bottom": 21446.96875
+        "bottom": 21971.15625
       },
       "reference": {
         "x": 318.765625,
-        "y": 21425.21875,
+        "y": 21949.40625,
         "width": 103.953125,
         "height": 27.109375,
         "right": 422.71875,
-        "bottom": 21452.328125
+        "bottom": 21976.515625
       },
       "text": "𝔸𝔹ℂ𝕩𝕪𝕫",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13749,24 +14567,27 @@
       "id": "variants-17",
       "native": {
         "x": 1020.4375,
-        "y": 21551.46875,
+        "y": 22075.65625,
         "width": 67.609375,
         "height": 18,
         "right": 1088.046875,
-        "bottom": 21569.46875
+        "bottom": 22093.65625
       },
       "reference": {
         "x": 337.96875,
-        "y": 21551.328125,
+        "y": 22075.515625,
         "width": 65.5625,
         "height": 20.28125,
         "right": 403.53125,
-        "bottom": 21571.609375
+        "bottom": 22095.796875
       },
       "text": "𝟘𝟙𝟚𝟛",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13777,24 +14598,27 @@
       "id": "variants-18",
       "native": {
         "x": 1026.9375,
-        "y": 21675.46875,
+        "y": 22199.65625,
         "width": 54.609375,
         "height": 20,
         "right": 1081.546875,
-        "bottom": 21695.46875
+        "bottom": 22219.65625
       },
       "reference": {
         "x": 344.203125,
-        "y": 21675.171875,
+        "y": 22199.359375,
         "width": 53.09375,
         "height": 21.109375,
         "right": 397.296875,
-        "bottom": 21696.28125
+        "bottom": 22220.46875
       },
       "text": "𝚪αθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13805,24 +14629,27 @@
       "id": "variants-19",
       "native": {
         "x": 1003.4375,
-        "y": 21798.96875,
+        "y": 22323.15625,
         "width": 101.625,
         "height": 23,
         "right": 1105.0625,
-        "bottom": 21821.96875
+        "bottom": 22346.15625
       },
       "reference": {
         "x": 321.65625,
-        "y": 21800.15625,
+        "y": 22324.34375,
         "width": 98.171875,
         "height": 26.84375,
         "right": 419.828125,
-        "bottom": 21827
+        "bottom": 22351.1875
       },
       "text": "𝖠𝖡𝖢𝗑𝗒𝗓",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13833,24 +14660,27 @@
       "id": "variants-20",
       "native": {
         "x": 1023.984375,
-        "y": 21926.46875,
+        "y": 22450.65625,
         "width": 60.515625,
         "height": 18,
         "right": 1084.5,
-        "bottom": 21944.46875
+        "bottom": 22468.65625
       },
       "reference": {
         "x": 341.265625,
-        "y": 21925.96875,
+        "y": 22450.15625,
         "width": 58.96875,
         "height": 20.640625,
         "right": 400.234375,
-        "bottom": 21946.609375
+        "bottom": 22470.796875
       },
       "text": "𝟢𝟣𝟤𝟥",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13861,24 +14691,27 @@
       "id": "variants-21",
       "native": {
         "x": 1029.984375,
-        "y": 22050.46875,
+        "y": 22574.65625,
         "width": 48.53125,
         "height": 20,
         "right": 1078.515625,
-        "bottom": 22070.46875
+        "bottom": 22594.65625
       },
       "reference": {
         "x": 346.40625,
-        "y": 22050.171875,
+        "y": 22574.359375,
         "width": 48.671875,
         "height": 21.109375,
         "right": 395.078125,
-        "bottom": 22071.28125
+        "bottom": 22595.46875
       },
       "text": "Γαθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13889,24 +14722,27 @@
       "id": "variants-22",
       "native": {
         "x": 1010.890625,
-        "y": 22173.96875,
+        "y": 22698.15625,
         "width": 86.703125,
         "height": 23,
         "right": 1097.59375,
-        "bottom": 22196.96875
+        "bottom": 22721.15625
       },
       "reference": {
         "x": 324.3125,
-        "y": 22177.609375,
+        "y": 22701.796875,
         "width": 92.875,
         "height": 25.078125,
         "right": 417.1875,
-        "bottom": 22202.6875
+        "bottom": 22726.875
       },
       "text": "𝙰𝙱𝙲𝚡𝚢𝚣",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13917,24 +14753,27 @@
       "id": "variants-23",
       "native": {
         "x": 1025.34375,
-        "y": 22301.46875,
+        "y": 22825.65625,
         "width": 57.796875,
         "height": 18,
         "right": 1083.140625,
-        "bottom": 22319.46875
+        "bottom": 22843.65625
       },
       "reference": {
         "x": 339.796875,
-        "y": 22302.625,
+        "y": 22826.8125,
         "width": 61.90625,
         "height": 18.65625,
         "right": 401.703125,
-        "bottom": 22321.28125
+        "bottom": 22845.46875
       },
       "text": "𝟶𝟷𝟸𝟹",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13945,24 +14784,27 @@
       "id": "variants-24",
       "native": {
         "x": 1029.984375,
-        "y": 22425.46875,
+        "y": 22949.65625,
         "width": 48.53125,
         "height": 20,
         "right": 1078.515625,
-        "bottom": 22445.46875
+        "bottom": 22969.65625
       },
       "reference": {
         "x": 346.65625,
-        "y": 22425.171875,
+        "y": 22949.359375,
         "width": 48.171875,
         "height": 21.109375,
         "right": 394.828125,
-        "bottom": 22446.28125
+        "bottom": 22970.46875
       },
       "text": "Γαθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -13973,24 +14815,27 @@
       "id": "physics-1",
       "native": {
         "x": 1045.3125,
-        "y": 22613.96875,
+        "y": 23138.15625,
         "width": 17.859375,
         "height": 13,
         "right": 1063.171875,
-        "bottom": 22626.96875
+        "bottom": 23151.15625
       },
       "reference": {
         "x": 362.5,
-        "y": 22617.625,
+        "y": 23141.8125,
         "width": 16.484375,
         "height": 13.515625,
         "right": 378.984375,
-        "bottom": 22631.140625
+        "bottom": 23155.328125
       },
       "text": "𝐚",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14001,24 +14846,27 @@
       "id": "physics-2",
       "native": {
         "x": 1045.734375,
-        "y": 22738.96875,
+        "y": 23263.15625,
         "width": 17.03125,
         "height": 13,
         "right": 1062.765625,
-        "bottom": 22751.96875
+        "bottom": 23276.15625
       },
       "reference": {
         "x": 361.421875,
-        "y": 22742.640625,
+        "y": 23266.828125,
         "width": 18.65625,
         "height": 13.5625,
         "right": 380.078125,
-        "bottom": 22756.203125
+        "bottom": 23280.390625
       },
       "text": "𝒂",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14029,24 +14877,27 @@
       "id": "physics-3",
       "native": {
         "x": 1044.96875,
-        "y": 22863.46875,
+        "y": 23387.65625,
         "width": 18.5625,
         "height": 14,
         "right": 1063.53125,
-        "bottom": 22877.46875
+        "bottom": 23401.65625
       },
       "reference": {
         "x": 361.3125,
-        "y": 22867.9375,
+        "y": 23392.125,
         "width": 18.859375,
         "height": 13.34375,
         "right": 380.171875,
-        "bottom": 22881.28125
+        "bottom": 23405.46875
       },
       "text": "α",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14057,24 +14908,27 @@
       "id": "physics-4",
       "native": {
         "x": 1043.765625,
-        "y": 22988.46875,
+        "y": 23512.65625,
         "width": 20.953125,
         "height": 14,
         "right": 1064.71875,
-        "bottom": 23002.46875
+        "bottom": 23526.65625
       },
       "reference": {
         "x": 359.53125,
-        "y": 22992.640625,
+        "y": 23516.828125,
         "width": 22.4375,
         "height": 13.5625,
         "right": 381.96875,
-        "bottom": 23006.203125
+        "bottom": 23530.390625
       },
       "text": "𝜶",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14085,24 +14939,27 @@
       "id": "physics-5",
       "native": {
         "x": 1031.9375,
-        "y": 23111.46875,
+        "y": 23635.65625,
         "width": 44.609375,
         "height": 18,
         "right": 1076.546875,
-        "bottom": 23129.46875
+        "bottom": 23653.65625
       },
       "reference": {
         "x": 345.875,
-        "y": 23110.40625,
+        "y": 23634.59375,
         "width": 49.734375,
         "height": 20.5625,
         "right": 395.609375,
-        "bottom": 23130.96875
+        "bottom": 23655.15625
       },
       "text": "𝐀𝐁",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14113,24 +14970,27 @@
       "id": "physics-6",
       "native": {
         "x": 1016.1875,
-        "y": 23226.96875,
+        "y": 23751.15625,
         "width": 76.125,
         "height": 37,
         "right": 1092.3125,
-        "bottom": 23263.96875
+        "bottom": 23788.15625
       },
       "reference": {
         "x": 329.609375,
-        "y": 23228.296875,
+        "y": 23752.484375,
         "width": 82.265625,
         "height": 36.28125,
         "right": 411.875,
-        "bottom": 23264.578125
+        "bottom": 23788.765625
       },
       "text": "O⁡(x2)",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14141,24 +15001,27 @@
       "id": "physics-7",
       "native": {
         "x": 1036.609375,
-        "y": 23360.96875,
+        "y": 23885.15625,
         "width": 35.265625,
         "height": 19,
         "right": 1071.875,
-        "bottom": 23379.96875
+        "bottom": 23904.15625
       },
       "reference": {
         "x": 351.078125,
-        "y": 23360.03125,
+        "y": 23884.21875,
         "width": 39.34375,
         "height": 21.25,
         "right": 390.421875,
-        "bottom": 23381.28125
+        "bottom": 23905.46875
       },
       "text": "P⁡x",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14169,24 +15032,27 @@
       "id": "physics-8",
       "native": {
         "x": 1022.28125,
-        "y": 23463.96875,
+        "y": 23988.15625,
         "width": 63.9375,
         "height": 63,
         "right": 1086.21875,
-        "bottom": 23526.96875
+        "bottom": 24051.15625
       },
       "reference": {
         "x": 323.109375,
-        "y": 23463.953125,
+        "y": 23988.140625,
         "width": 95.265625,
         "height": 63.03125,
         "right": 418.375,
-        "bottom": 23526.984375
+        "bottom": 24051.171875
       },
       "text": "O⁡(1n)",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14197,24 +15063,27 @@
       "id": "chemistry-1",
       "native": {
         "x": 1008.703125,
-        "y": 23666.3125,
+        "y": 24190.5,
         "width": 91.09375,
         "height": 28.296875,
         "right": 1099.796875,
-        "bottom": 23694.609375
+        "bottom": 24218.796875
       },
       "reference": {
         "x": 313.265625,
-        "y": 23660.265625,
+        "y": 24184.453125,
         "width": 114.953125,
         "height": 33.40625,
         "right": 428.21875,
-        "bottom": 23693.671875
+        "bottom": 24217.859375
       },
       "text": "A⟶heatB",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14225,24 +15094,27 @@
       "id": "chemistry-2",
       "native": {
         "x": 992.21875,
-        "y": 23776.46875,
+        "y": 24300.65625,
         "width": 124.0625,
         "height": 57.984375,
         "right": 1116.28125,
-        "bottom": 23834.453125
+        "bottom": 24358.640625
       },
       "reference": {
         "x": 297.28125,
-        "y": 23773.15625,
+        "y": 24297.34375,
         "width": 146.921875,
         "height": 64.625,
         "right": 444.203125,
-        "bottom": 23837.78125
+        "bottom": 24361.96875
       },
       "text": "A⇌catalystheatB",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14252,25 +15124,111 @@
     {
       "id": "chemistry-3",
       "native": {
-        "x": 1018.21875,
-        "y": 23918.34375,
-        "width": 72.0625,
-        "height": 24.25,
-        "right": 1090.28125,
-        "bottom": 23942.59375
+        "x": 1012.546875,
+        "y": 24445.65625,
+        "width": 83.40625,
+        "height": 18,
+        "right": 1095.953125,
+        "bottom": 24463.65625
       },
       "reference": {
         "x": 319.5,
-        "y": 23919.859375,
+        "y": 24444.046875,
         "width": 102.5,
         "height": 24,
         "right": 422,
-        "bottom": 23943.859375
+        "bottom": 24468.046875
       },
-      "text": "A⇀↽B",
+      "text": "AB",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [
+        {
+          "anchor": {
+            "x": 1012.546875,
+            "y": 24445.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1029.875,
+            "bottom": 24463.65625
+          },
+          "following": {
+            "x": 1078.328125,
+            "y": 24445.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1095.953125,
+            "bottom": 24463.65625
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 24449.4140625,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 24466.0078125
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 24454.8359375,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 24455.9765625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 24459.4609375,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 24460.6015625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1064.3125,
+                "y": 24449.4296875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1070.3125,
+                "bottom": 24455.9765625
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1043.296875,
+                "y": 24459.4609375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1049.296875,
+                "bottom": 24466.0078125
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      ],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14280,25 +15238,111 @@
     {
       "id": "chemistry-4",
       "native": {
-        "x": 1018.21875,
-        "y": 24045.8125,
-        "width": 72.0625,
-        "height": 19.296875,
-        "right": 1090.28125,
-        "bottom": 24065.109375
+        "x": 1012.546875,
+        "y": 24570.65625,
+        "width": 83.40625,
+        "height": 18,
+        "right": 1095.953125,
+        "bottom": 24588.65625
       },
       "reference": {
         "x": 319.5,
-        "y": 24044.859375,
+        "y": 24569.046875,
         "width": 102.5,
         "height": 23.90625,
         "right": 422,
-        "bottom": 24068.765625
+        "bottom": 24592.953125
       },
-      "text": "A↽⇀B",
+      "text": "AB",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [
+        {
+          "anchor": {
+            "x": 1012.546875,
+            "y": 24570.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1029.875,
+            "bottom": 24588.65625
+          },
+          "following": {
+            "x": 1078.328125,
+            "y": 24570.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1095.953125,
+            "bottom": 24588.65625
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 24574.4140625,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 24591.0078125
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 24579.8359375,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 24580.9765625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 24584.4609375,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 24585.6015625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1058.921875,
+                "y": 24574.4296875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1064.921875,
+                "bottom": 24580.9765625
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1037.875,
+                "y": 24584.4609375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1043.875,
+                "bottom": 24591.0078125
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      ],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14308,25 +15352,86 @@
     {
       "id": "chemistry-5",
       "native": {
-        "x": 1024.765625,
-        "y": 24171.46875,
-        "width": 58.953125,
+        "x": 1026.84375,
+        "y": 24695.65625,
+        "width": 54.8125,
         "height": 18,
-        "right": 1083.71875,
-        "bottom": 24189.46875
+        "right": 1081.65625,
+        "bottom": 24713.65625
       },
       "reference": {
         "x": 337.046875,
-        "y": 24169.859375,
+        "y": 24694.046875,
         "width": 67.390625,
         "height": 21.109375,
         "right": 404.4375,
-        "bottom": 24190.96875
+        "bottom": 24715.15625
       },
-      "text": "A−┄B",
+      "text": "AB",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [
+        {
+          "anchor": {
+            "x": 1026.84375,
+            "y": 24695.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1044.171875,
+            "bottom": 24713.65625
+          },
+          "following": {
+            "x": 1064.03125,
+            "y": 24695.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1081.65625,
+            "bottom": 24713.65625
+          },
+          "kind": "bond",
+          "label": "~-",
+          "box": {
+            "x": 1044.171875,
+            "y": 24704.80859375,
+            "width": 19.859375,
+            "height": 5.703125,
+            "right": 1064.03125,
+            "bottom": 24710.51171875
+          },
+          "strokes": [
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1045.53125,
+                "y": 24704.80859375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24705.94921875
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24709.35546875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24710.49609375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      ],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14336,25 +15441,99 @@
     {
       "id": "chemistry-6",
       "native": {
-        "x": 1018.109375,
-        "y": 24294.3125,
-        "width": 72.265625,
-        "height": 22.296875,
-        "right": 1090.375,
-        "bottom": 24316.609375
+        "x": 1026.84375,
+        "y": 24820.65625,
+        "width": 54.8125,
+        "height": 18,
+        "right": 1081.65625,
+        "bottom": 24838.65625
       },
       "reference": {
         "x": 337.046875,
-        "y": 24294.859375,
+        "y": 24819.046875,
         "width": 67.390625,
         "height": 21.109375,
         "right": 404.4375,
-        "bottom": 24315.96875
+        "bottom": 24840.15625
       },
-      "text": "A=┄B",
+      "text": "AB",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [
+        {
+          "anchor": {
+            "x": 1026.84375,
+            "y": 24820.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1044.171875,
+            "bottom": 24838.65625
+          },
+          "following": {
+            "x": 1064.03125,
+            "y": 24820.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1081.65625,
+            "bottom": 24838.65625
+          },
+          "kind": "bond",
+          "label": "~--",
+          "box": {
+            "x": 1044.171875,
+            "y": 24827.52734375,
+            "width": 19.859375,
+            "height": 10.265625,
+            "right": 1064.03125,
+            "bottom": 24837.79296875
+          },
+          "strokes": [
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1045.53125,
+                "y": 24827.52734375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24828.66796875
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24832.07421875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24833.21484375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24836.63671875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24837.77734375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      ],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14364,25 +15543,99 @@
     {
       "id": "chemistry-7",
       "native": {
-        "x": 1018.109375,
-        "y": 24419.375,
-        "width": 72.265625,
-        "height": 22.1875,
-        "right": 1090.375,
-        "bottom": 24441.5625
+        "x": 1026.84375,
+        "y": 24945.65625,
+        "width": 54.8125,
+        "height": 18,
+        "right": 1081.65625,
+        "bottom": 24963.65625
       },
       "reference": {
         "x": 337.046875,
-        "y": 24419.859375,
+        "y": 24944.046875,
         "width": 67.390625,
         "height": 21.109375,
         "right": 404.4375,
-        "bottom": 24440.96875
+        "bottom": 24965.15625
       },
-      "text": "A┄−−B",
+      "text": "AB",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [
+        {
+          "anchor": {
+            "x": 1026.84375,
+            "y": 24945.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1044.171875,
+            "bottom": 24963.65625
+          },
+          "following": {
+            "x": 1064.03125,
+            "y": 24945.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1081.65625,
+            "bottom": 24963.65625
+          },
+          "kind": "bond",
+          "label": "-~-",
+          "box": {
+            "x": 1044.171875,
+            "y": 24952.52734375,
+            "width": 19.859375,
+            "height": 10.265625,
+            "right": 1064.03125,
+            "bottom": 24962.79296875
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24952.52734375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24953.66796875
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1045.53125,
+                "y": 24957.07421875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24958.21484375
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24961.63671875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24962.77734375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      ],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14393,24 +15646,27 @@
       "id": "chemistry-8",
       "native": {
         "x": 1025.34375,
-        "y": 24539.46875,
+        "y": 25063.65625,
         "width": 57.796875,
         "height": 32,
         "right": 1083.140625,
-        "bottom": 24571.46875
+        "bottom": 25095.65625
       },
       "reference": {
         "x": 342.828125,
-        "y": 24539.421875,
+        "y": 25063.609375,
         "width": 55.828125,
         "height": 34,
         "right": 398.65625,
-        "bottom": 24573.421875
+        "bottom": 25097.609375
       },
       "text": "U92235",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14421,24 +15677,27 @@
       "id": "chemistry-9",
       "native": {
         "x": 936.203125,
-        "y": 24668.140625,
+        "y": 25192.328125,
         "width": 236.09375,
         "height": 24.640625,
         "right": 1172.296875,
-        "bottom": 24692.78125
+        "bottom": 25216.96875
       },
       "reference": {
         "x": 238.9375,
-        "y": 24669.859375,
+        "y": 25194.046875,
         "width": 263.609375,
         "height": 25.515625,
         "right": 502.546875,
-        "bottom": 24695.375
+        "bottom": 25219.5625
       },
       "text": "2HA2+OA2⟶2HA2O",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14449,24 +15708,484 @@
       "id": "chemistry-10",
       "native": {
         "x": 988.859375,
-        "y": 24791.890625,
+        "y": 25316.078125,
         "width": 130.78125,
         "height": 27.140625,
         "right": 1119.640625,
-        "bottom": 24819.03125
+        "bottom": 25343.21875
       },
       "reference": {
         "x": 307.75,
-        "y": 24789.734375,
+        "y": 25313.921875,
         "width": 126,
         "height": 33.421875,
         "right": 433.75,
-        "bottom": 24823.15625
+        "bottom": 25347.34375
       },
       "text": "9.81 m/s2",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-11",
+      "native": {
+        "x": 947.96875,
+        "y": 25423.671875,
+        "width": 212.5625,
+        "height": 61.953125,
+        "right": 1160.53125,
+        "bottom": 25485.625
+      },
+      "reference": {
+        "x": 249.8125,
+        "y": 25422.375,
+        "width": 241.859375,
+        "height": 64.5625,
+        "right": 491.671875,
+        "bottom": 25486.9375
+      },
+      "text": "Along catalyst labelheatB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [
+        {
+          "anchor": {
+            "x": 947.96875,
+            "y": 25443.75,
+            "width": 17.328125,
+            "height": 18,
+            "right": 965.296875,
+            "bottom": 25461.75
+          },
+          "following": {
+            "x": 1142.90625,
+            "y": 25443.75,
+            "width": 17.625,
+            "height": 18,
+            "right": 1160.53125,
+            "bottom": 25461.75
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 971.953125,
+            "y": 25447.5078125,
+            "width": 164.296875,
+            "height": 16.59375,
+            "right": 1136.25,
+            "bottom": 25464.1015625
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 973.296875,
+                "y": 25452.9296875,
+                "width": 161.59375,
+                "height": 1.140625,
+                "right": 1134.890625,
+                "bottom": 25454.0703125
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 978.71875,
+                "y": 25457.5546875,
+                "width": 150.78125,
+                "height": 1.140625,
+                "right": 1129.5,
+                "bottom": 25458.6953125
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1128.890625,
+                "y": 25447.5234375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1134.890625,
+                "bottom": 25454.0703125
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 978.71875,
+                "y": 25457.5546875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 984.71875,
+                "bottom": 25464.1015625
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      ],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-12",
+      "native": {
+        "x": 947.96875,
+        "y": 25552.125,
+        "width": 212.5625,
+        "height": 57.953125,
+        "right": 1160.53125,
+        "bottom": 25610.078125
+      },
+      "reference": {
+        "x": 257.921875,
+        "y": 25546.84375,
+        "width": 225.640625,
+        "height": 68.53125,
+        "right": 483.5625,
+        "bottom": 25615.375
+      },
+      "text": "Aheatlong catalyst labelB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [
+        {
+          "anchor": {
+            "x": 947.96875,
+            "y": 25568.203125,
+            "width": 17.328125,
+            "height": 18,
+            "right": 965.296875,
+            "bottom": 25586.203125
+          },
+          "following": {
+            "x": 1142.90625,
+            "y": 25568.203125,
+            "width": 17.625,
+            "height": 18,
+            "right": 1160.53125,
+            "bottom": 25586.203125
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 25571.9609375,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 25588.5546875
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 25577.3828125,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 25578.5234375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 25582.0078125,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 25583.1484375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1058.921875,
+                "y": 25571.9765625,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1064.921875,
+                "bottom": 25578.5234375
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1037.875,
+                "y": 25582.0078125,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1043.875,
+                "bottom": 25588.5546875
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      ],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-13",
+      "native": {
+        "x": 988.171875,
+        "y": 25698.5625,
+        "width": 132.140625,
+        "height": 18,
+        "right": 1120.3125,
+        "bottom": 25716.5625
+      },
+      "reference": {
+        "x": 290.734375,
+        "y": 25696.953125,
+        "width": 160.03125,
+        "height": 21.75,
+        "right": 450.765625,
+        "bottom": 25718.703125
+      },
+      "text": "ABCD",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [
+        {
+          "anchor": {
+            "x": 988.171875,
+            "y": 25698.5625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1005.5,
+            "bottom": 25716.5625
+          },
+          "following": {
+            "x": 1101.078125,
+            "y": 25698.5625,
+            "width": 19.234375,
+            "height": 18,
+            "right": 1120.3125,
+            "bottom": 25716.5625
+          },
+          "kind": "bond",
+          "label": "~-",
+          "box": {
+            "x": 1005.5,
+            "y": 25707.71484375,
+            "width": 19.859375,
+            "height": 5.703125,
+            "right": 1025.359375,
+            "bottom": 25713.41796875
+          },
+          "strokes": [
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1006.859375,
+                "y": 25707.71484375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1023.984375,
+                "bottom": 25708.85546875
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1006.859375,
+                "y": 25712.26171875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1023.984375,
+                "bottom": 25713.40234375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        },
+        {
+          "anchor": {
+            "x": 988.171875,
+            "y": 25698.5625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1005.5,
+            "bottom": 25716.5625
+          },
+          "following": {
+            "x": 1101.078125,
+            "y": 25698.5625,
+            "width": 19.234375,
+            "height": 18,
+            "right": 1120.3125,
+            "bottom": 25716.5625
+          },
+          "kind": "bond",
+          "label": "~--",
+          "box": {
+            "x": 1042.984375,
+            "y": 25705.43359375,
+            "width": 19.859375,
+            "height": 10.265625,
+            "right": 1062.84375,
+            "bottom": 25715.69921875
+          },
+          "strokes": [
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1044.34375,
+                "y": 25705.43359375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1061.46875,
+                "bottom": 25706.57421875
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1044.34375,
+                "y": 25709.98046875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1061.46875,
+                "bottom": 25711.12109375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1044.34375,
+                "y": 25714.54296875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1061.46875,
+                "bottom": 25715.68359375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        },
+        {
+          "anchor": {
+            "x": 988.171875,
+            "y": 25698.5625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1005.5,
+            "bottom": 25716.5625
+          },
+          "following": {
+            "x": 1101.078125,
+            "y": 25698.5625,
+            "width": 19.234375,
+            "height": 18,
+            "right": 1120.3125,
+            "bottom": 25716.5625
+          },
+          "kind": "bond",
+          "label": "-~-",
+          "box": {
+            "x": 1081.21875,
+            "y": 25705.43359375,
+            "width": 19.859375,
+            "height": 10.265625,
+            "right": 1101.078125,
+            "bottom": 25715.69921875
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1082.578125,
+                "y": 25705.43359375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1099.703125,
+                "bottom": 25706.57421875
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1082.578125,
+                "y": 25709.98046875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1099.703125,
+                "bottom": 25711.12109375
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1082.578125,
+                "y": 25714.54296875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1099.703125,
+                "bottom": 25715.68359375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      ],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14477,24 +16196,27 @@
       "id": "core-1",
       "native": {
         "x": 997.1875,
-        "y": 24980.46875,
+        "y": 25882.5625,
         "width": 114.125,
         "height": 20,
         "right": 1111.3125,
-        "bottom": 25000.46875
+        "bottom": 25902.5625
       },
       "reference": {
         "x": 310.53125,
-        "y": 24983.765625,
+        "y": 25885.859375,
         "width": 120.4375,
         "height": 23.234375,
         "right": 430.96875,
-        "bottom": 25007
+        "bottom": 25909.09375
       },
       "text": "x+y=z",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14505,24 +16227,27 @@
       "id": "core-2",
       "native": {
         "x": 1021.65625,
-        "y": 25090.703125,
+        "y": 25992.796875,
         "width": 65.171875,
         "height": 49.515625,
         "right": 1086.828125,
-        "bottom": 25140.21875
+        "bottom": 26042.3125
       },
       "reference": {
         "x": 332.109375,
-        "y": 25083.9375,
+        "y": 25986.03125,
         "width": 77.265625,
         "height": 63.046875,
         "right": 409.375,
-        "bottom": 25146.984375
+        "bottom": 26049.078125
       },
       "text": "a+bc+d",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14533,24 +16258,27 @@
       "id": "core-3",
       "native": {
         "x": 999.40625,
-        "y": 25221.3125,
+        "y": 26123.40625,
         "width": 109.6875,
         "height": 38.296875,
         "right": 1109.09375,
-        "bottom": 25259.609375
+        "bottom": 26161.703125
       },
       "reference": {
         "x": 309.171875,
-        "y": 25221.453125,
+        "y": 26123.546875,
         "width": 123.15625,
         "height": 37.140625,
         "right": 432.328125,
-        "bottom": 25258.59375
+        "bottom": 26160.6875
       },
       "text": "x2+y2",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14561,24 +16289,27 @@
       "id": "core-4",
       "native": {
         "x": 1011.15625,
-        "y": 25340.625,
+        "y": 26242.71875,
         "width": 86.1875,
         "height": 65.59375,
         "right": 1097.34375,
-        "bottom": 25406.21875
+        "bottom": 26308.3125
       },
       "reference": {
         "x": 327.578125,
-        "y": 25332.65625,
+        "y": 26234.75,
         "width": 86.34375,
         "height": 81.546875,
         "right": 413.921875,
-        "bottom": 25414.203125
+        "bottom": 26316.296875
       },
       "text": "∑n=0∞1n!",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14589,24 +16320,27 @@
       "id": "core-5",
       "native": {
         "x": 1001.6875,
-        "y": 25486.171875,
+        "y": 26388.265625,
         "width": 105.125,
         "height": 47.65625,
         "right": 1106.8125,
-        "bottom": 25533.828125
+        "bottom": 26435.921875
       },
       "reference": {
         "x": 312.71875,
-        "y": 25473.578125,
+        "y": 26375.671875,
         "width": 116.0625,
         "height": 72.84375,
         "right": 428.78125,
-        "bottom": 25546.421875
+        "bottom": 26448.515625
       },
       "text": "∫01x2dx",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14617,24 +16351,27 @@
       "id": "core-6",
       "native": {
         "x": 1029.375,
-        "y": 25607.109375,
+        "y": 26509.203125,
         "width": 49.75,
         "height": 63,
         "right": 1079.125,
-        "bottom": 25670.109375
+        "bottom": 26572.203125
       },
       "reference": {
         "x": 336.28125,
-        "y": 25606.375,
+        "y": 26508.46875,
         "width": 68.9375,
         "height": 64.46875,
         "right": 405.21875,
-        "bottom": 25670.84375
+        "bottom": 26572.9375
       },
       "text": "(xy)",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14645,24 +16382,27 @@
       "id": "core-7",
       "native": {
         "x": 1003.65625,
-        "y": 25734.671875,
+        "y": 26636.765625,
         "width": 101.1875,
         "height": 63,
         "right": 1104.84375,
-        "bottom": 25797.671875
+        "bottom": 26699.765625
       },
       "reference": {
         "x": 318.84375,
-        "y": 25730.796875,
+        "y": 26632.890625,
         "width": 103.8125,
         "height": 70.75,
         "right": 422.65625,
-        "bottom": 25801.546875
+        "bottom": 26703.640625
       },
       "text": "(abcd)",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14673,19 +16413,19 @@
       "id": "core-8",
       "native": {
         "x": 1021.71875,
-        "y": 25882.046875,
+        "y": 26784.140625,
         "width": 65.0625,
         "height": 23.359375,
         "right": 1086.78125,
-        "bottom": 25905.40625
+        "bottom": 26807.5
       },
       "reference": {
         "x": 337.078125,
-        "y": 25877.609375,
+        "y": 26779.703125,
         "width": 67.34375,
         "height": 32.65625,
         "right": 404.421875,
-        "bottom": 25910.265625
+        "bottom": 26812.359375
       },
       "text": "x+y",
       "legacy": 0,
@@ -14694,33 +16434,33 @@
           "kind": "top",
           "box": {
             "x": 1021.71875,
-            "y": 25882.046875,
+            "y": 26784.140625,
             "width": 65.0625,
             "height": 23.359375,
             "right": 1086.78125,
-            "bottom": 25905.40625
+            "bottom": 26807.5
           },
           "background": "none",
           "color": "rgba(0, 0, 0, 0)",
           "transform": "none",
           "content": {
             "x": 1021.71875,
-            "y": 25885.40625,
+            "y": 26787.5,
             "width": 65.0625,
             "height": 20,
             "right": 1086.78125,
-            "bottom": 25905.40625
+            "bottom": 26807.5
           },
           "heads": [],
           "strokes": [
             {
               "box": {
                 "x": 1021.71875,
-                "y": 25882.046875,
+                "y": 26784.140625,
                 "width": 65.0625,
                 "height": 23.359375,
                 "right": 1086.78125,
-                "bottom": 25905.40625
+                "bottom": 26807.5
               },
               "borders": [
                 "1px",
@@ -14739,6 +16479,9 @@
         }
       ],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14746,19 +16489,19 @@
         {
           "base": {
             "x": 1021.71875,
-            "y": 25885.40625,
+            "y": 26787.5,
             "width": 65.0625,
             "height": 20,
             "right": 1086.78125,
-            "bottom": 25905.40625
+            "bottom": 26807.5
           },
           "accent": {
             "x": 1021.71875,
-            "y": 25882.046875,
+            "y": 26784.140625,
             "width": 65.0625,
             "height": 23.359375,
             "right": 1086.78125,
-            "bottom": 25905.40625
+            "bottom": 26807.5
           }
         }
       ],
@@ -14768,24 +16511,27 @@
       "id": "core-9",
       "native": {
         "x": 1021.71875,
-        "y": 25998.234375,
+        "y": 26900.328125,
         "width": 65.0625,
         "height": 42.96875,
         "right": 1086.78125,
-        "bottom": 26041.203125
+        "bottom": 26943.296875
       },
       "reference": {
         "x": 333.921875,
-        "y": 25996.734375,
+        "y": 26898.828125,
         "width": 73.65625,
         "height": 56.796875,
         "right": 407.578125,
-        "bottom": 26053.53125
+        "bottom": 26955.625
       },
       "text": "x+y⏟z",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],
@@ -14796,24 +16542,27 @@
       "id": "core-10",
       "native": {
         "x": 1032.03125,
-        "y": 26133.421875,
+        "y": 27035.515625,
         "width": 44.4375,
         "height": 24.578125,
         "right": 1076.46875,
-        "bottom": 26158
+        "bottom": 27060.09375
       },
       "reference": {
         "x": 351.671875,
-        "y": 26129.953125,
+        "y": 27032.046875,
         "width": 38.140625,
         "height": 26.578125,
         "right": 389.8125,
-        "bottom": 26156.53125
+        "bottom": 27058.625
       },
       "text": "xyz",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
       "labels": [],
       "rules": [],
       "bboxes": [],

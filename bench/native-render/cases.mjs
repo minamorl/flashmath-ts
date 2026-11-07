@@ -16,3 +16,7 @@ for(const variant of ['mathbf','mathit','mathcal','mathscr','mathfrak','mathbb',
 for(const tex of [String.raw`\vb{a}`,String.raw`\vb*{a}`,String.raw`\vb{\alpha}`,String.raw`\vb*{\alpha}`,String.raw`\vb{AB}`,String.raw`\order{x^2}`,String.raw`\pv{x}`,String.raw`\order{\frac{1}{n}}`])add('physics',tex,['physics']);
 for(const tex of [String.raw`\ce{A ->[heat] B}`,String.raw`\ce{A <=>[catalyst][heat] B}`,String.raw`\ce{A <=>> B}`,String.raw`\ce{A <<=> B}`,String.raw`\ce{A\bond{~-}B}`,String.raw`\ce{A\bond{~--}B}`,String.raw`\ce{A\bond{-~-}B}`,String.raw`\ce{^{235}_{92}U}`,String.raw`\ce{2H2 + O2 -> 2H2O}`,String.raw`\pu{9.81 m/s^2}`])add('chemistry',tex,['mhchem']);
 for(const tex of ['x+y=z',String.raw`\frac{a+b}{c+d}`,String.raw`\sqrt{x^2+y^2}`,String.raw`\sum_{n=0}^\infty\frac{1}{n!}`,String.raw`\int_0^1x^2\,dx`,String.raw`\left(\frac{x}{y}\right)`,String.raw`\begin{pmatrix}a&b\\c&d\end{pmatrix}`,String.raw`\overline{x+y}`,String.raw`\underbrace{x+y}_{z}`,String.raw`x^{y^z}`])add('core',tex,['ams']);
+
+// Verifier regressions, including labelled/wide arrows and label-only rules.
+for(const tex of [String.raw`\ce{A <=>>[long catalyst label][heat] B}`,String.raw`\ce{A <<=>[heat][long catalyst label] B}`,String.raw`\ce{A\bond{~-}B\bond{~--}C\bond{-~-}D}`])add('chemistry',tex,['mhchem']);
+for(const up of ['',String.raw`\rootAtTop`])for(const side of ['LeftLabel','RightLabel'])add('proofs',String.raw`\begin{prooftree}`+up+String.raw`\AxiomC{$A$}\AxiomC{$B$}\noLine`+`\\${side}{rule}`+String.raw`\BinaryInfC{$A\land B$}\end{prooftree}`,['bussproofs']);

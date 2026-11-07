@@ -1,0 +1,425 @@
+{
+  "node": "v26.12.1",
+  "method": "15 alternating warm samples, 100 timed corpus passes; same Temml accepted inputs; source CPU profile separate from dist timings",
+  "rows": [
+    {
+      "group": "boldsymbol",
+      "inputs": 10,
+      "samples": {
+        "flashmath": [
+          17.771907999999996,
+          16.93886600000002,
+          15.36173100000002,
+          19.38779799999997,
+          14.342456999999968,
+          15.026137000000006,
+          14.578311999999984,
+          14.106090999999994,
+          14.313151000000005,
+          13.693071000000034,
+          13.999099000000003,
+          13.394177000000015,
+          13.293166999999924,
+          13.285592000000067,
+          12.85300600000005
+        ],
+        "temml": [
+          11.91744,
+          10.835819000000013,
+          9.975175000000036,
+          16.146800999999982,
+          8.955720999999983,
+          9.278611000000012,
+          10.317500999999993,
+          8.475955999999996,
+          8.586393999999984,
+          8.642068999999992,
+          8.465195999999994,
+          8.618865000000026,
+          8.91800999999998,
+          8.278843999999935,
+          8.034662000000026
+        ]
+      },
+      "p50": {
+        "flashmath": 14.313151000000005,
+        "temml": 8.91800999999998
+      }
+    },
+    {
+      "group": "mhchem",
+      "inputs": 10,
+      "samples": {
+        "flashmath": [
+          106.98134299999992,
+          99.96665400000006,
+          99.94890999999984,
+          101.23632100000009,
+          93.30062500000008,
+          96.29852200000006,
+          94.89947200000007,
+          92.51519199999983,
+          101.65417899999966,
+          90.35065699999994,
+          90.07898499999965,
+          86.88630000000012,
+          85.80308500000001,
+          86.32404899999982,
+          85.96013200000016
+        ],
+        "temml": [
+          108.716497,
+          99.44746500000021,
+          101.56133399999999,
+          101.53081599999996,
+          104.57459100000005,
+          101.60625800000003,
+          103.2079120000003,
+          99.69099400000005,
+          96.76958100000002,
+          95.58385300000009,
+          94.35728900000004,
+          92.26961899999968,
+          90.850731,
+          92.02111999999988,
+          92.16311799999994
+        ]
+      },
+      "p50": {
+        "flashmath": 93.30062500000008,
+        "temml": 99.44746500000021
+      }
+    },
+    {
+      "group": "extpfeil",
+      "inputs": 10,
+      "samples": {
+        "flashmath": [
+          19.57248699999991,
+          16.76513900000009,
+          16.145458999999846,
+          16.90684599999986,
+          16.197117000000162,
+          16.30135300000029,
+          16.800956000000042,
+          16.68882500000018,
+          16.155227000000195,
+          21.27664300000015,
+          18.952657000000727,
+          16.321992999999566,
+          16.634140999999545,
+          16.64281800000026,
+          16.115021999999954
+        ],
+        "temml": [
+          17.17262800000026,
+          16.226843000000372,
+          16.51498700000002,
+          16.36094600000024,
+          16.580891000000065,
+          15.714146000000255,
+          16.08766999999989,
+          15.91716899999983,
+          16.574329000000034,
+          19.23331700000017,
+          16.83875700000044,
+          15.912409999999909,
+          15.917770000000019,
+          17.260855000000447,
+          16.458058999999594
+        ]
+      },
+      "p50": {
+        "flashmath": 16.64281800000026,
+        "temml": 16.458058999999594
+      }
+    },
+    {
+      "group": "tagformat",
+      "inputs": 10,
+      "samples": {
+        "flashmath": [
+          37.94971799999985,
+          34.20779599999969,
+          36.80966600000011,
+          33.10188900000048,
+          39.55105000000003,
+          33.752386000000115,
+          36.80392499999925,
+          33.064188000000286,
+          42.41991400000006,
+          41.671360999999706,
+          39.647250999999414,
+          37.84899800000039,
+          40.321163000000524,
+          34.71837999999934,
+          35.34937000000082
+        ],
+        "temml": [
+          36.310293999999885,
+          31.78292000000056,
+          38.990342000000055,
+          34.40106099999957,
+          36.595932999999604,
+          32.10840399999961,
+          44.56423100000029,
+          42.44855700000062,
+          40.75797700000021,
+          40.49266700000044,
+          37.49029100000007,
+          36.91697900000054,
+          39.84888200000023,
+          32.191821000000346,
+          32.813154000000395
+        ]
+      },
+      "p50": {
+        "flashmath": 36.80966600000011,
+        "temml": 36.91697900000054
+      }
+    }
+  ],
+  "profile": [
+    {
+      "name": "toMathMLString",
+      "file": "file://src/serialize.ts",
+      "line": 1,
+      "selfSamples": 513
+    },
+    {
+      "name": "mathMLForOutput",
+      "file": "file://src/output.ts",
+      "line": 1,
+      "selfSamples": 280
+    },
+    {
+      "name": "__name",
+      "file": "file://src/packages/mhchem-machine.ts",
+      "line": 1,
+      "selfSamples": 268
+    },
+    {
+      "name": "escapeXML",
+      "file": "file://src/serialize.ts",
+      "line": 1,
+      "selfSamples": 209
+    },
+    {
+      "name": "set MIMEParams",
+      "file": "",
+      "line": 0,
+      "selfSamples": 204
+    },
+    {
+      "name": "__name",
+      "file": "file://src/packages/mhchem-machine.ts",
+      "line": 1,
+      "selfSamples": 180
+    },
+    {
+      "name": "run",
+      "file": "file://src/parser.ts",
+      "line": 1,
+      "selfSamples": 156
+    },
+    {
+      "name": "configurationKey",
+      "file": "file://src/configuration-cache.ts",
+      "line": 1,
+      "selfSamples": 153
+    },
+    {
+      "name": "",
+      "file": "file://src/output.ts",
+      "line": 1,
+      "selfSamples": 138
+    },
+    {
+      "name": "(program)",
+      "file": "",
+      "line": 0,
+      "selfSamples": 130
+    },
+    {
+      "name": "set MIMEParams",
+      "file": "",
+      "line": 0,
+      "selfSamples": 129
+    },
+    {
+      "name": "(garbage collector)",
+      "file": "",
+      "line": 0,
+      "selfSamples": 128
+    },
+    {
+      "name": "copyConfiguration",
+      "file": "file://src/configuration-cache.ts",
+      "line": 1,
+      "selfSamples": 120
+    },
+    {
+      "name": "finish",
+      "file": "file://src/parser.ts",
+      "line": 1,
+      "selfSamples": 103
+    },
+    {
+      "name": "variantText",
+      "file": "file://src/native-variants.ts",
+      "line": 1,
+      "selfSamples": 102
+    },
+    {
+      "name": "encode",
+      "file": "file://src/configuration-cache.ts",
+      "line": 1,
+      "selfSamples": 100
+    },
+    {
+      "name": "",
+      "file": "file://bench/release/performance.mjs",
+      "line": 0,
+      "selfSamples": 95
+    },
+    {
+      "name": "set MIMEParams",
+      "file": "",
+      "line": 0,
+      "selfSamples": 93
+    },
+    {
+      "name": "",
+      "file": "file://src/parser.ts",
+      "line": 1,
+      "selfSamples": 93
+    },
+    {
+      "name": "set MIMEParams",
+      "file": "",
+      "line": 0,
+      "selfSamples": 89
+    },
+    {
+      "name": "clean",
+      "file": "file://src/parser.ts",
+      "line": 1,
+      "selfSamples": 80
+    },
+    {
+      "name": "copyConfiguration",
+      "file": "file://src/configuration-cache.ts",
+      "line": 1,
+      "selfSamples": 75
+    },
+    {
+      "name": "baseCommand",
+      "file": "file://src/packages/base.ts",
+      "line": 1,
+      "selfSamples": 64
+    },
+    {
+      "name": "expose",
+      "file": "file://src/ast.ts",
+      "line": 1,
+      "selfSamples": 58
+    },
+    {
+      "name": "__name",
+      "file": "file://src/output.ts",
+      "line": 1,
+      "selfSamples": 54
+    },
+    {
+      "name": "tableNode",
+      "file": "file://src/parser.ts",
+      "line": 1,
+      "selfSamples": 53
+    },
+    {
+      "name": "set MIMEParams",
+      "file": "",
+      "line": 0,
+      "selfSamples": 52
+    },
+    {
+      "name": "encode",
+      "file": "file://src/configuration-cache.ts",
+      "line": 1,
+      "selfSamples": 51
+    },
+    {
+      "name": "configure",
+      "file": "file://src/configuration.ts",
+      "line": 1,
+      "selfSamples": 50
+    },
+    {
+      "name": "__name",
+      "file": "file://src/configuration-cache.ts",
+      "line": 1,
+      "selfSamples": 50
+    },
+    {
+      "name": "__name",
+      "file": "file://src/parser.ts",
+      "line": 1,
+      "selfSamples": 45
+    },
+    {
+      "name": "",
+      "file": "file://src/packages/ams.ts",
+      "line": 1,
+      "selfSamples": 44
+    },
+    {
+      "name": "scan",
+      "file": "file://src/scanner.ts",
+      "line": 1,
+      "selfSamples": 42
+    },
+    {
+      "name": "",
+      "file": "file://src/configuration-cache.ts",
+      "line": 1,
+      "selfSamples": 40
+    },
+    {
+      "name": "nativeTable",
+      "file": "file://src/native-layout.ts",
+      "line": 1,
+      "selfSamples": 40
+    },
+    {
+      "name": "copyPackageMark",
+      "file": "file://src/package-mark.ts",
+      "line": 1,
+      "selfSamples": 35
+    },
+    {
+      "name": "mathMLForOutput",
+      "file": "file://src/output.ts",
+      "line": 1,
+      "selfSamples": 34
+    },
+    {
+      "name": "set MIMEParams",
+      "file": "",
+      "line": 0,
+      "selfSamples": 32
+    },
+    {
+      "name": "",
+      "file": "file://src/packages/boldsymbol.ts",
+      "line": 1,
+      "selfSamples": 30
+    },
+    {
+      "name": "command",
+      "file": "file://src/symbols.ts",
+      "line": 1,
+      "selfSamples": 30
+    }
+  ],
+  "checksum": 132853087
+}

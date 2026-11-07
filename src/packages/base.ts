@@ -86,7 +86,7 @@ function executeBase(parser: Parser, t: Token, d: Definition, id: number) {
   }
   if (d.type === "HBox") {
     parser.renderText(
-      parser.tokensArgument(),
+      parser.argumentSpan(),
       String(args[1] ?? parser.f.font),
       args[0] === 0,
     );
@@ -461,7 +461,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.text:
     case C.mbox:
     case C.hbox:
-      parser.renderText(parser.tokensArgument(), parser.f.font, id !== C.text);
+      parser.renderText(parser.argumentSpan(), parser.f.font, id !== C.text);
       return;
     case C.limits:
     case C.nolimits:

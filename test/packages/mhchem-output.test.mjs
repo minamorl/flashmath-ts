@@ -46,7 +46,7 @@ test('mhchem output: every chemical private-use slot has an explicit native repr
     assert.ok(!toMathMLString(native).includes('-mhchem'), name);
   }
   for (const tex of [String.raw`\ce{A\bond{~-}B}`, String.raw`\ce{A\bond{~--}B}`, String.raw`\ce{A\bond{-~-}B}`])
-    assert.ok(toMathMLString(parseToMathMLAst(tex, options)).includes('<mover'));
+    assert.ok(toMathMLString(parseToMathMLAst(tex, options)).includes('data-flashmath-chem="bond"'));
 });
 
 test('mhchem output: defaults, session overrides and invalid output values', () => {

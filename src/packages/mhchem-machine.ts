@@ -214,7 +214,9 @@ const inserts:Record<string,string>={'space':' ','tinySkip':'\\mkern2mu','entity
 export class MhchemMachine {
   constructor(readonly fail:(message:string)=>never,readonly maxDepth=1024){}
   run(text:Text,machine:M,depth=0):Item[] {
-    if(depth>=this.maxDepth)this.fail('Nesting limit exceeded');
+    // Recursive grammar actions have an independent safety ceiling, even when
+    // callers raise the explicit parser stack limit.
+    if(depth>=Math.min(this.maxDepth,512))this.fail('Nesting limit exceeded');
     if(!nonempty(text))return [];
     const v=new View(text),g=chemistryGrammar()[machine],buf:Buffer={fields:{},sb:false,bond:false,parentheses:0,defect:false,oxidation:false},out:Item[]=[];
     let state=g.start,i=0,stalled=0;

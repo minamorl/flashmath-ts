@@ -24,7 +24,12 @@ const greekStarts: Record<string,number> = {bold:0x1d6a8, italic:0x1d6e2, 'bold-
 export function variantName(name:string):string {return Object.hasOwn(aliases,name)?aliases[name]:name;}
 const fallback:Record<string,string>={script:'italic','bold-script':'bold-italic','double-struck':'bold',fraktur:'normal','bold-fraktur':'bold','bold-italic':'bold','sans-serif':'normal','bold-sans-serif':'bold','sans-serif-italic':'italic','sans-serif-bold-italic':'bold-italic',monospace:'normal'};
 export function variantText(text:string, variant:string):string {
-  return Array.from(text,c=>{
+  let result='';
+  for(const c of text){
+    result+=map(c);
+  }
+  return result;
+  function map(c:string):string {
     const code=c.codePointAt(0)!;
     // The optional bundled NewCM calligraphic face uses its original A-Z cmap.
     if((variant==='-tex-calligraphic'||variant==='-tex-bold-calligraphic')&&code>=65&&code<=90)return c;
@@ -44,5 +49,5 @@ export function variantText(text:string, variant:string):string {
       name=fallback[name]??'normal';
     }
     return c;
-  }).join('');
+  }
 }

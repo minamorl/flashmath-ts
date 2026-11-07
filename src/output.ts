@@ -19,10 +19,10 @@ function compound(code: number) {
   return code === 0xe409 || code === 0xe40a || code >= 0xe411 && code <= 0xe413;
 }
 function codeOf(n: MathMLNode) {
-  return packageMark(n)==='glyph' && n.kind === 'mo' && n.text.length === 1 ? n.text.charCodeAt(0) : 0;
+  return n.kind === 'mo' && n.text.length === 1 && packageMark(n)==='glyph' ? n.text.charCodeAt(0) : 0;
 }
 function arrowLabel(n: MathMLNode) {
-  if (packageMark(n)!=='arrow-label' || n.kind !== 'mpadded' || n.children.at(-1)?.kind !== 'mspace') return false;
+  if (n.kind !== 'mpadded' || packageMark(n)!=='arrow-label' || n.children.at(-1)?.kind !== 'mspace') return false;
   const a = n.attributes, strut = n.children.at(-1)!.attributes;
   return a.voffset === '-.2em' && a.height === '-.2em' && strut.depth === '.2em'
     || a.voffset === '.15em' && a.depth === '-.15em' && strut.height === '.75em';
@@ -36,24 +36,35 @@ function nativeGlyph(n: MathMLNode): MathMLNode {
   const attributes = {...n.attributes};
   delete attributes['data-mjx-variant'];
   if (text) return {...n, text, attributes, children: []};
-  const token = (text: string, small = false): MathMLNode => ({
-    kind: 'mo', text, start: n.start, children: [],
-    attributes: small ? {stretchy: 'false', mathsize: '70%'} : {stretchy: 'true'},
-  });
-  const accent = (base: MathMLNode, over: MathMLNode, under = false): MathMLNode => ({
-    kind: under ? 'munder' : 'mover', text: '', start: n.start,
-    attributes: {[under ? 'accentunder' : 'accent']: 'true'}, children: [base, over],
-  });
-  let result: MathMLNode;
-  switch (code) {
-    case 0xe409: result = accent(token('⇀'), token('↽', true), true); break;
-    case 0xe40a: result = accent(token('↽'), token('⇀', true)); break;
-    case 0xe411: result = accent(token('−'), token('┄')); break;
-    case 0xe412: result = accent(token('='), token('┄')); break;
-    default: result = accent(accent(token('┄'), token('−')), token('−'), true);
+  // Fixed bond geometry follows the source font's em metrics. Accenting a
+  // Unicode '=' or dash lets the browser choose incompatible glyph bearings.
+  const arrow=code===0xe409||code===0xe40a;
+  const height=arrow?.692:code===0xe411?.238:.428;
+  const result:MathMLNode={...n,kind:'mrow',text:'',attributes:{...attributes,
+    'data-flashmath-chem':arrow?'harpoons':'bond',
+    'aria-label':arrow?'⇌':code===0xe411?'~-':code===0xe412?'~--':'-~-',
+  },children:[]};
+  delete result.attributes.stretchy;
+  addStyle(result,`display:inline-block;position:relative;${arrow?'min-width:1.463em;width:100%':'width:.828em'};height:${height}em;transform:translateY(${arrow?'.098':code===0xe411?'-.131':'-.036'}em);`);
+  const stroke=(top:string,left:string,width:string,dashed=false)=>{
+    const child:MathMLNode={kind:'mrow',text:'',children:[],start:n.start,attributes:{'aria-hidden':'true','data-flashmath-chem-stroke':dashed?'dashed':'solid',style:`display:block;position:absolute;top:${top};left:${left};width:${width};height:.048em;border-radius:.024em;${dashed?'background:repeating-linear-gradient(to right,currentColor 0em,currentColor .198em,transparent .198em,transparent .258em)':'background-color:currentColor'}`}};
+    result.children.push(child);return child;
+  };
+  if(arrow){
+    const upperShort=code===0xe40a;
+    const upper=stroke('.226em',upperShort?'.282em':'.056em',upperShort?'calc(100% - .563em)':'calc(100% - .112em)');
+    const lower=stroke('.419em',upperShort?'.056em':'.282em',upperShort?'calc(100% - .112em)':'calc(100% - .563em)');
+    for(const [line,right]of [[upper,true],[lower,false]] as const){
+      line.children.push({kind:'mrow',text:'',children:[],start:n.start,attributes:{'aria-hidden':'true','data-flashmath-chem-head':right?'right':'left',style:`display:block;position:absolute;${right?'right:0;bottom:0':'left:0;top:0'};width:.25em;height:.273em;background-color:currentColor;clip-path:polygon(${right?'100% 100%,0 0,28% 100%':'0 0,100% 100%,72% 0'})`}});
+    }
+  }else{
+    const count=code===0xe411?2:3;
+    for(let i=0;i<count;i++)stroke(`${i*.19}em`,'.057em','.714em',code===0xe413?i===1:i===0);
   }
-  delete attributes.stretchy; // This attribute belongs to mo, not an accent row.
-  result.attributes = {...attributes, ...result.attributes};
+  if(arrow){
+    result.attributes.style='display:block;position:absolute;left:.2778em;right:.2778em;top:0;height:.692em;transform:translateY(.098em)';
+    return {kind:'mrow',text:'',start:n.start,attributes:{style:'display:inline-block;position:relative;min-width:2.019em;width:100%;height:.692em'},children:[result]};
+  }
   return result;
 }
 
@@ -66,11 +77,11 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
   const pending = [root];
   let found = false;
   while (pending.length) {
-    const n = pending.pop()!, code = codeOf(n), variant=n.attributes.mathvariant;
-    if (glyph(code) || compound(code) || arrowLabel(n) || packageMark(n)==='prescript' || packageMark(n)==='bbox-padding'
+    const n = pending.pop()!, mark=packageMark(n), code = n.kind==='mo'&&n.text.length===1&&mark==='glyph'?n.text.charCodeAt(0):0, variant=n.attributes.mathvariant;
+    if (glyph(code) || compound(code) || mark==='arrow-label'&&arrowLabel(n) || mark==='prescript' || mark==='bbox-padding'
       || n.kind==='menclose' || n.kind==='mlabeledtr' || isCenterOver(n)
       || overline(n)
-      || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame)
+      || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame || n.attributes.semantics?.includes('bspr_inferenceRule:'))
       || variant && (variant!=='normal' && (variant!=='italic' || n.kind!=='mi' || Array.from(n.text).length!==1) || n.kind==='mstyle')) {found = true; break;}
     for (const child of n.children) pending.push(child);
   }
@@ -87,25 +98,22 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     const job=work.pop()!,{input,output}=job;
     const variant=input.attributes['data-mjx-variant']??input.attributes.mathvariant??job.variant;
     if(!job.done){
-      work.push({...job,done:true});
-      const sourceChildren=input.children.slice(0,input.children.length-(arrowLabel(input)?1:0));
-      const children:MathMLNode[]=[];
-      for(let i=0;i<sourceChildren.length;i++){
-        const child=sourceChildren[i];
+      job.done=true;work.push(job);
+      const sourceChildren=input.children,childCount=sourceChildren.length-(arrowLabel(input)?1:0);
+      for(let i=0;i<childCount;i++){
+        const sourceChild=sourceChildren[i];let child=sourceChild;
         if(packageMark(child)==='prescript' && sourceChildren[i+3]){
           const script=(which:number):MathMLNode=>{
-            const stack=[child.children[which]];
+            const stack=[sourceChild.children[which]];
             while(stack.length){const n=stack.pop();if(!n)continue;
               if(n.kind==='mphantom')return {kind:n.children.length?'mrow':'none',attributes:{},children:n.children,text:'',start:child.start};
               for(const c of n.children)stack.push(c);
             }
             return {kind:'none',attributes:{},children:[],text:'',start:child.start};
           };
-          children.push({kind:'mmultiscripts',attributes:{},children:[sourceChildren[i+3],{kind:'mprescripts',attributes:{},children:[],text:'',start:child.start},script(1),script(2)],text:'',start:child.start});
+          child={kind:'mmultiscripts',attributes:{},children:[sourceChildren[i+3],{kind:'mprescripts',attributes:{},children:[],text:'',start:child.start},script(1),script(2)],text:'',start:child.start};
           i+=3;
-        }else children.push(child);
-      }
-      for(const child of children){
+        }
         const cloned=copy(child);output.children.push(cloned);
         work.push({input:child,output:cloned,variant,done:false});
       }
@@ -134,6 +142,12 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
         if(output.kind==='mi')output.attributes.mathvariant='normal';
         else delete output.attributes.mathvariant;
       }else delete output.attributes.mathvariant;
+    }
+    if(output.attributes.semantics?.includes('bspr_prooflabel:')){
+      const right=output.attributes.semantics.includes('bspr_prooflabel:right');
+      output.kind='mrow';
+      for(const key of ['width','height','depth','voffset','lspace'])delete output.attributes[key];
+      addStyle(output,`display:inline-flex;align-items:baseline;padding-${right?'left':'right'}:.5ex;transform:translateY(.25em);`);
     }
     if(packageMark(input)==='bbox-padding')nativeBBox(output);
     else if(output.kind==='menclose')Object.assign(output,nativeEnclosure(output));

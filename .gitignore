@@ -1,3 +1,6 @@
 node_modules/
 dist/
 *.log
+/.release-git/
+bench/native-render/react-client.js
+bench/release/finish.bundle

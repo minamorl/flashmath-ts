@@ -1,9 +1,20 @@
 import type {MathMLNode,OutputOptions} from './ast.js';
 import {mathMLForOutput} from './output.js';
 /** XML/React-compatible escaping, used for both text and attribute values. */
-export function escapeXML(value:string):string {return value.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;'}[c]!));}
+const escapes:Record<string,string>={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;'};
+const escaped=(c:string)=>escapes[c];
+export function escapeXML(value:string):string {return /[&<>"']/.test(value)?value.replace(/[&<>"']/g,escaped):value;}
 export function toMathMLString(ast:MathMLNode,options:OutputOptions={}):string {
-  const out:string[]=[],stack:(MathMLNode|string)[]=[mathMLForOutput(ast,options)];
-  while(stack.length){const n=stack.pop()!;if(typeof n==='string'){out.push(n);continue;}if(n.kind==='#text'){out.push(escapeXML(n.text));continue;}out.push('<',n.kind);for(const [key,value] of Object.entries(n.attributes))out.push(' ',key,'="',escapeXML(value),'"');out.push('>');stack.push('</'+n.kind+'>');for(let i=n.children.length-1;i>=0;i--)stack.push(n.children[i]);if(n.text)stack.push(escapeXML(n.text));}
-  return out.join('');
+  let out='';const stack:(MathMLNode|string)[]=[mathMLForOutput(ast,options)];
+  while(stack.length){
+    const n=stack.pop()!;
+    if(typeof n==='string'){out+=n;continue;}
+    if(n.kind==='#text'){out+=escapeXML(n.text);continue;}
+    out+='<'+n.kind;
+    for(const key of Object.keys(n.attributes))out+=' '+key+'="'+escapeXML(n.attributes[key])+'"';
+    out+='>';stack.push('</'+n.kind+'>');
+    for(let i=n.children.length-1;i>=0;i--)stack.push(n.children[i]);
+    if(n.text)out+=escapeXML(n.text);
+  }
+  return out;
 }

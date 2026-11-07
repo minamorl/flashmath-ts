@@ -36,12 +36,28 @@ screenshots and bundle before accepting this candidate.
   Font provenance/hashes ship with the four unmodified WOFF2 files.
 - Left equation environments now preserve side and tag indentation. Strict
   reference comparison rejects every unexpected difference; there are no
-  accepted structural differences for the 195-formula native corpus.
+  accepted structural differences for the 202-formula native corpus.
 - The historical pre-hardening snapshot remains intact; its regression test
   spells out the boxed-wrapper, noLine and left-equation corrections.
 - The benchmark now spreads texOptions into MathJax's TeX constructor instead
   of passing an ignored nested texOptions property. Regenerated results use
   the same tags configuration in every engine and supersede older timings.
+
+## Finish corrections
+
+Explicit equation tags now use the AMS environment handler even when tagformat
+is enabled, without an extra numbered outer row. Unterminated script groups
+report MathJax's error without changing sqrt/bbox error handling. Nested text
+math and macro arguments share token spans and brace indexes; tests record
+400/1600 timing slopes and copied-token counts. Chemistry has a hard recursive
+action ceiling of 512, returning merror when requested limits exceed it.
+
+Native mixed bonds use CSS stroke coordinates; asymmetric harpoons have separate
+shaft lengths and allocated neighbour spacing. noLine tables use the same native
+layout as ruled inference tables, and proof labels reserve their actual width.
+React property names are translated; empty href is omitted on the React path.
+SSR/client warnings and hydration errors are checked, with no HTML injection.
+README documentation/benchmark links use full GitHub URLs for npm consumers.
 
 ## Visible decisions and limits
 
@@ -57,8 +73,8 @@ browser layout timing, or universal fastest-parser claim is made.
 Run `node bench/release/verify.mjs` with dependencies installed from the frozen
 lockfile, local Chromium available at /usr/bin/google-chrome, and TMPDIR set.
 The command regenerates build/tests, harness and full conformance, the 971-input
-independent corpus, the 41-probe bussproofs audit, the 195-formula Chromium run,
-724 native checks, cold/warm benchmarks and the isolated tarball consumer.
+independent corpus, the 41-probe bussproofs audit, the 202-formula Chromium run,
+796 native checks, cold/warm benchmarks and the isolated tarball consumer.
 The tarball smoke test first imports core with React absent, then links the
 locked React 19.2.4 peers and exercises the exported React entry and SSR.
 The original package fixtures/normalizer and pnpm lockfile are not rewritten.
@@ -74,17 +90,12 @@ Timing ranks are reported as observations, not enforced as correctness gates.
 
 ## Final measured outcome
 
-The complete local gate finished at 2026-11-06T21:56:10.260Z
-(UTC completion time). `bench/release/checks.json` records the exact commands,
-expected exits and source SHA-256. Tests retain their six upstream skips.
-The independent corpus has 969 comparable matches (827 valid inputs), zero
-mismatches and two MathJax oracle exceptions, out of 971 inputs.
-
-Stateless p50 was below MathJax in 36/36 full groups (minimum 3.61x) and below
-Temml in 17/22 comparable cohorts. Temml remains faster in cancel, boldsymbol, extpfeil, begingroup, verb;
-therefore the requested universal fastest outcome has not been established.
-Cold import/setup/first-string p50 is 25.39 ms for stateless flashmath,
-27.08 ms for session, 73.46 ms for MathJax and 21.30 ms for Temml on this host.
-These measurements exclude browser layout and React SSR. The exact final
-candidate tarball size, integrity and file list are in pack.json and
-tarball-files.txt. External transmission and npm publication were not performed.
+Generated at 2026-11-07T00:54:17.735Z (UTC report generation time).
+The full benchmark measured stateless p50 below MathJax in 36/36
+full groups and below Temml in 20/22 identical-input cohorts.
+Remaining Temml losses: boldsymbol, verb.
+See [performance investigation](performance-finish.md) for measured costs,
+before/after samples and the remaining limits. The source fingerprint and exact
+commands/exits are recorded in ../bench/release/checks.json. Candidate sizes,
+integrity and the actual archive listing are in ../bench/release/pack.json and
+tarball-files.txt. No push, publication or external delivery is performed.

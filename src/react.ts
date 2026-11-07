@@ -34,6 +34,14 @@ function cssProperties(source:string):Record<string,string> {
   }
   return result;
 }
+// React shares HTML/SVG property validation with MathML. Keep MathML-only
+// names (mathvariant, scriptlevel, …) lowercase and translate shared aliases.
+const propertyNames:Record<string,string>={class:'className',for:'htmlFor','http-equiv':'httpEquiv','accept-charset':'acceptCharset'};
+for(const name of ('accessKey allowFullScreen autoCapitalize autoComplete autoFocus cellPadding cellSpacing charSet classID colSpan contentEditable contextMenu crossOrigin dateTime encType enterKeyHint fetchPriority formAction formEncType formMethod formNoValidate formTarget frameBorder hrefLang inputMode itemID itemProp itemRef itemScope itemType marginHeight marginWidth maxLength minLength noModule noValidate playsInline readOnly referrerPolicy rowSpan spellCheck srcDoc srcLang srcSet tabIndex useMap fontFamily fontSize fontSizeAdjust fontStretch fontStyle fontVariant fontWeight strokeWidth strokeLinecap strokeLinejoin strokeMiterlimit strokeDasharray strokeDashoffset strokeOpacity fillOpacity fillRule clipPath clipRule xmlLang xmlSpace xlinkHref xmlnsXlink').split(' ')){
+  propertyNames[name.toLowerCase()]=name;
+  propertyNames[name.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())]=name;
+}
+Object.assign(propertyNames,{'xml:lang':'xmlLang','xml:space':'xmlSpace','xlink:href':'xlinkHref','xmlns:xlink':'xmlnsXlink'});
 /** Real React MathML elements, with no HTML injection. */
 export function parseToReact(tex:string,options:ParseOptions={}):ReactElement {
   return mathMLAstToReact(parseToMathMLAst(tex,options),options);
@@ -46,7 +54,10 @@ export function mathMLAstToReact(ast:MathMLNode,options:OutputOptions={}):ReactE
     if(node.kind==='#text'){results.push(node.text);continue;}
     const children=results.splice(results.length-node.children.length,node.children.length);
     const props:Record<string,unknown>={key};
-    for(const [name,value]of Object.entries(node.attributes))props[name==='class'?'className':name]=name==='style'?cssProperties(value):value;
+    for(const [name,value]of Object.entries(node.attributes)){
+      if(name==='href'&&value==='')continue;
+      props[propertyNames[name]??name]=name==='style'?cssProperties(value):value;
+    }
     results.push(createElement(node.kind,props,node.text?[node.text,...children]:children));
   }
   return results[0] as ReactElement;
