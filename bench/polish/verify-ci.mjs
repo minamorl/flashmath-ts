@@ -18,7 +18,7 @@ function run(name,command,args,accepted=[0],env={}){
 try{
  console.log(`node ${process.version}`);
  // Offline mode keeps the explicitly requested locked install local.
- run('install','pnpm',['install','--frozen-lockfile'],[0],{npm_config_offline:'true',npm_config_update_notifier:'false'});
+ run('install','pnpm',['install','--frozen-lockfile'],[0],{pnpm_config_offline:'true',pnpm_config_update_notifier:'false'});
  run('build',process.execPath,['scripts/build.mjs']);
  const tests=['test','test/packages'].flatMap(d=>fs.readdirSync(d).filter(f=>f.endsWith('.test.mjs')).map(f=>d+'/'+f));
  run('tests',process.execPath,['--test','--test-reporter=tap',...tests,'conformance/harness.test.mjs','scripts/ci-checks.test.mjs']);

@@ -15,7 +15,7 @@ import type { Token, Macro, TokenSpan } from "./scanner.js";
 import { preamble } from "./preamble.js";
 import type { Preamble } from "./preamble.js";
 import { C, definitions, ranges } from "./symbols.js";
-import { configure, resolveConfiguration } from "./configuration.js";
+import { parserConfiguration, resolveConfiguration } from "./configuration.js";
 import { mathMLForOutput } from "./output.js";
 import { sessionState } from "./session-state.js";
 import {format,tagNodes} from "./packages/tagformat.js";
@@ -1664,7 +1664,7 @@ export interface MathMLParserSession {
 export function createMathMLParser(
   input: ParseOptions = {},
 ): MathMLParserSession {
-  const { options, configuration } = configure(input),
+  const { options, configuration } = parserConfiguration(input),
     state = sessionState();
   const parse = (tex: string, overrides: Pick<ParseOptions, 'display' | 'output'> = {}) => {
     const resolved = { ...options, ...overrides };
@@ -1678,7 +1678,7 @@ export function parseToMathMLAst(
   tex: string,
   options: ParseOptions = {},
 ): MathMLNode {
-  const resolved=configure(options);
+  const resolved=parserConfiguration(options);
   if(resolved.options.prior?.length)return createMathMLParser(options).parse(tex);
   return mathMLForOutput(parseOne(tex,resolved.options,resolved.configuration,sessionState()),resolved.options);
 }
