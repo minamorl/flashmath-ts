@@ -1,6 +1,6 @@
 {
   "browser": "Chrome/153.0.8010.36",
-  "formulas": 195,
+  "formulas": 202,
   "ssrStringParity": true,
   "checks": [
     {
@@ -3414,6 +3414,33 @@
     },
     {
       "id": "proofs-2",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 16214.0625,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 16232.0625
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 16204.25,
+            "width": 124.734375,
+            "height": 56.65625,
+            "right": 1089.109375,
+            "bottom": 16260.90625
+          },
+          "gap": 6.21875
+        }
+      }
+    },
+    {
+      "id": "proofs-2",
       "name": "proof line count",
       "pass": true,
       "details": {
@@ -3502,6 +3529,33 @@
     },
     {
       "id": "proofs-4",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 16545.9375,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 16563.9375
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 16539.9375,
+            "width": 124.734375,
+            "height": 56.65625,
+            "right": 1089.109375,
+            "bottom": 16596.59375
+          },
+          "gap": 6.21875
+        }
+      }
+    },
+    {
+      "id": "proofs-4",
       "name": "proof line count",
       "pass": true,
       "details": {
@@ -3587,6 +3641,33 @@
       "name": "Core enclosures/rows and no private font slots",
       "pass": true,
       "details": {}
+    },
+    {
+      "id": "proofs-6",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 16835,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 16853
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 16825.1875,
+            "width": 124.734375,
+            "height": 56.65625,
+            "right": 1089.109375,
+            "bottom": 16881.84375
+          },
+          "gap": 6.21875
+        }
+      }
     },
     {
       "id": "proofs-6",
@@ -3675,6 +3756,33 @@
       "name": "Core enclosures/rows and no private font slots",
       "pass": true,
       "details": {}
+    },
+    {
+      "id": "proofs-8",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 17166.875,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 17184.875
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 17160.875,
+            "width": 124.734375,
+            "height": 56.65625,
+            "right": 1089.109375,
+            "bottom": 17217.53125
+          },
+          "gap": 6.21875
+        }
+      }
     },
     {
       "id": "proofs-8",
@@ -3754,6 +3862,33 @@
     },
     {
       "id": "proofs-10",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 17453.34375,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 17471.34375
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 17443.53125,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1089.109375,
+            "bottom": 17499.1875
+          },
+          "gap": 6.21875
+        }
+      }
+    },
+    {
+      "id": "proofs-10",
       "name": "proof line count",
       "pass": true,
       "details": {
@@ -3817,6 +3952,33 @@
       "name": "Core enclosures/rows and no private font slots",
       "pass": true,
       "details": {}
+    },
+    {
+      "id": "proofs-12",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 17781.09375,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 17799.09375
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 17775.09375,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1089.109375,
+            "bottom": 17830.75
+          },
+          "gap": 6.21875
+        }
+      }
     },
     {
       "id": "proofs-12",
@@ -4578,6 +4740,225 @@
       "details": {}
     },
     {
+      "id": "chemistry-3",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 1012.546875,
+            "y": 24445.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1029.875,
+            "bottom": 24463.65625
+          },
+          "following": {
+            "x": 1078.328125,
+            "y": 24445.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1095.953125,
+            "bottom": 24463.65625
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 24449.4140625,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 24466.0078125
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 24454.8359375,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 24455.9765625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 24459.4609375,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 24460.6015625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1064.3125,
+                "y": 24449.4296875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1070.3125,
+                "bottom": 24455.9765625
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1043.296875,
+                "y": 24459.4609375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1049.296875,
+                "bottom": 24466.0078125
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "chemistry-3",
+      "name": "harpoons leave space on both sides",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 1012.546875,
+            "y": 24445.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1029.875,
+            "bottom": 24463.65625
+          },
+          "following": {
+            "x": 1078.328125,
+            "y": 24445.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1095.953125,
+            "bottom": 24463.65625
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 24449.4140625,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 24466.0078125
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 24454.8359375,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 24455.9765625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 24459.4609375,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 24460.6015625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1064.3125,
+                "y": 24449.4296875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1070.3125,
+                "bottom": 24455.9765625
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1043.296875,
+                "y": 24459.4609375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1049.296875,
+                "bottom": 24466.0078125
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "chemistry-3",
+      "name": "harpoons have distinct direction and lengths",
+      "pass": true,
+      "details": {
+        "strokes": [
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1037.875,
+              "y": 24454.8359375,
+              "width": 32.4375,
+              "height": 1.140625,
+              "right": 1070.3125,
+              "bottom": 24455.9765625
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1043.296875,
+              "y": 24459.4609375,
+              "width": 21.625,
+              "height": 1.140625,
+              "right": 1064.921875,
+              "bottom": 24460.6015625
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-3",
+      "name": "harpoon short line follows source direction",
+      "pass": true,
+      "details": {}
+    },
+    {
       "id": "chemistry-4",
       "name": "visible",
       "pass": true,
@@ -4586,6 +4967,225 @@
     {
       "id": "chemistry-4",
       "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-4",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 1012.546875,
+            "y": 24570.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1029.875,
+            "bottom": 24588.65625
+          },
+          "following": {
+            "x": 1078.328125,
+            "y": 24570.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1095.953125,
+            "bottom": 24588.65625
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 24574.4140625,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 24591.0078125
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 24579.8359375,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 24580.9765625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 24584.4609375,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 24585.6015625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1058.921875,
+                "y": 24574.4296875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1064.921875,
+                "bottom": 24580.9765625
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1037.875,
+                "y": 24584.4609375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1043.875,
+                "bottom": 24591.0078125
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "chemistry-4",
+      "name": "harpoons leave space on both sides",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 1012.546875,
+            "y": 24570.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1029.875,
+            "bottom": 24588.65625
+          },
+          "following": {
+            "x": 1078.328125,
+            "y": 24570.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1095.953125,
+            "bottom": 24588.65625
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 24574.4140625,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 24591.0078125
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 24579.8359375,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 24580.9765625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 24584.4609375,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 24585.6015625
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1058.921875,
+                "y": 24574.4296875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1064.921875,
+                "bottom": 24580.9765625
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1037.875,
+                "y": 24584.4609375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1043.875,
+                "bottom": 24591.0078125
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "chemistry-4",
+      "name": "harpoons have distinct direction and lengths",
+      "pass": true,
+      "details": {
+        "strokes": [
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1043.296875,
+              "y": 24579.8359375,
+              "width": 21.625,
+              "height": 1.140625,
+              "right": 1064.921875,
+              "bottom": 24580.9765625
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1037.875,
+              "y": 24584.4609375,
+              "width": 32.4375,
+              "height": 1.140625,
+              "right": 1070.3125,
+              "bottom": 24585.6015625
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-4",
+      "name": "harpoon short line follows source direction",
       "pass": true,
       "details": {}
     },
@@ -4602,6 +5202,154 @@
       "details": {}
     },
     {
+      "id": "chemistry-5",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 1026.84375,
+            "y": 24695.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1044.171875,
+            "bottom": 24713.65625
+          },
+          "following": {
+            "x": 1064.03125,
+            "y": 24695.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1081.65625,
+            "bottom": 24713.65625
+          },
+          "kind": "bond",
+          "label": "~-",
+          "box": {
+            "x": 1044.171875,
+            "y": 24704.80859375,
+            "width": 19.859375,
+            "height": 5.703125,
+            "right": 1064.03125,
+            "bottom": 24710.51171875
+          },
+          "strokes": [
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1045.53125,
+                "y": 24704.80859375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24705.94921875
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24709.35546875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24710.49609375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      }
+    },
+    {
+      "id": "chemistry-5",
+      "name": "bond centered on neighbouring atom math axis",
+      "pass": true,
+      "details": {
+        "anchor": {
+          "x": 1026.84375,
+          "y": 24695.65625,
+          "width": 17.328125,
+          "height": 18,
+          "right": 1044.171875,
+          "bottom": 24713.65625
+        },
+        "lines": [
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1045.53125,
+              "y": 24704.80859375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24705.94921875
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24709.35546875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24710.49609375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-5",
+      "name": "bond lines aligned and equally spaced",
+      "pass": true,
+      "details": {
+        "lines": [
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1045.53125,
+              "y": 24704.80859375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24705.94921875
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24709.35546875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24710.49609375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-5",
+      "name": "bond dash position",
+      "pass": true,
+      "details": {}
+    },
+    {
       "id": "chemistry-6",
       "name": "visible",
       "pass": true,
@@ -4614,6 +5362,193 @@
       "details": {}
     },
     {
+      "id": "chemistry-6",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 1026.84375,
+            "y": 24820.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1044.171875,
+            "bottom": 24838.65625
+          },
+          "following": {
+            "x": 1064.03125,
+            "y": 24820.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1081.65625,
+            "bottom": 24838.65625
+          },
+          "kind": "bond",
+          "label": "~--",
+          "box": {
+            "x": 1044.171875,
+            "y": 24827.52734375,
+            "width": 19.859375,
+            "height": 10.265625,
+            "right": 1064.03125,
+            "bottom": 24837.79296875
+          },
+          "strokes": [
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1045.53125,
+                "y": 24827.52734375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24828.66796875
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24832.07421875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24833.21484375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24836.63671875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24837.77734375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      }
+    },
+    {
+      "id": "chemistry-6",
+      "name": "bond centered on neighbouring atom math axis",
+      "pass": true,
+      "details": {
+        "anchor": {
+          "x": 1026.84375,
+          "y": 24820.65625,
+          "width": 17.328125,
+          "height": 18,
+          "right": 1044.171875,
+          "bottom": 24838.65625
+        },
+        "lines": [
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1045.53125,
+              "y": 24827.52734375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24828.66796875
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24832.07421875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24833.21484375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24836.63671875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24837.77734375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-6",
+      "name": "bond lines aligned and equally spaced",
+      "pass": true,
+      "details": {
+        "lines": [
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1045.53125,
+              "y": 24827.52734375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24828.66796875
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24832.07421875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24833.21484375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24836.63671875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24837.77734375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-6",
+      "name": "bond dash position",
+      "pass": true,
+      "details": {}
+    },
+    {
       "id": "chemistry-7",
       "name": "visible",
       "pass": true,
@@ -4622,6 +5557,193 @@
     {
       "id": "chemistry-7",
       "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-7",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 1026.84375,
+            "y": 24945.65625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1044.171875,
+            "bottom": 24963.65625
+          },
+          "following": {
+            "x": 1064.03125,
+            "y": 24945.65625,
+            "width": 17.625,
+            "height": 18,
+            "right": 1081.65625,
+            "bottom": 24963.65625
+          },
+          "kind": "bond",
+          "label": "-~-",
+          "box": {
+            "x": 1044.171875,
+            "y": 24952.52734375,
+            "width": 19.859375,
+            "height": 10.265625,
+            "right": 1064.03125,
+            "bottom": 24962.79296875
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24952.52734375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24953.66796875
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1045.53125,
+                "y": 24957.07421875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24958.21484375
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1045.53125,
+                "y": 24961.63671875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1062.65625,
+                "bottom": 24962.77734375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      }
+    },
+    {
+      "id": "chemistry-7",
+      "name": "bond centered on neighbouring atom math axis",
+      "pass": true,
+      "details": {
+        "anchor": {
+          "x": 1026.84375,
+          "y": 24945.65625,
+          "width": 17.328125,
+          "height": 18,
+          "right": 1044.171875,
+          "bottom": 24963.65625
+        },
+        "lines": [
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24952.52734375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24953.66796875
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1045.53125,
+              "y": 24957.07421875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24958.21484375
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24961.63671875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24962.77734375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-7",
+      "name": "bond lines aligned and equally spaced",
+      "pass": true,
+      "details": {
+        "lines": [
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24952.52734375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24953.66796875
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1045.53125,
+              "y": 24957.07421875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24958.21484375
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1045.53125,
+              "y": 24961.63671875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1062.65625,
+              "bottom": 24962.77734375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-7",
+      "name": "bond dash position",
       "pass": true,
       "details": {}
     },
@@ -4795,6 +5917,1218 @@
       "name": "Core enclosures/rows and no private font slots",
       "pass": true,
       "details": {}
+    },
+    {
+      "id": "chemistry-11",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-11",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-11",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 947.96875,
+            "y": 25443.75,
+            "width": 17.328125,
+            "height": 18,
+            "right": 965.296875,
+            "bottom": 25461.75
+          },
+          "following": {
+            "x": 1142.90625,
+            "y": 25443.75,
+            "width": 17.625,
+            "height": 18,
+            "right": 1160.53125,
+            "bottom": 25461.75
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 971.953125,
+            "y": 25447.5078125,
+            "width": 164.296875,
+            "height": 16.59375,
+            "right": 1136.25,
+            "bottom": 25464.1015625
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 973.296875,
+                "y": 25452.9296875,
+                "width": 161.59375,
+                "height": 1.140625,
+                "right": 1134.890625,
+                "bottom": 25454.0703125
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 978.71875,
+                "y": 25457.5546875,
+                "width": 150.78125,
+                "height": 1.140625,
+                "right": 1129.5,
+                "bottom": 25458.6953125
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1128.890625,
+                "y": 25447.5234375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1134.890625,
+                "bottom": 25454.0703125
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 978.71875,
+                "y": 25457.5546875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 984.71875,
+                "bottom": 25464.1015625
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "chemistry-11",
+      "name": "harpoons leave space on both sides",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 947.96875,
+            "y": 25443.75,
+            "width": 17.328125,
+            "height": 18,
+            "right": 965.296875,
+            "bottom": 25461.75
+          },
+          "following": {
+            "x": 1142.90625,
+            "y": 25443.75,
+            "width": 17.625,
+            "height": 18,
+            "right": 1160.53125,
+            "bottom": 25461.75
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 971.953125,
+            "y": 25447.5078125,
+            "width": 164.296875,
+            "height": 16.59375,
+            "right": 1136.25,
+            "bottom": 25464.1015625
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 973.296875,
+                "y": 25452.9296875,
+                "width": 161.59375,
+                "height": 1.140625,
+                "right": 1134.890625,
+                "bottom": 25454.0703125
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 978.71875,
+                "y": 25457.5546875,
+                "width": 150.78125,
+                "height": 1.140625,
+                "right": 1129.5,
+                "bottom": 25458.6953125
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1128.890625,
+                "y": 25447.5234375,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1134.890625,
+                "bottom": 25454.0703125
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 978.71875,
+                "y": 25457.5546875,
+                "width": 6,
+                "height": 6.546875,
+                "right": 984.71875,
+                "bottom": 25464.1015625
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "chemistry-11",
+      "name": "harpoons have distinct direction and lengths",
+      "pass": true,
+      "details": {
+        "strokes": [
+          {
+            "kind": "solid",
+            "box": {
+              "x": 973.296875,
+              "y": 25452.9296875,
+              "width": 161.59375,
+              "height": 1.140625,
+              "right": 1134.890625,
+              "bottom": 25454.0703125
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 978.71875,
+              "y": 25457.5546875,
+              "width": 150.78125,
+              "height": 1.140625,
+              "right": 1129.5,
+              "bottom": 25458.6953125
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-11",
+      "name": "harpoon short line follows source direction",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-12",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-12",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-12",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 947.96875,
+            "y": 25568.203125,
+            "width": 17.328125,
+            "height": 18,
+            "right": 965.296875,
+            "bottom": 25586.203125
+          },
+          "following": {
+            "x": 1142.90625,
+            "y": 25568.203125,
+            "width": 17.625,
+            "height": 18,
+            "right": 1160.53125,
+            "bottom": 25586.203125
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 25571.9609375,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 25588.5546875
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 25577.3828125,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 25578.5234375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 25582.0078125,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 25583.1484375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1058.921875,
+                "y": 25571.9765625,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1064.921875,
+                "bottom": 25578.5234375
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1037.875,
+                "y": 25582.0078125,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1043.875,
+                "bottom": 25588.5546875
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "chemistry-12",
+      "name": "harpoons leave space on both sides",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 947.96875,
+            "y": 25568.203125,
+            "width": 17.328125,
+            "height": 18,
+            "right": 965.296875,
+            "bottom": 25586.203125
+          },
+          "following": {
+            "x": 1142.90625,
+            "y": 25568.203125,
+            "width": 17.625,
+            "height": 18,
+            "right": 1160.53125,
+            "bottom": 25586.203125
+          },
+          "kind": "harpoons",
+          "label": "⇌",
+          "box": {
+            "x": 1036.53125,
+            "y": 25571.9609375,
+            "width": 35.140625,
+            "height": 16.59375,
+            "right": 1071.671875,
+            "bottom": 25588.5546875
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1043.296875,
+                "y": 25577.3828125,
+                "width": 21.625,
+                "height": 1.140625,
+                "right": 1064.921875,
+                "bottom": 25578.5234375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1037.875,
+                "y": 25582.0078125,
+                "width": 32.4375,
+                "height": 1.140625,
+                "right": 1070.3125,
+                "bottom": 25583.1484375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": [
+            {
+              "direction": "right",
+              "box": {
+                "x": 1058.921875,
+                "y": 25571.9765625,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1064.921875,
+                "bottom": 25578.5234375
+              },
+              "clip": "polygon(100% 100%, 0px 0px, 28% 100%)"
+            },
+            {
+              "direction": "left",
+              "box": {
+                "x": 1037.875,
+                "y": 25582.0078125,
+                "width": 6,
+                "height": 6.546875,
+                "right": 1043.875,
+                "bottom": 25588.5546875
+              },
+              "clip": "polygon(0px 0px, 100% 100%, 72% 0px)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "chemistry-12",
+      "name": "harpoons have distinct direction and lengths",
+      "pass": true,
+      "details": {
+        "strokes": [
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1043.296875,
+              "y": 25577.3828125,
+              "width": 21.625,
+              "height": 1.140625,
+              "right": 1064.921875,
+              "bottom": 25578.5234375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1037.875,
+              "y": 25582.0078125,
+              "width": 32.4375,
+              "height": 1.140625,
+              "right": 1070.3125,
+              "bottom": 25583.1484375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-12",
+      "name": "harpoon short line follows source direction",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-13",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-13",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-13",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 988.171875,
+            "y": 25698.5625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1005.5,
+            "bottom": 25716.5625
+          },
+          "following": {
+            "x": 1101.078125,
+            "y": 25698.5625,
+            "width": 19.234375,
+            "height": 18,
+            "right": 1120.3125,
+            "bottom": 25716.5625
+          },
+          "kind": "bond",
+          "label": "~-",
+          "box": {
+            "x": 1005.5,
+            "y": 25707.71484375,
+            "width": 19.859375,
+            "height": 5.703125,
+            "right": 1025.359375,
+            "bottom": 25713.41796875
+          },
+          "strokes": [
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1006.859375,
+                "y": 25707.71484375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1023.984375,
+                "bottom": 25708.85546875
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1006.859375,
+                "y": 25712.26171875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1023.984375,
+                "bottom": 25713.40234375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond centered on neighbouring atom math axis",
+      "pass": true,
+      "details": {
+        "anchor": {
+          "x": 988.171875,
+          "y": 25698.5625,
+          "width": 17.328125,
+          "height": 18,
+          "right": 1005.5,
+          "bottom": 25716.5625
+        },
+        "lines": [
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1006.859375,
+              "y": 25707.71484375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1023.984375,
+              "bottom": 25708.85546875
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1006.859375,
+              "y": 25712.26171875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1023.984375,
+              "bottom": 25713.40234375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond lines aligned and equally spaced",
+      "pass": true,
+      "details": {
+        "lines": [
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1006.859375,
+              "y": 25707.71484375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1023.984375,
+              "bottom": 25708.85546875
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1006.859375,
+              "y": 25712.26171875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1023.984375,
+              "bottom": 25713.40234375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond dash position",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-13",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 988.171875,
+            "y": 25698.5625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1005.5,
+            "bottom": 25716.5625
+          },
+          "following": {
+            "x": 1101.078125,
+            "y": 25698.5625,
+            "width": 19.234375,
+            "height": 18,
+            "right": 1120.3125,
+            "bottom": 25716.5625
+          },
+          "kind": "bond",
+          "label": "~--",
+          "box": {
+            "x": 1042.984375,
+            "y": 25705.43359375,
+            "width": 19.859375,
+            "height": 10.265625,
+            "right": 1062.84375,
+            "bottom": 25715.69921875
+          },
+          "strokes": [
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1044.34375,
+                "y": 25705.43359375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1061.46875,
+                "bottom": 25706.57421875
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1044.34375,
+                "y": 25709.98046875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1061.46875,
+                "bottom": 25711.12109375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1044.34375,
+                "y": 25714.54296875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1061.46875,
+                "bottom": 25715.68359375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond centered on neighbouring atom math axis",
+      "pass": true,
+      "details": {
+        "anchor": {
+          "x": 988.171875,
+          "y": 25698.5625,
+          "width": 17.328125,
+          "height": 18,
+          "right": 1005.5,
+          "bottom": 25716.5625
+        },
+        "lines": [
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1044.34375,
+              "y": 25705.43359375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1061.46875,
+              "bottom": 25706.57421875
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1044.34375,
+              "y": 25709.98046875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1061.46875,
+              "bottom": 25711.12109375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1044.34375,
+              "y": 25714.54296875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1061.46875,
+              "bottom": 25715.68359375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond lines aligned and equally spaced",
+      "pass": true,
+      "details": {
+        "lines": [
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1044.34375,
+              "y": 25705.43359375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1061.46875,
+              "bottom": 25706.57421875
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1044.34375,
+              "y": 25709.98046875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1061.46875,
+              "bottom": 25711.12109375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1044.34375,
+              "y": 25714.54296875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1061.46875,
+              "bottom": 25715.68359375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond dash position",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "chemistry-13",
+      "name": "chemistry strokes painted inside glyph box",
+      "pass": true,
+      "details": {
+        "chem": {
+          "anchor": {
+            "x": 988.171875,
+            "y": 25698.5625,
+            "width": 17.328125,
+            "height": 18,
+            "right": 1005.5,
+            "bottom": 25716.5625
+          },
+          "following": {
+            "x": 1101.078125,
+            "y": 25698.5625,
+            "width": 19.234375,
+            "height": 18,
+            "right": 1120.3125,
+            "bottom": 25716.5625
+          },
+          "kind": "bond",
+          "label": "-~-",
+          "box": {
+            "x": 1081.21875,
+            "y": 25705.43359375,
+            "width": 19.859375,
+            "height": 10.265625,
+            "right": 1101.078125,
+            "bottom": 25715.69921875
+          },
+          "strokes": [
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1082.578125,
+                "y": 25705.43359375,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1099.703125,
+                "bottom": 25706.57421875
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            },
+            {
+              "kind": "dashed",
+              "box": {
+                "x": 1082.578125,
+                "y": 25709.98046875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1099.703125,
+                "bottom": 25711.12109375
+              },
+              "color": "rgba(0, 0, 0, 0)",
+              "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+            },
+            {
+              "kind": "solid",
+              "box": {
+                "x": 1082.578125,
+                "y": 25714.54296875,
+                "width": 17.125,
+                "height": 1.140625,
+                "right": 1099.703125,
+                "bottom": 25715.68359375
+              },
+              "color": "rgb(23, 32, 42)",
+              "background": "none"
+            }
+          ],
+          "heads": []
+        }
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond centered on neighbouring atom math axis",
+      "pass": true,
+      "details": {
+        "anchor": {
+          "x": 988.171875,
+          "y": 25698.5625,
+          "width": 17.328125,
+          "height": 18,
+          "right": 1005.5,
+          "bottom": 25716.5625
+        },
+        "lines": [
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1082.578125,
+              "y": 25705.43359375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1099.703125,
+              "bottom": 25706.57421875
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1082.578125,
+              "y": 25709.98046875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1099.703125,
+              "bottom": 25711.12109375
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1082.578125,
+              "y": 25714.54296875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1099.703125,
+              "bottom": 25715.68359375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond lines aligned and equally spaced",
+      "pass": true,
+      "details": {
+        "lines": [
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1082.578125,
+              "y": 25705.43359375,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1099.703125,
+              "bottom": 25706.57421875
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          },
+          {
+            "kind": "dashed",
+            "box": {
+              "x": 1082.578125,
+              "y": 25709.98046875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1099.703125,
+              "bottom": 25711.12109375
+            },
+            "color": "rgba(0, 0, 0, 0)",
+            "background": "repeating-linear-gradient(to right, rgb(23, 32, 42) 0px, rgb(23, 32, 42) 4.752px, rgba(0, 0, 0, 0) 4.752px, rgba(0, 0, 0, 0) 6.192px)"
+          },
+          {
+            "kind": "solid",
+            "box": {
+              "x": 1082.578125,
+              "y": 25714.54296875,
+              "width": 17.125,
+              "height": 1.140625,
+              "right": 1099.703125,
+              "bottom": 25715.68359375
+            },
+            "color": "rgb(23, 32, 42)",
+            "background": "none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chemistry-13",
+      "name": "bond dash position",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-13",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-13",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-13",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "left",
+          "label": {
+            "x": 964.375,
+            "y": 17925.46875,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1013.15625,
+            "bottom": 17943.46875
+          },
+          "rule": {
+            "x": 1019.375,
+            "y": 17915.65625,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1144.109375,
+            "bottom": 17971.3125
+          },
+          "gap": 6.21875
+        }
+      }
+    },
+    {
+      "id": "proofs-13",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [],
+        "actual": []
+      }
+    },
+    {
+      "id": "proofs-13",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-14",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-14",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-14",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 18056.515625,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 18074.515625
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 18046.703125,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1089.109375,
+            "bottom": 18102.359375
+          },
+          "gap": 6.21875
+        }
+      }
+    },
+    {
+      "id": "proofs-14",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [],
+        "actual": []
+      }
+    },
+    {
+      "id": "proofs-14",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-15",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-15",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-15",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "left",
+          "label": {
+            "x": 964.375,
+            "y": 18183.75,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1013.15625,
+            "bottom": 18201.75
+          },
+          "rule": {
+            "x": 1019.375,
+            "y": 18177.75,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1144.109375,
+            "bottom": 18233.40625
+          },
+          "gap": 6.21875
+        }
+      }
+    },
+    {
+      "id": "proofs-15",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [],
+        "actual": []
+      }
+    },
+    {
+      "id": "proofs-15",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-16",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-16",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "proofs-16",
+      "name": "proof label stays next to inference",
+      "pass": true,
+      "details": {
+        "label": {
+          "side": "right",
+          "label": {
+            "x": 1095.328125,
+            "y": 18314.796875,
+            "width": 48.78125,
+            "height": 18,
+            "right": 1144.109375,
+            "bottom": 18332.796875
+          },
+          "rule": {
+            "x": 964.375,
+            "y": 18308.796875,
+            "width": 124.734375,
+            "height": 55.65625,
+            "right": 1089.109375,
+            "bottom": 18364.453125
+          },
+          "gap": 6.21875
+        }
+      }
+    },
+    {
+      "id": "proofs-16",
+      "name": "proof line count",
+      "pass": true,
+      "details": {
+        "expected": [],
+        "actual": []
+      }
+    },
+    {
+      "id": "proofs-16",
+      "name": "proof line types",
+      "pass": true,
+      "details": {}
     }
   ],
   "groups": [
@@ -4824,8 +7158,8 @@
     },
     {
       "group": "proofs",
-      "formulas": 12,
-      "checks": 62,
+      "formulas": 16,
+      "checks": 88,
       "failed": 0
     },
     {
@@ -4848,8 +7182,8 @@
     },
     {
       "group": "chemistry",
-      "formulas": 10,
-      "checks": 20,
+      "formulas": 13,
+      "checks": 66,
       "failed": 0
     },
     {

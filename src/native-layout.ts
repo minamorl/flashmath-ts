@@ -134,7 +134,7 @@ const entry=(value:string|undefined,index:number,fallback:string)=>{const list=v
 export function nativeTable(n:MathMLNode,defaultSide='right'):MathMLNode {
   const labeled=n.children.some(r=>r.kind==='mlabeledtr');
   const proof=n.attributes.semantics?.includes('bspr_inferenceRule:')??false;
-  if(!labeled&&!n.attributes.rowlines&&!n.attributes.columnlines&&!n.attributes.frame)return n;
+  if(!labeled&&!proof&&!n.attributes.rowlines&&!n.attributes.columnlines&&!n.attributes.frame)return n;
   const side=(n.attributes.side??defaultSide)==='left'?'left':'right';
   const columns=Math.max(0,...n.children.map(r=>r.children.length-(r.kind==='mlabeledtr'?1:0)));
   for(let i=0;i<n.children.length;i++){

@@ -265,16 +265,21 @@ reviewed separately; geometry alone is not evidence of matching glyph design.
 | cancel | 12 | 54 | 0 |
 | frames | 6 | 20 | 0 |
 | tags | 14 | 68 | 0 |
-| proofs | 12 | 62 | 0 |
+| proofs | 16 | 88 | 0 |
 | overlap | 12 | 48 | 0 |
 | variants | 24 | 48 | 0 |
 | physics | 8 | 16 | 0 |
-| chemistry | 10 | 20 | 0 |
+| chemistry | 13 | 66 | 0 |
 | core | 10 | 22 | 0 |
 
-Browser: Chrome/153.0.8010.36. All 195 SSR/string pairs have identical measured geometry.
+Browser: Chrome/153.0.8010.36. All 202 SSR/string pairs have identical measured geometry.
 
 <!-- /measured-results -->
+
+
+
+
+
 
 ### Visual review of the captured panels
 

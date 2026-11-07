@@ -6,11 +6,7 @@ import subject from '../bench/flashmath/adapter.mjs';
 import oracle from '../conformance/mathjax.mjs';
 import {normalizeMathML} from '../conformance/normalize.mjs';
 
-export const warningCases=[
- [String.raw`\unicode[Arial]{x41}`,{packages:['base','unicode']}],
- [String.raw`\href{}{x}`,{packages:['base','html']}],
- [String.raw`<tex-html><label for="field" class="label" tabindex="0">Name</label></tex-html>`,{packages:['base','texhtml'],texOptions:{allowTexHTML:true}}],
-];
+import {warningCases} from '../bench/native-render/react-cases.mjs';
 test('React SSR emits no invalid property or empty href warnings',()=>{
  const errors=[],original=console.error;console.error=(...args)=>errors.push(args);
  try{
