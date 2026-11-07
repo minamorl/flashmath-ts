@@ -1,0 +1,25 @@
+{
+  "reviewer": "release implementation agent; independent root verifier still required",
+  "method": "Directly opened the listed regenerated screenshots with view_image; automated CDP measured all 195 formulas and captured every group",
+  "screen_run": "Chrome/153.0.8010.36; opened after.html; keyboard switched React SSR / toMathMLString / React SSR; geometry equivalent",
+  "pixelParity": "NOT ACHIEVED",
+  "reviewed": [
+    {
+      "file": "after-variants-1.png",
+      "sha256": "bc30e281aa9bab7525e2e6e638d10c181349fd63fe12de9c21a8b302c21df02f"
+    },
+    {
+      "file": "after-tags-1.png",
+      "sha256": "c58f48e9bba4156ea6fcb010f7c8dbfda1ba4a2efc88df9f64f3e38d44d5c6fa"
+    },
+    {
+      "file": "after-proofs-1.png",
+      "sha256": "fe584cb9887cd7b38b6bc549aa1eabc1899e026896e34ad5dc6d34e4a399bad8"
+    }
+  ],
+  "notes": {
+    "variants": "mathcal/mathscr capitals now use visibly distinct original NewCM faces; native oldstyle digits and fallback metrics still differ",
+    "tags": "left equation tag tags-10 stays on the left; other tags stay outside equation rows",
+    "proofs": "solid/dashed/noLine and nested upward rules remain visible with attached labels; native vertical gaps differ"
+  }
+}

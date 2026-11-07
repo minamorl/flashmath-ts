@@ -1,0 +1,24 @@
+{
+  "source": "@mathjax/mathjax-newcm-font",
+  "version": "4.1.3",
+  "license": "Apache-2.0",
+  "modifications": "none; original WOFF2 bytes",
+  "files": [
+    {
+      "file": "mjx-ncm-c.woff2",
+      "sha256": "bfe4cd45950bd79704ad58fa97edb3d716c7d14a8a493e41ae3f537c43ada90d"
+    },
+    {
+      "file": "mjx-ncm-cb.woff2",
+      "sha256": "68ebec1310a6cbb92b4a968ea63e89353b06e3d06423e6073fd7e7aa0d528605"
+    },
+    {
+      "file": "mjx-ncm-s.woff2",
+      "sha256": "d35959160704891ed2e2bbe40e8bf35cfbbfa06ba3edfce35ffc957604eea628"
+    },
+    {
+      "file": "mjx-ncm-sb.woff2",
+      "sha256": "49368a11a3abdb38d61e5eb23263bc2cca85473d6bd59ee4d9790ca1d981a6bb"
+    }
+  ]
+}

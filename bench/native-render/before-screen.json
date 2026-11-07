@@ -1,0 +1,5302 @@
+{
+  "stage": "before",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.36",
+    "revision": "@507c6ee3e2f3b2ca0e660547e5b9ea4820c67f4c",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.10"
+  },
+  "count": 195,
+  "ssrStringParity": true,
+  "exceptions": [],
+  "screenshots": [
+    "before-enclose-1.png",
+    "before-enclose-2.png",
+    "before-enclose-3.png",
+    "before-enclose-4.png",
+    "before-enclose-5.png",
+    "before-enclose-6.png",
+    "before-enclose-7.png",
+    "before-cancel-1.png",
+    "before-cancel-2.png",
+    "before-frames-1.png",
+    "before-tags-1.png",
+    "before-tags-2.png",
+    "before-proofs-1.png",
+    "before-proofs-2.png",
+    "before-overlap-1.png",
+    "before-variants-1.png",
+    "before-variants-2.png",
+    "before-physics-1.png",
+    "before-chemistry-1.png",
+    "before-core-1.png"
+  ],
+  "measurements": [
+    {
+      "id": "enclose-1",
+      "native": {
+        "x": 1045.765625,
+        "y": 335.578125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 348.578125
+      },
+      "reference": {
+        "x": 362.3125,
+        "y": 331.671875,
+        "width": 16.859375,
+        "height": 21.21875,
+        "right": 379.171875,
+        "bottom": 352.890625
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-2",
+      "native": {
+        "x": 1000.5625,
+        "y": 457.578125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 476.578125
+      },
+      "reference": {
+        "x": 314.203125,
+        "y": 449.40625,
+        "width": 113.078125,
+        "height": 30.78125,
+        "right": 427.28125,
+        "bottom": 480.1875
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-3",
+      "native": {
+        "x": 1037.390625,
+        "y": 567.609375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 629.5625
+      },
+      "reference": {
+        "x": 349.390625,
+        "y": 559.265625,
+        "width": 42.703125,
+        "height": 78.65625,
+        "right": 392.09375,
+        "bottom": 637.921875
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-4",
+      "native": {
+        "x": 1045.765625,
+        "y": 723.609375,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 736.609375
+      },
+      "reference": {
+        "x": 358.375,
+        "y": 727.578125,
+        "width": 24.734375,
+        "height": 13.34375,
+        "right": 383.109375,
+        "bottom": 740.921875
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-5",
+      "native": {
+        "x": 1000.5625,
+        "y": 845.609375,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 864.609375
+      },
+      "reference": {
+        "x": 310.265625,
+        "y": 845.140625,
+        "width": 120.96875,
+        "height": 22.90625,
+        "right": 431.234375,
+        "bottom": 868.046875
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-6",
+      "native": {
+        "x": 1037.390625,
+        "y": 951.703125,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 1013.65625
+      },
+      "reference": {
+        "x": 345.46875,
+        "y": 947.296875,
+        "width": 50.5625,
+        "height": 70.78125,
+        "right": 396.03125,
+        "bottom": 1018.078125
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-7",
+      "native": {
+        "x": 1045.765625,
+        "y": 1103.765625,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 1116.765625
+      },
+      "reference": {
+        "x": 362.3125,
+        "y": 1107.140625,
+        "width": 16.859375,
+        "height": 21.21875,
+        "right": 379.171875,
+        "bottom": 1128.359375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-8",
+      "native": {
+        "x": 1000.5625,
+        "y": 1225.765625,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 1244.765625
+      },
+      "reference": {
+        "x": 314.203125,
+        "y": 1223.640625,
+        "width": 113.078125,
+        "height": 30.78125,
+        "right": 427.28125,
+        "bottom": 1254.421875
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-9",
+      "native": {
+        "x": 1037.390625,
+        "y": 1335.796875,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 1397.75
+      },
+      "reference": {
+        "x": 349.390625,
+        "y": 1327.453125,
+        "width": 42.703125,
+        "height": 78.65625,
+        "right": 392.09375,
+        "bottom": 1406.109375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-10",
+      "native": {
+        "x": 1045.765625,
+        "y": 1491.796875,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 1504.796875
+      },
+      "reference": {
+        "x": 358.375,
+        "y": 1495.765625,
+        "width": 24.734375,
+        "height": 13.34375,
+        "right": 383.109375,
+        "bottom": 1509.109375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-11",
+      "native": {
+        "x": 1000.5625,
+        "y": 1613.796875,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 1632.796875
+      },
+      "reference": {
+        "x": 310.265625,
+        "y": 1613.328125,
+        "width": 120.96875,
+        "height": 22.90625,
+        "right": 431.234375,
+        "bottom": 1636.234375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-12",
+      "native": {
+        "x": 1037.390625,
+        "y": 1719.890625,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 1781.84375
+      },
+      "reference": {
+        "x": 345.46875,
+        "y": 1715.484375,
+        "width": 50.5625,
+        "height": 70.78125,
+        "right": 396.03125,
+        "bottom": 1786.265625
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-13",
+      "native": {
+        "x": 1045.765625,
+        "y": 1871.953125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 1884.953125
+      },
+      "reference": {
+        "x": 358.375,
+        "y": 1868.046875,
+        "width": 24.734375,
+        "height": 21.21875,
+        "right": 383.109375,
+        "bottom": 1889.265625
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-14",
+      "native": {
+        "x": 1000.5625,
+        "y": 1993.953125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 2012.953125
+      },
+      "reference": {
+        "x": 310.265625,
+        "y": 1985.78125,
+        "width": 120.96875,
+        "height": 30.78125,
+        "right": 431.234375,
+        "bottom": 2016.5625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-15",
+      "native": {
+        "x": 1037.390625,
+        "y": 2103.984375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 2165.9375
+      },
+      "reference": {
+        "x": 345.46875,
+        "y": 2095.640625,
+        "width": 50.5625,
+        "height": 78.65625,
+        "right": 396.03125,
+        "bottom": 2174.296875
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-16",
+      "native": {
+        "x": 1045.765625,
+        "y": 2259.984375,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 2272.984375
+      },
+      "reference": {
+        "x": 358.375,
+        "y": 2263.359375,
+        "width": 24.734375,
+        "height": 21.21875,
+        "right": 383.109375,
+        "bottom": 2284.578125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-17",
+      "native": {
+        "x": 1000.5625,
+        "y": 2381.984375,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 2400.984375
+      },
+      "reference": {
+        "x": 310.265625,
+        "y": 2379.859375,
+        "width": 120.96875,
+        "height": 30.78125,
+        "right": 431.234375,
+        "bottom": 2410.640625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-18",
+      "native": {
+        "x": 1037.390625,
+        "y": 2492.015625,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 2553.96875
+      },
+      "reference": {
+        "x": 345.46875,
+        "y": 2483.671875,
+        "width": 50.5625,
+        "height": 78.65625,
+        "right": 396.03125,
+        "bottom": 2562.328125
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-19",
+      "native": {
+        "x": 1045.765625,
+        "y": 2648.015625,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 2661.015625
+      },
+      "reference": {
+        "x": 354.453125,
+        "y": 2643.515625,
+        "width": 32.59375,
+        "height": 29.09375,
+        "right": 387.046875,
+        "bottom": 2672.609375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-20",
+      "native": {
+        "x": 1000.5625,
+        "y": 2770.015625,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 2789.015625
+      },
+      "reference": {
+        "x": 306.328125,
+        "y": 2760.1875,
+        "width": 128.84375,
+        "height": 38.640625,
+        "right": 435.171875,
+        "bottom": 2798.828125
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-21",
+      "native": {
+        "x": 1037.390625,
+        "y": 2883.984375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 2945.9375
+      },
+      "reference": {
+        "x": 341.53125,
+        "y": 2871.703125,
+        "width": 58.4375,
+        "height": 86.53125,
+        "right": 399.96875,
+        "bottom": 2958.234375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-22",
+      "native": {
+        "x": 1045.765625,
+        "y": 3043.921875,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 3056.921875
+      },
+      "reference": {
+        "x": 354.453125,
+        "y": 3039.421875,
+        "width": 32.59375,
+        "height": 29.09375,
+        "right": 387.046875,
+        "bottom": 3068.515625
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-23",
+      "native": {
+        "x": 1000.5625,
+        "y": 3165.921875,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 3184.921875
+      },
+      "reference": {
+        "x": 306.328125,
+        "y": 3156.09375,
+        "width": 128.84375,
+        "height": 38.640625,
+        "right": 435.171875,
+        "bottom": 3194.734375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-24",
+      "native": {
+        "x": 1037.390625,
+        "y": 3279.890625,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 3341.84375
+      },
+      "reference": {
+        "x": 341.53125,
+        "y": 3267.609375,
+        "width": 58.4375,
+        "height": 86.53125,
+        "right": 399.96875,
+        "bottom": 3354.140625
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-25",
+      "native": {
+        "x": 1045.765625,
+        "y": 3439.828125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 3452.828125
+      },
+      "reference": {
+        "x": 354.453125,
+        "y": 3435.328125,
+        "width": 32.59375,
+        "height": 29.09375,
+        "right": 387.046875,
+        "bottom": 3464.421875
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-26",
+      "native": {
+        "x": 1000.5625,
+        "y": 3561.828125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 3580.828125
+      },
+      "reference": {
+        "x": 306.328125,
+        "y": 3552,
+        "width": 128.84375,
+        "height": 38.640625,
+        "right": 435.171875,
+        "bottom": 3590.640625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-27",
+      "native": {
+        "x": 1037.390625,
+        "y": 3675.796875,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 3737.75
+      },
+      "reference": {
+        "x": 341.53125,
+        "y": 3663.515625,
+        "width": 58.4375,
+        "height": 86.53125,
+        "right": 399.96875,
+        "bottom": 3750.046875
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-28",
+      "native": {
+        "x": 1045.765625,
+        "y": 3835.734375,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 3848.734375
+      },
+      "reference": {
+        "x": 352.984375,
+        "y": 3831.828125,
+        "width": 35.53125,
+        "height": 27.109375,
+        "right": 388.515625,
+        "bottom": 3858.9375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-29",
+      "native": {
+        "x": 1000.5625,
+        "y": 3957.734375,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 3976.734375
+      },
+      "reference": {
+        "x": 304.859375,
+        "y": 3948.890625,
+        "width": 131.765625,
+        "height": 36.671875,
+        "right": 436.625,
+        "bottom": 3985.5625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-30",
+      "native": {
+        "x": 1037.390625,
+        "y": 4070.71875,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 4132.671875
+      },
+      "reference": {
+        "x": 340.046875,
+        "y": 4059.421875,
+        "width": 61.390625,
+        "height": 84.5625,
+        "right": 401.4375,
+        "bottom": 4143.984375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-31",
+      "native": {
+        "x": 1045.765625,
+        "y": 4229.671875,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 4242.671875
+      },
+      "reference": {
+        "x": 349.75,
+        "y": 4220.40625,
+        "width": 42,
+        "height": 31.25,
+        "right": 391.75,
+        "bottom": 4251.65625
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-32",
+      "native": {
+        "x": 1000.5625,
+        "y": 4351.671875,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 4370.671875
+      },
+      "reference": {
+        "x": 299.171875,
+        "y": 4341.734375,
+        "width": 143.15625,
+        "height": 37.140625,
+        "right": 442.328125,
+        "bottom": 4378.875
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-33",
+      "native": {
+        "x": 1037.390625,
+        "y": 4467.484375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 4529.4375
+      },
+      "reference": {
+        "x": 334.359375,
+        "y": 4453.359375,
+        "width": 72.78125,
+        "height": 90.21875,
+        "right": 407.140625,
+        "bottom": 4543.578125
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-34",
+      "native": {
+        "x": 1045.765625,
+        "y": 4629.265625,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 4642.265625
+      },
+      "reference": {
+        "x": 355.4375,
+        "y": 4627.34375,
+        "width": 30.625,
+        "height": 24.171875,
+        "right": 386.0625,
+        "bottom": 4651.515625
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-35",
+      "native": {
+        "x": 1000.5625,
+        "y": 4751.265625,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 4770.265625
+      },
+      "reference": {
+        "x": 307.3125,
+        "y": 4744.734375,
+        "width": 126.859375,
+        "height": 33.71875,
+        "right": 434.171875,
+        "bottom": 4778.453125
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-36",
+      "native": {
+        "x": 1037.390625,
+        "y": 4862.765625,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 4924.71875
+      },
+      "reference": {
+        "x": 342.515625,
+        "y": 4852.953125,
+        "width": 56.46875,
+        "height": 81.59375,
+        "right": 398.984375,
+        "bottom": 4934.546875
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-37",
+      "native": {
+        "x": 1045.765625,
+        "y": 5020.234375,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 5033.234375
+      },
+      "reference": {
+        "x": 354.453125,
+        "y": 5015.734375,
+        "width": 32.59375,
+        "height": 29.09375,
+        "right": 387.046875,
+        "bottom": 5044.828125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-38",
+      "native": {
+        "x": 1000.5625,
+        "y": 5142.234375,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 5161.234375
+      },
+      "reference": {
+        "x": 306.328125,
+        "y": 5132.40625,
+        "width": 128.84375,
+        "height": 38.640625,
+        "right": 435.171875,
+        "bottom": 5171.046875
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-39",
+      "native": {
+        "x": 1037.390625,
+        "y": 5256.203125,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 5318.15625
+      },
+      "reference": {
+        "x": 341.53125,
+        "y": 5243.921875,
+        "width": 58.4375,
+        "height": 86.53125,
+        "right": 399.96875,
+        "bottom": 5330.453125
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-40",
+      "native": {
+        "x": 1045.765625,
+        "y": 5416.140625,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 5429.140625
+      },
+      "reference": {
+        "x": 354.453125,
+        "y": 5411.640625,
+        "width": 32.59375,
+        "height": 29.09375,
+        "right": 387.046875,
+        "bottom": 5440.734375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-41",
+      "native": {
+        "x": 1000.5625,
+        "y": 5538.140625,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 5557.140625
+      },
+      "reference": {
+        "x": 306.328125,
+        "y": 5528.3125,
+        "width": 128.84375,
+        "height": 38.640625,
+        "right": 435.171875,
+        "bottom": 5566.953125
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-42",
+      "native": {
+        "x": 1037.390625,
+        "y": 5652.109375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 5714.0625
+      },
+      "reference": {
+        "x": 341.53125,
+        "y": 5639.828125,
+        "width": 58.4375,
+        "height": 86.53125,
+        "right": 399.96875,
+        "bottom": 5726.359375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-43",
+      "native": {
+        "x": 1045.765625,
+        "y": 5812.046875,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 5825.046875
+      },
+      "reference": {
+        "x": 356.421875,
+        "y": 5816.015625,
+        "width": 28.65625,
+        "height": 13.34375,
+        "right": 385.078125,
+        "bottom": 5829.359375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-44",
+      "native": {
+        "x": 1000.5625,
+        "y": 5934.046875,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 5953.046875
+      },
+      "reference": {
+        "x": 308.3125,
+        "y": 5933.578125,
+        "width": 124.875,
+        "height": 22.90625,
+        "right": 433.1875,
+        "bottom": 5956.484375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-45",
+      "native": {
+        "x": 1037.390625,
+        "y": 6040.140625,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 6102.09375
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 6035.734375,
+        "width": 54.484375,
+        "height": 70.78125,
+        "right": 397.984375,
+        "bottom": 6106.515625
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-46",
+      "native": {
+        "x": 1045.765625,
+        "y": 6192.203125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 6205.203125
+      },
+      "reference": {
+        "x": 362.3125,
+        "y": 6190.265625,
+        "width": 16.859375,
+        "height": 25.140625,
+        "right": 379.171875,
+        "bottom": 6215.40625
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-47",
+      "native": {
+        "x": 1000.5625,
+        "y": 6314.203125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 6333.203125
+      },
+      "reference": {
+        "x": 314.203125,
+        "y": 6307.15625,
+        "width": 113.078125,
+        "height": 34.703125,
+        "right": 427.28125,
+        "bottom": 6341.859375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-48",
+      "native": {
+        "x": 1037.390625,
+        "y": 6426.203125,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 6488.15625
+      },
+      "reference": {
+        "x": 349.390625,
+        "y": 6415.890625,
+        "width": 42.703125,
+        "height": 82.578125,
+        "right": 392.09375,
+        "bottom": 6498.46875
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-49",
+      "native": {
+        "x": 1045.765625,
+        "y": 6584.15625,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 6597.15625
+      },
+      "reference": {
+        "x": 362.3125,
+        "y": 6576.265625,
+        "width": 16.859375,
+        "height": 31.09375,
+        "right": 379.171875,
+        "bottom": 6607.359375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-50",
+      "native": {
+        "x": 1000.5625,
+        "y": 6706.15625,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 6725.15625
+      },
+      "reference": {
+        "x": 314.203125,
+        "y": 6695.328125,
+        "width": 113.078125,
+        "height": 40.65625,
+        "right": 427.28125,
+        "bottom": 6735.984375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-51",
+      "native": {
+        "x": 1037.390625,
+        "y": 6821.125,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 6883.078125
+      },
+      "reference": {
+        "x": 349.390625,
+        "y": 6807.84375,
+        "width": 42.703125,
+        "height": 88.53125,
+        "right": 392.09375,
+        "bottom": 6896.375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-52",
+      "native": {
+        "x": 1045.765625,
+        "y": 6982.0625,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 6995.0625
+      },
+      "reference": {
+        "x": 362.3125,
+        "y": 6977.546875,
+        "width": 16.859375,
+        "height": 31.09375,
+        "right": 379.171875,
+        "bottom": 7008.640625
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-53",
+      "native": {
+        "x": 1000.5625,
+        "y": 7104.0625,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 7123.0625
+      },
+      "reference": {
+        "x": 314.203125,
+        "y": 7094.046875,
+        "width": 113.078125,
+        "height": 40.65625,
+        "right": 427.28125,
+        "bottom": 7134.703125
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-54",
+      "native": {
+        "x": 1037.390625,
+        "y": 7219.03125,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 7280.984375
+      },
+      "reference": {
+        "x": 349.390625,
+        "y": 7205.75,
+        "width": 42.703125,
+        "height": 88.53125,
+        "right": 392.09375,
+        "bottom": 7294.28125
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-55",
+      "native": {
+        "x": 1045.765625,
+        "y": 7379.96875,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 7392.96875
+      },
+      "reference": {
+        "x": 353.4375,
+        "y": 7383.9375,
+        "width": 34.609375,
+        "height": 13.34375,
+        "right": 388.046875,
+        "bottom": 7397.28125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-56",
+      "native": {
+        "x": 1000.5625,
+        "y": 7501.96875,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 7520.96875
+      },
+      "reference": {
+        "x": 305.328125,
+        "y": 7501.5,
+        "width": 130.828125,
+        "height": 22.90625,
+        "right": 436.15625,
+        "bottom": 7524.40625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-57",
+      "native": {
+        "x": 1037.390625,
+        "y": 7608.0625,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 7670.015625
+      },
+      "reference": {
+        "x": 340.515625,
+        "y": 7603.65625,
+        "width": 60.453125,
+        "height": 70.78125,
+        "right": 400.96875,
+        "bottom": 7674.4375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-58",
+      "native": {
+        "x": 1045.765625,
+        "y": 7760.125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 7773.125
+      },
+      "reference": {
+        "x": 353.4375,
+        "y": 7764.09375,
+        "width": 34.609375,
+        "height": 13.34375,
+        "right": 388.046875,
+        "bottom": 7777.4375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-59",
+      "native": {
+        "x": 1000.5625,
+        "y": 7882.125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 7901.125
+      },
+      "reference": {
+        "x": 305.328125,
+        "y": 7881.65625,
+        "width": 130.828125,
+        "height": 22.90625,
+        "right": 436.15625,
+        "bottom": 7904.5625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-60",
+      "native": {
+        "x": 1037.390625,
+        "y": 7988.21875,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 8050.171875
+      },
+      "reference": {
+        "x": 340.515625,
+        "y": 7983.8125,
+        "width": 60.453125,
+        "height": 70.78125,
+        "right": 400.96875,
+        "bottom": 8054.59375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-61",
+      "native": {
+        "x": 1045.765625,
+        "y": 8140.28125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 8153.28125
+      },
+      "reference": {
+        "x": 362.3125,
+        "y": 8129.796875,
+        "width": 16.859375,
+        "height": 37.0625,
+        "right": 379.171875,
+        "bottom": 8166.859375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-62",
+      "native": {
+        "x": 1000.5625,
+        "y": 8262.28125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 8281.28125
+      },
+      "reference": {
+        "x": 314.203125,
+        "y": 8248.46875,
+        "width": 113.078125,
+        "height": 46.609375,
+        "right": 427.28125,
+        "bottom": 8295.078125
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-63",
+      "native": {
+        "x": 1037.390625,
+        "y": 8380.234375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 8442.1875
+      },
+      "reference": {
+        "x": 349.390625,
+        "y": 8363.96875,
+        "width": 42.703125,
+        "height": 94.484375,
+        "right": 392.09375,
+        "bottom": 8458.453125
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-64",
+      "native": {
+        "x": 1045.765625,
+        "y": 8544.140625,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 8557.140625
+      },
+      "reference": {
+        "x": 350.46875,
+        "y": 8548.109375,
+        "width": 40.5625,
+        "height": 13.34375,
+        "right": 391.03125,
+        "bottom": 8561.453125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-65",
+      "native": {
+        "x": 1000.5625,
+        "y": 8666.140625,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 8685.140625
+      },
+      "reference": {
+        "x": 302.34375,
+        "y": 8665.671875,
+        "width": 136.796875,
+        "height": 22.90625,
+        "right": 439.140625,
+        "bottom": 8688.578125
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-66",
+      "native": {
+        "x": 1037.390625,
+        "y": 8772.234375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 8834.1875
+      },
+      "reference": {
+        "x": 337.546875,
+        "y": 8767.828125,
+        "width": 66.40625,
+        "height": 70.78125,
+        "right": 403.953125,
+        "bottom": 8838.609375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-67",
+      "native": {
+        "x": 1045.765625,
+        "y": 8924.296875,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 8937.296875
+      },
+      "reference": {
+        "x": 354.578125,
+        "y": 8922.125,
+        "width": 32.34375,
+        "height": 25.609375,
+        "right": 386.921875,
+        "bottom": 8947.734375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-68",
+      "native": {
+        "x": 1000.5625,
+        "y": 9046.296875,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 9065.296875
+      },
+      "reference": {
+        "x": 304.515625,
+        "y": 9037.296875,
+        "width": 132.453125,
+        "height": 37.328125,
+        "right": 436.96875,
+        "bottom": 9074.625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-69",
+      "native": {
+        "x": 1037.390625,
+        "y": 9160.859375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 9222.8125
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 9147.984375,
+        "width": 54.484375,
+        "height": 87.703125,
+        "right": 397.984375,
+        "bottom": 9235.6875
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-70",
+      "native": {
+        "x": 1045.765625,
+        "y": 9321.375,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 9334.375
+      },
+      "reference": {
+        "x": 354.578125,
+        "y": 9319.203125,
+        "width": 32.34375,
+        "height": 25.609375,
+        "right": 386.921875,
+        "bottom": 9344.8125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-71",
+      "native": {
+        "x": 1000.5625,
+        "y": 9443.375,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 9462.375
+      },
+      "reference": {
+        "x": 304.515625,
+        "y": 9434.375,
+        "width": 132.453125,
+        "height": 37.328125,
+        "right": 436.96875,
+        "bottom": 9471.703125
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-72",
+      "native": {
+        "x": 1037.390625,
+        "y": 9557.9375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 9619.890625
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 9545.0625,
+        "width": 54.484375,
+        "height": 87.703125,
+        "right": 397.984375,
+        "bottom": 9632.765625
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-73",
+      "native": {
+        "x": 1045.765625,
+        "y": 9718.453125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 9731.453125
+      },
+      "reference": {
+        "x": 354.578125,
+        "y": 9716.28125,
+        "width": 32.34375,
+        "height": 25.609375,
+        "right": 386.921875,
+        "bottom": 9741.890625
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-74",
+      "native": {
+        "x": 1000.5625,
+        "y": 9840.453125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 9859.453125
+      },
+      "reference": {
+        "x": 304.515625,
+        "y": 9831.453125,
+        "width": 132.453125,
+        "height": 37.328125,
+        "right": 436.96875,
+        "bottom": 9868.78125
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-75",
+      "native": {
+        "x": 1037.390625,
+        "y": 9955.015625,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 10016.96875
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 9942.140625,
+        "width": 54.484375,
+        "height": 87.703125,
+        "right": 397.984375,
+        "bottom": 10029.84375
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-76",
+      "native": {
+        "x": 1045.765625,
+        "y": 10115.53125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 10128.53125
+      },
+      "reference": {
+        "x": 354.578125,
+        "y": 10113.359375,
+        "width": 32.34375,
+        "height": 25.609375,
+        "right": 386.921875,
+        "bottom": 10138.96875
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-77",
+      "native": {
+        "x": 1000.5625,
+        "y": 10237.53125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 10256.53125
+      },
+      "reference": {
+        "x": 304.515625,
+        "y": 10228.53125,
+        "width": 132.453125,
+        "height": 37.328125,
+        "right": 436.96875,
+        "bottom": 10265.859375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-78",
+      "native": {
+        "x": 1037.390625,
+        "y": 10352.09375,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 10414.046875
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 10339.21875,
+        "width": 54.484375,
+        "height": 87.703125,
+        "right": 397.984375,
+        "bottom": 10426.921875
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-79",
+      "native": {
+        "x": 1045.765625,
+        "y": 10512.609375,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 10525.609375
+      },
+      "reference": {
+        "x": 354.578125,
+        "y": 10510.4375,
+        "width": 32.34375,
+        "height": 25.609375,
+        "right": 386.921875,
+        "bottom": 10536.046875
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-80",
+      "native": {
+        "x": 1000.5625,
+        "y": 10634.609375,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 10653.609375
+      },
+      "reference": {
+        "x": 304.515625,
+        "y": 10625.609375,
+        "width": 132.453125,
+        "height": 37.328125,
+        "right": 436.96875,
+        "bottom": 10662.9375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-81",
+      "native": {
+        "x": 1037.390625,
+        "y": 10749.171875,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 10811.125
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 10736.296875,
+        "width": 54.484375,
+        "height": 87.703125,
+        "right": 397.984375,
+        "bottom": 10824
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-82",
+      "native": {
+        "x": 1045.765625,
+        "y": 10909.6875,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 10922.6875
+      },
+      "reference": {
+        "x": 354.578125,
+        "y": 10907.515625,
+        "width": 32.34375,
+        "height": 25.609375,
+        "right": 386.921875,
+        "bottom": 10933.125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-83",
+      "native": {
+        "x": 1000.5625,
+        "y": 11031.6875,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 11050.6875
+      },
+      "reference": {
+        "x": 304.515625,
+        "y": 11022.6875,
+        "width": 132.453125,
+        "height": 37.328125,
+        "right": 436.96875,
+        "bottom": 11060.015625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-84",
+      "native": {
+        "x": 1037.390625,
+        "y": 11146.25,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 11208.203125
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 11133.375,
+        "width": 54.484375,
+        "height": 87.703125,
+        "right": 397.984375,
+        "bottom": 11221.078125
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-85",
+      "native": {
+        "x": 1045.765625,
+        "y": 11306.765625,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 11319.765625
+      },
+      "reference": {
+        "x": 354.578125,
+        "y": 11304.59375,
+        "width": 32.34375,
+        "height": 25.609375,
+        "right": 386.921875,
+        "bottom": 11330.203125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-86",
+      "native": {
+        "x": 1000.5625,
+        "y": 11428.765625,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 11447.765625
+      },
+      "reference": {
+        "x": 304.515625,
+        "y": 11419.765625,
+        "width": 132.453125,
+        "height": 37.328125,
+        "right": 436.96875,
+        "bottom": 11457.09375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "enclose-87",
+      "native": {
+        "x": 1037.390625,
+        "y": 11543.328125,
+        "width": 33.703125,
+        "height": 61.953125,
+        "right": 1071.09375,
+        "bottom": 11605.28125
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 11530.453125,
+        "width": 54.484375,
+        "height": 87.703125,
+        "right": 397.984375,
+        "bottom": 11618.15625
+      },
+      "text": "x2y0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-1",
+      "native": {
+        "x": 1045.765625,
+        "y": 11763.84375,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 11776.84375
+      },
+      "reference": {
+        "x": 354.453125,
+        "y": 11759.34375,
+        "width": 32.59375,
+        "height": 29.09375,
+        "right": 387.046875,
+        "bottom": 11788.4375
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-2",
+      "native": {
+        "x": 1000.5625,
+        "y": 11885.84375,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 11904.84375
+      },
+      "reference": {
+        "x": 306.328125,
+        "y": 11876.015625,
+        "width": 128.84375,
+        "height": 38.640625,
+        "right": 435.171875,
+        "bottom": 11914.65625
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-3",
+      "native": {
+        "x": 1043.984375,
+        "y": 12000.75,
+        "width": 20.53125,
+        "height": 48.515625,
+        "right": 1064.515625,
+        "bottom": 12049.265625
+      },
+      "reference": {
+        "x": 347.953125,
+        "y": 11987.53125,
+        "width": 45.578125,
+        "height": 74.96875,
+        "right": 393.53125,
+        "bottom": 12062.5
+      },
+      "text": "xy",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-4",
+      "native": {
+        "x": 1045.765625,
+        "y": 12148.1875,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 12161.1875
+      },
+      "reference": {
+        "x": 354.453125,
+        "y": 12143.6875,
+        "width": 32.59375,
+        "height": 29.09375,
+        "right": 387.046875,
+        "bottom": 12172.78125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-5",
+      "native": {
+        "x": 1000.5625,
+        "y": 12270.1875,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 12289.1875
+      },
+      "reference": {
+        "x": 306.328125,
+        "y": 12260.359375,
+        "width": 128.84375,
+        "height": 38.640625,
+        "right": 435.171875,
+        "bottom": 12299
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-6",
+      "native": {
+        "x": 1043.984375,
+        "y": 12385.09375,
+        "width": 20.53125,
+        "height": 48.515625,
+        "right": 1064.515625,
+        "bottom": 12433.609375
+      },
+      "reference": {
+        "x": 347.953125,
+        "y": 12371.875,
+        "width": 45.578125,
+        "height": 74.96875,
+        "right": 393.53125,
+        "bottom": 12446.84375
+      },
+      "text": "xy",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-7",
+      "native": {
+        "x": 1045.765625,
+        "y": 12532.53125,
+        "width": 16.953125,
+        "height": 13,
+        "right": 1062.71875,
+        "bottom": 12545.53125
+      },
+      "reference": {
+        "x": 354.453125,
+        "y": 12528.03125,
+        "width": 32.59375,
+        "height": 29.09375,
+        "right": 387.046875,
+        "bottom": 12557.125
+      },
+      "text": "x",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-8",
+      "native": {
+        "x": 1000.5625,
+        "y": 12654.53125,
+        "width": 107.359375,
+        "height": 19,
+        "right": 1107.921875,
+        "bottom": 12673.53125
+      },
+      "reference": {
+        "x": 306.328125,
+        "y": 12644.703125,
+        "width": 128.84375,
+        "height": 38.640625,
+        "right": 435.171875,
+        "bottom": 12683.34375
+      },
+      "text": "a+b+c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-9",
+      "native": {
+        "x": 1043.984375,
+        "y": 12769.4375,
+        "width": 20.53125,
+        "height": 48.515625,
+        "right": 1064.515625,
+        "bottom": 12817.953125
+      },
+      "reference": {
+        "x": 347.953125,
+        "y": 12756.21875,
+        "width": 45.578125,
+        "height": 74.96875,
+        "right": 393.53125,
+        "bottom": 12831.1875
+      },
+      "text": "xy",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-10",
+      "native": {
+        "x": 1039.1875,
+        "y": 12916.875,
+        "width": 30.125,
+        "height": 13,
+        "right": 1069.3125,
+        "bottom": 12929.875
+      },
+      "reference": {
+        "x": 348.140625,
+        "y": 12905.796875,
+        "width": 45.21875,
+        "height": 34.59375,
+        "right": 393.359375,
+        "bottom": 12940.390625
+      },
+      "text": "x0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-11",
+      "native": {
+        "x": 993.984375,
+        "y": 13038.875,
+        "width": 120.53125,
+        "height": 19,
+        "right": 1114.515625,
+        "bottom": 13057.875
+      },
+      "reference": {
+        "x": 298.078125,
+        "y": 13025.75,
+        "width": 145.328125,
+        "height": 45.25,
+        "right": 443.40625,
+        "bottom": 13071
+      },
+      "text": "a+b+c0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "cancel-12",
+      "native": {
+        "x": 1037.390625,
+        "y": 13158.703125,
+        "width": 33.703125,
+        "height": 48.515625,
+        "right": 1071.09375,
+        "bottom": 13207.21875
+      },
+      "reference": {
+        "x": 343.5,
+        "y": 13140.5625,
+        "width": 54.484375,
+        "height": 84.796875,
+        "right": 397.984375,
+        "bottom": 13225.359375
+      },
+      "text": "xy0",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "frames-1",
+      "native": {
+        "x": 1021.71875,
+        "y": 13367.546875,
+        "width": 65.0625,
+        "height": 20,
+        "right": 1086.78125,
+        "bottom": 13387.546875
+      },
+      "reference": {
+        "x": 329.203125,
+        "y": 13359.53125,
+        "width": 83.09375,
+        "height": 38.96875,
+        "right": 412.296875,
+        "bottom": 13398.5
+      },
+      "text": "x+y",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "frames-2",
+      "native": {
+        "x": 1043.984375,
+        "y": 13482.953125,
+        "width": 20.53125,
+        "height": 48.515625,
+        "right": 1064.515625,
+        "bottom": 13531.46875
+      },
+      "reference": {
+        "x": 347.953125,
+        "y": 13469.734375,
+        "width": 45.578125,
+        "height": 74.96875,
+        "right": 393.53125,
+        "bottom": 13544.703125
+      },
+      "text": "xy",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "frames-3",
+      "native": {
+        "x": 1049.25,
+        "y": 13631.890625,
+        "width": 10,
+        "height": 10,
+        "right": 1059.25,
+        "bottom": 13641.890625
+      },
+      "reference": {
+        "x": 331.640625,
+        "y": 13622.53125,
+        "width": 78.203125,
+        "height": 34.078125,
+        "right": 409.84375,
+        "bottom": 13656.609375
+      },
+      "text": "x+y",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "frames-4",
+      "native": {
+        "x": 1046.046875,
+        "y": 13760.421875,
+        "width": 16.390625,
+        "height": 16.375,
+        "right": 1062.4375,
+        "bottom": 13776.796875
+      },
+      "reference": {
+        "x": 345.890625,
+        "y": 13729.078125,
+        "width": 49.703125,
+        "height": 79.078125,
+        "right": 395.59375,
+        "bottom": 13808.15625
+      },
+      "text": "xy",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "frames-5",
+      "native": {
+        "x": 1021.71875,
+        "y": 13890.34375,
+        "width": 65.0625,
+        "height": 20,
+        "right": 1086.78125,
+        "bottom": 13910.34375
+      },
+      "reference": {
+        "x": 329.203125,
+        "y": 13882.328125,
+        "width": 83.09375,
+        "height": 38.96875,
+        "right": 412.296875,
+        "bottom": 13921.296875
+      },
+      "text": "x+y",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "frames-6",
+      "native": {
+        "x": 1021.71875,
+        "y": 14015.34375,
+        "width": 65.0625,
+        "height": 20,
+        "right": 1086.78125,
+        "bottom": 14035.34375
+      },
+      "reference": {
+        "x": 322.328125,
+        "y": 13998.984375,
+        "width": 96.828125,
+        "height": 52.703125,
+        "right": 419.15625,
+        "bottom": 14051.6875
+      },
+      "text": "x+y",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-1",
+      "native": {
+        "x": 1016.9375,
+        "y": 14172.125,
+        "width": 74.625,
+        "height": 76.4375,
+        "right": 1091.5625,
+        "bottom": 14248.5625
+      },
+      "reference": {
+        "x": 43,
+        "y": 14195.609375,
+        "width": 655.5,
+        "height": 29.46875,
+        "right": 698.5,
+        "bottom": 14225.078125
+      },
+      "text": "(A)x=y",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-2",
+      "native": {
+        "x": 974.875,
+        "y": 14295.34375,
+        "width": 158.734375,
+        "height": 91.671875,
+        "right": 1133.609375,
+        "bottom": 14387.015625
+      },
+      "reference": {
+        "x": 43,
+        "y": 14311.5625,
+        "width": 655.5,
+        "height": 59.21875,
+        "right": 698.5,
+        "bottom": 14370.78125
+      },
+      "text": "(long tag)xy=z",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-3",
+      "native": {
+        "x": 1017.96875,
+        "y": 14432.015625,
+        "width": 72.5625,
+        "height": 84.4375,
+        "right": 1090.53125,
+        "bottom": 14516.453125
+      },
+      "reference": {
+        "x": 43,
+        "y": 14459.5,
+        "width": 655.5,
+        "height": 29.46875,
+        "right": 698.5,
+        "bottom": 14488.96875
+      },
+      "text": "(1)a+b=c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-4",
+      "native": {
+        "x": 983.96875,
+        "y": 14561.453125,
+        "width": 140.546875,
+        "height": 152.875,
+        "right": 1124.515625,
+        "bottom": 14714.328125
+      },
+      "reference": {
+        "x": 43,
+        "y": 14603.984375,
+        "width": 655.5,
+        "height": 67.8125,
+        "right": 698.5,
+        "bottom": 14671.796875
+      },
+      "text": "(1)x=y(2)a+b=c",
+      "legacy": 2,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-5",
+      "native": {
+        "x": 949.359375,
+        "y": 14759.328125,
+        "width": 209.765625,
+        "height": 106.875,
+        "right": 1159.125,
+        "bottom": 14866.203125
+      },
+      "reference": {
+        "x": 43,
+        "y": 14778.859375,
+        "width": 655.5,
+        "height": 67.8125,
+        "right": 698.5,
+        "bottom": 14846.671875
+      },
+      "text": "x=y(1)a+b=c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-6",
+      "native": {
+        "x": 1017.96875,
+        "y": 14911.203125,
+        "width": 72.5625,
+        "height": 163.109375,
+        "right": 1090.53125,
+        "bottom": 15074.3125
+      },
+      "reference": {
+        "x": 43,
+        "y": 14946.828125,
+        "width": 655.5,
+        "height": 91.84375,
+        "right": 698.5,
+        "bottom": 15038.671875
+      },
+      "text": "(1)x=y(2)ab=c",
+      "legacy": 2,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-7",
+      "native": {
+        "x": 928.96875,
+        "y": 15119.3125,
+        "width": 250.546875,
+        "height": 152.875,
+        "right": 1179.515625,
+        "bottom": 15272.1875
+      },
+      "reference": {
+        "x": 43,
+        "y": 15161.84375,
+        "width": 655.5,
+        "height": 67.8125,
+        "right": 698.5,
+        "bottom": 15229.65625
+      },
+      "text": "(1)x=yz=w(2)a=bc=d",
+      "legacy": 2,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-8",
+      "native": {
+        "x": 1016.9375,
+        "y": 15318.96875,
+        "width": 74.625,
+        "height": 76.4375,
+        "right": 1091.5625,
+        "bottom": 15395.40625
+      },
+      "reference": {
+        "x": 43,
+        "y": 15342.453125,
+        "width": 655.5,
+        "height": 29.46875,
+        "right": 698.5,
+        "bottom": 15371.921875
+      },
+      "text": "(A)x=y",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-9",
+      "native": {
+        "x": 974.875,
+        "y": 15442.1875,
+        "width": 158.734375,
+        "height": 91.671875,
+        "right": 1133.609375,
+        "bottom": 15533.859375
+      },
+      "reference": {
+        "x": 43,
+        "y": 15458.40625,
+        "width": 655.5,
+        "height": 59.21875,
+        "right": 698.5,
+        "bottom": 15517.625
+      },
+      "text": "(long tag)xy=z",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-10",
+      "native": {
+        "x": 1017.96875,
+        "y": 15578.859375,
+        "width": 72.5625,
+        "height": 84.4375,
+        "right": 1090.53125,
+        "bottom": 15663.296875
+      },
+      "reference": {
+        "x": 43,
+        "y": 15606.34375,
+        "width": 655.5,
+        "height": 29.46875,
+        "right": 698.5,
+        "bottom": 15635.8125
+      },
+      "text": "(1)a+b=c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-11",
+      "native": {
+        "x": 983.96875,
+        "y": 15708.296875,
+        "width": 140.546875,
+        "height": 152.875,
+        "right": 1124.515625,
+        "bottom": 15861.171875
+      },
+      "reference": {
+        "x": 43,
+        "y": 15750.828125,
+        "width": 655.5,
+        "height": 67.8125,
+        "right": 698.5,
+        "bottom": 15818.640625
+      },
+      "text": "(1)x=y(2)a+b=c",
+      "legacy": 2,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-12",
+      "native": {
+        "x": 949.359375,
+        "y": 15906.171875,
+        "width": 209.765625,
+        "height": 106.875,
+        "right": 1159.125,
+        "bottom": 16013.046875
+      },
+      "reference": {
+        "x": 43,
+        "y": 15925.703125,
+        "width": 655.5,
+        "height": 67.8125,
+        "right": 698.5,
+        "bottom": 15993.515625
+      },
+      "text": "x=y(1)a+b=c",
+      "legacy": 1,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-13",
+      "native": {
+        "x": 1017.96875,
+        "y": 16058.046875,
+        "width": 72.5625,
+        "height": 163.109375,
+        "right": 1090.53125,
+        "bottom": 16221.15625
+      },
+      "reference": {
+        "x": 43,
+        "y": 16093.671875,
+        "width": 655.5,
+        "height": 91.84375,
+        "right": 698.5,
+        "bottom": 16185.515625
+      },
+      "text": "(1)x=y(2)ab=c",
+      "legacy": 2,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "tags-14",
+      "native": {
+        "x": 928.96875,
+        "y": 16266.15625,
+        "width": 250.546875,
+        "height": 152.875,
+        "right": 1179.515625,
+        "bottom": 16419.03125
+      },
+      "reference": {
+        "x": 43,
+        "y": 16308.6875,
+        "width": 655.5,
+        "height": 67.8125,
+        "right": 698.5,
+        "bottom": 16376.5
+      },
+      "text": "(1)x=yz=w(2)a=bc=d",
+      "legacy": 2,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-1",
+      "native": {
+        "x": 982.28125,
+        "y": 16531.421875,
+        "width": 143.921875,
+        "height": 73.3125,
+        "right": 1126.203125,
+        "bottom": 16604.734375
+      },
+      "reference": {
+        "x": 312.203125,
+        "y": 16531.21875,
+        "width": 117.078125,
+        "height": 73.734375,
+        "right": 429.28125,
+        "bottom": 16604.953125
+      },
+      "text": "ABC",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-2",
+      "native": {
+        "x": 959.984375,
+        "y": 16658.5,
+        "width": 188.515625,
+        "height": 129.625,
+        "right": 1148.5,
+        "bottom": 16788.125
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 16664.328125,
+        "width": 172.671875,
+        "height": 117.984375,
+        "right": 457.078125,
+        "bottom": 16782.3125
+      },
+      "text": "ABA∧BruleC",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-3",
+      "native": {
+        "x": 982.28125,
+        "y": 16841.890625,
+        "width": 143.921875,
+        "height": 73.3125,
+        "right": 1126.203125,
+        "bottom": 16915.203125
+      },
+      "reference": {
+        "x": 312.203125,
+        "y": 16841.6875,
+        "width": 117.078125,
+        "height": 73.734375,
+        "right": 429.28125,
+        "bottom": 16915.421875
+      },
+      "text": "CAB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-4",
+      "native": {
+        "x": 959.984375,
+        "y": 16968.96875,
+        "width": 188.515625,
+        "height": 129.625,
+        "right": 1148.5,
+        "bottom": 17098.59375
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 16974.796875,
+        "width": 172.671875,
+        "height": 117.984375,
+        "right": 457.078125,
+        "bottom": 17092.78125
+      },
+      "text": "CA∧BABrule",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-5",
+      "native": {
+        "x": 982.28125,
+        "y": 17152.359375,
+        "width": 143.921875,
+        "height": 73.3125,
+        "right": 1126.203125,
+        "bottom": 17225.671875
+      },
+      "reference": {
+        "x": 312.203125,
+        "y": 17152.15625,
+        "width": 117.078125,
+        "height": 73.734375,
+        "right": 429.28125,
+        "bottom": 17225.890625
+      },
+      "text": "ABC",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-6",
+      "native": {
+        "x": 959.984375,
+        "y": 17279.4375,
+        "width": 188.515625,
+        "height": 129.625,
+        "right": 1148.5,
+        "bottom": 17409.0625
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 17285.265625,
+        "width": 172.671875,
+        "height": 117.984375,
+        "right": 457.078125,
+        "bottom": 17403.25
+      },
+      "text": "ABA∧BruleC",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-7",
+      "native": {
+        "x": 982.28125,
+        "y": 17462.828125,
+        "width": 143.921875,
+        "height": 73.3125,
+        "right": 1126.203125,
+        "bottom": 17536.140625
+      },
+      "reference": {
+        "x": 312.203125,
+        "y": 17462.625,
+        "width": 117.078125,
+        "height": 73.734375,
+        "right": 429.28125,
+        "bottom": 17536.359375
+      },
+      "text": "CAB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-8",
+      "native": {
+        "x": 959.984375,
+        "y": 17589.90625,
+        "width": 188.515625,
+        "height": 129.625,
+        "right": 1148.5,
+        "bottom": 17719.53125
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 17595.734375,
+        "width": 172.671875,
+        "height": 117.984375,
+        "right": 457.078125,
+        "bottom": 17713.71875
+      },
+      "text": "CA∧BABrule",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-9",
+      "native": {
+        "x": 982.28125,
+        "y": 17772.265625,
+        "width": 143.921875,
+        "height": 73.3125,
+        "right": 1126.203125,
+        "bottom": 17845.578125
+      },
+      "reference": {
+        "x": 312.203125,
+        "y": 17773.09375,
+        "width": 117.078125,
+        "height": 71.671875,
+        "right": 429.28125,
+        "bottom": 17844.765625
+      },
+      "text": "ABC",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-10",
+      "native": {
+        "x": 959.984375,
+        "y": 17897.28125,
+        "width": 188.515625,
+        "height": 129.625,
+        "right": 1148.5,
+        "bottom": 18026.90625
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 17904.140625,
+        "width": 172.671875,
+        "height": 115.921875,
+        "right": 457.078125,
+        "bottom": 18020.0625
+      },
+      "text": "ABA∧BruleC",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-11",
+      "native": {
+        "x": 982.28125,
+        "y": 18078.609375,
+        "width": 143.921875,
+        "height": 73.3125,
+        "right": 1126.203125,
+        "bottom": 18151.921875
+      },
+      "reference": {
+        "x": 312.203125,
+        "y": 18079.4375,
+        "width": 117.078125,
+        "height": 71.671875,
+        "right": 429.28125,
+        "bottom": 18151.109375
+      },
+      "text": "CAB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "proofs-12",
+      "native": {
+        "x": 959.984375,
+        "y": 18203.625,
+        "width": 188.515625,
+        "height": 129.625,
+        "right": 1148.5,
+        "bottom": 18333.25
+      },
+      "reference": {
+        "x": 284.40625,
+        "y": 18210.484375,
+        "width": 172.671875,
+        "height": 115.921875,
+        "right": 457.078125,
+        "bottom": 18326.40625
+      },
+      "text": "CA∧BABrule",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-1",
+      "native": {
+        "x": 1038.125,
+        "y": 18466.59375,
+        "width": 32.234375,
+        "height": 24,
+        "right": 1070.359375,
+        "bottom": 18490.59375
+      },
+      "reference": {
+        "x": 359.28125,
+        "y": 18465.6875,
+        "width": 22.921875,
+        "height": 31.6875,
+        "right": 382.203125,
+        "bottom": 18497.375
+      },
+      "text": "=⧸=",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-2",
+      "native": {
+        "x": 1038.125,
+        "y": 18595.59375,
+        "width": 32.234375,
+        "height": 16,
+        "right": 1070.359375,
+        "bottom": 18611.59375
+      },
+      "reference": {
+        "x": 356,
+        "y": 18600.484375,
+        "width": 29.484375,
+        "height": 12.46875,
+        "right": 385.484375,
+        "bottom": 18612.953125
+      },
+      "text": "=∗=",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-3",
+      "native": {
+        "x": 1038.125,
+        "y": 18704.328125,
+        "width": 32.234375,
+        "height": 48.515625,
+        "right": 1070.359375,
+        "bottom": 18752.84375
+      },
+      "reference": {
+        "x": 359.28125,
+        "y": 18698.703125,
+        "width": 22.921875,
+        "height": 59.78125,
+        "right": 382.203125,
+        "bottom": 18758.484375
+      },
+      "text": "=12=",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-4",
+      "native": {
+        "x": 1030.59375,
+        "y": 18841.59375,
+        "width": 47.296875,
+        "height": 24,
+        "right": 1077.890625,
+        "bottom": 18865.59375
+      },
+      "reference": {
+        "x": 349.265625,
+        "y": 18840.6875,
+        "width": 42.953125,
+        "height": 31.6875,
+        "right": 392.21875,
+        "bottom": 18872.375
+      },
+      "text": "⟹⧸⟹",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-5",
+      "native": {
+        "x": 1030.59375,
+        "y": 18970.59375,
+        "width": 47.296875,
+        "height": 16,
+        "right": 1077.890625,
+        "bottom": 18986.59375
+      },
+      "reference": {
+        "x": 346,
+        "y": 18973.75,
+        "width": 49.5,
+        "height": 15.921875,
+        "right": 395.5,
+        "bottom": 18989.671875
+      },
+      "text": "⟹∗⟹",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-6",
+      "native": {
+        "x": 1030.59375,
+        "y": 19079.328125,
+        "width": 47.296875,
+        "height": 48.515625,
+        "right": 1077.890625,
+        "bottom": 19127.84375
+      },
+      "reference": {
+        "x": 349.265625,
+        "y": 19073.703125,
+        "width": 42.953125,
+        "height": 59.78125,
+        "right": 392.21875,
+        "bottom": 19133.484375
+      },
+      "text": "⟹12⟹",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-7",
+      "native": {
+        "x": 1021.9375,
+        "y": 19216.59375,
+        "width": 64.609375,
+        "height": 24,
+        "right": 1086.546875,
+        "bottom": 19240.59375
+      },
+      "reference": {
+        "x": 336.96875,
+        "y": 19215.6875,
+        "width": 67.5625,
+        "height": 31.6875,
+        "right": 404.53125,
+        "bottom": 19247.375
+      },
+      "text": "a=b⧸a=b",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-8",
+      "native": {
+        "x": 1021.9375,
+        "y": 19344.09375,
+        "width": 64.609375,
+        "height": 19,
+        "right": 1086.546875,
+        "bottom": 19363.09375
+      },
+      "reference": {
+        "x": 333.6875,
+        "y": 19343.625,
+        "width": 74.109375,
+        "height": 20.78125,
+        "right": 407.796875,
+        "bottom": 19364.40625
+      },
+      "text": "a=b∗a=b",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-9",
+      "native": {
+        "x": 1021.9375,
+        "y": 19454.328125,
+        "width": 64.609375,
+        "height": 48.515625,
+        "right": 1086.546875,
+        "bottom": 19502.84375
+      },
+      "reference": {
+        "x": 336.96875,
+        "y": 19448.703125,
+        "width": 67.5625,
+        "height": 59.78125,
+        "right": 404.53125,
+        "bottom": 19508.484375
+      },
+      "text": "a=b12a=b",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-10",
+      "native": {
+        "x": 1044.921875,
+        "y": 19581.828125,
+        "width": 18.640625,
+        "height": 43.515625,
+        "right": 1063.5625,
+        "bottom": 19625.34375
+      },
+      "reference": {
+        "x": 356.46875,
+        "y": 19576.84375,
+        "width": 28.5625,
+        "height": 53.5,
+        "right": 385.03125,
+        "bottom": 19630.34375
+      },
+      "text": "ab⧸ab",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-11",
+      "native": {
+        "x": 1044.921875,
+        "y": 19706.828125,
+        "width": 18.640625,
+        "height": 43.515625,
+        "right": 1063.5625,
+        "bottom": 19750.34375
+      },
+      "reference": {
+        "x": 353.1875,
+        "y": 19701.84375,
+        "width": 35.109375,
+        "height": 53.5,
+        "right": 388.296875,
+        "bottom": 19755.34375
+      },
+      "text": "ab∗ab",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "overlap-12",
+      "native": {
+        "x": 1044.921875,
+        "y": 19829.328125,
+        "width": 18.640625,
+        "height": 48.515625,
+        "right": 1063.5625,
+        "bottom": 19877.84375
+      },
+      "reference": {
+        "x": 356.46875,
+        "y": 19823.53125,
+        "width": 28.5625,
+        "height": 60.109375,
+        "right": 385.03125,
+        "bottom": 19883.640625
+      },
+      "text": "ab12ab",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-1",
+      "native": {
+        "x": 1007.75,
+        "y": 20027.09375,
+        "width": 92.984375,
+        "height": 23,
+        "right": 1100.734375,
+        "bottom": 20050.09375
+      },
+      "reference": {
+        "x": 308.203125,
+        "y": 20028.5,
+        "width": 125.09375,
+        "height": 26.46875,
+        "right": 433.296875,
+        "bottom": 20054.96875
+      },
+      "text": "ABCxyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-2",
+      "native": {
+        "x": 1023.71875,
+        "y": 20154.59375,
+        "width": 61.0625,
+        "height": 18,
+        "right": 1084.78125,
+        "bottom": 20172.59375
+      },
+      "reference": {
+        "x": 336.84375,
+        "y": 20154.78125,
+        "width": 67.8125,
+        "height": 19.625,
+        "right": 404.65625,
+        "bottom": 20174.40625
+      },
+      "text": "0123",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-3",
+      "native": {
+        "x": 1025.875,
+        "y": 20278.59375,
+        "width": 56.734375,
+        "height": 20,
+        "right": 1082.609375,
+        "bottom": 20298.59375
+      },
+      "reference": {
+        "x": 344.203125,
+        "y": 20278.296875,
+        "width": 53.09375,
+        "height": 21.109375,
+        "right": 397.296875,
+        "bottom": 20299.40625
+      },
+      "text": "Γαθ",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-4",
+      "native": {
+        "x": 1007.75,
+        "y": 20402.09375,
+        "width": 92.984375,
+        "height": 23,
+        "right": 1100.734375,
+        "bottom": 20425.09375
+      },
+      "reference": {
+        "x": 318.015625,
+        "y": 20402.96875,
+        "width": 105.453125,
+        "height": 27.15625,
+        "right": 423.46875,
+        "bottom": 20430.125
+      },
+      "text": "ABCxyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-5",
+      "native": {
+        "x": 1023.71875,
+        "y": 20529.59375,
+        "width": 61.0625,
+        "height": 18,
+        "right": 1084.78125,
+        "bottom": 20547.59375
+      },
+      "reference": {
+        "x": 340.625,
+        "y": 20529.453125,
+        "width": 60.25,
+        "height": 20.28125,
+        "right": 400.875,
+        "bottom": 20549.734375
+      },
+      "text": "0123",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-6",
+      "native": {
+        "x": 1025.875,
+        "y": 20653.59375,
+        "width": 56.734375,
+        "height": 20,
+        "right": 1082.609375,
+        "bottom": 20673.59375
+      },
+      "reference": {
+        "x": 343.734375,
+        "y": 20653.296875,
+        "width": 54.015625,
+        "height": 21.109375,
+        "right": 397.75,
+        "bottom": 20674.40625
+      },
+      "text": "Γαθ",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-7",
+      "native": {
+        "x": 1007.75,
+        "y": 20777.09375,
+        "width": 92.984375,
+        "height": 23,
+        "right": 1100.734375,
+        "bottom": 20800.09375
+      },
+      "reference": {
+        "x": 314.46875,
+        "y": 20778.0625,
+        "width": 112.5625,
+        "height": 27.0625,
+        "right": 427.03125,
+        "bottom": 20805.125
+      },
+      "text": "ABCxyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-8",
+      "native": {
+        "x": 1023.71875,
+        "y": 20904.59375,
+        "width": 61.0625,
+        "height": 18,
+        "right": 1084.78125,
+        "bottom": 20922.59375
+      },
+      "reference": {
+        "x": 340.625,
+        "y": 20904.453125,
+        "width": 60.25,
+        "height": 20.28125,
+        "right": 400.875,
+        "bottom": 20924.734375
+      },
+      "text": "0123",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-9",
+      "native": {
+        "x": 1025.875,
+        "y": 21028.59375,
+        "width": 56.734375,
+        "height": 20,
+        "right": 1082.609375,
+        "bottom": 21048.59375
+      },
+      "reference": {
+        "x": 343.734375,
+        "y": 21028.296875,
+        "width": 54.015625,
+        "height": 21.109375,
+        "right": 397.75,
+        "bottom": 21049.40625
+      },
+      "text": "Γαθ",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-10",
+      "native": {
+        "x": 1007.75,
+        "y": 21152.09375,
+        "width": 92.984375,
+        "height": 23,
+        "right": 1100.734375,
+        "bottom": 21175.09375
+      },
+      "reference": {
+        "x": 301.421875,
+        "y": 21153.828125,
+        "width": 138.65625,
+        "height": 26.703125,
+        "right": 440.078125,
+        "bottom": 21180.53125
+      },
+      "text": "ABCxyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-11",
+      "native": {
+        "x": 1023.71875,
+        "y": 21279.59375,
+        "width": 61.0625,
+        "height": 18,
+        "right": 1084.78125,
+        "bottom": 21297.59375
+      },
+      "reference": {
+        "x": 340.625,
+        "y": 21279.453125,
+        "width": 60.25,
+        "height": 20.28125,
+        "right": 400.875,
+        "bottom": 21299.734375
+      },
+      "text": "0123",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-12",
+      "native": {
+        "x": 1025.875,
+        "y": 21403.59375,
+        "width": 56.734375,
+        "height": 20,
+        "right": 1082.609375,
+        "bottom": 21423.59375
+      },
+      "reference": {
+        "x": 343.734375,
+        "y": 21403.296875,
+        "width": 54.015625,
+        "height": 21.109375,
+        "right": 397.75,
+        "bottom": 21424.40625
+      },
+      "text": "Γαθ",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-13",
+      "native": {
+        "x": 1007.75,
+        "y": 21527.09375,
+        "width": 92.984375,
+        "height": 23,
+        "right": 1100.734375,
+        "bottom": 21550.09375
+      },
+      "reference": {
+        "x": 319.015625,
+        "y": 21528.515625,
+        "width": 103.453125,
+        "height": 27.0625,
+        "right": 422.46875,
+        "bottom": 21555.578125
+      },
+      "text": "ABCxyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-14",
+      "native": {
+        "x": 1023.71875,
+        "y": 21654.59375,
+        "width": 61.0625,
+        "height": 18,
+        "right": 1084.78125,
+        "bottom": 21672.59375
+      },
+      "reference": {
+        "x": 341.265625,
+        "y": 21654.453125,
+        "width": 58.96875,
+        "height": 20.28125,
+        "right": 400.234375,
+        "bottom": 21674.734375
+      },
+      "text": "0123",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-15",
+      "native": {
+        "x": 1025.875,
+        "y": 21778.59375,
+        "width": 56.734375,
+        "height": 20,
+        "right": 1082.609375,
+        "bottom": 21798.59375
+      },
+      "reference": {
+        "x": 345.1875,
+        "y": 21778.296875,
+        "width": 51.109375,
+        "height": 21.109375,
+        "right": 396.296875,
+        "bottom": 21799.40625
+      },
+      "text": "Γαθ",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-16",
+      "native": {
+        "x": 1007.75,
+        "y": 21902.09375,
+        "width": 92.984375,
+        "height": 23,
+        "right": 1100.734375,
+        "bottom": 21925.09375
+      },
+      "reference": {
+        "x": 318.765625,
+        "y": 21903.34375,
+        "width": 103.953125,
+        "height": 27.109375,
+        "right": 422.71875,
+        "bottom": 21930.453125
+      },
+      "text": "ABCxyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-17",
+      "native": {
+        "x": 1023.71875,
+        "y": 22029.59375,
+        "width": 61.0625,
+        "height": 18,
+        "right": 1084.78125,
+        "bottom": 22047.59375
+      },
+      "reference": {
+        "x": 337.96875,
+        "y": 22029.453125,
+        "width": 65.5625,
+        "height": 20.28125,
+        "right": 403.53125,
+        "bottom": 22049.734375
+      },
+      "text": "0123",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-18",
+      "native": {
+        "x": 1025.875,
+        "y": 22153.59375,
+        "width": 56.734375,
+        "height": 20,
+        "right": 1082.609375,
+        "bottom": 22173.59375
+      },
+      "reference": {
+        "x": 344.203125,
+        "y": 22153.296875,
+        "width": 53.09375,
+        "height": 21.109375,
+        "right": 397.296875,
+        "bottom": 22174.40625
+      },
+      "text": "Γαθ",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-19",
+      "native": {
+        "x": 1007.75,
+        "y": 22277.09375,
+        "width": 92.984375,
+        "height": 23,
+        "right": 1100.734375,
+        "bottom": 22300.09375
+      },
+      "reference": {
+        "x": 321.65625,
+        "y": 22278.28125,
+        "width": 98.171875,
+        "height": 26.84375,
+        "right": 419.828125,
+        "bottom": 22305.125
+      },
+      "text": "ABCxyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-20",
+      "native": {
+        "x": 1023.71875,
+        "y": 22404.59375,
+        "width": 61.0625,
+        "height": 18,
+        "right": 1084.78125,
+        "bottom": 22422.59375
+      },
+      "reference": {
+        "x": 341.265625,
+        "y": 22404.09375,
+        "width": 58.96875,
+        "height": 20.640625,
+        "right": 400.234375,
+        "bottom": 22424.734375
+      },
+      "text": "0123",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-21",
+      "native": {
+        "x": 1025.875,
+        "y": 22528.59375,
+        "width": 56.734375,
+        "height": 20,
+        "right": 1082.609375,
+        "bottom": 22548.59375
+      },
+      "reference": {
+        "x": 346.40625,
+        "y": 22528.296875,
+        "width": 48.671875,
+        "height": 21.109375,
+        "right": 395.078125,
+        "bottom": 22549.40625
+      },
+      "text": "Γαθ",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-22",
+      "native": {
+        "x": 1007.75,
+        "y": 22652.09375,
+        "width": 92.984375,
+        "height": 23,
+        "right": 1100.734375,
+        "bottom": 22675.09375
+      },
+      "reference": {
+        "x": 324.3125,
+        "y": 22655.734375,
+        "width": 92.875,
+        "height": 25.078125,
+        "right": 417.1875,
+        "bottom": 22680.8125
+      },
+      "text": "ABCxyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-23",
+      "native": {
+        "x": 1023.71875,
+        "y": 22779.59375,
+        "width": 61.0625,
+        "height": 18,
+        "right": 1084.78125,
+        "bottom": 22797.59375
+      },
+      "reference": {
+        "x": 339.796875,
+        "y": 22780.75,
+        "width": 61.90625,
+        "height": 18.65625,
+        "right": 401.703125,
+        "bottom": 22799.40625
+      },
+      "text": "0123",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "variants-24",
+      "native": {
+        "x": 1025.875,
+        "y": 22903.59375,
+        "width": 56.734375,
+        "height": 20,
+        "right": 1082.609375,
+        "bottom": 22923.59375
+      },
+      "reference": {
+        "x": 346.65625,
+        "y": 22903.296875,
+        "width": 48.171875,
+        "height": 21.109375,
+        "right": 394.828125,
+        "bottom": 22924.40625
+      },
+      "text": "Γαθ",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "physics-1",
+      "native": {
+        "x": 1046.375,
+        "y": 23092.09375,
+        "width": 15.734375,
+        "height": 13,
+        "right": 1062.109375,
+        "bottom": 23105.09375
+      },
+      "reference": {
+        "x": 362.5,
+        "y": 23095.75,
+        "width": 16.484375,
+        "height": 13.515625,
+        "right": 378.984375,
+        "bottom": 23109.265625
+      },
+      "text": "a",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "physics-2",
+      "native": {
+        "x": 1046.375,
+        "y": 23217.09375,
+        "width": 15.734375,
+        "height": 13,
+        "right": 1062.109375,
+        "bottom": 23230.09375
+      },
+      "reference": {
+        "x": 361.421875,
+        "y": 23220.765625,
+        "width": 18.65625,
+        "height": 13.5625,
+        "right": 380.078125,
+        "bottom": 23234.328125
+      },
+      "text": "a",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "physics-3",
+      "native": {
+        "x": 1044.96875,
+        "y": 23341.59375,
+        "width": 18.5625,
+        "height": 14,
+        "right": 1063.53125,
+        "bottom": 23355.59375
+      },
+      "reference": {
+        "x": 361.3125,
+        "y": 23346.0625,
+        "width": 18.859375,
+        "height": 13.34375,
+        "right": 380.171875,
+        "bottom": 23359.40625
+      },
+      "text": "α",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "physics-4",
+      "native": {
+        "x": 1044.96875,
+        "y": 23466.59375,
+        "width": 18.5625,
+        "height": 14,
+        "right": 1063.53125,
+        "bottom": 23480.59375
+      },
+      "reference": {
+        "x": 359.53125,
+        "y": 23470.765625,
+        "width": 22.4375,
+        "height": 13.5625,
+        "right": 381.96875,
+        "bottom": 23484.328125
+      },
+      "text": "α",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "physics-5",
+      "native": {
+        "x": 1033.09375,
+        "y": 23589.59375,
+        "width": 42.296875,
+        "height": 18,
+        "right": 1075.390625,
+        "bottom": 23607.59375
+      },
+      "reference": {
+        "x": 345.875,
+        "y": 23588.53125,
+        "width": 49.734375,
+        "height": 20.5625,
+        "right": 395.609375,
+        "bottom": 23609.09375
+      },
+      "text": "AB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "physics-6",
+      "native": {
+        "x": 1013.921875,
+        "y": 23705.09375,
+        "width": 80.640625,
+        "height": 37,
+        "right": 1094.5625,
+        "bottom": 23742.09375
+      },
+      "reference": {
+        "x": 329.609375,
+        "y": 23706.421875,
+        "width": 82.265625,
+        "height": 36.28125,
+        "right": 411.875,
+        "bottom": 23742.703125
+      },
+      "text": "O⁡(x2)",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "physics-7",
+      "native": {
+        "x": 1035.5625,
+        "y": 23839.59375,
+        "width": 37.359375,
+        "height": 18,
+        "right": 1072.921875,
+        "bottom": 23857.59375
+      },
+      "reference": {
+        "x": 351.078125,
+        "y": 23838.15625,
+        "width": 39.34375,
+        "height": 21.25,
+        "right": 390.421875,
+        "bottom": 23859.40625
+      },
+      "text": "P⁡x",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "physics-8",
+      "native": {
+        "x": 1020.015625,
+        "y": 23942.09375,
+        "width": 68.453125,
+        "height": 63,
+        "right": 1088.46875,
+        "bottom": 24005.09375
+      },
+      "reference": {
+        "x": 323.109375,
+        "y": 23942.078125,
+        "width": 95.265625,
+        "height": 63.03125,
+        "right": 418.375,
+        "bottom": 24005.109375
+      },
+      "text": "O⁡(1n)",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-1",
+      "native": {
+        "x": 1008.703125,
+        "y": 24144.4375,
+        "width": 91.09375,
+        "height": 28.296875,
+        "right": 1099.796875,
+        "bottom": 24172.734375
+      },
+      "reference": {
+        "x": 313.265625,
+        "y": 24138.390625,
+        "width": 114.953125,
+        "height": 33.40625,
+        "right": 428.21875,
+        "bottom": 24171.796875
+      },
+      "text": "A⟶heatB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-2",
+      "native": {
+        "x": 992.21875,
+        "y": 24254.59375,
+        "width": 124.0625,
+        "height": 57.984375,
+        "right": 1116.28125,
+        "bottom": 24312.578125
+      },
+      "reference": {
+        "x": 297.28125,
+        "y": 24251.28125,
+        "width": 146.921875,
+        "height": 64.625,
+        "right": 444.203125,
+        "bottom": 24315.90625
+      },
+      "text": "A⇌catalystheatB",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-3",
+      "native": {
+        "x": 1018.21875,
+        "y": 24396.46875,
+        "width": 72.0625,
+        "height": 24.25,
+        "right": 1090.28125,
+        "bottom": 24420.71875
+      },
+      "reference": {
+        "x": 319.5,
+        "y": 24397.984375,
+        "width": 102.5,
+        "height": 24,
+        "right": 422,
+        "bottom": 24421.984375
+      },
+      "text": "A⇀↽B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-4",
+      "native": {
+        "x": 1018.21875,
+        "y": 24523.9375,
+        "width": 72.0625,
+        "height": 19.296875,
+        "right": 1090.28125,
+        "bottom": 24543.234375
+      },
+      "reference": {
+        "x": 319.5,
+        "y": 24522.984375,
+        "width": 102.5,
+        "height": 23.90625,
+        "right": 422,
+        "bottom": 24546.890625
+      },
+      "text": "A↽⇀B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-5",
+      "native": {
+        "x": 1024.765625,
+        "y": 24649.59375,
+        "width": 58.953125,
+        "height": 18,
+        "right": 1083.71875,
+        "bottom": 24667.59375
+      },
+      "reference": {
+        "x": 337.046875,
+        "y": 24647.984375,
+        "width": 67.390625,
+        "height": 21.109375,
+        "right": 404.4375,
+        "bottom": 24669.09375
+      },
+      "text": "A−┄B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-6",
+      "native": {
+        "x": 1018.109375,
+        "y": 24772.4375,
+        "width": 72.265625,
+        "height": 22.296875,
+        "right": 1090.375,
+        "bottom": 24794.734375
+      },
+      "reference": {
+        "x": 337.046875,
+        "y": 24772.984375,
+        "width": 67.390625,
+        "height": 21.109375,
+        "right": 404.4375,
+        "bottom": 24794.09375
+      },
+      "text": "A=┄B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-7",
+      "native": {
+        "x": 1018.109375,
+        "y": 24897.5,
+        "width": 72.265625,
+        "height": 22.1875,
+        "right": 1090.375,
+        "bottom": 24919.6875
+      },
+      "reference": {
+        "x": 337.046875,
+        "y": 24897.984375,
+        "width": 67.390625,
+        "height": 21.109375,
+        "right": 404.4375,
+        "bottom": 24919.09375
+      },
+      "text": "A┄−−B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-8",
+      "native": {
+        "x": 1025.34375,
+        "y": 25017.59375,
+        "width": 57.796875,
+        "height": 32,
+        "right": 1083.140625,
+        "bottom": 25049.59375
+      },
+      "reference": {
+        "x": 342.828125,
+        "y": 25017.546875,
+        "width": 55.828125,
+        "height": 34,
+        "right": 398.65625,
+        "bottom": 25051.546875
+      },
+      "text": "U92235",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-9",
+      "native": {
+        "x": 936.203125,
+        "y": 25146.265625,
+        "width": 236.09375,
+        "height": 24.640625,
+        "right": 1172.296875,
+        "bottom": 25170.90625
+      },
+      "reference": {
+        "x": 238.9375,
+        "y": 25147.984375,
+        "width": 263.609375,
+        "height": 25.515625,
+        "right": 502.546875,
+        "bottom": 25173.5
+      },
+      "text": "2HA2+OA2⟶2HA2O",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "chemistry-10",
+      "native": {
+        "x": 988.859375,
+        "y": 25270.015625,
+        "width": 130.78125,
+        "height": 27.140625,
+        "right": 1119.640625,
+        "bottom": 25297.15625
+      },
+      "reference": {
+        "x": 307.75,
+        "y": 25267.859375,
+        "width": 126,
+        "height": 33.421875,
+        "right": 433.75,
+        "bottom": 25301.28125
+      },
+      "text": "9.81 m/s2",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-1",
+      "native": {
+        "x": 997.1875,
+        "y": 25458.59375,
+        "width": 114.125,
+        "height": 20,
+        "right": 1111.3125,
+        "bottom": 25478.59375
+      },
+      "reference": {
+        "x": 310.53125,
+        "y": 25461.890625,
+        "width": 120.4375,
+        "height": 23.234375,
+        "right": 430.96875,
+        "bottom": 25485.125
+      },
+      "text": "x+y=z",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-2",
+      "native": {
+        "x": 1021.65625,
+        "y": 25568.828125,
+        "width": 65.171875,
+        "height": 49.515625,
+        "right": 1086.828125,
+        "bottom": 25618.34375
+      },
+      "reference": {
+        "x": 332.109375,
+        "y": 25562.0625,
+        "width": 77.265625,
+        "height": 63.046875,
+        "right": 409.375,
+        "bottom": 25625.109375
+      },
+      "text": "a+bc+d",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-3",
+      "native": {
+        "x": 999.40625,
+        "y": 25699.4375,
+        "width": 109.6875,
+        "height": 38.296875,
+        "right": 1109.09375,
+        "bottom": 25737.734375
+      },
+      "reference": {
+        "x": 309.171875,
+        "y": 25699.578125,
+        "width": 123.15625,
+        "height": 37.140625,
+        "right": 432.328125,
+        "bottom": 25736.71875
+      },
+      "text": "x2+y2",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-4",
+      "native": {
+        "x": 1011.15625,
+        "y": 25818.75,
+        "width": 86.1875,
+        "height": 65.59375,
+        "right": 1097.34375,
+        "bottom": 25884.34375
+      },
+      "reference": {
+        "x": 327.578125,
+        "y": 25810.78125,
+        "width": 86.34375,
+        "height": 81.546875,
+        "right": 413.921875,
+        "bottom": 25892.328125
+      },
+      "text": "∑n=0∞1n!",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-5",
+      "native": {
+        "x": 1001.6875,
+        "y": 25964.296875,
+        "width": 105.125,
+        "height": 47.65625,
+        "right": 1106.8125,
+        "bottom": 26011.953125
+      },
+      "reference": {
+        "x": 312.71875,
+        "y": 25951.703125,
+        "width": 116.0625,
+        "height": 72.84375,
+        "right": 428.78125,
+        "bottom": 26024.546875
+      },
+      "text": "∫01x2dx",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-6",
+      "native": {
+        "x": 1029.375,
+        "y": 26085.234375,
+        "width": 49.75,
+        "height": 63,
+        "right": 1079.125,
+        "bottom": 26148.234375
+      },
+      "reference": {
+        "x": 336.28125,
+        "y": 26084.5,
+        "width": 68.9375,
+        "height": 64.46875,
+        "right": 405.21875,
+        "bottom": 26148.96875
+      },
+      "text": "(xy)",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-7",
+      "native": {
+        "x": 1003.65625,
+        "y": 26212.796875,
+        "width": 101.1875,
+        "height": 63,
+        "right": 1104.84375,
+        "bottom": 26275.796875
+      },
+      "reference": {
+        "x": 318.84375,
+        "y": 26208.921875,
+        "width": 103.8125,
+        "height": 70.75,
+        "right": 422.65625,
+        "bottom": 26279.671875
+      },
+      "text": "(abcd)",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-8",
+      "native": {
+        "x": 1021.71875,
+        "y": 26359.109375,
+        "width": 65.0625,
+        "height": 25.484375,
+        "right": 1086.78125,
+        "bottom": 26384.59375
+      },
+      "reference": {
+        "x": 337.078125,
+        "y": 26355.734375,
+        "width": 67.34375,
+        "height": 32.65625,
+        "right": 404.421875,
+        "bottom": 26388.390625
+      },
+      "text": "x+y―",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-9",
+      "native": {
+        "x": 1021.71875,
+        "y": 26476.359375,
+        "width": 65.0625,
+        "height": 42.96875,
+        "right": 1086.78125,
+        "bottom": 26519.328125
+      },
+      "reference": {
+        "x": 333.921875,
+        "y": 26474.859375,
+        "width": 73.65625,
+        "height": 56.796875,
+        "right": 407.578125,
+        "bottom": 26531.65625
+      },
+      "text": "x+y⏟z",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    },
+    {
+      "id": "core-10",
+      "native": {
+        "x": 1032.03125,
+        "y": 26611.546875,
+        "width": 44.4375,
+        "height": 24.578125,
+        "right": 1076.46875,
+        "bottom": 26636.125
+      },
+      "reference": {
+        "x": 351.671875,
+        "y": 26608.078125,
+        "width": 38.140625,
+        "height": 26.578125,
+        "right": 389.8125,
+        "bottom": 26634.65625
+      },
+      "text": "xyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "pua": 0
+    }
+  ]
+}

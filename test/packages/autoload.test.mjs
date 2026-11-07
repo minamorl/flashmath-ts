@@ -11,5 +11,5 @@ test('autoload registers command triggers and honors disabled triggers',()=>{
 });
 test('autoload keeps remaining triggers after loading another package',()=>{
  const output=toMathMLString(parseToMathMLAst(String.raw`\verb|x|\def\x{y}\x`,{packages:['base','autoload']}));
- assert.match(output,/<mtext mathvariant="monospace">x<\/mtext><mi>y<\/mi>/);
+ assert.match(output,/<mtext style="font-family:monospace">x<\/mtext><mi>y<\/mi>/);
 });

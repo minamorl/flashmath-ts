@@ -41,7 +41,7 @@ export interface MathMLNode {
   start: number;
 }
 export interface OutputOptions {
-  /** Native browser glyphs by default; mathjax preserves MathJax font codes. */
+  /** MathML Core + inline CSS by default; mathjax preserves upstream markup. */
   output?: 'native' | 'mathjax';
 }
 export interface ParseOptions extends OutputOptions {

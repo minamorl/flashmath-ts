@@ -406,7 +406,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
   if(bare==='equation'){
     const numbered=!starred&&p.options.tags!==undefined&&p.options.tags!=='none';
     p.hasTaggableEnvironment=true;
-    p.frame(-4,false,n=>{const tag=equationTags.get(frame);if(numbered&&!unnumberedEquations.has(frame)||tag)append(p.node(K.mtable,[p.node(K.mlabeledtr,[tag?tagCell(p,tag.tag,p.label,tag.starred):p.labelCell(p.label),p.node(K.mtd,n)])],'',{displaystyle:'true'}));else if(done)done(p.row(n));else for(const x of n)append(x);},name);const frame=p.f;return;
+    p.frame(-4,false,n=>{const tag=equationTags.get(frame);if(numbered&&!unnumberedEquations.has(frame)||tag)append(p.node(K.mtable,[p.node(K.mlabeledtr,[tag?tagCell(p,tag.tag,p.label,tag.starred):p.labelCell(p.label),p.node(K.mtd,n)])],'',{displaystyle:'true',...(p.options.tagSide==='left'?{side:'left'}:{}),...(p.options.tagIndent&&p.options.tagIndent!=='0.8em'?{minlabelspacing:p.options.tagIndent}:{})}));else if(done)done(p.row(n));else for(const x of n)append(x);},name);const frame=p.f;return;
   }
   const surroundingLevel=p.f.level;
   const matrix=bare.includes('matrix')||bare==='subarray'||bare==='cases';

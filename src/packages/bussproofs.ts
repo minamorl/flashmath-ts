@@ -44,11 +44,11 @@ function sequentContent(p:Parser,done:(n:Node)=>void) {
  if(!closed)p.error('Missing closing $');
  const middle=tokens.findIndex(t=>t[0]===-1&&raw([t])==='\\fCenter');
  if(middle<0)p.error('Missing \\fCenter in '+p.currentCommand+'.');
- p.parseTokens(tokens.slice(0,middle),left=>p.parseTokens(tokens.slice(middle+1),right=>{
+ p.parseTokens(tokens.slice(0,middle),left=>p.parseTokens(tokens.slice(middle+1),right=>p.parseTokens(scan('\\fCenter'),center=>{
   const sequence=(n:Node)=>n.inferred?n.children:[n];
-  const table=p.node(K.mtable,[p.node(K.mtr,[p.node(K.mtd,sequence(left)),p.node(K.mtd),p.node(K.mtd,sequence(right))])],'',{columnspacing:'.5ex',columnalign:'center 2'});
+  const table=p.node(K.mtable,[p.node(K.mtr,[p.node(K.mtd,sequence(left)),p.node(K.mtd,sequence(center)),p.node(K.mtd,sequence(right))])],'',{columnspacing:'.5ex',columnalign:'center 2'});
   property(tree(p),table,'sequent','true');done(table);
- }));
+ })));
 }
 const commands:Record<string,TexCommand>={};
 for(const name of ['Axiom','AX'])commands[name]={execute(p){const t=tree(p);content(p,false,n=>{property(t,n,'axiom','true');t.stack.push(n);},true);}};

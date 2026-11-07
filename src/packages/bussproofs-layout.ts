@@ -61,13 +61,34 @@ export function balanceProof(p:Parser,root:Node,inferences:Node[],props:Properti
    let value=margins.get(inf);if(!value)margins.set(inf,value={left:0,right:0});value[right?'right':'left']+=amount;
    inf.attributes.style=(['left','right'] as const).filter(key=>value![key]).map(key=>`margin-${key}: ${em(value![key])}`).join('; ');
  }
+ // Upstream adjusts unary chains pairwise, starting at each final sequent.
+ // Equal-width sides still receive an explicit zero space and semantic mark.
+ parentMap();
  const sequents=[...props].filter(([,v])=>v.has('sequent')).map(([n])=>n);
- const maxLeft=Math.max(0,...sequents.map(n=>bbox(n.children[0].children[0]).w));
- const maxRight=Math.max(0,...sequents.map(n=>bbox(n.children[0].children[2]).w));
- for(const n of sequents){const cells=n.children[0].children;
-  for(const [index,max,side]of [[0,maxLeft,'left'],[2,maxRight,'right']] as const){
-   const delta=max-bbox(cells[index]).w;
-   if(delta>0){const space=p.node(K.mspace,[],'',{width:em(delta)});if(index===0)cells[index].children.unshift(space);else cells[index].children.push(space);set(n,'sequentAdjust_'+side,String(delta));}
+ const processed=new Set<Node>();
+ for(const seq of [...sequents].reverse()){
+  if(processed.delete(seq))continue;
+  let inf:Node|undefined=seq;
+  while(inf&&get(inf,'inference')===undefined)inf=parents.get(inf);
+  if(get(inf,'inference')!=='1')continue;
+  const chain=[seq];
+  while(inf&&get(inf,'inference')==='1'){
+   const first=premises(rule(inf)).children[0].children[0];
+   const next=get(first,'inferenceRule')?conclusion(first):first;
+   if(get(next,'sequent')){chain.push(next);processed.add(next);}
+   inf=first;
+  }
+  let top=chain.pop()!;
+  while(chain.length){
+   const bottom=chain.pop()!;
+   if(get(top,'axiom'))for(const [index,side]of [[0,'left'],[2,'right']] as const){
+    const delta=bbox(top.children[0].children[index]).w-bbox(bottom.children[0].children[index]).w;
+    const target=delta<0?top:bottom,cells=target.children[0].children;
+    const space=p.node(K.mspace,[],'',{width:em(Math.abs(delta))});
+    if(index===0)cells[index].children.unshift(space);else cells[index].children.push(space);
+    set(target,'sequentAdjust_'+side,String(Math.abs(delta)));
+   }
+   top=bottom;
   }
  }
  parentMap();let maxAdjust=0;
