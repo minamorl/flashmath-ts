@@ -1,0 +1,89 @@
+{
+  "totalHits": 2405,
+  "rows": [
+    {
+      "name": "o",
+      "hits": 276,
+      "file": "chunk-KDAOMSCC.js",
+      "column": 161,
+      "source": "(e){if(e===void 0)return\"u\";if(e===null)return\"null\";if(typeof e==\"string\")return JSON.stringify(e);if(typeof e==\"boolean\")return String(e);if(typeof e==\"number\")return\"n\"+(Object.is(e,-0)?\"-0\":String(e));if(e "
+    },
+    {
+      "name": "Z",
+      "hits": 270,
+      "file": "chunk-2MTPWNRJ.js",
+      "column": 12282,
+      "source": "(t,i={}){let r=i.output===void 0?\"native\":i.output;if(r!==\"native\"&&r!==\"mathjax\")throw new TypeError(\"output must be native or mathjax\");if(r===\"mathjax\")return t;let o=[t],c=!1;for(;o.length;){let n=o.pop(),d"
+    },
+    {
+      "name": "run",
+      "hits": 161,
+      "file": "chunk-YAC5UVMF.js",
+      "column": 24003,
+      "source": "(){for(;this.frames.length;){for(;this.f?.single&&this.f.nodes.length;)this.close();if(!this.frames.length)break;let e=this.stream.next();if(!e){this.frames.length!==1&&this.error(this.f.missingMessage??(this.f"
+    },
+    {
+      "name": "m",
+      "hits": 132,
+      "file": "index.js",
+      "column": 400,
+      "source": "(e,a={}){let r=\"\",n=[p(e,a)];for(;n.length;){let t=n.pop();if(typeof t==\"string\"){r+=t;continue}if(t.kind===\"#text\"){r+=s(t.text);continue}r+=\"<\"+t.kind;for(let o of Object.keys(t.attributes))r+=\" \"+o+'=\"'+s(t."
+    },
+    {
+      "name": "ri",
+      "hits": 87,
+      "file": "chunk-DZCWHFOG.js",
+      "column": 107529,
+      "source": "(e){let t={kind:kr[e.kind],attributes:e.attributes,children:[],text:e.text,start:e.start},n=[[e,t,0]];for(Bt(e,t);n.length;){let[r,a,o]=n.pop();for(let s of r.children){if(r.tokenCellSpacing&&s.kind===23&&a.chi"
+    },
+    {
+      "name": "m",
+      "hits": 83,
+      "file": "chunk-2MTPWNRJ.js",
+      "column": 13042,
+      "source": "n=>S(n)?{...n,kind:\"mrow\",attributes:{},children:[]}:{...n,attributes:{...n.attributes},children:[]},l=m(t),u=\"tagSide\"in i&&i.tagSide===\"left\"?\"left\":\"right\",p=!1,s=[{input:t,output:l,variant:\"\",done:!1}];for("
+    },
+    {
+      "name": "b",
+      "hits": 73,
+      "file": "chunk-YAC5UVMF.js",
+      "column": 2705,
+      "source": "(e,t,n=V(t.packages),i=A()){this.tex=e;this.options=t;this.configuration=n;this.session=i;if(this.macros=i.macros,this.environments=i.environments,this.numbered=t.tags===\"all\"&&!!t.display,this.stream=new O(x(e"
+    },
+    {
+      "name": "Te",
+      "hits": 71,
+      "file": "chunk-YAC5UVMF.js",
+      "column": 32326,
+      "source": "(b,e={}){let t=$(e);return t.options.prior?.length?le(e).parse(b):D(ie(b,t.options,t.configuration,A()),t.options)}export{le as a,Te as b};\n"
+    },
+    {
+      "name": "C",
+      "hits": 68,
+      "file": "chunk-DZCWHFOG.js",
+      "column": 108515,
+      "source": "(e,t=2e5){let n=[];for(let r=0;r<e.length;){let a=r,o=e.charCodeAt(r++);if(n.length>=t)throw new he(\"Token limit exceeded\",a);if(o<32&&o!==9&&o!==10&&o!==13||o>=56320&&o<=57343||o===65534||o===65535)throw new h"
+    },
+    {
+      "name": "get f",
+      "hits": 65,
+      "file": "chunk-YAC5UVMF.js",
+      "column": 3951,
+      "source": "(){return this.frames[this.frames.length-1]}frame(e,t,n,i=\"\",s=null){this.frames.length>=(this.options.maxDepth??(this.configuration.extensions.has(\"ce\")?this.options.maxTokens??2e5:1024))&&this.error(\"Nesting "
+    },
+    {
+      "name": "ie",
+      "hits": 58,
+      "file": "chunk-YAC5UVMF.js",
+      "column": 31452,
+      "source": "(b,e,t,n){if(typeof b!=\"string\")throw new TypeError(\"TeX input must be a string\");let i;try{return i=new F(b,e,t,n),i.run()}catch(s){if(!(s instanceof M)&&!(s instanceof Error&&s.message===\"Token limit exceeded"
+    },
+    {
+      "name": "A",
+      "hits": 58,
+      "file": "chunk-YAC5UVMF.js",
+      "column": 2465,
+      "source": "(){return{packageData:new Map,macros:new Map,environments:new Map,labels:new Map,counter:0,initialized:!1}}ae();re();var te=\"http://www.w3.org/1998/Math/MathML\",v=b=>b>=48&&b<=57,ee=(b,e)=>!!b&&b[0]===e[0]&&g(b"
+    }
+  ]
+}

@@ -22,10 +22,15 @@ test('array ll preserves math tokens in the second column with and without ams',
   const bodies = [String.raw`1&2`, String.raw`a&b`, String.raw`x&y+z`, String.raw`a_2&b^3`,
     String.raw`\alpha&\beta`, String.raw`u&\frac{v}{w}`, String.raw`3&\sqrt{x}`, String.raw`a&\mathrm{word}`,
     String.raw`q&\mathbf{X}`, String.raw`r&\text{condition}`, String.raw`5&6\\s&t`, String.raw`i&\sin x`,
-    String.raw`a+b&c-d`, String.raw`x&{y}`, String.raw`m&n_0`, String.raw`a&\text{if $x$}`];
+    String.raw`a+b&c-d`, String.raw`x&{y}`, String.raw`m&n_0`, String.raw`a&\text{if $x$}`,
+    String.raw`q_7&r_9+s_3`, String.raw`p_7&\left(q_9+r_3\right)`, String.raw`t_7&\bar{u}_9`, String.raw`v_7&\hat{w}_9`,
+    String.raw`x_7&\cos y_9`, String.raw`y_7&\sin z_9`, String.raw`z_7&\sum_{j=3}^7 q_j`, String.raw`p_9&\int_0^7 r\,dr`,
+    String.raw`\frac{q_7}{r_9}&s_3`, String.raw`\sqrt{p_7}&q_9^3`, String.raw`\Gamma_7&\Delta_9`, String.raw`\alpha_7&\beta_9`,
+    String.raw`q_7&\mathsf{QR}`, String.raw`r_7&\mathtt{PQ}`, String.raw`s_7&\text{fresh $q_9$}`, String.raw`t_7&\frac{u_9+v_3}{w_5}`];
   for (const align of ['ll','cc','lr','rl','l','lll','l|l','cl']) for (const body of bodies) {
     for (const packages of [['base'], ['base','ams']]) cases.push({tex:`\\begin{array}{${align}}${body}\\end{array}`, packages, display:true});
   }
+  assert.ok(new Set(cases.filter(c=>c.tex.startsWith('\\begin{array}{ll}')).map(c=>c.tex)).size >= 30, '30 distinct ll formulas independently of control alignments and package choices');
   await compareCases(t, cases);
 });
 

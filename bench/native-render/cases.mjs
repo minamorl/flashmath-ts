@@ -24,5 +24,5 @@ for(const up of ['',String.raw`\rootAtTop`])for(const side of ['LeftLabel','Righ
 // Independent polish regressions, exercised in the actual browser as well.
 for(const tex of [String.raw`\begin{array}{ll}a&b\\1&2\end{array}`,String.raw`x+7\tag{$*$}`,String.raw`x+7\tag{$\dagger$}`,String.raw`\mathop{\mathrm{ab}}x`,String.raw`\mathop{\mathbf{X}}_7x`,String.raw`\mathop{\mathrm{ess\,sup}}x`])add('polish',tex,['ams']);
 add('polish','\\ce{H'.repeat(8)+'O'+'}'.repeat(8),['mhchem']);
-add('polish',String.raw`\boldsymbol{\alpha+\Gamma+x^2}`,['boldsymbol']);
+add('polish',String.raw`\boldsymbol{\alpha+\Gamma+x^2+\mathit{B}}`,['boldsymbol']);
 add('polish',String.raw`\verb|x { y % z|+q_7`,['verb']);

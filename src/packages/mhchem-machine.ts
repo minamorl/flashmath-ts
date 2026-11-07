@@ -211,31 +211,43 @@ const fields:Partial<Record<A,string>>={[A.SetA]:'a',[A.SetB]:'b',[A.SetP]:'p',[
 const arrowNames:Record<string,string>={'->':'rightarrow','→':'rightarrow','⟶':'rightarrow','<-':'leftarrow','<->':'leftrightarrow','<-->':'leftrightarrows','<=>':'rightleftharpoons','⇌':'rightleftharpoons','<=>>':'Rightleftharpoons','<<=>':'Leftrightharpoons'};
 const bondTex:Record<string,string>={'-':'{-}','1':'{-}','=':'{=}','2':'{=}','#':'{\\equiv}','≡':'{\\equiv}','3':'{\\equiv}','~':'{\\tripledash}','~-':'{\\mhchemBondTD}','~--':'{\\mhchemBondTDD}','~=':'{\\mhchemBondTDD}','-~-':'{\\mhchemBondDTD}','...':'{{\\cdot}{\\cdot}{\\cdot}}','....':'{{\\cdot}{\\cdot}{\\cdot}{\\cdot}}','->':'{\\mhchemrightarrow}','<-':'{\\mhchemleftarrow}','<':'{<}','>':'{>}' };
 const inserts:Record<string,string>={'space':' ','tinySkip':'\\mkern2mu','entitySkip':'~','pu-space-1':'~','pu-space-2':'\\mkern3mu ','1000 separator':'\\mkern2mu ','commaDecimal':'{,}','hyphen':'\\text{-}','addition compound':'\\,{\\cdot}\\,','electron dot':'\\mkern1mu \\bullet\\mkern1mu ','KV x':'{\\times}','prime':'\\prime ','cdot':'\\cdot ','tight cdot':'\\mkern1mu{\\cdot}\\mkern1mu ','times':'\\times ','circa':'{\\sim}','ellipsis':'\\ldots ','/':'/',' / ':'\\,/\\,'};
-type Request = {text:Text;machine:M};
-type Work = Generator<Request,Item[],Item[]>;
+interface Request {text:Text;machine:M}
+interface Deferred {requests:Request[];finish:(results:Item[][])=>Item[]}
+type Result=Item[]|Deferred;
+type Work=Generator<Deferred,Item[],Item[]>;
+const noItems:Item[]=[];
+const after=(result:Result,finish:(items:Item[])=>Item[]):Result=>Array.isArray(result)?finish(result):{requests:result.requests,finish:items=>finish(result.finish(items))};
 export class MhchemMachine {
   constructor(readonly fail:(message:string)=>never,readonly maxDepth=200000){}
   run(text:Text,machine:M):Item[] {
-    // Only chemistry work occupies this stack; JS call depth is constant.
-    const stack:Work[]=[this.steps(text,machine)];
-    let result:Item[]=[];
+    type Frame={work:Work;pending?:Deferred;results:Item[][];index:number;resume:Item[]};
+    const frame=(r:Request):Frame=>({work:this.steps(r.text,r.machine),results:[],index:0,resume:noItems});
+    const stack:Frame[]=[frame({text,machine})];
     while(stack.length){
-      const step=stack[stack.length-1].next(result);
-      if(step.done){result=step.value;stack.pop();continue;}
-      const child=step.value;
-      result=[];
-      if(!nonempty(child.text))continue;
-      if(stack.length>=this.maxDepth)this.fail('Nesting limit exceeded');
-      stack.push(this.steps(child.text,child.machine));
+      const current=stack[stack.length-1];
+      if(current.pending){
+        if(current.index<current.pending.requests.length){
+          const child=current.pending.requests[current.index++];
+          if(!nonempty(child.text)){current.results.push(noItems);continue;}
+          if(stack.length>=this.maxDepth)this.fail('Nesting limit exceeded');
+          stack.push(frame(child));continue;
+        }
+        current.resume=current.pending.finish(current.results);
+        current.pending=undefined;current.results=[];current.index=0;
+      }
+      const step=current.work.next(current.resume);
+      if(step.done){stack.pop();if(!stack.length)return step.value;stack[stack.length-1].results.push(step.value);}
+      else current.pending=step.value;
     }
-    return result;
+    return [];
   }
   private *steps(text:Text,machine:M):Work {
     if(!nonempty(text))return [];
     const v=new View(text),g=chemistryGrammar()[machine],buf:Buffer={fields:{},sb:false,bond:false,parentheses:0,defect:false,oxidation:false},out:Item[]=[];
     let state=g.start,i=0,stalled=0;
-    function* go(t:Text=[],m:M=machine):Work {return yield {text:t,machine:m};}
-    function* render(t:Text=[],m:M=machine):Generator<Request,string,Item[]> {return join(yield* go(t,m));}
+    const request=(text:Text=[],machine:M):Request=>({text,machine});
+    const defer=(requests:Request[],finish:Deferred['finish']):Deferred=>({requests,finish});
+    const go=(text:Text=[],machine:M):Result=>nonempty(text)?defer([request(text,machine)],items=>items[0]):noItems;
     const reset=()=>{buf.fields={};buf.sb=false;buf.defect=false;buf.oxidation=false;};
     const operator=(t:Text,option:Option)=>{
       const name=typeof option==='string'?option:emit(t);
@@ -246,14 +258,13 @@ export class MhchemMachine {
     };
     const bond=(t:Text,option:Option)=>{const name=typeof option==='string'?option:emit(t);if(!Object.hasOwn(bondTex,name))this.fail('mhchem bug T. Please report.');return item(bondTex[name]);};
     const clearOutput=(s:string)=>{reset();return [item(s)];};
-    const fail=this.fail;
-    const output=function*(follows:Option=null):Work {
+    const output=(follows:Option=null):Result=>{
       const f=buf.fields;
       switch(machine){
         case M.Text:{if(!nonempty(f.text))return [];const view=new View(f.text);let special=false;for(let k=0;k<view.length;k++)if(view.c(k)===94||view.c(k)===95)special=true;let value=view.emit();
           if(special){let s='',space=false,hyphen=false;for(let k=0;k<view.length;k++){const c=view.c(k);if(c===32&&!space){s+='~';space=true;}else if(c===45&&!hyphen){s+='\\text{-}';hyphen=true;}else s+=String.fromCharCode(c);}value='\\mathrm{'+s+'}';}else value='\\text{'+value+'}';return clearOutput(value);}
         case M.Math:case M.MathTight:return nonempty(f.o)?clearOutput(emit(f.o)+' '):[];
-        case M.Unit:{if(!nonempty(f.rm))return [];const vv=new View(f.rm),group=match(vv,0,P.Group);const result=group?.end===vv.length?(yield* go(group.value,M.Pu)):[item('\\mathrm{'+emit(f.rm)+'}')];reset();return result;}
+        case M.Unit:{if(!nonempty(f.rm))return [];const vv=new View(f.rm),group=match(vv,0,P.Group);const result=group?.end===vv.length?go(group.value,M.Pu):[item('\\mathrm{'+emit(f.rm)+'}')];return after(result,result=>{reset();return result;});}
         case M.Pu:{let d=f.d??[],q=f.q??[];
           const strip=(t:Text)=>{const vv=new View(t),m=match(vv,0,P.Group);return m?.end===vv.length?m.value:t;};
           d=strip(d);q=strip(q);
@@ -261,16 +272,23 @@ export class MhchemMachine {
             for(let k=0;k<vv.length;k++){let end=-1;if(vv.c(k)===176&&(vv.c(k+1)===67||vv.c(k+1)===70))end=k+1;else if(vv.at('^o',k)&&(vv.c(k+2)===67||vv.c(k+2)===70))end=k+2;else if(vv.at('^{o}',k)&&(vv.c(k+4)===67||vv.c(k+4)===70))end=k+4;
               if(end>=0){pieces.push(...vv.span(last,k),...literal('{}^{\\circ}'));last=end;k=end-1;}}
             pieces.push(...vv.span(last));return pieces;};
-          d=degrees(d);let result:Item[];
-          if(nonempty(q)){q=degrees(q);const top=(yield* go(d,M.Pu)),bottom=(yield* go(q,M.Pu));result=emit(f.o)==='//'
-              ?[item(`\\flashmathChemFraction{${join(top)}}{${join(bottom)}}`)]
-              :[...top,item(top.length>1||bottom.length>1?'\\,/\\,':'/'),...bottom];}
-          else result=(yield* go(d,M.Unit));
-          reset();return result;
+          d=degrees(d);
+          if(nonempty(q)){
+            q=degrees(q);
+            return defer([request(d,M.Pu),request(q,M.Pu)],([top,bottom])=>{
+              const result=emit(f.o)==='//'
+                ?[item(`\\flashmathChemFraction{${join(top)}}{${join(bottom)}}`)]
+                :[...top,item(top.length>1||bottom.length>1?'\\,/\\,':'/'),...bottom];
+              reset();return result;
+            });
+          }
+          return after(go(d,M.Unit),result=>{reset();return result;});
         }
         case M.Ce:{
           if(nonempty(f.r)){
-            const topMode=emit(f.rdt),bottomMode=emit(f.rqt),top=topMode==='M'?(yield* render(f.rd,M.Math)):topMode==='T'?'\\text{'+emit(f.rd)+'}':(yield* render(f.rd,M.Ce)),bottom=bottomMode==='M'?(yield* render(f.rq,M.Math)):bottomMode==='T'?'\\text{'+emit(f.rq)+'}':(yield* render(f.rq,M.Ce));
+            const topMode=emit(f.rdt),bottomMode=emit(f.rqt);
+            return defer([request(topMode==='T'?[]:f.rd,topMode==='M'?M.Math:M.Ce),request(bottomMode==='T'?[]:f.rq,bottomMode==='M'?M.Math:M.Ce)],([one,two])=>{
+            const top=topMode==='T'?'\\text{'+emit(f.rd)+'}':join(one),bottom=bottomMode==='T'?'\\text{'+emit(f.rq)+'}':join(two);
             const name=arrowNames[emit(f.r)];let arrow=`\\mhchemlong${name}`;
             if(top||bottom){if(name==='rightleftharpoons'||name==='Rightleftharpoons'||name==='Leftrightharpoons'){
                 // Upstream replacement changes overset to xArrow, but leaves its
@@ -281,13 +299,15 @@ export class MhchemMachine {
               else arrow=`\\mhchemx${name}${bottom?'[{'+bottom+'}]':''}{${top}}`;
             }
             return clearOutput(` {}\\flashmathChemRel{${arrow}}{} `);
+            });
           }
           if(!['a','b','p','o','q','d'].some(k=>nonempty(f[k]))&&!follows){reset();return [];}
           if(!['o','q','d','b','p'].some(k=>nonempty(f[k]))&&follows!==2){f.o=f.a;delete f.a;}
           else if(!['o','q','d'].some(k=>nonempty(f[k]))&&(nonempty(f.b)||nonempty(f.p))){f.o=f.a;f.d=f.b;f.q=f.p;delete f.a;delete f.b;delete f.p;}
           else if(nonempty(f.o)&&buf.defect&&match(new View(f.d??[]),0,P.Oxidation))buf.oxidation=true;
           else if(nonempty(f.o)&&buf.defect&&!nonempty(f.q))buf.defect=false;
-          const amount=(yield* render(f.a,M.Amount)),top=(yield* render(f.b,M.Sup)),bottom=(yield* render(f.p,M.Sub)),body=(yield* render(f.o,M.Body)),sub=(yield* render(f.q,M.Sub)),sup=(yield* render(f.d,buf.oxidation?M.Oxidation:M.Sup));
+          return defer([request(f.a,M.Amount),request(f.b,M.Sup),request(f.p,M.Sub),request(f.o,M.Body),request(f.q,M.Sub),request(f.d,buf.oxidation?M.Oxidation:M.Sup)],items=>{
+          const [amount,top,bottom,body,sub,sup]=items.map(join);
           const signed=(s:string)=>s.charCodeAt(0)===43||s.charCodeAt(0)===45?'{'+s+'}':s;
           let tex=buf.sb?'~':'';if(amount)tex+=signed(amount)+'\\,';
           if(top||bottom)tex+=`\\flashmathChemIsotope{${top}}{${bottom}}`;
@@ -297,17 +317,17 @@ export class MhchemMachine {
           else if(buf.oxidation){if(sup)tex+=phantom+`^{${sup}}`;if(sub)tex+=phantom+subTex;}
           else {if(sub)tex+=phantom+subTex;if(sup)tex+=phantom+`^{${sup}}`;}
           return clearOutput(tex);
+          });
         }
         default:return [];
       }
     };
-    const act=function*(a:A,m:Match,option:Option):Work {
-      const f=buf.fields,field=fields[a];
-      if(field){f[field]=append(f[field],m.value);return [];}
+    const act=(a:A,m:Match,option:Option):Result=>{
+      const f=buf.fields;
       switch(a){
         case A.Copy:return [item(emit(m.value))];case A.Write:return [item(String(option))];
-        case A.Ce:return (yield* go(m.value,M.Ce));case A.Pu:return (yield* go(m.value,M.Pu));
-        case A.Output:return (yield* output(option));
+        case A.Ce:return go(m.value,M.Ce);case A.Pu:return go(m.value,M.Pu);
+        case A.Output:return output(option);
         case A.NotBond:buf.bond=false;return [];case A.BeginsBond:buf.bond=true;return [];
         case A.NoSpace:buf.sb=false;return [];case A.SpaceBefore:buf.sb=true;return [];
         case A.Open:buf.parentheses++;return [];case A.Close:buf.parentheses--;return [];
@@ -316,54 +336,60 @@ export class MhchemMachine {
         case A.AppendO:f.o=append(f.o,literal(String(option)));return [];
         case A.TightOperator:f.o=append(f.o,append(literal('{'),append(m.value,literal('}'))));return [];
         case A.Operator:return [operator(m.value,option)];case A.Bond:return [bond(m.value,option)];
-        case A.ChargeOrBond:if(buf.bond)return [...(yield* output()),bond(m.value,'-')];f.d=m.value;return [];
+        case A.ChargeOrBond:if(buf.bond)return after(output(),items=>[...items,bond(m.value,'-')]);f.d=m.value;return [];
         case A.MinusAfter:{const body=new View(f.o??[]),orb=match(body,0,P.Orbital),greek=match(body,0,P.GreekEnd),latin=match(body,0,P.LatinEnd),mathLatin=match(body,0,P.MathLatinEnd);
           const hyphen=(orb?.end===body.length||greek||latin||mathLatin)&&new View(m.value).equal('-');
           if(hyphen&&!['a','b','p','d','q'].some(k=>nonempty(f[k]))&&!orb&&latin)f.o=append(literal('$'),append(f.o,literal('$')));
-          if(hyphen)return [...(yield* output()),item('\\text{-}')];
+          if(hyphen)return after(output(),items=>[...items,item('\\text{-}')]);
           const d=new View(f.d??[]),digits=match(d,0,P.Digits);
           if(option&&digits?.end===d.length)f.d=append(f.d,m.value);
-          else return [...(yield* output()),bond(m.value,'-')];
-          return (yield* output());
+          else return after(output(),items=>[...items,bond(m.value,'-')]);
+          return output();
         }
-        case A.BodyAfter:{const d=new View(f.d??[]);const num=match(d,0,P.Digits);let result:Item[];
-          if(d.c(0)>=49&&d.c(0)<=57&&num?.end===d.length){const top=f.d;delete f.d;result=[...(yield* output()),item('\\mkern2mu')];buf.fields.b=top;}
-          else result=(yield* output());buf.fields.o=append(buf.fields.o,m.value);return result;}
-        case A.OxidationOutput:return [item('{'+(yield* render(m.value,M.Oxidation))+'}')];
+        case A.BodyAfter:{const d=new View(f.d??[]),num=match(d,0,P.Digits);
+          if(d.c(0)>=49&&d.c(0)<=57&&num?.end===d.length){const top=f.d;delete f.d;return after(output(),items=>{buf.fields.b=top;buf.fields.o=append(buf.fields.o,m.value);return [...items,item('\\mkern2mu')];});}
+          return after(output(),items=>{buf.fields.o=append(buf.fields.o,m.value);return items;});}
+        case A.OxidationOutput:return after(go(m.value,M.Oxidation),items=>[item('{'+join(items)+'}')]);
         case A.RomanNumeral:return [item('\\mathrm{'+emit(f.o)+'}')];
-        case A.State:return [item(`\\mskip${machine===M.Sub?1:2}mu `+(yield* render(m.value,M.Body)))];
+        case A.State:return after(go(m.value,M.Body),items=>[item(`\\mskip${machine===M.Sub?1:2}mu `+join(items))]);
         case A.Comma:if(machine===M.Decimal||machine===M.UnitNumber)return [item('{,}')];{
           const vv=new View(m.value),withSpace=white(vv.c(vv.length-1));let end=vv.length;while(white(vv.c(end-1)))end--;
           return [item('{'+vv.emit(0,end)+'}\\mkern'+(withSpace&&buf.parentheses===0?6:3)+'mu ')];}
-        case A.Insert:{const s=String(option);if(!Object.hasOwn(inserts,s))fail('Unknown mhchem insertion '+s);return [item(inserts[s])];}
+        case A.Insert:{const s=String(option);if(!Object.hasOwn(inserts,s))this.fail('Unknown mhchem insertion '+s);return [item(inserts[s])];}
         case A.InsertValue:{if(option==='1st-level escape')return [item(emit(m.value)+' ',true)];const width=option==='comma enumeration S'?1:option==='comma enumeration M'?3:6;return [item('{'+emit(m.value)+'}\\mkern'+width+'mu ')];}
         case A.Roman:return [item('\\mathrm{'+emit(m.value)+'}')];
-        case A.Math:return (yield* go(m.value,M.Math));case A.MathTight:return (yield* go(m.value,M.MathTight));case A.Text:return (yield* go(m.value,M.Text));case A.Decimal:return (yield* go(m.value,M.Decimal));
+        case A.Math:return go(m.value,M.Math);case A.MathTight:return go(m.value,M.MathTight);case A.Text:return go(m.value,M.Text);case A.Decimal:return go(m.value,M.Decimal);
         case A.Color0:return [item('\\color{'+emit(m.value)+'}')];
-        case A.Color:{const group=m.groups!;return [item('{\\color{'+emit(group[0])+'}{'+(yield* render(group[1],machine===M.Sub||machine===M.Sup?machine:M.Ce))+'}}')];}
-        case A.Fraction:case A.Overset:case A.Underset:case A.Underbrace:{const group=m.groups!,one=(yield* render(group[0],M.Ce)),two=(yield* render(group[1],M.Ce)),cmd=a===A.Fraction?'frac':a===A.Overset?'overset':a===A.Underset?'underset':'underbrace';return [item(a===A.Underbrace?`\\underbrace{${one}}_{${two}}`:`\\${cmd}{${one}}{${two}}`)];}
+        case A.Color:{const group=m.groups!;return after(go(group[1],machine===M.Sub||machine===M.Sup?machine:M.Ce),items=>[item('{\\color{'+emit(group[0])+'}{'+join(items)+'}}')]);}
+        case A.Fraction:case A.Overset:case A.Underset:case A.Underbrace:{const group=m.groups!,cmd=a===A.Fraction?'frac':a===A.Overset?'overset':a===A.Underset?'underset':'underbrace';return defer([request(group[0],M.Ce),request(group[1],M.Ce)],items=>{const [one,two]=items.map(join);return [item(a===A.Underbrace?`\\underbrace{${one}}_{${two}}`:`\\${cmd}{${one}}{${two}}`)];});}
         case A.AmountFraction:{const vv=new View(m.value);let j=0,sign='';if(vv.c(j)===43||vv.c(j)===45)sign=String.fromCharCode(vv.c(j++));let slash=j;while(slash<vv.length&&vv.c(slash)!==47)slash++;const end=vv.integer(slash+1,false);let numerator='';for(let k=j;k<slash;k++)if(vv.c(k)!==36)numerator+=String.fromCharCode(vv.c(k));let rest='';for(let k=end;k<vv.length;k++)if(vv.c(k)!==36)rest+=String.fromCharCode(vv.c(k));return [item(sign),item(`\\flashmathChemFraction{${numerator}}{${vv.emit(slash+1,end)}}`),...(rest?[item(rest+' ')]:[])];}
         case A.Space:return [item(machine===M.Unit?'\\mkern3mu ':'~')];case A.Dot:return [item('\\mkern1mu{\\cdot}\\mkern1mu ')];
         case A.UnitPower:f.rm=append(f.rm,append(literal('^{'),append(m.value,literal('}'))));return [];
-        case A.NumberPower:case A.Scientific:{const group=m.groups!,sign=new View(group[0]);const result:Item[]=[];
+        case A.NumberPower:case A.Scientific:{const group=m.groups!,sign=new View(group[0]),uncertainty=new View(group[2]??[]);let decimal=false;for(let k=0;k<uncertainty.length;k++)if(uncertainty.c(k)===44||uncertainty.c(k)===46)decimal=true;
+          return defer([request(group[1],M.UnitNumber),request(a===A.Scientific&&decimal?group[2]:[],M.UnitNumber)],([number,error])=>{const result:Item[]=[];
           if(sign.equal('+-')||sign.equal('+/-'))result.push(item('\\pm '));else if(sign.length)result.push(item(sign.emit()));
-          result.push(...(yield* go(group[1],M.UnitNumber)));
+          result.push(...number);
           if(a===A.NumberPower)result.push(item('^{'+emit(group[2])+'}'));
-          else {if(nonempty(group[2])){const uncertainty=new View(group[2]);let decimal=false;for(let k=0;k<uncertainty.length;k++)if(uncertainty.c(k)===44||uncertainty.c(k)===46)decimal=true;result.push(...(decimal?(yield* go(group[2],M.UnitNumber)):[item(uncertainty.emit())]));}
+          else {if(nonempty(group[2])){result.push(...(decimal?error:[item(uncertainty.emit())]));}
             if(nonempty(group[3])||nonempty(group[4]))result.push(item(emit(group[3])==='e'||emit(group[4])==='*'?'\\cdot ':'\\times '));
             if(nonempty(group[5]))result.push(item('10^{'+emit(group[5])+'}'));}
           return result;
+          });
         }
         case A.IntegerOutput:case A.DecimalOutput:{const vv=new View(f.text??[]);let result:Item[]=[];
           if(vv.length>4){let start=0,next=a===A.IntegerOutput?(vv.length%3||3):3;while(next<vv.length){result.push(item(vv.emit(start,next)),item('\\mkern2mu '));start=next;next+=3;}result.push(item(vv.emit(start)));}
           else result=[item(vv.emit())];reset();return result;}
-        default:return fail('Unknown mhchem action '+a);
+        default:return this.fail('Unknown mhchem action '+a);
       }
     };
     while(true){const old=i;let selected=false;
       for(const ruleId of g.states[state]){
         const [pattern,actions,next,flags]=g.rules[ruleId],m=match(v,i,pattern);if(!m)continue;selected=true;
-        for(const [action,option]of actions)for(const value of (yield* act(action,m,option)))out.push(value);
+        for(const [action,option]of actions){
+          const field=fields[action];if(field){buf.fields[field]=append(buf.fields[field],m.value);continue;}
+          const result=act(action,m,option),values=Array.isArray(result)?result:yield result;
+          for(const value of values)out.push(value);
+        }
         if(next>=0)state=next;
         if(i===v.length)return out;
         if(!(flags&1))i=m.end;

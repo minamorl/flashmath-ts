@@ -1,0 +1,206 @@
+{
+  "sourceSha256": "07fdc7a3facee9bc9fbb915550e4cf650020ca1687b545c7548e35b19e069701",
+  "node": "v26.12.1",
+  "createdAt": "2026-11-07T01:31:51.003Z",
+  "checks": [
+    {
+      "name": "build",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "scripts/build.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "tests",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "--test",
+        "--test-reporter=tap",
+        "test/core.test.mjs",
+        "test/hardening-compatibility.test.mjs",
+        "test/hardening.test.mjs",
+        "test/integration.test.mjs",
+        "test/native-render.test.mjs",
+        "test/packages-fonts.test.mjs",
+        "test/packages-misc.test.mjs",
+        "test/packages-pkg-physics.test.mjs",
+        "test/packages-references.test.mjs",
+        "test/polish-compatibility.test.mjs",
+        "test/react-properties.test.mjs",
+        "test/ssr-fixtures.test.mjs",
+        "test/symbol-trie.test.mjs",
+        "test/packages/action.test.mjs",
+        "test/packages/ams.test.mjs",
+        "test/packages/amscd.test.mjs",
+        "test/packages/autoload.test.mjs",
+        "test/packages/bbm.test.mjs",
+        "test/packages/bboldx.test.mjs",
+        "test/packages/bbox.test.mjs",
+        "test/packages/begingroup.test.mjs",
+        "test/packages/boldsymbol.test.mjs",
+        "test/packages/braket.test.mjs",
+        "test/packages/bussproofs.test.mjs",
+        "test/packages/cancel.test.mjs",
+        "test/packages/cases.test.mjs",
+        "test/packages/centernot.test.mjs",
+        "test/packages/color.test.mjs",
+        "test/packages/colortbl.test.mjs",
+        "test/packages/colorv2.test.mjs",
+        "test/packages/configmacros.test.mjs",
+        "test/packages/dsfont.test.mjs",
+        "test/packages/empheq.test.mjs",
+        "test/packages/enclose.test.mjs",
+        "test/packages/extpfeil.test.mjs",
+        "test/packages/fontsizev3.test.mjs",
+        "test/packages/gensymb.test.mjs",
+        "test/packages/html.test.mjs",
+        "test/packages/mathtools.test.mjs",
+        "test/packages/mhchem-generalization.test.mjs",
+        "test/packages/mhchem-output.test.mjs",
+        "test/packages/mhchem.test.mjs",
+        "test/packages/noerrors.test.mjs",
+        "test/packages/noundefined.test.mjs",
+        "test/packages/physics-scaling.test.mjs",
+        "test/packages/physics.test.mjs",
+        "test/packages/require.test.mjs",
+        "test/packages/setoptions.test.mjs",
+        "test/packages/tagformat.test.mjs",
+        "test/packages/texhtml.test.mjs",
+        "test/packages/textcomp.test.mjs",
+        "test/packages/textmacros.test.mjs",
+        "test/packages/unicode.test.mjs",
+        "test/packages/upgreek.test.mjs",
+        "test/packages/verb.test.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "harness",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "--test",
+        "--test-reporter=tap",
+        "conformance/harness.test.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "scoped-conformance",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/flashmath/conformance.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "conformance",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "conformance/runner.mjs",
+        "--subject",
+        "bench/flashmath/adapter.mjs",
+        "--output",
+        "bench/release/conformance.json",
+        "--fresh"
+      ],
+      "exit": 1,
+      "expected": 1
+    },
+    {
+      "name": "corpus",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/hardening/verify-corpus.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "bussproofs",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/release/bussproofs.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "grammar",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/flashmath/generate-mhchem-grammar.mjs",
+        "--check"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "compare",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/native-render/compare.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "screen",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/native-render/screen.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "visual",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/native-render/verify-screen.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "benchmark",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/hardening/bench-driver.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "benchmark-summary",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/hardening/report-benchmark.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "readme",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/release/readme.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "pack-smoke",
+      "command": [
+        "/home/minamorl/.nvm/versions/node/v26.12.1/bin/node",
+        "bench/release/pack.mjs"
+      ],
+      "exit": 0,
+      "expected": 0
+    }
+  ]
+}

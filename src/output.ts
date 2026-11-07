@@ -77,12 +77,16 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
   const pending = [root];
   let found = false;
   while (pending.length) {
-    const n = pending.pop()!, mark=packageMark(n), code = n.kind==='mo'&&n.text.length===1&&mark==='glyph'?n.text.charCodeAt(0):0, variant=n.attributes.mathvariant;
+    const n = pending.pop()!, variant=n.attributes['data-mjx-variant']??n.attributes.mathvariant;
+    if(variant && (variant!=='normal' && (variant!=='italic' || n.kind!=='mi' || !(n.text.length===1||n.text.length===2&&n.text.codePointAt(0)!>0xffff)) || n.kind==='mstyle')) {found=true;break;}
+    // Package provenance belongs to layout nodes and private-slot operators.
+    // Ordinary leaf tokens need only the variant check above.
+    if(!n.children.length&&(n.kind==='mi'||n.kind==='mn'||n.kind==='mtext'||n.kind==='mo'&&!(n.text.length===1&&n.text.charCodeAt(0)>=0xe400&&n.text.charCodeAt(0)<=0xe42e)))continue;
+    const mark=packageMark(n), code = n.kind==='mo'&&n.text.length===1&&mark==='glyph'?n.text.charCodeAt(0):0;
     if (glyph(code) || compound(code) || mark==='arrow-label'&&arrowLabel(n) || mark==='prescript' || mark==='bbox-padding'
       || n.kind==='menclose' || n.kind==='mlabeledtr' || isCenterOver(n)
       || overline(n)
-      || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame || n.attributes.semantics?.includes('bspr_inferenceRule:'))
-      || variant && (variant!=='normal' && (variant!=='italic' || n.kind!=='mi' || Array.from(n.text).length!==1) || n.kind==='mstyle')) {found = true; break;}
+      || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame || n.attributes.semantics?.includes('bspr_inferenceRule:'))) {found = true; break;}
     for (const child of n.children) pending.push(child);
   }
   if (!found) return root;

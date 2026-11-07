@@ -1,0 +1,146 @@
+[
+  {
+    "group": "boldsymbol",
+    "packages": [
+      "base",
+      "boldsymbol"
+    ],
+    "texOptions": {},
+    "configurationModules": [
+      "input/tex/boldsymbol/BoldsymbolConfiguration.js"
+    ],
+    "texs": [
+      "\\boldsymbol{\\alpha}",
+      "\\boldsymbol{\\Gamma}",
+      "\\boldsymbol{\\nabla}\\cdot v",
+      "\\boldsymbol{x^2}",
+      "\\boldsymbol{\\sum_i a_i}",
+      "\\boldsymbol{\\sqrt{x}}",
+      "\\boldsymbol{\\mathrm{A}}",
+      "\\boldsymbol{\\mathit{B}}",
+      "\\boldsymbol{\\mathcal{C}}",
+      "\\boldsymbol{\\mathfrak{d}}"
+    ],
+    "temml": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "group": "mhchem",
+    "packages": [
+      "base",
+      "mhchem"
+    ],
+    "texOptions": {},
+    "configurationModules": [
+      "input/tex/mhchem/MhchemConfiguration.js",
+      "input/tex/ams/AmsConfiguration.js"
+    ],
+    "texs": [
+      "\\ce{H2SO4}",
+      "\\ce{2H2 + O2 -> 2H2O}",
+      "\\ce{Fe^3+ + 3OH- <=> Fe(OH)3 v}",
+      "\\ce{NaOH(aq) + HCl(aq) -> NaCl(aq) + H2O(l)}",
+      "\\ce{CH3COOH}",
+      "\\ce{[Cu(NH3)4]^2+}",
+      "\\ce{SO4^2-}",
+      "\\ce{^{238}_{92}U}",
+      "\\ce{^{14}C}",
+      "\\ce{KCr(SO4)2*12H2O}"
+    ],
+    "temml": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "group": "begingroup",
+    "packages": [
+      "base",
+      "begingroup",
+      "newcommand"
+    ],
+    "texOptions": {},
+    "configurationModules": [
+      "input/tex/begingroup/BegingroupConfiguration.js",
+      "input/tex/newcommand/NewcommandConfiguration.js",
+      "input/tex/Configuration.js"
+    ],
+    "texs": [
+      "\\begingroup\\newcommand{\\p}{q}\\p\\endgroup",
+      "\\def\\z{0}\\begingroup\\def\\z{1}\\z\\endgroup\\z",
+      "\\begingroup a\\endgroup b",
+      "\\begingroup\\begingroup c\\endgroup\\endgroup",
+      "\\begingroup d",
+      "\\def\\m{A}\\begingroup\\global\\def\\m{B}\\endgroup\\m",
+      "\\begingroup\\gdef\\n{C}\\endgroup\\n",
+      "\\begingroup\\let\\o=\\alpha\\o\\endgroup",
+      "\\begingroup\\def\\r#1{#1^2}\\r{x}\\endgroup",
+      "\\newcommand{\\s}{1}\\begingroup\\renewcommand{\\s}{2}\\s\\endgroup\\s"
+    ],
+    "temml": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "group": "verb",
+    "packages": [
+      "base",
+      "verb"
+    ],
+    "texOptions": {},
+    "configurationModules": [
+      "input/tex/verb/VerbConfiguration.js"
+    ],
+    "texs": [
+      "\\verb|a b|",
+      "\\verb!x^2!",
+      "\\verb+\\frac{a}{b}+",
+      "\\verb*a b*",
+      "\\verb|{|",
+      "\\verb/%/",
+      "1+\\verb|x|+2",
+      "\\frac{\\verb|a|}{2}",
+      "\\verb||",
+      "\\verb|<&>|"
+    ],
+    "temml": [
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+]
