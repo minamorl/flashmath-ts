@@ -9,8 +9,9 @@ import {
   raw,
   letter,
   space,
+  groupEnd,
 } from "./scanner.js";
-import type { Token, Macro } from "./scanner.js";
+import type { Token, Macro, TokenSpan } from "./scanner.js";
 import { preamble } from "./preamble.js";
 import type { Preamble } from "./preamble.js";
 import { C, definitions, ranges } from "./symbols.js";
@@ -293,21 +294,22 @@ export class Parser {
     next();
   }
   tokensArgument(name = this.currentCommand): Token[] {
+    const span=this.argumentSpan(name);
+    return span.tokens.slice(span.start,span.end);
+  }
+  argumentSpan(name = this.currentCommand): TokenSpan {
     this.stream.skip();
-    const first = this.stream.next();
-    if (!first || first[0] === 0) this.error(`Missing argument for ${name}`);
-    if (first[0] === 125) this.error("Extra close brace or missing open brace");
-    if (first[0] !== 123) return [first];
-    const result: Token[] = [];
-    let depth = 1;
-    while (depth) {
-      const t = this.stream.next();
-      if (!t) this.error("Missing close brace");
-      if (t[0] === 123) depth++;
-      if (t[0] === 125) depth--;
-      if (depth) result.push(t);
+    const first=this.stream.next();
+    if(!first||first[0]===0)this.error(`Missing argument for ${name}`);
+    if(first[0]===125)this.error("Extra close brace or missing open brace");
+    if(first[0]!==123)return {tokens:[first],start:0,end:1};
+    const span=this.stream.takeGroup();if(span)return span;
+    // Expanded groups may cross buffers. Materialize only that boundary case.
+    const tokens:Token[]=[];let depth=1;
+    while(depth){const t=this.stream.next();if(!t)this.error("Missing close brace");
+      if(t[0]===123)depth++;if(t[0]===125)depth--;if(depth)tokens.push(t);
     }
-    return result;
+    return {tokens,start:0,end:tokens.length};
   }
   optional(): Token[] | null {
     this.stream.skip();
@@ -325,8 +327,11 @@ export class Parser {
     }
   }
   parseTokens(tokens: readonly Token[], done: (n: Node) => void) {
+    this.parseSpan({tokens,start:0,end:tokens.length},done);
+  }
+  parseSpan(span:TokenSpan, done:(n:Node)=>void) {
     this.stream.push([[0, 0, 0, ""]]);
-    this.stream.push(tokens);
+    this.stream.pushSpan(span);
     this.frame(-2, false, (n) => done(this.row(n)));
     this.f.argumentScope = true;
   }
@@ -363,12 +368,12 @@ export class Parser {
       if (!same(this.stream.next(), t))
         this.error("Use of macro doesn't match its definition");
     }
-    const args: Token[][] = [];
-    if (m.optional) args.push(this.optional() ?? [...m.optional]);
+    const args: TokenSpan[] = [];
+    if(m.optional){const tokens=this.optional()??m.optional;args.push({tokens,start:0,end:tokens.length});}
     for (let i = args.length; i < m.count; i++) {
       const delim = m.delimiters[i] ?? [];
       if (!delim.length) {
-        args.push(this.tokensArgument());
+        args.push(this.argumentSpan());
         continue;
       }
       const value: Token[] = [];
@@ -401,9 +406,21 @@ export class Parser {
           value.pop();
         }
       }
-      args.push(value);
+      args.push({tokens:value,start:0,end:value.length});
     }
-    this.stream.push(this.substitute(m, args));
+    // Push template and argument spans in reverse execution order, never copy
+    // the enclosing argument for each nested macro invocation.
+    const parts:TokenSpan[]=[];let start=0;
+    for(let i=0;i<m.body.length;i++){
+      if(m.body[i][0]!==35)continue;
+      if(start<i)parts.push({tokens:m.body,start,end:i});
+      const n=m.body[++i];
+      if(n?.[0]===35)parts.push({tokens:m.body,start:i,end:i+1});
+      else {const index=n?n[0]-49:-1;if(index<0||index>=args.length)this.error("Illegal macro parameter reference");parts.push(args[index]);}
+      start=i+1;
+    }
+    if(start<m.body.length)parts.push({tokens:m.body,start,end:m.body.length});
+    for(let i=parts.length-1;i>=0;i--)this.stream.pushSpan(parts[i]);
   }
   delimiter(): string {
     this.stream.skip();
@@ -700,6 +717,7 @@ export class Parser {
       }, true);
       this.f.level = level + 1;
       this.f.display = false;
+      this.f.missingMessage = "Extra open brace or missing close brace";
     }
   }
   dimension(): string {
@@ -743,36 +761,28 @@ export class Parser {
     if (text.endsWith(" ")) text = text.slice(0, -1) + "\u00a0";
     return this.node(K.mtext, [], text, font ? { mathvariant: font } : {});
   }
-  renderText(tokens: Token[], font = "", style = false) {
-    const parts: { math: boolean; tokens: Token[] }[] = [];
-    let current: Token[] = [],
-      math = false,
-      depth = 0;
-    for (const t of tokens) {
-      const name = t[0] === -1 ? spelling(t) : "";
-      const delimiter =
-        (t[0] === 36 && depth === 0) || name === "(" || name === ")";
-      if (delimiter) {
-        parts.push({ math, tokens: current });
-        current = [];
-        math = !math;
-        continue;
+  renderText(input: Token[] | TokenSpan, font = "", style = false) {
+    const {tokens,start,end}=Array.isArray(input)?{tokens:input,start:0,end:input.length}:input;
+    const parts: { math: boolean; span:TokenSpan }[] = [];
+    let from=start,math=false;
+    for(let i=start;i<end;i++){
+      const t=tokens[i],name=t[0]===-1?spelling(t):"";
+      if(t[0]===123){const close=groupEnd(tokens,i);if(close!==undefined&&close<end){i=close;continue;}}
+      if(t[0]===36||name==="("||name===")"){
+        parts.push({math,span:{tokens,start:from,end:i}});from=i+1;math=!math;
       }
-      if (t[0] === 123) depth++;
-      if (t[0] === 125) depth--;
-      current.push(t);
     }
-    parts.push({ math, tokens: current });
-    if (math) this.error("Unclosed math delimiter in text");
+    parts.push({math,span:{tokens,start:from,end}});
+    if(math)this.error("Unclosed math delimiter in text");
     const nodes: Node[] = [];
     let index = 0;
     const display = this.f.display;
     const next = () => {
       while (index < parts.length) {
         const p = parts[index++];
-        if (!p.tokens.length) continue;
+        if (p.span.start===p.span.end) continue;
         if (p.math) {
-          this.parseTokens(p.tokens, (n) => {
+          this.parseSpan(p.span, (n) => {
             nodes.push(
               this.atom(
                 n.kind === K.mrow && !Object.keys(n.attributes).length
@@ -786,7 +796,7 @@ export class Parser {
           this.f.display = false;
           return;
         }
-        nodes.push(this.text(p.tokens, font));
+        nodes.push(this.text(p.span.tokens.slice(p.span.start,p.span.end), font));
       }
       let n = nodes.length === 1 ? nodes[0] : this.row(nodes, true);
       if (style && display)
@@ -1208,7 +1218,7 @@ export class Parser {
       if (!t) {
         if (this.frames.length !== 1)
           this.error(
-            this.f.missingMessage ?? (this.f.env === "argument" ? "Extra open brace or missing close brace" : this.f.env === "left" ? "Extra \\left or missing \\right" : this.f.env ? `Missing \\end{${this.f.env}}` : "Extra open brace or missing close brace"),
+            this.f.missingMessage ?? (this.f.env === "argument" ? "Missing close brace" : this.f.env === "left" ? "Extra \\left or missing \\right" : this.f.env ? `Missing \\end{${this.f.env}}` : "Extra open brace or missing close brace"),
           );
         this.close();
         break;
