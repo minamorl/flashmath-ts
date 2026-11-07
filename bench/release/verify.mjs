@@ -35,7 +35,7 @@ try{
  run('screen',['bench/native-render/screen.mjs']);
  run('visual',['bench/native-render/verify-screen.mjs']);
  const visual=JSON.parse(fs.readFileSync('bench/native-render/visual-checks.json'));
- assert.ok(visual.formulas>=202);assert.ok(visual.checks.length>=724);
+ assert.ok(visual.formulas>=202);assert.ok(visual.checks.length>=796);
  assert.deepEqual(visual.failures,[]);assert.deepEqual(visual.referenceDifferences,[]);
  run('benchmark',['bench/hardening/bench-driver.mjs'],0,{V:path.resolve('bench/hardening'),ENG:'flashmath,session,mathjax,temml',COLD:'9',WARM:'5',OUT:'../flashmath/hardening-benchmark.raw.json'});
  run('benchmark-summary',['bench/hardening/report-benchmark.mjs']);

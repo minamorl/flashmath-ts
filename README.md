@@ -39,8 +39,8 @@ path does not use `dangerouslySetInnerHTML`.
 
 Native output includes inline CSS for enclosure strokes, boxes, equation tags,
 proof rules and centered overlays, and Unicode mathematical font variants.
-See [native rendering](docs/native-render.md) for the lowering rules, browser/CSS
-requirements and the 195-expression MathJax SVG comparison. Use `output:
+See [native rendering](https://github.com/minamorl/flashmath-ts/blob/main/docs/native-render.md) for the lowering rules, browser/CSS
+requirements and the 202-expression MathJax SVG comparison. Use `output:
 'mathjax'` during parsing and serialization to preserve upstream MathML instead.
 
 For multiple expressions in one document, use a session so macros, labels and
@@ -61,7 +61,9 @@ value; references to completed equations use their actual tag and URL.
 
 Defaults are inline display, packages `['base', 'newcommand']`, 10,000 macro
 expansions, 100,000 allocated nodes, 200,000 consumed tokens, and 1,024 nested
-parser frames. Override these with `display`, `packages`, `maxExpansions`,
+parser frames. Chemistry grammar actions additionally stop at 512 recursive
+levels, even when maxDepth is raised, returning merror instead of overflowing
+the JavaScript stack. Override these with `display`, `packages`, `maxExpansions`,
 `maxNodes`, `maxTokens`, and `maxDepth`. `throwOnError: true` throws `ParseError`;
 otherwise malformed TeX produces an `merror` tree. `macros` accepts a replacement
 string or `[replacement, arity, optionalDefault]`. `decimalSeparator` accepts
@@ -88,7 +90,7 @@ The retained unsupported records include custom package registration and the
 component typesetting pipeline. `mode: 'render'` is limited to selected texhtml
 input, and `mode: 'output'` to selected bussproofs MathML geometry; this package
 does not implement a general MathJax SVG renderer. See
-[the integration report](docs/integration.md) for every package's counts, merge
+[the integration report](https://github.com/minamorl/flashmath-ts/blob/main/docs/integration.md) for every package's counts, merge
 resolutions, all unsupported IDs, independent probes and remaining boundaries.
 
 For native rendering, import `@minamorl/flashmath/fonts.css` in your browser
@@ -99,14 +101,17 @@ Without the stylesheet, calligraphic/script fallback can collapse to the same
 glyphs. Other alphabets, oldstyle digits, Greek fallback, operator spacing,
 stroke widths and proof gaps remain browser/font-dependent. Native output has
 been exercised in Chromium 153 on Linux; no Firefox/Safari claim is made.
-It is not pixel-identical to MathJax SVG. See [native details](docs/native-render.md).
+It is not pixel-identical to MathJax SVG. See [native details](https://github.com/minamorl/flashmath-ts/blob/main/docs/native-render.md).
 
 Browser output defaults to `output: 'native'`: mhchem font slots become Unicode
-and native MathML isotope scripts. Use `output: 'mathjax'` in parsing and
+CSS bond/harpoon geometry and native MathML isotope scripts. Use `output: 'mathjax'` in parsing and
 serialization options to retain MathJax font codes for strict oracle comparison.
 The conformance adapter selects that mode explicitly. React SSR exercises all
 2,635 executable fixtures and compares the same structure, allowing only CSS
-declaration whitespace differences introduced by React.
+declaration whitespace, shared font-property spellings, and omission of empty
+React href properties. React SSR for all fixtures and Chromium client rendering
+of 2,638 cases emit no console.error warnings; 202 comparisons also hydrate
+without recoverable errors.
 
 Regenerate the local release candidate and all evidence with one command:
 
@@ -117,8 +122,8 @@ node bench/release/verify.mjs
 
 This builds the ESM runtime and declarations, runs all tests (including React
 SSR for every executable fixture), harness/scoped/full conformance, the
-independent corpus, the full bussproofs command audit, 195 Chromium comparisons
-with 724 feature/geometry checks and zero strict MathML differences, benchmarks,
+independent corpus, the full bussproofs command audit, 202 Chromium comparisons
+with 796 feature/geometry checks and zero strict MathML differences, benchmarks,
 and an isolated consumer smoke test of the actual `npm pack` tarball. Nothing
 is published or pushed. Raw checks, exit codes, tarball list and sizes are in
 `bench/release/`; benchmark inputs and samples remain in `bench/hardening/` and
@@ -127,8 +132,8 @@ unsupported records; the release gate checks exact 2,635/0/48 counts and every
 baseline fixture ID/status before accepting that exit.
 
 The separate `npm run conformance` gates base/newcommand at 95%; the release
-requires every executable fixture to match. See [release notes](docs/release.md)
-for integration decisions and [conformance details](docs/conformance.md).
+requires every executable fixture to match. See [release notes](https://github.com/minamorl/flashmath-ts/blob/main/docs/release.md)
+for integration decisions and [conformance details](https://github.com/minamorl/flashmath-ts/blob/main/docs/conformance.md).
 
 <!-- release-benchmark -->
 
@@ -145,17 +150,17 @@ otherwise document state persists. Both set ignoreDuplicateLabels=true.
 
 | Corpus | Common inputs | Stateless | Session | MathJax | Temml |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| bench12 | 12/12 | 17.97 | 14.96 | 245.26 | 21.71 |
-| base | 10/10 | 38.58 | 33.73 | 457.27 | 44.11 |
-| newcommand | 6/10 | 14.91 | 13.24 | 184.02 | 18.38 |
-| ams | 10/10 | 42.12 | 37.74 | 433.98 | 57.96 |
-| mathtools | 6/10 | 37.66 | 33.26 | 442.22 | 45.22 |
-| physics | 9/10 | 50.21 | 42.68 | 542.94 | 79.10 |
-| mhchem | 10/10 | 119.21 | 101.82 | 912.22 | 123.69 |
+| bench12 | 12/12 | 14.37 | 10.50 | 252.53 | 21.35 |
+| base | 10/10 | 29.00 | 22.93 | 480.49 | 44.76 |
+| newcommand | 6/10 | 11.48 | 8.99 | 194.41 | 17.88 |
+| ams | 10/10 | 32.74 | 28.01 | 425.75 | 55.50 |
+| mathtools | 6/10 | 27.96 | 23.25 | 456.20 | 43.99 |
+| physics | 9/10 | 36.43 | 35.03 | 536.92 | 73.00 |
+| mhchem | 10/10 | 102.54 | 84.73 | 925.10 | 110.24 |
 
 Across the full corpus, stateless flashmath had lower p50 than MathJax in
 36/36 groups and Temml in
-17/22 comparable cohorts.
+20/22 comparable cohorts.
 Bussproofs has no timed cohort; compatibility is checked separately.
 These are machine/corpus results and do not establish a universal speed ranking.
 
@@ -164,17 +169,19 @@ p50 / p95 milliseconds (excludes Node process bootstrap):
 
 | Stateless | Session | MathJax | Temml |
 | ---: | ---: | ---: | ---: |
-| 25.39 / 30.96 | 27.08 / 30.39 | 73.46 / 88.67 | 21.30 / 31.11 |
+| 26.71 / 28.46 | 26.26 / 27.72 | 67.44 / 69.57 | 20.37 / 21.18 |
 
-[Full cohorts, p50/p95 and method](bench/flashmath/hardening-benchmark.md) ·
-[raw samples](bench/flashmath/hardening-benchmark.raw.json). Earlier hardening
+[Full cohorts, p50/p95 and method](https://github.com/minamorl/flashmath-ts/blob/main/bench/flashmath/hardening-benchmark.md) ·
+[raw samples](https://github.com/minamorl/flashmath-ts/blob/main/bench/flashmath/hardening-benchmark.raw.json). Earlier hardening
 numbers are superseded because MathJax tag options and replayed declarations
 were not handled consistently.
+
+Temml remains faster on these identical-input cohorts: boldsymbol (0.98×), verb (0.96×). The goal of winning every cohort is not achieved.
 
 <!-- /release-benchmark -->
 
 Add a package in `src/packages/<name>.ts` and one registration line; see
-[docs/packages.md](docs/packages.md) for the handler contract and validation.
+[docs/packages.md](https://github.com/minamorl/flashmath-ts/blob/main/docs/packages.md) for the handler contract and validation.
 Generated symbol/operator data is attributed in `src/ATTRIBUTION.MathJax` and
 licensed under `src/LICENSE.MathJax`. Runtime code imports neither MathJax nor
 Temml. Regenerate the base symbol tables using the pinned MathJax dependency:

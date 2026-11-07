@@ -25,6 +25,7 @@ const folder=fs.mkdtempSync(path.join(process.env.TMPDIR,'flashmath-pack-'));
 try{
  const modules=path.join(folder,'node_modules'),pkg=path.join(modules,'@minamorl/flashmath');
  fs.mkdirSync(pkg,{recursive:true});run('tar',['-xzf',tarball,'--strip-components=1','-C',pkg]);
+ assert.doesNotMatch(fs.readFileSync(path.join(pkg,'README.md'),'utf8'),/\]\((?:docs|bench)\//,'README links must resolve outside the tarball');
  fs.writeFileSync(path.join(folder,'core.mjs'),`import assert from 'node:assert/strict';
 import {parseToMathMLAst,toMathMLString,createMathMLParser} from '@minamorl/flashmath';
 const xml=toMathMLString(parseToMathMLAst(String.raw\`\\frac{a}{b}\`));

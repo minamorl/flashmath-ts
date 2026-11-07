@@ -5283,7 +5283,7 @@
   "scope": "base and newcommand groups; denominator includes harness unsupported records",
   "node": "v26.12.1",
   "run": {
-    "sourceSha256": "8719e5e2f3dd33d7cf19c146876fe9e77236b79025f81de9904a35bda5b7abf6",
+    "sourceSha256": "b357cf868c1e313f07680750c6acd76357ddc663edff6207474977e7784e0cd2",
     "normalizerSha256": "17b0871ca19dc142d8f7c6505a76b421d3190253dbb750d1290656454e6831af",
     "fixtureSha256": "aa810fe8b99d427ef35cee54171ea19009c58415081f130e904d85fcdc2faf2e"
   }

@@ -247,7 +247,8 @@ node bench/native-render/final-gate.mjs
 `before.html` contains the native/React strings captured from base revision
 `0ba4bef1a9edbe3125616edfb6691e695bd74b34`. `compare.mjs --before` reuses those
 frozen strings and regenerates only the SVG references. The after page uses the
-current implementation. Both pages have the same 195 expressions and layout.
+current implementation. The frozen page retains 195 expressions; the current page has 202, adding
+wide chemical arrows, combined bonds, and left/right noLine proof labels.
 The generator rejects parser errors; the browser runner rejects invisible math,
 runtime exceptions and SSR/string geometry differences. Every group is captured
 in legible screenshot panels. The source selector is exercised with Chromium
@@ -281,6 +282,8 @@ Browser: Chrome/153.0.8010.36. All 202 SSR/string pairs have identical measured 
 
 
 
+
+
 ### Visual review of the captured panels
 
 | Group | Observation |
@@ -293,18 +296,20 @@ Browser: Chrome/153.0.8010.36. All 202 SSR/string pairs have identical measured 
 | overlap | Slash, star and fraction overlays are centered over the original base; fractions preserve the shared math baseline. |
 | variants | Styled Unicode alphabets and digits render. Calligraphic/script use distinct bundled NewCM faces; sans/mono forms, oldstyle digits and Greek fallback appearance remain font-dependent. |
 | physics | Bold/bold-italic vectors and script order/principal-value symbols are visible. Font shapes differ. |
-| chemistry | Unicode arrows, equilibrium compositions, labels, bonds and prescripts render without PUA boxes. Harpoon widths and dashed-bond vertical gaps differ. |
+| chemistry | Unicode arrows, equilibrium compositions, labels, bonds and prescripts render without PUA boxes. CSS bonds share line ends and fixed em spacing; asymmetric harpoons have independent long/short shafts. Rasterization still differs. |
 | core | Ordinary arithmetic, fractions, radicals, sums, integrals, matrices, fences and scripts are visible. Overline core-8 now spans its whole base. Underbrace glyph shape and large-operator metrics differ. |
 
-The current release directly re-opened the variant, tag and proof panels listed
-and hashed in `bench/native-render/visual-review.json`; the other observations
-above describe the inherited native lane review. Every release panel is
+The finish pass directly re-opened chemistry panels and proofs-10/12 plus
+left/right noLine variants. Its measured checks include bond ends, spacing and
+math-axis height, harpoon shaft lengths and neighbour separation, and actual
+proof-label content boxes. The earlier variant/tag review remains in
+`bench/native-render/visual-review.json`. Every release panel is
 regenerated and every formula measured by Chromium. Pixel parity: NOT ACHIEVED.
 
 ## Verification limits
 
 Font-dependent metric and glyph differences described above remain. Existing
-MathJax-mode structural differences in the 195-formula corpus are now zero;
+MathJax-mode structural differences in the 202-formula corpus are now zero;
 `visual-checks.json` contains an empty referenceDifferences array, enforced by
 the strict gate. Native pixel identity is not claimed. Full fixture acceptance remains exactly
 2635 matched, 0 mismatched, 48 unsupported out of 2683 records.
@@ -317,7 +322,18 @@ the strict gate. Native pixel identity is not claimed. Full fixture acceptance r
 The former differences in frames-1 (boxed wrapper), tags-10 (left equation tag)
 and proofs-9–12 (omitted noLine rowlines) are corrected. The permitted-difference
 list is empty. Native pixels are still not asserted identical: this structural
-gate and the 724 feature/geometry checks measure different properties.
+gate and the 796 feature/geometry checks measure different properties.
 The browser additionally verifies all four font faces loaded and compares
 calligraphic/script raster fingerprints so the glyph-collapse issue cannot pass
 on CSS names alone.
+
+### React development checks
+
+The comparison page loads a locally bundled development React client. It
+hydrates all 202 comparison formulas and client-renders every executable
+fixture plus three property regressions (2,638 formulas). console.error is
+captured, and both warnings and recoverable hydration errors must be empty.
+The selector is still switched by keyboard to string output and back to SSR,
+with identical geometry required. Shared HTML/SVG React property names are
+translated (className, htmlFor, fontFamily, etc.); empty href is omitted on the
+React path. The underlying MathJax AST/string compatibility mode is unchanged.

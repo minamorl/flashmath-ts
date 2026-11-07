@@ -1,7 +1,7 @@
 {
-  "sourceSha256": "8719e5e2f3dd33d7cf19c146876fe9e77236b79025f81de9904a35bda5b7abf6",
+  "sourceSha256": "b357cf868c1e313f07680750c6acd76357ddc663edff6207474977e7784e0cd2",
   "node": "v26.12.1",
-  "createdAt": "2026-11-06T21:56:10.260Z",
+  "createdAt": "2026-11-07T00:54:18.504Z",
   "checks": [
     {
       "name": "build",
@@ -27,6 +27,7 @@
         "test/packages-misc.test.mjs",
         "test/packages-pkg-physics.test.mjs",
         "test/packages-references.test.mjs",
+        "test/react-properties.test.mjs",
         "test/ssr-fixtures.test.mjs",
         "test/symbol-trie.test.mjs",
         "test/packages/action.test.mjs",

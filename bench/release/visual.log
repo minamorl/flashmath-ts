@@ -2,10 +2,10 @@ enclose: 87 formulas, 366 checks, 0 failures
 cancel: 12 formulas, 54 checks, 0 failures
 frames: 6 formulas, 20 checks, 0 failures
 tags: 14 formulas, 68 checks, 0 failures
-proofs: 12 formulas, 62 checks, 0 failures
+proofs: 16 formulas, 88 checks, 0 failures
 overlap: 12 formulas, 48 checks, 0 failures
 variants: 24 formulas, 48 checks, 0 failures
 physics: 8 formulas, 16 checks, 0 failures
-chemistry: 10 formulas, 20 checks, 0 failures
+chemistry: 13 formulas, 66 checks, 0 failures
 core: 10 formulas, 22 checks, 0 failures
-visual feature gate: 724 checks; no failures; pixel identity not asserted
+visual feature gate: 796 checks; no failures; pixel identity not asserted

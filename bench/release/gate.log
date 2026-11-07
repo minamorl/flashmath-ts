@@ -1,20 +1,20 @@
 build: exit 0 (expected 0)
 Built shared ESM runtime and TypeScript declarations
 tests: exit 0 (expected 0)
-  duration_ms: 89.998051
+  duration_ms: 35.05784
   type: 'test'
   ...
-1..1773
-# tests 2395
+1..1782
+# tests 2404
 # suites 0
-# pass 2389
+# pass 2398
 # fail 0
 # cancelled 0
 # skipped 6
 # todo 0
-# duration_ms 4801.644622
+# duration_ms 3865.511205
 harness: exit 0 (expected 0)
-  duration_ms: 0.25963
+  duration_ms: 0.221237
   type: 'test'
   ...
 1..43
@@ -25,7 +25,7 @@ harness: exit 0 (expected 0)
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 1002.539259
+# duration_ms 891.144325
 scoped-conformance: exit 0 (expected 0)
 package membership (overlapping; each denominator includes failures and unsupported):
 package | matched | mismatch | unsupported | total | matched/total
@@ -82,24 +82,24 @@ pu: 6 states, 17 rules
 pu-2: 3 states, 10 rules
 pu-9,9: 3 states, 5 rules
 compare: exit 0 (expected 0)
-comparison after: 195 formulas; enclose, cancel, frames, tags, proofs, overlap, variants, physics, chemistry, core
+comparison after: 202 formulas; enclose, cancel, frames, tags, proofs, overlap, variants, physics, chemistry, core
 screen: exit 0 (expected 0)
 CDP schema Page.captureScreenshot format,quality,clip,fromSurface,captureBeyondViewport,optimizeForSpeed
 CDP schema Runtime.evaluate expression,objectGroup,includeCommandLineAPI,silent,contextId,returnByValue,generatePreview,userGesture,awaitPromise,throwOnSideEffect,timeout,disableBreaks,replMode,allowUnsafeEvalBlockedByCSP,uniqueContextId,serializationOptions
 CDP schema Input.dispatchKeyEvent type,modifiers,timestamp,text,unmodifiedText,keyIdentifier,code,key,windowsVirtualKeyCode,nativeVirtualKeyCode,autoRepeat,isKeypad,isSystemKey,location,commands
-screen_run: Chrome/153.0.8010.36; opened after.html; keyboard switched React SSR → toMathMLString → React SSR; 195 formulas; SSR/string geometry equal; captured every group
+screen_run: Chrome/153.0.8010.36; opened after.html; React hydration/client {"hydrated":202,"clientRendered":2638,"errors":[],"recoverable":[]}; keyboard switched React SSR → toMathMLString → React SSR; 202 formulas; SSR/string geometry equal; captured every group
 visual: exit 0 (expected 0)
 enclose: 87 formulas, 366 checks, 0 failures
 cancel: 12 formulas, 54 checks, 0 failures
 frames: 6 formulas, 20 checks, 0 failures
 tags: 14 formulas, 68 checks, 0 failures
-proofs: 12 formulas, 62 checks, 0 failures
+proofs: 16 formulas, 88 checks, 0 failures
 overlap: 12 formulas, 48 checks, 0 failures
 variants: 24 formulas, 48 checks, 0 failures
 physics: 8 formulas, 16 checks, 0 failures
-chemistry: 10 formulas, 20 checks, 0 failures
+chemistry: 13 formulas, 66 checks, 0 failures
 core: 10 formulas, 22 checks, 0 failures
-visual feature gate: 724 checks; no failures; pixel identity not asserted
+visual feature gate: 796 checks; no failures; pixel identity not asserted
 benchmark: exit 0 (expected 0)
 warm 2 flashmath
 warm 2 session
@@ -114,13 +114,13 @@ warm 4 session
 warm 4 mathjax
 warm 4 temml
 benchmark-summary: exit 0 (expected 0)
-{"groups":36,"statelessFasterThanMathJax":36,"temmlComparable":22,"statelessFasterThanTemml":17,"mathjaxMinSpeedup":3.6053813513707906,"temmlMinSpeedup":0.60202475614741}
-{"coldImportToFirstStringMs":{"flashmath":{"p50":25.386352,"p95":30.960109999999993},"session":{"p50":27.077161999999994,"p95":30.391257},"mathjax":{"p50":73.455039,"p95":88.67461299999998},"temml":{"p50":21.295769999999994,"p95":31.105224999999994}}}
+{"groups":36,"statelessFasterThanMathJax":36,"temmlComparable":22,"statelessFasterThanTemml":20,"mathjaxMinSpeedup":5.615205883433721,"temmlMinSpeedup":0.9645487679423503}
+{"coldImportToFirstStringMs":{"flashmath":{"p50":26.708023,"p95":28.459238000000006},"session":{"p50":26.259306,"p95":27.720784},"mathjax":{"p50":67.43727600000001,"p95":69.566084},"temml":{"p50":20.3693,"p95":21.177956}}}
 readme: exit 0 (expected 0)
 README benchmark tables regenerated from measured JSON
 pack-smoke: exit 0 (expected 0)
 Packed core import and parse: PASS (React absent)
 Packed react import, React SSR, sequent and font export: PASS
-minamorl-flashmath-0.1.0.tgz: 167510 bytes packed, 489504 bytes unpacked
-sha512 integrity: sha512-ZbiSXhnl0ltX6JvuJu8ED/EbyXLZv3Ci7EMuRbggls04+cNBDcA6J3K38y+l2pmLlfW7ltu9IbMKhl/B5oJJVQ==
+minamorl-flashmath-0.1.0.tgz: 169179 bytes packed, 495645 bytes unpacked
+sha512 integrity: sha512-nfo8reSpFjBymf951pqkBvCDZKLoeEpkybwHygmMEg7DudhhAGuW7beuJfw5Xbcv5LoN6oFIDsC+hyAjAg9b3g==
 release gate: PASS; local candidate only, no external transmission
