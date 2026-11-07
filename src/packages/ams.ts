@@ -440,12 +440,13 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
     }else{
       n.attributes={displaystyle:'true',columnalign:Array.from({length:cols},(_,i)=>align[i%align.length]==='r'?'right':align[i%align.length]==='l'?'left':'center').join(' '),columnspacing:Array.from({length:Math.max(0,cols-1)},(_,i)=>bare==='eqnarray'?(i%2?'0.278em':'0em'):i%2?'2em':'0em').join(' '),rowspacing:'3pt','data-break-align':Array.from({length:cols},(_,i)=>align[i%align.length]==='r'?'bottom':align[i%align.length]==='l'?'top':'middle').join(' ')};
       if(!cols)n.attributes.columnspacing='0em';
-      if(bare.startsWith('gather')){n.attributes.columnspacing='1em';if(!cols){delete n.attributes.columnalign;n.attributes['data-break-align']='middle';}}
+      if(bare.startsWith('gather')){n.attributes.columnspacing='1em';delete n.attributes.columnalign;n.attributes['data-break-align']='middle';}
       if(bare==='split')n.attributes.columnspacing='0em';
       if(count&&!fl)n.attributes.columnspacing=Array(Math.max(0,cols-1)).fill('0em').join(' ');
       if(n.attributes.columnalign==='center')delete n.attributes.columnalign;
       for(const row of n.children){const cells=row.children.slice(row.kind===K.mlabeledtr?1:0);for(let i=0;i<cells.length;i++){
         const cell=cells[i],left=align[i%align.length]==='l';
+        if(bare.startsWith('gather')&&i>0)p.fixInitialMO(cell.children);
         if(bare==='eqnarray'&&i%3===1)cell.children.unshift(p.node(K.mi));
         if(left){
           p.fixInitialMO(cell.children);

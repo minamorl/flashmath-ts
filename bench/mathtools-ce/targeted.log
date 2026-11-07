@@ -1,0 +1,216 @@
+TAP version 13
+# Subtest: multlined initial operators match MathJax with each position and multiple rows
+ok 1 - multlined initial operators match MathJax with each position and multiple rows
+  ---
+  duration_ms: 431.672498
+  type: 'test'
+  ...
+# 198 fresh MathJax 4.1.3 comparisons
+# Subtest: chemistry alignment escapes preserve initial infix operators after empty atoms
+ok 2 - chemistry alignment escapes preserve initial infix operators after empty atoms
+  ---
+  duration_ms: 359.999044
+  type: 'test'
+  ...
+# 152 fresh MathJax 4.1.3 comparisons
+# Subtest: ams: all immutable MathJax 4.1.3 fixtures including texclass and attributes
+ok 3 - ams: all immutable MathJax 4.1.3 fixtures including texclass and attributes
+  ---
+  duration_ms: 89.254402
+  type: 'test'
+  ...
+# Subtest: ams: activation, invalid arguments, and isolated session numbering
+ok 4 - ams: activation, invalid arguments, and isolated session numbering
+  ---
+  duration_ms: 2.253633
+  type: 'test'
+  ...
+# Subtest: ams: additional MathJax comparisons for tags, optional row spacing and grouped operators
+ok 5 - ams: additional MathJax comparisons for tags, optional row spacing and grouped operators
+  ---
+  duration_ms: 130.518526
+  type: 'test'
+  ...
+# Subtest: ams: new MathML kinds serialize identically through React SSR
+ok 6 - ams: new MathML kinds serialize identically through React SSR
+  ---
+  duration_ms: 30.783435
+  type: 'test'
+  ...
+# Subtest: ams: all 305 related package fixtures retain their denominator (303 matched, 2 upstream unsupported)
+ok 7 - ams: all 305 related package fixtures retain their denominator (303 matched, 2 upstream unsupported)
+  ---
+  duration_ms: 131.298478
+  type: 'test'
+  ...
+# Subtest: all 196 immutable MathJax mathtools fixtures, including attributes and texclass
+ok 8 - all 196 immutable MathJax mathtools fixtures, including attributes and texclass
+  ---
+  duration_ms: 120.567546
+  type: 'test'
+  ...
+# Subtest: base and newcommand match status never regresses from the captured baseline
+ok 9 - base and newcommand match status never regresses from the captured baseline
+  ---
+  duration_ms: 185.640503
+  type: 'test'
+  ...
+# Subtest: mathtools activation and literal colon are separate from the control sequence
+ok 10 - mathtools activation and literal colon are separate from the control sequence
+  ---
+  duration_ms: 38.196905
+  type: 'test'
+  ...
+# Subtest: paired delimiters, options and tag forms persist in a session and remain isolated
+ok 11 - paired delimiters, options and tag forms persist in a session and remain isolated
+  ---
+  duration_ms: 1.645886
+  type: 'test'
+  ...
+# Subtest: package expansions and parsing obey existing resource limits
+ok 12 - package expansions and parsing obey existing resource limits
+  ---
+  duration_ms: 0.525392
+  type: 'test'
+  ...
+# Subtest: 37 independent variants agree with the installed MathJax 4.1.3 oracle
+ok 13 - 37 independent variants agree with the installed MathJax 4.1.3 oracle
+  ---
+  duration_ms: 66.047275
+  type: 'test'
+  ...
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem
+ok 14 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem
+  ---
+  duration_ms: 324.143528
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+newcommand
+ok 15 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+newcommand
+  ---
+  duration_ms: 188.058747
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+mathtools
+ok 16 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+mathtools
+  ---
+  duration_ms: 290.717136
+  type: 'test'
+  ...
+# 182 strict MathML comparisons; 182 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+boldsymbol
+ok 17 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+boldsymbol
+  ---
+  duration_ms: 170.337904
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+physics
+ok 18 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+physics
+  ---
+  duration_ms: 156.166029
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+color
+ok 19 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+color
+  ---
+  duration_ms: 147.090922
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+bbox
+ok 20 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+bbox
+  ---
+  duration_ms: 149.125492
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+enclose
+ok 21 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+enclose
+  ---
+  duration_ms: 150.908717
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+cancel
+ok 22 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+cancel
+  ---
+  duration_ms: 151.5195
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+html
+ok 23 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+html
+  ---
+  duration_ms: 134.366017
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+unicode
+ok 24 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+unicode
+  ---
+  duration_ms: 128.707649
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+dsfont
+ok 25 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+dsfont
+  ---
+  duration_ms: 123.371839
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+bbm
+ok 26 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+bbm
+  ---
+  duration_ms: 127.148306
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+upgreek
+ok 27 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+upgreek
+  ---
+  duration_ms: 122.11672
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+gensymb
+ok 28 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+gensymb
+  ---
+  duration_ms: 126.980239
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+textmacros
+ok 29 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+textmacros
+  ---
+  duration_ms: 147.148401
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+colortbl
+ok 30 - chemistry alignment matches MathJax 4.1.3: base+ams+mhchem+colortbl
+  ---
+  duration_ms: 134.927818
+  type: 'test'
+  ...
+# 128 strict MathML comparisons; 128 distinct expressions; no oracle errors
+# Subtest: chemistry alignment matches MathJax 4.1.3: base+ams+newcommand+mathtools+boldsymbol+physics+mhchem+color+bbox+enclose+cancel+html+unicode+dsfont+bbm+upgreek+gensymb+textmacros+colortbl
+ok 31 - chemistry alignment matches MathJax 4.1.3: base+ams+newcommand+mathtools+boldsymbol+physics+mhchem+color+bbox+enclose+cancel+html+unicode+dsfont+bbm+upgreek+gensymb+textmacros+colortbl
+  ---
+  duration_ms: 218.818446
+  type: 'test'
+  ...
+# 182 strict MathML comparisons; 182 distinct expressions; no oracle errors
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3195.957552
