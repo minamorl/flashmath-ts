@@ -383,9 +383,7 @@ const explicitTags=new WeakMap<Parser,boolean>();
 const equationTags=new WeakMap<object,{tag:string;starred:boolean}>();
 const unnumberedEquations=new WeakSet<object>();
 export function tagCell(p:Parser,tag:string,label='',starred=false):Node {
-  const id='mjx-eqn:'+((p.options.useLabelIds!==false?label:'')||tag).replace(/\s/g,'_');
-  if(label)p.localLabels.set(label,{tag,id});
-  return p.node(K.mtd,[...(starred?[]:[p.node(K.mtext,[],'(')]),p.node(K.mtext,[],tag),...(starred?[]:[p.node(K.mtext,[],')')])],'',{id});
+  return p.labelCell(label,tag,starred);
 }
 commands.tag={execute(p){const starred=star(p),tag=raw(p.tokensArgument()).trim(),t=p.tagTable();
   if(!tag){if(t)t.noNumbers.add(t.rows.length);return;}

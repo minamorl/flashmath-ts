@@ -1208,7 +1208,7 @@ export class Parser {
       if (!t) {
         if (this.frames.length !== 1)
           this.error(
-            this.f.missingMessage ?? (this.f.env === "argument" ? "Missing close brace" : this.f.env === "left" ? "Extra \\left or missing \\right" : this.f.env ? `Missing \\end{${this.f.env}}` : "Extra open brace or missing close brace"),
+            this.f.missingMessage ?? (this.f.env === "argument" ? "Extra open brace or missing close brace" : this.f.env === "left" ? "Extra \\left or missing \\right" : this.f.env ? `Missing \\end{${this.f.env}}` : "Extra open brace or missing close brace"),
           );
         this.close();
         break;
