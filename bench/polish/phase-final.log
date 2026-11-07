@@ -1,0 +1,54 @@
+✔ configuration values share tables but never macro, regex or option state (8.868786ms)
+✔ configuration keys use option contents, support regex and bound retained entries (0.768079ms)
+✔ nested scanners retain linear character and slice counts through depth 400 (155.636146ms)
+ℹ {"evidence":[{"name":"ce","rows":[{"depth":100,"chars":37059,"slices":100},{"depth":200,"chars":74359,"slices":200},{"depth":400,"chars":148959,"slices":400}]},{"name":"frac","rows":[{"depth":100,"chars":1601,"slices":0},{"depth":200,"chars":3201,"slices":0},{"depth":400,"chars":6401,"slices":0}]},{"name":"qty","rows":[{"depth":100,"chars":1406,"slices":100},{"depth":200,"chars":2801,"slices":200},{"depth":400,"chars":5601,"slices":400}]},{"name":"ket","rows":[{"depth":100,"chars":4702,"slices":100},{"depth":200,"chars":9401,"slices":200},{"depth":400,"chars":18801,"slices":400}]},{"name":"brace","rows":[{"depth":100,"chars":201,"slices":0},{"depth":200,"chars":401,"slices":0},{"depth":400,"chars":801,"slices":0}]}],"flatSlices":0}
+✔ text math and macro argument spans scale from depth 400 to 1600 (918.222721ms)
+ℹ [{"name":"text-math","rows":[{"depth":400,"copied":0,"ms":1.275405900000004},{"depth":1600,"copied":0,"ms":4.5138849999999975}],"slope":0.9117066016670613},{"name":"textmacros-math","rows":[{"depth":400,"copied":0,"ms":0.6988404999999981},{"depth":1600,"copied":0,"ms":2.7684783999999807}],"slope":0.9930290706688588},{"name":"newcommand-arg","rows":[{"depth":400,"copied":5,"ms":0.6063838000000032},{"depth":1600,"copied":5,"ms":2.9349626000000173}],"slope":1.137519501425068}]
+✔ chemistry raised limits render deep nesting without a JS stack overflow (489.070673ms)
+✔ compact option keys separate primitives, escaped keys and accessors (0.671136ms)
+✔ warm option snapshots observe nested mutations and accessor replacement (2.717067ms)
+✔ 195 native conversions are immutable, idempotent, and SSR/string equivalent (585.170417ms)
+✔ every enclosure notation and independent combinations keep visible decorations (2.804452ms)
+✔ equation tag side, empty rows, labels and IDs survive native layout (2.663396ms)
+✔ table line lists repeat the final entry, with none and dashed kept distinct (0.628537ms)
+✔ Unicode variants cover Latin/digits/Greek, Letterlike holes and inherited overrides (1.723142ms)
+✔ verbatim text keeps its codepoints and receives an actual CSS font (1.151653ms)
+✔ bbox padding becomes CSS around the complete content, only for package-created padding (2.865457ms)
+✔ only the centernot construction becomes an overlay; ordinary mpadded survives (1.348054ms)
+✔ overline paints the complete base with CSS while a literal horizontal bar stays literal (2.196074ms)
+✔ deep variant output uses an explicit stack and needs no browser (32.294083ms)
+✔ calligraphic and script use distinct NewCM faces in native output (0.830627ms)
+✔ boldsymbol native output honors a data-only bold-italic variant (1.094005ms)
+generalization: 216/216 (100.00%)
+valid MathJax expressions: 216/216
+✔ mhchem generalization: at least 150 distinct non-fixture examples, >=98% MathJax agreement (800.193273ms)
+✔ mhchem output: all captured chemistry has native glyphs and unchanged MathJax mode (691.78358ms)
+✔ mhchem output: every chemical private-use slot has an explicit native representation (3.548487ms)
+✔ mhchem output: defaults, session overrides and invalid output values (2.924038ms)
+✔ native output only maps package-created nodes, including mixed literal PUA (16.382936ms)
+✔ native isotope prescripts attach to their element using standard MathML (4.674242ms)
+✔ variable charges and physical-unit uncertainty retain their meaning in both output modes (1.460597ms)
+✔ mhchem: all captured chemistry and physical-unit fixtures (222.713981ms)
+✔ mhchem: independent formulas, reactions, isotopes, labels, units and errors (232.221845ms)
+✔ mhchem: activation and resource budgets use the host parser boundary (2.38948ms)
+✔ array ll preserves math tokens in the second column with and without ams (894.149311ms)
+ℹ 512 fresh MathJax 4.1.3 comparisons
+✔ tags parse embedded math rather than printing dollar delimiters (98.289616ms)
+ℹ 74 fresh MathJax 4.1.3 comparisons
+✔ mathop preserves the ORD atom of explicit font arguments (58.289159ms)
+ℹ 72 fresh MathJax 4.1.3 comparisons
+✔ deep chemistry around depth 800 agrees with MathJax using default limits (5666.271796ms)
+ℹ 32 fresh MathJax 4.1.3 comparisons
+✔ chemistry default limits accept MathJax depth 2000 and explicit limits still apply (958.297828ms)
+✔ boldsymbol optimization retains MathJax behavior on fresh font and script expressions (27.335706ms)
+ℹ 36 fresh MathJax 4.1.3 comparisons
+✔ verb raw consumption retains MathJax behavior across delimiters and following math (21.405204ms)
+ℹ 33 fresh MathJax 4.1.3 comparisons
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8010.599451

@@ -1,0 +1,42 @@
+✔ scripts, compound arguments and nested fences (7.591235ms)
+✔ fixed arity MathML children are never combined as adjacent relations (0.827702ms)
+✔ macro substitution respects control word boundaries and def templates (1.854068ms)
+✔ nested custom environments and array frames (1.825295ms)
+✔ definitions and parser state do not leak between parses (1.082723ms)
+✔ recursive macros, output size and nesting are bounded (3.303083ms)
+✔ deep input uses explicit stacks through serialization (4.090228ms)
+✔ malformed input returns an error tree or throws on request (0.954992ms)
+✔ text and attribute values are escaped as XML, never executed (2.672143ms)
+✔ React returns elements and SSR exactly equals the string renderer (16.466153ms)
+✔ error paths always serialize valid MathML and XML (1.69583ms)
+✔ ams: all immutable MathJax 4.1.3 fixtures including texclass and attributes (92.090272ms)
+✔ ams: activation, invalid arguments, and isolated session numbering (2.385221ms)
+✔ ams: additional MathJax comparisons for tags, optional row spacing and grouped operators (131.502224ms)
+✔ ams: new MathML kinds serialize identically through React SSR (26.902176ms)
+✔ ams: all 305 related package fixtures retain their denominator (303 matched, 2 upstream unsupported) (116.554317ms)
+▶ tagformat: immutable upstream fixtures
+  ✔ TagFormat.test.ts::Tagformat Basic tag 1 (8.61116ms)
+  ✔ TagFormat.test.ts::Tagformat Text tag 1 (0.839424ms)
+  ✔ TagFormat.test.ts::Tagformat Ref 1 (5.600078ms)
+  ✔ TagFormat.test.ts::Tagformat Eqref 1 (0.986933ms)
+  ✔ TagFormat.test.ts::Tagformat Custom ref 1 (0.910317ms)
+  ✔ TagFormat.test.ts::Tagformat Array tag 1 (0.61468ms)
+  ✔ TagFormat.test.ts::Tagformat Array tag with empty entry 1 (0.548836ms)
+  ✔ TagFormat.test.ts::Tagformat Array tag with null entry 1 (0.505043ms)
+✔ tagformat: immutable upstream fixtures (21.764171ms)
+✔ tagformat: additional MathJax 4.1.3 behavior (48.926327ms)
+✔ tagformat: additional MathJax 4.1.3 behavior (11.696201ms)
+✔ array ll preserves math tokens in the second column with and without ams (319.143717ms)
+ℹ 256 fresh MathJax 4.1.3 comparisons
+✔ tags parse embedded math rather than printing dollar delimiters (79.29753ms)
+ℹ 74 fresh MathJax 4.1.3 comparisons
+✔ mathop preserves the ORD atom of explicit font arguments (53.120142ms)
+ℹ 72 fresh MathJax 4.1.3 comparisons
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 671.444343

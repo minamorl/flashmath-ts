@@ -1,4 +1,4 @@
 CDP schema Page.captureScreenshot format,quality,clip,fromSurface,captureBeyondViewport,optimizeForSpeed
 CDP schema Runtime.evaluate expression,objectGroup,includeCommandLineAPI,silent,contextId,returnByValue,generatePreview,userGesture,awaitPromise,throwOnSideEffect,timeout,disableBreaks,replMode,allowUnsafeEvalBlockedByCSP,uniqueContextId,serializationOptions
 CDP schema Input.dispatchKeyEvent type,modifiers,timestamp,text,unmodifiedText,keyIdentifier,code,key,windowsVirtualKeyCode,nativeVirtualKeyCode,autoRepeat,isKeypad,isSystemKey,location,commands
-screen_run: Chrome/153.0.8010.36; opened after.html; React hydration/client {"hydrated":202,"clientRendered":2638,"errors":[],"recoverable":[]}; keyboard switched React SSR → toMathMLString → React SSR; 202 formulas; SSR/string geometry equal; captured every group
+screen_run: Chrome/153.0.8010.36; opened after.html; React hydration/client {"hydrated":211,"clientRendered":2638,"errors":[],"recoverable":[]}; keyboard switched React SSR → toMathMLString → React SSR; 211 formulas; SSR/string geometry equal; captured every group

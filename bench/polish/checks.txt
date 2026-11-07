@@ -1,0 +1,182 @@
+$ pnpm install --frozen-lockfile
+exit 0
+Already up to date
+Done in 513ms using pnpm v11.18.0
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node scripts/build.mjs
+exit 0
+Built shared ESM runtime and TypeScript declarations
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node --test --test-reporter=tap test/core.test.mjs test/hardening-compatibility.test.mjs test/hardening.test.mjs test/integration.test.mjs test/native-render.test.mjs test/packages-fonts.test.mjs test/packages-misc.test.mjs test/packages-pkg-physics.test.mjs test/packages-references.test.mjs test/polish-compatibility.test.mjs test/react-properties.test.mjs test/ssr-fixtures.test.mjs test/symbol-trie.test.mjs test/packages/action.test.mjs test/packages/ams.test.mjs test/packages/amscd.test.mjs test/packages/autoload.test.mjs test/packages/bbm.test.mjs test/packages/bboldx.test.mjs test/packages/bbox.test.mjs test/packages/begingroup.test.mjs test/packages/boldsymbol.test.mjs test/packages/braket.test.mjs test/packages/bussproofs.test.mjs test/packages/cancel.test.mjs test/packages/cases.test.mjs test/packages/centernot.test.mjs test/packages/color.test.mjs test/packages/colortbl.test.mjs test/packages/colorv2.test.mjs test/packages/configmacros.test.mjs test/packages/dsfont.test.mjs test/packages/empheq.test.mjs test/packages/enclose.test.mjs test/packages/extpfeil.test.mjs test/packages/fontsizev3.test.mjs test/packages/gensymb.test.mjs test/packages/html.test.mjs test/packages/mathtools.test.mjs test/packages/mhchem-generalization.test.mjs test/packages/mhchem-output.test.mjs test/packages/mhchem.test.mjs test/packages/noerrors.test.mjs test/packages/noundefined.test.mjs test/packages/physics-scaling.test.mjs test/packages/physics.test.mjs test/packages/require.test.mjs test/packages/setoptions.test.mjs test/packages/tagformat.test.mjs test/packages/texhtml.test.mjs test/packages/textcomp.test.mjs test/packages/textmacros.test.mjs test/packages/unicode.test.mjs test/packages/upgreek.test.mjs test/packages/verb.test.mjs conformance/harness.test.mjs scripts/ci-checks.test.mjs
+exit 0
+  ...
+1..1858
+# tests 2480
+# suites 0
+# pass 2474
+# fail 0
+# cancelled 0
+# skipped 6
+# todo 0
+# duration_ms 10937.418837
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output bench/polish/ci-node-26/conformance.json --fresh
+exit 1
+progress: 1700/2683
+progress: 1800/2683
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node scripts/ci-conformance-gate.mjs bench/polish/ci-node-26/conformance.json
+exit 0
+Conformance gate PASS: {"matched":2635,"mismatch":0,"unsupported":48,"total":2683,"classifications":{"typeset-component-pipeline":14,"custom-package-registration":26,"non-single-MathML-snapshot":7,"input-not-captured":1}}
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node scripts/ci-pack-smoke.mjs
+exit 0
+{"coreImport":true,"reactImport":true,"reactSSR":true,"coreBytes":455,"reactBytes":455}
+Pack smoke PASS: {"tarball":"minamorl-flashmath-0.1.0.tgz","files":89,"unpackedBytes":499122}
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node scripts/build.mjs
+exit 0
+Built shared ESM runtime and TypeScript declarations
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node --test --test-reporter=tap test/core.test.mjs test/hardening-compatibility.test.mjs test/hardening.test.mjs test/integration.test.mjs test/native-render.test.mjs test/packages-fonts.test.mjs test/packages-misc.test.mjs test/packages-pkg-physics.test.mjs test/packages-references.test.mjs test/polish-compatibility.test.mjs test/react-properties.test.mjs test/ssr-fixtures.test.mjs test/symbol-trie.test.mjs test/packages/action.test.mjs test/packages/ams.test.mjs test/packages/amscd.test.mjs test/packages/autoload.test.mjs test/packages/bbm.test.mjs test/packages/bboldx.test.mjs test/packages/bbox.test.mjs test/packages/begingroup.test.mjs test/packages/boldsymbol.test.mjs test/packages/braket.test.mjs test/packages/bussproofs.test.mjs test/packages/cancel.test.mjs test/packages/cases.test.mjs test/packages/centernot.test.mjs test/packages/color.test.mjs test/packages/colortbl.test.mjs test/packages/colorv2.test.mjs test/packages/configmacros.test.mjs test/packages/dsfont.test.mjs test/packages/empheq.test.mjs test/packages/enclose.test.mjs test/packages/extpfeil.test.mjs test/packages/fontsizev3.test.mjs test/packages/gensymb.test.mjs test/packages/html.test.mjs test/packages/mathtools.test.mjs test/packages/mhchem-generalization.test.mjs test/packages/mhchem-output.test.mjs test/packages/mhchem.test.mjs test/packages/noerrors.test.mjs test/packages/noundefined.test.mjs test/packages/physics-scaling.test.mjs test/packages/physics.test.mjs test/packages/require.test.mjs test/packages/setoptions.test.mjs test/packages/tagformat.test.mjs test/packages/texhtml.test.mjs test/packages/textcomp.test.mjs test/packages/textmacros.test.mjs test/packages/unicode.test.mjs test/packages/upgreek.test.mjs test/packages/verb.test.mjs
+exit 0
+  ...
+1..1791
+# tests 2413
+# suites 0
+# pass 2407
+# fail 0
+# cancelled 0
+# skipped 6
+# todo 0
+# duration_ms 9733.851331
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node --test --test-reporter=tap conformance/harness.test.mjs
+exit 0
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 938.124007
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/flashmath/conformance.mjs
+exit 0
+--- | ---: | ---: | ---: | ---: | ---:
+base | 848 | 0 | 21 | 869 | 97.58%
+userMacros | 0 | 0 | 5 | 5 | 0.00%
+userEnvs | 0 | 0 | 15 | 15 | 0.00%
+userFilters | 0 | 0 | 1 | 1 | 0.00%
+newcommand | 58 | 0 | 0 | 58 | 100.00%
+colorv2 | 6 | 0 | 0 | 6 | 100.00%
+ams | 6 | 0 | 0 | 6 | 100.00%
+
+classifications: {"custom-package-registration":21}
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output bench/release/conformance.json --fresh
+exit 1 (expected 1: retained unsupported records)
+progress: 1700/2683
+progress: 1800/2683
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/hardening/verify-corpus.mjs
+exit 0
+{"total":971,"match":969,"mismatch":0,"fmThrow":0,"mjThrow":2,"validTotal":827,"validMatch":827}
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/release/bussproofs.mjs
+exit 0
+QuinaryInf: match
+chain: match
+unequal: match
+labels: match
+upward: match
+missingCenter: match
+missingDollar: match
+missingPremise: match
+outside: match
+33 upstream commands; 41 non-fixture probes; 0 differences
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/flashmath/generate-mhchem-grammar.mjs --check
+exit 0
+text: 1 states, 10 rules
+pq: 4 states, 22 rules
+bd: 4 states, 21 rules
+oxidation: 1 states, 3 rules
+tex-math: 1 states, 9 rules
+tex-math tight: 1 states, 11 rules
+9,9: 1 states, 3 rules
+pu: 6 states, 17 rules
+pu-2: 3 states, 10 rules
+pu-9,9: 3 states, 5 rules
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/native-render/compare.mjs
+exit 0
+comparison after: 211 formulas; enclose, cancel, frames, tags, proofs, overlap, variants, physics, chemistry, core, polish
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/native-render/screen.mjs
+exit 0
+CDP schema Page.captureScreenshot format,quality,clip,fromSurface,captureBeyondViewport,optimizeForSpeed
+CDP schema Runtime.evaluate expression,objectGroup,includeCommandLineAPI,silent,contextId,returnByValue,generatePreview,userGesture,awaitPromise,throwOnSideEffect,timeout,disableBreaks,replMode,allowUnsafeEvalBlockedByCSP,uniqueContextId,serializationOptions
+CDP schema Input.dispatchKeyEvent type,modifiers,timestamp,text,unmodifiedText,keyIdentifier,code,key,windowsVirtualKeyCode,nativeVirtualKeyCode,autoRepeat,isKeypad,isSystemKey,location,commands
+screen_run: Chrome/153.0.8010.36; opened after.html; React hydration/client {"hydrated":211,"clientRendered":2638,"errors":[],"recoverable":[]}; keyboard switched React SSR → toMathMLString → React SSR; 211 formulas; SSR/string geometry equal; captured every group
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/native-render/verify-screen.mjs
+exit 0
+frames: 6 formulas, 20 checks, 0 failures
+tags: 14 formulas, 68 checks, 0 failures
+proofs: 16 formulas, 88 checks, 0 failures
+overlap: 12 formulas, 48 checks, 0 failures
+variants: 24 formulas, 48 checks, 0 failures
+physics: 8 formulas, 16 checks, 0 failures
+chemistry: 13 formulas, 66 checks, 0 failures
+core: 10 formulas, 22 checks, 0 failures
+polish: 9 formulas, 22 checks, 0 failures
+visual feature gate: 818 checks; no failures; pixel identity not asserted
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/hardening/bench-driver.mjs
+exit 0
+warm 2 mathjax
+warm 2 temml
+warm 3 flashmath
+warm 3 session
+warm 3 mathjax
+warm 3 temml
+warm 4 flashmath
+warm 4 session
+warm 4 mathjax
+warm 4 temml
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/hardening/report-benchmark.mjs
+exit 0
+{"groups":36,"statelessFasterThanMathJax":36,"temmlComparable":22,"statelessFasterThanTemml":22,"mathjaxMinSpeedup":5.981747240060233,"temmlMinSpeedup":1.0477797406004572}
+{"coldImportToFirstStringMs":{"flashmath":{"p50":27.592881000000006,"p95":32.197792},"session":{"p50":27.552196,"p95":31.291150000000002},"mathjax":{"p50":68.613965,"p95":72.769085},"temml":{"p50":20.549158999999996,"p95":21.446222000000002}}}
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/release/readme.mjs
+exit 0
+README benchmark tables regenerated from measured JSON
+
+$ /home/minamorl/.nvm/versions/node/v26.12.1/bin/node bench/release/pack.mjs
+exit 0
+Packed core import and parse: PASS (React absent)
+Packed react import, React SSR, sequent and font export: PASS
+minamorl-flashmath-0.1.0.tgz: 169252 bytes packed, 499079 bytes unpacked
+sha512 integrity: sha512-v15Sd9UKUFPwKUXlkOS3aAyH+FwBUaIukDnnGNWCbOieYqjGIcOneBkuLSJTljlzSVOE2NGr2NsvaCWudIg2SQ==

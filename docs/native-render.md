@@ -272,10 +272,13 @@ reviewed separately; geometry alone is not evidence of matching glyph design.
 | physics | 8 | 16 | 0 |
 | chemistry | 13 | 66 | 0 |
 | core | 10 | 22 | 0 |
+| polish | 9 | 22 | 0 |
 
-Browser: Chrome/153.0.8010.36. All 202 SSR/string pairs have identical measured geometry.
+Browser: Chrome/153.0.8010.36. All 211 SSR/string pairs have identical measured geometry.
 
 <!-- /measured-results -->
+
+
 
 
 

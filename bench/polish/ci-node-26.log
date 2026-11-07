@@ -1,0 +1,38 @@
+node v26.12.1
+install: exit 0
+Already up to date
+Done in 513ms using pnpm v11.18.0
+build: exit 0
+Built shared ESM runtime and TypeScript declarations
+tests: exit 0
+  duration_ms: 61.669128
+  type: 'test'
+  ...
+1..1858
+# tests 2480
+# suites 0
+# pass 2474
+# fail 0
+# cancelled 0
+# skipped 6
+# todo 0
+# duration_ms 10937.418837
+conformance: exit 1
+progress: 1500/2683
+progress: 1600/2683
+progress: 1700/2683
+progress: 1800/2683
+progress: 1900/2683
+progress: 2000/2683
+progress: 2100/2683
+progress: 2200/2683
+progress: 2300/2683
+progress: 2400/2683
+progress: 2500/2683
+progress: 2600/2683
+conformance-gate: exit 0
+Conformance gate PASS: {"matched":2635,"mismatch":0,"unsupported":48,"total":2683,"classifications":{"typeset-component-pipeline":14,"custom-package-registration":26,"non-single-MathML-snapshot":7,"input-not-captured":1}}
+pack-smoke: exit 0
+{"coreImport":true,"reactImport":true,"reactSSR":true,"coreBytes":455,"reactBytes":455}
+Pack smoke PASS: {"tarball":"minamorl-flashmath-0.1.0.tgz","files":89,"unpackedBytes":499122}
+CI local steps: PASS

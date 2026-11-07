@@ -1,0 +1,43 @@
+✔ configuration values share tables but never macro, regex or option state (18.057155ms)
+✔ configuration keys use option contents, support regex and bound retained entries (1.418146ms)
+✔ nested scanners retain linear character and slice counts through depth 400 (462.329156ms)
+ℹ {"evidence":[{"name":"ce","rows":[{"depth":100,"chars":37059,"slices":100},{"depth":200,"chars":74359,"slices":200},{"depth":400,"chars":148959,"slices":400}]},{"name":"frac","rows":[{"depth":100,"chars":1601,"slices":0},{"depth":200,"chars":3201,"slices":0},{"depth":400,"chars":6401,"slices":0}]},{"name":"qty","rows":[{"depth":100,"chars":1206,"slices":100},{"depth":200,"chars":2401,"slices":200},{"depth":400,"chars":4801,"slices":400}]},{"name":"ket","rows":[{"depth":100,"chars":4502,"slices":100},{"depth":200,"chars":9001,"slices":200},{"depth":400,"chars":18001,"slices":400}]},{"name":"brace","rows":[{"depth":100,"chars":201,"slices":0},{"depth":200,"chars":401,"slices":0},{"depth":400,"chars":801,"slices":0}]}],"flatSlices":0}
+✔ text math and macro argument spans scale from depth 400 to 1600 (1329.479646ms)
+ℹ [{"name":"text-math","rows":[{"depth":400,"copied":0,"ms":2.0073730000000296},{"depth":1600,"copied":0,"ms":8.543322499999988}],"slope":1.0447442637066036},{"name":"textmacros-math","rows":[{"depth":400,"copied":0,"ms":1.3527683333333396},{"depth":1600,"copied":0,"ms":8.16114600000003}],"slope":1.2964284791226681},{"name":"newcommand-arg","rows":[{"depth":400,"copied":5,"ms":1.2722729999999955},{"depth":1600,"copied":5,"ms":5.567500000000034}],"slope":1.0648106902964158}]
+✔ chemistry raised limits render deep nesting without a JS stack overflow (1514.769117ms)
+✔ compact option keys separate primitives, escaped keys and accessors (0.634838ms)
+✔ warm option snapshots observe nested mutations and accessor replacement (3.06827ms)
+✔ 195 native conversions are immutable, idempotent, and SSR/string equivalent (1394.891936ms)
+✔ every enclosure notation and independent combinations keep visible decorations (11.142908ms)
+✔ equation tag side, empty rows, labels and IDs survive native layout (3.930828ms)
+✔ table line lists repeat the final entry, with none and dashed kept distinct (2.754207ms)
+✔ Unicode variants cover Latin/digits/Greek, Letterlike holes and inherited overrides (1.390374ms)
+✔ verbatim text keeps its codepoints and receives an actual CSS font (4.193143ms)
+✔ bbox padding becomes CSS around the complete content, only for package-created padding (2.964394ms)
+✔ only the centernot construction becomes an overlay; ordinary mpadded survives (0.978857ms)
+✔ overline paints the complete base with CSS while a literal horizontal bar stays literal (2.376705ms)
+✔ deep variant output uses an explicit stack and needs no browser (41.443118ms)
+✔ calligraphic and script use distinct NewCM faces in native output (4.27637ms)
+▶ boldsymbol: immutable upstream fixtures
+  ✔ Boldsymbol.test.ts::Boldsymbol Boldsymbol Single 1 (7.199246ms)
+  ✔ Boldsymbol.test.ts::Boldsymbol Boldsymbol Context 1 (1.035044ms)
+  ✔ Boldsymbol.test.ts::Boldsymbol Boldsymbol Operator 1 (2.751232ms)
+  ✔ Boldsymbol.test.ts::Boldsymbol Boldsymbol Fraction 1 (3.301049ms)
+  ✔ Boldsymbol.test.ts::Boldsymbol Boldsymbol Recursive 1 (3.350994ms)
+  ✔ Boldsymbol.test.ts::Boldsymbol Boldsymbol Variant 1 (0.812494ms)
+✔ boldsymbol: immutable upstream fixtures (21.753361ms)
+✔ setoptions: original conformance fixtures (32.85971ms)
+ℹ 12/12 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ setOptions changes package values and invokes filters without leaking caller options (4.573891ms)
+✔ setOptions preserves top-level number options across session inputs (2.150849ms)
+✔ verb: original conformance fixtures (16.407183ms)
+ℹ 5/5 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ verb reads raw comment characters and delimiters within scanner spans (3.086755ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3729.009305

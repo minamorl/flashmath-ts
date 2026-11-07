@@ -82,10 +82,12 @@ test('text math and macro argument spans scale from depth 400 to 1600',t=>{
  }
  t.diagnostic(JSON.stringify(evidence));
 });
-test('chemistry recursion returns merror even when user limits are raised',()=>{
+test('chemistry raised limits render deep nesting without a JS stack overflow',()=>{
  const tex='\\ce{H'.repeat(5000)+'O'+'}'.repeat(5000);
  const options={packages:['base','mhchem'],maxDepth:1e7,maxNodes:1e7,maxTokens:1e7};
- assert.match(render(tex,options),/merror.*Nesting limit exceeded/);
+ const xml=render(tex,options);
+ assert.doesNotMatch(xml,/merror/);
+ assert.equal(xml.replace(/<[^>]*>/g,''),'H'.repeat(5000)+'O');
 });
 
 test('compact option keys separate primitives, escaped keys and accessors',()=>{
@@ -96,4 +98,22 @@ test('compact option keys separate primitives, escaped keys and accessors',()=>{
  assert.equal(configurationKey(object),undefined);assert.equal(configurationKey(array),undefined);assert.equal(reads,0);
  const input=JSON.parse('{"__proto__":{"x":1},"texOptions":{"tags":"none"}}');
  assert.notEqual(configurationKey(input),configurationKey({texOptions:{tags:'none'}}));
+});
+
+test('warm option snapshots observe nested mutations and accessor replacement',()=>{
+ const options={packages:['base','newcommand'],macros:{q:'a'},texOptions:{}};
+ assert.match(render('\\q',options),/>a</);
+ options.macros.q='b';assert.match(render('\\q',options),/>b</);
+ options.packages.splice(1,1,'boldsymbol');
+ assert.doesNotMatch(render('\\boldsymbol{x}',options),/merror/);
+ const oldKey=configurationKey(options);
+ options.texOptions.unknown=true;
+ assert.notEqual(configurationKey(options),oldKey);
+ assert.throws(()=>render('x',options),/Unsupported TeX option/);
+ let reads=0;
+ Object.defineProperty(options.macros,'q',{enumerable:true,configurable:true,get(){reads++;return 'c';}});
+ assert.equal(configurationKey(options),undefined);assert.equal(reads,0);
+ const warmed={child:{x:1}};configurationKey(warmed);warmed.child.loop=warmed;
+ assert.equal(configurationKey(warmed),undefined);
+ delete warmed.child.loop;assert.equal(configurationKey(warmed),configurationKey({child:{x:1}}));
 });

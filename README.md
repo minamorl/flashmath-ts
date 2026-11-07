@@ -61,9 +61,10 @@ value; references to completed equations use their actual tag and URL.
 
 Defaults are inline display, packages `['base', 'newcommand']`, 10,000 macro
 expansions, 100,000 allocated nodes, 200,000 consumed tokens, and 1,024 nested
-parser frames. Chemistry grammar actions additionally stop at 512 recursive
-levels, even when maxDepth is raised, returning merror instead of overflowing
-the JavaScript stack. Override these with `display`, `packages`, `maxExpansions`,
+parser frames. With mhchem active, chemistry actions and parser frames use an
+explicit stack bounded by the token budget by default, so deep chemistry has
+no independent recursion cutoff. An explicit `maxDepth` limits both stacks.
+Override these with `display`, `packages`, `maxExpansions`,
 `maxNodes`, `maxTokens`, and `maxDepth`. `throwOnError: true` throws `ParseError`;
 otherwise malformed TeX produces an `merror` tree. `macros` accepts a replacement
 string or `[replacement, arity, optionalDefault]`. `decimalSeparator` accepts
@@ -150,17 +151,17 @@ otherwise document state persists. Both set ignoreDuplicateLabels=true.
 
 | Corpus | Common inputs | Stateless | Session | MathJax | Temml |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| bench12 | 12/12 | 14.37 | 10.50 | 252.53 | 21.35 |
-| base | 10/10 | 29.00 | 22.93 | 480.49 | 44.76 |
-| newcommand | 6/10 | 11.48 | 8.99 | 194.41 | 17.88 |
-| ams | 10/10 | 32.74 | 28.01 | 425.75 | 55.50 |
-| mathtools | 6/10 | 27.96 | 23.25 | 456.20 | 43.99 |
-| physics | 9/10 | 36.43 | 35.03 | 536.92 | 73.00 |
-| mhchem | 10/10 | 102.54 | 84.73 | 925.10 | 110.24 |
+| bench12 | 12/12 | 13.40 | 12.11 | 237.06 | 20.48 |
+| base | 10/10 | 26.79 | 26.68 | 436.93 | 41.44 |
+| newcommand | 6/10 | 9.71 | 9.26 | 175.04 | 17.17 |
+| ams | 10/10 | 31.20 | 30.93 | 403.75 | 52.43 |
+| mathtools | 6/10 | 28.80 | 28.03 | 415.76 | 42.49 |
+| physics | 9/10 | 34.88 | 35.79 | 527.04 | 71.11 |
+| mhchem | 10/10 | 102.95 | 103.48 | 935.08 | 107.87 |
 
 Across the full corpus, stateless flashmath had lower p50 than MathJax in
 36/36 groups and Temml in
-20/22 comparable cohorts.
+22/22 comparable cohorts.
 Bussproofs has no timed cohort; compatibility is checked separately.
 These are machine/corpus results and do not establish a universal speed ranking.
 
@@ -169,14 +170,14 @@ p50 / p95 milliseconds (excludes Node process bootstrap):
 
 | Stateless | Session | MathJax | Temml |
 | ---: | ---: | ---: | ---: |
-| 26.71 / 28.46 | 26.26 / 27.72 | 67.44 / 69.57 | 20.37 / 21.18 |
+| 27.59 / 32.20 | 27.55 / 31.29 | 68.61 / 72.77 | 20.55 / 21.45 |
 
 [Full cohorts, p50/p95 and method](https://github.com/minamorl/flashmath-ts/blob/main/bench/flashmath/hardening-benchmark.md) ·
 [raw samples](https://github.com/minamorl/flashmath-ts/blob/main/bench/flashmath/hardening-benchmark.raw.json). Earlier hardening
 numbers are superseded because MathJax tag options and replayed declarations
 were not handled consistently.
 
-Temml remains faster on these identical-input cohorts: boldsymbol (0.98×), verb (0.96×). The goal of winning every cohort is not achieved.
+Temml remains faster on these identical-input cohorts: none in this run. The goal of winning every cohort is met on this measured corpus only.
 
 <!-- /release-benchmark -->
 

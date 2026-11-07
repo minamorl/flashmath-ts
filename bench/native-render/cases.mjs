@@ -20,3 +20,9 @@ for(const tex of ['x+y=z',String.raw`\frac{a+b}{c+d}`,String.raw`\sqrt{x^2+y^2}`
 // Verifier regressions, including labelled/wide arrows and label-only rules.
 for(const tex of [String.raw`\ce{A <=>>[long catalyst label][heat] B}`,String.raw`\ce{A <<=>[heat][long catalyst label] B}`,String.raw`\ce{A\bond{~-}B\bond{~--}C\bond{-~-}D}`])add('chemistry',tex,['mhchem']);
 for(const up of ['',String.raw`\rootAtTop`])for(const side of ['LeftLabel','RightLabel'])add('proofs',String.raw`\begin{prooftree}`+up+String.raw`\AxiomC{$A$}\AxiomC{$B$}\noLine`+`\\${side}{rule}`+String.raw`\BinaryInfC{$A\land B$}\end{prooftree}`,['bussproofs']);
+
+// Independent polish regressions, exercised in the actual browser as well.
+for(const tex of [String.raw`\begin{array}{ll}a&b\\1&2\end{array}`,String.raw`x+7\tag{$*$}`,String.raw`x+7\tag{$\dagger$}`,String.raw`\mathop{\mathrm{ab}}x`,String.raw`\mathop{\mathbf{X}}_7x`,String.raw`\mathop{\mathrm{ess\,sup}}x`])add('polish',tex,['ams']);
+add('polish','\\ce{H'.repeat(8)+'O'+'}'.repeat(8),['mhchem']);
+add('polish',String.raw`\boldsymbol{\alpha+\Gamma+x^2+\mathit{B}}`,['boldsymbol']);
+add('polish',String.raw`\verb|x { y % z|+q_7`,['verb']);

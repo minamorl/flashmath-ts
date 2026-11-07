@@ -62,5 +62,20 @@ export class Stream {
   peek():Token|undefined {return this.cached??=this.read();}
   next():Token|undefined {const t=this.peek();this.cached=undefined;return t;}
   skip(){while(this.peek()&&space(this.peek()![0]))this.next();}
+  /** Consume raw source through a delimiter without dispatching each token. */
+  takeThrough(source:string,end:number):Token|undefined {
+    const within=(t:Token)=>t[3]===source&&t[1]-(t[0]===-1?1:0)<=end;
+    let last:Token|undefined;
+    if(this.cached){if(!within(this.cached))return;last=this.cached;this.cached=undefined;}
+    while(this.streams.length){
+      const s=this.streams[this.streams.length-1];
+      if(s.i===s.end){this.streams.pop();continue;}
+      const token=s.tokens[s.i];
+      if(!within(token))break;
+      if(++this.consumed>this.max)throw new ParseError('Token limit exceeded',token[1]);
+      last=token;s.i++;
+    }
+    return last;
+  }
   private read():Token|undefined {while(this.streams.length){const s=this.streams[this.streams.length-1];if(s.i===s.end){this.streams.pop();continue;}if(++this.consumed>this.max)throw new ParseError('Token limit exceeded',s.tokens[s.i][1]);return s.tokens[s.i++];}return undefined;}
 }

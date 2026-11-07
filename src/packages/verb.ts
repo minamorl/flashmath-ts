@@ -9,12 +9,7 @@ export default {
    const delimiter=source.charAt(delimiterStart),start=delimiterStart+1;
    const end=source.indexOf(delimiter,start);
    if(end<0)p.error("Can't find closing delimiter for \\verb");
-   let last=token;
-   while(p.stream.peek()) {
-     const next=p.stream.peek()!;
-     if(next[3]!==source||next[1]-(next[0]===-1?1:0)>end)break;
-     last=p.stream.next()!;
-   }
+   const last=p.stream.takeThrough(source,end)??token;
    // A backslash delimiter can split a pre-scanned control word. Only that
    // token's remainder is scanned again; the unconsumed source is preserved.
    if(last[2]>end+1)p.stream.push(scan(source.slice(end+1,last[2])));

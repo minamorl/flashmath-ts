@@ -15,7 +15,7 @@ import type { Token, Macro, TokenSpan } from "./scanner.js";
 import { preamble } from "./preamble.js";
 import type { Preamble } from "./preamble.js";
 import { C, definitions, ranges } from "./symbols.js";
-import { configure, resolveConfiguration } from "./configuration.js";
+import { parserConfiguration, resolveConfiguration } from "./configuration.js";
 import { mathMLForOutput } from "./output.js";
 import { sessionState } from "./session-state.js";
 import {format,tagNodes} from "./packages/tagformat.js";
@@ -183,7 +183,9 @@ export class Parser {
     env = "",
     table: Table | null = null,
   ) {
-    if (this.frames.length >= (this.options.maxDepth ?? 1024))
+    // Chemistry's iterative expansion can legitimately produce thousands of
+    // groups. Its default is bounded by the token budget, like its work stack.
+    if (this.frames.length >= (this.options.maxDepth ?? (this.configuration.extensions.has("ce") ? this.options.maxTokens ?? 200000 : 1024)))
       this.error("Nesting limit exceeded");
     const p = this.f;
     this.frames.push({
@@ -761,6 +763,21 @@ export class Parser {
     if (text.endsWith(" ")) text = text.slice(0, -1) + "\u00a0";
     return this.node(K.mtext, [], text, font ? { mathvariant: font } : {});
   }
+  /** Tags use the same text/math grammar as text boxes, in a fresh math scope. */
+  tagText(text: string): Node[] {
+    if (!/[\\$]/.test(text)) return [this.node(K.mtext, [], text)];
+    const state = sessionState();
+    state.macros = new Map(this.macros);
+    state.labels = new Map([...this.session.labels, ...this.localLabels]);
+    state.initialized = true;
+    const depth = (this.options.maxDepth ?? 1024) - this.frames.length;
+    if (depth < 1) this.error("Nesting limit exceeded");
+    const inner = new Parser("\\text{" + text + "}", {...this.options, display:false, tags:"none", maxDepth:depth}, this.configuration, state);
+    inner.run();
+    this.nodes += inner.nodes;
+    if (this.nodes > (this.options.maxNodes ?? 100000)) this.error("Node limit exceeded");
+    return inner.result;
+  }
   renderText(input: Token[] | TokenSpan, font = "", style = false) {
     const {tokens,start,end}=Array.isArray(input)?{tokens:input,start:0,end:input.length}:input;
     const parts: { math: boolean; span:TokenSpan }[] = [];
@@ -908,8 +925,6 @@ export class Parser {
         }),
       ];
     }
-    if (t.align === "ll" && t.cells.length === 1 && nodes[0]?.kind !== K.mtext)
-      nodes = [this.node(K.mtext, [], nodeText(nodes))];
     if (t.colors) {
       const color=t.colors.cell || (t.colors.rowIndex===t.rows.length?t.colors.row:"") || t.colors.columns[t.cells.length];
       if(color)a.mathbackground=color;
@@ -1649,7 +1664,7 @@ export interface MathMLParserSession {
 export function createMathMLParser(
   input: ParseOptions = {},
 ): MathMLParserSession {
-  const { options, configuration } = configure(input),
+  const { options, configuration } = parserConfiguration(input),
     state = sessionState();
   const parse = (tex: string, overrides: Pick<ParseOptions, 'display' | 'output'> = {}) => {
     const resolved = { ...options, ...overrides };
@@ -1663,7 +1678,7 @@ export function parseToMathMLAst(
   tex: string,
   options: ParseOptions = {},
 ): MathMLNode {
-  const resolved=configure(options);
+  const resolved=parserConfiguration(options);
   if(resolved.options.prior?.length)return createMathMLParser(options).parse(tex);
   return mathMLForOutput(parseOne(tex,resolved.options,resolved.configuration,sessionState()),resolved.options);
 }

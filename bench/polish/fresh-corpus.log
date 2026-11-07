@@ -1,0 +1,21 @@
+✔ array ll preserves math tokens in the second column with and without ams (906.923966ms)
+ℹ 256 fresh MathJax 4.1.3 comparisons
+✔ tags parse embedded math rather than printing dollar delimiters (222.00637ms)
+ℹ 74 fresh MathJax 4.1.3 comparisons
+✔ mathop preserves the ORD atom of explicit font arguments (195.615788ms)
+ℹ 72 fresh MathJax 4.1.3 comparisons
+✔ deep chemistry around depth 800 agrees with MathJax using default limits (13854.414961ms)
+ℹ 32 fresh MathJax 4.1.3 comparisons
+✔ chemistry default limits accept MathJax depth 2000 and explicit limits still apply (1337.146013ms)
+✔ boldsymbol optimization retains MathJax behavior on fresh font and script expressions (38.971163ms)
+ℹ 36 fresh MathJax 4.1.3 comparisons
+✔ verb raw consumption retains MathJax behavior across delimiters and following math (34.456514ms)
+ℹ 33 fresh MathJax 4.1.3 comparisons
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16987.008562

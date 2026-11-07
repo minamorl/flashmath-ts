@@ -1,0 +1,16 @@
+✔ configuration values share tables but never macro, regex or option state (8.499189ms)
+✔ configuration keys use option contents, support regex and bound retained entries (0.735788ms)
+✔ nested scanners retain linear character and slice counts through depth 400 (143.693245ms)
+ℹ {"evidence":[{"name":"ce","rows":[{"depth":100,"chars":37059,"slices":100},{"depth":200,"chars":74359,"slices":200},{"depth":400,"chars":148959,"slices":400}]},{"name":"frac","rows":[{"depth":100,"chars":1601,"slices":0},{"depth":200,"chars":3201,"slices":0},{"depth":400,"chars":6401,"slices":0}]},{"name":"qty","rows":[{"depth":100,"chars":1206,"slices":100},{"depth":200,"chars":2401,"slices":200},{"depth":400,"chars":4801,"slices":400}]},{"name":"ket","rows":[{"depth":100,"chars":4502,"slices":100},{"depth":200,"chars":9001,"slices":200},{"depth":400,"chars":18001,"slices":400}]},{"name":"brace","rows":[{"depth":100,"chars":201,"slices":0},{"depth":200,"chars":401,"slices":0},{"depth":400,"chars":801,"slices":0}]}],"flatSlices":0}
+✔ text math and macro argument spans scale from depth 400 to 1600 (857.340386ms)
+ℹ [{"name":"text-math","rows":[{"depth":400,"copied":0,"ms":0.7153924117647066},{"depth":1600,"copied":0,"ms":2.5943938}],"slope":0.9292953802400474},{"name":"textmacros-math","rows":[{"depth":400,"copied":0,"ms":0.5107717916666653},{"depth":1600,"copied":0,"ms":2.1768163333333255}],"slope":1.0457344649638785},{"name":"newcommand-arg","rows":[{"depth":400,"copied":5,"ms":0.6877105555555545},{"depth":1600,"copied":5,"ms":2.5947766000000003}],"slope":0.9578684695155905}]
+✔ chemistry raised limits render deep nesting without a JS stack overflow (597.900655ms)
+✔ compact option keys separate primitives, escaped keys and accessors (0.44558ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1743.471314

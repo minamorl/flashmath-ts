@@ -1,0 +1,45 @@
+✔ configuration values share tables but never macro, regex or option state (17.215567ms)
+✔ configuration keys use option contents, support regex and bound retained entries (2.073573ms)
+✔ nested scanners retain linear character and slice counts through depth 400 (385.797613ms)
+ℹ {"evidence":[{"name":"ce","rows":[{"depth":100,"chars":37059,"slices":100},{"depth":200,"chars":74359,"slices":200},{"depth":400,"chars":148959,"slices":400}]},{"name":"frac","rows":[{"depth":100,"chars":1601,"slices":0},{"depth":200,"chars":3201,"slices":0},{"depth":400,"chars":6401,"slices":0}]},{"name":"qty","rows":[{"depth":100,"chars":1206,"slices":100},{"depth":200,"chars":2401,"slices":200},{"depth":400,"chars":4801,"slices":400}]},{"name":"ket","rows":[{"depth":100,"chars":4502,"slices":100},{"depth":200,"chars":9001,"slices":200},{"depth":400,"chars":18001,"slices":400}]},{"name":"brace","rows":[{"depth":100,"chars":201,"slices":0},{"depth":200,"chars":401,"slices":0},{"depth":400,"chars":801,"slices":0}]}],"flatSlices":0}
+✔ text math and macro argument spans scale from depth 400 to 1600 (1320.98715ms)
+ℹ [{"name":"text-math","rows":[{"depth":400,"copied":0,"ms":1.6420949999999976},{"depth":1600,"copied":0,"ms":6.909944499999995}],"slope":1.0365682647075762},{"name":"textmacros-math","rows":[{"depth":400,"copied":0,"ms":1.054801333333349},{"depth":1600,"copied":0,"ms":4.638296333333376}],"slope":1.0683118472179336},{"name":"newcommand-arg","rows":[{"depth":400,"copied":5,"ms":1.3761524444444402},{"depth":1600,"copied":5,"ms":5.050978666666651}],"slope":0.9379613268802424}]
+✔ chemistry raised limits render deep nesting without a JS stack overflow (1565.984697ms)
+✔ compact option keys separate primitives, escaped keys and accessors (0.545459ms)
+✔ warm option snapshots observe nested mutations and accessor replacement (6.374649ms)
+✔ 195 native conversions are immutable, idempotent, and SSR/string equivalent (1430.716892ms)
+✔ every enclosure notation and independent combinations keep visible decorations (4.025968ms)
+✔ equation tag side, empty rows, labels and IDs survive native layout (2.474169ms)
+✔ table line lists repeat the final entry, with none and dashed kept distinct (0.544618ms)
+✔ Unicode variants cover Latin/digits/Greek, Letterlike holes and inherited overrides (2.682442ms)
+✔ verbatim text keeps its codepoints and receives an actual CSS font (1.103352ms)
+✔ bbox padding becomes CSS around the complete content, only for package-created padding (10.01491ms)
+✔ only the centernot construction becomes an overlay; ordinary mpadded survives (2.582574ms)
+✔ overline paints the complete base with CSS while a literal horizontal bar stays literal (2.18331ms)
+✔ deep variant output uses an explicit stack and needs no browser (53.976861ms)
+✔ calligraphic and script use distinct NewCM faces in native output (6.618821ms)
+✔ setoptions: original conformance fixtures (34.48625ms)
+ℹ 12/12 fixture records available in this lane; cross-lane evidence is bench/pkg-misc/integration.json
+✔ setOptions changes package values and invokes filters without leaking caller options (4.643523ms)
+✔ setOptions preserves top-level number options across session inputs (1.845493ms)
+✔ array ll preserves math tokens in the second column with and without ams (1133.471627ms)
+ℹ 256 fresh MathJax 4.1.3 comparisons
+✔ tags parse embedded math rather than printing dollar delimiters (343.274968ms)
+ℹ 74 fresh MathJax 4.1.3 comparisons
+✔ mathop preserves the ORD atom of explicit font arguments (100.807305ms)
+ℹ 72 fresh MathJax 4.1.3 comparisons
+✔ deep chemistry around depth 800 agrees with MathJax using default limits (8822.27849ms)
+ℹ 32 fresh MathJax 4.1.3 comparisons
+✔ chemistry default limits accept MathJax depth 2000 and explicit limits still apply (971.331982ms)
+✔ boldsymbol optimization retains MathJax behavior on fresh font and script expressions (28.750164ms)
+ℹ 36 fresh MathJax 4.1.3 comparisons
+✔ verb raw consumption retains MathJax behavior across delimiters and following math (23.678935ms)
+ℹ 33 fresh MathJax 4.1.3 comparisons
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11872.029329

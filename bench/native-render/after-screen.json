@@ -1,6 +1,6 @@
 {
   "reactChecks": {
-    "hydrated": 202,
+    "hydrated": 211,
     "clientRendered": 2638,
     "errors": [],
     "recoverable": []
@@ -40,7 +40,7 @@
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
     "jsVersion": "15.3.76.10"
   },
-  "count": 202,
+  "count": 211,
   "ssrStringParity": true,
   "exceptions": [],
   "screenshots": [
@@ -64,7 +64,8 @@
     "after-physics-1.png",
     "after-chemistry-1.png",
     "after-chemistry-2.png",
-    "after-core-1.png"
+    "after-core-1.png",
+    "after-polish-1.png"
   ],
   "measurements": [
     {
@@ -14240,7 +14241,7 @@
         "right": 397.75,
         "bottom": 20720.46875
       },
-      "text": "Γαθ",
+      "text": "𝛤αθ",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],
@@ -16557,6 +16558,377 @@
         "bottom": 27058.625
       },
       "text": "xyz",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-1",
+      "native": {
+        "x": 1018.875,
+        "y": 27208.625,
+        "width": 70.75,
+        "height": 60.875,
+        "right": 1089.625,
+        "bottom": 27269.5
+      },
+      "reference": {
+        "x": 326.09375,
+        "y": 27200,
+        "width": 89.296875,
+        "height": 78.125,
+        "right": 415.390625,
+        "bottom": 27278.125
+      },
+      "text": "ab12",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-2",
+      "native": {
+        "x": 724.5,
+        "y": 27355.8125,
+        "width": 659.5,
+        "height": 29,
+        "right": 1384,
+        "bottom": 27384.8125
+      },
+      "reference": {
+        "x": 43,
+        "y": 27355.578125,
+        "width": 655.5,
+        "height": 29.46875,
+        "right": 698.5,
+        "bottom": 27385.046875
+      },
+      "text": "x+7(∗)",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [
+        {
+          "side": "right",
+          "box": {
+            "x": 1321.765625,
+            "y": 27358.8125,
+            "width": 62.234375,
+            "height": 23,
+            "right": 1384,
+            "bottom": 27381.8125
+          },
+          "row": {
+            "x": 724.5,
+            "y": 27358.8125,
+            "width": 659.5,
+            "height": 23,
+            "right": 1384,
+            "bottom": 27381.8125
+          },
+          "cells": [
+            {
+              "x": 724.5,
+              "y": 27376.8125,
+              "width": 0,
+              "height": 0,
+              "right": 724.5,
+              "bottom": 27376.8125
+            },
+            {
+              "x": 1023.34375,
+              "y": 27358.8125,
+              "width": 61.796875,
+              "height": 19,
+              "right": 1085.140625,
+              "bottom": 27377.8125
+            },
+            {
+              "x": 1321.765625,
+              "y": 27358.8125,
+              "width": 62.234375,
+              "height": 23,
+              "right": 1384,
+              "bottom": 27381.8125
+            }
+          ]
+        }
+      ],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-3",
+      "native": {
+        "x": 724.5,
+        "y": 27480.8125,
+        "width": 659.5,
+        "height": 29,
+        "right": 1384,
+        "bottom": 27509.8125
+      },
+      "reference": {
+        "x": 43,
+        "y": 27480.578125,
+        "width": 655.5,
+        "height": 29.46875,
+        "right": 698.5,
+        "bottom": 27510.046875
+      },
+      "text": "x+7(†)",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [
+        {
+          "side": "right",
+          "box": {
+            "x": 1327.625,
+            "y": 27483.8125,
+            "width": 56.375,
+            "height": 23,
+            "right": 1384,
+            "bottom": 27506.8125
+          },
+          "row": {
+            "x": 724.5,
+            "y": 27483.8125,
+            "width": 659.5,
+            "height": 23,
+            "right": 1384,
+            "bottom": 27506.8125
+          },
+          "cells": [
+            {
+              "x": 724.5,
+              "y": 27501.8125,
+              "width": 0,
+              "height": 0,
+              "right": 724.5,
+              "bottom": 27501.8125
+            },
+            {
+              "x": 1023.34375,
+              "y": 27483.8125,
+              "width": 61.796875,
+              "height": 19,
+              "right": 1085.140625,
+              "bottom": 27502.8125
+            },
+            {
+              "x": 1327.625,
+              "y": 27483.8125,
+              "width": 56.375,
+              "height": 23,
+              "right": 1384,
+              "bottom": 27506.8125
+            }
+          ]
+        }
+      ],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-4",
+      "native": {
+        "x": 1030.9375,
+        "y": 27611.3125,
+        "width": 46.625,
+        "height": 18,
+        "right": 1077.5625,
+        "bottom": 27629.3125
+      },
+      "reference": {
+        "x": 344.296875,
+        "y": 27610.34375,
+        "width": 52.90625,
+        "height": 20.78125,
+        "right": 397.203125,
+        "bottom": 27631.125
+      },
+      "text": "ab⁡x",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-5",
+      "native": {
+        "x": 1034.609375,
+        "y": 27727.5625,
+        "width": 39.28125,
+        "height": 35.484375,
+        "right": 1073.890625,
+        "bottom": 27763.046875
+      },
+      "reference": {
+        "x": 347.046875,
+        "y": 27727.875,
+        "width": 47.390625,
+        "height": 42.640625,
+        "right": 394.4375,
+        "bottom": 27770.515625
+      },
+      "text": "𝐗7⁡x",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-6",
+      "native": {
+        "x": 1002.796875,
+        "y": 27861.3125,
+        "width": 102.90625,
+        "height": 18,
+        "right": 1105.703125,
+        "bottom": 27879.3125
+      },
+      "reference": {
+        "x": 317.03125,
+        "y": 27867.609375,
+        "width": 107.421875,
+        "height": 18.921875,
+        "right": 424.453125,
+        "bottom": 27886.53125
+      },
+      "text": "esssup⁡x",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-7",
+      "native": {
+        "x": 960.671875,
+        "y": 27986.3125,
+        "width": 187.15625,
+        "height": 18,
+        "right": 1147.828125,
+        "bottom": 28004.3125
+      },
+      "reference": {
+        "x": 270.828125,
+        "y": 27985.015625,
+        "width": 199.84375,
+        "height": 21.4375,
+        "right": 470.671875,
+        "bottom": 28006.453125
+      },
+      "text": "HHHHHHHHO",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-8",
+      "native": {
+        "x": 961.453125,
+        "y": 28108.234375,
+        "width": 185.59375,
+        "height": 24.140625,
+        "right": 1147.046875,
+        "bottom": 28132.375
+      },
+      "reference": {
+        "x": 260.4375,
+        "y": 28104.984375,
+        "width": 220.625,
+        "height": 29.71875,
+        "right": 481.0625,
+        "bottom": 28134.703125
+      },
+      "text": "𝜶+𝚪+𝒙𝟐+𝑩",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "polish-9",
+      "native": {
+        "x": 970.90625,
+        "y": 28231.65625,
+        "width": 166.6875,
+        "height": 27.296875,
+        "right": 1137.59375,
+        "bottom": 28258.953125
+      },
+      "reference": {
+        "x": 270.0625,
+        "y": 28235.359375,
+        "width": 201.359375,
+        "height": 27.171875,
+        "right": 471.421875,
+        "bottom": 28262.53125
+      },
+      "text": "x { y % z+q7",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],

@@ -1,2 +1,2 @@
-{"groups":36,"statelessFasterThanMathJax":36,"temmlComparable":22,"statelessFasterThanTemml":20,"mathjaxMinSpeedup":5.615205883433721,"temmlMinSpeedup":0.9645487679423503}
-{"coldImportToFirstStringMs":{"flashmath":{"p50":26.708023,"p95":28.459238000000006},"session":{"p50":26.259306,"p95":27.720784},"mathjax":{"p50":67.43727600000001,"p95":69.566084},"temml":{"p50":20.3693,"p95":21.177956}}}
+{"groups":36,"statelessFasterThanMathJax":36,"temmlComparable":22,"statelessFasterThanTemml":22,"mathjaxMinSpeedup":5.981747240060233,"temmlMinSpeedup":1.0477797406004572}
+{"coldImportToFirstStringMs":{"flashmath":{"p50":27.592881000000006,"p95":32.197792},"session":{"p50":27.552196,"p95":31.291150000000002},"mathjax":{"p50":68.613965,"p95":72.769085},"temml":{"p50":20.549158999999996,"p95":21.446222000000002}}}

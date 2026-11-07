@@ -156,3 +156,11 @@ test('calligraphic and script use distinct NewCM faces in native output',()=>{
   assert.match(cal,/>ABZ<|>A</);
   assert.ok(scr.includes('𝒜'));
 });
+
+test('boldsymbol native output honors a data-only bold-italic variant',()=>{
+ const tex=String.raw`\boldsymbol{\mathit{B}}`,options={packages:['base','boldsymbol']};
+ const native=toMathMLString(parseToMathMLAst(tex,options));
+ assert.ok(native.includes(String.fromCodePoint(0x1d469)),native);
+ assert.doesNotMatch(native,/data-mjx-variant/);
+ assert.match(toMathMLString(raw(tex,options),{output:'mathjax'}),/data-mjx-variant="bold-italic"/);
+});

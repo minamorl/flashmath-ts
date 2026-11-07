@@ -1,0 +1,20 @@
+{
+  "label": "before",
+  "node": "v26.12.1",
+  "rows": [
+    {
+      "group": "boldsymbol",
+      "flashmathUs": 9.498624999999947,
+      "temmlUs": 8.721110000000039,
+      "speedup": 0.9181444682783126,
+      "samplesPerEngine": 147
+    },
+    {
+      "group": "verb@temml",
+      "flashmathUs": 7.00939444444436,
+      "temmlUs": 5.365627777777919,
+      "speedup": 0.7654909165556678,
+      "samplesPerEngine": 147
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "group": "boldsymbol",
+    "packages": [
+      "base",
+      "boldsymbol"
+    ],
+    "texOptions": {},
+    "configurationModules": [
+      "input/tex/boldsymbol/BoldsymbolConfiguration.js"
+    ],
+    "texs": [
+      "\\boldsymbol{\\alpha}",
+      "\\boldsymbol{\\Gamma}",
+      "\\boldsymbol{\\nabla}\\cdot v",
+      "\\boldsymbol{x^2}",
+      "\\boldsymbol{\\sum_i a_i}",
+      "\\boldsymbol{\\sqrt{x}}",
+      "\\boldsymbol{\\mathrm{A}}",
+      "\\boldsymbol{\\mathit{B}}",
+      "\\boldsymbol{\\mathcal{C}}",
+      "\\boldsymbol{\\mathfrak{d}}"
+    ],
+    "temml": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "group": "verb",
+    "packages": [
+      "base",
+      "verb"
+    ],
+    "texOptions": {},
+    "configurationModules": [
+      "input/tex/verb/VerbConfiguration.js"
+    ],
+    "texs": [
+      "\\verb|a b|",
+      "\\verb!x^2!",
+      "\\verb+\\frac{a}{b}+",
+      "\\verb*a b*",
+      "\\verb|{|",
+      "\\verb/%/",
+      "1+\\verb|x|+2",
+      "\\frac{\\verb|a|}{2}",
+      "\\verb||",
+      "\\verb|<&>|"
+    ],
+    "temml": [
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+]
