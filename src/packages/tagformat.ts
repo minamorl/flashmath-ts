@@ -15,7 +15,7 @@ export function format(p:Parser,key:Key,...args:(string|number)[]):Result {
 export function tagNodes(p:Parser,tag:string,starred=false,ref=false){
   const formatted=starred?tag:format(p,ref?'ref':'tag',tag);
   const parts=ref?[Array.isArray(formatted)?formatted.join(''):formatted]:Array.isArray(formatted)?formatted:(formatted.match(/^(\(|\[|\{)(.*)(\}|\]|\))$/)?.slice(1)??[formatted]);
-  return parts.filter(x=>x!==''&&x!=null).map(x=>p.node(K.mtext,[],String(x)));
+  return parts.filter(x=>x!==''&&x!=null).flatMap(x=>p.tagText(String(x)));
 }
 export default {name:'tagformat',priority:1,commands:{
   tag:ams.commands.tag,

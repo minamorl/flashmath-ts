@@ -556,7 +556,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
     case C.mathpunct:
     case C.mathinner: {
       parser.argument((n) => {
-        if(id === C.mathop && n.kind === K.mrow && n.children.length && n.children.every(c=>c.kind===K.mi&&c.attributes.mathvariant==='normal'))
+        if(id === C.mathop && n.kind === K.mrow && !Object.keys(n.attributes).length && n.children.length && n.children.every(c=>c.kind===K.mi&&c.attributes.mathvariant==='normal'))
           n=parser.node(K.mi,[],n.children.map(c=>c.text).join(''));
         const x =
           id === C.mathop &&
@@ -565,7 +565,7 @@ function baseCommand(parser: Parser, id: number, name: string) {
             ? n
             : n.kind === K.mrow && n.children.length === 0
               ? n
-              : parser.row(n.kind === K.mrow ? n.children : [n], true);
+              : parser.row(n.kind === K.mrow && !(id === C.mathop && Object.keys(n.attributes).length) ? n.children : [n], true);
         if(!(id === C.mathop && x.kind === K.mi && !x.attributes.mathvariant)) x.attributes["data-mjx-texclass"] = name.slice(4).toUpperCase();
         if (id === C.mathop) {
           x.op = n.text || n.children.length ? 1 : 0;
