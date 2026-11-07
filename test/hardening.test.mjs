@@ -87,3 +87,13 @@ test('chemistry recursion returns merror even when user limits are raised',()=>{
  const options={packages:['base','mhchem'],maxDepth:1e7,maxNodes:1e7,maxTokens:1e7};
  assert.match(render(tex,options),/merror.*Nesting limit exceeded/);
 });
+
+test('compact option keys separate primitives, escaped keys and accessors',()=>{
+ const cases=[undefined,null,false,true,0,-0,1,NaN,Infinity,'u','null','n0','nNaN',[],{},['x,y'],['x','y'],{'a:b':'c'},{a:'b:c'}];
+ assert.equal(new Set(cases.map(configurationKey)).size,cases.length);
+ let reads=0;const object={get x(){reads++;return 'x';}},array=[];
+ Object.defineProperty(array,0,{get(){reads++;return 'x';},enumerable:true});
+ assert.equal(configurationKey(object),undefined);assert.equal(configurationKey(array),undefined);assert.equal(reads,0);
+ const input=JSON.parse('{"__proto__":{"x":1},"texOptions":{"tags":"none"}}');
+ assert.notEqual(configurationKey(input),configurationKey({texOptions:{tags:'none'}}));
+});

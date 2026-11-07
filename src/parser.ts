@@ -1663,5 +1663,7 @@ export function parseToMathMLAst(
   tex: string,
   options: ParseOptions = {},
 ): MathMLNode {
-  return createMathMLParser(options).parse(tex);
+  const resolved=configure(options);
+  if(resolved.options.prior?.length)return createMathMLParser(options).parse(tex);
+  return mathMLForOutput(parseOne(tex,resolved.options,resolved.configuration,sessionState()),resolved.options);
 }

@@ -98,10 +98,10 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     const job=work.pop()!,{input,output}=job;
     const variant=input.attributes['data-mjx-variant']??input.attributes.mathvariant??job.variant;
     if(!job.done){
-      work.push({...job,done:true});
-      const sourceChildren=input.children.slice(0,input.children.length-(arrowLabel(input)?1:0));
+      job.done=true;work.push(job);
+      const sourceChildren=input.children,childCount=sourceChildren.length-(arrowLabel(input)?1:0);
       const children:MathMLNode[]=[];
-      for(let i=0;i<sourceChildren.length;i++){
+      for(let i=0;i<childCount;i++){
         const child=sourceChildren[i];
         if(packageMark(child)==='prescript' && sourceChildren[i+3]){
           const script=(which:number):MathMLNode=>{
