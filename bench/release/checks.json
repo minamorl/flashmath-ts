@@ -1,7 +1,7 @@
 {
-  "sourceSha256": "fd614ffa6e5c51981eee8fe12f0332b5441b6ea87c9f7ea2e9c502bff8c2d540",
+  "sourceSha256": "48921f4ca34687a608b3dea3c9efc8e241895950b157bd27ec69792d2b814fa3",
   "node": "v26.12.1",
-  "createdAt": "2026-11-07T01:52:05.006Z",
+  "createdAt": "2026-11-07T02:22:25.434Z",
   "checks": [
     {
       "name": "build",
@@ -19,6 +19,8 @@
         "--test",
         "--test-reporter=tap",
         "test/core.test.mjs",
+        "test/edge-compatibility.test.mjs",
+        "test/edge-depth.test.mjs",
         "test/hardening-compatibility.test.mjs",
         "test/hardening.test.mjs",
         "test/integration.test.mjs",

@@ -1,6 +1,6 @@
 {
   "reactChecks": {
-    "hydrated": 211,
+    "hydrated": 216,
     "clientRendered": 2638,
     "errors": [],
     "recoverable": []
@@ -40,7 +40,7 @@
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
     "jsVersion": "15.3.76.10"
   },
-  "count": 211,
+  "count": 216,
   "ssrStringParity": true,
   "exceptions": [],
   "screenshots": [
@@ -65,7 +65,8 @@
     "after-chemistry-1.png",
     "after-chemistry-2.png",
     "after-core-1.png",
-    "after-polish-1.png"
+    "after-polish-1.png",
+    "after-edge-1.png"
   ],
   "measurements": [
     {
@@ -16929,6 +16930,161 @@
         "bottom": 28262.53125
       },
       "text": "x { y % z+q7",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "edge-1",
+      "native": {
+        "x": 1001.671875,
+        "y": 28404.40625,
+        "width": 105.140625,
+        "height": 59.875,
+        "right": 1106.8125,
+        "bottom": 28464.28125
+      },
+      "reference": {
+        "x": 323.859375,
+        "y": 28397.5,
+        "width": 93.765625,
+        "height": 73.703125,
+        "right": 417.625,
+        "bottom": 28471.203125
+      },
+      "text": "a+b+c",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "edge-2",
+      "native": {
+        "x": 1001.671875,
+        "y": 28540.421875,
+        "width": 105.140625,
+        "height": 59.875,
+        "right": 1106.8125,
+        "bottom": 28600.296875
+      },
+      "reference": {
+        "x": 323.859375,
+        "y": 28536.453125,
+        "width": 93.765625,
+        "height": 73.703125,
+        "right": 417.625,
+        "bottom": 28610.15625
+      },
+      "text": "a+b+c",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "edge-3",
+      "native": {
+        "x": 1001.359375,
+        "y": 28673.296875,
+        "width": 105.765625,
+        "height": 66.15625,
+        "right": 1107.125,
+        "bottom": 28739.453125
+      },
+      "reference": {
+        "x": 329.25,
+        "y": 28669.53125,
+        "width": 82.984375,
+        "height": 73.703125,
+        "right": 412.234375,
+        "bottom": 28743.234375
+      },
+      "text": "a7+c5",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "edge-4",
+      "native": {
+        "x": 993.9375,
+        "y": 28820.203125,
+        "width": 120.609375,
+        "height": 30.4375,
+        "right": 1114.546875,
+        "bottom": 28850.640625
+      },
+      "reference": {
+        "x": 319.5,
+        "y": 28823.640625,
+        "width": 102.5,
+        "height": 29.46875,
+        "right": 422,
+        "bottom": 28853.109375
+      },
+      "text": "A⟶B",
+      "legacy": 0,
+      "decorations": [],
+      "overlaps": [],
+      "chemistry": [],
+      "proofLabels": [],
+      "referenceProofLabels": [],
+      "labels": [],
+      "rules": [],
+      "bboxes": [],
+      "accents": [],
+      "pua": 0
+    },
+    {
+      "id": "edge-5",
+      "native": {
+        "x": 1001.46875,
+        "y": 28945.203125,
+        "width": 105.5625,
+        "height": 30.4375,
+        "right": 1107.03125,
+        "bottom": 28975.640625
+      },
+      "reference": {
+        "x": 329.59375,
+        "y": 28948.640625,
+        "width": 82.296875,
+        "height": 29.46875,
+        "right": 411.890625,
+        "bottom": 28978.109375
+      },
+      "text": "A=B",
       "legacy": 0,
       "decorations": [],
       "overlaps": [],

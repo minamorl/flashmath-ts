@@ -2,10 +2,10 @@
 -rw------- 0/0            1454 1985-10-26 17:15 package/NOTICE
 -rw------- 0/0             763 1985-10-26 17:15 package/dist/fonts.css
 -rw------- 0/0           16145 1985-10-26 17:15 package/dist/chunk-2BLNXHV2.js
--rw------- 0/0           32466 1985-10-26 17:15 package/dist/chunk-3RTFRBSC.js
--rw------- 0/0          328732 1985-10-26 17:15 package/dist/chunk-42ROELGW.js
+-rw------- 0/0           32818 1985-10-26 17:15 package/dist/chunk-F426UZRU.js
 -rw------- 0/0             218 1985-10-26 17:15 package/dist/chunk-IHTB7IDO.js
 -rw------- 0/0            1889 1985-10-26 17:15 package/dist/chunk-KDAOMSCC.js
+-rw------- 0/0          328925 1985-10-26 17:15 package/dist/chunk-S2HUNVGP.js
 -rw------- 0/0            2370 1985-10-26 17:15 package/dist/chunk-TXV67IQS.js
 -rw------- 0/0             530 1985-10-26 17:15 package/dist/chunk-WZSFAGJH.js
 -rw------- 0/0             174 1985-10-26 17:15 package/dist/configuration-cache.js
@@ -17,11 +17,11 @@
 -rw------- 0/0             241 1985-10-26 17:15 package/dist/packages/registry.js
 -rw------- 0/0            1446 1985-10-26 17:15 package/package.json
 -rw------- 0/0             679 1985-10-26 17:15 package/dist/fonts/provenance.json
--rw------- 0/0           10079 1985-10-26 17:15 package/README.md
+-rw------- 0/0           10047 1985-10-26 17:15 package/README.md
 -rw------- 0/0             425 1985-10-26 17:15 package/dist/packages/action.d.ts
 -rw------- 0/0             975 1985-10-26 17:15 package/dist/packages/ams.d.ts
 -rw------- 0/0             822 1985-10-26 17:15 package/dist/packages/amscd.d.ts
--rw------- 0/0            3343 1985-10-26 17:15 package/dist/ast.d.ts
+-rw------- 0/0            3454 1985-10-26 17:15 package/dist/ast.d.ts
 -rw------- 0/0             423 1985-10-26 17:15 package/dist/packages/autoload.d.ts
 -rw------- 0/0             709 1985-10-26 17:15 package/dist/packages/base.d.ts
 -rw------- 0/0             652 1985-10-26 17:15 package/dist/packages/bbm.d.ts
@@ -53,7 +53,7 @@
 -rw------- 0/0             942 1985-10-26 17:15 package/dist/mathml.d.ts
 -rw------- 0/0             576 1985-10-26 17:15 package/dist/packages/mathtools.d.ts
 -rw------- 0/0            3431 1985-10-26 17:15 package/dist/packages/mhchem-grammar.d.ts
--rw------- 0/0            1447 1985-10-26 17:15 package/dist/packages/mhchem-machine.d.ts
+-rw------- 0/0            1490 1985-10-26 17:15 package/dist/packages/mhchem-machine.d.ts
 -rw------- 0/0             218 1985-10-26 17:15 package/dist/packages/mhchem.d.ts
 -rw------- 0/0             460 1985-10-26 17:15 package/dist/native-layout.d.ts
 -rw------- 0/0             135 1985-10-26 17:15 package/dist/native-variants.d.ts
@@ -62,7 +62,7 @@
 -rw------- 0/0             247 1985-10-26 17:15 package/dist/packages/noundefined.d.ts
 -rw------- 0/0             321 1985-10-26 17:15 package/dist/output.d.ts
 -rw------- 0/0             332 1985-10-26 17:15 package/dist/package-mark.d.ts
--rw------- 0/0            5248 1985-10-26 17:15 package/dist/parser.d.ts
+-rw------- 0/0            5287 1985-10-26 17:15 package/dist/parser.d.ts
 -rw------- 0/0             374 1985-10-26 17:15 package/dist/packages/physics.d.ts
 -rw------- 0/0             589 1985-10-26 17:15 package/dist/preamble.d.ts
 -rw------- 0/0             362 1985-10-26 17:15 package/dist/react.d.ts

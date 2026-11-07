@@ -1,4 +1,4 @@
-{"type":"conformance-journal-v1","fingerprint":"981130898d5d51727687615b7148d7309ad27a374f8b00a1e3fb1f6d977183dd","subject":"/home/minamorl/repos/.worktrees/flashmath-ts/polish/bench/flashmath/adapter.mjs"}
+{"type":"conformance-journal-v1","fingerprint":"981130898d5d51727687615b7148d7309ad27a374f8b00a1e3fb1f6d977183dd","subject":"/home/minamorl/repos/.worktrees/flashmath-ts/edge/bench/flashmath/adapter.mjs"}
 {"id":"Action.test.ts::Action TextTip 1","group":"action","status":"matched","category":null}
 {"id":"Action.test.ts::Action MathTip 1","group":"action","status":"matched","category":null}
 {"id":"Action.test.ts::Action Toggle 1","group":"action","status":"matched","category":null}

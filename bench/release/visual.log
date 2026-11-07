@@ -9,4 +9,5 @@ physics: 8 formulas, 16 checks, 0 failures
 chemistry: 13 formulas, 66 checks, 0 failures
 core: 10 formulas, 22 checks, 0 failures
 polish: 9 formulas, 22 checks, 0 failures
-visual feature gate: 818 checks; no failures; pixel identity not asserted
+edge: 5 formulas, 10 checks, 0 failures
+visual feature gate: 828 checks; no failures; pixel identity not asserted

@@ -82,3 +82,50 @@ the implementation now retains both.
 
 Disabled-review checkpoint: inspect independent oracle validity, the nonempty
 comparisons, empty-atom traversal and Spacer control before release verification.
+
+## Final gates and delivery
+
+- `node bench/release/verify.mjs`: exit 0. Full raw output:
+  `../release/gate.log`; per-step commands/exits: `../release/checks.json`.
+- `node bench/release/ci.mjs`: exit 0. Replays the workflow's frozen pnpm
+  install, build, library/harness/CI tests, fresh conformance with exact
+  regression gate and npm tarball smoke. Raw output: `../release/ci.log` and
+  `../release/ci-*.log`; command exits: `../release/ci-checks.json`.
+- `node bench/edge/check-artifacts.mjs`: exit 0. Checks the actual source
+  fingerprint, all required gate exits, archive bytes/SHA-512, REPORT metadata,
+  allowed package files and visual/reference errors (`artifact-checks.log`).
+- `git diff --check`: exit 0.
+
+Final release measurements: 36/36 MathJax groups, 22/22 identical-input Temml
+cohorts. Minimum observed speedups: 5.982x and 1.093x. They are local evidence;
+cross-machine ranking and universal complexity claims are not inferred.
+
+screen_run: Chrome/153.0.8010.36 opened `../native-render/after.html`; real
+keyboard input switched React SSR → toMathMLString → React SSR with equal
+geometry. Hydrated 216 comparisons and client-rendered 2,638 captured cases;
+console and recoverable hydration error arrays were empty. The `edge` selector
+group was captured and its actual screenshot opened for inspection:
+`../native-render/after-edge-1.png`. All five corrected/spacing-control examples
+are visible. Overall visual gate: 828 checks, no failures or reference differences.
+Native font metrics, spacing and pixel identity remain distinct from MathJax SVG.
+
+The CI replay used installed Node 26.12.1 / pnpm 11.18.0. The workflow's Node 22
+matrix runtime is not installed locally; it was not claimed as tested. Workflow,
+package manifest and lockfile were not changed.
+
+Candidate sizes and SHA-512 now come directly from the verified archive in
+`../release/pack.mjs` whenever the candidate is packed. REPORT also reads current
+benchmark counts instead of duplicating them manually. `../release/FINISH.md`
+is explicitly marked historical.
+
+Delivery: `edge.bundle` contains the phase commits after base `02338ac` and can
+be fetched as the `lane/edge` ref. The original worktree Git HEAD/index are not
+modified, because their Git directory is outside the assigned write scope.
+The ignored `.release-git` remains local and is absent from commits/package.
+The standalone bundle is not itself included in its commits. No push, publish,
+external transmission, agent spawn or review-broker invocation ran.
+
+Disabled-review checkpoint before external delivery: none was requested or run;
+any later push/publication belongs to the caller after inspecting this bundle.
+Disabled-review checkpoint before DONE: inspect raw gate exits, source/archive
+fingerprints, browser screen, diff and bundle applicability to base `02338ac`.

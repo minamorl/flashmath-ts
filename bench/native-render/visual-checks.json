@@ -1,6 +1,6 @@
 {
   "browser": "Chrome/153.0.8010.36",
-  "formulas": 211,
+  "formulas": 216,
   "ssrStringParity": true,
   "checks": [
     {
@@ -7289,6 +7289,66 @@
       "name": "Core enclosures/rows and no private font slots",
       "pass": true,
       "details": {}
+    },
+    {
+      "id": "edge-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "edge-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
     }
   ],
   "groups": [
@@ -7356,6 +7416,12 @@
       "group": "polish",
       "formulas": 9,
       "checks": 22,
+      "failed": 0
+    },
+    {
+      "group": "edge",
+      "formulas": 5,
+      "checks": 10,
       "failed": 0
     }
   ],
