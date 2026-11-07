@@ -7,7 +7,7 @@
   "author": "minamorl",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rainpulse/flashmath-ts.git"
+    "url": "git+https://github.com/minamorl/flashmath-ts.git"
   },
   "devDependencies": {
     "@mathjax/src": "4.1.3",

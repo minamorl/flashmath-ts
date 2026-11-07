@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 26]
+    defaults:
+      run:
+        shell: bash
+    steps:
+      # The runner context is not available in job-level env, so export it here.
+      - name: Use the runner temp directory as TMPDIR
+        run: echo "TMPDIR=$RUNNER_TEMP" >> "$GITHUB_ENV"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          version: 11.18.0
+          run_install: false
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build
+        run: node scripts/build.mjs
+      - name: Test library, harness and CI checks
+        run: node --test test/*.test.mjs test/packages/*.test.mjs conformance/harness.test.mjs scripts/ci-checks.test.mjs
+      - name: Conformance regression gate
+        run: |
+          report="$(mktemp)"
+          # The runner returns 1 for the 48 known unsupported cases.
+          # Only a complete report accepted by the gate can pass this step.
+          status=0
+          node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output "$report" --fresh || status=$?
+          if [[ "$status" -ne 0 && "$status" -ne 1 ]]; then
+            exit "$status"
+          fi
+          node scripts/ci-conformance-gate.mjs "$report"
+      - name: Smoke test npm tarball
+        run: node scripts/ci-pack-smoke.mjs
+      # Benchmarks are intentionally not gates on shared runners.
