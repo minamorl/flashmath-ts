@@ -973,7 +973,7 @@ export class Parser {
       table.labels[table.rows.length] = label;
       const tag = table.explicitTags?.get(table.rows.length);
       if (tag !== undefined) {
-        const id = "mjx-eqn:" + ((this.options.useLabelIds !== false ? label : "") || tag).replace(/\s/g, "_");
+        const id = String(format(this,"id",(this.options.useLabelIds !== false ? label : "") || tag));
         this.localLabels.set(label, { tag, id });
         const cell = table.tagCells.get(table.rows.length);
         if (cell) cell.attributes.id = id;
