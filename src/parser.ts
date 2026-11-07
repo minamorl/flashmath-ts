@@ -183,7 +183,9 @@ export class Parser {
     env = "",
     table: Table | null = null,
   ) {
-    if (this.frames.length >= (this.options.maxDepth ?? 1024))
+    // Chemistry's iterative expansion can legitimately produce thousands of
+    // groups. Its default is bounded by the token budget, like its work stack.
+    if (this.frames.length >= (this.options.maxDepth ?? (this.configuration.extensions.has("ce") ? this.options.maxTokens ?? 200000 : 1024)))
       this.error("Nesting limit exceeded");
     const p = this.f;
     this.frames.push({

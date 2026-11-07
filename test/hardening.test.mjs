@@ -82,10 +82,12 @@ test('text math and macro argument spans scale from depth 400 to 1600',t=>{
  }
  t.diagnostic(JSON.stringify(evidence));
 });
-test('chemistry recursion returns merror even when user limits are raised',()=>{
+test('chemistry raised limits render deep nesting without a JS stack overflow',()=>{
  const tex='\\ce{H'.repeat(5000)+'O'+'}'.repeat(5000);
  const options={packages:['base','mhchem'],maxDepth:1e7,maxNodes:1e7,maxTokens:1e7};
- assert.match(render(tex,options),/merror.*Nesting limit exceeded/);
+ const xml=render(tex,options);
+ assert.doesNotMatch(xml,/merror/);
+ assert.equal(xml.replace(/<[^>]*>/g,''),'H'.repeat(5000)+'O');
 });
 
 test('compact option keys separate primitives, escaped keys and accessors',()=>{
