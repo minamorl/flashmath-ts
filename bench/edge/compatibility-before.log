@@ -1,0 +1,96 @@
+\begin{multlined}a+b\\+c\end{multlined}
+EXPECTED <math xmlns="http://www.w3.org/1998/Math/MathML" data-latex="\begin{multlined}a+b\\+c\end{multlined}" display="block">
+  <mtable displaystyle="true" rowspacing=".5em" columnwidth="100%" data-latex="\begin{multlined}a+b\\+c\end{multlined}">
+    <mtr>
+      <mtd columnalign="left">
+        <mi data-latex="a">a</mi>
+        <mo data-latex="+">+</mo>
+        <mi data-latex="b">b</mi>
+        <mspace width="1em"></mspace>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd columnalign="right">
+        <mspace width="1em"></mspace>
+        <mi></mi>
+        <mo data-latex="+">+</mo>
+        <mi data-latex="c">c</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+ACTUAL <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true" rowspacing=".5em" columnwidth="100%"><mtr><mtd columnalign="left"><mi>a</mi><mo>+</mo><mi>b</mi><mspace width="1em"></mspace></mtd></mtr><mtr><mtd columnalign="right"><mspace width="1em"></mspace><mo>+</mo><mi>c</mi></mtd></mtr></mtable></math>
+\begin{aligned}\ce{A &-> B}\end{aligned}
+EXPECTED <math xmlns="http://www.w3.org/1998/Math/MathML" data-latex="\begin{aligned}\ce{A &amp;-&gt; B}\end{aligned}" display="block">
+  <mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt" data-break-align="bottom top" data-latex="\mathrm{A}&amp;  {}\mathrel{\mhchemlongrightarrow}{} \mathrm{B}\end{aligned}">
+    <mtr>
+      <mtd>
+        <mrow data-mjx-texclass="ORD" data-latex="\mathrm{A}">
+          <mi mathvariant="normal" data-latex="A">A</mi>
+        </mrow>
+      </mtd>
+      <mtd>
+        <mstyle indentshift="2em">
+          <mi></mi>
+          <mrow data-mjx-texclass="ORD" data-latex="{}"></mrow>
+          <mrow data-mjx-texclass="REL" data-latex="\mathrel{\mhchemlongrightarrow}">
+            <mo data-mjx-variant="-mhchem" data-mjx-texclass="REL" stretchy="true" data-latex="\mhchemlongrightarrow">&#xE429;</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD" data-latex="{}"></mrow>
+          <mrow data-mjx-texclass="ORD" data-latex="\mathrm{B}">
+            <mi mathvariant="normal" data-latex="B">B</mi>
+          </mrow>
+        </mstyle>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+ACTUAL <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt" data-break-align="bottom top"><mtr><mtd><mrow data-mjx-texclass="ORD"><mi mathvariant="normal">A</mi></mrow></mtd><mtd><mstyle indentshift="2em"><mrow data-mjx-texclass="ORD"></mrow><mrow data-mjx-texclass="REL"><mo data-mjx-variant="-mhchem" data-mjx-texclass="REL" stretchy="true"></mo></mrow><mrow data-mjx-texclass="ORD"></mrow><mrow data-mjx-texclass="ORD"><mi mathvariant="normal">B</mi></mrow></mstyle></mtd></mtr></mtable></math>
+\begin{align}\ce{A &= B}\end{align}
+EXPECTED <math xmlns="http://www.w3.org/1998/Math/MathML" data-latex="\begin{align}\ce{A &amp;= B}\end{align}" display="block">
+  <mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt" data-break-align="bottom top" data-latex="\mathrm{A}&amp;  {}={} \mathrm{B}\end{align}">
+    <mtr>
+      <mtd>
+        <mrow data-mjx-texclass="ORD" data-latex="\mathrm{A}">
+          <mi mathvariant="normal" data-latex="A">A</mi>
+        </mrow>
+      </mtd>
+      <mtd>
+        <mstyle indentshift="2em">
+          <mi></mi>
+          <mrow data-mjx-texclass="ORD" data-latex="{}"></mrow>
+          <mo data-latex="=">=</mo>
+          <mrow data-mjx-texclass="ORD" data-latex="{}"></mrow>
+          <mrow data-mjx-texclass="ORD" data-latex="\mathrm{B}">
+            <mi mathvariant="normal" data-latex="B">B</mi>
+          </mrow>
+        </mstyle>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+ACTUAL <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt" data-break-align="bottom top"><mtr><mtd><mrow data-mjx-texclass="ORD"><mi mathvariant="normal">A</mi></mrow></mtd><mtd><mstyle indentshift="2em"><mrow data-mjx-texclass="ORD"></mrow><mo>=</mo><mrow data-mjx-texclass="ORD"></mrow><mrow data-mjx-texclass="ORD"><mi mathvariant="normal">B</mi></mrow></mstyle></mtd></mtr></mtable></math>
+\begin{aligned}\ce{A &+ B}\end{aligned}
+EXPECTED <math xmlns="http://www.w3.org/1998/Math/MathML" data-latex="\begin{aligned}\ce{A &amp;+ B}\end{aligned}" display="block">
+  <mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt" data-break-align="bottom top" data-latex="\mathrm{A}&amp;  {}+{} \mathrm{B}\end{aligned}">
+    <mtr>
+      <mtd>
+        <mrow data-mjx-texclass="ORD" data-latex="\mathrm{A}">
+          <mi mathvariant="normal" data-latex="A">A</mi>
+        </mrow>
+      </mtd>
+      <mtd>
+        <mstyle indentshift="2em">
+          <mi></mi>
+          <mrow data-mjx-texclass="ORD" data-latex="{}"></mrow>
+          <mo data-latex="+">+</mo>
+          <mrow data-mjx-texclass="ORD" data-latex="{}"></mrow>
+          <mrow data-mjx-texclass="ORD" data-latex="\mathrm{B}">
+            <mi mathvariant="normal" data-latex="B">B</mi>
+          </mrow>
+        </mstyle>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+ACTUAL <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt" data-break-align="bottom top"><mtr><mtd><mrow data-mjx-texclass="ORD"><mi mathvariant="normal">A</mi></mrow></mtd><mtd><mstyle indentshift="2em"><mrow data-mjx-texclass="ORD"></mrow><mo>+</mo><mrow data-mjx-texclass="ORD"></mrow><mrow data-mjx-texclass="ORD"><mi mathvariant="normal">B</mi></mrow></mstyle></mtd></mtr></mtable></math>

@@ -1,0 +1,96 @@
+{
+  "sourceSha256": "48921f4ca34687a608b3dea3c9efc8e241895950b157bd27ec69792d2b814fa3",
+  "node": "v26.12.1",
+  "candidate": "minamorl-flashmath-0.1.0.tgz",
+  "bytes": 169857,
+  "integrity": "sha512-NhZvD/VUU11iGVPSB/lmWNwiGMtWRQSNJw5THQIIXuWtJVbeISAz2pUYwiuEnJxoiKnN3E05wrQHCpu0sqCaLg==",
+  "releaseExits": [
+    [
+      "build",
+      0
+    ],
+    [
+      "tests",
+      0
+    ],
+    [
+      "harness",
+      0
+    ],
+    [
+      "scoped-conformance",
+      0
+    ],
+    [
+      "conformance",
+      1
+    ],
+    [
+      "corpus",
+      0
+    ],
+    [
+      "bussproofs",
+      0
+    ],
+    [
+      "grammar",
+      0
+    ],
+    [
+      "compare",
+      0
+    ],
+    [
+      "screen",
+      0
+    ],
+    [
+      "visual",
+      0
+    ],
+    [
+      "benchmark",
+      0
+    ],
+    [
+      "benchmark-summary",
+      0
+    ],
+    [
+      "readme",
+      0
+    ],
+    [
+      "pack-smoke",
+      0
+    ]
+  ],
+  "ciExits": [
+    [
+      "install",
+      0
+    ],
+    [
+      "build",
+      0
+    ],
+    [
+      "tests",
+      0
+    ],
+    [
+      "conformance",
+      1
+    ],
+    [
+      "conformance-gate",
+      0
+    ],
+    [
+      "pack-smoke",
+      0
+    ]
+  ]
+}
+Artifact/source/report consistency: PASS

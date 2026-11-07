@@ -432,7 +432,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
     const fl=bare==='flalign'||bare==='xalignat'||bare==='xxalignat';
     if(multline){
       n.attributes={displaystyle:'true',rowspacing:'.5em',columnspacing:'100%',width:String((p.options.texOptions?.ams as Record<string,unknown>)?.multlineWidth??'100%'),'data-array-padding':Array(2).fill(String((p.options.texOptions?.ams as Record<string,unknown>)?.multlineIndent??'1em')).join(' '),'data-width-includes-label':'true'};
-      for(let i=0;i<n.children.length;i++){const row=n.children[i];const cell=row.children[row.kind===K.mlabeledtr?1:0];if(cell&&i>0&&cell.children[0]?.kind===K.mo&&(cell.children[0].relation||operator(cell.children[0].text)?.[2]===2))cell.children.unshift(p.node(K.mi));if(cell&&!cell.attributes.columnalign&&(i===0||i===n.children.length-1))cell.attributes.columnalign=i===0?'left':'right';}
+      for(let i=0;i<n.children.length;i++){const row=n.children[i];const cell=row.children[row.kind===K.mlabeledtr?1:0];if(cell&&i>0)p.fixInitialMO(cell.children);if(cell&&!cell.attributes.columnalign&&(i===0||i===n.children.length-1))cell.attributes.columnalign=i===0?'left':'right';}
       let label:Node|undefined;
       for(const row of n.children)if(row.kind===K.mlabeledtr){label=row.children.shift();row.kind=K.mtr;}
       if(!label&&!starred&&(p.options.tags==='ams'||p.options.tags==='all')&&!t.noNumbers.size&&n.children.length)label=p.labelCell(t.labels.find(Boolean)??'');
@@ -448,7 +448,7 @@ export function beginAms(p:Parser,name:string,done?:(n:Node)=>void){
         const cell=cells[i],left=align[i%align.length]==='l';
         if(bare==='eqnarray'&&i%3===1)cell.children.unshift(p.node(K.mi));
         if(left){
-          if(cell.children[0]&&(cell.children[0].attributes['data-mjx-texclass']==='REL'||cell.children[0].kind===K.mo&&(cell.children[0].relation||[2,4].includes(operator(cell.children[0].text)?.[2]??-1))))cell.children.unshift(p.node(K.mi));
+          p.fixInitialMO(cell.children);
           cell.children=[p.node(K.mstyle,cell.children,'',{indentshift:bare==='eqnarray'?'.7em':'2em'})];
         }
       }}

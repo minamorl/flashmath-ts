@@ -61,9 +61,9 @@ value; references to completed equations use their actual tag and URL.
 
 Defaults are inline display, packages `['base', 'newcommand']`, 10,000 macro
 expansions, 100,000 allocated nodes, 200,000 consumed tokens, and 1,024 nested
-parser frames. With mhchem active, chemistry actions and parser frames use an
-explicit stack bounded by the token budget by default, so deep chemistry has
-no independent recursion cutoff. An explicit `maxDepth` limits both stacks.
+parser frames. The depth limit applies with every package configuration.
+Chemistry actions use an explicit stack within the remaining depth budget;
+an explicit `maxDepth` raises or lowers both limits.
 Override these with `display`, `packages`, `maxExpansions`,
 `maxNodes`, `maxTokens`, and `maxDepth`. `throwOnError: true` throws `ParseError`;
 otherwise malformed TeX produces an `merror` tree. `macros` accepts a replacement
@@ -151,13 +151,13 @@ otherwise document state persists. Both set ignoreDuplicateLabels=true.
 
 | Corpus | Common inputs | Stateless | Session | MathJax | Temml |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| bench12 | 12/12 | 13.40 | 12.11 | 237.06 | 20.48 |
-| base | 10/10 | 26.79 | 26.68 | 436.93 | 41.44 |
-| newcommand | 6/10 | 9.71 | 9.26 | 175.04 | 17.17 |
-| ams | 10/10 | 31.20 | 30.93 | 403.75 | 52.43 |
-| mathtools | 6/10 | 28.80 | 28.03 | 415.76 | 42.49 |
-| physics | 9/10 | 34.88 | 35.79 | 527.04 | 71.11 |
-| mhchem | 10/10 | 102.95 | 103.48 | 935.08 | 107.87 |
+| bench12 | 12/12 | 11.25 | 10.25 | 220.75 | 18.53 |
+| base | 10/10 | 25.42 | 23.47 | 402.75 | 37.72 |
+| newcommand | 6/10 | 9.47 | 8.55 | 149.38 | 15.31 |
+| ams | 10/10 | 29.61 | 28.62 | 378.03 | 46.64 |
+| mathtools | 6/10 | 27.90 | 24.47 | 390.32 | 38.82 |
+| physics | 9/10 | 33.82 | 32.62 | 476.06 | 65.92 |
+| mhchem | 10/10 | 93.05 | 90.65 | 815.86 | 101.72 |
 
 Across the full corpus, stateless flashmath had lower p50 than MathJax in
 36/36 groups and Temml in
@@ -170,7 +170,7 @@ p50 / p95 milliseconds (excludes Node process bootstrap):
 
 | Stateless | Session | MathJax | Temml |
 | ---: | ---: | ---: | ---: |
-| 27.59 / 32.20 | 27.55 / 31.29 | 68.61 / 72.77 | 20.55 / 21.45 |
+| 26.77 / 27.32 | 26.88 / 27.74 | 67.81 / 69.34 | 20.37 / 20.69 |
 
 [Full cohorts, p50/p95 and method](https://github.com/minamorl/flashmath-ts/blob/main/bench/flashmath/hardening-benchmark.md) ·
 [raw samples](https://github.com/minamorl/flashmath-ts/blob/main/bench/flashmath/hardening-benchmark.raw.json). Earlier hardening

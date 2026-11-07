@@ -1,4 +1,7 @@
-# Finish evidence
+# Finish evidence (historical)
+
+This is the earlier finish-pass snapshot. Current candidate metadata and gates
+are in [REPORT.md](REPORT.md) and [../edge/REPORT.md](../edge/REPORT.md).
 
 Generated 2026-11-07T00:54:38.488Z (UTC report generation).
 Source SHA-256: b357cf868c1e313f07680750c6acd76357ddc663edff6207474977e7784e0cd2.

@@ -150,6 +150,8 @@ export interface Node {
   inferred?: boolean;
   /** Generated scripts remain an indivisible base for later TeX scripts. */
   scriptBoundary?: boolean;
+  /** A Spacer command retains an implicit mstyle boundary during TeX parsing. */
+  styledSpace?: boolean;
   kind: K;
   attributes: Record<string, string>;
   children: Node[];

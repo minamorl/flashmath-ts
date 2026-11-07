@@ -26,3 +26,7 @@ for(const tex of [String.raw`\begin{array}{ll}a&b\\1&2\end{array}`,String.raw`x+
 add('polish','\\ce{H'.repeat(8)+'O'+'}'.repeat(8),['mhchem']);
 add('polish',String.raw`\boldsymbol{\alpha+\Gamma+x^2+\mathit{B}}`,['boldsymbol']);
 add('polish',String.raw`\verb|x { y % z|+q_7`,['verb']);
+
+// Initial-operator regressions: preserve the exact MathJax tree and browser path.
+for(const tex of [String.raw`\begin{multlined}a+b\\+c\end{multlined}`,String.raw`\begin{multlined}[t]a+b\\+c\end{multlined}`,String.raw`\begin{multlined}a_7\\\,+c_5\end{multlined}`])add('edge',tex,['ams','mathtools']);
+for(const tex of [String.raw`\begin{aligned}\ce{A &-> B}\end{aligned}`,String.raw`\begin{align}\ce{A &= B}\end{align}`])add('edge',tex,['ams','mhchem']);

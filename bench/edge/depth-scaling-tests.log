@@ -1,0 +1,19 @@
+✔ default nesting limit applies to ordinary TeX with every package combination (131.240086ms)
+✔ chemistry shares the enclosing parser depth budget and rejects deep input early (189.74153ms)
+ℹ {"parens":true,"depth":5000,"cpuMs":139.318,"wallMs":51.05883800000001}
+ℹ {"parens":true,"depth":10000,"cpuMs":52.454,"wallMs":29.846507000000003}
+ℹ {"parens":true,"depth":20000,"cpuMs":51.877,"wallMs":33.665794000000005}
+ℹ {"parens":false,"depth":5000,"cpuMs":46.22,"wallMs":20.350085000000036}
+ℹ {"parens":false,"depth":10000,"cpuMs":62.968,"wallMs":26.933187999999973}
+ℹ {"parens":false,"depth":20000,"cpuMs":27.264,"wallMs":22.166562999999996}
+✔ raised chemistry limits scale linearly at depth 5000/10000/20000 (7287.531926ms)
+ℹ {"family":"ce-paren","rows":[{"depth":5000,"samples":[{"cpuMs":194.351,"wallMs":128.070043},{"cpuMs":150.366,"wallMs":118.09819500000003},{"cpuMs":153.737,"wallMs":117.63887700000032},{"cpuMs":165.904,"wallMs":123.65418},{"cpuMs":157.644,"wallMs":115.75907999999981}],"cpuMs":157.644},{"depth":10000,"samples":[{"cpuMs":468.993,"wallMs":271.534489},{"cpuMs":321.11,"wallMs":237.190476},{"cpuMs":343.259,"wallMs":245.5934430000002},{"cpuMs":383.887,"wallMs":269.091128},{"cpuMs":317.462,"wallMs":235.7702250000002}],"cpuMs":343.259},{"depth":20000,"samples":[{"cpuMs":759.351,"wallMs":513.171685},{"cpuMs":771.933,"wallMs":511.5261599999999},{"cpuMs":721.481,"wallMs":498.40093000000024},{"cpuMs":632.038,"wallMs":470.0537239999999},{"cpuMs":721.416,"wallMs":492.6770690000003}],"cpuMs":721.481}],"slope":1.0971455703944366,"adjacentSlopes":[1.122627285819243,1.0716638549696305]}
+ℹ {"family":"ce-nested","rows":[{"depth":5000,"samples":[{"cpuMs":111.143,"wallMs":74.75862400000005},{"cpuMs":118.211,"wallMs":72.460196},{"cpuMs":118.795,"wallMs":72.31235800000013},{"cpuMs":120.53,"wallMs":76.25092099999983},{"cpuMs":197.308,"wallMs":98.5393640000002}],"cpuMs":118.795},{"depth":10000,"samples":[{"cpuMs":253.305,"wallMs":150.7851209999999},{"cpuMs":251.702,"wallMs":159.47149400000035},{"cpuMs":258.631,"wallMs":159.48180300000058},{"cpuMs":212.793,"wallMs":148.33217200000036},{"cpuMs":236.795,"wallMs":152.21687399999973}],"cpuMs":251.702},{"depth":20000,"samples":[{"cpuMs":592.025,"wallMs":340.4830380000003},{"cpuMs":488.201,"wallMs":308.6041869999999},{"cpuMs":594.546,"wallMs":325.23885000000064},{"cpuMs":493.765,"wallMs":308.345018},{"cpuMs":570.5,"wallMs":326.9158150000003}],"cpuMs":570.5}],"slope":1.131876385570667,"adjacentSlopes":[1.083242564688519,1.1805102064528148]}
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7751.860496

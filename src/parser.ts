@@ -173,6 +173,25 @@ export class Parser {
   atom(nodes: Node[], texclass = "ORD"): Node {
     return this.node(K.mrow, nodes, "", { "data-mjx-texclass": texclass });
   }
+  fixInitialMO(nodes: Node[]) {
+    // MathJax ParseUtil.fixInitialMO: initial spaces and empty TeX atoms do
+    // not stop the search. The empty mi forces the following operator infix.
+    let core = nodes.find(n => (n.kind !== K.mspace || n.styledSpace) &&
+      !(n.kind === K.mrow && n.attributes['data-mjx-texclass'] && !n.children.length));
+    while (core) {
+      if (core.kind === K.mo || core.attributes['data-mjx-texclass'] === 'REL') {
+        nodes.unshift(this.node(K.mi));return;
+      }
+      if ([K.msub,K.msup,K.msubsup,K.munder,K.mover,K.munderover].includes(core.kind)) {
+        core=core.children[0];continue;
+      }
+      if ([K.mstyle,K.mpadded,K.mphantom,K.mrow].includes(core.kind)) {
+        const content=core.children.filter(n=>n.kind!==K.mspace && n.kind!==K.mtext);
+        if(content.length===1){core=content[0];continue;}
+      }
+      return;
+    }
+  }
   get f() {
     return this.frames[this.frames.length - 1];
   }
@@ -183,9 +202,7 @@ export class Parser {
     env = "",
     table: Table | null = null,
   ) {
-    // Chemistry's iterative expansion can legitimately produce thousands of
-    // groups. Its default is bounded by the token budget, like its work stack.
-    if (this.frames.length >= (this.options.maxDepth ?? (this.configuration.extensions.has("ce") ? this.options.maxTokens ?? 200000 : 1024)))
+    if (this.frames.length >= (this.options.maxDepth ?? 1024))
       this.error("Nesting limit exceeded");
     const p = this.f;
     this.frames.push({

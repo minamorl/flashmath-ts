@@ -94,6 +94,7 @@ function executeBase(parser: Parser, t: Token, d: Definition, id: number) {
   }
   if (d.type === "Spacer") {
     let n = parser.node(K.mspace, [], "", { width: em(Number(args[0])) });
+    n.styledSpace = true;
     if (parser.f.level > 0)
       n = parser.node(K.mstyle, [n], "", { scriptlevel: "0" });
     parser.append(n);

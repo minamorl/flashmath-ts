@@ -2,261 +2,261 @@ TAP version 13
 # Subtest: attribute order, quotes, self-closing and numeric entities are serialization only
 ok 1 - attribute order, quotes, self-closing and numeric entities are serialization only
   ---
-  duration_ms: 2.431749
+  duration_ms: 2.382777
   type: 'test'
   ...
 # Subtest: explicit tracking attributes and structural indentation are ignored
 ok 2 - explicit tracking attributes and structural indentation are ignored
   ---
-  duration_ms: 0.336545
+  duration_ms: 0.340072
   type: 'test'
   ...
 # Subtest: namespace prefixes resolve to the same expanded name
 ok 3 - namespace prefixes resolve to the same expanded name
   ---
-  duration_ms: 0.18018
+  duration_ms: 0.187353
   type: 'test'
   ...
 # Subtest: CDATA and XML line ending handling
 ok 4 - CDATA and XML line ending handling
   ---
-  duration_ms: 0.189868
+  duration_ms: 0.189157
   type: 'test'
   ...
 # Subtest: negative: token cannot normalize away
 ok 5 - negative: token cannot normalize away
   ---
-  duration_ms: 0.313051
+  duration_ms: 0.238971
   type: 'test'
   ...
 # Subtest: negative: number cannot normalize away
 ok 6 - negative: number cannot normalize away
   ---
-  duration_ms: 0.247257
+  duration_ms: 0.195058
   type: 'test'
   ...
 # Subtest: negative: structure cannot normalize away
 ok 7 - negative: structure cannot normalize away
   ---
-  duration_ms: 0.158749
+  duration_ms: 0.162337
   type: 'test'
   ...
 # Subtest: negative: missing node cannot normalize away
 ok 8 - negative: missing node cannot normalize away
   ---
-  duration_ms: 0.140375
+  duration_ms: 0.147198
   type: 'test'
   ...
 # Subtest: negative: sibling order cannot normalize away
 ok 9 - negative: sibling order cannot normalize away
   ---
-  duration_ms: 0.232799
+  duration_ms: 0.188276
   type: 'test'
   ...
 # Subtest: negative: display mode cannot normalize away
 ok 10 - negative: display mode cannot normalize away
   ---
-  duration_ms: 0.398331
+  duration_ms: 0.326566
   type: 'test'
   ...
 # Subtest: negative: variant cannot normalize away
 ok 11 - negative: variant cannot normalize away
   ---
-  duration_ms: 0.262145
+  duration_ms: 0.202793
   type: 'test'
   ...
 # Subtest: negative: stretchy cannot normalize away
 ok 12 - negative: stretchy cannot normalize away
   ---
-  duration_ms: 0.197172
+  duration_ms: 0.166885
   type: 'test'
   ...
 # Subtest: negative: unknown data attribute cannot normalize away
 ok 13 - negative: unknown data attribute cannot normalize away
   ---
-  duration_ms: 0.180561
+  duration_ms: 0.165242
   type: 'test'
   ...
 # Subtest: negative: id cannot normalize away
 ok 14 - negative: id cannot normalize away
   ---
-  duration_ms: 0.165342
+  duration_ms: 0.170893
   type: 'test'
   ...
 # Subtest: negative: href cannot normalize away
 ok 15 - negative: href cannot normalize away
   ---
-  duration_ms: 0.139494
+  duration_ms: 0.134444
   type: 'test'
   ...
 # Subtest: spaces in tokens, mtext, annotations and attribute values remain significant
 ok 16 - spaces in tokens, mtext, annotations and attribute values remain significant
   ---
-  duration_ms: 0.506165
+  duration_ms: 0.480798
   type: 'test'
   ...
 # Subtest: invalid XML: unbalanced
 ok 17 - invalid XML: unbalanced
   ---
-  duration_ms: 0.249301
+  duration_ms: 0.232799
   type: 'test'
   ...
 # Subtest: invalid XML: duplicate attribute
 ok 18 - invalid XML: duplicate attribute
   ---
-  duration_ms: 0.086623
+  duration_ms: 0.083197
   type: 'test'
   ...
 # Subtest: invalid XML: raw ampersand
 ok 19 - invalid XML: raw ampersand
   ---
-  duration_ms: 0.082125
+  duration_ms: 0.074331
   type: 'test'
   ...
 # Subtest: invalid XML: unknown entity
 ok 20 - invalid XML: unknown entity
   ---
-  duration_ms: 0.074861
+  duration_ms: 0.073118
   type: 'test'
   ...
 # Subtest: invalid XML: invalid code point
 ok 21 - invalid XML: invalid code point
   ---
-  duration_ms: 0.105088
+  duration_ms: 0.10091
   type: 'test'
   ...
 # Subtest: invalid XML: DTD
 ok 22 - invalid XML: DTD
   ---
-  duration_ms: 0.070282
+  duration_ms: 0.068098
   type: 'test'
   ...
 # Subtest: invalid XML: extra root
 ok 23 - invalid XML: extra root
   ---
-  duration_ms: 0.149933
+  duration_ms: 0.130125
   type: 'test'
   ...
 # Subtest: invalid XML: wrong namespace
 ok 24 - invalid XML: wrong namespace
   ---
-  duration_ms: 0.099357
+  duration_ms: 0.110438
   type: 'test'
   ...
 # Subtest: invalid XML: missing namespace
 ok 25 - invalid XML: missing namespace
   ---
-  duration_ms: 0.095681
+  duration_ms: 0.093757
   type: 'test'
   ...
 # Subtest: invalid XML: unbound prefix
 ok 26 - invalid XML: unbound prefix
   ---
-  duration_ms: 0.160282
+  duration_ms: 0.11685
   type: 'test'
   ...
 # Subtest: invalid XML: trailing text
 ok 27 - invalid XML: trailing text
   ---
-  duration_ms: 0.14284
+  duration_ms: 0.09506
   type: 'test'
   ...
 # Subtest: invalid XML: empty
 ok 28 - invalid XML: empty
   ---
-  duration_ms: 0.093376
+  duration_ms: 0.051347
   type: 'test'
   ...
 # Subtest: invalid XML: attribute missing separator
 ok 29 - invalid XML: attribute missing separator
   ---
-  duration_ms: 0.114997
+  duration_ms: 0.075072
   type: 'test'
   ...
 # Subtest: runner uses all cases as denominator and distinguishes failure classes
 ok 30 - runner uses all cases as denominator and distinguishes failure classes
   ---
-  duration_ms: 3.59803
+  duration_ms: 2.507503
   type: 'test'
   ...
 # Subtest: blank subject never passes fixture and changing one genuine fixture token is detected
 ok 31 - blank subject never passes fixture and changing one genuine fixture token is detected
   ---
-  duration_ms: 22.816668
+  duration_ms: 21.211972
   type: 'test'
   ...
 # Subtest: only XML whitespace is formatting; NBSP in content cannot disappear
 ok 32 - only XML whitespace is formatting; NBSP in content cannot disappear
   ---
-  duration_ms: 0.306559
+  duration_ms: 0.291229
   type: 'test'
   ...
 # Subtest: upstream capture order and single-line MathML snapshots are retained
 ok 33 - upstream capture order and single-line MathML snapshots are retained
   ---
-  duration_ms: 24.500776
+  duration_ms: 23.098631
   type: 'test'
   ...
 # Subtest: checkpoint resumes completed cases without re-evaluating the subject
 ok 34 - checkpoint resumes completed cases without re-evaluating the subject
   ---
-  duration_ms: 0.992393
+  duration_ms: 0.934764
   type: 'test'
   ...
 # Subtest: CLI resumes a torn JSONL checkpoint, rejects stale code, and returns failure for incomplete coverage
 ok 35 - CLI resumes a torn JSONL checkpoint, rejects stale code, and returns failure for incomplete coverage
   ---
-  duration_ms: 177.007628
+  duration_ms: 174.616947
   type: 'test'
   ...
 # Subtest: reserved namespaces and inherited object keys cannot become valid namespace bindings
 ok 36 - reserved namespaces and inherited object keys cannot become valid namespace bindings
   ---
-  duration_ms: 0.520623
+  duration_ms: 0.472622
   type: 'test'
   ...
 # Subtest: mi and mo remain distinct token types
 ok 37 - mi and mo remain distinct token types
   ---
-  duration_ms: 0.179078
+  duration_ms: 0.188376
   type: 'test'
   ...
 # Subtest: mrow is neither flattened nor removed when empty
 ok 38 - mrow is neither flattened nor removed when empty
   ---
-  duration_ms: 0.229954
+  duration_ms: 0.217961
   type: 'test'
   ...
 # Subtest: texclass values and presence are semantic attributes
 ok 39 - texclass values and presence are semantic attributes
   ---
-  duration_ms: 0.555779
+  duration_ms: 0.543476
   type: 'test'
   ...
 # Subtest: all fixture texclass deletions and REL rewrites are detected
 ok 40 - all fixture texclass deletions and REL rewrites are detected
   ---
-  duration_ms: 450.02602
+  duration_ms: 476.953185
   type: 'test'
   ...
 # texclass mutations detected: delete=1287, replace-with-REL=1218
 # Subtest: real MathJax relation, binary, punctuation and inner classes differ from ORD
 ok 41 - real MathJax relation, binary, punctuation and inner classes differ from ORD
   ---
-  duration_ms: 62.472514
+  duration_ms: 57.640409
   type: 'test'
   ...
 # Subtest: runner executes every function-options fixture, including Begingroup retry registration
 ok 42 - runner executes every function-options fixture, including Begingroup retry registration
   ---
-  duration_ms: 77.019226
+  duration_ms: 70.20959
   type: 'test'
   ...
 # function-options subject calls=30; matched=30/30
 # Subtest: runner restores function and RegExp options for any subject
 ok 43 - runner restores function and RegExp options for any subject
   ---
-  duration_ms: 0.260522
+  duration_ms: 0.234543
   type: 'test'
   ...
 1..43
@@ -267,4 +267,4 @@ ok 43 - runner restores function and RegExp options for any subject
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 938.124007
+# duration_ms 928.974487

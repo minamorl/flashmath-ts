@@ -1,0 +1,23 @@
+✔ multlined initial operators match MathJax with each position and multiple rows (379.84907ms)
+ℹ 198 fresh MathJax 4.1.3 comparisons
+✔ chemistry alignment escapes preserve initial infix operators after empty atoms (302.465341ms)
+ℹ 152 fresh MathJax 4.1.3 comparisons
+✔ ams: all immutable MathJax 4.1.3 fixtures including texclass and attributes (92.924787ms)
+✔ ams: activation, invalid arguments, and isolated session numbering (2.116484ms)
+✔ ams: additional MathJax comparisons for tags, optional row spacing and grouped operators (125.617385ms)
+✔ ams: new MathML kinds serialize identically through React SSR (28.362856ms)
+✔ ams: all 305 related package fixtures retain their denominator (303 matched, 2 upstream unsupported) (120.923136ms)
+✔ all 196 immutable MathJax mathtools fixtures, including attributes and texclass (112.159457ms)
+✔ base and newcommand match status never regresses from the captured baseline (161.03812ms)
+✔ mathtools activation and literal colon are separate from the control sequence (26.874718ms)
+✔ paired delimiters, options and tag forms persist in a session and remain isolated (1.441831ms)
+✔ package expansions and parsing obey existing resource limits (0.505484ms)
+✔ 37 independent variants agree with the installed MathJax 4.1.3 oracle (58.698746ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 890.862452

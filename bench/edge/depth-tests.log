@@ -1,0 +1,24 @@
+✔ mhchem: all captured chemistry and physical-unit fixtures (120.524634ms)
+✔ mhchem: independent formulas, reactions, isotopes, labels, units and errors (137.521961ms)
+✔ mhchem: activation and resource budgets use the host parser boundary (1.795618ms)
+✔ array ll preserves math tokens in the second column with and without ams (524.947268ms)
+ℹ 512 fresh MathJax 4.1.3 comparisons
+✔ tags parse embedded math rather than printing dollar delimiters (73.852404ms)
+ℹ 74 fresh MathJax 4.1.3 comparisons
+✔ mathop preserves the ORD atom of explicit font arguments (47.874378ms)
+ℹ 72 fresh MathJax 4.1.3 comparisons
+✔ deep chemistry around depth 800 agrees with MathJax using default limits (5087.570667ms)
+ℹ 32 fresh MathJax 4.1.3 comparisons
+✔ chemistry depth 2000 requires an explicit larger depth budget (798.057011ms)
+✔ boldsymbol optimization retains MathJax behavior on fresh font and script expressions (21.510464ms)
+ℹ 36 fresh MathJax 4.1.3 comparisons
+✔ verb raw consumption retains MathJax behavior across delimiters and following math (19.851654ms)
+ℹ 33 fresh MathJax 4.1.3 comparisons
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6782.327656

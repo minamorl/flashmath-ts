@@ -338,6 +338,7 @@ environments.multlined={begin(p,name){
  if(width&&!/^\s*[-+]?(?:\d+(?:[.,]\d*)?|[.,]\d+)\s*(?:em|ex|pt|pc|px|in|cm|mm|mu)\s*$/.test(width))p.error(`Width for \\begin{${name}} must be a dimension`);
  p.tableStart(name,'c',-4,n=>{
   const t=state(p).tables.get(table),rows=n.children;
+  for(let i=1;i<rows.length;i++)p.fixInitialMO(rows[i].children[0].children);
   if(rows.length>1){const first=rows[0].children[0],last=rows.at(-1)!.children[0];
    if(t?.shoves.get(0)!=='right')first.children.push(p.node(K.mspace,[],'',{width:option(p,'firstline-afterskip')||option(p,'multlined-gap')}));
    if(t?.shoves.get(rows.length-1)!=='left')last.children.unshift(p.node(K.mspace,[],'',{width:option(p,'lastline-preskip')||option(p,'multlined-gap')}));

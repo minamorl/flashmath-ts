@@ -6,71 +6,71 @@ Alternating fresh processes; 9 cold processes per engine, warm 5 processes x 7 s
 
 Raw samples: [hardening-benchmark.raw.json](hardening-benchmark.raw.json). Full p50/p95 and cohort sizes: [hardening-benchmark.json](hardening-benchmark.json). Corpus and runners: ../hardening/{bench-corpus.json,bench-worker.mjs,bench-driver.mjs}.
 
-Stateless beats MathJax in 36/36 full groups (minimum 5.98x), and Temml in 22/22 accepted cohorts (minimum 1.05x). Temml cannot render any input in the remaining groups; no throughput comparison is claimed there.
+Stateless beats MathJax in 36/36 full groups (minimum 5.98x), and Temml in 22/22 accepted cohorts (minimum 1.09x). Temml cannot render any input in the remaining groups; no throughput comparison is claimed there.
 
 Warm microseconds/expression, p50. Temml partial rows measure fewer expressions; only the common-input table below directly compares those rows.
 
 | Group | Inputs | Stateless | Session | MathJax | Temml | Temml accepted |
 |---|---:|---:|---:|---:|---:|---:|
-| bench12 | 12 | 13.40 | 12.11 | 237.06 | 20.48 | 12/12 |
-| base | 10 | 26.79 | 26.68 | 436.93 | 41.44 | 10/10 |
-| newcommand | 10 | 11.00 | 11.59 | 212.45 | 17.17 | 6/10 |
-| ams | 10 | 31.20 | 30.93 | 403.75 | 52.43 | 10/10 |
-| amscd | 10 | 24.46 | 23.04 | 398.44 | 42.48 | 10/10 |
-| mathtools | 10 | 35.45 | 36.10 | 476.02 | 42.49 | 6/10 |
-| physics | 10 | 37.62 | 38.74 | 564.15 | 71.11 | 9/10 |
-| braket | 10 | 16.42 | 14.10 | 256.72 | 41.74 | 10/10 |
-| cancel | 10 | 16.88 | 15.33 | 114.26 | 25.15 | 10/10 |
-| bbox | 10 | 6.71 | 6.42 | 91.85 | — | 0/10 |
-| enclose | 10 | 12.39 | 13.50 | 74.14 | — | 0/10 |
-| centernot | 10 | 16.30 | 16.76 | 307.92 | — | 0/10 |
-| boldsymbol | 10 | 10.48 | 9.26 | 88.83 | 11.14 | 10/10 |
-| mhchem | 10 | 102.95 | 103.48 | 935.08 | 107.87 | 10/10 |
-| extpfeil | 10 | 14.16 | 13.98 | 208.84 | 18.84 | 10/10 |
-| action | 10 | 9.81 | 8.03 | 126.09 | — | 0/10 |
-| bbm | 10 | 8.25 | 7.74 | 79.76 | — | 0/10 |
-| bboldx | 10 | 8.17 | 6.64 | 85.87 | 9.90 | 3/10 |
-| color | 10 | 9.74 | 7.63 | 97.69 | 13.18 | 8/10 |
-| colortbl | 10 | 23.57 | 21.51 | 215.36 | — | 0/10 |
-| colorv2 | 10 | 6.64 | 5.79 | 108.29 | 13.60 | 10/10 |
-| dsfont | 10 | 9.07 | 7.33 | 95.46 | — | 0/10 |
-| empheq | 10 | 86.60 | 94.62 | 1074.78 | — | 0/10 |
-| cases | 10 | 118.85 | 127.01 | 1456.81 | — | 0/10 |
-| gensymb | 10 | 4.95 | 4.58 | 81.97 | 7.87 | 2/10 |
-| html | 10 | 5.69 | 5.67 | 73.45 | — | 0/10 |
-| textmacros | 10 | 10.67 | 6.99 | 93.10 | 16.47 | 10/10 |
-| begingroup | 10 | 8.34 | 9.03 | 107.71 | 10.76 | 9/10 |
-| noundefined | 10 | 5.08 | 4.46 | 79.82 | — | 0/10 |
-| setoptions | 10 | 22.61 | 21.75 | 155.54 | — | 0/10 |
-| tagformat | 10 | 28.24 | 27.21 | 235.82 | 38.96 | 10/10 |
-| textcomp | 10 | 5.33 | 4.28 | 39.46 | 9.30 | 3/10 |
-| unicode | 10 | 5.91 | 4.87 | 53.14 | — | 0/10 |
-| units | 10 | 8.76 | 8.84 | 124.23 | — | 0/10 |
-| upgreek | 10 | 5.58 | 5.53 | 91.92 | 21.32 | 8/10 |
-| verb | 10 | 6.41 | 5.05 | 66.79 | 6.75 | 9/10 |
+| bench12 | 12 | 11.25 | 10.25 | 220.75 | 18.53 | 12/12 |
+| base | 10 | 25.42 | 23.47 | 402.75 | 37.72 | 10/10 |
+| newcommand | 10 | 10.68 | 10.45 | 199.70 | 15.31 | 6/10 |
+| ams | 10 | 29.61 | 28.62 | 378.03 | 46.64 | 10/10 |
+| amscd | 10 | 23.87 | 22.58 | 376.01 | 39.71 | 10/10 |
+| mathtools | 10 | 34.37 | 31.44 | 426.86 | 38.82 | 6/10 |
+| physics | 10 | 37.28 | 34.68 | 506.55 | 65.92 | 9/10 |
+| braket | 10 | 14.03 | 12.87 | 232.88 | 39.06 | 10/10 |
+| cancel | 10 | 14.32 | 13.03 | 96.39 | 22.37 | 10/10 |
+| bbox | 10 | 6.71 | 5.56 | 75.14 | — | 0/10 |
+| enclose | 10 | 11.64 | 10.18 | 69.61 | — | 0/10 |
+| centernot | 10 | 14.77 | 13.10 | 271.95 | — | 0/10 |
+| boldsymbol | 10 | 8.42 | 6.94 | 87.25 | 9.87 | 10/10 |
+| mhchem | 10 | 93.05 | 90.65 | 815.86 | 101.72 | 10/10 |
+| extpfeil | 10 | 12.98 | 11.82 | 186.08 | 17.04 | 10/10 |
+| action | 10 | 8.15 | 7.02 | 108.70 | — | 0/10 |
+| bbm | 10 | 7.78 | 6.61 | 65.97 | — | 0/10 |
+| bboldx | 10 | 7.40 | 6.12 | 73.59 | 8.96 | 3/10 |
+| color | 10 | 8.11 | 6.75 | 81.25 | 12.15 | 8/10 |
+| colortbl | 10 | 20.83 | 18.59 | 195.73 | — | 0/10 |
+| colorv2 | 10 | 6.14 | 5.02 | 99.13 | 12.00 | 10/10 |
+| dsfont | 10 | 7.73 | 6.57 | 74.72 | — | 0/10 |
+| empheq | 10 | 87.47 | 83.87 | 976.42 | — | 0/10 |
+| cases | 10 | 122.70 | 118.09 | 1347.03 | — | 0/10 |
+| gensymb | 10 | 4.75 | 3.72 | 77.53 | 7.19 | 2/10 |
+| html | 10 | 5.60 | 4.49 | 57.35 | — | 0/10 |
+| textmacros | 10 | 9.33 | 6.52 | 85.03 | 14.99 | 10/10 |
+| begingroup | 10 | 8.30 | 7.30 | 103.50 | 10.01 | 9/10 |
+| noundefined | 10 | 5.21 | 4.18 | 77.46 | — | 0/10 |
+| setoptions | 10 | 21.28 | 18.36 | 151.15 | — | 0/10 |
+| tagformat | 10 | 26.39 | 25.62 | 217.12 | 35.07 | 10/10 |
+| textcomp | 10 | 5.12 | 3.77 | 39.23 | 7.93 | 3/10 |
+| unicode | 10 | 5.66 | 4.35 | 49.40 | — | 0/10 |
+| units | 10 | 8.94 | 7.70 | 107.82 | — | 0/10 |
+| upgreek | 10 | 5.81 | 4.77 | 84.92 | 20.29 | 8/10 |
+| verb | 10 | 5.53 | 4.42 | 52.23 | 6.25 | 9/10 |
 
 Partial Temml cohorts, identical accepted inputs for all engines (µs/expression, p50):
 
 | Group | Inputs | Stateless | Session | MathJax | Temml |
 |---|---:|---:|---:|---:|---:|
-| newcommand | 6 | 9.71 | 9.26 | 175.04 | 17.17 |
-| mathtools | 6 | 28.80 | 28.03 | 415.76 | 42.49 |
-| physics | 9 | 34.88 | 35.79 | 527.04 | 71.11 |
-| bboldx | 3 | 7.51 | 6.53 | 73.66 | 9.90 |
-| color | 8 | 9.27 | 7.02 | 101.60 | 13.18 |
-| gensymb | 2 | 4.42 | 3.58 | 66.15 | 7.87 |
-| begingroup | 9 | 8.77 | 9.11 | 108.97 | 10.76 |
-| textcomp | 3 | 4.81 | 3.98 | 42.82 | 9.30 |
-| upgreek | 8 | 6.05 | 5.09 | 100.19 | 21.32 |
-| verb | 9 | 5.41 | 4.65 | 67.41 | 6.75 |
+| newcommand | 6 | 9.47 | 8.55 | 149.38 | 15.31 |
+| mathtools | 6 | 27.90 | 24.47 | 390.32 | 38.82 |
+| physics | 9 | 33.82 | 32.62 | 476.06 | 65.92 |
+| bboldx | 3 | 7.00 | 5.78 | 60.35 | 8.96 |
+| color | 8 | 7.51 | 6.23 | 77.74 | 12.15 |
+| gensymb | 2 | 4.44 | 3.35 | 64.75 | 7.19 |
+| begingroup | 9 | 8.50 | 7.57 | 92.70 | 10.01 |
+| textcomp | 3 | 4.87 | 3.56 | 38.81 | 7.93 |
+| upgreek | 8 | 5.62 | 4.58 | 83.44 | 20.29 |
+| verb | 9 | 5.47 | 4.36 | 52.29 | 6.25 |
 
 Cold milliseconds, p50 / p95, independent fresh processes:
 
 | Engine | Import + setup → first string | First conversion | First bench12 pass |
 |---|---:|---:|---:|
-| flashmath | 27.59 / 32.20 | 2.37 / 3.51 | 5.49 / 7.53 |
-| session | 27.55 / 31.29 | 1.70 / 2.04 | 5.21 / 5.83 |
-| mathjax | 68.61 / 72.77 | 1.57 / 1.80 | 15.72 / 16.57 |
-| temml | 20.55 / 21.45 | 2.18 / 2.24 | 4.81 / 5.72 |
+| flashmath | 26.77 / 27.32 | 2.30 / 2.43 | 5.11 / 5.80 |
+| session | 26.88 / 27.74 | 1.69 / 2.00 | 4.90 / 5.54 |
+| mathjax | 67.81 / 69.34 | 1.60 / 1.64 | 15.34 / 15.65 |
+| temml | 20.37 / 20.69 | 2.17 / 2.19 | 4.92 / 5.22 |
 
 Import timing starts immediately before dynamic import, includes parser/document setup and first serialization, and excludes Node process bootstrap. Corpus JSON loading is excluded from this column. This is machine-specific evidence, not a universal ranking.
