@@ -1,7 +1,7 @@
 {
-  "sourceSha256": "48921f4ca34687a608b3dea3c9efc8e241895950b157bd27ec69792d2b814fa3",
+  "sourceSha256": "1e52927aeec5acadf4fa0612f1bc6167f260fcf6448e85ccb1fb3f8b5d177d43",
   "node": "v26.12.1",
-  "createdAt": "2026-11-07T02:22:25.434Z",
+  "createdAt": "2026-11-07T02:44:19.194Z",
   "checks": [
     {
       "name": "build",
@@ -59,6 +59,7 @@
         "test/packages/gensymb.test.mjs",
         "test/packages/html.test.mjs",
         "test/packages/mathtools.test.mjs",
+        "test/packages/mhchem-alignment.test.mjs",
         "test/packages/mhchem-generalization.test.mjs",
         "test/packages/mhchem-output.test.mjs",
         "test/packages/mhchem.test.mjs",

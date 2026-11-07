@@ -5,8 +5,8 @@ current benchmark JSON. Source checks and command exits: [checks.json](checks.js
 CI replay: [ci-checks.json](ci-checks.json); edge changes: [../edge/REPORT.md](../edge/REPORT.md).
 [FINISH.md](FINISH.md) records the historical finish pass, not this candidate.
 
-Candidate: minamorl-flashmath-0.1.0.tgz; 169857 bytes packed / 499785 unpacked.
-Integrity: sha512-NhZvD/VUU11iGVPSB/lmWNwiGMtWRQSNJw5THQIIXuWtJVbeISAz2pUYwiuEnJxoiKnN3E05wrQHCpu0sqCaLg==.
+Candidate: minamorl-flashmath-0.1.0.tgz; 169825 bytes packed / 499959 unpacked.
+Integrity: sha512-+SzserLDQGiw49tDmZjvnnDVAPGqnZf/qRcLejPiilKSrvSIgoFtcToxNJVguiOKJbKeJQDN2dGakNgRCPB0Cg==.
 Full benchmark: 36/36 MathJax groups;
 22/22 Temml cohorts on identical accepted inputs.
 These are local measurements, not a universal speed claim.

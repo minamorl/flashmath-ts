@@ -1,6 +1,6 @@
 {
   "browser": "Chrome/153.0.8010.36",
-  "formulas": 216,
+  "formulas": 222,
   "ssrStringParity": true,
   "checks": [
     {
@@ -7349,6 +7349,78 @@
       "name": "Core enclosures/rows and no private font slots",
       "pass": true,
       "details": {}
+    },
+    {
+      "id": "mathtools-ce-1",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-1",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-2",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-2",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-3",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-3",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-4",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-4",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-5",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-5",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-6",
+      "name": "visible",
+      "pass": true,
+      "details": {}
+    },
+    {
+      "id": "mathtools-ce-6",
+      "name": "Core enclosures/rows and no private font slots",
+      "pass": true,
+      "details": {}
     }
   ],
   "groups": [
@@ -7422,6 +7494,12 @@
       "group": "edge",
       "formulas": 5,
       "checks": 10,
+      "failed": 0
+    },
+    {
+      "group": "mathtools-ce",
+      "formulas": 6,
+      "checks": 12,
       "failed": 0
     }
   ],

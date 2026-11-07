@@ -78,3 +78,52 @@ The original Git metadata is outside the assigned write scope. Phase commits
 use the ignored `.release-git` directory inside this worktree. The final bundle
 is a separate delivery artifact; neither Git metadata nor the bundle belongs
 in the commits or npm tarball.
+
+## Final gates
+
+- `node bench/release/verify.mjs`: exit 0, `release.log`. Every subcommand
+  matches its expected exit in `../release/checks.json`. Full conformance is
+  2,635 matched / 0 mismatched / 48 retained unsupported, with exact baseline
+  IDs and statuses. Library tests: 2,436 total / 2,430 pass / 0 fail / 6 skip.
+- `PNPM_CONFIG_STORE_DIR="$PWD/node_modules/.pnpm-store" PNPM_CONFIG_CACHE_DIR="$PWD/node_modules/.pnpm-cache" node bench/release/ci.mjs`:
+  exit 0, `ci.log`. Exact commands, exits and tails: `../release/ci-checks.json`.
+  Frozen install, build, tests, fresh conformance/regression gate and actual
+  tarball imports/React SSR all ran. The initial default-store install could
+  not open its SQLite database outside the writable scope; the retry and CI
+  replay use an ignored store/cache under this worktree's node_modules.
+- `node bench/edge/check-artifacts.mjs`: exit 0, `artifacts.log`. Checked the
+  current source fingerprint, release/CI exits, actual archive size/SHA-512,
+  release report metadata, allowed archive files and visual/reference errors.
+- Inline Node archive-consumer check: exit 0, `packed-chemistry.log`. Extracted
+  the actual tarball under TMPDIR and imported its core entry. All three
+  requested formulas match MathJax in both the four-package and complete
+  19-package configurations. Scratch files were removed afterward.
+- `git --git-dir=.release-git --work-tree="$PWD" diff --check`: exit 0.
+
+Runtime: Node 26.12.1 / pnpm 11.18.0. The workflow's Node 22 matrix runtime
+is not installed here and was not tested. Workflow, manifest and lockfile
+remain unchanged.
+
+screen_run: Chrome/153.0.8010.36 opened `../native-render/after.html` and used
+keyboard input to switch React SSR → toMathMLString → React SSR. All 222
+formula pairs have equal measured geometry. Hydration and 2,638 client-rendered
+cases have empty runtime/recoverable error arrays. The six `mathtools-ce`
+examples were captured in `../native-render/after-mathtools-ce-1.png`, which
+was opened for visual inspection. The visual gate reports 840 checks, no
+failures and no strict MathJax MathML differences. Pixel identity with MathJax
+SVG is not asserted; native fonts and glyph metrics differ.
+
+Local performance evidence: 36/36 MathJax groups and 22/22 accepted-input
+Temml cohorts have lower flashmath p50. No universal speed claim is inferred.
+Candidate metadata is regenerated from the actual archive in
+`../release/pack.json`; the archive is `../release/minamorl-flashmath-0.1.0.tgz`.
+
+`mathtools-ce.bundle` carries the phase commits on `lane/mathtools-ce` after
+base `b32bffdd824dd9e9964e601843732b194ff386f2`. The original worktree Git
+HEAD/index are untouched. The bundle itself is excluded from its commits.
+
+Disabled-review checkpoint before external delivery: no external delivery
+was requested or run; the caller can inspect the bundle before later delivery.
+Disabled-review checkpoint before DONE: inspect the raw gate exits, source and
+archive fingerprints, six actual tarball regressions, browser screenshot,
+final diff and bundle prerequisite against the stated base.
