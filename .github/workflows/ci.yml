@@ -10,7 +10,8 @@ permissions:
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  # Never cancel a run on main: it may be in the middle of npm publish.
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
   verify:
@@ -59,3 +60,64 @@ jobs:
       - name: Smoke test npm tarball
         run: node scripts/ci-pack-smoke.mjs
       # Benchmarks are intentionally not gates on shared runners.
+
+  # main is the latest release: when the version in package.json is not on
+  # npm yet, publish it and tag the commit as v<version>.
+  publish:
+    name: Publish to npm
+    needs: verify
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write # GitHub release and tag
+      id-token: write # npm provenance and trusted publishing
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Use the runner temp directory as TMPDIR
+        run: echo "TMPDIR=$RUNNER_TEMP" >> "$GITHUB_ENV"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 26
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          version: 11.18.0
+          run_install: false
+      - name: Compare package.json with npm
+        id: release
+        run: |
+          name="$(node -p 'require("./package.json").name')"
+          version="$(node -p 'require("./package.json").version')"
+          published="$(npm view "$name@$version" version --registry=https://registry.npmjs.org/ 2>/dev/null || true)"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          if [[ "$published" == "$version" ]]; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::$name@$version is already on npm."
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install locked dependencies
+        if: steps.release.outputs.publish == 'true'
+        run: pnpm install --frozen-lockfile
+      - name: Publish
+        if: steps.release.outputs.publish == 'true'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [[ -z "$NODE_AUTH_TOKEN" ]]; then
+            echo "::warning::NPM_TOKEN is not set; relying on npm trusted publishing."
+          fi
+          npm publish --provenance --access public
+      - name: Create the GitHub release
+        if: steps.release.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: v${{ steps.release.outputs.version }}
+        run: gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "$TAG" --generate-notes
