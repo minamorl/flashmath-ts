@@ -234,6 +234,38 @@ Chromium/font combination. That rejected attempt is saved in
 additional defect was found by visually reviewing `core-8`; the geometry gate now
 requires the accent to span the complete base.
 
+### Annotated extensible arrows
+
+AMS and mathtools x-arrow labels use MathJax's relative `mpadded` dimensions,
+for example `width="+0.833em"`. MathML Core interprets that as an absolute width,
+so the label can overflow its layout box and collide with the next term. Merely
+adding `stretchy="true"` does not change the small label box used as the base
+operator's stretch target. See Core's [mpadded parameters](https://www.w3.org/TR/mathml-core/#inner-box-and-requested-parameters)
+and [inline stretching algorithm](https://www.w3.org/TR/mathml-core/#algorithm-for-stretching-operators-along-the-inline-axis).
+
+Native output converts these parser-marked labels to natural-width `mrow`s with
+the original left/right clearance expressed as `padding-inline`, and removes
+MathJax's vertical label struts. Core lays out the actual annotations before
+stretching the arrow to the widest one. Mathtools' annotated long arrows use the
+corresponding short Unicode arrow with their original `minsize`, because the
+tested native font does not assemble the long codepoints. Empty x-arrow labels,
+ordinary arrows, literal long-arrow characters, user-created `mpadded` nodes,
+and `output: 'mathjax'` keep their previous output. The existing mhchem/extpfeil
+label conversion also retains horizontal clearance for nonempty annotations.
+
+`node --test test/browser/native-xarrow.test.mjs` uses the same dependency-free Chromium
+CDP approach as `screen.mjs`. It renders the reported Japanese chain, every AMS,
+mathtools and extpfeil x-arrow with above/below annotations, scripts and fractions,
+through React SSR and string output in inline/display math inside horizontal and
+vertical text. Math remains horizontal inside the vertical text context.
+It checks label/neighbor and label/arrow rectangles, SSR/string geometry, and
+unannotated arrow geometry. Chromium reports an unstretched `mo` DOM advance even
+when it paints an assembled arrow, so the test also measures the actual shaft's
+pixels in a screenshot. Set `XARROW_ARTIFACT_DIR` to retain the page, measurements
+and first screenshot panel. `XARROW_BASELINE=1` deliberately uses unlowered MathJax
+markup as a negative control and must fail. CI installs DejaVu Math TeX Gyre and
+Noto CJK for these checks; `CHROME_BIN` can override `/usr/bin/google-chrome`.
+
 ## Reproduction and evidence
 
 ```sh

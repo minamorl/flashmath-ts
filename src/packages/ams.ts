@@ -9,6 +9,7 @@ import type {TexPackage,TexCommand,TexEnvironment} from './types.js';
 import {scan,raw,spelling} from '../scanner.js';
 import type {Token} from '../scanner.js';
 import {operator,em,dimensionEm,fenceChars} from '../mathml.js';
+import {markPackageNode} from '../package-mark.js';
 const symbols = () => [
   {"name":"digamma","type":"mathchar0mi","char":"ϝ","attrs":{}},
   {"name":"varkappa","type":"mathchar0mi","char":"ϰ","attrs":{}},
@@ -324,7 +325,7 @@ commands.cfrac={execute(p){
 for(const [name,glyph,l]of [['xrightarrow','→',5],['xleftarrow','←',10]] as const)commands[name]={execute(p){
   const bottom=p.optional();
   p.argument(top=>{
-    const pad=(n:Node,under:boolean)=>p.node(K.mpadded,[...sequence(n),p.node(K.mspace,[],'',under?{height:'.75em'}:{depth:'.2em'})],'',{width:'+0.833em',lspace:em(l/18),voffset:under?'.15em':'-.2em',...(under?{depth:'-.15em'}:{height:'-.2em'})});
+    const pad=(n:Node,under:boolean)=>markPackageNode(p.node(K.mpadded,[...sequence(n),p.node(K.mspace,[],'',under?{height:'.75em'}:{depth:'.2em'})],'',{width:'+0.833em',lspace:em(l/18),voffset:under?'.15em':'-.2em',...(under?{depth:'-.15em'}:{height:'-.2em'})}),'xarrow-label');
     const arrow=p.node(K.mo,[],glyph,{'data-mjx-texclass':'ORD'});
     const finish=(under?:Node)=>p.append(p.atom([p.atom([],'NONE'),p.node(under?K.munderover:K.mover,[arrow,...(under?[pad(under,true)]:[]),pad(top,false)])],'REL'));
     if(bottom)p.parseTokens(bottom,n=>finish(n));else finish();

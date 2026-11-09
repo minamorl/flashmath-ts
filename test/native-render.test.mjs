@@ -138,6 +138,22 @@ test('overline paints the complete base with CSS while a literal horizontal bar 
   assert.equal(renderToStaticMarkup(parseToReact(tex)),native);
 });
 
+test('x-arrow lowering preserves raw MathJax, empty arrows and user mpadded nodes',()=>{
+  const options={packages:['base','ams','mathtools']};
+  const ast=frozen(raw(String.raw`a\xrightarrow[\text{lower}]{\text{upper}}b`,options));
+  const snapshot=toMathMLString(ast,{output:'mathjax'}),native=mathMLForOutput(ast);
+  assert.equal(nodes(native).filter(n=>n.attributes['data-flashmath-arrow-label']).length,2);
+  assert.deepEqual(mathMLForOutput(native),native);
+  assert.equal(toMathMLString(ast,{output:'mathjax'}),snapshot);
+  assert.match(snapshot,/<mpadded width="\+0.833em"/);
+  for(const tex of [String.raw`a\rightarrow b`,String.raw`\xrightarrow{}`,String.raw`\xlongrightarrow{}`,String.raw`⟶`]){
+    const plain=frozen(raw(tex,options));
+    assert.strictEqual(mathMLForOutput(plain),plain,tex);
+  }
+  const literal=group('math',[group('mpadded',[token('label'),group('mspace',[],{depth:'.2em'})],{width:'+0.833em',lspace:'0.278em',voffset:'-.2em',height:'-.2em'})]);
+  assert.strictEqual(mathMLForOutput(frozen(literal)),literal);
+});
+
 test('deep variant output uses an explicit stack and needs no browser',()=>{
   let ast=token('x',{mathvariant:'bold'});
   for(let i=0;i<5000;i++)ast=group('mrow',[ast]);

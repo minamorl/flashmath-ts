@@ -22,7 +22,9 @@ function codeOf(n: MathMLNode) {
   return n.kind === 'mo' && n.text.length === 1 && packageMark(n)==='glyph' ? n.text.charCodeAt(0) : 0;
 }
 function arrowLabel(n: MathMLNode) {
-  if (n.kind !== 'mpadded' || packageMark(n)!=='arrow-label' || n.children.at(-1)?.kind !== 'mspace') return false;
+  const mark=packageMark(n);
+  if (n.kind !== 'mpadded' || mark!=='arrow-label'&&mark!=='xarrow-label' || n.children.at(-1)?.kind !== 'mspace') return false;
+  if(mark==='xarrow-label'&&n.children.length===1)return false;
   const a = n.attributes, strut = n.children.at(-1)!.attributes;
   return a.voffset === '-.2em' && a.height === '-.2em' && strut.depth === '.2em'
     || a.voffset === '.15em' && a.depth === '-.15em' && strut.height === '.75em';
@@ -31,6 +33,7 @@ function overline(n:MathMLNode):boolean {
   const accent=n.children[1];
   return (n.kind==='mover'||n.kind==='munder')&&accent?.kind==='mo'&&accent.text==='―'&&accent.attributes.accent==='true';
 }
+const nativeLongArrows:Record<string,string>={'⟶':'→','⟵':'←','⟹':'⇒','⟸':'⇐'};
 function nativeGlyph(n: MathMLNode): MathMLNode {
   const code = codeOf(n), text = glyph(code);
   const attributes = {...n.attributes};
@@ -83,7 +86,7 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     // Ordinary leaf tokens need only the variant check above.
     if(!n.children.length&&(n.kind==='mi'||n.kind==='mn'||n.kind==='mtext'||n.kind==='mo'&&!(n.text.length===1&&n.text.charCodeAt(0)>=0xe400&&n.text.charCodeAt(0)<=0xe42e)))continue;
     const mark=packageMark(n), code = n.kind==='mo'&&n.text.length===1&&mark==='glyph'?n.text.charCodeAt(0):0;
-    if (glyph(code) || compound(code) || mark==='arrow-label'&&arrowLabel(n) || mark==='prescript' || mark==='bbox-padding'
+    if (glyph(code) || compound(code) || (mark==='arrow-label'||mark==='xarrow-label')&&arrowLabel(n) || mark==='prescript' || mark==='bbox-padding'
       || n.kind==='menclose' || n.kind==='mlabeledtr' || isCenterOver(n)
       || overline(n)
       || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame || n.attributes.semantics?.includes('bspr_inferenceRule:'))) {found = true; break;}
@@ -91,7 +94,10 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
   }
   if (!found) return root;
   const copy = (n: MathMLNode): MathMLNode => arrowLabel(n)
-    ? {...n, kind: 'mrow', attributes: {}, children: []}
+    // MathML Core treats +Nem as an absolute width, not added content width.
+    // Keep the label's natural size and horizontal clearance; Core then
+    // stretches the base operator to the widest over/underscript.
+    ? {...n, kind: 'mrow', attributes: n.children.length===1?{}:{'data-flashmath-arrow-label':'true',style:`padding-inline:${n.attributes.lspace??'0em'} calc(${n.attributes.width.slice(1)} - ${n.attributes.lspace??'0em'})`}, children: []}
     : {...n, attributes: {...n.attributes}, children: []};
   const result=copy(root);
   const defaultSide='tagSide' in options&&options.tagSide==='left'?'left':'right';
@@ -125,6 +131,8 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     }
     const code=codeOf(input);
     if(glyph(code)||compound(code)){Object.assign(output,nativeGlyph(input));continue;}
+    // Use font-assemblable glyphs for annotated long arrows, preserving minsize.
+    if(packageMark(input)==='glyph')output.text=nativeLongArrows[output.text]??output.text;
     if(variant){
       const name=variantName(variant);
       if(['mi','mn','mo','mtext'].includes(output.kind)){

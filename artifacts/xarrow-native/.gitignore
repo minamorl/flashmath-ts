@@ -1,0 +1,12 @@
+*
+!.gitignore
+!REPORT.md
+!verify.mjs
+!checks-node22.json
+!checks-node26.json
+!diagnosis.json
+!diagnosis.png
+!after/
+after/*
+!after/screen.png
+!after/screen-vertical.png
