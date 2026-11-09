@@ -245,7 +245,9 @@ and [inline stretching algorithm](https://www.w3.org/TR/mathml-core/#algorithm-f
 
 Native output converts these parser-marked labels to natural-width `mrow`s with
 the original left/right clearance expressed as `padding-inline`, and removes
-MathJax's vertical label struts. Core lays out the actual annotations before
+MathJax's lower label strut. The upper depth strut uses a `.3em` minimum so italic
+ink (including the descender of `f`) clears the arrow even when it extends
+beyond the Core token box. Core lays out the actual annotations before
 stretching the arrow to the widest one. Mathtools' annotated long arrows use the
 corresponding short Unicode arrow with their original `minsize`, because the
 tested native font does not assemble the long codepoints. Empty x-arrow labels,
@@ -261,7 +263,12 @@ vertical text. Math remains horizontal inside the vertical text context.
 It checks label/neighbor and label/arrow rectangles, SSR/string geometry, and
 unannotated arrow geometry. Chromium reports an unstretched `mo` DOM advance even
 when it paints an assembled arrow, so the test also measures the actual shaft's
-pixels in a screenshot. Set `XARROW_ARTIFACT_DIR` to retain the page, measurements
+pixels in a screenshot. An additional 15/20/32px check separates arrow and label
+ink by color, requires strictly positive upper/lower gaps, and compares them
+with captured MathJax 3.2.2 CHTML gaps (using its bundled TeX fonts). Bounds allow
+for the different fonts' arrowhead/harpoon bearings; they do not require pixel
+parity. `XARROW_WITHOUT_STRUT=1` reconstructs the 0.1.1 vertical regression and
+must fail the positive-ink-gap assertions. Set `XARROW_ARTIFACT_DIR` to retain the page, measurements
 and first screenshot panel. `XARROW_BASELINE=1` deliberately uses unlowered MathJax
 markup as a negative control and must fail. CI installs DejaVu Math TeX Gyre and
 Noto CJK for these checks; `CHROME_BIN` can override `/usr/bin/google-chrome`.

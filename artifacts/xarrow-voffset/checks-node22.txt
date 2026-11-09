@@ -1,0 +1,71 @@
+v22.23.4
+11.18.0
+
+$ pnpm install --frozen-lockfile --store-dir "$PWD/node_modules/.pnpm-store"
+exit=0
+Already up to date
+Done in 381ms using pnpm v11.18.0
+
+$ node scripts/build.mjs
+exit=0
+Built shared ESM runtime and TypeScript declarations
+
+$ node --test test/*.test.mjs test/packages/*.test.mjs conformance/harness.test.mjs scripts/ci-checks.test.mjs
+exit=0
+ok 1882 - generated compact trie resolves every definition from source spans without prefix collisions
+  ---
+  duration_ms: 80.366885
+  type: 'test'
+  ...
+1..1882
+# tests 2504
+# suites 0
+# pass 2498
+# fail 0
+# cancelled 0
+# skipped 6
+# todo 0
+# duration_ms 11310.795068
+
+$ node --test test/browser/*.test.mjs
+exit=0
+ok 4 - Chromium native x-arrow ink clears upper/lower annotations at 32px
+  ---
+  duration_ms: 4241.625061
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15649.090781
+
+$ node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output artifacts/xarrow-voffset/conformance-node22.json --fresh
+exit=1
+setoptions | 10 | 0 | 2 | 12 | 83.33%
+tagformat | 8 | 0 | 0 | 8 | 100.00%
+stackMacros | 0 | 0 | 2 | 2 | 0.00%
+matchBrackets | 0 | 0 | 1 | 1 | 0.00%
+mml | 0 | 0 | 1 | 1 | 0.00%
+(uncaptured) | 0 | 0 | 1 | 1 | 0.00%
+texhtml | 6 | 0 | 0 | 6 | 100.00%
+textcomp | 118 | 0 | 0 | 118 | 100.00%
+unicode | 52 | 0 | 0 | 52 | 100.00%
+no-autoload | 0 | 0 | 1 | 1 | 0.00%
+upgreek | 41 | 0 | 0 | 41 | 100.00%
+verb | 5 | 0 | 0 | 5 | 100.00%
+
+classifications: {"typeset-component-pipeline":14,"custom-package-registration":26,"non-single-MathML-snapshot":7,"input-not-captured":1}
+
+$ node scripts/ci-conformance-gate.mjs artifacts/xarrow-voffset/conformance-node22.json
+exit=0
+Conformance gate PASS: {"matched":2635,"mismatch":0,"unsupported":48,"total":2683,"classifications":{"typeset-component-pipeline":14,"custom-package-registration":26,"non-single-MathML-snapshot":7,"input-not-captured":1}}
+
+$ node scripts/ci-pack-smoke.mjs
+exit=0
+{"coreImport":true,"reactImport":true,"reactSSR":true,"coreBytes":455,"reactBytes":455}
+Pack smoke PASS: {"tarball":"minamorl-flashmath-0.1.2.tgz","files":89,"unpackedBytes":500544}

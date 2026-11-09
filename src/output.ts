@@ -96,7 +96,8 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
   const copy = (n: MathMLNode): MathMLNode => arrowLabel(n)
     // MathML Core treats +Nem as an absolute width, not added content width.
     // Keep the label's natural size and horizontal clearance; Core then
-    // stretches the base operator to the widest over/underscript.
+    // stretches the base operator to the widest over/underscript. Keep the
+    // upper depth strut: italic ink can descend beyond its Core token box.
     ? {...n, kind: 'mrow', attributes: n.children.length===1?{}:{'data-flashmath-arrow-label':'true',style:`padding-inline:${n.attributes.lspace??'0em'} calc(${n.attributes.width.slice(1)} - ${n.attributes.lspace??'0em'})`}, children: []}
     : {...n, attributes: {...n.attributes}, children: []};
   const result=copy(root);
@@ -109,9 +110,14 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     const variant=input.attributes['data-mjx-variant']??input.attributes.mathvariant??job.variant;
     if(!job.done&&input.children.length){
       job.done=true;work.push(job);
-      const sourceChildren=input.children,childCount=sourceChildren.length-(arrowLabel(input)?1:0);
+      // Core's natural under-label ascent already clears the arrow. Retaining
+      // MathJax's .75em under strut would add unnecessary lower whitespace.
+      const sourceChildren=input.children,childCount=sourceChildren.length-(arrowLabel(input)&&(input.children.length===1||input.attributes.voffset==='.15em')?1:0);
       for(let i=0;i<childCount;i++){
         const sourceChild=sourceChildren[i];let child=sourceChild;
+        // Native fallback italic glyphs can descend beyond their token boxes.
+        // A .3em minimum depth clears them at text and script sizes.
+        if(arrowLabel(input)&&i===sourceChildren.length-1)child={...sourceChild,attributes:{depth:'.3em'}};
         if(packageMark(child)==='prescript' && sourceChildren[i+3]){
           const script=(which:number):MathMLNode=>{
             const stack=[sourceChild.children[which]];

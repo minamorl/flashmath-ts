@@ -1,0 +1,5867 @@
+{
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.36",
+    "revision": "@507c6ee3e2f3b2ca0e660547e5b9ea4820c67f4c",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.10"
+  },
+  "summary": {
+    "maxWidthDelta": 0,
+    "maxLayoutOffsetDelta": 0,
+    "minUpper": 1.25,
+    "minLower": 1.25
+  },
+  "cases": [
+    {
+      "id": "15/ams/xrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.75
+      },
+      "offsetAfter": {
+        "upper": -1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/ams/xrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": -1.625,
+        "lower": -1
+      },
+      "offsetAfter": {
+        "upper": -1.625,
+        "lower": -1
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/ams/xrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 1.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 1.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": -1.75
+      },
+      "offsetAfter": {
+        "lower": -1.75
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/ams/xleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 1.75
+      },
+      "offsetAfter": {
+        "upper": 1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/ams/xleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": 1.625,
+        "lower": 2.25
+      },
+      "offsetAfter": {
+        "upper": 1.625,
+        "lower": 2.25
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/ams/xleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2
+      },
+      "after": {
+        "upper": null,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": 1.625
+      },
+      "offsetAfter": {
+        "lower": 1.625
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/mathtools/xleftrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.625
+      },
+      "offsetAfter": {
+        "upper": 0.625
+      },
+      "widthBefore": 22.203125,
+      "widthAfter": 22.203125
+    },
+    {
+      "id": "15/mathtools/xleftrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": 0.75,
+        "lower": 3.25
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 1.125
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 1.125
+      },
+      "widthBefore": 22.203125,
+      "widthAfter": 22.203125
+    },
+    {
+      "id": "15/mathtools/xleftrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2
+      },
+      "after": {
+        "upper": null,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 22,
+      "widthAfter": 22
+    },
+    {
+      "id": "15/mathtools/xLeftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.125
+      },
+      "offsetAfter": {
+        "upper": 2.125
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xLeftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 3
+      },
+      "offsetBefore": {
+        "upper": 2,
+        "lower": 2.75
+      },
+      "offsetAfter": {
+        "upper": 2,
+        "lower": 2.875
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xLeftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 4.5
+      },
+      "offsetBefore": {
+        "lower": 2.125
+      },
+      "offsetAfter": {
+        "lower": 2.125
+      },
+      "widthBefore": 21.328125,
+      "widthAfter": 21.328125
+    },
+    {
+      "id": "15/mathtools/xRightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.125
+      },
+      "offsetAfter": {
+        "upper": -1.125
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xRightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 3
+      },
+      "offsetBefore": {
+        "upper": -1.25,
+        "lower": -0.625
+      },
+      "offsetAfter": {
+        "upper": -1.25,
+        "lower": -0.5
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xRightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3
+      },
+      "after": {
+        "upper": null,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 4.5
+      },
+      "offsetBefore": {
+        "lower": -1.25
+      },
+      "offsetAfter": {
+        "lower": -1.25
+      },
+      "widthBefore": 21.328125,
+      "widthAfter": 21.328125
+    },
+    {
+      "id": "15/mathtools/xLeftrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.5
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 24.859375,
+      "widthAfter": 24.859375
+    },
+    {
+      "id": "15/mathtools/xLeftrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 3
+      },
+      "offsetBefore": {
+        "upper": 0.375,
+        "lower": 1.125
+      },
+      "offsetAfter": {
+        "upper": 0.375,
+        "lower": 1.25
+      },
+      "widthBefore": 24.859375,
+      "widthAfter": 24.859375
+    },
+    {
+      "id": "15/mathtools/xLeftrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 4.5
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 24.65625,
+      "widthAfter": 24.65625
+    },
+    {
+      "id": "15/mathtools/xhookleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 1.75
+      },
+      "offsetAfter": {
+        "upper": 1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xhookleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.25,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.5,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": 1.625,
+        "lower": 2.25
+      },
+      "offsetAfter": {
+        "upper": 1.625,
+        "lower": 2.25
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xhookleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2
+      },
+      "after": {
+        "upper": null,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": 1.75
+      },
+      "offsetAfter": {
+        "lower": 1.75
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/mathtools/xhookrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.75
+      },
+      "offsetAfter": {
+        "upper": -1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xhookrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.25,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": -1.625,
+        "lower": -1
+      },
+      "offsetAfter": {
+        "upper": -1.625,
+        "lower": -1
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xhookrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 1.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 1.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": -1.75
+      },
+      "offsetAfter": {
+        "lower": -1.75
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/mathtools/xmapsto/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.625
+      },
+      "offsetAfter": {
+        "upper": 0.625
+      },
+      "widthBefore": 22.203125,
+      "widthAfter": 22.203125
+    },
+    {
+      "id": "15/mathtools/xmapsto/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": -1.5,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 1.125
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 1.125
+      },
+      "widthBefore": 22.203125,
+      "widthAfter": 22.203125
+    },
+    {
+      "id": "15/mathtools/xmapsto/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2
+      },
+      "after": {
+        "upper": null,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 22,
+      "widthAfter": 22
+    },
+    {
+      "id": "15/mathtools/xrightharpoondown/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0.75,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.125
+      },
+      "offsetAfter": {
+        "upper": -1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xrightharpoondown/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.5,
+        "lower": 1.75
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": -1.625,
+        "lower": -1
+      },
+      "offsetAfter": {
+        "upper": -1.625,
+        "lower": -1
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xrightharpoondown/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": -1.75
+      },
+      "offsetAfter": {
+        "lower": -1.75
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/mathtools/xleftharpoondown/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0.75,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.25
+      },
+      "offsetAfter": {
+        "upper": 1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xleftharpoondown/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.75,
+        "lower": 1.75
+      },
+      "after": {
+        "upper": 3,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": 1.625,
+        "lower": 2.25
+      },
+      "offsetAfter": {
+        "upper": 1.625,
+        "lower": 2.375
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xleftharpoondown/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": 1.625
+      },
+      "offsetAfter": {
+        "lower": 1.625
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/mathtools/xrightleftharpoons/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.625
+      },
+      "offsetAfter": {
+        "upper": 0.625
+      },
+      "widthBefore": 22.203125,
+      "widthAfter": 22.203125
+    },
+    {
+      "id": "15/mathtools/xrightleftharpoons/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 1.125
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 1.25
+      },
+      "widthBefore": 22.203125,
+      "widthAfter": 22.203125
+    },
+    {
+      "id": "15/mathtools/xrightleftharpoons/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3
+      },
+      "after": {
+        "upper": null,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 22,
+      "widthAfter": 22
+    },
+    {
+      "id": "15/mathtools/xrightharpoonup/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.75
+      },
+      "offsetAfter": {
+        "upper": -1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xrightharpoonup/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 4.75
+      },
+      "offsetBefore": {
+        "upper": -1.625,
+        "lower": -1
+      },
+      "offsetAfter": {
+        "upper": -1.625,
+        "lower": -1
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xrightharpoonup/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 7.25
+      },
+      "offsetBefore": {
+        "lower": -1.75
+      },
+      "offsetAfter": {
+        "lower": -1.75
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/mathtools/xleftharpoonup/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 1.75
+      },
+      "offsetAfter": {
+        "upper": 1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xleftharpoonup/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 3,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 4.75
+      },
+      "offsetBefore": {
+        "upper": 1.625,
+        "lower": 2.25
+      },
+      "offsetAfter": {
+        "upper": 1.625,
+        "lower": 2.25
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/mathtools/xleftharpoonup/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 7.25
+      },
+      "offsetBefore": {
+        "lower": 1.625
+      },
+      "offsetAfter": {
+        "lower": 1.625
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/mathtools/xleftrightharpoons/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.625
+      },
+      "offsetAfter": {
+        "upper": 0.625
+      },
+      "widthBefore": 22.203125,
+      "widthAfter": 22.203125
+    },
+    {
+      "id": "15/mathtools/xleftrightharpoons/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 1.125
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 1.25
+      },
+      "widthBefore": 22.203125,
+      "widthAfter": 22.203125
+    },
+    {
+      "id": "15/mathtools/xleftrightharpoons/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3
+      },
+      "after": {
+        "upper": null,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 22,
+      "widthAfter": 22
+    },
+    {
+      "id": "15/mathtools/xlongrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.125
+      },
+      "offsetAfter": {
+        "upper": -1.125
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xlongrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": -1.25,
+        "lower": -0.625
+      },
+      "offsetAfter": {
+        "upper": -1.25,
+        "lower": -0.625
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xlongrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2
+      },
+      "after": {
+        "upper": null,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": -1.25
+      },
+      "offsetAfter": {
+        "lower": -1.25
+      },
+      "widthBefore": 21.328125,
+      "widthAfter": 21.328125
+    },
+    {
+      "id": "15/mathtools/xlongleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.125
+      },
+      "offsetAfter": {
+        "upper": 2.125
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xlongleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": -1.25,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": 2,
+        "lower": 2.875
+      },
+      "offsetAfter": {
+        "upper": 2,
+        "lower": 2.875
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xlongleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 1.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 1.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": 2.125
+      },
+      "offsetAfter": {
+        "lower": 2.125
+      },
+      "widthBefore": 21.328125,
+      "widthAfter": 21.328125
+    },
+    {
+      "id": "15/mathtools/xLongrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.125
+      },
+      "offsetAfter": {
+        "upper": -1.125
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xLongrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 3
+      },
+      "offsetBefore": {
+        "upper": -1.25,
+        "lower": -0.625
+      },
+      "offsetAfter": {
+        "upper": -1.25,
+        "lower": -0.5
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xLongrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3
+      },
+      "after": {
+        "upper": null,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 4.5
+      },
+      "offsetBefore": {
+        "lower": -1.25
+      },
+      "offsetAfter": {
+        "lower": -1.25
+      },
+      "widthBefore": 21.328125,
+      "widthAfter": 21.328125
+    },
+    {
+      "id": "15/mathtools/xLongleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.125
+      },
+      "offsetAfter": {
+        "upper": 2.125
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xLongleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 3
+      },
+      "offsetBefore": {
+        "upper": 2,
+        "lower": 2.75
+      },
+      "offsetAfter": {
+        "upper": 2,
+        "lower": 2.875
+      },
+      "widthBefore": 21.53125,
+      "widthAfter": 21.53125
+    },
+    {
+      "id": "15/mathtools/xLongleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 4.5
+      },
+      "offsetBefore": {
+        "lower": 2.125
+      },
+      "offsetAfter": {
+        "lower": 2.125
+      },
+      "widthBefore": 21.328125,
+      "widthAfter": 21.328125
+    },
+    {
+      "id": "15/extpfeil/xtwoheadrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -0.875
+      },
+      "offsetAfter": {
+        "upper": -0.875
+      },
+      "widthBefore": 27.53125,
+      "widthAfter": 27.53125
+    },
+    {
+      "id": "15/extpfeil/xtwoheadrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": 2.25,
+        "lower": 4.75
+      },
+      "offsetBefore": {
+        "upper": -1,
+        "lower": -0.125
+      },
+      "offsetAfter": {
+        "upper": -1,
+        "lower": -0.125
+      },
+      "widthBefore": 27.53125,
+      "widthAfter": 27.53125
+    },
+    {
+      "id": "15/extpfeil/xtwoheadrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 6.25
+      },
+      "offsetBefore": {
+        "lower": -0.875
+      },
+      "offsetAfter": {
+        "lower": -0.875
+      },
+      "widthBefore": 27.328125,
+      "widthAfter": 27.328125
+    },
+    {
+      "id": "15/extpfeil/xtwoheadleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 1.75
+      },
+      "offsetAfter": {
+        "upper": 1.75
+      },
+      "widthBefore": 28.859375,
+      "widthAfter": 28.859375
+    },
+    {
+      "id": "15/extpfeil/xtwoheadleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": 2.25,
+        "lower": 4.75
+      },
+      "offsetBefore": {
+        "upper": 1.875,
+        "lower": 2.5
+      },
+      "offsetAfter": {
+        "upper": 1.875,
+        "lower": 2.5
+      },
+      "widthBefore": 28.859375,
+      "widthAfter": 28.859375
+    },
+    {
+      "id": "15/extpfeil/xtwoheadleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 6.25
+      },
+      "offsetBefore": {
+        "lower": 1.75
+      },
+      "offsetAfter": {
+        "lower": 1.75
+      },
+      "widthBefore": 28.65625,
+      "widthAfter": 28.65625
+    },
+    {
+      "id": "15/extpfeil/xmapsto/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -0.375
+      },
+      "offsetAfter": {
+        "upper": -0.375
+      },
+      "widthBefore": 17.515625,
+      "widthAfter": 17.515625
+    },
+    {
+      "id": "15/extpfeil/xmapsto/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": -1.5,
+        "lower": 1.25
+      },
+      "offsetBefore": {
+        "upper": -0.5,
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "upper": -0.5,
+        "lower": 0.25
+      },
+      "widthBefore": 17.515625,
+      "widthAfter": 17.515625
+    },
+    {
+      "id": "15/extpfeil/xmapsto/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "lower": -0.375
+      },
+      "offsetAfter": {
+        "lower": -0.375
+      },
+      "widthBefore": 17.3125,
+      "widthAfter": 17.3125
+    },
+    {
+      "id": "15/extpfeil/xlongequal/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 2,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.75
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 18.1875,
+      "widthAfter": 18.1875
+    },
+    {
+      "id": "15/extpfeil/xlongequal/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 3,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": 3,
+        "lower": 5.5
+      },
+      "offsetBefore": {
+        "upper": 0.375,
+        "lower": 1
+      },
+      "offsetAfter": {
+        "upper": 0.375,
+        "lower": 1
+      },
+      "widthBefore": 18.1875,
+      "widthAfter": 18.1875
+    },
+    {
+      "id": "15/extpfeil/xlongequal/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2
+      },
+      "after": {
+        "upper": null,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 7
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 17.984375,
+      "widthAfter": 17.984375
+    },
+    {
+      "id": "15/extpfeil/xtofrom/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.5
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 24.859375,
+      "widthAfter": 24.859375
+    },
+    {
+      "id": "15/extpfeil/xtofrom/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 1.5,
+        "lower": 2.25
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.5
+      },
+      "offsetBefore": {
+        "upper": 0.375,
+        "lower": 1.125
+      },
+      "offsetAfter": {
+        "upper": 0.375,
+        "lower": 1.25
+      },
+      "widthBefore": 24.859375,
+      "widthAfter": 24.859375
+    },
+    {
+      "id": "15/extpfeil/xtofrom/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2
+      },
+      "after": {
+        "upper": null,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 4
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 24.65625,
+      "widthAfter": 24.65625
+    },
+    {
+      "id": "15/reported",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.75
+      },
+      "offsetAfter": {
+        "upper": -1.75
+      },
+      "widthBefore": 18.859375,
+      "widthAfter": 18.859375
+    },
+    {
+      "id": "15/reported",
+      "stack": 1,
+      "before": {
+        "upper": 2.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.75
+      },
+      "offsetAfter": {
+        "upper": -1.75
+      },
+      "widthBefore": 18.65625,
+      "widthAfter": 18.65625
+    },
+    {
+      "id": "15/reported-serif",
+      "stack": 0,
+      "before": {
+        "upper": -2.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 1.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -0.75
+      },
+      "offsetAfter": {
+        "upper": -0.75
+      },
+      "widthBefore": 15,
+      "widthAfter": 15
+    },
+    {
+      "id": "15/reported-serif",
+      "stack": 1,
+      "before": {
+        "upper": 0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 1.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.375
+      },
+      "offsetAfter": {
+        "upper": -1.375
+      },
+      "widthBefore": 15.03125,
+      "widthAfter": 15.03125
+    },
+    {
+      "id": "15/fraction",
+      "stack": 0,
+      "before": {
+        "upper": 2,
+        "lower": 1.25
+      },
+      "after": {
+        "upper": 2,
+        "lower": 1.25
+      },
+      "chtml": {
+        "upper": 1,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": -1,
+        "lower": -1
+      },
+      "offsetAfter": {
+        "upper": -1,
+        "lower": -1
+      },
+      "widthBefore": 26.375,
+      "widthAfter": 26.375
+    },
+    {
+      "id": "15/script",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": 1.75
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": 1.25
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": 2.5
+      },
+      "offsetBefore": {
+        "upper": -1.25,
+        "lower": -1.25
+      },
+      "offsetAfter": {
+        "upper": -1.25,
+        "lower": -1.25
+      },
+      "widthBefore": 15.3125,
+      "widthAfter": 15.3125
+    },
+    {
+      "id": "15/custom",
+      "stack": 0,
+      "before": {
+        "upper": -0.25,
+        "lower": 2
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": 2.25
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "upper": -1.625,
+        "lower": -1.75
+      },
+      "offsetAfter": {
+        "upper": -1.625,
+        "lower": -1.75
+      },
+      "widthBefore": 16.1875,
+      "widthAfter": 16.1875
+    },
+    {
+      "id": "20/ams/xrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 4,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2.25
+      },
+      "offsetAfter": {
+        "upper": -2.25
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/ams/xrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": -2.375,
+        "lower": -1.375
+      },
+      "offsetAfter": {
+        "upper": -2.375,
+        "lower": -1.25
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/ams/xrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": -2.125
+      },
+      "offsetAfter": {
+        "lower": -2.125
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/ams/xleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 4,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.125
+      },
+      "offsetAfter": {
+        "upper": 2.125
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/ams/xleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": 2.125,
+        "lower": 3.125
+      },
+      "offsetAfter": {
+        "upper": 2.125,
+        "lower": 3.125
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/ams/xleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": 2.375
+      },
+      "offsetAfter": {
+        "lower": 2.375
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/mathtools/xleftrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 4,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.25
+      },
+      "offsetAfter": {
+        "upper": 0.25
+      },
+      "widthBefore": 29.59375,
+      "widthAfter": 29.59375
+    },
+    {
+      "id": "20/mathtools/xleftrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 3.75
+      },
+      "offsetBefore": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "offsetAfter": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "widthBefore": 29.59375,
+      "widthAfter": 29.59375
+    },
+    {
+      "id": "20/mathtools/xleftrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 6.25
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 29.328125,
+      "widthAfter": 29.328125
+    },
+    {
+      "id": "20/mathtools/xLeftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.375
+      },
+      "offsetAfter": {
+        "upper": 2.375
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xLeftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": 3.5
+      },
+      "offsetBefore": {
+        "upper": 2.375,
+        "lower": 3.375
+      },
+      "offsetAfter": {
+        "upper": 2.375,
+        "lower": 3.375
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xLeftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 6
+      },
+      "offsetBefore": {
+        "lower": 2.5
+      },
+      "offsetAfter": {
+        "lower": 2.5
+      },
+      "widthBefore": 28.453125,
+      "widthAfter": 28.453125
+    },
+    {
+      "id": "20/mathtools/xRightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2
+      },
+      "offsetAfter": {
+        "upper": -2
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xRightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": 3.5
+      },
+      "offsetBefore": {
+        "upper": -2.125,
+        "lower": -1.125
+      },
+      "offsetAfter": {
+        "upper": -2.125,
+        "lower": -1
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xRightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 6
+      },
+      "offsetBefore": {
+        "lower": -2
+      },
+      "offsetAfter": {
+        "lower": -2
+      },
+      "widthBefore": 28.453125,
+      "widthAfter": 28.453125
+    },
+    {
+      "id": "20/mathtools/xLeftrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.125
+      },
+      "offsetAfter": {
+        "upper": 0.125
+      },
+      "widthBefore": 33.140625,
+      "widthAfter": 33.140625
+    },
+    {
+      "id": "20/mathtools/xLeftrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": 3.5
+      },
+      "offsetBefore": {
+        "upper": 0.125,
+        "lower": 1.125
+      },
+      "offsetAfter": {
+        "upper": 0.125,
+        "lower": 1.125
+      },
+      "widthBefore": 33.140625,
+      "widthAfter": 33.140625
+    },
+    {
+      "id": "20/mathtools/xLeftrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 6
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 32.875,
+      "widthAfter": 32.875
+    },
+    {
+      "id": "20/mathtools/xhookleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.25
+      },
+      "offsetAfter": {
+        "upper": 2.25
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xhookleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": 2.75
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": 2.25,
+        "lower": 3.25
+      },
+      "offsetAfter": {
+        "upper": 2.25,
+        "lower": 3.25
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xhookleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3
+      },
+      "after": {
+        "upper": null,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": 2.25
+      },
+      "offsetAfter": {
+        "lower": 2.25
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/mathtools/xhookrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2.125
+      },
+      "offsetAfter": {
+        "upper": -2.125
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xhookrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": 2.75
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": -2.25,
+        "lower": -1.125
+      },
+      "offsetAfter": {
+        "upper": -2.25,
+        "lower": -1.25
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xhookrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3
+      },
+      "after": {
+        "upper": null,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": -2.25
+      },
+      "offsetAfter": {
+        "lower": -2.25
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/mathtools/xmapsto/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.25
+      },
+      "offsetAfter": {
+        "upper": 0.25
+      },
+      "widthBefore": 29.59375,
+      "widthAfter": 29.59375
+    },
+    {
+      "id": "20/mathtools/xmapsto/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.25,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "offsetAfter": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "widthBefore": 29.59375,
+      "widthAfter": 29.59375
+    },
+    {
+      "id": "20/mathtools/xmapsto/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 29.328125,
+      "widthAfter": 29.328125
+    },
+    {
+      "id": "20/mathtools/xrightharpoondown/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2
+      },
+      "offsetAfter": {
+        "upper": -2.25
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xrightharpoondown/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.25,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": 2.75
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": -2.375,
+        "lower": -1.25
+      },
+      "offsetAfter": {
+        "upper": -2.375,
+        "lower": -1.375
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xrightharpoondown/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": -2.125
+      },
+      "offsetAfter": {
+        "lower": -2.125
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/mathtools/xleftharpoondown/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.5
+      },
+      "offsetAfter": {
+        "upper": 2.125
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xleftharpoondown/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.25,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": 2.75
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": 2.125,
+        "lower": 3.125
+      },
+      "offsetAfter": {
+        "upper": 2.125,
+        "lower": 3.125
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xleftharpoondown/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": 2.375
+      },
+      "offsetAfter": {
+        "lower": 2.375
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/mathtools/xrightleftharpoons/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.25
+      },
+      "offsetAfter": {
+        "upper": 0.25
+      },
+      "widthBefore": 29.59375,
+      "widthAfter": 29.59375
+    },
+    {
+      "id": "20/mathtools/xrightleftharpoons/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "offsetAfter": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "widthBefore": 29.59375,
+      "widthAfter": 29.59375
+    },
+    {
+      "id": "20/mathtools/xrightleftharpoons/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 29.328125,
+      "widthAfter": 29.328125
+    },
+    {
+      "id": "20/mathtools/xrightharpoonup/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 4,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2.25
+      },
+      "offsetAfter": {
+        "upper": -2.25
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xrightharpoonup/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 5.75
+      },
+      "offsetBefore": {
+        "upper": -2.375,
+        "lower": -1.25
+      },
+      "offsetAfter": {
+        "upper": -2.375,
+        "lower": -1.375
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xrightharpoonup/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 9.25
+      },
+      "offsetBefore": {
+        "lower": -2.125
+      },
+      "offsetAfter": {
+        "lower": -2.125
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/mathtools/xleftharpoonup/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 4,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.125
+      },
+      "offsetAfter": {
+        "upper": 2.125
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xleftharpoonup/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 5.75
+      },
+      "offsetBefore": {
+        "upper": 2.125,
+        "lower": 3.125
+      },
+      "offsetAfter": {
+        "upper": 2.125,
+        "lower": 3.125
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/mathtools/xleftharpoonup/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 9.25
+      },
+      "offsetBefore": {
+        "lower": 2.375
+      },
+      "offsetAfter": {
+        "lower": 2.375
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/mathtools/xleftrightharpoons/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.25
+      },
+      "offsetAfter": {
+        "upper": 0.25
+      },
+      "widthBefore": 29.59375,
+      "widthAfter": 29.59375
+    },
+    {
+      "id": "20/mathtools/xleftrightharpoons/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "offsetAfter": {
+        "upper": 0.25,
+        "lower": 1.25
+      },
+      "widthBefore": 29.59375,
+      "widthAfter": 29.59375
+    },
+    {
+      "id": "20/mathtools/xleftrightharpoons/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 29.328125,
+      "widthAfter": 29.328125
+    },
+    {
+      "id": "20/mathtools/xlongrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 4,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2
+      },
+      "offsetAfter": {
+        "upper": -2
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xlongrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": -2.125,
+        "lower": -1.125
+      },
+      "offsetAfter": {
+        "upper": -2.125,
+        "lower": -1
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xlongrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": -2
+      },
+      "offsetAfter": {
+        "lower": -2
+      },
+      "widthBefore": 28.453125,
+      "widthAfter": 28.453125
+    },
+    {
+      "id": "20/mathtools/xlongleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 4,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.375
+      },
+      "offsetAfter": {
+        "upper": 2.375
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xlongleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": 2.375,
+        "lower": 3.375
+      },
+      "offsetAfter": {
+        "upper": 2.375,
+        "lower": 3.375
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xlongleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": 2.5
+      },
+      "offsetAfter": {
+        "lower": 2.5
+      },
+      "widthBefore": 28.453125,
+      "widthAfter": 28.453125
+    },
+    {
+      "id": "20/mathtools/xLongrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2
+      },
+      "offsetAfter": {
+        "upper": -2
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xLongrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": 3.5
+      },
+      "offsetBefore": {
+        "upper": -2.125,
+        "lower": -1.125
+      },
+      "offsetAfter": {
+        "upper": -2.125,
+        "lower": -1
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xLongrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 6
+      },
+      "offsetBefore": {
+        "lower": -2
+      },
+      "offsetAfter": {
+        "lower": -2
+      },
+      "widthBefore": 28.453125,
+      "widthAfter": 28.453125
+    },
+    {
+      "id": "20/mathtools/xLongleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -0.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.375
+      },
+      "offsetAfter": {
+        "upper": 2.375
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xLongleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": 3.5
+      },
+      "offsetBefore": {
+        "upper": 2.375,
+        "lower": 3.375
+      },
+      "offsetAfter": {
+        "upper": 2.375,
+        "lower": 3.375
+      },
+      "widthBefore": 28.71875,
+      "widthAfter": 28.71875
+    },
+    {
+      "id": "20/mathtools/xLongleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 6
+      },
+      "offsetBefore": {
+        "lower": 2.5
+      },
+      "offsetAfter": {
+        "lower": 2.5
+      },
+      "widthBefore": 28.453125,
+      "widthAfter": 28.453125
+    },
+    {
+      "id": "20/extpfeil/xtwoheadrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.625
+      },
+      "offsetAfter": {
+        "upper": -1.625
+      },
+      "widthBefore": 36.71875,
+      "widthAfter": 36.71875
+    },
+    {
+      "id": "20/extpfeil/xtwoheadrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.25,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 2.25,
+        "lower": 5.75
+      },
+      "offsetBefore": {
+        "upper": -1.625,
+        "lower": -0.625
+      },
+      "offsetAfter": {
+        "upper": -1.625,
+        "lower": -0.625
+      },
+      "widthBefore": 36.71875,
+      "widthAfter": 36.71875
+    },
+    {
+      "id": "20/extpfeil/xtwoheadrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.25
+      },
+      "offsetBefore": {
+        "lower": -1.5
+      },
+      "offsetAfter": {
+        "lower": -1.5
+      },
+      "widthBefore": 36.453125,
+      "widthAfter": 36.453125
+    },
+    {
+      "id": "20/extpfeil/xtwoheadleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 1.875
+      },
+      "offsetAfter": {
+        "upper": 1.875
+      },
+      "widthBefore": 38.484375,
+      "widthAfter": 38.484375
+    },
+    {
+      "id": "20/extpfeil/xtwoheadleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.25,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 2.25,
+        "lower": 5.75
+      },
+      "offsetBefore": {
+        "upper": 2,
+        "lower": 2.875
+      },
+      "offsetAfter": {
+        "upper": 2,
+        "lower": 2.875
+      },
+      "widthBefore": 38.484375,
+      "widthAfter": 38.484375
+    },
+    {
+      "id": "20/extpfeil/xtwoheadleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.25
+      },
+      "offsetBefore": {
+        "lower": 1.875
+      },
+      "offsetAfter": {
+        "lower": 1.875
+      },
+      "widthBefore": 38.21875,
+      "widthAfter": 38.21875
+    },
+    {
+      "id": "20/extpfeil/xmapsto/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -0.5
+      },
+      "offsetAfter": {
+        "upper": -0.5
+      },
+      "widthBefore": 23.359375,
+      "widthAfter": 23.359375
+    },
+    {
+      "id": "20/extpfeil/xmapsto/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.25,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 1.75
+      },
+      "offsetBefore": {
+        "upper": -0.375,
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "upper": -0.375,
+        "lower": 0.5
+      },
+      "widthBefore": 23.359375,
+      "widthAfter": 23.359375
+    },
+    {
+      "id": "20/extpfeil/xmapsto/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "lower": -0.5
+      },
+      "offsetAfter": {
+        "lower": -0.5
+      },
+      "widthBefore": 23.09375,
+      "widthAfter": 23.09375
+    },
+    {
+      "id": "20/extpfeil/xlongequal/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 4.75,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.75
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 24.265625,
+      "widthAfter": 24.265625
+    },
+    {
+      "id": "20/extpfeil/xlongequal/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": 4,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 3.75,
+        "lower": 6.75
+      },
+      "offsetBefore": {
+        "upper": 0.375,
+        "lower": 1.375
+      },
+      "offsetAfter": {
+        "upper": 0.375,
+        "lower": 1.5
+      },
+      "widthBefore": 24.265625,
+      "widthAfter": 24.265625
+    },
+    {
+      "id": "20/extpfeil/xlongequal/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3
+      },
+      "after": {
+        "upper": null,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 9.25
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 24,
+      "widthAfter": 24
+    },
+    {
+      "id": "20/extpfeil/xtofrom/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.125
+      },
+      "offsetAfter": {
+        "upper": 0.125
+      },
+      "widthBefore": 33.140625,
+      "widthAfter": 33.140625
+    },
+    {
+      "id": "20/extpfeil/xtofrom/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.25,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": -0.75,
+        "lower": 2
+      },
+      "offsetBefore": {
+        "upper": 0.125,
+        "lower": 1.125
+      },
+      "offsetAfter": {
+        "upper": 0.125,
+        "lower": 1.125
+      },
+      "widthBefore": 33.140625,
+      "widthAfter": 33.140625
+    },
+    {
+      "id": "20/extpfeil/xtofrom/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 2.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 2.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 4.5
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 32.875,
+      "widthAfter": 32.875
+    },
+    {
+      "id": "20/reported",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 4,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2.25
+      },
+      "offsetAfter": {
+        "upper": -2.25
+      },
+      "widthBefore": 25.140625,
+      "widthAfter": 25.140625
+    },
+    {
+      "id": "20/reported",
+      "stack": 1,
+      "before": {
+        "upper": 2.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 3.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2.125
+      },
+      "offsetAfter": {
+        "upper": -2.125
+      },
+      "widthBefore": 24.875,
+      "widthAfter": 24.875
+    },
+    {
+      "id": "20/reported-serif",
+      "stack": 0,
+      "before": {
+        "upper": -1.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 2.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1
+      },
+      "offsetAfter": {
+        "upper": -1
+      },
+      "widthBefore": 19.984375,
+      "widthAfter": 19.984375
+    },
+    {
+      "id": "20/reported-serif",
+      "stack": 1,
+      "before": {
+        "upper": 2.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 2.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2
+      },
+      "offsetAfter": {
+        "upper": -2
+      },
+      "widthBefore": 20.03125,
+      "widthAfter": 20.03125
+    },
+    {
+      "id": "20/fraction",
+      "stack": 0,
+      "before": {
+        "upper": 2,
+        "lower": 2
+      },
+      "after": {
+        "upper": 2,
+        "lower": 2
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": -2.25,
+        "lower": -2.25
+      },
+      "offsetAfter": {
+        "upper": -2.25,
+        "lower": -2.25
+      },
+      "widthBefore": 34.515625,
+      "widthAfter": 34.515625
+    },
+    {
+      "id": "20/script",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": 1.75
+      },
+      "after": {
+        "upper": 2.75,
+        "lower": 1.75
+      },
+      "chtml": {
+        "upper": 0.5,
+        "lower": 3
+      },
+      "offsetBefore": {
+        "upper": -1.875,
+        "lower": -1.875
+      },
+      "offsetAfter": {
+        "upper": -1.875,
+        "lower": -1.875
+      },
+      "widthBefore": 20.421875,
+      "widthAfter": 20.421875
+    },
+    {
+      "id": "20/custom",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": 4.25,
+        "lower": 3
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "upper": -2.25,
+        "lower": -2.25
+      },
+      "offsetAfter": {
+        "upper": -2.25,
+        "lower": -2.25
+      },
+      "widthBefore": 21.59375,
+      "widthAfter": 21.59375
+    },
+    {
+      "id": "32/ams/xrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.625
+      },
+      "offsetAfter": {
+        "upper": -3.625
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/ams/xrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": -3.625,
+        "lower": -2
+      },
+      "offsetAfter": {
+        "upper": -3.625,
+        "lower": -2
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/ams/xrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": -3.625
+      },
+      "offsetAfter": {
+        "lower": -3.625
+      },
+      "widthBefore": 39.796875,
+      "widthAfter": 39.796875
+    },
+    {
+      "id": "32/ams/xleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 3.5
+      },
+      "offsetAfter": {
+        "upper": 3.5
+      },
+      "widthBefore": 40.21875,
+      "widthAfter": 40.21875
+    },
+    {
+      "id": "32/ams/xleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": 3.5,
+        "lower": 5.125
+      },
+      "offsetAfter": {
+        "upper": 3.5,
+        "lower": 5.125
+      },
+      "widthBefore": 40.21875,
+      "widthAfter": 40.21875
+    },
+    {
+      "id": "32/ams/xleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": 3.5
+      },
+      "offsetAfter": {
+        "lower": 3.5
+      },
+      "widthBefore": 39.78125,
+      "widthAfter": 39.78125
+    },
+    {
+      "id": "32/mathtools/xleftrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 2.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.5
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 47.34375,
+      "widthAfter": 47.34375
+    },
+    {
+      "id": "32/mathtools/xleftrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": 2.25,
+        "lower": 5.75
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 2.125
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 2.125
+      },
+      "widthBefore": 47.34375,
+      "widthAfter": 47.34375
+    },
+    {
+      "id": "32/mathtools/xleftrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 10.5
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 46.90625,
+      "widthAfter": 46.90625
+    },
+    {
+      "id": "32/mathtools/xLeftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 6,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 4
+      },
+      "offsetAfter": {
+        "upper": 4
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xLeftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 4.25
+      },
+      "after": {
+        "upper": 5,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "upper": 4,
+        "lower": 5.5
+      },
+      "offsetAfter": {
+        "upper": 4,
+        "lower": 5.375
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xLeftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 9
+      },
+      "offsetBefore": {
+        "lower": 4
+      },
+      "offsetAfter": {
+        "lower": 4
+      },
+      "widthBefore": 45.5,
+      "widthAfter": 45.5
+    },
+    {
+      "id": "32/mathtools/xRightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 6,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.125
+      },
+      "offsetAfter": {
+        "upper": -3.125
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xRightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 4.25
+      },
+      "after": {
+        "upper": 5,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "upper": -3.125,
+        "lower": -1.625
+      },
+      "offsetAfter": {
+        "upper": -3.125,
+        "lower": -1.625
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xRightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 9
+      },
+      "offsetBefore": {
+        "lower": -3.125
+      },
+      "offsetAfter": {
+        "lower": -3.125
+      },
+      "widthBefore": 45.5,
+      "widthAfter": 45.5
+    },
+    {
+      "id": "32/mathtools/xLeftrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 6,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.5
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 53.03125,
+      "widthAfter": 53.03125
+    },
+    {
+      "id": "32/mathtools/xLeftrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 4.25
+      },
+      "after": {
+        "upper": 5,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 2
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 1.875
+      },
+      "widthBefore": 53.03125,
+      "widthAfter": 53.03125
+    },
+    {
+      "id": "32/mathtools/xLeftrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 10
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 52.59375,
+      "widthAfter": 52.59375
+    },
+    {
+      "id": "32/mathtools/xhookleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -2,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 3.625
+      },
+      "offsetAfter": {
+        "upper": 3.625
+      },
+      "widthBefore": 40.21875,
+      "widthAfter": 40.21875
+    },
+    {
+      "id": "32/mathtools/xhookleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": 4.75,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": 3.625,
+        "lower": 5.125
+      },
+      "offsetAfter": {
+        "upper": 3.625,
+        "lower": 5.125
+      },
+      "widthBefore": 40.21875,
+      "widthAfter": 40.21875
+    },
+    {
+      "id": "32/mathtools/xhookleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": 3.625
+      },
+      "offsetAfter": {
+        "lower": 3.625
+      },
+      "widthBefore": 39.78125,
+      "widthAfter": 39.78125
+    },
+    {
+      "id": "32/mathtools/xhookrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -2,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.5
+      },
+      "offsetAfter": {
+        "upper": -3.5
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/mathtools/xhookrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.5,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": 4.75,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": 0,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": -3.5,
+        "lower": -1.875
+      },
+      "offsetAfter": {
+        "upper": -3.5,
+        "lower": -1.875
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/mathtools/xhookrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": -3.5
+      },
+      "offsetAfter": {
+        "lower": -3.5
+      },
+      "widthBefore": 39.796875,
+      "widthAfter": 39.796875
+    },
+    {
+      "id": "32/mathtools/xmapsto/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.5
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 47.34375,
+      "widthAfter": 47.34375
+    },
+    {
+      "id": "32/mathtools/xmapsto/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 2.125
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 2.125
+      },
+      "widthBefore": 47.34375,
+      "widthAfter": 47.34375
+    },
+    {
+      "id": "32/mathtools/xmapsto/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 46.90625,
+      "widthAfter": 46.90625
+    },
+    {
+      "id": "32/mathtools/xrightharpoondown/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 6.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2.75
+      },
+      "offsetAfter": {
+        "upper": -3.625
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/mathtools/xrightharpoondown/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.25,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": 5.5,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": -3.625,
+        "lower": -2
+      },
+      "offsetAfter": {
+        "upper": -3.625,
+        "lower": -2
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/mathtools/xrightharpoondown/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": -3.625
+      },
+      "offsetAfter": {
+        "lower": -3.625
+      },
+      "widthBefore": 39.796875,
+      "widthAfter": 39.796875
+    },
+    {
+      "id": "32/mathtools/xleftharpoondown/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 6.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 4.25
+      },
+      "offsetAfter": {
+        "upper": 3.5
+      },
+      "widthBefore": 40.21875,
+      "widthAfter": 40.21875
+    },
+    {
+      "id": "32/mathtools/xleftharpoondown/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.25,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": 5.5,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": -0.5,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": 3.5,
+        "lower": 5
+      },
+      "offsetAfter": {
+        "upper": 3.5,
+        "lower": 5
+      },
+      "widthBefore": 40.21875,
+      "widthAfter": 40.21875
+    },
+    {
+      "id": "32/mathtools/xleftharpoondown/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": 3.5
+      },
+      "offsetAfter": {
+        "lower": 3.5
+      },
+      "widthBefore": 39.78125,
+      "widthAfter": 39.78125
+    },
+    {
+      "id": "32/mathtools/xrightleftharpoons/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 0.75,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.5
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 47.34375,
+      "widthAfter": 47.34375
+    },
+    {
+      "id": "32/mathtools/xrightleftharpoons/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.25,
+        "lower": 3.75
+      },
+      "after": {
+        "upper": 5.5,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 2.5
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 2.125
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 2.125
+      },
+      "widthBefore": 47.34375,
+      "widthAfter": 47.34375
+    },
+    {
+      "id": "32/mathtools/xrightleftharpoons/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.25
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 46.90625,
+      "widthAfter": 46.90625
+    },
+    {
+      "id": "32/mathtools/xrightharpoonup/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.625
+      },
+      "offsetAfter": {
+        "upper": -3.625
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/mathtools/xrightharpoonup/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3,
+        "lower": 3.75
+      },
+      "after": {
+        "upper": 5.25,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 10.5
+      },
+      "offsetBefore": {
+        "upper": -3.625,
+        "lower": -2
+      },
+      "offsetAfter": {
+        "upper": -3.625,
+        "lower": -2
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/mathtools/xrightharpoonup/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 4.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 16.25
+      },
+      "offsetBefore": {
+        "lower": -3.625
+      },
+      "offsetAfter": {
+        "lower": -3.625
+      },
+      "widthBefore": 39.796875,
+      "widthAfter": 39.796875
+    },
+    {
+      "id": "32/mathtools/xleftharpoonup/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 3.5
+      },
+      "offsetAfter": {
+        "upper": 3.5
+      },
+      "widthBefore": 40.21875,
+      "widthAfter": 40.21875
+    },
+    {
+      "id": "32/mathtools/xleftharpoonup/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3,
+        "lower": 3.75
+      },
+      "after": {
+        "upper": 5.25,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 10.5
+      },
+      "offsetBefore": {
+        "upper": 3.5,
+        "lower": 5
+      },
+      "offsetAfter": {
+        "upper": 3.5,
+        "lower": 5
+      },
+      "widthBefore": 40.21875,
+      "widthAfter": 40.21875
+    },
+    {
+      "id": "32/mathtools/xleftharpoonup/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 4.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 16.25
+      },
+      "offsetBefore": {
+        "lower": 3.5
+      },
+      "offsetAfter": {
+        "lower": 3.5
+      },
+      "widthBefore": 39.78125,
+      "widthAfter": 39.78125
+    },
+    {
+      "id": "32/mathtools/xleftrightharpoons/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.5
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 47.34375,
+      "widthAfter": 47.34375
+    },
+    {
+      "id": "32/mathtools/xleftrightharpoons/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.25,
+        "lower": 3.75
+      },
+      "after": {
+        "upper": 5.5,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 2.5
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 2.125
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 2.125
+      },
+      "widthBefore": 47.34375,
+      "widthAfter": 47.34375
+    },
+    {
+      "id": "32/mathtools/xleftrightharpoons/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.25
+      },
+      "offsetBefore": {
+        "lower": 0.375
+      },
+      "offsetAfter": {
+        "lower": 0.375
+      },
+      "widthBefore": 46.90625,
+      "widthAfter": 46.90625
+    },
+    {
+      "id": "32/mathtools/xlongrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.125
+      },
+      "offsetAfter": {
+        "upper": -3.125
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xlongrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": -3.125,
+        "lower": -1.5
+      },
+      "offsetAfter": {
+        "upper": -3.125,
+        "lower": -1.625
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xlongrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": -3.125
+      },
+      "offsetAfter": {
+        "lower": -3.125
+      },
+      "widthBefore": 45.5,
+      "widthAfter": 45.5
+    },
+    {
+      "id": "32/mathtools/xlongleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 4
+      },
+      "offsetAfter": {
+        "upper": 4
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xlongleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": 4,
+        "lower": 5.5
+      },
+      "offsetAfter": {
+        "upper": 4,
+        "lower": 5.5
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xlongleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "after": {
+        "upper": null,
+        "lower": 3.5
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": 4
+      },
+      "offsetAfter": {
+        "lower": 4
+      },
+      "widthBefore": 45.5,
+      "widthAfter": 45.5
+    },
+    {
+      "id": "32/mathtools/xLongrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 6,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.125
+      },
+      "offsetAfter": {
+        "upper": -3.125
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xLongrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 4.25
+      },
+      "after": {
+        "upper": 5,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "upper": -3.125,
+        "lower": -1.625
+      },
+      "offsetAfter": {
+        "upper": -3.125,
+        "lower": -1.625
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xLongrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 9
+      },
+      "offsetBefore": {
+        "lower": -3.125
+      },
+      "offsetAfter": {
+        "lower": -3.125
+      },
+      "widthBefore": 45.5,
+      "widthAfter": 45.5
+    },
+    {
+      "id": "32/mathtools/xLongleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.75,
+        "lower": null
+      },
+      "after": {
+        "upper": 6,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 4
+      },
+      "offsetAfter": {
+        "upper": 4
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xLongleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 2.75,
+        "lower": 4.25
+      },
+      "after": {
+        "upper": 5,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": 5.25
+      },
+      "offsetBefore": {
+        "upper": 4,
+        "lower": 5.5
+      },
+      "offsetAfter": {
+        "upper": 4,
+        "lower": 5.375
+      },
+      "widthBefore": 45.9375,
+      "widthAfter": 45.9375
+    },
+    {
+      "id": "32/mathtools/xLongleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "after": {
+        "upper": null,
+        "lower": 4.75
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 9
+      },
+      "offsetBefore": {
+        "lower": 4
+      },
+      "offsetAfter": {
+        "lower": 4
+      },
+      "widthBefore": 45.5,
+      "widthAfter": 45.5
+    },
+    {
+      "id": "32/extpfeil/xtwoheadrightarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 5.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -2.375
+      },
+      "offsetAfter": {
+        "upper": -2.375
+      },
+      "widthBefore": 58.734375,
+      "widthAfter": 58.734375
+    },
+    {
+      "id": "32/extpfeil/xtwoheadrightarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": 5.25,
+        "lower": 8.75
+      },
+      "offsetBefore": {
+        "upper": -2.375,
+        "lower": -0.875
+      },
+      "offsetAfter": {
+        "upper": -2.375,
+        "lower": -0.875
+      },
+      "widthBefore": 58.734375,
+      "widthAfter": 58.734375
+    },
+    {
+      "id": "32/extpfeil/xtwoheadrightarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 13.5
+      },
+      "offsetBefore": {
+        "lower": -2.375
+      },
+      "offsetAfter": {
+        "lower": -2.375
+      },
+      "widthBefore": 58.296875,
+      "widthAfter": 58.296875
+    },
+    {
+      "id": "32/extpfeil/xtwoheadleftarrow/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 5.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 3.375
+      },
+      "offsetAfter": {
+        "upper": 3.375
+      },
+      "widthBefore": 61.578125,
+      "widthAfter": 61.578125
+    },
+    {
+      "id": "32/extpfeil/xtwoheadleftarrow/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": 5.25,
+        "lower": 8.75
+      },
+      "offsetBefore": {
+        "upper": 3.25,
+        "lower": 5
+      },
+      "offsetAfter": {
+        "upper": 3.25,
+        "lower": 4.875
+      },
+      "widthBefore": 61.578125,
+      "widthAfter": 61.578125
+    },
+    {
+      "id": "32/extpfeil/xtwoheadleftarrow/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 13.5
+      },
+      "offsetBefore": {
+        "lower": 3.25
+      },
+      "offsetAfter": {
+        "lower": 3.25
+      },
+      "widthBefore": 61.140625,
+      "widthAfter": 61.140625
+    },
+    {
+      "id": "32/extpfeil/xmapsto/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -0.75
+      },
+      "offsetAfter": {
+        "upper": -0.75
+      },
+      "widthBefore": 37.390625,
+      "widthAfter": 37.390625
+    },
+    {
+      "id": "32/extpfeil/xmapsto/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 2.75
+      },
+      "offsetBefore": {
+        "upper": -0.75,
+        "lower": 0.875
+      },
+      "offsetAfter": {
+        "upper": -0.75,
+        "lower": 0.875
+      },
+      "widthBefore": 37.390625,
+      "widthAfter": 37.390625
+    },
+    {
+      "id": "32/extpfeil/xmapsto/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "lower": -0.75
+      },
+      "offsetAfter": {
+        "lower": -0.75
+      },
+      "widthBefore": 36.953125,
+      "widthAfter": 36.953125
+    },
+    {
+      "id": "32/extpfeil/xlongequal/over-f",
+      "stack": 0,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": 6.5,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 2.125
+      },
+      "offsetAfter": {
+        "upper": 2.125
+      },
+      "widthBefore": 38.828125,
+      "widthAfter": 38.828125
+    },
+    {
+      "id": "32/extpfeil/xlongequal/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.5,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": 6.5,
+        "lower": 10.25
+      },
+      "offsetBefore": {
+        "upper": 2.125,
+        "lower": 3.75
+      },
+      "offsetAfter": {
+        "upper": 2.125,
+        "lower": 3.625
+      },
+      "widthBefore": 38.828125,
+      "widthAfter": 38.828125
+    },
+    {
+      "id": "32/extpfeil/xlongequal/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 15
+      },
+      "offsetBefore": {
+        "lower": 1.875
+      },
+      "offsetAfter": {
+        "lower": 1.875
+      },
+      "widthBefore": 38.390625,
+      "widthAfter": 38.390625
+    },
+    {
+      "id": "32/extpfeil/xtofrom/over-f",
+      "stack": 0,
+      "before": {
+        "upper": -1.25,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": 0.5
+      },
+      "offsetAfter": {
+        "upper": 0.5
+      },
+      "widthBefore": 53.03125,
+      "widthAfter": 53.03125
+    },
+    {
+      "id": "32/extpfeil/xtofrom/both-gf",
+      "stack": 0,
+      "before": {
+        "upper": 3.25,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.5,
+        "lower": 3.75
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 3
+      },
+      "offsetBefore": {
+        "upper": 0.5,
+        "lower": 2
+      },
+      "offsetAfter": {
+        "upper": 0.5,
+        "lower": 2
+      },
+      "widthBefore": 53.03125,
+      "widthAfter": 53.03125
+    },
+    {
+      "id": "32/extpfeil/xtofrom/under-g",
+      "stack": 0,
+      "before": {
+        "upper": null,
+        "lower": 4
+      },
+      "after": {
+        "upper": null,
+        "lower": 4
+      },
+      "chtml": {
+        "upper": null,
+        "lower": 8.75
+      },
+      "offsetBefore": {
+        "lower": 0.5
+      },
+      "offsetAfter": {
+        "lower": 0.5
+      },
+      "widthBefore": 52.59375,
+      "widthAfter": 52.59375
+    },
+    {
+      "id": "32/reported",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.625
+      },
+      "offsetAfter": {
+        "upper": -3.625
+      },
+      "widthBefore": 40.234375,
+      "widthAfter": 40.234375
+    },
+    {
+      "id": "32/reported",
+      "stack": 1,
+      "before": {
+        "upper": 3.5,
+        "lower": null
+      },
+      "after": {
+        "upper": 5.25,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.5
+      },
+      "offsetAfter": {
+        "upper": -3.5
+      },
+      "widthBefore": 39.796875,
+      "widthAfter": 39.796875
+    },
+    {
+      "id": "32/reported-serif",
+      "stack": 0,
+      "before": {
+        "upper": -6,
+        "lower": null
+      },
+      "after": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -1.625
+      },
+      "offsetAfter": {
+        "upper": -1.625
+      },
+      "widthBefore": 32,
+      "widthAfter": 32
+    },
+    {
+      "id": "32/reported-serif",
+      "stack": 1,
+      "before": {
+        "upper": 0,
+        "lower": null
+      },
+      "after": {
+        "upper": 1.5,
+        "lower": null
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": null
+      },
+      "offsetBefore": {
+        "upper": -3.25
+      },
+      "offsetAfter": {
+        "upper": -3.25
+      },
+      "widthBefore": 32.078125,
+      "widthAfter": 32.078125
+    },
+    {
+      "id": "32/fraction",
+      "stack": 0,
+      "before": {
+        "upper": 3.25,
+        "lower": 2.5
+      },
+      "after": {
+        "upper": 3.25,
+        "lower": 2.5
+      },
+      "chtml": {
+        "upper": 1.5,
+        "lower": 4.5
+      },
+      "offsetBefore": {
+        "upper": -3,
+        "lower": -3
+      },
+      "offsetAfter": {
+        "upper": -3,
+        "lower": -3
+      },
+      "widthBefore": 54.0625,
+      "widthAfter": 54.0625
+    },
+    {
+      "id": "32/script",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": 3.25
+      },
+      "after": {
+        "upper": 5,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": -0.75,
+        "lower": 6.25
+      },
+      "offsetBefore": {
+        "upper": -2.875,
+        "lower": -2.875
+      },
+      "offsetAfter": {
+        "upper": -2.875,
+        "lower": -2.875
+      },
+      "widthBefore": 32.6875,
+      "widthAfter": 32.6875
+    },
+    {
+      "id": "32/custom",
+      "stack": 0,
+      "before": {
+        "upper": -1,
+        "lower": 4
+      },
+      "after": {
+        "upper": 5.75,
+        "lower": 3.25
+      },
+      "chtml": {
+        "upper": -0.25,
+        "lower": 8.5
+      },
+      "offsetBefore": {
+        "upper": -3.375,
+        "lower": -3.375
+      },
+      "offsetAfter": {
+        "upper": -3.375,
+        "lower": -3.375
+      },
+      "widthBefore": 34.546875,
+      "widthAfter": 34.546875
+    }
+  ]
+}

@@ -150,6 +150,11 @@ test('x-arrow lowering preserves raw MathJax, empty arrows and user mpadded node
     const plain=frozen(raw(tex,options));
     assert.strictEqual(mathMLForOutput(plain),plain,tex);
   }
+  // Empty extpfeil labels were already lowered to empty rows before 0.1.2.
+  for(const tex of [String.raw`\xtofrom{}`,String.raw`\xtwoheadrightarrow{}`]){
+    const empty=mathMLForOutput(raw(tex,{packages:['base','extpfeil']}));
+    assert.equal(nodes(empty).filter(n=>n.kind==='mspace').length,0,tex);
+  }
   const literal=group('math',[group('mpadded',[token('label'),group('mspace',[],{depth:'.2em'})],{width:'+0.833em',lspace:'0.278em',voffset:'-.2em',height:'-.2em'})]);
   assert.strictEqual(mathMLForOutput(frozen(literal)),literal);
 });

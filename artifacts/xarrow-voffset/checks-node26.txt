@@ -1,0 +1,74 @@
+v26.12.1
+11.18.0
+
+$ pnpm install --frozen-lockfile --store-dir "$PWD/node_modules/.pnpm-store"
+exit=0
+✓ Lockfile passes supply-chain policies (verified 2d ago)
+Lockfile is up to date, resolution step is skipped
+Already up to date
+
+Done in 512ms using pnpm v11.18.0
+
+$ node scripts/build.mjs
+exit=0
+Built shared ESM runtime and TypeScript declarations
+
+$ node --test test/*.test.mjs test/packages/*.test.mjs conformance/harness.test.mjs scripts/ci-checks.test.mjs
+exit=0
+✔ React SSR emits no invalid property or empty href warnings (21.007545ms)
+✔ unterminated superscript reports the MathJax error (13.167839ms)
+✔ SSR structurally equals string output for all 2635 executable fixtures (1379.627881ms)
+ℹ {"groups":{"action":3,"ams":158,"amscd":13,"base":790,"bbm":9,"bboldx":28,"bbox":6,"begingroup":19,"boldsymbol":6,"braket":30,"bussproofs":26,"cancel":8,"cases":5,"centernot":2,"color":29,"colortbl":14,"colorv2":4,"configmacros":10,"dsfont":2,"empheq":44,"enclose":6,"extpfeil":6,"gensymb":5,"html":16,"mathtools":196,"mhchem":112,"newcommand":58,"noerrors":56,"noundefined":2,"physics":628,"setoptions":10,"tag":75,"tagformat":8,"tex":2,"texhtml":6,"textcomp":118,"textmacros":48,"unicode":21,"units":10,"upgreek":41,"verb":5},"unsupported":0}
+✔ SSR comparison normalizes only documented React serialization differences (0.459768ms)
+✔ generated compact trie resolves every definition from source spans without prefix collisions (33.024572ms)
+ℹ tests 2504
+ℹ suites 0
+ℹ pass 2498
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 10402.743259
+
+$ node --test test/browser/*.test.mjs
+exit=0
+screen_run: 15px; 77 native formulas; measured separate arrow/upper/lower ink against MathJax 3.2.2 CHTML; 0 failures
+✔ Chromium native x-arrow ink clears upper/lower annotations at 15px (3872.881849ms)
+screen_run: 20px; 77 native formulas; measured separate arrow/upper/lower ink against MathJax 3.2.2 CHTML; 0 failures
+✔ Chromium native x-arrow ink clears upper/lower annotations at 20px (3876.505597ms)
+screen_run: 32px; 77 native formulas; measured separate arrow/upper/lower ink against MathJax 3.2.2 CHTML; 0 failures
+✔ Chromium native x-arrow ink clears upper/lower annotations at 32px (4110.127175ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15265.280013
+
+$ node conformance/runner.mjs --subject bench/flashmath/adapter.mjs --output artifacts/xarrow-voffset/conformance-node26.json --fresh
+exit=1
+setoptions | 10 | 0 | 2 | 12 | 83.33%
+tagformat | 8 | 0 | 0 | 8 | 100.00%
+stackMacros | 0 | 0 | 2 | 2 | 0.00%
+matchBrackets | 0 | 0 | 1 | 1 | 0.00%
+mml | 0 | 0 | 1 | 1 | 0.00%
+(uncaptured) | 0 | 0 | 1 | 1 | 0.00%
+texhtml | 6 | 0 | 0 | 6 | 100.00%
+textcomp | 118 | 0 | 0 | 118 | 100.00%
+unicode | 52 | 0 | 0 | 52 | 100.00%
+no-autoload | 0 | 0 | 1 | 1 | 0.00%
+upgreek | 41 | 0 | 0 | 41 | 100.00%
+verb | 5 | 0 | 0 | 5 | 100.00%
+
+classifications: {"typeset-component-pipeline":14,"custom-package-registration":26,"non-single-MathML-snapshot":7,"input-not-captured":1}
+
+$ node scripts/ci-conformance-gate.mjs artifacts/xarrow-voffset/conformance-node26.json
+exit=0
+Conformance gate PASS: {"matched":2635,"mismatch":0,"unsupported":48,"total":2683,"classifications":{"typeset-component-pipeline":14,"custom-package-registration":26,"non-single-MathML-snapshot":7,"input-not-captured":1}}
+
+$ node scripts/ci-pack-smoke.mjs
+exit=0
+{"coreImport":true,"reactImport":true,"reactSSR":true,"coreBytes":455,"reactBytes":455}
+Pack smoke PASS: {"tarball":"minamorl-flashmath-0.1.2.tgz","files":89,"unpackedBytes":500544}

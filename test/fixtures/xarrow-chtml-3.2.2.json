@@ -1,0 +1,1430 @@
+{
+  "source": "mathjax@3.2.2/es5/tex-chtml-full.js; mathtools + extpfeil; bundled TeX WOFF fonts loaded; matchFontHeight:false",
+  "longControls": {
+    "xlongrightarrow": "xrightarrow",
+    "xlongleftarrow": "xleftarrow",
+    "xLongrightarrow": "xRightarrow",
+    "xLongleftarrow": "xLeftarrow"
+  },
+  "command": "MATHJAX3_DIR=<unpacked mathjax@3.2.2> XARROW_ARTIFACT_DIR=<artifacts> XARROW_REFERENCE_FIXTURE=test/fixtures/xarrow-chtml-3.2.2.json node bench/native-render/xarrow-ink.mjs",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.36",
+    "revision": "@507c6ee3e2f3b2ca0e660547e5b9ea4820c67f4c",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.10"
+  },
+  "scale": 4,
+  "gaps": {
+    "15/ams/xrightarrow/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "15/ams/xrightarrow/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 1.25
+      }
+    ],
+    "15/ams/xrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/ams/xleftarrow/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "15/ams/xleftarrow/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 1.25
+      }
+    ],
+    "15/ams/xleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xleftrightarrow/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xleftrightarrow/both-gf": [
+      {
+        "upper": 0.75,
+        "lower": 3.25
+      }
+    ],
+    "15/mathtools/xleftrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 4.75
+      }
+    ],
+    "15/mathtools/xLeftarrow/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xLeftarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 3
+      }
+    ],
+    "15/mathtools/xLeftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 4.5
+      }
+    ],
+    "15/mathtools/xRightarrow/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xRightarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 3
+      }
+    ],
+    "15/mathtools/xRightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 4.5
+      }
+    ],
+    "15/mathtools/xLeftrightarrow/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xLeftrightarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 3
+      }
+    ],
+    "15/mathtools/xLeftrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 4.5
+      }
+    ],
+    "15/mathtools/xhookleftarrow/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xhookleftarrow/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xhookleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xhookrightarrow/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xhookrightarrow/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xhookrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xmapsto/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xmapsto/both-gf": [
+      {
+        "upper": -1.5,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xmapsto/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xrightharpoondown/over-f": [
+      {
+        "upper": 0.75,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xrightharpoondown/both-gf": [
+      {
+        "upper": -0.5,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xrightharpoondown/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xleftharpoondown/over-f": [
+      {
+        "upper": 0.75,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xleftharpoondown/both-gf": [
+      {
+        "upper": -0.5,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xleftharpoondown/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xrightleftharpoons/over-f": [
+      {
+        "upper": -0.75,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xrightleftharpoons/both-gf": [
+      {
+        "upper": 0.25,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xrightleftharpoons/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xrightharpoonup/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xrightharpoonup/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 4.75
+      }
+    ],
+    "15/mathtools/xrightharpoonup/under-g": [
+      {
+        "upper": null,
+        "lower": 7.25
+      }
+    ],
+    "15/mathtools/xleftharpoonup/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xleftharpoonup/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 4.75
+      }
+    ],
+    "15/mathtools/xleftharpoonup/under-g": [
+      {
+        "upper": null,
+        "lower": 7.25
+      }
+    ],
+    "15/mathtools/xleftrightharpoons/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xleftrightharpoons/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xleftrightharpoons/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xlongrightarrow/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xlongrightarrow/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xlongrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xlongleftarrow/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xlongleftarrow/both-gf": [
+      {
+        "upper": -1.25,
+        "lower": 1.25
+      }
+    ],
+    "15/mathtools/xlongleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/mathtools/xLongrightarrow/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xLongrightarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 3
+      }
+    ],
+    "15/mathtools/xLongrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 4.5
+      }
+    ],
+    "15/mathtools/xLongleftarrow/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/mathtools/xLongleftarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 3
+      }
+    ],
+    "15/mathtools/xLongleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 4.5
+      }
+    ],
+    "15/extpfeil/xtwoheadrightarrow/over-f": [
+      {
+        "upper": 1.5,
+        "lower": null
+      }
+    ],
+    "15/extpfeil/xtwoheadrightarrow/both-gf": [
+      {
+        "upper": 2.25,
+        "lower": 4.75
+      }
+    ],
+    "15/extpfeil/xtwoheadrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 6.25
+      }
+    ],
+    "15/extpfeil/xtwoheadleftarrow/over-f": [
+      {
+        "upper": 1.5,
+        "lower": null
+      }
+    ],
+    "15/extpfeil/xtwoheadleftarrow/both-gf": [
+      {
+        "upper": 2.25,
+        "lower": 4.75
+      }
+    ],
+    "15/extpfeil/xtwoheadleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 6.25
+      }
+    ],
+    "15/extpfeil/xmapsto/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/extpfeil/xmapsto/both-gf": [
+      {
+        "upper": -1.5,
+        "lower": 1.25
+      }
+    ],
+    "15/extpfeil/xmapsto/under-g": [
+      {
+        "upper": null,
+        "lower": 3.75
+      }
+    ],
+    "15/extpfeil/xlongequal/over-f": [
+      {
+        "upper": 2,
+        "lower": null
+      }
+    ],
+    "15/extpfeil/xlongequal/both-gf": [
+      {
+        "upper": 3,
+        "lower": 5.5
+      }
+    ],
+    "15/extpfeil/xlongequal/under-g": [
+      {
+        "upper": null,
+        "lower": 7
+      }
+    ],
+    "15/extpfeil/xtofrom/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/extpfeil/xtofrom/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.5
+      }
+    ],
+    "15/extpfeil/xtofrom/under-g": [
+      {
+        "upper": null,
+        "lower": 4
+      }
+    ],
+    "15/reported": [
+      {
+        "upper": 0,
+        "lower": null
+      },
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/reported-serif": [
+      {
+        "upper": 0,
+        "lower": null
+      },
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "15/fraction": [
+      {
+        "upper": 1,
+        "lower": 1.75
+      }
+    ],
+    "15/script": [
+      {
+        "upper": 0,
+        "lower": 2.5
+      }
+    ],
+    "15/custom": [
+      {
+        "upper": 0,
+        "lower": 3.75
+      }
+    ],
+    "20/ams/xrightarrow/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/ams/xrightarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/ams/xrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/ams/xleftarrow/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/ams/xleftarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/ams/xleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xleftrightarrow/over-f": [
+      {
+        "upper": 1.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xleftrightarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 3.75
+      }
+    ],
+    "20/mathtools/xleftrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 6.25
+      }
+    ],
+    "20/mathtools/xLeftarrow/over-f": [
+      {
+        "upper": 1.25,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xLeftarrow/both-gf": [
+      {
+        "upper": 0.25,
+        "lower": 3.5
+      }
+    ],
+    "20/mathtools/xLeftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 6
+      }
+    ],
+    "20/mathtools/xRightarrow/over-f": [
+      {
+        "upper": 1.25,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xRightarrow/both-gf": [
+      {
+        "upper": 0.25,
+        "lower": 3.5
+      }
+    ],
+    "20/mathtools/xRightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 6
+      }
+    ],
+    "20/mathtools/xLeftrightarrow/over-f": [
+      {
+        "upper": 1.25,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xLeftrightarrow/both-gf": [
+      {
+        "upper": 0.25,
+        "lower": 3.5
+      }
+    ],
+    "20/mathtools/xLeftrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 6
+      }
+    ],
+    "20/mathtools/xhookleftarrow/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xhookleftarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xhookleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xhookrightarrow/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xhookrightarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xhookrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xmapsto/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xmapsto/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xmapsto/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xrightharpoondown/over-f": [
+      {
+        "upper": 0.25,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xrightharpoondown/both-gf": [
+      {
+        "upper": 0.25,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xrightharpoondown/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xleftharpoondown/over-f": [
+      {
+        "upper": 0.25,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xleftharpoondown/both-gf": [
+      {
+        "upper": 0.25,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xleftharpoondown/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xrightleftharpoons/over-f": [
+      {
+        "upper": 0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xrightleftharpoons/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xrightleftharpoons/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xrightharpoonup/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xrightharpoonup/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 5.75
+      }
+    ],
+    "20/mathtools/xrightharpoonup/under-g": [
+      {
+        "upper": null,
+        "lower": 9.25
+      }
+    ],
+    "20/mathtools/xleftharpoonup/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xleftharpoonup/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 5.75
+      }
+    ],
+    "20/mathtools/xleftharpoonup/under-g": [
+      {
+        "upper": null,
+        "lower": 9.25
+      }
+    ],
+    "20/mathtools/xleftrightharpoons/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xleftrightharpoons/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xleftrightharpoons/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xlongrightarrow/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xlongrightarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xlongrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xlongleftarrow/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xlongleftarrow/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/mathtools/xlongleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/mathtools/xLongrightarrow/over-f": [
+      {
+        "upper": 1.25,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xLongrightarrow/both-gf": [
+      {
+        "upper": 0.25,
+        "lower": 3.5
+      }
+    ],
+    "20/mathtools/xLongrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 6
+      }
+    ],
+    "20/mathtools/xLongleftarrow/over-f": [
+      {
+        "upper": 1.25,
+        "lower": null
+      }
+    ],
+    "20/mathtools/xLongleftarrow/both-gf": [
+      {
+        "upper": 0.25,
+        "lower": 3.5
+      }
+    ],
+    "20/mathtools/xLongleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 6
+      }
+    ],
+    "20/extpfeil/xtwoheadrightarrow/over-f": [
+      {
+        "upper": 3.25,
+        "lower": null
+      }
+    ],
+    "20/extpfeil/xtwoheadrightarrow/both-gf": [
+      {
+        "upper": 2.25,
+        "lower": 5.75
+      }
+    ],
+    "20/extpfeil/xtwoheadrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 8.25
+      }
+    ],
+    "20/extpfeil/xtwoheadleftarrow/over-f": [
+      {
+        "upper": 3.25,
+        "lower": null
+      }
+    ],
+    "20/extpfeil/xtwoheadleftarrow/both-gf": [
+      {
+        "upper": 2.25,
+        "lower": 5.75
+      }
+    ],
+    "20/extpfeil/xtwoheadleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 8.25
+      }
+    ],
+    "20/extpfeil/xmapsto/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/extpfeil/xmapsto/both-gf": [
+      {
+        "upper": 0.5,
+        "lower": 1.75
+      }
+    ],
+    "20/extpfeil/xmapsto/under-g": [
+      {
+        "upper": null,
+        "lower": 5.25
+      }
+    ],
+    "20/extpfeil/xlongequal/over-f": [
+      {
+        "upper": 4.75,
+        "lower": null
+      }
+    ],
+    "20/extpfeil/xlongequal/both-gf": [
+      {
+        "upper": 3.75,
+        "lower": 6.75
+      }
+    ],
+    "20/extpfeil/xlongequal/under-g": [
+      {
+        "upper": null,
+        "lower": 9.25
+      }
+    ],
+    "20/extpfeil/xtofrom/over-f": [
+      {
+        "upper": 0.25,
+        "lower": null
+      }
+    ],
+    "20/extpfeil/xtofrom/both-gf": [
+      {
+        "upper": -0.75,
+        "lower": 2
+      }
+    ],
+    "20/extpfeil/xtofrom/under-g": [
+      {
+        "upper": null,
+        "lower": 4.5
+      }
+    ],
+    "20/reported": [
+      {
+        "upper": -0.5,
+        "lower": null
+      },
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/reported-serif": [
+      {
+        "upper": -0.5,
+        "lower": null
+      },
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "20/fraction": [
+      {
+        "upper": 0.5,
+        "lower": 2.75
+      }
+    ],
+    "20/script": [
+      {
+        "upper": 0.5,
+        "lower": 3
+      }
+    ],
+    "20/custom": [
+      {
+        "upper": -0.5,
+        "lower": 5.25
+      }
+    ],
+    "32/ams/xrightarrow/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/ams/xrightarrow/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 2.75
+      }
+    ],
+    "32/ams/xrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/ams/xleftarrow/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/ams/xleftarrow/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 2.75
+      }
+    ],
+    "32/ams/xleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/mathtools/xleftrightarrow/over-f": [
+      {
+        "upper": 2.25,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xleftrightarrow/both-gf": [
+      {
+        "upper": 2.25,
+        "lower": 5.75
+      }
+    ],
+    "32/mathtools/xleftrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 10.5
+      }
+    ],
+    "32/mathtools/xLeftarrow/over-f": [
+      {
+        "upper": 1.5,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xLeftarrow/both-gf": [
+      {
+        "upper": 1.5,
+        "lower": 5.25
+      }
+    ],
+    "32/mathtools/xLeftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 9
+      }
+    ],
+    "32/mathtools/xRightarrow/over-f": [
+      {
+        "upper": 1.5,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xRightarrow/both-gf": [
+      {
+        "upper": 1.5,
+        "lower": 5.25
+      }
+    ],
+    "32/mathtools/xRightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 9
+      }
+    ],
+    "32/mathtools/xLeftrightarrow/over-f": [
+      {
+        "upper": 1.5,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xLeftrightarrow/both-gf": [
+      {
+        "upper": 1.5,
+        "lower": 5.25
+      }
+    ],
+    "32/mathtools/xLeftrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 10
+      }
+    ],
+    "32/mathtools/xhookleftarrow/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xhookleftarrow/both-gf": [
+      {
+        "upper": 0,
+        "lower": 2.75
+      }
+    ],
+    "32/mathtools/xhookleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/mathtools/xhookrightarrow/over-f": [
+      {
+        "upper": 0,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xhookrightarrow/both-gf": [
+      {
+        "upper": 0,
+        "lower": 2.75
+      }
+    ],
+    "32/mathtools/xhookrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/mathtools/xmapsto/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xmapsto/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 2.75
+      }
+    ],
+    "32/mathtools/xmapsto/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/mathtools/xrightharpoondown/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xrightharpoondown/both-gf": [
+      {
+        "upper": -0.5,
+        "lower": 2.75
+      }
+    ],
+    "32/mathtools/xrightharpoondown/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/mathtools/xleftharpoondown/over-f": [
+      {
+        "upper": -0.5,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xleftharpoondown/both-gf": [
+      {
+        "upper": -0.5,
+        "lower": 2.75
+      }
+    ],
+    "32/mathtools/xleftharpoondown/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/mathtools/xrightleftharpoons/over-f": [
+      {
+        "upper": 0.75,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xrightleftharpoons/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 2.5
+      }
+    ],
+    "32/mathtools/xrightleftharpoons/under-g": [
+      {
+        "upper": null,
+        "lower": 8.25
+      }
+    ],
+    "32/mathtools/xrightharpoonup/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xrightharpoonup/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 10.5
+      }
+    ],
+    "32/mathtools/xrightharpoonup/under-g": [
+      {
+        "upper": null,
+        "lower": 16.25
+      }
+    ],
+    "32/mathtools/xleftharpoonup/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xleftharpoonup/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 10.5
+      }
+    ],
+    "32/mathtools/xleftharpoonup/under-g": [
+      {
+        "upper": null,
+        "lower": 16.25
+      }
+    ],
+    "32/mathtools/xleftrightharpoons/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xleftrightharpoons/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 2.5
+      }
+    ],
+    "32/mathtools/xleftrightharpoons/under-g": [
+      {
+        "upper": null,
+        "lower": 8.25
+      }
+    ],
+    "32/mathtools/xlongrightarrow/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xlongrightarrow/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 2.75
+      }
+    ],
+    "32/mathtools/xlongrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/mathtools/xlongleftarrow/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xlongleftarrow/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 2.75
+      }
+    ],
+    "32/mathtools/xlongleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/mathtools/xLongrightarrow/over-f": [
+      {
+        "upper": 1.5,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xLongrightarrow/both-gf": [
+      {
+        "upper": 1.5,
+        "lower": 5.25
+      }
+    ],
+    "32/mathtools/xLongrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 9
+      }
+    ],
+    "32/mathtools/xLongleftarrow/over-f": [
+      {
+        "upper": 1.5,
+        "lower": null
+      }
+    ],
+    "32/mathtools/xLongleftarrow/both-gf": [
+      {
+        "upper": 1.5,
+        "lower": 5.25
+      }
+    ],
+    "32/mathtools/xLongleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 9
+      }
+    ],
+    "32/extpfeil/xtwoheadrightarrow/over-f": [
+      {
+        "upper": 5.25,
+        "lower": null
+      }
+    ],
+    "32/extpfeil/xtwoheadrightarrow/both-gf": [
+      {
+        "upper": 5.25,
+        "lower": 8.75
+      }
+    ],
+    "32/extpfeil/xtwoheadrightarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 13.5
+      }
+    ],
+    "32/extpfeil/xtwoheadleftarrow/over-f": [
+      {
+        "upper": 5.25,
+        "lower": null
+      }
+    ],
+    "32/extpfeil/xtwoheadleftarrow/both-gf": [
+      {
+        "upper": 5.25,
+        "lower": 8.75
+      }
+    ],
+    "32/extpfeil/xtwoheadleftarrow/under-g": [
+      {
+        "upper": null,
+        "lower": 13.5
+      }
+    ],
+    "32/extpfeil/xmapsto/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/extpfeil/xmapsto/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 2.75
+      }
+    ],
+    "32/extpfeil/xmapsto/under-g": [
+      {
+        "upper": null,
+        "lower": 8.5
+      }
+    ],
+    "32/extpfeil/xlongequal/over-f": [
+      {
+        "upper": 6.5,
+        "lower": null
+      }
+    ],
+    "32/extpfeil/xlongequal/both-gf": [
+      {
+        "upper": 6.5,
+        "lower": 10.25
+      }
+    ],
+    "32/extpfeil/xlongequal/under-g": [
+      {
+        "upper": null,
+        "lower": 15
+      }
+    ],
+    "32/extpfeil/xtofrom/over-f": [
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/extpfeil/xtofrom/both-gf": [
+      {
+        "upper": -0.25,
+        "lower": 3
+      }
+    ],
+    "32/extpfeil/xtofrom/under-g": [
+      {
+        "upper": null,
+        "lower": 8.75
+      }
+    ],
+    "32/reported": [
+      {
+        "upper": -0.25,
+        "lower": null
+      },
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/reported-serif": [
+      {
+        "upper": -0.25,
+        "lower": null
+      },
+      {
+        "upper": -0.25,
+        "lower": null
+      }
+    ],
+    "32/fraction": [
+      {
+        "upper": 1.5,
+        "lower": 4.5
+      }
+    ],
+    "32/script": [
+      {
+        "upper": -0.75,
+        "lower": 6.25
+      }
+    ],
+    "32/custom": [
+      {
+        "upper": -0.25,
+        "lower": 8.5
+      }
+    ]
+  }
+}
