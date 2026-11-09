@@ -6,12 +6,8 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import {parseToReact} from '../../dist/react.js';
 import {parseToMathMLAst,toMathMLString} from '../../dist/index.js';
 import {withChromium} from '../helpers/chromium.mjs';
+import {xArrows as arrows,inkCases,inkHTML,measureInk} from '../helpers/xarrow-ink.mjs';
 
-const arrows={
-  ams:['xrightarrow','xleftarrow'],
-  mathtools:['xleftrightarrow','xLeftarrow','xRightarrow','xLeftrightarrow','xhookleftarrow','xhookrightarrow','xmapsto','xrightharpoondown','xleftharpoondown','xrightleftharpoons','xrightharpoonup','xleftharpoonup','xleftrightharpoons','xlongrightarrow','xlongleftarrow','xLongrightarrow','xLongleftarrow'],
-  extpfeil:['xtwoheadrightarrow','xtwoheadleftarrow','xmapsto','xlongequal','xtofrom'],
-};
 const cases=[{id:'reported',tex:String.raw`\text{命名} \xrightarrow{\text{因果連鎖}} \text{現在の使用} \xrightarrow{\text{全可能世界}} \text{同一対象}`,packages:['base','ams']}];
 for(const [pkg,commands] of Object.entries(arrows))for(const command of commands)for(const [label,args] of [
   ['over',String.raw`{\text{全可能世界 long label}}`],
@@ -101,6 +97,47 @@ test('Chromium native x-arrows span labels without neighbour collisions in horiz
       fs.writeFileSync(path.join(process.env.XARROW_ARTIFACT_DIR,'screen-vertical.png'),Buffer.from(verticalPanel.data,'base64'));
     }
     console.log(`screen_run: ${report.browser.product}; rendered ${rows.length} React/string inline/display formulas in horizontal-tb and vertical-rl contexts; measured labels/neighbours and screenshot arrow ink; ${failures.length} failures`);
+    assert.deepEqual(failures.slice(0,20),[]);
+  });
+});
+
+// The frozen reference is measured from official 3.2.2 CHTML and its fonts,
+// rather than from this implementation or from unrendered MathML rectangles.
+const reference=JSON.parse(fs.readFileSync(new URL('../fixtures/xarrow-chtml-3.2.2.json',import.meta.url)));
+for(const size of [15,20,32])test(`Chromium native x-arrow ink clears upper/lower annotations at ${size}px`,{timeout:60000},async()=>{
+  const rows=inkCases.map(c=>{
+    const options={packages:c.packages,display:false};
+    let xml=toMathMLString(parseToMathMLAst(c.tex,options));
+    assert.doesNotMatch(xml,/<merror/);
+    assert.equal(renderToStaticMarkup(parseToReact(c.tex,options)),xml);
+    // Negative control reconstructs 0.1.1's removal of the upper depth strut.
+    if(process.env.XARROW_WITHOUT_STRUT)xml=xml.replaceAll('<mspace depth=".3em"></mspace>','');
+    return {...c,size,id:`${size}/${c.id}`,xml};
+  });
+  await withChromium(async browser=>{
+    await browser.send('Page.setDocumentContent',{frameId:(await browser.send('Page.getFrameTree')).frameTree.frame.id,html:inkHTML(rows)});
+    const result=await measureInk(browser,rows),failures=[];
+    for(const row of result.rows){
+      const expected=reference.gaps[row.id];
+      assert.equal(row.stacks.length,expected.length,row.id);
+      for(const [i,s]of row.stacks.entries())for(const part of ['upper','lower']){
+        const ref=expected[i][part],gap=s.gaps[part];
+        if(ref===null){assert.equal(gap,null,`${row.id}/${part}: empty label painted ink`);continue;}
+        assert.ok(Number.isFinite(gap),`${row.id}/${part}: missing ink`);
+        if(gap<=0)failures.push(`${row.id}/${part}: gap ${gap}px is not positive`);
+        // TeX and DejaVu have different arrowhead/harpoon bearings. Allow a
+        // quarter em above, and .4em below (one-sided harpoons), plus 3 device
+        // pixels of raster tolerance. Positivity is a separate, strict gate.
+        const tolerance=size*(part==='upper'?.25:.4)+.75;
+        if(Math.abs(gap-ref)>tolerance)failures.push(`${row.id}/${part}: gap ${gap}px vs CHTML ${ref}px (tolerance ${tolerance}px)`);
+      }
+    }
+    if(process.env.XARROW_ARTIFACT_DIR){
+      fs.mkdirSync(process.env.XARROW_ARTIFACT_DIR,{recursive:true});
+      fs.writeFileSync(path.join(process.env.XARROW_ARTIFACT_DIR,`ink-${size}.json`),JSON.stringify(result.rows,null,2)+'\n');
+      fs.writeFileSync(path.join(process.env.XARROW_ARTIFACT_DIR,`ink-${size}.png`),result.png);
+    }
+    console.log(`screen_run: ${size}px; ${rows.length} native formulas; measured separate arrow/upper/lower ink against MathJax 3.2.2 CHTML; ${failures.length} failures`);
     assert.deepEqual(failures.slice(0,20),[]);
   });
 });
