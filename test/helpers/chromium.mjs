@@ -13,7 +13,7 @@ export async function withChromium(run) {
     '--no-first-run','--no-default-browser-check','--host-resolver-rules=MAP * 0.0.0.0',
     `--user-data-dir=${profile}`,'about:blank',
   ],{stdio:['ignore','ignore','pipe']});
-  let stderr='',launchError,socket;
+  let stderr='',launchError,socket,closeBrowser;
   chrome.on('error',e=>launchError=e);
   chrome.stderr.on('data',b=>stderr+=b);
   try {
@@ -33,6 +33,7 @@ export async function withChromium(run) {
     const send=(method,params={})=>new Promise((resolve,reject)=>{
       const id=++seq;pending.set(id,{resolve,reject});socket.send(JSON.stringify({id,method,params}));
     });
+    closeBrowser=()=>send('Browser.close');
     const evaluate=async expression=>{
       const r=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});
       if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));
@@ -42,8 +43,17 @@ export async function withChromium(run) {
     await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});
     return await run({send,evaluate});
   } finally {
-    socket?.close();chrome.kill();
-    if(chrome.exitCode===null&&!launchError)await once(chrome,'exit');
-    fs.rmSync(profile,{recursive:true,force:true});
+    if(chrome.exitCode===null&&!launchError){
+      const exited=once(chrome,'exit'),fallback=setTimeout(()=>chrome.kill(),5000);
+      try{
+        if(socket?.readyState===WebSocket.OPEN)await closeBrowser().catch(()=>chrome.kill());
+        else chrome.kill();
+        await exited;
+      }finally{clearTimeout(fallback);}
+    }
+    socket?.close();
+    // Chrome children can finish writing profile files just after the browser
+    // process exits. Retry transient ENOTEMPTY rather than failing good pixels.
+    fs.rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100});
   }
 }

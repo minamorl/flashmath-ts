@@ -353,3 +353,64 @@ uses `.release-git/` in this same cwd, with read-only object alternates to the
 original Git directory. The working files never leave this worktree. The caller
 can inspect delivery commits with `git --git-dir=.release-git log -1`; original
 worktree HEAD/index remain unchanged.
+
+## CI cleanup correction
+
+The first PR run had 0 rendering failures on Chrome/156.0.8078.79, then failed
+in profile cleanup on Node 22. The same commit's other three jobs passed.
+The actual failed step reported:
+
+```text
+# screen_run: Chrome/156.0.8078.79; rendered 618 React/string inline/display formulas in horizontal-tb and vertical-rl contexts; measured labels/neighbours and screenshot arrow ink; 0 failures
+error: "ENOTEMPTY: directory not empty, rmdir '/home/runner/work/_temp/flashmath-xarrow-AgCXC7/Default'"
+code: 'ENOTEMPTY'
+withChromium (test/helpers/chromium.mjs:47:8)
+Process completed with exit code 1.
+```
+
+Bounded filesystem retries alone also reproduced ENOTEMPTY locally, so the
+helper now first sends CDP Browser.close for graceful shutdown and waits for
+the browser to exit, with a five-second termination fallback. Directory removal
+uses the documented bounded retry (`maxRetries:5`, `retryDelay:100`). Cleanup
+still fails if removal cannot finish. No rendering assertion is relaxed.
+Primary sources read: Node 22.23.4
+[fs.rmSync options](https://nodejs.org/docs/latest-v22.x/api/fs.html#fsrmsyncpath-options)
+and the official [CDP Browser.close schema](https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/json/browser_protocol.json).
+Only the test helper changed; library/build/conformance/pack results above remain
+applicable. Both browser gates were rerun after the helper correction:
+
+```text
+$ node --test test/browser/*.test.mjs
+node=v22.23.4
+exit=0
+  ---
+  duration_ms: 9545.300839
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9949.49535
+```
+
+```text
+$ node --test test/browser/*.test.mjs
+node=v26.12.1
+exit=0
+screen_run: Chrome/153.0.8010.36; rendered 618 React/string inline/display formulas in horizontal-tb and vertical-rl contexts; measured labels/neighbours and screenshot arrow ink; 0 failures
+✔ Chromium native x-arrows span labels without neighbour collisions in horizontal and vertical text (9876.794754ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10250.061451
+```
+

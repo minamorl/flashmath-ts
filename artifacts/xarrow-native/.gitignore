@@ -4,6 +4,7 @@
 !verify.mjs
 !checks-node22.json
 !checks-node26.json
+!cleanup-checks.json
 !diagnosis.json
 !diagnosis.png
 !after/
