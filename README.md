@@ -1,6 +1,6 @@
 # @minamorl/flashmath
 
-TeX to MathML for React. Version 0.1.0 release candidate; not yet published.
+TeX to MathML for React. Version 0.1.1.
 
 ## Usage
 

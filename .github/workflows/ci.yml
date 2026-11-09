@@ -44,8 +44,14 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build
         run: node scripts/build.mjs
+      - name: Install native rendering test fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-dejavu-extra fonts-noto-cjk
       - name: Test library, harness and CI checks
         run: node --test test/*.test.mjs test/packages/*.test.mjs conformance/harness.test.mjs scripts/ci-checks.test.mjs
+      - name: Native arrow rendering in Chromium
+        run: node --test test/browser/*.test.mjs
       - name: Conformance regression gate
         run: |
           report="$(mktemp)"

@@ -13,6 +13,7 @@ import {dimensionEm, em} from '../mathml.js';
 import {definitions} from '../symbols.js';
 import type {TexCommand, TexEnvironment, TexPackage} from './types.js';
 import newcommand from './newcommand.js';
+import {markPackageNode} from '../package-mark.js';
 
 type Options = Record<string, unknown>;
 type Pair = [string, string, string?, number?, string?, string?];
@@ -121,8 +122,9 @@ for(const [name,[glyph,left,right,min]] of Object.entries(arrows)) command(name,
   p.argument(top=>{
     const a:Record<string,string>={'data-mjx-texclass':'ORD',stretchy:'true'}; if(min)a.minsize=em(min);
     const arrow=p.node(K.mo,[],glyph,a);arrow.relation=false;
-    const pad=(n:Node,under=false)=>p.node(K.mpadded,[...children(n),p.node(K.mspace,[],'',under?{height:'.75em'}:{depth:'.2em'})],'',
-      {width:`+${em((left+right)/18)}`,lspace:em(left/18),voffset:under?'.15em':'-.2em',...(under?{depth:'-.15em'}:{height:'-.2em'})});
+    if(children(top).length||below?.length)markPackageNode(arrow,'glyph');
+    const pad=(n:Node,under=false)=>markPackageNode(p.node(K.mpadded,[...children(n),p.node(K.mspace,[],'',under?{height:'.75em'}:{depth:'.2em'})],'',
+      {width:`+${em((left+right)/18)}`,lspace:em(left/18),voffset:under?'.15em':'-.2em',...(under?{depth:'-.15em'}:{height:'-.2em'})}),'xarrow-label');
     const emit=(n:Node)=>p.append(p.atom([p.atom([],'NONE'),n],'REL'));
     const base=p.f.level>0?p.node(K.mstyle,[arrow],'',{scriptlevel:'0'}):arrow;
     if(below) p.parseTokens(below,bottom=>emit(p.node(K.munderover,[base,pad(bottom,true),pad(top)])));
