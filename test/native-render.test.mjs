@@ -167,6 +167,23 @@ test('deep variant output uses an explicit stack and needs no browser',()=>{
   assert.ok(toMathMLString(output).includes('𝐱'));
 });
 
+test('native layout fixture output is immutable, idempotent and React/string equivalent',()=>{
+  const items=JSON.parse(fs.readFileSync(new URL('./fixtures/native-layout/items.json',import.meta.url)));
+  assert.equal(items.length,10);
+  for(const item of items)for(const formula of item.math){
+    const options={packages:['base','ams','amscd','newcommand'],display:formula.display};
+    const ast=frozen(raw(formula.tex,options)),before=JSON.stringify(ast);
+    const native=mathMLForOutput(ast,options),xml=toMathMLString(native);
+    assert.doesNotMatch(xml,/<merror/);
+    assert.deepEqual(mathMLForOutput(native),native,`item ${item.n}: idempotence`);
+    assert.deepEqual(comparable(renderToStaticMarkup(parseToReact(formula.tex,options))),comparable(xml));
+    assert.equal(JSON.stringify(ast),before);
+  }
+  const tex=String.raw`\det\!\left(x\right)`;
+  assert.match(toMathMLString(parseToMathMLAst(tex)),/margin-inline-start:-0.167em/);
+  assert.match(toMathMLString(raw(tex),{output:'mathjax'}),/width="-0.167em"/);
+});
+
 
 test('calligraphic and script use distinct NewCM faces in native output',()=>{
   const cal=toMathMLString(parseToMathMLAst(String.raw`\mathcal{ABZ}`));

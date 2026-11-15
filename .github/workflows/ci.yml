@@ -50,7 +50,11 @@ jobs:
           sudo apt-get install -y fonts-dejavu-extra fonts-noto-cjk
       - name: Test library, harness and CI checks
         run: node --test test/*.test.mjs test/packages/*.test.mjs conformance/harness.test.mjs scripts/ci-checks.test.mjs
-      - name: Native arrow rendering in Chromium
+      - name: Install locked native fixture tools and Chromium
+        run: |
+          npm ci --prefix test/fixtures/native-layout
+          node test/fixtures/native-layout/node_modules/playwright/cli.js install chromium --only-shell
+      - name: Native arrows and native layout fixtures in Chromium
         run: node --test test/browser/*.test.mjs
       - name: Conformance regression gate
         run: |

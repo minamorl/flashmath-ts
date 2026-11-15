@@ -10,6 +10,7 @@ import type {TexPackage} from './types.js';
 import {scan,spelling,space} from '../scanner.js';
 import type {Token} from '../scanner.js';
 import {environmentBody,sequence} from './ams.js';
+import {markPackageNode} from '../package-mark.js';
 const dimensions=new WeakMap<Parser,{width?:string;height?:string}>();
 function dimension(p:Parser,key:'width'|'height'){
   p.stream.skip();
@@ -53,7 +54,7 @@ function begin(p:Parser,name:string){
           if(c==='<'||c==='>'){
             const label=(tokens:Token[],done:(n:Node)=>void)=>{parse(tokens,done);p.f.level=1;p.f.display=false;};
             label(a.some(t=>!space(t[0]))?a:scan('\\kern '+width),top=>{
-              const pad=(n:Node,over=false)=>p.node(K.mpadded,sequence(n),'',{width:'+.67em',lspace:'.33em',...(over?{voffset:'.1em'}:{})});
+              const pad=(n:Node,over=false)=>markPackageNode(p.node(K.mpadded,sequence(n),'',{width:'+.67em',lspace:'.33em',...(over?{voffset:'.1em'}:{})}),'cd-label');
               const done=(bottom?:Node)=>{let n=p.node(bottom?K.munderover:K.mover,[p.node(K.mo,[],glyph,horizontal),...(bottom?[pad(bottom)]:[]),pad(top,true)]);if(options.hideHorizontalLabels)n=p.node(K.mpadded,[n],'',{depth:'0',height:'.67em'});finish(n);};
               if(b.length)label(b,n=>done(n));else done();
             });return;
@@ -63,7 +64,7 @@ function begin(p:Parser,name:string){
           const arrow=p.node(K.mo,[],glyph,vertical);
           if(!left&&!right){finish(arrow);return;}
           const pieces:Node[]=[];
-          const afterLeft=()=>{pieces.push(arrow);if(right)parse(scan(right),n=>{pieces.push(n);finish(p.row(pieces,true));});else finish(p.row(pieces,true));};
+          const afterLeft=()=>{pieces.push(arrow);if(right)parse(scan(right),n=>{pieces.push(n);finish(markPackageNode(p.row(pieces,true),'cd-vertical'));});else finish(markPackageNode(p.row(pieces,true),'cd-vertical'));};
           if(left)parse(scan(left),n=>{pieces.push(n);afterLeft();});else afterLeft();return;
         }
       }
@@ -73,7 +74,7 @@ function begin(p:Parser,name:string){
       parse(tokens,n=>{nodes.push(...sequence(n));next();});return;
     }
     if(nodes.length||cells.length){cell(false);rows.push(p.node(K.mtr,cells.splice(0)));}
-    p.append(p.node(K.mtable,rows,'',{columnspacing:String(options.colspace),rowspacing:String(options.rowspace),displaystyle:'true'}));
+    p.append(markPackageNode(p.node(K.mtable,rows,'',{columnspacing:String(options.colspace),rowspacing:String(options.rowspace),displaystyle:'true'}),'cd-table'));
   };
   next();
 }
