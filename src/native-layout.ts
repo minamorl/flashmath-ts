@@ -132,10 +132,44 @@ export function nativeCenterOver(n:MathMLNode):MathMLNode {
 }
 
 const entry=(value:string|undefined,index:number,fallback:string)=>{const list=value===undefined?undefined:words(value);return list?.[Math.min(index,list.length-1)]??fallback;};
-export function nativeTable(n:MathMLNode,defaultSide='right'):MathMLNode {
+
+// STIX Two Math leaves U+2190/U+2192 short even with an inline stretch
+// constraint. Give annotated single arrows a font-independent shaft/head.
+// The transparent mo keeps the operator's accessible text and baseline band.
+export function nativeHorizontalArrow(arrow:MathMLNode):MathMLNode {
+  const left=arrow.text==='←';
+  const token={...arrow,attributes:{...arrow.attributes},children:[]};
+  addStyle(token,'display:block;position:absolute;inset:0;width:100%;height:.5em;color:transparent;');
+  const shaft=node('mrow',[],{'aria-hidden':'true',style:'position:absolute;left:.04em;right:.04em;top:calc(50% - .07em);height:.04em;background:currentColor;'},arrow.start);
+  shaft.children.push(node('mrow',[],{style:`position:absolute;${left?'left':'right'}:0;top:50%;width:.4em;height:.36em;background:currentColor;clip-path:polygon(0 0,100% 50%,0 100%,0 82%,75% 50%,0 18%);transform:translateY(-50%)${left?' rotate(180deg)':''};`},arrow.start));
+  return node('mstyle',[token,shaft],{'data-flashmath-arrow':'true',style:`display:inline-block;position:relative;min-width:${length(arrow.attributes.minsize,'1em')};width:100%;height:.5em;`},arrow.start);
+}
+
+// Unwrap only the raise/vcenter/llap (or rlap) construction emitted by AMScd.
+// The caller is guarded by private package provenance, never user attributes.
+export function nativeCDVertical(n:MathMLNode):MathMLNode {
+  const index=n.children.findIndex(c=>c.kind==='mo');
+  const label=(source:MathMLNode|undefined,side:string)=>{
+    const content=source?.children[0]?.children[0]?.children[0]?.children[0]?.children[0]?.children;
+    if(source&&!content)throw new Error('Unexpected AMScd vertical label structure');
+    return node('mstyle',content??[],{'scriptlevel':'1',displaystyle:'false',style:`justify-self:${side};padding-${side==='end'?'right':'left'}:.2em;`},n.start);
+  };
+  const arrow=n.children[index];arrow.attributes.stretchy='true';
+  n.children=[label(index?n.children[0]:undefined,'end'),node('mrow',[arrow],{},n.start),label(n.children[index+1],'start')];
+  n.attributes['data-flashmath-cd-vertical']='true';
+  addStyle(n,'display:inline-grid;grid-template-columns:minmax(max-content,1fr) auto minmax(max-content,1fr);align-items:center;');
+  return n;
+}
+
+export function needsNativeTable(n:MathMLNode):boolean {
+  return n.kind==='mtable'&&!n.attributes['data-flashmath-table']&&Boolean(n.attributes.columnalign||n.attributes.columnspacing||n.attributes.rowspacing||n.attributes.rowlines||n.attributes.columnlines||n.attributes.frame||n.attributes.semantics?.includes('bspr_inferenceRule:')||n.children.some(r=>r.kind==='mlabeledtr'));
+}
+export function nativeTable(n:MathMLNode,defaultSide='right',cd=false):MathMLNode {
+  if(!needsNativeTable(n))return n;
   const labeled=n.children.some(r=>r.kind==='mlabeledtr');
   const proof=n.attributes.semantics?.includes('bspr_inferenceRule:')??false;
-  if(!labeled&&!proof&&!n.attributes.rowlines&&!n.attributes.columnlines&&!n.attributes.frame)return n;
+  const aligned=(value:string|undefined)=>value!==undefined&&words(value).some(a=>a==='left'||a==='right');
+  const grid=cd||aligned(n.attributes.columnalign)||n.children.some(row=>aligned(row.attributes.columnalign)||row.children.some(cell=>aligned(cell.attributes.columnalign)));
   const side=(n.attributes.side??defaultSide)==='left'?'left':'right';
   const columns=Math.max(0,...n.children.map(r=>r.children.length-(r.kind==='mlabeledtr'?1:0)));
   for(let i=0;i<n.children.length;i++){
@@ -163,6 +197,18 @@ export function nativeTable(n:MathMLNode,defaultSide='right'):MathMLNode {
         cell.kind='mrow';cell.children=[node('mrow',cell.children,{},cell.start)];
         addStyle(cell,`display:inline-grid;justify-items:center;grid-row:${i+1};grid-column:${j+1};`);
       }
+      else if(!labeled&&grid){
+        // An explicit grid cell avoids Core's anonymous mtd row, which ignores
+        // text-align. A lone CD arrow also receives the entire column width.
+        const stretch=cell.children.length===1&&['mover','munder','munderover'].includes(cell.children[0].kind)&&cell.children[0].children[0]?.attributes['data-flashmath-arrow']==='true';
+        const content=stretch?cell.children:[...cell.children,node('mspace',[],{height:'.85em',depth:'.35em'},cell.start)];
+        cell.kind='mrow';cell.children=[node('mrow',content,stretch?{style:'display:inline-grid;width:100%;'}:{},cell.start)];
+        cell.attributes['data-flashmath-cell']='true';
+        cell.attributes['data-flashmath-row']=String(i+1);
+        addStyle(cell,`display:inline-grid;align-items:baseline;justify-items:${align==='left'?'start':align==='right'?'end':'center'};grid-row:${i+1};grid-column:${j+1};`);
+        if(['top','center','bottom'].includes(vertical))addStyle(cell,`align-self:${vertical==='top'?'start':vertical==='bottom'?'end':'center'};`);
+      }
+      else if(!labeled)cell.children=[node('mrow',[...cell.children,node('mspace',[],{height:'.85em',depth:'.35em'},cell.start)],{},cell.start)];
     }
     if(labeled){
       const empty=node('mtd',[],{},row.start),tag=label??node('mtd',[],{},row.start);
@@ -186,7 +232,16 @@ export function nativeTable(n:MathMLNode,defaultSide='right'):MathMLNode {
   else if(proof){
     n.kind='mrow';n.children=n.children.flatMap(row=>row.children);
     addStyle(n,`display:inline-grid;grid-template-columns:repeat(${columns},max-content);math-style:compact;`);
-  }else addStyle(n,'display:inline-table;border-collapse:collapse;');
+  }else{
+    n.attributes['data-flashmath-table']='true';
+    // Keep a one-cell Core table as the math-axis anchor. The inner grid
+    // supplies column alignment and spacing without mtd's anonymous rows.
+    if(grid){
+      const body=node('mrow',n.children.flatMap(row=>row.children),{style:`display:inline-grid;grid-template-columns:repeat(${columns},auto);align-items:baseline;`},n.start);
+      n.children=[node('mtr',[node('mtd',[body],{style:'padding:0;'},n.start)],{},n.start)];
+    }
+    addStyle(n,'display:inline-table;border-collapse:collapse;');
+  }
   delete n.attributes.rowlines;delete n.attributes.columnlines;delete n.attributes.frame;
   return n;
 }

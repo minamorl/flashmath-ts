@@ -4,3 +4,5 @@ dist/
 /.release-git/
 bench/native-render/react-client.js
 bench/release/finish.bundle
+/.artifacts/
+/test/fixtures/native-layout/generated/

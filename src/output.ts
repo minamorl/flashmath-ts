@@ -1,7 +1,7 @@
 import type {MathMLNode, OutputOptions} from './ast.js';
 import {packageMark} from './package-mark.js';
 import {variantName, variantText} from './native-variants.js';
-import {addStyle, isCenterOver, nativeBBox, nativeCenterOver, nativeEnclosure, nativeTable} from './native-layout.js';
+import {addStyle, isCenterOver, nativeBBox, nativeCenterOver, nativeEnclosure, nativeTable, needsNativeTable, nativeHorizontalArrow, nativeCDVertical} from './native-layout.js';
 
 // MathJax's mhchem glyph slots belong to its own font. Native MathML uses
 // standard Unicode and MathML accents instead; see docs/packages-pkg-chem.md.
@@ -89,7 +89,9 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     if (glyph(code) || compound(code) || (mark==='arrow-label'||mark==='xarrow-label')&&arrowLabel(n) || mark==='prescript' || mark==='bbox-padding'
       || n.kind==='menclose' || n.kind==='mlabeledtr' || isCenterOver(n)
       || overline(n)
-      || n.kind==='mtable' && (n.attributes.rowlines || n.attributes.columnlines || n.attributes.frame || n.attributes.semantics?.includes('bspr_inferenceRule:'))) {found = true; break;}
+      || mark==='cd-label' || mark==='cd-vertical' || mark==='cd-table'
+      || n.kind==='mspace'&&n.attributes.width?.startsWith('-')
+      || needsNativeTable(n)) {found = true; break;}
     for (const child of n.children) pending.push(child);
   }
   if (!found) return root;
@@ -99,6 +101,8 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     // stretches the base operator to the widest over/underscript. Keep the
     // upper depth strut: italic ink can descend beyond its Core token box.
     ? {...n, kind: 'mrow', attributes: n.children.length===1?{}:{'data-flashmath-arrow-label':'true',style:`padding-inline:${n.attributes.lspace??'0em'} calc(${n.attributes.width.slice(1)} - ${n.attributes.lspace??'0em'})`}, children: []}
+    : packageMark(n)==='cd-label'
+    ? {...n,kind:'mrow',attributes:{'data-flashmath-arrow-label':'true',style:'padding-inline:.33em .34em'},children:[]}
     : {...n, attributes: {...n.attributes}, children: []};
   const result=copy(root);
   const defaultSide='tagSide' in options&&options.tagSide==='left'?'left':'right';
@@ -130,7 +134,11 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
           child={kind:'mmultiscripts',attributes:{},children:[sourceChildren[i+3],{kind:'mprescripts',attributes:{},children:[],text:'',start:child.start},script(1),script(2)],text:'',start:child.start};
           i+=3;
         }
-        const cloned=copy(child);output.children.push(cloned);
+        const cloned=copy(child);
+        // A named TeX operator has a thin space before explicit negative
+        // spacing. Core's generic multi-letter mo fallback uses 5mu instead.
+        if(child.kind==='mo'&&child.attributes['data-mjx-texclass']==='OP'&&sourceChildren[i+1]?.kind==='mspace'&&sourceChildren[i+1].attributes.width?.startsWith('-'))cloned.attributes.rspace='0.1667em';
+        output.children.push(cloned);
         work.push({input:child,output:cloned,variant,done:false});
       }
       continue;
@@ -139,6 +147,13 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
     if(glyph(code)||compound(code)){Object.assign(output,nativeGlyph(input));continue;}
     // Use font-assemblable glyphs for annotated long arrows, preserving minsize.
     if(packageMark(input)==='glyph')output.text=nativeLongArrows[output.text]??output.text;
+    if(output.kind==='mspace'&&output.attributes.width?.startsWith('-')){
+      addStyle(output,`margin-inline-start:${output.attributes.width};`);output.attributes.width='0em';
+    }
+    if(['mover','munder','munderover'].includes(output.kind)&&input.children.some(c=>arrowLabel(c)||packageMark(c)==='cd-label')
+      &&output.children[0]?.kind==='mo'&&['→','←'].includes(output.children[0].text)){
+      output.children[0]=nativeHorizontalArrow(output.children[0]);
+    }
     if(variant){
       const name=variantName(variant);
       if(['mi','mn','mo','mtext'].includes(output.kind)){
@@ -169,12 +184,13 @@ export function mathMLForOutput(root: MathMLNode, options: OutputOptions = {}): 
       for(const key of ['width','height','depth','voffset','lspace'])delete output.attributes[key];
       addStyle(output,`display:inline-flex;align-items:baseline;padding-${right?'left':'right'}:.5ex;transform:translateY(.25em);`);
     }
-    if(packageMark(input)==='bbox-padding')nativeBBox(output);
+    if(packageMark(input)==='cd-vertical')nativeCDVertical(output);
+    else if(packageMark(input)==='bbox-padding')nativeBBox(output);
     else if(output.kind==='menclose')Object.assign(output,nativeEnclosure(output));
     else if(isCenterOver(output))nativeCenterOver(output);
     else if(output.kind==='mtable'){
       const labeled=output.children.some(n=>n.kind==='mlabeledtr');
-      nativeTable(output,defaultSide);hasLabels ||= labeled;
+      nativeTable(output,defaultSide,packageMark(input)==='cd-table');hasLabels ||= labeled;
     }
     if(overline(output)){
       const under=output.kind==='munder';

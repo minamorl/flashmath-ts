@@ -30,6 +30,12 @@ export async function withChromium(run) {
       const p=pending.get(m.id);pending.delete(m.id);
       m.error?p.reject(Error(JSON.stringify(m.error))):p.resolve(m.result);
     });
+    // Browser.close can close the socket before acknowledging its CDP request.
+    // Settle that request so cleanup cannot leave Node 22's runner pending.
+    socket.addEventListener('close',()=>{
+      for(const p of pending.values())p.reject(Error('Chromium connection closed'));
+      pending.clear();
+    });
     const send=(method,params={})=>new Promise((resolve,reject)=>{
       const id=++seq;pending.set(id,{resolve,reject});socket.send(JSON.stringify({id,method,params}));
     });

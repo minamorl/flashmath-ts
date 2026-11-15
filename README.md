@@ -104,6 +104,48 @@ stroke widths and proof gaps remain browser/font-dependent. Native output has
 been exercised in Chromium 153 on Linux; no Firefox/Safari claim is made.
 It is not pixel-identical to MathJax SVG. See [native details](https://github.com/minamorl/flashmath-ts/blob/main/docs/native-render.md).
 
+Native MathML needs an **OpenType MATH font** for stretched delimiters, large
+operators and mathematical layout. The bundled `fonts.css` provides only the
+calligraphic/script faces; load a full math font separately. For example, install
+`@fontsource/stix-two-math`, serve its
+`files/stix-two-math-latin-400-normal.woff2` from your public fonts directory,
+and declare it explicitly:
+
+```css
+@font-face {
+  font-family: 'STIX Two Math';
+  src: url('/fonts/stix-two-math-latin-400-normal.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+math { font-family: 'STIX Two Math', math; }
+```
+
+In `@fontsource/stix-two-math` **5.3.0**, `index.css` restricts `unicode-range`
+to Latin. Greek letters and arrows such as `η`, `μ` and `⇒` then fall back to
+another font, even though the WOFF2 contains those glyphs. The declaration
+above deliberately omits `unicode-range`. Verify the actual rendered font,
+rather than relying on the computed `font-family` alone.
+
+The ten [native rendering fixtures](test/fixtures/native-layout/fixture.md)
+are also a browser regression gate. The inputs contain only numbered titles
+and TeX. The adjacent `items.json` retains frozen 0.1.2 MathML as negative
+controls; the page builder checks that their TeX matches the Markdown fixture.
+After `pnpm build`, install the locked fixture tools with
+`npm ci --prefix test/fixtures/native-layout` and Chromium with
+`node test/fixtures/native-layout/node_modules/playwright/cli.js install chromium --only-shell`.
+With `TMPDIR` set, run `node --test test/browser/*.test.mjs`. The STIX checks
+measure arrow/annotation ink, CD column widths, aligned column edges and ruled
+array clearance, and reject pages regenerated from the frozen MathML controls.
+Set `NATIVE_LAYOUT_ARTIFACT_DIR` to retain generated pages, ink screenshots and raw
+measurements. By default the tests use `TMPDIR` and remove their output.
+For manual inspection, `node test/fixtures/native-layout/build-pages.mjs`
+generates current and pre-fix comparison pages in the ignored `generated/`
+directory beside the fixtures; `PROBE_OUTPUT_DIR` overrides that location.
+The existing x-arrow checks also need DejaVu Math TeX Gyre and CJK fallback
+fonts (`fonts-dejavu-extra` and `fonts-noto-cjk` in Ubuntu CI).
+
 Browser output defaults to `output: 'native'`: mhchem font slots become Unicode
 CSS bond/harpoon geometry and native MathML isotope scripts. Use `output: 'mathjax'` in parsing and
 serialization options to retain MathJax font codes for strict oracle comparison.

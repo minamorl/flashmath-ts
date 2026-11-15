@@ -1,0 +1,140 @@
+[
+  {
+    "n": 1,
+    "title": "行内の数式",
+    "math": [
+      {
+        "delim": "$",
+        "display": false,
+        "tex": "\\eta_B \\circ F(f) = G(f) \\circ \\eta_A",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>η</mi><mi>B</mi></msub><mo>∘</mo><mi>F</mi><mo stretchy=\"false\">(</mo><mi>f</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>G</mi><mo stretchy=\"false\">(</mo><mi>f</mi><mo stretchy=\"false\">)</mo><mo>∘</mo><msub><mi>η</mi><mi>A</mi></msub></math>"
+      }
+    ]
+  },
+  {
+    "n": 2,
+    "title": "可換図式（CD 環境）",
+    "math": [
+      {
+        "delim": "$",
+        "display": false,
+        "tex": "\\eta : F \\Rightarrow G",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>η</mi><mo>:</mo><mi>F</mi><mo stretchy=\"false\">⇒</mo><mi>G</mi></math>"
+      },
+      {
+        "delim": "$$",
+        "display": true,
+        "tex": "\\begin{CD}\nF(A) @>{F(f)}>> F(B) \\\\\n@V{\\eta_A}VV @VV{\\eta_B}V \\\\\nG(A) @>>{G(f)}> G(B)\n\\end{CD}",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"5pt\" rowspacing=\"5pt\" displaystyle=\"true\"><mtr><mtd><mi>F</mi><mo stretchy=\"false\">(</mo><mi>A</mi><mo stretchy=\"false\">)</mo><mpadded height=\"8.5pt\" depth=\"2pt\"></mpadded></mtd><mtd><mover><mo minsize=\"2.75em\">→</mo><mpadded width=\"+.67em\" lspace=\".33em\" voffset=\".1em\"><mrow data-mjx-texclass=\"ORD\"><mi>F</mi><mo stretchy=\"false\">(</mo><mi>f</mi><mo stretchy=\"false\">)</mo></mrow></mpadded></mover></mtd><mtd><mi>F</mi><mo stretchy=\"false\">(</mo><mi>B</mi><mo stretchy=\"false\">)</mo></mtd></mtr><mtr><mtd><mrow><mstyle displaystyle=\"false\" scriptlevel=\"1\"><mpadded height=\"+.125em\" depth=\"-.125em\" voffset=\"+.125em\"><mrow data-mjx-texclass=\"ORD\"><mpadded data-mjx-texclass=\"ORD\" data-mjx-vbox=\"center\" data-vertical-align=\"center\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\" lspace=\"-1width\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>η</mi><mi>A</mi></msub></mrow></mpadded></mrow></mpadded></mrow></mpadded></mstyle><mo minsize=\"1.75em\" symmetric=\"true\" lspace=\"0\" rspace=\"0\">↓</mo></mrow></mtd><mtd></mtd><mtd><mrow><mo minsize=\"1.75em\" symmetric=\"true\" lspace=\"0\" rspace=\"0\">↓</mo><mstyle displaystyle=\"false\" scriptlevel=\"1\"><mpadded height=\"+.125em\" depth=\"-.125em\" voffset=\"+.125em\"><mrow data-mjx-texclass=\"ORD\"><mpadded data-mjx-texclass=\"ORD\" data-mjx-vbox=\"center\" data-vertical-align=\"center\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>η</mi><mi>B</mi></msub></mrow></mpadded></mrow></mpadded></mrow></mpadded></mstyle></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mi>G</mi><mo stretchy=\"false\">(</mo><mi>A</mi><mo stretchy=\"false\">)</mo><mpadded height=\"8.5pt\" depth=\"2pt\"></mpadded></mtd><mtd><munderover><mo minsize=\"2.75em\">→</mo><mpadded width=\"+.67em\" lspace=\".33em\"><mrow data-mjx-texclass=\"ORD\"><mi>G</mi><mo stretchy=\"false\">(</mo><mi>f</mi><mo stretchy=\"false\">)</mo></mrow></mpadded><mpadded width=\"+.67em\" lspace=\".33em\" voffset=\".1em\"><mspace width=\"2.75em\" linebreak=\"nobreak\"></mspace></mpadded></munderover></mtd><mtd><mi>G</mi><mo stretchy=\"false\">(</mo><mi>B</mi><mo stretchy=\"false\">)</mo></mtd></mtr></mtable></math>"
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "title": "モナドの結合律",
+    "math": [
+      {
+        "delim": "$",
+        "display": false,
+        "tex": "\\mu \\circ T\\mu = \\mu \\circ \\mu T",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>μ</mi><mo>∘</mo><mi>T</mi><mi>μ</mi><mo>=</mo><mi>μ</mi><mo>∘</mo><mi>μ</mi><mi>T</mi></math>"
+      },
+      {
+        "delim": "$$",
+        "display": true,
+        "tex": "\\begin{CD}\nT^3 @>{T\\mu}>> T^2 \\\\\n@V{\\mu T}VV @VV{\\mu}V \\\\\nT^2 @>>{\\mu}> T\n\\end{CD}",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"5pt\" rowspacing=\"5pt\" displaystyle=\"true\"><mtr><mtd><msup><mi>T</mi><mn>3</mn></msup><mpadded height=\"8.5pt\" depth=\"2pt\"></mpadded></mtd><mtd><mover><mo minsize=\"2.75em\">→</mo><mpadded width=\"+.67em\" lspace=\".33em\" voffset=\".1em\"><mrow data-mjx-texclass=\"ORD\"><mi>T</mi><mi>μ</mi></mrow></mpadded></mover></mtd><mtd><msup><mi>T</mi><mn>2</mn></msup></mtd></mtr><mtr><mtd><mrow><mstyle displaystyle=\"false\" scriptlevel=\"1\"><mpadded height=\"+.125em\" depth=\"-.125em\" voffset=\"+.125em\"><mrow data-mjx-texclass=\"ORD\"><mpadded data-mjx-texclass=\"ORD\" data-mjx-vbox=\"center\" data-vertical-align=\"center\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\" lspace=\"-1width\"><mrow data-mjx-texclass=\"ORD\"><mi>μ</mi><mi>T</mi></mrow></mpadded></mrow></mpadded></mrow></mpadded></mstyle><mo minsize=\"1.75em\" symmetric=\"true\" lspace=\"0\" rspace=\"0\">↓</mo></mrow></mtd><mtd></mtd><mtd><mrow><mo minsize=\"1.75em\" symmetric=\"true\" lspace=\"0\" rspace=\"0\">↓</mo><mstyle displaystyle=\"false\" scriptlevel=\"1\"><mpadded height=\"+.125em\" depth=\"-.125em\" voffset=\"+.125em\"><mrow data-mjx-texclass=\"ORD\"><mpadded data-mjx-texclass=\"ORD\" data-mjx-vbox=\"center\" data-vertical-align=\"center\"><mrow data-mjx-texclass=\"ORD\"><mpadded width=\"0\"><mrow data-mjx-texclass=\"ORD\"><mi>μ</mi></mrow></mpadded></mrow></mpadded></mrow></mpadded></mstyle></mrow></mtd><mtd></mtd></mtr><mtr><mtd><msup><mi>T</mi><mn>2</mn></msup><mpadded height=\"8.5pt\" depth=\"2pt\"></mpadded></mtd><mtd><munderover><mo minsize=\"2.75em\">→</mo><mpadded width=\"+.67em\" lspace=\".33em\"><mrow data-mjx-texclass=\"ORD\"><mi>μ</mi></mrow></mpadded><mpadded width=\"+.67em\" lspace=\".33em\" voffset=\".1em\"><mspace width=\"2.75em\" linebreak=\"nobreak\"></mspace></mpadded></munderover></mtd><mtd><mi>T</mi></mtd></mtr></mtable></math>"
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "title": "array による可換図式",
+    "math": [
+      {
+        "delim": "$$",
+        "display": true,
+        "tex": "\\begin{array}{ccc}\nF(A) & \\xrightarrow{\\;F(f)\\;} & F(B) \\\\\n{\\scriptstyle \\eta_A}\\big\\downarrow & & \\big\\downarrow{\\scriptstyle \\eta_B} \\\\\nG(A) & \\xrightarrow[\\;G(f)\\;]{} & G(B)\n\\end{array}",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable columnspacing=\"1em\" rowspacing=\"4pt\" columnalign=\"center center center\" data-frame-styles=\"\" framespacing=\".5em .125em\"><mtr><mtd><mi>F</mi><mo stretchy=\"false\">(</mo><mi>A</mi><mo stretchy=\"false\">)</mo></mtd><mtd><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"NONE\"></mrow><mover><mo data-mjx-texclass=\"ORD\">→</mo><mrow data-flashmath-arrow-label=\"true\" style=\"padding-inline:0.278em calc(0.833em - 0.278em)\"><mspace width=\"0.278em\"></mspace><mi>F</mi><mo stretchy=\"false\">(</mo><mi>f</mi><mo stretchy=\"false\">)</mo><mspace width=\"0.278em\"></mspace><mspace depth=\".3em\"></mspace></mrow></mover></mrow></mtd><mtd><mi>F</mi><mo stretchy=\"false\">(</mo><mi>B</mi><mo stretchy=\"false\">)</mo></mtd></mtr><mtr><mtd><mrow data-mjx-texclass=\"ORD\"><mstyle scriptlevel=\"1\"><msub><mi>η</mi><mi>A</mi></msub></mstyle></mrow><mrow data-mjx-texclass=\"ORD\"><mo fence=\"true\" symmetric=\"true\" minsize=\"1.2em\" maxsize=\"1.2em\">↓</mo></mrow></mtd><mtd></mtd><mtd><mrow data-mjx-texclass=\"ORD\"><mo fence=\"true\" symmetric=\"true\" minsize=\"1.2em\" maxsize=\"1.2em\">↓</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mstyle scriptlevel=\"1\"><msub><mi>η</mi><mi>B</mi></msub></mstyle></mrow></mtd></mtr><mtr><mtd><mi>G</mi><mo stretchy=\"false\">(</mo><mi>A</mi><mo stretchy=\"false\">)</mo></mtd><mtd><mrow data-mjx-texclass=\"REL\"><mrow data-mjx-texclass=\"NONE\"></mrow><munderover><mo data-mjx-texclass=\"ORD\">→</mo><mrow data-flashmath-arrow-label=\"true\" style=\"padding-inline:0.278em calc(0.833em - 0.278em)\"><mspace width=\"0.278em\"></mspace><mi>G</mi><mo stretchy=\"false\">(</mo><mi>f</mi><mo stretchy=\"false\">)</mo><mspace width=\"0.278em\"></mspace></mrow><mpadded width=\"+0.833em\" lspace=\"0.278em\" voffset=\"-.2em\" height=\"-.2em\"><mspace depth=\".2em\"></mspace></mpadded></munderover></mrow></mtd><mtd><mi>G</mi><mo stretchy=\"false\">(</mo><mi>B</mi><mo stretchy=\"false\">)</mo></mtd></mtr></mtable></math>"
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "title": "一般の行列",
+    "math": [
+      {
+        "delim": "$$",
+        "display": true,
+        "tex": "A = \\begin{pmatrix}\na_{11} & a_{12} & \\cdots & a_{1n} \\\\\na_{21} & a_{22} & \\cdots & a_{2n} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mn}\n\\end{pmatrix}",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>A</mi><mo>=</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>22</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></math>"
+      }
+    ]
+  },
+  {
+    "n": 6,
+    "title": "仕切りつきのブロック行列と Schur 補行列",
+    "math": [
+      {
+        "delim": "$",
+        "display": false,
+        "tex": "A",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>A</mi></math>"
+      },
+      {
+        "delim": "$$",
+        "display": true,
+        "tex": "M = \\left[\\begin{array}{c|c}\nA & B \\\\ \\hline\nC & D\n\\end{array}\\right], \\qquad\n\\det M = \\det A \\cdot \\det\\!\\left(D - C A^{-1} B\\right)",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>M</mi><mo>=</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">[</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\" columnalign=\"center center\" data-frame-styles=\"\" framespacing=\".5em .125em\" style=\"display:inline-table;border-collapse:collapse\"><mtr><mtd style=\"text-align:center;vertical-align:baseline;padding:calc(0em / 2) calc(1em / 2) calc(4pt / 2) calc(0em / 2)\"><mi>A</mi></mtd><mtd style=\"text-align:center;vertical-align:baseline;padding:calc(0em / 2) calc(0em / 2) calc(4pt / 2) calc(1em / 2);border-left:.067em solid currentColor\"><mi>B</mi></mtd></mtr><mtr><mtd style=\"text-align:center;vertical-align:baseline;padding:calc(4pt / 2) calc(1em / 2) calc(0em / 2) calc(0em / 2);border-top:.067em solid currentColor\" data-flashmath-rule=\"solid\"><mi>C</mi></mtd><mtd style=\"text-align:center;vertical-align:baseline;padding:calc(4pt / 2) calc(0em / 2) calc(0em / 2) calc(1em / 2);border-top:.067em solid currentColor;border-left:.067em solid currentColor\" data-flashmath-rule=\"solid\"><mi>D</mi></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">]</mo></mrow><mo>,</mo><mspace width=\"2em\"></mspace><mo movablelimits=\"true\" data-mjx-texclass=\"OP\">det</mo><mi>M</mi><mo>=</mo><mo movablelimits=\"true\" data-mjx-texclass=\"OP\">det</mo><mi>A</mi><mo>⋅</mo><mo movablelimits=\"true\" data-mjx-texclass=\"OP\">det</mo><mspace width=\"-0.167em\"></mspace><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>D</mi><mo>−</mo><mi>C</mi><msup><mi>A</mi><mrow data-mjx-texclass=\"ORD\"><mo>−</mo><mn>1</mn></mrow></msup><mi>B</mi><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></math>"
+      }
+    ]
+  },
+  {
+    "n": 7,
+    "title": "Jordan ブロックとその指数関数",
+    "math": [
+      {
+        "delim": "$$",
+        "display": true,
+        "tex": "J = \\begin{bmatrix}\n\\lambda & 1 & & \\\\\n & \\lambda & \\ddots & \\\\\n & & \\ddots & 1 \\\\\n & & & \\lambda\n\\end{bmatrix}\n\\quad\\Longrightarrow\\quad\ne^{tJ} = e^{\\lambda t}\n\\begin{bmatrix}\n1 & t & \\frac{t^2}{2!} & \\cdots & \\frac{t^{k-1}}{(k-1)!} \\\\\n & 1 & t & \\ddots & \\vdots \\\\\n & & \\ddots & \\ddots & \\frac{t^2}{2!} \\\\\n & & & 1 & t \\\\\n & & & & 1\n\\end{bmatrix}",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>J</mi><mo>=</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">[</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mi>λ</mi></mtd><mtd><mn>1</mn></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd><mi>λ</mi></mtd><mtd><mo>⋱</mo></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mo>⋱</mo></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mi>λ</mi></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">]</mo></mrow><mspace width=\"1em\"></mspace><mo stretchy=\"false\">⟹</mo><mspace width=\"1em\"></mspace><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mi>t</mi><mi>J</mi></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mi>λ</mi><mi>t</mi></mrow></msup><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">[</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mn>1</mn></mtd><mtd><mi>t</mi></mtd><mtd><mfrac><msup><mi>t</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>!</mo></mrow></mfrac></mtd><mtd><mo>⋯</mo></mtd><mtd><mfrac><msup><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo stretchy=\"false\">(</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>!</mo></mrow></mfrac></mtd></mtr><mtr><mtd></mtd><mtd><mn>1</mn></mtd><mtd><mi>t</mi></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mfrac><msup><mi>t</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>!</mo></mrow></mfrac></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mn>1</mn></mtd><mtd><mi>t</mi></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">]</mo></mrow></math>"
+      }
+    ]
+  },
+  {
+    "n": 8,
+    "title": "Vandermonde の行列式",
+    "math": [
+      {
+        "delim": "$$",
+        "display": true,
+        "tex": "\\det\\begin{pmatrix}\n1 & x_1 & x_1^2 & \\cdots & x_1^{n-1} \\\\\n1 & x_2 & x_2^2 & \\cdots & x_2^{n-1} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\n1 & x_n & x_n^2 & \\cdots & x_n^{n-1}\n\\end{pmatrix}\n= \\prod_{1 \\le i < j \\le n} (x_j - x_i)",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo movablelimits=\"true\" data-mjx-texclass=\"OP\">det</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mn>1</mn></mtd><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mtd><mtd><mo>⋯</mo></mtd><mtd><msubsup><mi>x</mi><mn>1</mn><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msubsup></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mtd><mtd><mo>⋯</mo></mtd><mtd><msubsup><mi>x</mi><mn>2</mn><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msubsup></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><msub><mi>x</mi><mi>n</mi></msub></mtd><mtd><msubsup><mi>x</mi><mi>n</mi><mn>2</mn></msubsup></mtd><mtd><mo>⋯</mo></mtd><mtd><msubsup><mi>x</mi><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msubsup></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mo>=</mo><munder><mo>∏</mo><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mo>≤</mo><mi>i</mi><mo>&lt;</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></munder><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mi>j</mi></msub><mo>−</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy=\"false\">)</mo></math>"
+      }
+    ]
+  },
+  {
+    "n": 9,
+    "title": "揃えた式（二項分布）",
+    "math": [
+      {
+        "delim": "$$",
+        "display": true,
+        "tex": "\\begin{aligned}\nP(X = k) &= \\binom{n}{k} p^k (1-p)^{n-k}, \\\\\n\\mathbb{E}[X] &= np, \\qquad \\operatorname{Var}(X) = np(1-p)\n\\end{aligned}",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\"><mtr><mtd><mi>P</mi><mo stretchy=\"false\">(</mo><mi>X</mi><mo>=</mo><mi>k</mi><mo stretchy=\"false\">)</mo></mtd><mtd><mstyle indentshift=\"2em\"><mi></mi><mo>=</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"OPEN\"><mo minsize=\"2.047em\" maxsize=\"2.047em\">(</mo></mrow><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac><mrow data-mjx-texclass=\"CLOSE\"><mo minsize=\"2.047em\" maxsize=\"2.047em\">)</mo></mrow></mrow><msup><mi>p</mi><mi>k</mi></msup><mo stretchy=\"false\">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><msup><mo stretchy=\"false\">)</mo><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup><mo>,</mo></mstyle></mtd></mtr><mtr><mtd><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">𝔼</mi></mrow><mo stretchy=\"false\">[</mo><mi>X</mi><mo stretchy=\"false\">]</mo></mtd><mtd><mstyle indentshift=\"2em\"><mi></mi><mo>=</mo><mi>n</mi><mi>p</mi><mo>,</mo><mspace width=\"2em\"></mspace><mi>Var</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>X</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>n</mi><mi>p</mi><mo stretchy=\"false\">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy=\"false\">)</mo></mstyle></mtd></mtr></mtable></math>"
+      }
+    ]
+  },
+  {
+    "n": 10,
+    "title": "Stokes の定理",
+    "math": [
+      {
+        "delim": "\\[\\]",
+        "display": true,
+        "tex": "\\oint_{\\partial \\Sigma} \\omega = \\int_{\\Sigma} d\\omega",
+        "native": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo>∮</mo><mrow data-mjx-texclass=\"ORD\"><mi>∂</mi><mi mathvariant=\"normal\">Σ</mi></mrow></msub><mi>ω</mi><mo>=</mo><msub><mo>∫</mo><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">Σ</mi></mrow></msub><mi>d</mi><mi>ω</mi></math>"
+      }
+    ]
+  }
+]
